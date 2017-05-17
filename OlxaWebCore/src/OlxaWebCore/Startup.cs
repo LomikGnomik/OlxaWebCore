@@ -14,6 +14,7 @@ using OlxaWebCore.Models;
 using OlxaWebCore.Services;
 using OlxaWebCore.Models.Interfaces;
 using OlxaWebCore.Models.RepositoryFake;
+using OlxaWebCore.Models.Repository;
 
 namespace OlxaWebCore
 {
@@ -54,7 +55,7 @@ namespace OlxaWebCore
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
-            services.AddTransient<IPortfolioRepository, FakePortfolioRepository>();
+            services.AddTransient<IPortfolioRepository, EFPortfolioRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
