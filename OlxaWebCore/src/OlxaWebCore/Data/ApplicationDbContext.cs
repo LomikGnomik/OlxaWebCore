@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OlxaWebCore.Models;
+using OlxaWebCore.Models.DataModels;
 
 namespace OlxaWebCore.Data
 {
@@ -14,6 +15,10 @@ namespace OlxaWebCore.Data
             : base(options)
         {
         }
+
+
+        public DbSet<Portfolio> Portfolios { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

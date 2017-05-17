@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using OlxaWebCore.Data;
 using OlxaWebCore.Models;
 using OlxaWebCore.Services;
+using OlxaWebCore.Models.Interfaces;
+using OlxaWebCore.Models.RepositoryFake;
 
 namespace OlxaWebCore
 {
@@ -52,6 +54,7 @@ namespace OlxaWebCore
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddTransient<IPortfolioRepository, FakePortfolioRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,7 +65,7 @@ namespace OlxaWebCore
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();  // отключить при развёртывании
                 app.UseDatabaseErrorPage();
                 app.UseBrowserLink();
             }
@@ -83,6 +86,7 @@ namespace OlxaWebCore
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            // SeedData.EnsurePopulated(app) ; // заполняет бд начальными значениями(самого класса нет.В книге фримана на стр220)
         }
     }
 }
