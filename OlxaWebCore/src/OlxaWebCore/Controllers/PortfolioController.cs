@@ -17,12 +17,14 @@ namespace OlxaWebCore.Controllers
             repository = repo;
         }
 
-        public ViewResult All(int page=1)
-            =>View(repository.Portfolios
+        public ViewResult All(int page = 1)
+            => View(repository.Portfolios
             .OrderBy(p => p.PortfolioID)
             .Skip((page - 1) * PageSize)
             .Take(PageSize));
-            
-        
+
+
+
+
     }
 }
