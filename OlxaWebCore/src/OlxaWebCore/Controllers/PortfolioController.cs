@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using OlxaWebCore.Models.Interfaces;
+using OlxaWebCore.Models.ViewModels;
 
 namespace OlxaWebCore.Controllers
 {
@@ -18,13 +16,17 @@ namespace OlxaWebCore.Controllers
         }
 
         public ViewResult All(int page = 1)
-            => View(repository.Portfolios
+        => View(new PortfolioListViewModel {
+            Portfolios = repository.Portfolios
             .OrderBy(p => p.PortfolioID)
             .Skip((page - 1) * PageSize)
-            .Take(PageSize));
-
-
-
-
+            .Take(PageSize),
+            PagingInfo = new PagingInfo
+            {
+                CurrentPage = page,
+                ItemsPerPage = PageSize,
+                TotalItems = repository.Portfolios.Count()
+            }
+        });
+}             
     }
-}
