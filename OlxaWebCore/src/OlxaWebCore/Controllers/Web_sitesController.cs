@@ -8,11 +8,24 @@ namespace OlxaWebCore.Controllers
 {
     public class Web_sitesController : Controller
     {
-        public IActionResult Index()
+    
+        public IActionResult Promosite()
         {
             return View();
         }
-        public IActionResult Vizitka()
+        public IActionResult Landing()
+        {
+            return View();
+        }
+        public IActionResult Corporate()
+        {
+            return View();
+        }
+        public IActionResult Shop()
+        {
+            return View();
+        }
+        public IActionResult Information()
         {
             return View();
         }
