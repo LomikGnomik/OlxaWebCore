@@ -24,8 +24,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /*footer*/
-  /*-------------------promo-site-----------сайт визитка*/
 }
 .wrapper .container {
   margin: 0 auto;
@@ -38,14 +36,95 @@ body {
 .wrapper .header {
   height: 9em;
   width: 100%;
-  background: #b0aaaa;
+  /*.nav-toggle {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            width: 36px;
+            height: 47px;
+            right: 15px;
+            top: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-toggle span {
+            position: absolute;
+            width: 36px;
+            height: 2px;
+            top: 50%;
+            margin-top: -1px;
+            background-color: #2895f1;
+        }
+
+        .nav-toggle span:before, .nav-toggle span:after {
+            position: absolute;
+            content: "";
+            width: 36px;
+            height: 2px;
+            left: 0;
+            background-color: #2895f1;
+            transition: all 0.25s ease-out;
+        }
+
+        .nav-toggle span:before {
+            top: -5px;
+        }
+
+        .nav-toggle span:after {
+            bottom: -5px;
+        }
+
+        .nav-toggle.active span {
+            width: 0px;
+        }
+
+        .nav-toggle.active span:before {
+            top: 0;
+            transform: rotateZ(45deg);
+        }
+
+        .nav-toggle.active span:after {
+            bottom: 0;
+            transform: rotateZ(-45deg);
+        }*/
+}
+.wrapper .header .toolbar {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper .header .toolbar a {
+  text-decoration: none;
+  margin-left: 1em;
+  padding: .7em 1.5em;
+  color: #0094ff;
+}
+.wrapper .header .toolbar a:hover {
+  color: #0087cc;
+  text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
+}
+.wrapper .header .toolbar .btn {
+  user-select: none;
+  /* убирать выделение текста */
+  background: #0094ff;
+  /* фон кнопки */
+  padding: .7em 1.5em;
+  /* отступ от текста */
+  outline: none;
+  /* убирать контур в Mozilla */
+  color: #ecf0f1;
+}
+.wrapper .header .toolbar .btn:hover {
+  background: #99bbff;
+  text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
+}
+.wrapper .header .toolbar .btn:active {
+  background: #0087cc;
 }
 .wrapper .navigation {
-  display: flex;
-  justify-content: space-around;
   width: 100%;
+  border-bottom: 1px solid #b0aaaa;
   box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
-  background: #b0aaaa;
   top: 100px;
   /*высота шапки*/
   position: fixed;
@@ -53,7 +132,8 @@ body {
   transition: all 20ms linear;
 }
 .wrapper .navigation nav {
-  width: 20em;
+  display: flex;
+  justify-content: space-between;
 }
 .wrapper .navigation nav .main-menu {
   display: flex;
@@ -72,7 +152,7 @@ body {
 }
 .wrapper .navigation nav .main-menu .main-menu__item:hover > .submenu {
   display: block;
-  width: 230%;
+  width: 300%;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a {
   color: #333;
@@ -97,7 +177,7 @@ body {
 .wrapper .navigation nav .main-menu .main-menu__item a.link {
   text-decoration: none;
   line-height: 2;
-  padding: 1em;
+  padding: 1em 0 1em 2em;
   display: block;
   font-weight: 500;
   text-transform: uppercase;
@@ -140,48 +220,123 @@ body {
 .wrapper .navigation nav .submenu .submenu__item a:hover {
   background: #00e43c;
 }
-.wrapper footer {
+.wrapper .inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.2em 0;
+}
+.wrapper .inner .title {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 2.25em 0.5em 0.875em;
+  background-color: #0094ff;
+  overflow: hidden;
+}
+.wrapper .inner .title::before {
+  top: -3.6875em;
+  border-left: 3.75em solid transparent;
+  border-right: 3.75em solid transparent;
+  border-top: 7.625em solid #fff;
+}
+.wrapper .inner .title::after {
+  bottom: -3.8125em;
+  border-left: 3.75em solid transparent;
+  border-right: 3.75em solid transparent;
+  border-bottom: 122px solid #fff;
+}
+.wrapper .inner .title::before,
+.wrapper .inner .title::after {
+  display: block;
+  position: absolute;
+  content: "";
+  right: -4em;
+  width: 0;
+  height: 0;
+}
+.wrapper .inner .title h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #ecf0f1;
+  margin-bottom: 0;
+}
+.wrapper .inner .breadcrumbs {
+  display: inline-block;
+  border: 1px solid #b0aaaa;
+  padding: 0.562em 1.5em 0.687em 1.5em;
+}
+.wrapper .inner .breadcrumbs a {
+  text-decoration: none;
+  border-bottom: 1px dotted #333;
+  transition: all 0.25s;
+  font-size: 14px;
+  font-weight: 600;
+  color: #99bbff;
+}
+.wrapper .inner .breadcrumbs a:hover {
+  color: #0094ff;
+  border-color: #0094ff;
+}
+.wrapper .inner .breadcrumbs span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0094ff;
+}
+.wrapper .inner .breadcrumbs .delimiter {
+  /* стрелка переход*/
+  font-weight: 100;
+  font-size: 14px;
+  color: #99bbff;
+}
+.wrapper .inner .breadcrumbs > * {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+.wrapper .inner .breadcrumbs > *:last-child {
+  margin-right: 0;
+}
+footer {
   flex: 0 0 auto;
   padding-bottom: 2em;
 }
-.wrapper footer .top-footer {
+footer .top-footer {
   width: 100%;
   border-bottom: 1px solid #b0aaaa;
   border-top: 1px solid #b0aaaa;
 }
-.wrapper footer .top-footer .tools {
+footer .top-footer .tools {
   display: flex;
   justify-content: space-between;
 }
-.wrapper footer .top-footer .tools .tools-item {
+footer .top-footer .tools .tools-item {
   padding: 1em 0;
 }
-.wrapper footer .top-footer .tools form {
+footer .top-footer .tools form {
   position: relative;
   border: none;
 }
-.wrapper footer .top-footer .tools form input[type=email] {
+footer .top-footer .tools form input[type=email] {
   height: 100%;
   background: rgba(0, 38, 255, 0.1);
   padding-left: 15px;
   border: none;
 }
-.wrapper footer .top-footer .tools form input[type=email]:focus {
+footer .top-footer .tools form input[type=email]:focus {
   outline: none;
   /*убираем подсветку при фокусе*/
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.wrapper footer .top-footer .tools form input[type=email]::-webkit-input-placeholder {
+footer .top-footer .tools form input[type=email]::-webkit-input-placeholder {
   font-style: italic;
 }
-.wrapper footer .top-footer .tools form input[type=email]:-ms-input-placeholder {
+footer .top-footer .tools form input[type=email]:-ms-input-placeholder {
   font-style: italic;
 }
-.wrapper footer .top-footer .tools form input[type=email]:-moz-placeholder {
+footer .top-footer .tools form input[type=email]:-moz-placeholder {
   font-style: italic;
 }
-.wrapper footer .top-footer .tools form button {
+footer .top-footer .tools form button {
   position: absolute;
   top: 0;
   right: 0;
@@ -191,51 +346,51 @@ body {
   cursor: pointer;
   border: none;
 }
-.wrapper footer .top-footer .tools form button::before {
+footer .top-footer .tools form button::before {
   content: "\f105";
   font-family: FontAwesome;
   color: #ecf0f1;
   font-size: 20px;
   font-weight: bold;
 }
-.wrapper footer .bottom-footer .footer-info {
+footer .bottom-footer .footer-info {
   display: flex;
   justify-content: space-between;
   margin: 1em 0;
 }
-.wrapper footer .bottom-footer .footer-info .info-item {
+footer .bottom-footer .footer-info .info-item {
   width: 25%;
   padding: 2em;
 }
-.wrapper footer .bottom-footer .footer-info .info-item:first-child {
+footer .bottom-footer .footer-info .info-item:first-child {
   padding-left: 0;
 }
-.wrapper footer .bottom-footer .footer-info .info-item:last-child {
+footer .bottom-footer .footer-info .info-item:last-child {
   padding-right: 0;
 }
-.wrapper footer .bottom-footer .footer-info .info-item img {
+footer .bottom-footer .footer-info .info-item img {
   margin-bottom: 1.5em;
 }
-.wrapper footer .bottom-footer .footer-info .info-item p {
+footer .bottom-footer .footer-info .info-item p {
   text-align: justify;
   margin-bottom: 1.5em;
 }
-.wrapper footer .bottom-footer .footer-info .info-item h3 {
+footer .bottom-footer .footer-info .info-item h3 {
   font-size: 14px;
   color: #b0aaaa;
   margin-bottom: 1.25em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid #d9d9d9;
 }
-.wrapper footer .bottom-footer .footer-info .info-item ul {
+footer .bottom-footer .footer-info .info-item ul {
   list-style: none;
   font-size: 14px;
   line-height: 1.8;
 }
-.wrapper footer .bottom-footer .footer-info .info-item ul li {
+footer .bottom-footer .footer-info .info-item ul li {
   margin-bottom: 0.687em;
 }
-.wrapper footer .bottom-footer .footer-info .info-item ul a {
+footer .bottom-footer .footer-info .info-item ul a {
   position: relative;
   display: block;
   text-decoration: none;
@@ -244,27 +399,29 @@ body {
   border: 1px solid #00e43c;
   transition: all 0.3s;
 }
-.wrapper footer .bottom-footer .footer-info .info-item ul a:hover {
+footer .bottom-footer .footer-info .info-item ul a:hover {
   background: #00e43c;
   color: #ecf0f1;
 }
-.wrapper section.content {
+/*footer*/
+/*-------------------promo-site-----------сайт визитка*/
+section.content {
   margin: 2em 0;
 }
-.wrapper section.content h2 {
+section.content h2 {
   margin-bottom: 1em;
 }
-.wrapper section.tabs {
+section.tabs {
   position: relative;
   width: 100%;
   margin-bottom: 2em;
 }
-.wrapper section.tabs .label-wrap {
+section.tabs .label-wrap {
   display: flex;
   justify-content: space-between;
   background: #0094ff;
 }
-.wrapper section.tabs label {
+section.tabs label {
   color: #333;
   cursor: pointer;
   display: block;
@@ -274,39 +431,39 @@ body {
   text-align: center;
   width: 100%;
 }
-.wrapper section.tabs input {
+section.tabs input {
   display: none;
 }
-.wrapper section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
-.wrapper section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
-.wrapper section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
+section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
+section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
+section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
   background: #ecf0f1;
   border-color: #fff;
   top: 0;
   z-index: 3;
 }
-.wrapper section.tabs .tabs_cont {
+section.tabs .tabs_cont {
   background: #ecf0f1;
   position: relative;
   padding-top: 2em;
   z-index: 2;
   height: 15em;
 }
-.wrapper section.tabs .tabs_cont > div {
+section.tabs .tabs_cont > div {
   position: absolute;
   left: -9999px;
   top: 0;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-.wrapper section.tabs #tab_1:checked ~ .tabs_cont #tab_c1,
-.wrapper section.tabs #tab_2:checked ~ .tabs_cont #tab_c2,
-.wrapper section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
+section.tabs #tab_1:checked ~ .tabs_cont #tab_c1,
+section.tabs #tab_2:checked ~ .tabs_cont #tab_c2,
+section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   position: static;
   left: 0;
   opacity: 1;
 }
-.wrapper #toTop {
+#toTop {
   width: 1.5em;
   position: fixed;
   background: #333;
@@ -320,11 +477,11 @@ body {
   bottom: 0;
   z-index: 1000;
 }
-.wrapper #toTop:hover {
+#toTop:hover {
   transition: all .3s ease;
   opacity: .7;
 }
-.wrapper #toTop i {
+#toTop i {
   position: relative;
   top: 45%;
 }
@@ -343,4 +500,82 @@ body {
   .container {
     width: 46.875em;
   }
+  .inner,
+  .page-title {
+    display: block;
+    width: 100%;
+  }
+  .inner:last-child {
+    text-align: left;
+    padding-top: 15px;
+  }
 }
+/*@media screen and (max-width: 991px) {
+    header{
+        background:#fff;
+    }
+     .topbar {
+        padding-bottom: 1.1em;
+    }
+     .nav-toggle {
+        display: block;
+    }
+
+    .toolbar {
+        position: relative;
+        top: auto;
+        right: auto;
+        text-align: center;
+        margin-top: 0;
+        overflow: hidden;
+        max-height: 0;
+        transform: none;
+        transition: all 0.3s;
+    }
+
+    .navigation {
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        border-color: transparent !important;
+        top: auto;
+        transition: all 0.5s;
+    }
+
+    .navigation .main-menu {
+        display: block;
+        width: 100%;
+    }
+
+    .navigation .main-menu > li {
+        position: static;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .navigation .main-menu > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .navigation .main-menu > li .submenu,
+    .navigation .main-menu > li .submenu {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        max-height: 0;
+        transition: all 0.4s;
+    }
+
+    .navigation .main-menu > li.active > a {
+        color: #fff;
+        background-color: #2895f1;
+    }
+
+    .navigation .main-menu > li.active  > a > i {
+        color: #fff;
+    }
+   
+}*/
