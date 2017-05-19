@@ -52,17 +52,25 @@ body {
 
     main {
         flex: 1 0 auto;
+        margin-top:10em;
+    }
+
+    .header{
+        height:9em;
+        width:100%;
+        background:@gray-color;
     }
 
     .logo {
-        height: 100px; /*для прокрутки и фиксирования меню*/
+       // height: 100px; /*для прокрутки и фиксирования меню*/
     }
 
     .navigation {
+        display:flex;
+        justify-content:space-around;        
         width: 100%;
-        border-bottom: 1px solid @gray-color;
-        border-top: 1px solid @gray-color;
-        background: #fff;
+        box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+        background: @gray-color;
         top: 100px; /*высота шапки*/
         position: fixed;
         z-index: 950;
@@ -304,6 +312,9 @@ body {
         }
     }
     /*footer*/
+
+
+
     /*-------------------promo-site-----------сайт визитка*/
     section.content {
         margin: 2em 0;

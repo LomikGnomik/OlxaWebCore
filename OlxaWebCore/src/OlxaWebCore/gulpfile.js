@@ -1,4 +1,4 @@
-﻿/// <binding BeforeBuild='less' />
+﻿/// <binding />
 "use strict";
 
 var gulp = require("gulp"),

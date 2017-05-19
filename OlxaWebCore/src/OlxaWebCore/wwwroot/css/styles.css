@@ -33,16 +33,19 @@ body {
 }
 .wrapper main {
   flex: 1 0 auto;
+  margin-top: 10em;
 }
-.wrapper .logo {
-  height: 100px;
-  /*для прокрутки и фиксирования меню*/
+.wrapper .header {
+  height: 9em;
+  width: 100%;
+  background: #b0aaaa;
 }
 .wrapper .navigation {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
-  border-bottom: 1px solid #b0aaaa;
-  border-top: 1px solid #b0aaaa;
-  background: #fff;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
+  background: #b0aaaa;
   top: 100px;
   /*высота шапки*/
   position: fixed;
