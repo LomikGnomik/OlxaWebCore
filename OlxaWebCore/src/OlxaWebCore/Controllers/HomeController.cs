@@ -31,5 +31,14 @@ namespace OlxaWebCore.Controllers
         {
             return View();
         }
+
+        public IActionResult Price()
+        {
+            return View();
+        }
+        public IActionResult Step()
+        {
+            return View();
+        }
     }
 }

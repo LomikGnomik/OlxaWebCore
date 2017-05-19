@@ -12,5 +12,9 @@ namespace OlxaWebCore.Controllers
         {
             return View();
         }
+        public IActionResult AllPosts()
+        {
+            return View();
+        }
     }
 }
