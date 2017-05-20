@@ -19,14 +19,44 @@ namespace OlxaWebCore.Models.Repository
             public IEnumerable<Post> Posts => context.Posts;
 
         // Save post
-    public void SavePost(Post post)
+        public void SavePost(Post post)
         {
-            // str 310
+            if (post.PostID == 0)
+            {
+                context.Posts.Add(post);
+            }
+            else
+            {
+                Post dbEntry = context.Posts
+                    .FirstOrDefault(p=>p.PostID==post.PostID);
+                if (dbEntry != null)
+                {
+
+                    dbEntry.Title = post.Title;
+                  //  dbEntry.ShortDescription = post.ShortDescription;
+                  //  dbEntry.Description = post.Description;
+                  //  dbEntry.Meta = post.Meta;
+                  //  dbEntry.UrlSlug = post.UrlSlug;
+                  //  dbEntry.Published = post.Published;
+                  //  dbEntry.PostedOn = post.PostedOn;
+                  //  dbEntry.Modified = post.Modified;
+                  //  dbEntry.Category = post.Category;
+                  //  dbEntry.Tags = post.Tags;
+                }    
+            }
+        context.SaveChanges();
         }
-    //public Post DeletePost(Post postId)
-       // {
-            //str 322
-         //   return 
-       // } 
+        // Delete post
+        public Post DeletePost(int postID)
+         {
+            Post dbEntry = context.Posts
+                    .FirstOrDefault(p => p.PostID == postID);
+            if (dbEntry != null)
+            {
+                context.Posts.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+         } 
     }
 }

@@ -11,6 +11,6 @@ namespace OlxaWebCore.Models.Interfaces
             IEnumerable<Post> Posts { get; }
 
             void SavePost (Post post );
-         //   Post DeletePost(int ID);
+            Post DeletePost(int postID);
     }
 }
