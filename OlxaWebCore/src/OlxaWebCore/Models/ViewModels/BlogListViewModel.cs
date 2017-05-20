@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace OlxaWebCore.Models.ViewModels
 {
-    public class PortfolioListViewModel
+    public class BlogListViewModel
     {
-        public IEnumerable<Portfolio> Portfolios { get; set; }
+        public IEnumerable<Post> Posts { get; set; }
         public PagingInfo PagingInfo { get; set; }
     }
 }

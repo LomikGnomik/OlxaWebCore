@@ -18,6 +18,7 @@ namespace OlxaWebCore.Data
 
 
         public DbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<Post> Posts { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)

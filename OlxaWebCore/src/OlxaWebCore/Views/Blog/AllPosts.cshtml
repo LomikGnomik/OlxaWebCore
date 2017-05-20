@@ -1,4 +1,12 @@
-﻿
-@{
+﻿@model  BlogListViewModel
+
+
+@foreach (var p in Model.Posts)
+{
+    @p.Title
 }
+
+
+<div page-model="@Model.PagingInfo" page-action="All"></div>
+
 BLOG / ALLPOSTS
