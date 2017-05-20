@@ -31,7 +31,10 @@ namespace OlxaWebCore.Controllers
             {
                 CurrentPage = page,
                 ItemsPerPage = PageSize,
-                TotalItems = repository.Posts.Count()
+                TotalItems = category==null?
+                repository.Posts.Count():
+                repository.Posts.Where(e=>
+                e.Category==category).Count()
             },
             CurrentCategory=category
             
