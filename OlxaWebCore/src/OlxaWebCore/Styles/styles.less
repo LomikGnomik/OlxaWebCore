@@ -75,6 +75,7 @@ a {
 
     main {
         flex: 1 0 auto;
+        margin-top:2em;
     }
 
     .header {
@@ -229,8 +230,9 @@ a {
                         margin-top: 0.3em;
                         margin-bottom: 0.3em;
                         width: 85%;
+                        font-weight: 500;
                         border: 1px solid @more-color;
-                        
+
 
 
                         &:hover {
@@ -245,7 +247,7 @@ a {
     .inner {
         display: flex;
         justify-content: space-between;
-        margin: 3em 0 2em;
+        margin: 3em 0 0;
 
         .title {
             display: inline-block;
@@ -582,13 +584,16 @@ section.tabs {
     }
 
     .post {
-        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 75%;
         position: relative;
-        padding-right:1.5em;
+        padding-right: 1.5em;
 
         .post__item {
             display: block;
-            width: 100%;
+            width: 48.5%; /*-----------чтоб было по одному посту поставить 100%*/
             border: 1px solid @gray-color;
             margin-bottom: 1.87em;
 
@@ -635,6 +640,11 @@ section.tabs {
                     padding-top: 0.312em;
                     margin-bottom: 4.5em;
                 }
+
+                .read-more {
+                    color: @base-color;
+                    text-decoration: dotted;
+                }
             }
         }
 
@@ -661,8 +671,7 @@ section.tabs {
 
     .sidebar {
         position: relative;
-        padding: 0 1.2em;
-        width: 30%;
+        width: 25%;
 
         .widget-sidebar {
             padding: 1.125em 1.5em 1.5em 1.5em;
@@ -703,6 +712,10 @@ section.tabs {
 
                     &:focus {
                         outline: none;
+                    }
+
+                    &::-webkit-search-cancel-button {
+                        display: none;
                     }
                 }
 
