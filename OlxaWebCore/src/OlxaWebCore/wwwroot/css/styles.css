@@ -50,6 +50,7 @@ a {
 }
 .wrapper main {
   flex: 1 0 auto;
+  margin-top: 10em;
 }
 .wrapper .header {
   height: 9em;
@@ -183,6 +184,7 @@ a {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   width: 85%;
+  font-weight: 500;
   border: 1px solid #00e43c;
 }
 .wrapper .navigation nav .submenu .submenu__item a:hover {
@@ -191,7 +193,7 @@ a {
 .wrapper .inner {
   display: flex;
   justify-content: space-between;
-  margin: 3em 0 2em;
+  margin: 3em 0 0;
 }
 .wrapper .inner .title {
   display: inline-block;
@@ -467,13 +469,17 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   margin-right: 0.05em;
 }
 .blog .post {
-  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 75%;
   position: relative;
   padding-right: 1.5em;
 }
 .blog .post .post__item {
   display: block;
-  width: 100%;
+  width: 48.5%;
+  /*-----------чтоб было по одному посту поставить 100%*/
   border: 1px solid #d1cdcd;
   margin-bottom: 1.87em;
 }
@@ -515,6 +521,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   padding-top: 0.312em;
   margin-bottom: 4.5em;
 }
+.blog .post .post__item .post-body .read-more {
+  color: #0094ff;
+  text-decoration: dotted;
+}
 .blog .post .pagination {
   padding-top: 1em;
   border-top: 1px solid #d1cdcd;
@@ -533,8 +543,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 }
 .blog .sidebar {
   position: relative;
-  padding: 0 1.2em;
-  width: 30%;
+  width: 25%;
 }
 .blog .sidebar .widget-sidebar {
   padding: 1.125em 1.5em 1.5em 1.5em;
@@ -573,6 +582,9 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 }
 .blog .sidebar .blog-search-wrap form.blog-search input:focus {
   outline: none;
+}
+.blog .sidebar .blog-search-wrap form.blog-search input::-webkit-search-cancel-button {
+  display: none;
 }
 .blog .sidebar .blog-search-wrap form.blog-search button[type=submit] {
   position: absolute;
