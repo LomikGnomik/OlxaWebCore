@@ -23,7 +23,7 @@ namespace OlxaWebCore.Controllers
         => View(new BlogListViewModel
         {
             Posts = repository.Posts
-           // .Where(p=>category==null || p.Category==category)
+            .Where(p=>category==null || p.Category==category)
             .OrderBy(p => p.PostID)
             .Skip((page - 1) * PageSize)
             .Take(PageSize),
@@ -33,7 +33,7 @@ namespace OlxaWebCore.Controllers
                 ItemsPerPage = PageSize,
                 TotalItems = repository.Posts.Count()
             },
-           // CurrentCategory=category
+            CurrentCategory=category
             
         });
 

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<string>
+
+<section class="categories">
+    <h3 class="blog-categories">
+        <i class="fa fa-cogs" aria-hidden="true"></i>
+        Категории
+    </h3>
+    <ul>
+        @foreach (var c in Model)
+        {
+            <li>
+                <a href="#">@c<span>10</span></a>
+            </li>
+        }
+    </ul>
+</section>

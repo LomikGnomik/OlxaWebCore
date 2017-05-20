@@ -18,6 +18,7 @@ namespace OlxaWebCore.Components
 
         public IViewComponentResult Invoke()
         {
+            ViewBag.SelectedCategory = RouteData?.Values["category"];
             return View(repository.Posts
                 .Select(x => x.Category)
                 .Distinct()
