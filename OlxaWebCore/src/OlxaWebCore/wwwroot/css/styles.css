@@ -172,7 +172,7 @@ a {
   text-align: center;
   flex: auto;
   transition: all 0.3s;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 .wrapper .navigation nav .submenu .submenu__item a {
   display: inline-block;

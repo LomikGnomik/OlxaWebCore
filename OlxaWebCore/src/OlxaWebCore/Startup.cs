@@ -87,8 +87,33 @@ namespace OlxaWebCore
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+
+               // routes.MapRoute(
+               //     name: null,
+               //     template: "{category/Page{page:int}" ,
+               //     defaults: new { controller ="Blog" , action ="AllPosts" }
+               //     );
+               // routes.MapRoute(
+               // name: null,
+               // template: "{Page{page:int}}",
+               // defaults: new { controller ="Blog", action ="AllPosts", page = "1" }
+               // );
+               // routes.MapRoute(
+               // name: null,
+               // template: "{category}",
+               // defaults: new { controller ="Blog", action ="AllPosts", page = "1" }
+               // );
+               // routes.MapRoute(
+               // name: null,
+               // template: "",
+               // defaults: new { controller ="Blog", action ="AllPosts", page = "1" }
+               //);
+               // routes.MapRoute(name: null, template: "{Controllers}/{action}/{id?}");
+
             });
             // SeedData.EnsurePopulated(app) ; // заполняет бд начальными значениями(самого класса нет.В книге фримана на стр220)
+
         }
     }
 }

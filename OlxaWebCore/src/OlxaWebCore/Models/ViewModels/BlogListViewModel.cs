@@ -7,5 +7,6 @@ namespace OlxaWebCore.Models.ViewModels
     {
         public IEnumerable<Post> Posts { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string CurrentCategory { get; set; }
     }
 }

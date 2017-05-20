@@ -12,17 +12,18 @@ namespace OlxaWebCore.Controllers
     public class BlogController : Controller
     {
         private IBlogRepository repository;
-        public int PageSize = 4;
+        public int PageSize = 2;
 
         public BlogController(IBlogRepository repo)
         {
             repository = repo;
         }
 
-        public ViewResult AllPosts(int page = 1)
+        public ViewResult AllPosts(string category ,int page = 1)
         => View(new BlogListViewModel
         {
             Posts = repository.Posts
+            .Where(p=>category==null || p.Category==category)
             .OrderBy(p => p.PostID)
             .Skip((page - 1) * PageSize)
             .Take(PageSize),
@@ -31,7 +32,9 @@ namespace OlxaWebCore.Controllers
                 CurrentPage = page,
                 ItemsPerPage = PageSize,
                 TotalItems = repository.Posts.Count()
-            }
+            },
+            CurrentCategory=category
+            
         });
 
         //ADMIN
@@ -70,7 +73,7 @@ namespace OlxaWebCore.Controllers
             {
               //  TempData["message"] = $"{deletedPost.Title} was deleted";
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("AllPosts");
         }
     }
 }
