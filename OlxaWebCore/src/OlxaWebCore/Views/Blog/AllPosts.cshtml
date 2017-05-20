@@ -1,12 +1,88 @@
 ﻿@model  BlogListViewModel
 
 
-@foreach (var p in Model.Posts)
-{
-    @p.Title
-}
+
 
 
 <div page-model="@Model.PagingInfo" page-action="All"></div>
 
-BLOG / ALLPOSTS
+<div class="container">
+
+    <div class="blog">
+        <div class="post">
+            
+            @foreach (var p in Model.Posts)
+            {                
+                @Html.Partial("_PostItem_PartialViews",p)
+            }
+
+
+            @*<section class="pagination">
+                <div class="nav-links">
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <span class="current">3</span>
+                    <a href="#">4</a>
+                    <span>...</span>
+                    <a href="#">12</a>
+                </div>
+            </section>*@
+        </div>
+
+        <aside class="sidebar">
+            <section class="blog-search-wrap">
+                <form method="post" class="blog-search">
+                    <input type="search" placeholder="Поиск" />
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </section>
+
+            <section class="categories">
+                <h3 class="blog-categories">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    Категории
+                </h3>
+                <ul>
+                    <li>
+                        <a href="#">Разработка<span>10</span></a>
+                    </li>
+                    <li>
+                        <a href="#">Продвижение<span>5</span></a>
+                    </li>
+                    <li>
+                        <a href="#">Продающие сайты<span>2</span></a>
+                    </li>
+                    <li>
+                        <a href="#">Дизайн<span>4</span></a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="best">
+                <h3>
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                    Читаемое
+                </h3>
+                <div class="item">
+                    <div class="view"><a href="#"><img src="~/images/post01.jpg" alt="превью" /></a></div>
+                    <div class="info">
+                        <h4><a href="#">Статья про то как мы грибы собирали</a></h4>
+                    </div>
+                </div>
+
+            </section>
+            <section class="featured-tags">
+                <h3>
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    Рекомендуемые теги
+                </h3>
+                <a href="#">ASP</a>
+                <a href="#">Разработка</a>
+                <a href="#">Дизайн</a>
+                <a href="#">Верстка</a>
+            </section>
+        </aside>
+    </div>
+
+
+</div>
