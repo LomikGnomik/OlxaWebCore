@@ -1,0 +1,37 @@
+﻿
+@model Post
+
+<article class="post__item">
+    <a class="post__img" href="#"><img src="~/images/post01.jpg" alt="картиночка" /></a>
+    <div class="post-body">
+        <div class="post-meta">
+            <div class="meta-panel">
+                <span>
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <a href="#">Автор</a>
+                </span>
+                <span>в</span>
+                <span>
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <a href="#">Категорию</a>
+                </span>
+                <span>
+                    <i class="fa fa-comment-o" aria-hidden="true"></i>
+                    <a href="#" class="post-comments">9</a>
+                </span>
+            </div>
+            <div class="data">
+                <span>
+                    20.05.2016
+                </span>
+            </div>
+        </div>  <!--post-meta-->
+        <a href="#" class="post-title">
+            <h3>@Model.Title</h3>
+        </a>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...
+        </p>
+        <a href="#">Читать далее...</a>
+    </div>
+</article>
