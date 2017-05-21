@@ -50,7 +50,7 @@ a {
 }
 .wrapper main {
   flex: 1 0 auto;
-  margin-top: 10em;
+  margin-top: 2em;
 }
 .wrapper .header {
   height: 9em;
@@ -680,6 +680,19 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   border-left: 0.5em solid #0094ff;
   border-bottom: 0.75em solid transparent;
   transition: border-color 0.3s;
+}
+/*-------------------------------------------------интернет магазин*/
+.wrapper-shop .info-shop {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper-shop .info-shop .shop-preview {
+  width: 50%;
+}
+.wrapper-shop .info-shop .shop-idea {
+  width: 50%;
+  padding: 1em;
+  border-bottom: 1px solid #ecf0f1;
 }
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
