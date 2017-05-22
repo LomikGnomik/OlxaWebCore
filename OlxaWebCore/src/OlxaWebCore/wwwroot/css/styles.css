@@ -623,6 +623,9 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   color: #d1cdcd;
   transition: color 0.3s;
 }
+.blog .sidebar .categories ul li .active {
+  background: #00e43c;
+}
 .blog .sidebar .categories ul li :hover {
   background: #00e43c;
   color: #ecf0f1;

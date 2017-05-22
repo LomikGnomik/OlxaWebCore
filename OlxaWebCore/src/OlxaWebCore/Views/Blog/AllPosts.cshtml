@@ -1,7 +1,7 @@
 ﻿@model  BlogListViewModel
 
 
-<div page-model=@Model.PagingInfo page-action="AllPosts"></div>
+
 
 <div class="container">
     <div class="blog">
@@ -11,17 +11,28 @@
             {
                 @Html.Partial("_PostItem_PartialViews", p)
             }
-            @*<section class="pagination">
-                    <div class="nav-links">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <span class="current">3</span>
-                        <a href="#">4</a>
-                        <span>...</span>
-                        <a href="#">12</a>
-                    </div>
-                </section>*@
+
+            <section class="pagination">
+                <div page-model=@Model.PagingInfo page-action="AllPosts"
+                     page-classes-enabled="true"
+                     page-class=""
+                     page-class-normal=""
+                     page-class-selected=current
+                     page-url-category=@Model.CurrentCategory
+                     class="nav-links">
+                </div>
+            </section>
         </div>
+                  @*  <div class="nav-links">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <span class="current">3</span>
+        <a href="#">4</a>
+        <span>...</span>
+        <a href="#">12</a>
+    </div>
+                *@
+        
         <aside class="sidebar">
             <section class="blog-search-wrap">
                 <form method="post" class="blog-search">

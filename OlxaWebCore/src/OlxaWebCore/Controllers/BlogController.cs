@@ -19,11 +19,12 @@ namespace OlxaWebCore.Controllers
             repository = repo;
         }
 
-        public ViewResult AllPosts(string category ,int page = 1)
-        => View(new BlogListViewModel
+        public ViewResult AllPosts(string category=null, int page = 1)
+        => View(
+            new BlogListViewModel
         {
             Posts = repository.Posts
-            .Where(p=>category==null || p.Category==category)
+            .Where(p => category == null || p.Category == category)
             .OrderBy(p => p.PostID)
             .Skip((page - 1) * PageSize)
             .Take(PageSize),
@@ -31,15 +32,21 @@ namespace OlxaWebCore.Controllers
             {
                 CurrentPage = page,
                 ItemsPerPage = PageSize,
-                TotalItems = category==null?
-                repository.Posts.Count():
-                repository.Posts.Where(e=>
-                e.Category==category).Count()
+                TotalItems = category == null ?
+                repository.Posts.Count() :
+                repository.Posts.Where(e =>
+                e.Category == category).Count()
             },
-            CurrentCategory=category
-            
-        });
+            CurrentCategory = category
+        }
+        );
 
+        public ViewResult Post(int Id)
+        {
+            Post post = repository.Posts.FirstOrDefault(p => p.PostID == Id);
+            return View(post);
+        }
+        
         //ADMIN
 
         // Создание 

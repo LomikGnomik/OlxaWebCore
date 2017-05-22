@@ -6,12 +6,22 @@
         Категории
     </h3>
     <ul>
+        <li>
+            <a asp-action="AllPosts" asp-controller="Blog" class=@(ViewBag.SelectedCategory==null ? "active":"") >Все посты</a>
+        </li>
         стр 259
-        @foreach (var c in Model)
+        @foreach (var category in Model)
         {
-            <li>
-                
-                <a href="#">@c<span>10</span></a>
+            <li>              
+                <a class=@(category == ViewBag.SelectedCategory ? "active": "")
+                   asp-action=AllPosts
+                   asp-controller=Blog
+                   asp-route-category=@category
+                   asp-route-page=1 >
+
+                    @category
+                <span>10</span>
+                </a>
             </li>
         }
     </ul>

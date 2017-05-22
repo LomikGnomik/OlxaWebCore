@@ -4,10 +4,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using OlxaWebCore.Models.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OlxaWebCore.infrastructure
 {
@@ -27,7 +24,7 @@ namespace OlxaWebCore.infrastructure
         public PagingInfo PageModel { get; set; }
         public string PageAction { get; set; }
 
-        [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
+        [HtmlAttributeName(DictionaryAttributePrefix ="page-url-")]
         public Dictionary<string, object> PageUrlValues { get; set; }
         = new Dictionary<string, object>();
 
@@ -45,6 +42,11 @@ namespace OlxaWebCore.infrastructure
                 TagBuilder tag = new TagBuilder("a");
                 PageUrlValues["page"] = i;
                 tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
+                if (PageClassesEnabled)
+                {
+                    tag.AddCssClass(PageClass);
+                    tag.AddCssClass(i == PageModel.CurrentPage ? PageClassSelected : PageClassNormal);
+                }
                 tag.InnerHtml.Append(i.ToString());
                 result.InnerHtml.AppendHtml(tag);
             }

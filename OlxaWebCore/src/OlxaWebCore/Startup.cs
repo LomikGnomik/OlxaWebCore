@@ -82,35 +82,34 @@ namespace OlxaWebCore
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
 
-            app.UseMvc(routes =>
-            {
+            app.UseMvc(routes => {
+                routes.MapRoute(name: "Error", template: "Error",
+                    defaults: new { controller = "Error", action = "Error" });
+
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    name: null,
+                    template: "{category}/Page{page:int}",
+                    defaults: new { controller = "Blog", action = "AllPosts" }
+                );
 
+                routes.MapRoute(
+                    name: null,
+                    template: "Page{page:int}",
+                    defaults: new { controller = "Blog", action = "AllPosts", page = 1 }
+                );
 
-               // routes.MapRoute(
-               //     name: null,
-               //     template: "{category/Page{page:int}" ,
-               //     defaults: new { controller ="Blog" , action ="AllPosts" }
-               //     );
-               // routes.MapRoute(
-               // name: null,
-               // template: "{Page{page:int}}",
-               // defaults: new { controller ="Blog", action ="AllPosts", page = "1" }
-               // );
-               // routes.MapRoute(
-               // name: null,
-               // template: "{category}",
-               // defaults: new { controller ="Blog", action ="AllPosts", page = "1" }
-               // );
-               // routes.MapRoute(
-               // name: null,
-               // template: "",
-               // defaults: new { controller ="Blog", action ="AllPosts", page = "1" }
-               //);
-               // routes.MapRoute(name: null, template: "{Controllers}/{action}/{id?}");
+                routes.MapRoute(
+                    name: null,
+                    template: "{category}",
+                    defaults: new { controller = "Blog", action = "AllPosts", page = 1 }
+                );
 
+                routes.MapRoute(
+                    name: null,
+                    template: "",
+                    defaults: new { controller = "Blog", action = "AllPosts", page = 1 });
+
+                routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
             });
             // SeedData.EnsurePopulated(app) ; // заполняет бд начальными значениями(самого класса нет.В книге фримана на стр220)
 

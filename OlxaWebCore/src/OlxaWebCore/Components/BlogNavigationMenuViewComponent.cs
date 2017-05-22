@@ -18,11 +18,22 @@ namespace OlxaWebCore.Components
 
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedCategory = RouteData?.Values["category"];
-            return View(repository.Posts
+            ViewBag.SelectedCategory =RouteData.Values["category"]; // без маршрута не работает
+            IEnumerable < string > Category= repository.Posts
                 .Select(x => x.Category)
                 .Distinct()
-                .OrderBy(x => x));
+                .OrderBy(x => x);
+
+         //   foreach (string c in Category)
+          //  {
+          //      int count  = repository.Posts
+          //      .Select(x => x.Category==c).Count();
+          //  }
+            
+
+            return View(Category);
+
+
         }
     }
 }
