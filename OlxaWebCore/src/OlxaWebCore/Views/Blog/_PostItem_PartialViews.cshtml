@@ -22,15 +22,15 @@
                 </span>
             </div>
         </div>  <!--post-meta-->
-        <a href="#" class="post-title">
+        <a asp-action="Post" asp-controller="Blog" asp-route-Id="" class="post-title">
             <h3>@Model.Title</h3>
         </a>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...
         </p>
-        <a asp-action="Post" asp-controller="Blog" asp-route-Id=@Model.PostID class="read-more" >Читать далее...</a>
+        <a asp-action="Post" asp-controller="Blog" asp-route-Id="@Model.PostID" class="read-more" >Читать далее...</a>
 
-   <br><a asp-action="EditPost" asp-controller="Blog" class="btn-danger">редактировать</a>
+   <br><a asp-action="EditPost" asp-controller="Blog" asp-route-PostID="@Model.PostID" class="btn-danger">редактировать</a>
 
 
 </div>

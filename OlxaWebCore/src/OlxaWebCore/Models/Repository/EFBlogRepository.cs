@@ -40,7 +40,7 @@ namespace OlxaWebCore.Models.Repository
                   //  dbEntry.Published = post.Published;
                   //  dbEntry.PostedOn = post.PostedOn;
                   //  dbEntry.Modified = post.Modified;
-                  //  dbEntry.Category = post.Category;
+                    dbEntry.Category = post.Category;
                   //  dbEntry.Tags = post.Tags;
                 }    
             }

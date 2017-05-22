@@ -86,31 +86,33 @@ namespace OlxaWebCore
                 routes.MapRoute(name: "Error", template: "Error",
                     defaults: new { controller = "Error", action = "Error" });
 
-                routes.MapRoute(
-                    name: null,
-                    template: "{category}/Page{page:int}",
-                    defaults: new { controller = "Blog", action = "AllPosts" }
-                );
+                //routes.MapRoute(
+                //    name: null,
+                //    template: "{category}/Page{page:int}",
+                //    defaults: new { controller = "Blog", action = "AllPosts" }
+                //);
 
-                routes.MapRoute(
-                    name: null,
-                    template: "Page{page:int}",
-                    defaults: new { controller = "Blog", action = "AllPosts", page = 1 }
-                );
+                //routes.MapRoute(
+                //    name: null,
+                //    template: "Page{page:int}",
+                //    defaults: new { controller = "Blog", action = "AllPosts", page = 1 }
+                //);
 
-                routes.MapRoute(
-                    name: null,
-                    template: "{category}",
-                    defaults: new { controller = "Blog", action = "AllPosts", page = 1 }
-                );
+                //routes.MapRoute(
+                //    name: null,
+                //    template: "{category}",
+                //    defaults: new { controller = "Blog", action = "AllPosts", page = 1 }
+                //);
 
-                routes.MapRoute(
-                    name: null,
-                    template: "",
-                    defaults: new { controller = "Blog", action = "AllPosts", page = 1 });
+                //routes.MapRoute(
+                //    name: null,
+                //    template: "",
+                //    defaults: new { controller = "Home", action = "AllPosts", page = 1 });
+                
 
-                routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
-            });
+                routes.MapRoute(name: null, template: "{controller}/{action}/{category?}/{id?}", defaults: new { controller = "Home", action = "Index"});
+                
+        });
             // SeedData.EnsurePopulated(app) ; // заполняет бд начальными значениями(самого класса нет.В книге фримана на стр220)
 
         }

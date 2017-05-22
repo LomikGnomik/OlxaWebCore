@@ -7,7 +7,7 @@
     </h3>
     <ul>
         <li>
-            <a asp-action="AllPosts" asp-controller="Blog" class=@(ViewBag.SelectedCategory==null ? "active":"") >Все посты</a>
+            <a asp-action="AllPosts" asp-controller="Blog" asp-route-category="" class=@(ViewBag.SelectedCategory==null ? "active":"") >Все посты</a>
         </li>
         стр 259
         @foreach (var category in Model)
