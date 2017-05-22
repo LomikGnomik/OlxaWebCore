@@ -36,10 +36,86 @@ body {
 }
 a {
   color: #333;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   transition: color 0.3s;
 }
+ul,
+ol {
+  padding-left: 18px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+textarea,
+select,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+input[type=url],
+input[type=time],
+input[type=tel],
+input[type=search] {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  height: 3em;
+  font-size: 1em;
+  color: #333;
+  text-transform: none;
+  border: 1px solid #d1cdcd;
+  background-color: #fff;
+  padding: 0 1.25em;
+  margin-bottom: 1.5em;
+  -webkit-appearance: none;
+  border-radius: 0;
+  transition: all 0.3s;
+}
+textarea:focus,
+select:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=url]:focus,
+input[type=time]:focus,
+input[type=tel]:focus,
+input[type=search]:focus {
+  outline-color: #00e43c;
+}
+textarea {
+  resize: vertical;
+}
+/*-----------------------------------------------кнопки*/
+.btn {
+  background: #eaeaea;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875em;
+  padding: 0.5em 0.93em;
+  text-decoration: none;
+  text-align: center;
+  min-width: 3.75em;
+  height: 2.5em;
+  position: relative;
+}
+.btn:hover,
+.btn:focus {
+  background: #ecf0f1;
+  font-weight: 600;
+}
+.btn-primary {
+  background: #0094ff;
+  border-color: #0094ff;
+  color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background: #0087cc;
+}
+/*---------------------------------------чекбоксы и радио*/
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -50,7 +126,7 @@ a {
 }
 .wrapper main {
   flex: 1 0 auto;
-  margin-top: 2em;
+  margin-top: 6em;
 }
 .wrapper .header {
   height: 9em;
@@ -59,34 +135,11 @@ a {
 .wrapper .header .toolbar {
   display: flex;
   justify-content: flex-end;
+  padding-top: 1em;
 }
 .wrapper .header .toolbar a {
   text-decoration: none;
   margin-left: 1em;
-  padding: .7em 1.5em;
-  color: #0094ff;
-}
-.wrapper .header .toolbar a:hover {
-  color: #0087cc;
-  text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
-}
-.wrapper .header .toolbar .btn {
-  user-select: none;
-  /* убирать выделение текста */
-  background: #0094ff;
-  /* фон кнопки */
-  padding: .7em 1.5em;
-  /* отступ от текста */
-  outline: none;
-  /* убирать контур в Mozilla */
-  color: #ecf0f1;
-}
-.wrapper .header .toolbar .btn:hover {
-  background: #99bbff;
-  text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
-}
-.wrapper .header .toolbar .btn:active {
-  background: #0087cc;
 }
 .wrapper .navigation {
   width: 100%;
@@ -96,7 +149,7 @@ a {
   top: 100px;
   /*высота шапки*/
   position: fixed;
-  z-index: 950;
+  z-index: 90;
   transition: all 20ms linear;
 }
 .wrapper .navigation nav {
@@ -173,7 +226,6 @@ a {
   text-align: center;
   flex: auto;
   transition: all 0.3s;
-  line-height: 1.3;
 }
 .wrapper .navigation nav .submenu .submenu__item a {
   display: inline-block;
@@ -181,6 +233,7 @@ a {
   text-decoration: none;
   text-align: left;
   padding-left: 0.5em;
+  font-size: 14px;
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   width: 85%;
@@ -375,7 +428,7 @@ footer .bottom-footer .footer-info .info-item ul a:hover {
   color: #ecf0f1;
 }
 /*footer*/
-/*-------------------promo-site-----------сайт визитка*/
+/*-----------------------------------------------------------------------promo-site-----------сайт визитка*/
 section.content {
   margin: 2em 0;
 }
@@ -383,24 +436,30 @@ section.content h2 {
   margin-bottom: 1em;
 }
 section.tabs {
+  /*-------------------------------------табы*/
   position: relative;
   width: 100%;
   margin-bottom: 2em;
 }
 section.tabs .label-wrap {
   display: flex;
-  justify-content: space-between;
-  background: #0094ff;
 }
 section.tabs label {
   color: #333;
   cursor: pointer;
   display: block;
-  line-height: 45px;
-  position: relative;
+  line-height: 2.8em;
+  border: 1px solid #d1cdcd;
   top: 0.125em;
   text-align: center;
-  width: 100%;
+  padding: 0 1em;
+}
+section.tabs label:ntf-child(2) {
+  border-left: none;
+  border-right: none;
+}
+section.tabs label:hover {
+  color: #00e43c;
 }
 section.tabs input {
   display: none;
@@ -408,13 +467,12 @@ section.tabs input {
 section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
 section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
 section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
-  background: #ecf0f1;
-  border-color: #fff;
+  border: 2px solid #00e43c;
+  font-weight: 600;
   top: 0;
   z-index: 3;
 }
 section.tabs .tabs_cont {
-  background: #ecf0f1;
   position: relative;
   padding-top: 2em;
   z-index: 2;
@@ -446,7 +504,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   cursor: pointer;
   display: none;
   bottom: 0;
-  z-index: 1000;
+  z-index: 950;
 }
 #toTop:hover {
   transition: all .3s ease;
@@ -456,7 +514,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   position: relative;
   top: 45%;
 }
-/*-----------------------------------------------------блог*/
+/*----------------------------------------------------------------------------------------------------блог*/
 .blog {
   display: flex;
 }
@@ -625,6 +683,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 }
 .blog .sidebar .categories ul li .active {
   background: #00e43c;
+  color: #fff;
 }
 .blog .sidebar .categories ul li :hover {
   background: #00e43c;
@@ -684,7 +743,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   border-bottom: 0.75em solid transparent;
   transition: border-color 0.3s;
 }
-/*-------------------------------------------------интернет магазин*/
+/*---------------------------------------------------------------------------------------------интернет магазин*/
 .wrapper-shop .info-shop {
   display: flex;
   justify-content: space-between;
@@ -693,35 +752,263 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   width: 50%;
 }
 .wrapper-shop .info-shop .shop-idea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50%;
-  padding: 1em;
-  border-bottom: 1px solid #ecf0f1;
+  padding: 0 1em 1em;
 }
-/* Large desktops and laptops */
+.wrapper-shop .info-shop .shop-idea .shop-demo {
+  display: flex;
+  justify-content: center;
+}
+.wrapper-shop .info-shop .shop-idea .shop-demo a {
+  display: inline-block;
+  text-align: center;
+  margin: 1em;
+}
+.wrapper-shop .info-shop .shop-idea .shop-order {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+  border-top: 1px solid #d1cdcd;
+}
+.wrapper-shop .info-shop .shop-idea .shop-order .shop-price label {
+  display: block;
+}
+.wrapper-shop .shop-description {
+  margin-top: 2em;
+}
+/*----------------------------------------------------------------------модальное окно для оформления заявки*/
+.modal {
+  /* затемнение */
+  /* активация слоя затемнения и модального блока */
+  /* элементы модального окна */
+}
+.modal h4 {
+  color: #555;
+  font-size: 1.25em;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+.modal .btn-close {
+  color: #d1cdcd;
+  cursor: pointer;
+  font-size: 1.875em;
+  text-decoration: none;
+  position: absolute;
+  right: 0.312em;
+  top: 0;
+}
+.modal .btn-close:hover {
+  color: red;
+}
+.modal .modal-wrap:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+.modal .modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 102;
+}
+.modal .modal-open:checked ~ .modal-wrap:before,
+.modal .modal-open:checked ~ .modal-wrap .modal-overlay {
+  display: block;
+}
+.modal .modal-open:checked ~ .modal-wrap .modal-dialog {
+  transform: translate(-50%, 0);
+  top: 20%;
+}
+.modal .modal-dialog {
+  background: #ecf0f1;
+  border: none;
+  position: fixed;
+  padding: 1.375em;
+  width: 80%;
+  max-width: 60em;
+  left: 50%;
+  top: -100%;
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -500%);
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+  -o-transition: -o-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  z-index: 103;
+}
+.modal .modal-body {
+  padding: 1.25em;
+}
+.modal .modal-body p {
+  margin: 0;
+}
+.modal .modal-header,
+.modal .modal-footer {
+  padding: 1.25em 1.25em;
+}
+.modal .modal-header {
+  border-bottom: 1px solid #d1cdcd;
+}
+.modal .modal-header h2 {
+  font-size: 1.25em;
+  margin: 0;
+}
+.modal .modal-footer {
+  border-top: 1px solid #d1cdcd;
+}
+.modal .modal-footer label {
+  width: 100%;
+  background: #0094ff;
+  color: #ecf0f1;
+}
+/*-------------------------------------------форма внутри модального окна */
+.modal-form .information {
+  margin-bottom: 1em;
+}
+.modal-form .information p {
+  color: #d1cdcd;
+  font-size: 14px;
+}
+.modal-form .comment textarea {
+  margin-right: 1em;
+}
+.modal-form .comment p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 1em;
+}
+.modal-form .comment .file_upload {
+  position: relative;
+  overflow: hidden;
+  font-size: 1em;
+  height: 2em;
+  line-height: 2em;
+  border: 1px solid #ccc;
+  transition: box-shadow 0.1s linear;
+}
+.modal-form .comment .file_upload:hover > button {
+  background: #0094ff;
+  text-shadow: #0094ff 0 -1px 0;
+}
+.modal-form .comment .file_upload:active > button {
+  background: #0094ff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+}
+.modal-form .comment .file_upload button {
+  float: right;
+  width: 8em;
+  height: 100%;
+  background: #0094ff;
+  transition: background 0.2s;
+  border: 1px solid #d1cdcd;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  text-shadow: #0094ff 0 -1px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.modal-form .comment .file_upload div {
+  padding-left: 1em;
+  cursor: pointer;
+  font-size: 11px;
+  color: #d1cdcd;
+}
+.modal-form .comment .file_upload input[type=file] {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+.modal-form .comment .capcha {
+  background: #d1cdcd;
+  margin-top: 1em;
+}
 @media (min-width: 1200px) {
   .container {
     width: 73.125em;
   }
+  .information {
+    /*---------------------------инпуты в модальном окне*/
+    display: flex;
+    justify-content: space-between;
+  }
+  .information input {
+    margin-right: 1em;
+  }
+  .information :last-child {
+    margin-right: 0;
+  }
+  .comment {
+    /*----------------------------текстерия и файл в модальном окне*/
+    display: flex;
+    justify-content: space-between;
+  }
 }
-/* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
     width: 60em;
   }
+  .information {
+    display: flex;
+    justify-content: space-between;
+  }
+  .information input {
+    margin-right: 1em;
+  }
+  .information :last-child {
+    margin-right: 0;
+  }
+  .comment {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-/* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
     width: 45em;
   }
+  .information {
+    display: block;
+  }
+  .comment {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-/* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
   .container {
     width: 30em;
   }
+  .information {
+    display: block;
+  }
+  .comment {
+    display: block;
+  }
+  /*type file в окне заяки*/
+  .file_upload > div {
+    display: none;
+  }
+  .file_upload > button {
+    width: 100%;
+  }
 }
-/* Landscape phones and smaller */
 @media (max-width: 480px) {
   html {
     text-size-adjust: none;
@@ -733,73 +1020,25 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .container {
     width: 100%;
   }
+  .information {
+    display: block;
+  }
+  .comment {
+    display: block;
+  }
+  /*type file в окне заяки*/
+  .file_upload > div {
+    display: none;
+  }
+  .file_upload > button {
+    width: 100%;
+  }
 }
-/*@media screen and (max-width: 991px) {
-    header{
-        background:#fff;
-    }
-     .topbar {
-        padding-bottom: 1.1em;
-    }
-     .nav-toggle {
-        display: block;
-    }
-
-    .toolbar {
-        position: relative;
-        top: auto;
-        right: auto;
-        text-align: center;
-        margin-top: 0;
-        overflow: hidden;
-        max-height: 0;
-        transform: none;
-        transition: all 0.3s;
-    }
-
-    .navigation {
-        position: relative;
-        overflow: hidden;
-        max-height: 0;
-        border-color: transparent !important;
-        top: auto;
-        transition: all 0.5s;
-    }
-
-    .navigation .main-menu {
-        display: block;
-        width: 100%;
-    }
-
-    .navigation .main-menu > li {
-        position: static;
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .navigation .main-menu > li:last-child {
-        margin-bottom: 0;
-    }
-
-    .navigation .main-menu > li .submenu,
-    .navigation .main-menu > li .submenu {
-        display: block;
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        padding-top: 0;
-        padding-bottom: 0;
-        max-height: 0;
-        transition: all 0.4s;
-    }
-
-    .navigation .main-menu > li.active > a {
-        color: #fff;
-        background-color: #2895f1;
-    }
-
-    .navigation .main-menu > li.active  > a > i {
-        color: #fff;
-    }
-   
-}*/
+/*------------------------------------------------АДМИНКА--------------------------------------*/
+.sidebar {
+  /*------блог*/
+}
+.sidebar .admin-create button {
+  width: 100%;
+  background: #cb0c0c;
+}

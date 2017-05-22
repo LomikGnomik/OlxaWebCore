@@ -22,16 +22,7 @@
                      class="nav-links">
                 </div>
             </section>
-        </div>
-                  @*  <div class="nav-links">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <span class="current">3</span>
-        <a href="#">4</a>
-        <span>...</span>
-        <a href="#">12</a>
-    </div>
-                *@
+        </div>                  
         
         <aside class="sidebar">
             <section class="blog-search-wrap">
@@ -39,6 +30,10 @@
                     <input type="search" placeholder="Поиск" />
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
+            </section>
+
+            <section class="admin-create">
+                <a asp-controller="Blog" asp-action="CreatePost" class="btn">Добавить пост</a>
             </section>
 
             @await Component.InvokeAsync("BlogNavigationMenu")
