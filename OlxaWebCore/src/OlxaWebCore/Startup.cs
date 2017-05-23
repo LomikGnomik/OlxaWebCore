@@ -57,6 +57,7 @@ namespace OlxaWebCore
             services.AddTransient<ISmsSender, AuthMessageSender>();
             services.AddTransient<IPortfolioRepository, EFPortfolioRepository>();
             services.AddTransient<IBlogRepository, EFBlogRepository>();
+            services.AddTransient<IOrderRepository, EFOrderRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
