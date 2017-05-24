@@ -14,5 +14,7 @@ namespace OlxaWebCore.Models.DataModels
         public string Name { get; set; }
 
         public string Email { get; set; }
+
+        public string Tel { get; set; }
     }
 }

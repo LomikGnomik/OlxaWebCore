@@ -17,7 +17,13 @@ namespace OlxaWebCore.Controllers
 
         public ViewResult All()
         {
+
             return View();
         }
-}             
+        public ViewResult WebSite()
+        {
+
+            return View();
+        }
+    }             
     }
