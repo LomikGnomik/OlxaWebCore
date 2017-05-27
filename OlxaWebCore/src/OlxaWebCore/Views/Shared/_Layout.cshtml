@@ -186,7 +186,7 @@
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/scripts.js" asp-append-version="true"></script>
     </environment>
     <environment names="Staging,Production">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
@@ -199,241 +199,21 @@
                     asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
             </script>*@
 
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/scripts.js" asp-append-version="true"></script>
     </environment>
 
     @RenderSection("scripts", required: false)
 
     <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
-
-
-    <script>
-        /*модальное окно инпут с загрузкой файлов*/
-        
-    $(function () {
-        var wrapper = $(".file_upload"),
-            inp = wrapper.find("input"),
-            btn = wrapper.find("button"),
-            lbl = wrapper.find("div");
-
-        btn.add(lbl).click(function () {
-            inp.click();
-        });
-
-        var file_api = (window.File && window.FileReader && window.FileList && window.Blob) ? true : false;
-
-        inp.change(function () {
-
-            var file_name;
-            if (file_api && inp[0].files[0])
-                file_name = inp[0].files[0].name;
-            else
-                file_name = inp.val().replace("C:\\fakepath\\", '');
-            if (!file_name.length)
-                return;
-
-            if (lbl.is(":visible")) {
-                lbl.text(file_name);
-                btn.text("Выбрать");
-            } else
-                btn.text(file_name);
-        }).change();
-
-    });
-    $(window).resize(function () {
-        $(".file_upload input").triggerHandler("change");
-    });
-    </script>
-    
-    <script>
-
-
-
-        //прокрутка наверх
-
-
-
-        $(function () {
-
-
-
-            $(window).scroll(function () {
-
-
-
-                if ($(this).scrollTop() != 0) {
-
-
-
-                    $('#toTop').fadeIn();
-
-
-
-                }
-
-
-
-                else {
-
-
-
-                    $('#toTop').fadeOut();
-
-
-
-                }
-
-
-
-            });
-
-
-
-            $('#toTop').click(function () {
-
-
-
-                $('body,html').animate({ scrollTop: 0 }, 600);
-
-
-
-            });
-
-
-
-        });
-
-
-
-
-
-
-
-        //фиксированное меню
-
-
-
-        var h_hght = 100; // высота шапки
-
-
-
-        var h_mrg = 0;    // отступ когда шапка уже не видна
-
-
-
-
-
-
-
-        $(function () {
-
-
-
-
-
-
-
-            var elem = $('.navigation');
-
-
-
-            var top = $(this).scrollTop();
-
-
-
-
-
-
-
-            if (top > h_hght) {
-
-
-
-                elem.css('top', h_mrg);
-
-
-
-            }
-
-
-
-
-
-
-
-            $(window).scroll(function () {
-
-
-
-                top = $(this).scrollTop();
-
-
-
-
-
-
-
-                if (top + h_mrg < h_hght) {
-
-
-
-                    elem.css('top', (h_hght - top));
-
-
-
-                } else {
-
-
-
-                    elem.css('top', h_mrg);
-
-
-
-                }
-
-
-
-            });
-
-
-
-
-
-
-
-        });
-
-
-
-
-
-
-
+   
+    @*<script>
         //активная ссылка
-
-
-
-        //$(".link").click(function (e) {
-
-
-
-        //    e.preventDefault();
-
-
-
-        //    $("link").removeClass('active');
-
-
-
-        //    $(this).addClass('active');
-
-
-
-        //})
-
-
-
-    </script>
+        $(".link").click(function (e) {
+            e.preventDefault();
+            $("link").removeClass('active');
+            $(this).addClass('active');
+        })
+    </script>*@
 
 
 

@@ -1,8 +1,39 @@
 /*РАЗМЕРЫ*/
+/*малый борд.радиус,подчеркивания и пр.тех вещи*/
+/*большой борд.радиус,горизонт.отступы между иконкой и текстом, отступы между шрифтами разного размера*/
+/*теги,даты постов*/
+/*шрифт вертикальные и горизонтальные отступы для всего*/
+/*увелич.для больших заголовков*/
+/*большой шрифт и большие отступы*/
+/*большой вертикальный отступ*/
+/*отступы между секциями*/
 /*ЦВЕТА*/
+/*основной цвет*/
+/*дополнительный цвет*/
+/*цвет успеха*/
+/*цвет неудачи*/
+/*светло серый для фонов*/
+/*чуть потемнее для границ, линий, обводки и разделителей*/
+/*средней насыщенности для подзаголовков и вспомогательного текста*/
+/*темно-серый для заголовков, основного текста и фона.*/
+/*-------------------------*/
+/*-------------------------*/
+/*-------------------------*/
+/*-------------------------*/
+/*тени*/
+/*классы*/
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
 html,
 body {
   height: 100%;
+  color: #333333;
 }
 *,
 *:before,
@@ -10,11 +41,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-* ul,
-*:before ul,
-*:after ul {
-  list-style-type: none;
 }
 img {
   vertical-align: middle;
@@ -32,20 +58,23 @@ img {
 }
 body {
   font-size: 16px;
-  font-family: 'Istok Web', sans-serif;
+  font-family: 'Istok Web', Arial, Helvetica, sans-serif;
+  line-height: 1.3;
 }
 a {
-  color: #333;
+  color: #333333;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s;
+  outline: none;
 }
 ul,
 ol {
-  padding-left: 18px;
+  padding-left: 1.125em;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 1.5em;
   line-height: 1.8;
+  list-style-type: none;
 }
 textarea,
 select,
@@ -62,9 +91,9 @@ input[type=search] {
   line-height: 1.5;
   height: 3em;
   font-size: 1em;
-  color: #333;
+  color: #333333;
   text-transform: none;
-  border: 1px solid #d1cdcd;
+  border: 1px solid #cccccc;
   background-color: #fff;
   padding: 0 1.25em;
   margin-bottom: 1.5em;
@@ -89,31 +118,67 @@ textarea {
 }
 /*-----------------------------------------------кнопки*/
 .btn {
-  background: #eaeaea;
-  cursor: pointer;
   display: inline-block;
-  font-size: 0.875em;
-  padding: 0.5em 0.93em;
-  text-decoration: none;
+  height: 3em;
+  line-height: 2.8em;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
   text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 0 1.56em;
+  margin: 0.625em 0;
+  margin-right: 0.625em;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  background-color: #e5e5e5;
   min-width: 3.75em;
-  height: 2.5em;
-  position: relative;
+}
+.btn i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  line-height: 1;
+}
+.btn i:before {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  margin-top: -0.125em;
+  font-size: 1.19em;
 }
 .btn:hover,
 .btn:focus {
   background: #ecf0f1;
-  font-weight: 600;
 }
 .btn-primary {
   background: #0094ff;
-  border-color: #0094ff;
   color: #fff;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
   background: #0087cc;
+}
+.btn-icon-right {
+  padding-right: 1.31em;
+}
+.btn-icon-right i {
+  margin-left: 0.44em;
+  margin-top: -0.25em;
+}
+.btn-more {
+  background: #00e43c;
+  color: #fff;
+}
+.btn-more:hover {
+  background: #00b120;
 }
 /*---------------------------------------чекбоксы и радио*/
 .wrapper {
@@ -143,7 +208,7 @@ textarea {
 }
 .wrapper .navigation {
   width: 100%;
-  border-bottom: 1px solid #d1cdcd;
+  border-bottom: 1px solid #cccccc;
   box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
   background: #fff;
   top: 100px;
@@ -176,7 +241,7 @@ textarea {
   width: 300%;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a {
-  color: #333;
+  color: #333333;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a.active {
   background-color: #0094ff;
@@ -233,12 +298,12 @@ textarea {
   text-decoration: none;
   text-align: left;
   padding-left: 0.5em;
-  font-size: 14px;
+  font-size: 0.8em;
   margin-top: 0.3em;
   margin-bottom: 0.3em;
   width: 85%;
   font-weight: 500;
-  border: 1px solid #00e43c;
+  border: 2px solid #00e43c;
 }
 .wrapper .navigation nav .submenu .submenu__item a:hover {
   background: #00e43c;
@@ -284,31 +349,31 @@ textarea {
 }
 .wrapper .inner .breadcrumbs {
   display: inline-block;
-  border: 1px solid #d1cdcd;
+  border: 1px solid #cccccc;
   padding: 0.562em 1.5em 0.687em 1.5em;
 }
 .wrapper .inner .breadcrumbs a {
   text-decoration: none;
-  border-bottom: 1px dotted #333;
+  border-bottom: 1px dotted #333333;
   transition: all 0.25s;
-  font-size: 14px;
+  font-size: 0.8em;
   font-weight: 600;
-  color: #99bbff;
+  color: #e5f4ff;
 }
 .wrapper .inner .breadcrumbs a:hover {
   color: #0094ff;
   border-color: #0094ff;
 }
 .wrapper .inner .breadcrumbs span {
-  font-size: 14px;
+  font-size: 0.8em;
   font-weight: 600;
   color: #0094ff;
 }
 .wrapper .inner .breadcrumbs .delimiter {
   /* стрелка переход*/
   font-weight: 100;
-  font-size: 14px;
-  color: #99bbff;
+  font-size: 0.8em;
+  color: #e5f4ff;
 }
 .wrapper .inner .breadcrumbs > * {
   display: inline-block;
@@ -325,8 +390,8 @@ footer {
 }
 footer .top-footer {
   width: 100%;
-  border-bottom: 1px solid #d1cdcd;
-  border-top: 1px solid #d1cdcd;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
 }
 footer .top-footer .tools {
   display: flex;
@@ -400,15 +465,15 @@ footer .bottom-footer .footer-info .info-item p {
   margin-bottom: 1.5em;
 }
 footer .bottom-footer .footer-info .info-item h3 {
-  font-size: 14px;
-  color: #d1cdcd;
+  font-size: 0.8em;
+  color: #cccccc;
   margin-bottom: 1.25em;
   padding-bottom: 1.5em;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #cccccc;
 }
 footer .bottom-footer .footer-info .info-item ul {
   list-style: none;
-  font-size: 14px;
+  font-size: 0.8em;
   line-height: 1.8;
 }
 footer .bottom-footer .footer-info .info-item ul li {
@@ -418,7 +483,7 @@ footer .bottom-footer .footer-info .info-item ul a {
   position: relative;
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #333333;
   padding: 0 1.75em 0 0.75em;
   border: 1px solid #00e43c;
   transition: all 0.3s;
@@ -435,86 +500,131 @@ section.content {
 section.content h2 {
   margin-bottom: 1em;
 }
-section.tabs {
-  /*-------------------------------------табы*/
+section.promo-site-slider .slider {
+  margin: 0 auto;
+  max-width: 59em;
+}
+section.promo-site-slider .slider .slide_viewer {
+  height: 30em;
+  overflow: hidden;
+  position: relative;
+}
+section.promo-site-slider .slider .slide_group {
+  height: 100%;
   position: relative;
   width: 100%;
-  margin-bottom: 2em;
 }
-section.tabs .label-wrap {
-  display: flex;
-}
-section.tabs label {
-  color: #333;
-  cursor: pointer;
-  display: block;
-  line-height: 2.8em;
-  border: 1px solid #d1cdcd;
-  top: 0.125em;
-  text-align: center;
-  padding: 0 1em;
-}
-section.tabs label:ntf-child(2) {
-  border-left: none;
-  border-right: none;
-}
-section.tabs label:hover {
-  color: #00e43c;
-}
-section.tabs input {
+section.promo-site-slider .slider .slide {
   display: none;
-}
-section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
-section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
-section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
-  border: 2px solid #00e43c;
-  font-weight: 600;
-  top: 0;
-  z-index: 3;
-}
-section.tabs .tabs_cont {
-  position: relative;
-  padding-top: 2em;
-  z-index: 2;
-  height: 15em;
-}
-section.tabs .tabs_cont > div {
+  height: 100%;
   position: absolute;
-  left: -9999px;
-  top: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  width: 100%;
 }
-section.tabs #tab_1:checked ~ .tabs_cont #tab_c1,
-section.tabs #tab_2:checked ~ .tabs_cont #tab_c2,
-section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
-  position: static;
+section.promo-site-slider .slider .slide:first-child {
+  display: block;
+}
+section.promo-site-slider .slide_buttons {
   left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+section.promo-site-slider a.slide_btn {
+  color: #999999;
+  font-size: 2.6em;
+  margin: 0 0.175em;
+  transition: all 0.4s ease-in-out;
+}
+section.promo-site-slider .slide_btn.active,
+section.promo-site-slider .slide_btn:hover {
+  color: #0094ff;
+  cursor: pointer;
+}
+section.promo-site-slider .directional_nav {
+  margin: 0 auto;
+  max-width: 59em;
+  position: relative;
+  top: -15em;
+}
+section.promo-site-slider .directional_nav .previous_btn {
+  bottom: 0;
+  left: 1.5em;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+section.promo-site-slider .directional_nav .next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 1.5em;
+  top: 0;
+}
+section.promo-site-slider .directional_nav .previous_btn,
+section.promo-site-slider .directional_nav .next_btn {
+  cursor: pointer;
+  height: 65px;
+  opacity: 0.5;
+  transition: opacity 0.4s ease-in-out;
+  width: 65px;
+}
+section.promo-site-slider .directional_nav .previous_btn i,
+section.promo-site-slider .directional_nav .next_btn i {
+  font-size: 4em;
+  color: #fff;
+}
+section.promo-site-slider .previous_btn:hover,
+section.promo-site-slider .next_btn:hover {
   opacity: 1;
 }
-#toTop {
-  width: 1.5em;
-  position: fixed;
-  background: #333;
+section.tariff {
+  margin-top: 4em;
+}
+section.tariff h2 {
   text-align: center;
-  color: #ecf0f1;
-  opacity: .2;
-  height: 100%;
-  font-size: 1.5em;
-  cursor: pointer;
-  display: none;
-  bottom: 0;
-  z-index: 950;
+  margin: 1.25em;
 }
-#toTop:hover {
-  transition: all .3s ease;
-  opacity: .7;
+section.tariff .tariff-wrap {
+  display: flex;
+  justify-content: space-between;
 }
-#toTop i {
-  position: relative;
-  top: 45%;
+section.tariff .promo-wrapper {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.6em;
+  border: 2px solid #00e43c;
+  margin: 0 auto 1.88em;
 }
-/*----------------------------------------------------------------------------------------------------блог*/
+section.tariff .promo-wrapper [class*="header-promo"] {
+  padding: 0 0.9em;
+}
+section.tariff .promo-wrapper [class*="header-promo"] .promo-icon {
+  width: 4.25em;
+  margin: 0 auto 0.6em;
+}
+section.tariff .promo-wrapper [class*="header-promo"] h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+}
+section.tariff .promo-wrapper [class*="header-promo"] p {
+  color: #999999;
+  margin-bottom: 1.5em;
+}
+section.tariff .promo-wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+section.tariff .promo-wrapper ul li {
+  display: block;
+  color: #999999;
+  padding: 0.625em 0.93em;
+  border-top: 1px solid #cccccc;
+}
+section.tariff .promo-wrapper ul li:last-child {
+  border-bottom: 1px solid #cccccc;
+}
+/*---------------------------------------------------------------------------------------------------------блог*/
 .blog {
   display: flex;
 }
@@ -538,7 +648,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   display: block;
   width: 48.5%;
   /*-----------чтоб было по одному посту поставить 100%*/
-  border: 1px solid #d1cdcd;
+  border: 1px solid #cccccc;
   margin-bottom: 1.87em;
 }
 .blog .post .post__item .post_img {
@@ -554,18 +664,18 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.562em;
-  border-bottom: 1px solid #d1cdcd;
+  border-bottom: 1px solid #cccccc;
   width: 100%;
   margin-bottom: 1.5em;
 }
 .blog .post .post__item .post-body .post-meta span {
-  color: #d1cdcd;
+  color: #cccccc;
   margin-right: 0.31em;
   margin-bottom: 0.37em;
 }
 .blog .post .post__item .post-body .post-meta a {
   display: inline-block;
-  font-size: 14px;
+  font-size: 0.8em;
   font-weight: normal;
   border-bottom: 1px dashed #0094ff;
 }
@@ -574,7 +684,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 }
 .blog .post .post__item .post-body .post-title {
   display: block;
-  color: #333;
+  color: #333333;
   padding-bottom: 0;
   padding-top: 0.312em;
   margin-bottom: 4.5em;
@@ -585,7 +695,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 }
 .blog .post .pagination {
   padding-top: 1em;
-  border-top: 1px solid #d1cdcd;
+  border-top: 1px solid #cccccc;
   margin-top: 2em;
 }
 .blog .post .pagination .nav-links a,
@@ -606,16 +716,16 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 .blog .sidebar .widget-sidebar {
   padding: 1.125em 1.5em 1.5em 1.5em;
   margin-bottom: 1.5em;
-  border: 1px solid #d1cdcd;
+  border: 1px solid #cccccc;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 .blog .sidebar h3 {
-  font-size: 14px;
-  color: #d1cdcd;
+  font-size: 0.8em;
+  color: #cccccc;
   margin-bottom: 1.2em;
   padding-bottom: 1.5em;
-  border-bottom: 1px solid #d1cdcd;
+  border-bottom: 1px solid #cccccc;
 }
 .blog .sidebar .blog-search-wrap {
   margin-bottom: 1.5em;
@@ -629,12 +739,12 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   display: block;
   width: 100%;
   line-height: 1.5;
-  color: #333;
-  font-size: 14px;
+  color: #333333;
+  font-size: 0.8em;
   height: 4.31em;
   padding-left: 2.8em;
   margin-bottom: 0;
-  background: #e5eaff;
+  background: #e5f4ff;
   transition: all 0.3s;
   border: none;
 }
@@ -650,25 +760,25 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   left: 1.5em;
   background: none;
   border: none;
-  font-size: 11px;
+  font-size: 16px -5;
   color: #0094ff;
   padding: 0;
   margin-top: -0.5em;
 }
 .blog .sidebar .categories ul {
-  font-size: 14px;
+  font-size: 0.8em;
   list-style: none;
   padding: 0;
   margin: 0;
   line-height: 1.8;
 }
 .blog .sidebar .categories ul li {
-  padding-bottom: 11px;
+  padding-bottom: 16px -5;
 }
 .blog .sidebar .categories ul li a {
   position: relative;
   display: block;
-  color: #333;
+  color: #333333;
   padding: 0 1.75em 0 0.75em;
   border: 1px solid #00e43c;
   transition: all 0.3s;
@@ -678,7 +788,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   position: absolute;
   right: 0.625em;
   top: 0;
-  color: #d1cdcd;
+  color: #cccccc;
   transition: color 0.3s;
 }
 .blog .sidebar .categories ul li .active {
@@ -709,7 +819,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   vertical-align: top;
 }
 .blog .sidebar .best h4 {
-  font-size: 14px;
+  font-size: 0.8em;
   margin-bottom: 0;
 }
 .blog .sidebar .best h4 a {
@@ -718,7 +828,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 .blog .sidebar .featured-tags a {
   position: relative;
   display: inline-block;
-  font-size: 14px !important;
+  font-size: 0.8em !important;
   height: 1.5em;
   color: #fff;
   font-weight: normal;
@@ -771,7 +881,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   display: flex;
   justify-content: space-between;
   padding-top: 1em;
-  border-top: 1px solid #d1cdcd;
+  border-top: 1px solid #cccccc;
 }
 .wrapper-shop .info-shop .shop-idea .shop-order .shop-price label {
   display: block;
@@ -793,7 +903,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   margin: 0;
 }
 .modal .btn-close {
-  color: #d1cdcd;
+  color: #cccccc;
   cursor: pointer;
   font-size: 1.875em;
   text-decoration: none;
@@ -862,14 +972,14 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   padding: 1.25em 1.25em;
 }
 .modal .modal-header {
-  border-bottom: 1px solid #d1cdcd;
+  border-bottom: 1px solid #cccccc;
 }
 .modal .modal-header h2 {
   font-size: 1.25em;
   margin: 0;
 }
 .modal .modal-footer {
-  border-top: 1px solid #d1cdcd;
+  border-top: 1px solid #cccccc;
 }
 .modal .modal-footer label {
   width: 100%;
@@ -881,15 +991,15 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   margin-bottom: 1em;
 }
 .modal-form .information p {
-  color: #d1cdcd;
-  font-size: 14px;
+  color: #cccccc;
+  font-size: 0.8em;
 }
 .modal-form .comment textarea {
   margin-right: 1em;
 }
 .modal-form .comment p {
   text-align: center;
-  font-size: 14px;
+  font-size: 0.8em;
   margin-bottom: 1em;
 }
 .modal-form .comment .file_upload {
@@ -898,7 +1008,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   font-size: 1em;
   height: 2em;
   line-height: 2em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   transition: box-shadow 0.1s linear;
 }
 .modal-form .comment .file_upload:hover > button {
@@ -915,7 +1025,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   height: 100%;
   background: #0094ff;
   transition: background 0.2s;
-  border: 1px solid #d1cdcd;
+  border: 1px solid #cccccc;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
   color: #fff;
   text-shadow: #0094ff 0 -1px 0;
@@ -927,8 +1037,8 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 .modal-form .comment .file_upload div {
   padding-left: 1em;
   cursor: pointer;
-  font-size: 11px;
-  color: #d1cdcd;
+  font-size: 16px -5;
+  color: #cccccc;
 }
 .modal-form .comment .file_upload input[type=file] {
   position: absolute;
@@ -936,12 +1046,100 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   visibility: hidden;
 }
 .modal-form .comment .capcha {
-  background: #d1cdcd;
+  background: #cccccc;
   margin-top: 1em;
+}
+/*------------------------------------------------------------------------ТАБЫ*/
+section.tabs {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2em;
+}
+section.tabs .label-wrap {
+  display: flex;
+}
+section.tabs label {
+  color: #333333;
+  cursor: pointer;
+  display: block;
+  line-height: 2.8em;
+  font-weight: 600;
+  border: 1px solid #cccccc;
+  top: 0.125em;
+  text-align: center;
+  padding: 0 1em;
+}
+section.tabs label:ntf-child(2) {
+  border-left: none;
+  border-right: none;
+}
+section.tabs label:hover {
+  color: #00e43c;
+}
+section.tabs input {
+  display: none;
+}
+section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
+section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
+section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
+  border: 2px solid #00e43c;
+  top: 0;
+  z-index: 3;
+}
+section.tabs .tabs_cont {
+  position: relative;
+  padding-top: 2em;
+  z-index: 2;
+  height: 15em;
+}
+section.tabs .tabs_cont > div {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+section.tabs #tab_1:checked ~ .tabs_cont #tab_c1,
+section.tabs #tab_2:checked ~ .tabs_cont #tab_c2,
+section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
+  position: static;
+  left: 0;
+  opacity: 1;
+}
+/*--------------------------------------------------------------Полоса прокрутки наверх*/
+#toTop {
+  width: 1.5em;
+  position: fixed;
+  background: #333333;
+  text-align: center;
+  color: #ecf0f1;
+  opacity: .2;
+  height: 100%;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+  bottom: 0;
+  z-index: 950;
+}
+#toTop:hover {
+  transition: all .3s ease;
+  opacity: .7;
+}
+#toTop i {
+  position: relative;
+  top: 45%;
 }
 @media (min-width: 1200px) {
   .container {
     width: 73.125em;
+  }
+  .tariff-wrap {
+    display: flex;
+    flex-direction: row;
+  }
+  /*тарифы в промосайтах*/
+  .promo-wrapper {
+    max-width: 22em;
   }
   .information {
     /*---------------------------инпуты в модальном окне*/
@@ -964,9 +1162,17 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .container {
     width: 60em;
   }
-  .information {
+  .tariff-wrap {
     display: flex;
+    flex-direction: row;
+  }
+  .promo-wrapper {
+    max-width: 18em;
+  }
+  .information {
     justify-content: space-between;
+    display: flex;
+    flex-direction: row;
   }
   .information input {
     margin-right: 1em;
@@ -983,8 +1189,16 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .container {
     width: 45em;
   }
+  .tariff-wrap {
+    display: flex;
+    flex-direction: row;
+  }
+  .promo-wrapper {
+    max-width: 13em;
+  }
   .information {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   .comment {
     display: flex;
@@ -995,8 +1209,13 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .container {
     width: 30em;
   }
+  .tariff-wrap {
+    display: flex;
+    flex-direction: column;
+  }
   .information {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   .comment {
     display: block;
@@ -1020,8 +1239,13 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .container {
     width: 100%;
   }
+  .tariff-wrap {
+    display: flex;
+    flex-direction: column;
+  }
   .information {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   .comment {
     display: block;
@@ -1040,5 +1264,5 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 }
 .sidebar .admin-create button {
   width: 100%;
-  background: #cb0c0c;
+  background: #ff3136;
 }
