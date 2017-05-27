@@ -1,29 +1,85 @@
 ﻿
 /*РАЗМЕРЫ*/
-@font-size-base: 16px;
-@font-size-small: (@font-size-base) - 2;
-@font-size-extra-small: (@font-size-base) - 5;
-@font-size-big: (@font-size-base) + 2;
+
+@size-little: 0.3em; /*малый борд.радиус,подчеркивания и пр.тех вещи*/
+@size-small: 0.5em; /*большой борд.радиус,горизонт.отступы между иконкой и текстом, отступы между шрифтами разного размера*/
+@size-font-extra-small: @size-font-base -5;
+@size-font-small: 0.8em; /*теги,даты постов*/
+@size-font-base: 16px; /*шрифт вертикальные и горизонтальные отступы для всего*/
+@size-font-big: 1.25em;
+@size-font-bigger: 1.5; /*увелич.для больших заголовков*/
+@size-margin: 2em; /*большой шрифт и большие отступы*/
+@size-margin-vertical: 3em; /*большой вертикальный отступ*/
+@size-margin-section: 4em; /*отступы между секциями*/
+
 
 /*ЦВЕТА*/
-@base-color: #0094ff;
-@more-color: #00e43c;
-@gray-color: #d1cdcd;
-@accent: #cb0c0c;
-@base-color-lighter1: lighten(spin(@base-color, 5), 10%);
-@base-color-lighter2: lighten(spin(@base-color, 10), 20%);
-@base-color-lighter3: lighten(spin(@base-color, 15), 30%);
-@base-color-lighter4: lighten(spin(@base-color, 25), 45%);
-@base-color-darken1: darken(spin(@base-color, -5), 10%);
-@base-color-darken2: darken(spin(@base-color, -10), 20%);
-@base-color-darken3: darken(spin(@base-color, -100), 90%);
-@font-color: #333;
+@color-base: #0094ff; /*основной цвет*/
+@color-more: #00e43c; /*дополнительный цвет*/
+@color-success: #0d9706; /*цвет успеха*/
+@color-bad: #FD0006; /*цвет неудачи*/
+@color-gray-lighter: lighten(@color-gray, 30%); /*светло серый для фонов*/
+@color-gray-light: lighten(@color-gray, 20%); /*чуть потемнее для границ, линий, обводки и разделителей*/
+@color-gray: #999999; /*средней насыщенности для подзаголовков и вспомогательного текста*/
+@color-gray-dark: darken(@color-gray, 40%); /*темно-серый для заголовков, основного текста и фона.*/
+/*-------------------------*/
+@color-base-lighter1: lighten(@color-base, 10%);
+@color-base-lighter2: lighten(@color-base, 45%);
+@color-base-darken1: darken(spin(@color-base, -5), 10%);
+@color-base-darken2: darken(spin(@color-base, -10), 20%);
+/*-------------------------*/
+@color-more-lighter1: lighten(@color-more, 10%);
+@color-more-lighter2: lighten(@color-more, 40%);
+@color-more-darken1: darken(spin(@color-more, -5), 10%);
+/*-------------------------*/
+@color-success-lighter1: lighten(@color-success, 10%);
+@color-success-lighter2: lighten(@color-success, 45%);
+/*-------------------------*/
+@color-bad-lighter1: lighten(@color-bad, 10%);
+@color-bad-lighter2: lighten(@color-bad, 45%);
 @font-color-reverce: #ecf0f1;
+/*тени*/
+.shadow-lite() {
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+}
+
+.shadow-strong() {
+    box-shadow: 0px 8px 19px -7px #000000;
+}
+
+.shadow-hard () {
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+}
+
+.shadow-active() {
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),1px 1px 5px rgba(255, 255, 255, 1);
+}
+/*классы*/
+.border() {
+    border: 1px solid @color-gray-light;
+}
+
+.border-more() {
+    border: 2px solid @color-more;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 
 html,
 body {
     height: 100%;
+    color: @color-gray-dark;
 }
 
 *,
@@ -32,10 +88,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    ul {
-        list-style-type: none;
-    }
+    // transition: .5s ease-in-out;
 }
 
 img {
@@ -54,22 +107,25 @@ img {
 }
 
 body {
-    font-size: @font-size-base;
-    font-family: 'Istok Web', sans-serif;
+    font-size: @size-font-base;
+    font-family: 'Istok Web', Arial, Helvetica, sans-serif;
+    line-height: 1.3;
 }
 
 a {
-    color: @font-color;
+    color: @color-gray-dark;
     font-weight: 500;
     text-decoration: none;
     transition: color 0.3s;
+    outline: none;
 }
 
 ul, ol {
-    padding-left: 18px;
+    padding-left: 1.125em;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 1.5em;
     line-height: 1.8;
+    list-style-type: none;
 }
 
 textarea, select,
@@ -86,9 +142,9 @@ input[type=search] {
     line-height: 1.5;
     height: 3em;
     font-size: 1em;
-    color: @font-color;
+    color: @color-gray-dark;
     text-transform: none;
-    border: 1px solid @gray-color;
+    .border;
     background-color: #fff;
     padding: 0 1.25em;
     margin-bottom: 1.5em;
@@ -97,7 +153,7 @@ input[type=search] {
     transition: all 0.3s;
 
     &:focus {
-        outline-color: @more-color;
+        outline-color: @color-more;
     }
 }
 
@@ -106,30 +162,72 @@ textarea {
 }
 /*-----------------------------------------------кнопки*/
 .btn {
-    background: #eaeaea;
-    cursor: pointer;
     display: inline-block;
-    font-size: 0.875em;
-    padding: 0.5em 0.93em;
-    text-decoration: none;
+    height: 3em;
+    line-height: 2.8em;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
     text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 0 1.56em;
+    margin: 0.625em 0;
+    margin-right: 0.625em;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    user-select: none;
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+    background-color: @color-gray-lighter;
     min-width: 3.75em;
-    height: 2.5em;
-    position: relative;
+
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1em;
+        line-height: 1;
+
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            margin-top: -0.125em;
+            font-size: 1.19em;
+        }
+    }
 }
 
 .btn:hover, .btn:focus {
     background: @font-color-reverce;
-    font-weight: 600;
 }
 
 .btn-primary {
-    background: @base-color;
-    border-color: @base-color;
+    background: @color-base;
     color: #fff;
 
     &:hover, &:active, &:focus {
-        background: @base-color-darken1;
+        background: @color-base-darken1;
+    }
+}
+
+.btn-icon-right {
+    padding-right: 1.31em;
+
+    i {
+        margin-left: 0.44em;
+        margin-top: -0.25em;
+    }
+}
+
+.btn-more {
+    background: @color-more;
+    color: #fff;
+
+    &:hover {
+        background: @color-more-darken1;
     }
 }
 
@@ -139,6 +237,7 @@ textarea {
     display: flex;
     flex-direction: column;
     height: 100%;
+
 
     .container {
         margin: 0 auto;
@@ -167,7 +266,7 @@ textarea {
 
     .navigation {
         width: 100%;
-        border-bottom: 1px solid @gray-color;
+        border-bottom: 1px solid @color-gray-light;
         box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
         background: #fff;
         top: 100px; /*высота шапки*/
@@ -185,7 +284,7 @@ textarea {
                 list-style: none;
 
                 li:hover > a { /*при выделении подменю сохраняется стиль*/
-                    background-color: @base-color;
+                    background-color: @color-base;
                     color: @font-color-reverce;
                 }
 
@@ -201,11 +300,11 @@ textarea {
                     }
 
                     a {
-                        color: @font-color;
+                        color: @color-gray-dark;
                     }
 
                     a.active {
-                        background-color: @base-color;
+                        background-color: @color-base;
                         color: @font-color-reverce;
 
                         &::after { //стрелочка для активного пункта
@@ -216,7 +315,7 @@ textarea {
                             height: 0;
                             border-left: 6px solid transparent;
                             border-right: 6px solid transparent;
-                            border-top: 6px solid @base-color;
+                            border-top: 6px solid @color-base;
                             left: 50%;
                             bottom: -6px;
                             margin-left: -6px;
@@ -233,7 +332,7 @@ textarea {
                         transition: all 0.3s;
 
                         &:hover {
-                            background-color: @base-color;
+                            background-color: @color-base;
                             color: @font-color-reverce;
                         }
                     }
@@ -247,7 +346,7 @@ textarea {
                 padding-left: 0;
                 padding: 1em 0;
                 list-style: none;
-                background-color: @base-color;
+                background-color: @color-base;
                 color: @font-color-reverce;
                 position: absolute;
                 top: 100%;
@@ -265,17 +364,17 @@ textarea {
                         text-decoration: none;
                         text-align: left;
                         padding-left: 0.5em;
-                        font-size: @font-size-small;
+                        font-size: @size-font-small;
                         // padding-top:0.1em;
                         //padding-bottom:0.1em;
                         margin-top: 0.3em;
                         margin-bottom: 0.3em;
                         width: 85%;
                         font-weight: 500;
-                        border: 1px solid @more-color;
+                        .border-more;
 
                         &:hover {
-                            background: @more-color;
+                            background: @color-more;
                         }
                     }
                 }
@@ -292,7 +391,7 @@ textarea {
             display: inline-block;
             position: relative;
             padding: 0.5em 2.25em 0.5em 0.875em;
-            background-color: @base-color;
+            background-color: @color-base;
             overflow: hidden;
 
             &::before {
@@ -329,33 +428,33 @@ textarea {
 
         .breadcrumbs {
             display: inline-block;
-            border: 1px solid @gray-color;
+            .border;
             padding: 0.562em 1.5em 0.687em 1.5em;
 
             a {
                 text-decoration: none;
-                border-bottom: 1px dotted @font-color;
+                border-bottom: 1px dotted @color-gray-dark;
                 transition: all 0.25s;
-                font-size: @font-size-small;
+                font-size: @size-font-small;
                 font-weight: 600;
-                color: @base-color-lighter3;
+                color: @color-base-lighter2;
 
                 &:hover {
-                    color: @base-color;
-                    border-color: @base-color;
+                    color: @color-base;
+                    border-color: @color-base;
                 }
             }
 
             span {
-                font-size: @font-size-small;
+                font-size: @size-font-small;
                 font-weight: 600;
-                color: @base-color;
+                color: @color-base;
             }
 
             .delimiter { /* стрелка переход*/
                 font-weight: 100;
-                font-size: @font-size-small;
-                color: @base-color-lighter3;
+                font-size: @size-font-small;
+                color: @color-base-lighter2;
             }
         }
 
@@ -380,8 +479,8 @@ footer {
 
     .top-footer {
         width: 100%;
-        border-bottom: 1px solid @gray-color;
-        border-top: 1px solid @gray-color;
+        border-bottom: 1px solid @color-gray-light;
+        border-top: 1px solid @color-gray-light;
 
         .tools {
             display: flex;
@@ -427,7 +526,7 @@ footer {
                     right: 0;
                     width: 3em;
                     height: 100%;
-                    background: @base-color;
+                    background: @color-base;
                     cursor: pointer;
                     border: none;
 
@@ -472,16 +571,16 @@ footer {
                 }
 
                 h3 {
-                    font-size: @font-size-small;
-                    color: @gray-color;
+                    font-size: @size-font-small;
+                    color: @color-gray-light;
                     margin-bottom: 1.25em;
                     padding-bottom: 1.5em;
-                    border-bottom: 1px solid #d9d9d9;
+                    border-bottom: 1px solid @color-gray-light;
                 }
 
                 ul {
                     list-style: none;
-                    font-size: @font-size-small;
+                    font-size: @size-font-small;
                     line-height: 1.8;
 
                     li {
@@ -492,13 +591,13 @@ footer {
                         position: relative;
                         display: block;
                         text-decoration: none;
-                        color: @font-color;
+                        color: @color-gray-dark;
                         padding: 0 1.75em 0 0.75em;
-                        border: 1px solid @more-color;
+                        border: 1px solid @color-more;
                         transition: all 0.3s;
 
                         &:hover {
-                            background: @more-color;
+                            background: @color-more;
                             color: @font-color-reverce;
                         }
                     }
@@ -517,101 +616,156 @@ section.content {
     }
 }
 
-section.tabs { /*-------------------------------------табы*/
-    position: relative;
-    width: 100%;
-    margin-bottom: 2em;
+section.promo-site-slider {
 
-    .label-wrap {
-        display: flex;
-        //justify-content: space-between;
-    }
+    .slider {
+        margin: 0 auto;
+        max-width: 59em;
 
-    label {
-        color: @font-color;
-        cursor: pointer;
-        display: block;
-        line-height: 2.8em;
-        border: 1px solid @gray-color;
-        top: 0.125em;
-        text-align: center;
-        padding: 0 1em;
-        // width: 100%;
-        &:ntf-child(2) {
-            border-left: none;
-            border-right: none;
+        .slide_viewer {
+            height: 30em;
+            overflow: hidden;
+            position: relative;
         }
 
-        &:hover {
-            color: @more-color;
+        .slide_group {
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+
+        .slide {
+            display: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+
+            &:first-child {
+                display: block;
+            }
         }
     }
 
-    input {
-        display: none;
-    }
 
-
-    #tab_1:checked ~ .label-wrap #tab_l1,
-    #tab_2:checked ~ .label-wrap #tab_l2,
-    #tab_3:checked ~ .label-wrap #tab_l3 {
-        border: 2px solid @more-color;
-        font-weight: 600;
-        top: 0;
-        z-index: 3;
-    }
-
-    .tabs_cont {
-        position: relative;
-        padding-top: 2em;
-        z-index: 2;
-        height: 15em;
-    }
-
-    .tabs_cont > div {
-        position: absolute;
-        left: -9999px;
-        top: 0;
-        opacity: 0;
-        transition: opacity .5s ease-in-out;
-    }
-
-    #tab_1:checked ~ .tabs_cont #tab_c1,
-    #tab_2:checked ~ .tabs_cont #tab_c2,
-    #tab_3:checked ~ .tabs_cont #tab_c3 {
-        position: static;
+    .slide_buttons {
         left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+    }
+
+    a.slide_btn {
+        color: @color-gray;
+        font-size: 2.6em;
+        margin: 0 0.175em;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .slide_btn.active, .slide_btn:hover {
+        color: @color-base;
+        cursor: pointer;
+    }
+
+    .directional_nav {
+        //height: 340px;
+        margin: 0 auto;
+        max-width: 59em;
+        position: relative;
+        top: -15em;
+
+        .previous_btn {
+            bottom: 0;
+            left: 1.5em;
+            margin: auto;
+            position: absolute;
+            top: 0;
+        }
+
+        .next_btn {
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            right: 1.5em;
+            top: 0;
+        }
+
+        .previous_btn, .next_btn {
+            cursor: pointer;
+            height: 65px;
+            opacity: 0.5;
+            transition: opacity 0.4s ease-in-out;
+            width: 65px;
+
+            i {
+                font-size: 4em;
+                color: #fff;
+            }
+        }
+    }
+
+    .previous_btn:hover, .next_btn:hover {
         opacity: 1;
     }
 }
 
-#toTop {
-    width: 1.5em;
-    position: fixed;
-    background: @font-color;
-    text-align: center;
-    color: @font-color-reverce;
-    opacity: .2;
-    cursor: pointer;
-    //  transition: all .6s ease;
-    height: 100%;
-    font-size: 1.5em;
-    cursor: pointer;
-    display: none;
-    bottom: 0;
-    z-index: 950;
 
-    &:hover {
-        transition: all .3s ease;
-        opacity: .7;
+section.tariff {
+    margin-top: @size-margin-section;
+
+    h2 {
+        text-align: center;
+        margin:@size-font-big;
     }
 
-    i {
-        position: relative;
-        top: 45%;
+    .tariff-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .promo-wrapper {
+        width: 100%;
+        text-align: center;
+        padding-top: 0.6em;
+        .border-more;
+        margin: 0 auto 1.88em;
+
+        [class*="header-promo"] {
+            padding: 0 0.9em;
+
+            .promo-icon {
+                width: 4.25em;
+                margin: 0 auto 0.6em;
+            }
+
+            h3 {
+                font-size: @size-font-big;
+                font-weight: 600;
+                margin-bottom: 1.5em;
+            }
+
+            p {
+                color: @color-gray;
+                margin-bottom: 1.5em;
+            }
+        }
+        ul{
+            margin:0;
+            padding:0;
+            li{
+                display:block;
+                color:@color-gray;
+                padding:0.625em 0.93em;
+                border-top:1px solid @color-gray-light;
+                &:last-child{
+                    border-bottom:1px solid @color-gray-light;
+                }
+            }
+        }
     }
 }
-/*----------------------------------------------------------------------------------------------------блог*/
+
+
+/*---------------------------------------------------------------------------------------------------------блог*/
 .blog {
     display: flex;
 
@@ -619,7 +773,7 @@ section.tabs { /*-------------------------------------табы*/
         display: inline-block;
         vertical-align: middle;
         font-size: 0.687em;
-        color: @base-color;
+        color: @color-base;
         margin-top: -0.312em;
         margin-right: 0.05em;
     }
@@ -635,7 +789,7 @@ section.tabs { /*-------------------------------------табы*/
         .post__item {
             display: block;
             width: 48.5%; /*-----------чтоб было по одному посту поставить 100%*/
-            border: 1px solid @gray-color;
+            .border;
             margin-bottom: 1.87em;
 
             .post_img {
@@ -652,21 +806,21 @@ section.tabs { /*-------------------------------------табы*/
                     display: flex;
                     justify-content: space-between;
                     padding-bottom: 0.562em;
-                    border-bottom: 1px solid @gray-color;
+                    border-bottom: 1px solid @color-gray-light;
                     width: 100%;
                     margin-bottom: 1.5em;
 
                     span {
-                        color: @gray-color;
+                        color: @color-gray-light;
                         margin-right: 0.31em;
                         margin-bottom: 0.37em;
                     }
 
                     a {
                         display: inline-block;
-                        font-size: @font-size-small;
+                        font-size: @size-font-small;
                         font-weight: normal;
-                        border-bottom: 1px dashed @base-color;
+                        border-bottom: 1px dashed @color-base;
                     }
 
                     .post-comments {
@@ -676,14 +830,14 @@ section.tabs { /*-------------------------------------табы*/
 
                 .post-title {
                     display: block;
-                    color: @font-color;
+                    color: @color-gray-dark;
                     padding-bottom: 0;
                     padding-top: 0.312em;
                     margin-bottom: 4.5em;
                 }
 
                 .read-more {
-                    color: @base-color;
+                    color: @color-base;
                     text-decoration: dotted;
                 }
             }
@@ -691,7 +845,7 @@ section.tabs { /*-------------------------------------табы*/
 
         .pagination {
             padding-top: 1em;
-            border-top: 1px solid @gray-color;
+            border-top: 1px solid @color-gray-light;
             margin-top: 2em;
 
             .nav-links {
@@ -704,7 +858,7 @@ section.tabs { /*-------------------------------------табы*/
                 .current {
                     cursor: default;
                     color: #fff;
-                    background: @base-color;
+                    background: @color-base;
                 }
             }
         }
@@ -717,17 +871,17 @@ section.tabs { /*-------------------------------------табы*/
         .widget-sidebar {
             padding: 1.125em 1.5em 1.5em 1.5em;
             margin-bottom: 1.5em;
-            border: 1px solid @gray-color;
+            .border;
             word-wrap: break-word;
             overflow-wrap: break-word;
         }
 
         h3 {
-            font-size: @font-size-small;
-            color: @gray-color;
+            font-size: @size-font-small;
+            color: @color-gray-light;
             margin-bottom: 1.2em;
             padding-bottom: 1.5em;
-            border-bottom: 1px solid @gray-color;
+            border-bottom: 1px solid @color-gray-light;
         }
 
         .blog-search-wrap {
@@ -742,12 +896,12 @@ section.tabs { /*-------------------------------------табы*/
                     display: block;
                     width: 100%;
                     line-height: 1.5;
-                    color: @font-color;
-                    font-size: @font-size-small;
+                    color: @color-gray-dark;
+                    font-size: @size-font-small;
                     height: 4.31em;
                     padding-left: 2.8em;
                     margin-bottom: 0;
-                    background: @base-color-lighter4;
+                    background: @color-base-lighter2;
                     transition: all 0.3s;
                     border: none;
 
@@ -766,8 +920,8 @@ section.tabs { /*-------------------------------------табы*/
                     left: 1.5em;
                     background: none;
                     border: none;
-                    font-size: @font-size-extra-small;
-                    color: @base-color;
+                    font-size: @size-font-extra-small;
+                    color: @color-base;
                     padding: 0;
                     margin-top: -0.5em;
                 }
@@ -776,21 +930,21 @@ section.tabs { /*-------------------------------------табы*/
 
         .categories {
             ul {
-                font-size: @font-size-small;
+                font-size: @size-font-small;
                 list-style: none;
                 padding: 0;
                 margin: 0;
                 line-height: 1.8;
 
                 li {
-                    padding-bottom: @font-size-extra-small;
+                    padding-bottom: @size-font-extra-small;
 
                     a {
                         position: relative;
                         display: block;
-                        color: @font-color;
+                        color: @color-gray-dark;
                         padding: 0 1.75em 0 0.75em;
-                        border: 1px solid @more-color;
+                        border: 1px solid @color-more;
                         transition: all 0.3s;
 
                         span {
@@ -798,18 +952,18 @@ section.tabs { /*-------------------------------------табы*/
                             position: absolute;
                             right: 0.625em;
                             top: 0;
-                            color: @gray-color;
+                            color: @color-gray-light;
                             transition: color 0.3s;
                         }
                     }
 
                     .active {
-                        background: @more-color;
+                        background: @color-more;
                         color: #fff;
                     }
 
                     :hover {
-                        background: @more-color;
+                        background: @color-more;
                         color: @font-color-reverce;
                     }
 
@@ -844,7 +998,7 @@ section.tabs { /*-------------------------------------табы*/
             }
 
             h4 {
-                font-size: @font-size-small;
+                font-size: @size-font-small;
                 margin-bottom: 0;
 
                 a {
@@ -857,14 +1011,14 @@ section.tabs { /*-------------------------------------табы*/
             a {
                 position: relative;
                 display: inline-block;
-                font-size: @font-size-small !important;
+                font-size: @size-font-small !important;
                 height: 1.5em;
                 color: #fff;
                 font-weight: normal;
                 line-height: 1.5em;
                 text-decoration: none;
                 padding: 0 0.8em;
-                background-color: @base-color;
+                background-color: @color-base;
                 margin: 0.312em 0.5em 0.312em 0;
                 white-space: nowrap;
                 transition: background-color 0.3s;
@@ -878,7 +1032,7 @@ section.tabs { /*-------------------------------------табы*/
                     top: 0;
                     right: -0.5em;
                     border-top: 0.75em solid transparent;
-                    border-left: 0.5em solid @base-color;
+                    border-left: 0.5em solid @color-base;
                     border-bottom: 0.75em solid transparent;
                     transition: border-color 0.3s;
                 }
@@ -918,7 +1072,7 @@ section.tabs { /*-------------------------------------табы*/
                 display: flex;
                 justify-content: space-between;
                 padding-top: 1em;
-                border-top: 1px solid @gray-color;
+                border-top: 1px solid @color-gray-light;
 
                 .shop-price label {
                     display: block;
@@ -942,7 +1096,7 @@ section.tabs { /*-------------------------------------табы*/
     }
 
     .btn-close {
-        color: @gray-color;
+        color: @color-gray-light;
         cursor: pointer;
         font-size: 1.875em;
         text-decoration: none;
@@ -1021,7 +1175,7 @@ section.tabs { /*-------------------------------------табы*/
     }
 
     .modal-header {
-        border-bottom: 1px solid @gray-color;
+        border-bottom: 1px solid @color-gray-light;
 
         h2 {
             font-size: 1.25em;
@@ -1030,12 +1184,12 @@ section.tabs { /*-------------------------------------табы*/
     }
 
     .modal-footer {
-        border-top: 1px solid @gray-color;
+        border-top: 1px solid @color-gray-light;
         //text-align: right;
         label {
             width: 100%;
-            // border:@more-color solid 2px;
-            background: @base-color;
+            //.border-more;
+            background: @color-base;
             color: @font-color-reverce;
         }
     }
@@ -1047,8 +1201,8 @@ section.tabs { /*-------------------------------------табы*/
         margin-bottom: 1em;
 
         p {
-            color: @gray-color;
-            font-size: @font-size-small;
+            color: @color-gray-light;
+            font-size: @size-font-small;
         }
     }
 
@@ -1059,7 +1213,7 @@ section.tabs { /*-------------------------------------табы*/
 
         p {
             text-align: center;
-            font-size: @font-size-small;
+            font-size: @size-font-small;
             margin-bottom: 1em;
         }
 
@@ -1069,16 +1223,16 @@ section.tabs { /*-------------------------------------табы*/
             font-size: 1em;
             height: 2em;
             line-height: 2em;
-            border: 1px solid #ccc;
+            .border;
             transition: box-shadow 0.1s linear;
 
             &:hover > button {
-                background: @base-color;
-                text-shadow: @base-color 0 -1px 0;
+                background: @color-base;
+                text-shadow: @color-base 0 -1px 0;
             }
 
             &:active > button {
-                background: @base-color;
+                background: @color-base;
                 box-shadow: 0 0 3px rgba(0,0,0,0.3) inset;
             }
 
@@ -1086,12 +1240,12 @@ section.tabs { /*-------------------------------------табы*/
                 float: right;
                 width: 8em;
                 height: 100%;
-                background: @base-color;
+                background: @color-base;
                 transition: background 0.2s;
-                border: 1px solid @gray-color;
+                .border;
                 box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
                 color: #fff;
-                text-shadow: @base-color 0 -1px 0;
+                text-shadow: @color-base 0 -1px 0;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -1101,8 +1255,8 @@ section.tabs { /*-------------------------------------табы*/
             div {
                 padding-left: 1em;
                 cursor: pointer;
-                font-size: @font-size-extra-small;
-                color: @gray-color;
+                font-size: @size-font-extra-small;
+                color: @color-gray-light;
             }
 
             input[type=file] {
@@ -1113,15 +1267,108 @@ section.tabs { /*-------------------------------------табы*/
         }
 
         .capcha {
-            background: @gray-color;
+            background: @color-gray-light;
             margin-top: 1em;
         }
     }
 }
 
+/*------------------------------------------------------------------------ТАБЫ*/
+section.tabs {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2em;
+
+    .label-wrap {
+        display: flex;
+        //justify-content: space-between;
+    }
+
+    label {
+        color: @color-gray-dark;
+        cursor: pointer;
+        display: block;
+        line-height: 2.8em;
+        font-weight: 600;
+        .border;
+        top: 0.125em;
+        text-align: center;
+        padding: 0 1em;
+        // width: 100%;
+        &:ntf-child(2) {
+            border-left: none;
+            border-right: none;
+        }
+
+        &:hover {
+            color: @color-more;
+        }
+    }
+
+    input {
+        display: none;
+    }
 
 
+    #tab_1:checked ~ .label-wrap #tab_l1,
+    #tab_2:checked ~ .label-wrap #tab_l2,
+    #tab_3:checked ~ .label-wrap #tab_l3 {
+        .border-more;
+        top: 0;
+        z-index: 3;
+    }
 
+    .tabs_cont {
+        position: relative;
+        padding-top: 2em;
+        z-index: 2;
+        height: 15em;
+    }
+
+    .tabs_cont > div {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+
+    #tab_1:checked ~ .tabs_cont #tab_c1,
+    #tab_2:checked ~ .tabs_cont #tab_c2,
+    #tab_3:checked ~ .tabs_cont #tab_c3 {
+        position: static;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/*--------------------------------------------------------------Полоса прокрутки наверх*/
+#toTop {
+    width: 1.5em;
+    position: fixed;
+    background: @color-gray-dark;
+    text-align: center;
+    color: @font-color-reverce;
+    opacity: .2;
+    cursor: pointer;
+    //  transition: all .6s ease;
+    height: 100%;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    bottom: 0;
+    z-index: 950;
+
+    &:hover {
+        transition: all .3s ease;
+        opacity: .7;
+    }
+
+    i {
+        position: relative;
+        top: 45%;
+    }
+}
 
 
 
@@ -1130,6 +1377,14 @@ section.tabs { /*-------------------------------------табы*/
 @media (min-width: 1200px) {
     .container {
         width: 73.125em;
+    }
+
+    .tariff-wrap {
+        .row
+    }
+    /*тарифы в промосайтах*/
+    .promo-wrapper {
+        max-width: 22em;
     }
 
     .information { /*---------------------------инпуты в модальном окне*/
@@ -1156,9 +1411,17 @@ section.tabs { /*-------------------------------------табы*/
         width: 60em;
     }
 
+    .tariff-wrap {
+        .row
+    }
+
+    .promo-wrapper {
+        max-width: 18em;
+    }
+
     .information {
-        display: flex;
         justify-content: space-between;
+        .row;
 
         input {
             margin-right: 1em;
@@ -1180,8 +1443,16 @@ section.tabs { /*-------------------------------------табы*/
         width: 45em;
     }
 
+    .tariff-wrap {
+        .row
+    }
+
+    .promo-wrapper {
+        max-width: 13em;
+    }
+
     .information {
-        display: block;
+        .column;
     }
 
     .comment {
@@ -1195,9 +1466,14 @@ section.tabs { /*-------------------------------------табы*/
         width: 30em;
     }
 
-    .information {
-        display: block;
+    .tariff-wrap {
+        .column
     }
+
+    .information {
+        .column;
+    }
+
 
     .comment {
         display: block;
@@ -1226,13 +1502,18 @@ section.tabs { /*-------------------------------------табы*/
         width: 100%;
     }
 
+    .tariff-wrap {
+        .column
+    }
+
     .information {
-        display: block;
+        .column;
     }
 
     .comment {
         display: block;
     }
+
     /*type file в окне заяки*/
     .file_upload > div {
         display: none;
@@ -1248,9 +1529,9 @@ section.tabs { /*-------------------------------------табы*/
 /*------------------------------------------------АДМИНКА--------------------------------------*/
 .sidebar { /*------блог*/
     .admin-create {
-        button{
-            width:100%;
-            background:@accent;
+        button {
+            width: 100%;
+            background: @color-bad-lighter1;
         }
     }
 }
