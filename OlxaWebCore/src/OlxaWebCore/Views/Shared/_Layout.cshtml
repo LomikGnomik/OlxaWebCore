@@ -33,10 +33,10 @@
             <div class="header">
 
                 <div class="nav-toggle"><span></span></div> <!--для мобильных-->
-                <div class="toolbar container">
-                    <a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>
-                    <a asp-action="Login" asp-controller="Account"class="btn">Вход</a>
-                </div>
+                @*<div class="toolbar container">
+                        <a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>
+                        <a asp-action="Login" asp-controller="Account"class="btn">Вход</a>
+                    </div>*@
 
             </div>
 
@@ -66,18 +66,18 @@
                             </ul>
                         </li>
                     </ul>
-                </nav>                
+                </nav>
             </div>
             @*<div class="container">
-                <div class="inner">
-                    <div class="title">
-                        <h1>Сайт визитка</h1>
+                    <div class="inner">
+                        <div class="title">
+                            <h1>Сайт визитка</h1>
+                        </div>
+                        <div class="breadcrumbs">
+                            <a href="#">Цены</a> <span class="delimiter"><i class="fa fa-arrow-right"></i></span> <span>Сайт-визитка</span>
+                        </div>
                     </div>
-                    <div class="breadcrumbs">
-                        <a href="#">Цены</a> <span class="delimiter"><i class="fa fa-arrow-right"></i></span> <span>Сайт-визитка</span>
-                    </div>
-                </div>
-            </div>*@
+                </div>*@
         </header>
         @*<div class="navbar navbar-inverse navbar-fixed-top
                 <div class="container">
@@ -146,6 +146,8 @@
                                 <li><a href="#">OlxaWeb</a></li>
                                 <li><a href="#">Оплата</a></li>
                                 <li><a href="#">Контакты</a></li>
+                                <li><a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>                                </li>
+                                <li><a asp-action="Login" asp-controller="Account">Вход</a></li>
                             </ul>
                         </div>
                         <div class="info-item">
@@ -205,15 +207,15 @@
     @RenderSection("scripts", required: false)
 
     <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
-   
+
     @*<script>
-        //активная ссылка
-        $(".link").click(function (e) {
-            e.preventDefault();
-            $("link").removeClass('active');
-            $(this).addClass('active');
-        })
-    </script>*@
+            //активная ссылка
+            $(".link").click(function (e) {
+                e.preventDefault();
+                $("link").removeClass('active');
+                $(this).addClass('active');
+            })
+        </script>*@
 
 
 
