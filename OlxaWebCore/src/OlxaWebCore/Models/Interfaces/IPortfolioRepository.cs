@@ -9,5 +9,8 @@ namespace OlxaWebCore.Models.Interfaces
     public interface IPortfolioRepository
     {
         IEnumerable<Portfolio> Portfolios {get;}
+
+        void SavePortfolio(Portfolio portfolio);
+        Portfolio DeletePortfolio(int portfolioID);
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OlxaWebCore.Models.RepositoryFake
 {
-    public class FakePortfolioRepository:IPortfolioRepository
+    public class FakePortfolioRepository//:IPortfolioRepository
     {
         public IEnumerable<Portfolio> Portfolios => new List<Portfolio> {
 new Portfolio { PortfolioID=1, Title="первый" , Description="Описание" }
