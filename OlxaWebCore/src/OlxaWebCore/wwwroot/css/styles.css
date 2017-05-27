@@ -238,7 +238,7 @@ textarea {
 }
 .wrapper .navigation nav .main-menu .main-menu__item:hover > .submenu {
   display: block;
-  width: 300%;
+  width: 15em;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a {
   color: #333333;
@@ -502,7 +502,7 @@ section.content h2 {
 }
 section.promo-site-slider .slider {
   margin: 0 auto;
-  max-width: 59em;
+  width: 100%;
 }
 section.promo-site-slider .slider .slide_viewer {
   height: 30em;
