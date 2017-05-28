@@ -275,7 +275,7 @@ textarea {
         background: #fff;
         top: 100px; /*высота шапки*/
         position: fixed;
-        z-index: 90;
+        z-index: 1000;
         transition: all 20ms linear;
 
         nav {
@@ -679,7 +679,7 @@ section.promo-site-slider {
 
         .previous_btn {
             bottom: 0;
-            left: 1.5em;
+            left: -4em;
             margin: auto;
             position: absolute;
             top: 0;
@@ -689,7 +689,7 @@ section.promo-site-slider {
             bottom: 0;
             margin: auto;
             position: absolute;
-            right: 1.5em;
+            right: -5em;
             top: 0;
         }
 
@@ -1617,6 +1617,150 @@ section.price-solution {
     }
 }
 
+/*---------------------------------------------------------------------------------Checkout-------Страница заказа*/
+.form-wrap {
+    justify-content: space-between;
+
+    .inputs {
+        .inputs-row-two {
+            [class*=inputs-column-] {
+                .column;
+                width: 22em;
+            }
+            .inputs-column-one {
+                margin-right: 1.5em;
+            }
+        }
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 300px !important;
+
+
+        .details {
+            .border;
+            padding: 1em;
+        }
+    }
+}
+/*----------------------------------------------------------------------------------------Страница Лендинга*/
+
+section.landing-description {
+    min-height: 100vh;
+    background: @color-base-lighter2;
+    padding-bottom: @size-margin-section;
+
+    .description-wrap {
+        justify-content: space-between;
+
+
+        .description-img {
+            img {
+                display: inline-block;
+            }
+        }
+
+        .description-title {
+            text-align: center;
+            padding: 2em;
+            line-height: 1.5;
+        }
+    }
+}
+
+section.landing-plus {
+    background: @color-bad-lighter2;
+
+    .plus-wrap {
+        text-align: center;
+        padding: 2em;
+
+        .plus-row {
+            //  .row;
+            .plus-inner {
+                .column;
+                text-align: center;
+                padding: 1.5em;
+
+                .plus-img {
+                    margin: 2em;
+
+                    img {
+                        display: inline-block;
+                    }
+                }
+
+                .plus-title {
+
+                    h3 {
+                        margin: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.landing-privilege {
+
+    .privilege-wrap {
+        text-align: center;
+        margin-top: @size-margin-section;
+
+        .privilege-row {
+              //.row;
+            justify-content: space-between;
+
+            .privilege-inner-wrap {
+                position: relative;
+                z-index: 1;
+                min-height: 15.6em;
+                display: block;
+                width: 100%;
+                max-width: 23.75em;
+                margin: 2em auto 1.5em auto;
+                cursor: default;
+
+                &:hover {
+                    z-index: 5;
+                }
+
+                .privilege-inner {
+                    position: absolute;
+                    width: 100%;
+                   max-height: 15.625em;
+                    background: #fff;
+                    top: 0;
+                    left: 0;
+                    border: 2px solid transparent;
+                    overflow: hidden;
+                    transition: all 0.4s ease;
+
+                    &:hover {
+                        border-color: #1bdb68;
+                       max-height: 37.5em;
+                    }
+
+                    .column;
+                    text-align: center;
+                    padding: 1.5em;
+
+                    img {
+                        display: inline-block;
+                    }
+                }
+
+                h3 {
+                    margin: 1em;
+                }
+            }
+        }
+    }
+}
+
+
+
 /*------------------------------------------------------------------------ТАБЫ*/
 section.tabs {
     position: relative;
@@ -1750,10 +1894,33 @@ section.tabs {
         justify-content: space-between;
     }
 
-    /*---------------------портфолио*/
-    /*-------------------------цены*/
+    /*---------------------------------------------портфолио*/
+    /*--------------------------------------------------цены*/
     .solution-row {
         .row
+    }
+    /*-----------------------------------------------chekout*/
+    .form-wrap {
+        .row;
+
+        .inputs {
+            .inputs-row-two {
+                .row;
+            }
+        }
+    }
+    /*------------------------------------------Страница Лендинга*/
+
+    .description-wrap {
+        .row;
+    }
+
+    .plus-row {
+        .row;
+    }
+
+    .privilege-row {
+        .row;        
     }
 }
 
@@ -1787,9 +1954,34 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
-    /*-------------------------цены*/
+    /*------------------------------------------------------цены*/
     .solution-row {
         .row
+    }
+    /*---------------------------------------------------chekout*/
+    .form-wrap {
+        .row;
+
+        .inputs {
+            margin-right: 1em;
+
+            .inputs-row-two {
+                .row;
+            }
+        }
+    }
+    /*-------------------------------------------Страница Лендинга*/
+
+    .description-wrap {
+        .row;
+    }
+
+    .plus-row {
+        .row;
+    }
+
+    .privilege-row {
+        .row;
     }
 }
 
@@ -1814,15 +2006,36 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
-    /*------------------------------------- портфолио*/
+    /*-------------------------------------------------- портфолио*/
     .grid.isotope-grid.col-3 .grid-sizer,
     .grid.isotope-grid.col-3 .grid-item {
         width: 48.75%;
     }
 
-    /*---------------------------------------цены*/
+    /*--------------------------------------------------------цены*/
     .solution-row {
         .column;
+    }
+    /*------------------------------------------------------chekout*/
+    .form-wrap {
+        .row;
+
+        input.inputs-long {
+            width: 94%;
+        }
+    }
+    /*-------------------------------------------Страница Лендинга*/
+
+    .description-wrap {
+        .row;
+    }
+
+    .plus-row {
+        .row;
+    }
+
+    .privilege-row {
+        .row;
     }
 }
 
@@ -1852,7 +2065,7 @@ section.tabs {
         width: 100%;
     }
 
-    /*------------------------------------- портфолио*/
+    /*-------------------------------------------------- портфолио*/
     .grid.isotope-grid {
         overflow: hidden;
     }
@@ -1877,14 +2090,24 @@ section.tabs {
         margin-bottom: 2.5%;
         backface-visibility: hidden;
     }
-    /*---------------------------------------цены*/
+    /*---------------------------------------------------------цены*/
     .solution-row {
         .column;
     }
+    /*-------------------------------------------------------chekout*/
+    input.inputs-long {
+        width: 73%;
+    }
+
+    .details {
+        width: 117%;
+    }
+    /*-------------------------------------------Страница Лендинга*/
+
 }
 
 @media screen and (max-width:640px) {
-    /*------------------------------------------портфолио*/
+    /*------------------------------------------------------портфолио*/
     .portfolio-item {
         display: block;
         text-decoration: none;
@@ -1962,10 +2185,17 @@ section.tabs {
         opacity: 1;
         transform: scale(1);
     }
-    /*---------------------------------------цены*/
+    /*-------------------------------------------------------цены*/
     .solution-row {
         .column;
     }
+
+    /*----------------------------------------------------chekout*/
+    input.inputs-long {
+        width: 73.5%;
+    }
+    /*-------------------------------------------Страница Лендинга*/
+
 }
 
 @media (max-width: 480px) {
@@ -2002,16 +2232,36 @@ section.tabs {
     .file_upload > button {
         width: 100%;
     }
-    /*------------------------------------- портфолио*/
+    /*------------------------------------------------------- портфолио*/
     .grid.isotope-grid.col-3 .grid-sizer,
     .grid.isotope-grid.col-3 .grid-item {
         float: none;
         width: 100%;
         margin-bottom: 30px;
     }
-    /*---------------------------------------цены*/
+    /*-----------------------------------------------------------цены*/
     .solution-row {
         .column;
+    }
+    /*--------------------------------------------------------chekout*/
+    input.inputs-long {
+        width: 22em;
+    }
+    /*-------------------------------------------Страница Лендинга*/
+
+}
+
+@media screen and (max-width:412px) {
+    /*-----------------------------------------------------------chekout*/
+    input.inputs-long {
+        width: 96.5%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    /*-----------------------------------------------------------chekout*/
+    input.inputs-long {
+        width: 110%;
     }
 }
 
