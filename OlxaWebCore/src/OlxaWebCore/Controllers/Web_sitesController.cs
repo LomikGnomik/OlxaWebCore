@@ -32,8 +32,8 @@ namespace OlxaWebCore.Controllers
         }
         public IActionResult Shop()
         {
-            Site Shop = repository.Sites.FirstOrDefault(s => s.TypeSite == "Интернет магазин");
-            return View(Shop);
+           
+            return View();
         }
         public IActionResult Information()
         {
