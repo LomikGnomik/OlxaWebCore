@@ -1,4 +1,6 @@
-﻿<div class="container">
+﻿@model Site
+
+<div class="container">
     <div class="wrapper-shop">
         <h1>Интернет магазин</h1>
         <section class="info-shop">
@@ -20,7 +22,7 @@
                         <label> <input type="radio" name="order" />Арендовать от 2 000 р/мес</label>
                     </div>
                     @*<label class="btn" for="modal-window">Заказать</label>*@ <!--вызов мод.окна-->
-                    <a class="btn" asp-action="checkout" asp-controller="order">Заказать</a>
+                    <a class="btn" asp-action="cart"  asp-controller="order" asp-route-typeSiteId="">Заказать</a>
                 </div>
             </div>
         </section>
@@ -39,7 +41,6 @@
                     <label for="tab_2" id="tab_l2" role="tab">Дополнительные услуги</label>
                     <label for="tab_3" id="tab_l3" role="tab">Еще что-то</label>
                 </div>
-
 
                 <div class="tabs_cont">
                     <div id="tab_c1" role="tabpanel">11111</div>

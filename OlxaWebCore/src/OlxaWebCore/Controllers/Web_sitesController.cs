@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using OlxaWebCore.Models.Interfaces;
+using OlxaWebCore.Models.DataModels;
 
 namespace OlxaWebCore.Controllers
 {
     public class Web_sitesController : Controller
     {
-    
+        private ISiteRepository repository;
+        
+
+        public Web_sitesController(ISiteRepository repo)
+        {
+            repository = repo;
+        }
+
         public IActionResult Promosite()
         {
             return View();
@@ -23,7 +32,8 @@ namespace OlxaWebCore.Controllers
         }
         public IActionResult Shop()
         {
-            return View();
+            Site Shop = repository.Sites.FirstOrDefault(s => s.TypeSite == "Интернет магазин");
+            return View(Shop);
         }
         public IActionResult Information()
         {

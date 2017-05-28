@@ -9,7 +9,12 @@ namespace OlxaWebCore.Controllers
 {
     public class OrderController : Controller
     {
-        public ViewResult Checkout() => View(new Order());
-     
+        public ViewResult Checkout(int typeSiteId) => View(new Order());
+
+
+        public ViewResult Checkout(Order order)
+        {
+            return View();
+        }
     }
 }
