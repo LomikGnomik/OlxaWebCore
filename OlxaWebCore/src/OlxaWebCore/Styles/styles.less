@@ -849,32 +849,11 @@ section.tariff {
                 }
             }
         }
-
-        .pagination {
-            padding-top: 1em;
-            border-top: 1px solid @color-gray-light;
-            margin-top: 2em;
-
-            .nav-links {
-                a, span {
-                    padding: 0.5em 0.9em;
-                    margin: 0 0 0.62em -0.125em;
-                    transition: color 0.3s;
-                }
-
-                .current {
-                    cursor: default;
-                    color: #fff;
-                    background: @color-base;
-                }
-            }
-        }
     }
 
     .sidebar {
         position: relative;
-        width: 25%;
-
+        // width: 40em;
         .widget-sidebar {
             padding: 1.125em 1.5em 1.5em 1.5em;
             margin-bottom: 1.5em;
@@ -936,6 +915,10 @@ section.tariff {
         }
 
         .categories {
+            .border;
+            padding: 1em;
+            margin-bottom: 1.5em;
+
             ul {
                 font-size: @size-font-small;
                 list-style: none;
@@ -944,7 +927,7 @@ section.tariff {
                 line-height: 1.8;
 
                 li {
-                    padding-bottom: @size-font-extra-small;
+                    margin-bottom: 0.5em;
 
                     a {
                         position: relative;
@@ -982,6 +965,10 @@ section.tariff {
         }
 
         .best {
+            .border;
+            padding: 1em;
+            margin-bottom: 1.5em;
+
             .item {
                 display: table;
                 width: 100%;
@@ -1015,6 +1002,10 @@ section.tariff {
         }
 
         .featured-tags {
+            .border;
+            padding: 1em;
+            margin-bottom: 1.5em;
+
             a {
                 position: relative;
                 display: inline-block;
@@ -1047,7 +1038,161 @@ section.tariff {
         }
     }
 }
-/*---------------------------------------------------------------------------------------------интернет магазин*/
+
+.pagination {
+    padding-top: 1em;
+    border-top: 1px solid @color-gray-light;
+    margin-top: 2em;
+
+    .nav-links {
+        a, span {
+            padding: 0.5em 0.9em;
+            margin: 0 0 0.62em -0.125em;
+            transition: color 0.3s;
+        }
+
+        .current {
+            cursor: default;
+            color: #fff;
+            background: @color-base;
+        }
+    }
+}
+
+/*-------------------------------------------------------------отдельная страница поста в блоге*/
+.post-inner-body {
+    border-bottom: 1px solid@color-gray-light;
+    padding-bottom: 2.5em;
+
+    h3 {
+        text-transform: capitalize;
+    }
+
+    .post-meta {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1em;
+        border-bottom: 1px solid @color-gray-light;
+        width: 100%;
+        margin: 1.5em 0;
+
+        span {
+            color: @color-gray-light;
+            margin-right: 0.31em;
+            margin-bottom: 0.37em;
+        }
+
+        a {
+            display: inline-block;
+            font-size: @size-font-small;
+            font-weight: normal;
+            border-bottom: 1px dashed @color-base;
+        }
+
+        .post-comments {
+            border-bottom: none;
+        }
+    }
+
+    h4 {
+        margin: 1.5em 0;
+    }
+
+    p {
+        text-indent: 2em;
+        margin-bottom: 1.5em;
+        line-height: 1.5;
+    }
+}
+
+.post-tools {
+    display: flex;
+    margin-top: 1.5em;
+    width: 100%;
+    justify-content: space-between;
+
+    .tags-links {
+        a {
+            position: relative;
+            display: inline-block;
+            font-size: 0.9em !important;
+            height: 1.5em;
+            color: #fff;
+            font-weight: normal;
+            line-height: 1.5em;
+            text-decoration: none;
+            padding: 0 0.8em;
+            background-color: @color-base;
+            margin: 0.312em 0.5em 0.312em 0;
+            white-space: nowrap;
+            transition: background-color 0.3s;
+
+            &:before {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 0;
+                height: 0;
+                top: 0;
+                right: -0.5em;
+                border-top: 0.75em solid transparent;
+                border-left: 0.5em solid @color-base;
+                border-bottom: 0.75em solid transparent;
+                transition: border-color 0.3s;
+            }
+        }
+    }
+
+    .social-bar {
+        a {
+            display: inline-block;
+            height: 2.25em;
+            width: 2.25em;
+            font-weight: 900;
+            font-size: 1em;
+            line-height: 2.25em;
+            text-align: center;
+            text-decoration: none;
+            letter-spacing: 0;
+            margin-right: 0.125em;
+            margin-bottom: 0.375em;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .skype {
+            color: #00aff0;
+            background: rgba(0,175,240,0.1);
+
+            &:hover {
+                color: #fff;
+                background: #00aff0;
+            }
+        }
+
+        .vk {
+            color: #1385d8;
+            background: rgba(24, 176, 233, 0.38);
+
+            &:hover {
+                color: #fff;
+                background: #1385d8;
+            }
+        }
+
+        .fb {
+            color: #3b5998;
+            background: rgba(59,89,152,0.1);
+
+            &:hover {
+                color: #fff;
+                background: #3b5998;
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------интернет магазин*/
 .wrapper-shop {
     .info-shop {
         display: flex;
@@ -1627,6 +1772,7 @@ section.price-solution {
                 .column;
                 width: 22em;
             }
+
             .inputs-column-one {
                 margin-right: 1.5em;
             }
@@ -1709,7 +1855,7 @@ section.landing-privilege {
         margin-top: @size-margin-section;
 
         .privilege-row {
-              //.row;
+            //.row;
             justify-content: space-between;
 
             .privilege-inner-wrap {
@@ -1729,7 +1875,7 @@ section.landing-privilege {
                 .privilege-inner {
                     position: absolute;
                     width: 100%;
-                   max-height: 15.625em;
+                    max-height: 15.625em;
                     background: #fff;
                     top: 0;
                     left: 0;
@@ -1739,7 +1885,7 @@ section.landing-privilege {
 
                     &:hover {
                         border-color: #1bdb68;
-                       max-height: 37.5em;
+                        max-height: 37.5em;
                     }
 
                     .column;
@@ -1920,7 +2066,7 @@ section.tabs {
     }
 
     .privilege-row {
-        .row;        
+        .row;
     }
 }
 

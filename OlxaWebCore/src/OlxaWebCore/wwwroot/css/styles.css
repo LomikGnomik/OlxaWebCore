@@ -693,25 +693,8 @@ section.tariff .promo-wrapper ul li:last-child {
   color: #0094ff;
   text-decoration: dotted;
 }
-.blog .post .pagination {
-  padding-top: 1em;
-  border-top: 1px solid #cccccc;
-  margin-top: 2em;
-}
-.blog .post .pagination .nav-links a,
-.blog .post .pagination .nav-links span {
-  padding: 0.5em 0.9em;
-  margin: 0 0 0.62em -0.125em;
-  transition: color 0.3s;
-}
-.blog .post .pagination .nav-links .current {
-  cursor: default;
-  color: #fff;
-  background: #0094ff;
-}
 .blog .sidebar {
   position: relative;
-  width: 25%;
 }
 .blog .sidebar .widget-sidebar {
   padding: 1.125em 1.5em 1.5em 1.5em;
@@ -765,6 +748,11 @@ section.tariff .promo-wrapper ul li:last-child {
   padding: 0;
   margin-top: -0.5em;
 }
+.blog .sidebar .categories {
+  border: 1px solid #cccccc;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
 .blog .sidebar .categories ul {
   font-size: 0.8em;
   list-style: none;
@@ -773,7 +761,7 @@ section.tariff .promo-wrapper ul li:last-child {
   line-height: 1.8;
 }
 .blog .sidebar .categories ul li {
-  padding-bottom: 16px -5;
+  margin-bottom: 0.5em;
 }
 .blog .sidebar .categories ul li a {
   position: relative;
@@ -802,6 +790,11 @@ section.tariff .promo-wrapper ul li:last-child {
 .blog .sidebar .categories ul li :hover > span {
   color: #ecf0f1;
 }
+.blog .sidebar .best {
+  border: 1px solid #cccccc;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
 .blog .sidebar .best .item {
   display: table;
   width: 100%;
@@ -824,6 +817,11 @@ section.tariff .promo-wrapper ul li:last-child {
 }
 .blog .sidebar .best h4 a {
   line-height: 1.7;
+}
+.blog .sidebar .featured-tags {
+  border: 1px solid #cccccc;
+  padding: 1em;
+  margin-bottom: 1.5em;
 }
 .blog .sidebar .featured-tags a {
   position: relative;
@@ -853,7 +851,134 @@ section.tariff .promo-wrapper ul li:last-child {
   border-bottom: 0.75em solid transparent;
   transition: border-color 0.3s;
 }
-/*---------------------------------------------------------------------------------------------интернет магазин*/
+.pagination {
+  padding-top: 1em;
+  border-top: 1px solid #cccccc;
+  margin-top: 2em;
+}
+.pagination .nav-links a,
+.pagination .nav-links span {
+  padding: 0.5em 0.9em;
+  margin: 0 0 0.62em -0.125em;
+  transition: color 0.3s;
+}
+.pagination .nav-links .current {
+  cursor: default;
+  color: #fff;
+  background: #0094ff;
+}
+/*-------------------------------------------------------------отдельная страница поста в блоге*/
+.post-inner-body {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 2.5em;
+}
+.post-inner-body h3 {
+  text-transform: capitalize;
+}
+.post-inner-body .post-meta {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #cccccc;
+  width: 100%;
+  margin: 1.5em 0;
+}
+.post-inner-body .post-meta span {
+  color: #cccccc;
+  margin-right: 0.31em;
+  margin-bottom: 0.37em;
+}
+.post-inner-body .post-meta a {
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: normal;
+  border-bottom: 1px dashed #0094ff;
+}
+.post-inner-body .post-meta .post-comments {
+  border-bottom: none;
+}
+.post-inner-body h4 {
+  margin: 1.5em 0;
+}
+.post-inner-body p {
+  text-indent: 2em;
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+}
+.post-tools {
+  display: flex;
+  margin-top: 1.5em;
+  width: 100%;
+  justify-content: space-between;
+}
+.post-tools .tags-links a {
+  position: relative;
+  display: inline-block;
+  font-size: 0.8em !important;
+  height: 1.5em;
+  color: #fff;
+  font-weight: normal;
+  line-height: 1.5em;
+  text-decoration: none;
+  padding: 0 0.8em;
+  background-color: #0094ff;
+  margin: 0.312em 0.5em 0.312em 0;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+.post-tools .tags-links a:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  right: -0.5em;
+  border-top: 0.75em solid transparent;
+  border-left: 0.5em solid #0094ff;
+  border-bottom: 0.75em solid transparent;
+  transition: border-color 0.3s;
+}
+.post-tools .social-bar a {
+  display: inline-block;
+  height: 2.25em;
+  width: 2.25em;
+  font-weight: 900;
+  font-size: 1em;
+  line-height: 2.25em;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  margin-right: 0.125em;
+  margin-bottom: 0.375em;
+  border: none;
+  transition: all 0.3s;
+}
+.post-tools .social-bar .skype {
+  color: #00aff0;
+  background: rgba(0, 175, 240, 0.1);
+}
+.post-tools .social-bar .skype:hover {
+  color: #fff;
+  background: #00aff0;
+}
+.post-tools .social-bar .vk {
+  color: #1385d8;
+  background: rgba(24, 176, 233, 0.38);
+}
+.post-tools .social-bar .vk:hover {
+  color: #fff;
+  background: #1385d8;
+}
+.post-tools .social-bar .fb {
+  color: #3b5998;
+  background: rgba(59, 89, 152, 0.1);
+}
+.post-tools .social-bar .fb:hover {
+  color: #fff;
+  background: #3b5998;
+}
+/*-----------------------------------------------------------------------интернет магазин*/
 .wrapper-shop .info-shop {
   display: flex;
   justify-content: space-between;

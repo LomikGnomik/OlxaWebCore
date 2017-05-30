@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "_layout";
+}
+
+
+<div class="container">
+    <div class="blog">
+        @RenderBody()
+        <aside class="sidebar">
+            <section class="blog-search-wrap">
+                <form method="post" class="blog-search">
+                    <input type="search" placeholder="Поиск" />
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </section>
+
+            <section class="admin-create">
+                <a asp-controller="Blog" asp-action="CreatePost" class="btn">Добавить пост</a>
+            </section>
+
+            @await Component.InvokeAsync("BlogNavigationMenu")
+
+            <section class="best">
+                <h3>
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+
+                    Читаемое
+                </h3>
+                <div class="item">
+                    <div class="view"><a href="#"><img src="~/images/post01.jpg" alt="превью" /></a></div>
+                    <div class="info">
+                        <h4><a href="#">Статья про то как мы грибы собирали</a></h4>
+                    </div>
+                </div>
+            </section>
+            <section class="featured-tags">
+                <h3>
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    Рекомендуемые теги
+                </h3>
+                <a href="#">ASP</a>
+                <a href="#">Разработка</a>
+                <a href="#">Дизайн</a>
+                <a href="#">Верстка</a>
+            </section>
+        </aside>
+    </div> @*blog*@    
+
+   @RenderSection("Pagination",false)    
+
+</div> @*container*@
