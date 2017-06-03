@@ -635,6 +635,7 @@ section.tariff .promo-wrapper ul li:last-child {
   display: inline-block;
   vertical-align: middle;
   font-size: 0.687em;
+  color: #0094ff;
   margin-top: -0.312em;
   margin-right: 0.05em;
 }
@@ -1278,6 +1279,70 @@ section.portfolio .nav-filters .active a:hover {
   box-shadow: 0px 0px 0px 1px #1bdb68;
   cursor: default;
 }
+section.portfolio .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.portfolio .gallery__item {
+  margin: 0.7em;
+}
+section.portfolio .gallery__item-link {
+  display: block;
+  border: none;
+}
+section.portfolio .gallery__item-link > .thumbnail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+section.portfolio .gallery__item-link > .thumbnail::before {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(40, 149, 241, 0);
+  border: 6px solid #1bdb68;
+  opacity: 0;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+section.portfolio .gallery__item-link:hover > .thumbnail:before {
+  background-color: rgba(40, 149, 241, 0.55);
+  opacity: 1;
+}
+section.portfolio .gallery__item-link > .thumbnail > .gallery__title {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  left: 0;
+  margin-top: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+section.portfolio .gallery__item-link:hover > .thumbnail > .gallery__title {
+  opacity: 1;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 /*-------------------------------------------------------------------------Страница ЦЕНЫ*/
 section.price-solution .flex {
   display: flex;
@@ -1711,7 +1776,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .post__item {
     width: 48.5%;
   }
-  /*---------------------------------------------портфолио*/
+  /*------------------------------------------------------- портфолио*/
+  .medium-half {
+    flex-basis: 31%;
+  }
   /*--------------------------------------------------цены*/
   .solution-item {
     width: 33.333%;
@@ -1764,6 +1832,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .comment {
     display: flex;
     justify-content: space-between;
+  }
+  /*------------------------------------------------------- портфолио*/
+  .medium-half {
+    flex-basis: 31%;
   }
   /*-------------------------------------------------Блог*/
   .post__item {
@@ -1822,11 +1894,14 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .post__item {
     width: 100%;
   }
-  /*-------------------------------------------------- портфолио*/
-  .grid.isotope-grid.col-3 .grid-sizer,
-  .grid.isotope-grid.col-3 .grid-item {
-    width: 48.75%;
+  /*------------------------------------------------------- портфолио*/
+  .medium-half {
+    flex-basis: 31%;
   }
+  /*.grid.isotope-grid.col-3 .grid-sizer,
+    .grid.isotope-grid.col-3 .grid-item {
+        width: 48.75%;
+    }*/
   /*--------------------------------------------------------цены*/
   .solution-item {
     width: 50%;
@@ -1896,6 +1971,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     float: left;
     margin-bottom: 2.5%;
     backface-visibility: hidden;
+  }
+  /*------------------------------------------------------- портфолио*/
+  .medium-half {
+    flex-basis: 31%;
   }
   /*-------------------------------------------------Блог*/
   .post__item {
@@ -1984,6 +2063,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     opacity: 1;
     transform: scale(1);
   }
+  /*------------------------------------------------------- портфолио*/
+  .medium-half {
+    flex-basis: 46%;
+  }
   /*-------------------------------------------------Блог*/
   .post__item {
     width: 100%;
@@ -2028,12 +2111,14 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     width: 100%;
   }
   /*------------------------------------------------------- портфолио*/
-  .grid.isotope-grid.col-3 .grid-sizer,
-  .grid.isotope-grid.col-3 .grid-item {
-    float: none;
-    width: 100%;
-    margin-bottom: 30px;
+  .medium-half {
+    flex-basis: 46%;
   }
+  /*.grid.isotope-grid.col-3 .grid-sizer,
+    .grid.isotope-grid.col-3 .grid-item {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px;*/
   /*---------------------------------------------------------Блог*/
   .post__item {
     width: 100%;
@@ -2061,6 +2146,57 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   }
 }
 /*------------------------------------------------АДМИНКА--------------------------------------*/
+/*------------------------------------------Layout Admin*/
+.wrap-header {
+  background: #333333;
+  padding: 1em;
+}
+.container-admin {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 81.25em;
+}
+.header-admin {
+  display: flex;
+  align-items: baseline;
+  color: #fff;
+  z-index: 1000;
+}
+.header-admin i {
+  margin-right: 1em;
+}
+.header-admin h1 {
+  font-size: 1.5;
+}
+.header-admin ul {
+  margin-left: auto;
+}
+.header-admin ul a {
+  color: #fff;
+}
+.wrap-nav {
+  background: #333333;
+  width: 15em;
+  height: 100vh;
+}
+.navigation-admin {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  z-index: 950;
+}
+.navigation-admin ul {
+  padding-top: 2em;
+}
+.navigation-admin ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.89);
+}
+.navigation-admin ul li:hover {
+  background: #999999;
+}
+.navigation-admin ul a {
+  color: #fff;
+}
 /*------------------блог*/
 .admin-create a.admin-btn {
   position: absolute;
@@ -2070,20 +2206,4 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 .admin-create button {
   width: 100%;
   background: #ff3136;
-}
-.admin-blog a {
-  border-bottom: none !important;
-  padding: 0.3em;
-}
-.admin-blog a .public {
-  background: #0d9706;
-}
-.admin-blog a .disabled {
-  background: #FD0006;
-}
-.admin-blog a .edit {
-  background: #00e43c;
-}
-.admin-blog a i {
-  font-size: 16px;
 }
