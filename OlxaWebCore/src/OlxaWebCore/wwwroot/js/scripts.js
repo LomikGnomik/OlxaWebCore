@@ -28,7 +28,7 @@ $(function () {
 /*--------------------------------прокрутка наверх--------------------------------------*/
 $(function () {
     $(window).scroll(function () {
-        if ($(this).scrollTop() != 0) {
+        if ($(this).scrollTop() > 300) {
             $('#toTop').fadeIn();
         }
         else {
@@ -168,3 +168,16 @@ $('.slider').each(function () {
 
     advance();
 });
+
+
+/*-----------------------фильтр в портфолио-----------------------------------------*/
+if ($('.filter-grid').length > 0) {
+    var $filterGrid = $('.filter-grid');
+    $('.nav-filters').on('click', 'a', function (e) {
+        e.preventDefault();
+        $('.nav-filters li').removeClass('active');
+        $(this).parent().addClass('active');
+        var $filterValue = $(this).attr('data-filter');
+        $filterGrid.isotope({ filter: $filterValue });
+    });
+}

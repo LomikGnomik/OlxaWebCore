@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <environment names="Development">
+        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+        <link rel="stylesheet" href="~/css/styles.css" />
+    </environment>
+
+    <environment names="Staging,Production">
+        <!--подключить минимизированные стили,перед запуском-->
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+
+    <div class="wrapper-admin">
+        <div class="wrap-header">
+            <div class="container-admin">
+                <header class="header-admin" role="banner">
+                    <i class="fa fa-sun-o" aria-hidden="true"></i>
+                    <h1>Админ Панель</h1>
+                    <ul>
+                        <li><a href="#">Посмотреть</a></li>
+                    </ul>
+                </header>
+            </div>
+        </div> @*wrap-header*@
+        <div class="wrap-nav">
+            <div class="container-admin">
+                <nav class="navigation-admin" role="navigation">
+                    <ul class="admim-nav">
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="#">Элемент</a></li>
+                        <li><a href="#">Элемент</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> @*wrap-nav*@
+    </div> @*wrapper-admin*@
+
+    <div>
+        @RenderBody()
+    </div>
+    <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
+</body>
+</html>

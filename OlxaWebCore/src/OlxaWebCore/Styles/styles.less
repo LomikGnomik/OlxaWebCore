@@ -787,7 +787,7 @@ section.tariff {
         display: inline-block;
         vertical-align: middle;
         font-size: 0.687em;
-        //color: @color-base;
+        color: @color-base;
         margin-top: -0.312em;
         margin-right: 0.05em;
     }
@@ -1314,6 +1314,82 @@ section.portfolio {
                 cursor: default;
             }
         }
+    }
+
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gallery__item {
+        margin: 0.7em;
+    }
+
+    .gallery__item-link {
+        display: block;
+        border: none;
+    }
+
+    .gallery__item-link > .thumbnail {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .gallery__item-link > .thumbnail::before {
+        position: absolute;
+        display: block;
+        z-index: 2;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(40,149,241,0);
+        border: 6px solid #1bdb68;
+        opacity: 0;
+        -webkit-transition: all 0.35s;
+        -o-transition: all 0.35s;
+        transition: all 0.35s;
+    }
+
+    .gallery__item-link:hover > .thumbnail:before {
+        background-color: rgba(40, 149, 241, 0.55);
+        opacity: 1;
+    }
+
+    .gallery__item-link > .thumbnail:hover {
+    }
+
+    .gallery__item-link > .thumbnail > .gallery__title {
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        color: #fff;
+        top: 50%;
+        left: 0;
+        margin-top: 0;
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+        -webkit-transition: all 0.35s;
+        -o-transition: all 0.35s;
+        transition: all 0.35s;
+    }
+
+    .gallery__item-link:hover > .thumbnail > .gallery__title {
+        opacity: 1;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
     /*.grid.isotope-grid {
         overflow: hidden;
@@ -2063,7 +2139,11 @@ section.tabs {
     .post__item {
         width: 48.5%;
     }
-    /*---------------------------------------------портфолио*/
+  /*------------------------------------------------------- портфолио*/
+    .medium-half {
+        flex-basis: 31%;
+    }
+
     /*--------------------------------------------------цены*/
     .solution-item {
         width: 33.333%;
@@ -2122,6 +2202,10 @@ section.tabs {
     .comment {
         display: flex;
         justify-content: space-between;
+    }
+    /*------------------------------------------------------- портфолио*/
+    .medium-half {
+        flex-basis: 31%;
     }
     /*-------------------------------------------------Блог*/
     .post__item {
@@ -2183,11 +2267,14 @@ section.tabs {
     .post__item {
         width: 100%;
     }
-    /*-------------------------------------------------- портфолио*/
-    .grid.isotope-grid.col-3 .grid-sizer,
+   /*------------------------------------------------------- портфолио*/
+    .medium-half {
+        flex-basis: 31%;
+    }
+    /*.grid.isotope-grid.col-3 .grid-sizer,
     .grid.isotope-grid.col-3 .grid-item {
         width: 48.75%;
-    }
+    }*/
 
     /*--------------------------------------------------------цены*/
     .solution-item {
@@ -2266,6 +2353,10 @@ section.tabs {
         float: left;
         margin-bottom: 2.5%;
         backface-visibility: hidden;
+    }
+    /*------------------------------------------------------- портфолио*/
+    .medium-half {
+        flex-basis: 31%;
     }
     /*-------------------------------------------------Блог*/
     .post__item {
@@ -2366,6 +2457,10 @@ section.tabs {
         opacity: 1;
         transform: scale(1);
     }
+    /*------------------------------------------------------- портфолио*/
+    .medium-half {
+        flex-basis: 46%;
+    }
     /*-------------------------------------------------Блог*/
     .post__item {
         width: 100%;
@@ -2419,12 +2514,15 @@ section.tabs {
         width: 100%;
     }
     /*------------------------------------------------------- портфолио*/
-    .grid.isotope-grid.col-3 .grid-sizer,
+    .medium-half {
+        flex-basis: 46%;
+    }
+    /*.grid.isotope-grid.col-3 .grid-sizer,
     .grid.isotope-grid.col-3 .grid-item {
         float: none;
         width: 100%;
-        margin-bottom: 30px;
-    }
+        margin-bottom: 30px;*/
+
     /*---------------------------------------------------------Блог*/
     .post__item {
         width: 100%;
@@ -2440,6 +2538,7 @@ section.tabs {
     /*-------------------------------------------Страница Лендинга*/
 
 }
+
 
 @media screen and (max-width:412px) {
     /*-----------------------------------------------------------chekout*/
@@ -2459,6 +2558,63 @@ section.tabs {
 
 /*------------------------------------------------АДМИНКА--------------------------------------*/
 
+/*------------------------------------------Layout Admin*/
+.wrapper-admin{
+   
+}
+.wrap-header{
+     background:@color-gray-dark;
+     padding:1em;
+}
+.container-admin{
+    margin:0 auto;
+    width:90%;
+    max-width:81.25em;    
+}
+.header-admin{
+    display:flex;    
+    align-items:baseline;
+    color:#fff;
+    z-index:1000;
+    i{
+        margin-right:1em;
+    }
+    h1{
+        font-size:@size-font-bigger;
+    }
+    ul{       
+        margin-left:auto;
+        a{
+             color:#fff;
+        }
+    }
+}
+.wrap-nav{
+    background:@color-gray-dark;
+    width:15em;
+    height:100vh;
+}
+.navigation-admin{
+    display:flex;
+    flex-direction:column;
+    margin-right:auto;
+    z-index:950;
+    ul{
+        padding-top:2em;
+        li{
+            border-bottom:1px solid rgba(255, 255, 255, 0.89);
+            &:hover{
+                background:@color-gray;
+            }
+        }        
+        a{
+            color:#fff;
+        }
+    }
+}
+header.header-admin{
+
+}
 /*------------------блог*/
 .admin-create {
     a.admin-btn {
@@ -2470,28 +2626,5 @@ section.tabs {
     button {
         width: 100%;
         background: @color-bad-lighter1;
-    }
-}
-
-.admin-blog {
-    a {
-        border-bottom:none !important;
-        padding:0.3em;
-
-        .public {
-            background: @color-success;
-        }
-
-        .disabled {
-            background: @color-bad;
-        }
-
-        .edit {
-            background: @color-more;
-        }
-
-        i {
-            font-size: @size-font-base;
-        }
     }
 }
