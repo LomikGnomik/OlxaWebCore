@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using OlxaWebCore.Services;
 
 namespace OlxaWebCore.Controllers
 {
@@ -40,5 +41,12 @@ namespace OlxaWebCore.Controllers
         {
             return View();
         }
+        public async Task<IActionResult> SendMessage() //отправка заказа нам на почту
+        {
+            EmailService emailService = new EmailService();
+            await emailService.SendEmailAsync("somemail@mail.ru", "Тема письма", "Тест письма: тест!");
+            return RedirectToAction("Index");
+        }
+
     }
 }

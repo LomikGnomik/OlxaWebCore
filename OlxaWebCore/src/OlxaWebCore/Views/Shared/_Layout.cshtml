@@ -48,7 +48,7 @@
                     <ul class="main-menu">
                         <li class="main-menu__item"><a asp-area="" asp-controller="Portfolio" asp-action="All" class="link">Портфолио</a></li>
                         <li class="main-menu__item">
-                            <a asp-area="" asp-controller="Home" asp-action="Price" class="link">Цены на сайты</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Price" class="link">Создать Сайт</a>
                             <ul class="submenu">
                                 <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
                                 <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Landing">Лендинг</a></li>
@@ -143,28 +143,35 @@
                         <div class="info-item">
                             <h3> О Нас </h3>
                             <ul>
-                                <li><a href="#">OlxaWeb</a></li>
+                               
+                                <li><a href="#">Помощь</a></li>
+                                <li><a href="#">Связь с нами</a></li>
                                 <li><a href="#">Оплата</a></li>
                                 <li><a href="#">Контакты</a></li>
-                                <li><a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>                                </li>
-                                <li><a asp-action="Login" asp-controller="Account">Вход</a></li>
+                                <li><a asp-area="" asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
+                                @*<li><a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>                                </li>
+                                <li><a asp-action="Login" asp-controller="Account">Вход</a></li>*@
                             </ul>
                         </div>
                         <div class="info-item">
                             <h3>Создание сайтов</h3>
                             <ul>
-                                <li><a href="#">Аренда</a></li>
-                                <li><a href="#">Покупка</a></li>
-                                <li><a href="#">Разработка</a></li>
+                                <li><a href="#">Сайт-визитка</a></li>
+                                <li><a href="#">Landing Page</a></li>
+                                <li><a href="#">Корпоративный</a></li>
+                                <li><a href="#">Интернет-магазин</a></li>
+                                <li><a href="#">Информационный</a></li>
                             </ul>
                         </div>
                         <div class="info-item">
                             <h3>Почитать</h3>
-                            <ul>
+                            @*<ul>
                                 <li><a asp-area="" asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
                                 <li><a href="#">Помощь</a></li>
                                 <li><a href="#">Связь с нами</a></li>
-                            </ul>
+                                <li><a href="#">Оплата</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>*@
                         </div>
                     </div> <!--footer-info-->
                     <div class="copyright">

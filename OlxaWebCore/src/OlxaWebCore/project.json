@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-OlxaWebCore-a436cbdb-019f-4aec-a3c9-c1a86c945dd0",
 
   "dependencies": {
@@ -43,7 +43,8 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "MailKit": "1.16.1"
   },
 
   "tools": {

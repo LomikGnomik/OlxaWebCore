@@ -2,14 +2,13 @@
 
 <section class="categories">
     <h3 class="blog-categories">
-        <i class="fa fa-cogs" aria-hidden="true"></i>
+        @*<i class="fa fa-cogs" aria-hidden="true"></i>*@
         Категории
     </h3>
     <ul>
         <li>
             <a asp-action="AllPosts" asp-controller="Blog" asp-route-category="" class=@(ViewBag.SelectedCategory==null ? "active":"") >Все посты</a>
         </li>
-        стр 259
         @foreach (var category in Model)
         {
             <li>              
@@ -20,7 +19,7 @@
                    asp-route-page=1 >
 
                     @category
-                <span>10</span>
+                @*<span>10</span>*@
                 </a>
             </li>
         }
