@@ -235,6 +235,32 @@ textarea {
     }
 }
 
+.btn-long {
+    width: 100%;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    border-color: @color-base;
+    color: @color-base;
+
+    &:hover {
+        background: @color-base;
+        color: #fff;
+    }
+}
+
+.btn-ghost-more {
+    background-color: transparent;
+    border-color: @color-more;
+    color: @color-more;
+
+    &:hover {
+        background: @color-more;
+        color: #fff;
+    }
+}
+
 
 /*---------------------------------------чекбоксы и радио*/
 .wrapper {
@@ -486,8 +512,7 @@ textarea {
 footer {
     flex: 0 0 auto;
     padding-bottom: 2em;
-    margin-top: 5.25em;
-
+    // margin-top: 5.25em;
     .top-footer {
         width: 100%;
         border-bottom: 1px solid @color-gray-light;
@@ -1217,7 +1242,7 @@ section.tariff {
             flex-direction: column;
             justify-content: space-between;
             width: 50%;
-            padding: 0 1em 1em;
+            padding: 0 1em 0 1em;
 
             .shop-demo {
                 display: flex;
@@ -1236,6 +1261,10 @@ section.tariff {
                 padding-top: 1em;
                 border-top: 1px solid @color-gray-light;
 
+                a {
+                    margin-bottom: 0;
+                }
+
                 .shop-price label {
                     display: block;
                 }
@@ -1244,7 +1273,35 @@ section.tariff {
     }
 
     .shop-description {
-        margin-top: 2em;
+        margin-top: 3em;
+        .row;
+        justify-content: space-between;
+
+        h3 {
+            padding: 1em 0 1em 1.5em;
+        }
+
+        .contains {
+            border: 1px solid @color-base-lighter2;
+            width: 50%;
+            height: 15em;
+        }
+
+        .extra {
+            background: @color-base-lighter2;
+            position: relative;
+            width: 50%;
+            height: 15em;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: -12.5em;
+                bottom: 0;
+                border: 7.5em solid transparent;
+                border-right: 5em solid @color-base-lighter2;
+            }
+        }
     }
 }
 /*---------------------------------------------------------------------------------------Портфолио*/
@@ -1669,6 +1726,146 @@ section.price-solution {
     }
 }
 
+/*-------------------------------------------------------------------Форма отправки заявки*/
+.form-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 0;
+    padding: 4em 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+
+    .small {
+        display:inline-block;
+        font-size: @size-font-small;
+        margin-bottom:1.5em;
+
+        .mail {
+            color: @color-more;
+            font-size:@size-font-base;
+        }
+    }
+
+    .brief-wrap {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom:1.5em;
+        width: 80%;
+        p {
+            color: @color-gray;
+        }
+    }
+
+    .h2 {
+        margin-bottom: 1.4em;
+        letter-spacing: 0.1em;
+        font-size: 1.5em;
+        font-weight:900;
+    }
+
+    .h2, p {
+        margin-top: 0.8em;
+
+        .left {
+            float: left !important;
+        }
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            width: 100%;
+        }
+
+        input[type="text"], [type="email"], textarea {
+            background: #000 !important;
+            .border;
+        }
+    }
+
+    .append > input[type="file"] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        border: 0;
+    }
+
+    .append {
+        display: inline-block;
+        height: 3em;
+        line-height: 2.8em;
+        font-size: 1em;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        padding: 0 1.56em;
+        margin: 0.625em 0;
+        margin-right: 0.625em;
+        white-space: nowrap;
+        user-select: none;
+        transition: color 0.3s ease-out, background-color 0.3s ease-out;
+        min-width: 3.75em;
+        position: relative;
+        background: @color-gray-dark;
+        width: 100%;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 1px 3px darken(@color-gray-dark,10);
+
+        .input-file {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .js-labelFile {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 10px;
+            cursor: pointer;
+
+            .icon:before {
+                //font-awesome
+                content: "\f093";
+            }
+
+            &.has-file {
+                .icon:before {
+                    //font-awesome
+                    content: "\f00c";
+                    color: @color-more;
+                }
+            }
+        }
+
+        .append-file-name {
+            width: 100%;
+        }
+    }
+
+    .btn-form-group {
+        //.row
+        justify-content: space-between;
+    }
+}
+
 
 /*---------------------------------------------------------------модальное окно для оформления заявки*/
 .modal {
@@ -1858,7 +2055,7 @@ section.price-solution {
     }
 }
 
-/*---------------------------------------------------------------------------------Checkout-------Страница заказа*/
+/*-----------------------------------------------------------Checkout-------Страница заказа*/
 .form-wrap {
     justify-content: space-between;
 
@@ -1886,7 +2083,7 @@ section.price-solution {
         }
     }
 }
-/*----------------------------------------------------------------------------------------Страница Лендинга*/
+/*-------------------------------------------------------------------------Страница Лендинга*/
 
 section.landing-description {
     min-height: 100vh;
@@ -2139,7 +2336,7 @@ section.tabs {
     .post__item {
         width: 48.5%;
     }
-  /*------------------------------------------------------- портфолио*/
+    /*------------------------------------------------------- портфолио*/
     .medium-half {
         flex-basis: 31%;
     }
@@ -2170,6 +2367,10 @@ section.tabs {
 
     .privilege-row {
         .row;
+    }
+    /*----------------------------------------------------форма заявки*/
+    .btn-form-group {
+        .row
     }
 }
 
@@ -2240,6 +2441,10 @@ section.tabs {
     .privilege-row {
         .row;
     }
+    /*----------------------------------------------------форма заявки*/
+    .btn-form-group {
+        .row
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2267,7 +2472,7 @@ section.tabs {
     .post__item {
         width: 100%;
     }
-   /*------------------------------------------------------- портфолио*/
+    /*------------------------------------------------------- портфолио*/
     .medium-half {
         flex-basis: 31%;
     }
@@ -2300,6 +2505,10 @@ section.tabs {
 
     .privilege-row {
         .row;
+    }
+    /*----------------------------------------------------форма заявки*/
+    .btn-form-group {
+        .column
     }
 }
 
@@ -2376,6 +2585,10 @@ section.tabs {
     }
     /*-------------------------------------------Страница Лендинга*/
 
+    /*----------------------------------------------------форма заявки*/
+    .btn-form-group {
+        .column
+    }
 }
 
 @media screen and (max-width:640px) {
@@ -2477,6 +2690,11 @@ section.tabs {
     }
     /*-------------------------------------------Страница Лендинга*/
 
+
+    /*----------------------------------------------------форма заявки*/
+    .btn-form-group {
+        .column
+    }
 }
 
 @media (max-width: 480px) {
@@ -2537,6 +2755,11 @@ section.tabs {
     }
     /*-------------------------------------------Страница Лендинга*/
 
+
+    /*----------------------------------------------------форма заявки*/
+    .btn-form-group {
+        .column
+    }
 }
 
 
@@ -2559,61 +2782,77 @@ section.tabs {
 /*------------------------------------------------АДМИНКА--------------------------------------*/
 
 /*------------------------------------------Layout Admin*/
-.wrapper-admin{
-   
+.wrapper-admin {
 }
-.wrap-header{
-     background:@color-gray-dark;
-     padding:1em;
-}
-.container-admin{
-    margin:0 auto;
-    width:90%;
-    max-width:81.25em;    
-}
-.header-admin{
-    display:flex;    
-    align-items:baseline;
-    color:#fff;
-    z-index:1000;
-    i{
-        margin-right:1em;
-    }
-    h1{
-        font-size:@size-font-bigger;
-    }
-    ul{       
-        margin-left:auto;
-        a{
-             color:#fff;
-        }
-    }
-}
-.wrap-nav{
-    background:@color-gray-dark;
-    width:15em;
-    height:100vh;
-}
-.navigation-admin{
-    display:flex;
-    flex-direction:column;
-    margin-right:auto;
-    z-index:950;
-    ul{
-        padding-top:2em;
-        li{
-            border-bottom:1px solid rgba(255, 255, 255, 0.89);
-            &:hover{
-                background:@color-gray;
-            }
-        }        
-        a{
-            color:#fff;
-        }
-    }
-}
-header.header-admin{
 
+.wrap-header {
+    background: @color-gray-dark;
+    padding: 1em;
+}
+
+.container-admin {
+    margin-right: 2em;
+    // margin:0 auto;
+    // width:90%;
+    // max-width:81.25em;
+}
+
+.header-admin {
+    display: flex;
+    align-items: baseline;
+    color: #fff;
+    z-index: 1000;
+
+    i {
+        margin-right: 1em;
+    }
+
+    h1 {
+        font-size: @size-font-bigger;
+    }
+
+    ul {
+        margin-left: auto;
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.wrap-nav {
+    display: flex;
+    background: @color-gray-dark;
+    //width:15em;
+    color: #fff;
+    height: 100vh;
+}
+
+.navigation-admin {
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    margin-right: auto;
+    z-index: 950;
+
+    ul {
+        padding-top: 2em;
+
+        li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.89);
+
+            &:hover {
+                background: @color-gray;
+            }
+        }
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+header.header-admin {
 }
 /*------------------блог*/
 .admin-create {

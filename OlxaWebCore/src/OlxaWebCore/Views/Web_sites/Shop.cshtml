@@ -5,7 +5,7 @@
         <h1>Интернет магазин</h1>
         <section class="info-shop">
             <div class="shop-preview">
-                <img src="img/post01.jpg" alt="интернет магазин" />
+                <img src="~/images/shop/post01.jpg" alt="интернет магазин" />
             </div>
             <div class="shop-idea">
                 <h2>Интернет магазин</h2>
@@ -18,11 +18,11 @@
                 </div>
                 <div class="shop-order">
                     @*<div class="shop-price">
-                        <label> <input type="radio" name="order" />Купить 25 000р</label>
-                        <label> <input type="radio" name="order" />Арендовать от 2 000 р/мес</label>
-                    </div>*@
+                            <label> <input type="radio" name="order" />Купить 25 000р</label>
+                            <label> <input type="radio" name="order" />Арендовать от 2 000 р/мес</label>
+                        </div>*@
                     @*<label class="btn" for="modal-window">Заказать</label>*@ <!--вызов мод.окна-->
-                    <a class="btn" asp-action="cart"  asp-controller="order" asp-route-typeSiteId="">Заказать</a>
+                    <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
                 </div>
             </div>
         </section>
@@ -30,38 +30,64 @@
         <section class="step-work"></section>
 
         <div class="shop-description">
-            <!-- Nav Tabs -->
-            <section class="tabs">
-                <input id="tab_1" type="radio" name="tab" checked="checked" />
-                <input id="tab_2" type="radio" name="tab" />
-                <input id="tab_3" type="radio" name="tab" />
+            <div class="contains">
+                <h3>В стоимость входит</h3>
+                <ul>
+                    <li>Вот это</li>
+                    <li>И это тоже</li>
+                    <li>И еще это</li>
+                    <li>И вот</li>
+                </ul>
+            </div>
+            <div class="extra">
+                <h3>Дополнительные услуги</h3>
+                <ul>
+                    <li>Вот это</li>
+                    <li>И это тоже</li>
+                    <li>И еще это</li>
+                    <li>И вот</li>
+                </ul>
+            </div>
+        </div>
 
-                <div class="label-wrap" role="tablist">
-                    <label for="tab_1" id="tab_l1" role="tab">Что входит в цену</label>
-                    <label for="tab_2" id="tab_l2" role="tab">Дополнительные услуги</label>
-                    <label for="tab_3" id="tab_l3" role="tab">Еще что-то</label>
-                </div>
-
-                <div class="tabs_cont">
-                    <div id="tab_c1" role="tabpanel">
-                        -
-                        -
-                        -
-                        -
-                        -
-                        -
-                        -
-                    </div>
-                    <div id="tab_c2" role="tabpanel">222</div>
-                    <div id="tab_c3" role="tabpanel">3333</div>
-                </div>
-            </section>
-
-        </div> <!--shop-description-->
     </div>
 </div> <!--container-->
+<div class="form-wrapper"id="form">
+    @Html.Partial("_FormInSite_PartialView")
+</div>
+
+<!-- Nav Tabs -->
+
+@*<div class="shop-description">
+        <section class="tabs">
+            <input id="tab_1" type="radio" name="tab" checked="checked" />
+            <input id="tab_2" type="radio" name="tab" />
+            <input id="tab_3" type="radio" name="tab" />
+
+            <div class="label-wrap" role="tablist">
+                <label for="tab_1" id="tab_l1" role="tab">Что входит в цену</label>
+                <label for="tab_2" id="tab_l2" role="tab">Дополнительные услуги</label>
+                <label for="tab_3" id="tab_l3" role="tab">Еще что-то</label>
+            </div>
+
+            <div class="tabs_cont">
+                <div id="tab_c1" role="tabpanel">
+                    -
+                    -
+                    -
+                    -
+                    -
+                    -
+                    -
+                </div>
+                <div id="tab_c2" role="tabpanel">222</div>
+                <div id="tab_c3" role="tabpanel">3333</div>
+            </div>
+        </section>
+
+    </div>*@ <!--shop-description-->
 <!-- Модальное окно -->
-<div class="modal">
+@*<div class="modal">
     <input class="modal-open" id="modal-window" type="checkbox" hidden>
     <div class="modal-wrap" aria-hidden="true" role="dialog">
         <label class="modal-overlay" for="modal-window"></label>
@@ -75,67 +101,32 @@
                     <section class="information">
                         <input type="text" placeholder="Имя" />
                         <input type="tel" placeholder="Телефон" />
-                        <input type="email" placeholder="Email" />
-                        <!--<p>*выбирите наиболее предпочтительный вид связи</p>-->
-                    </section>
-                    <section class="comment">
-                        <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
-                        <div class="file">
-                            <p>
-                                Если у вас есть готовый бриф или ТЗ можете приложить их к письму
-                            </p>
+                        <input type="email" placeholder="Email" />*@
+<!--<p>*выбирите наиболее предпочтительный вид связи</p>-->
+@*</section>
+                        <section class="comment">
+                            <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
+                            <div class="file">
+                                <p>
+                                    Если у вас есть готовый бриф или ТЗ можете приложить их к письму
+                                </p>
 
-                            <div class="file_upload">
-                                <button type="button">Выбрать</button>
-                                <div>Файл не выбран</div>
-                                <input type="file">
+                                <div class="file_upload">
+                                    <button type="button">Выбрать</button>
+                                    <div>Файл не выбран</div>
+                                    <input type="file">
+                                </div>
+                                <div class="capcha">
+                                    тут капча
+                                </div>
                             </div>
-                            <div class="capcha">
-                                тут капча
-                            </div>
-                        </div>
-                    </section>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <label class="btn " for="modal-window">Отправить!</label>
+                        </section>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <label class="btn " for="modal-window">Отправить!</label>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </div>*@
 
-@*<script>
-        $(function () {
-            var wrapper = $(".file_upload"),
-                inp = wrapper.find("input"),
-                btn = wrapper.find("button"),
-                lbl = wrapper.find("div");
-
-            btn.add(lbl).click(function () {
-                inp.click();
-            });
-
-            var file_api = (window.File && window.FileReader && window.FileList && window.Blob) ? true : false;
-
-            inp.change(function () {
-
-                var file_name;
-                if (file_api && inp[0].files[0])
-                    file_name = inp[0].files[0].name;
-                else
-                    file_name = inp.val().replace("C:\\fakepath\\", '');
-                if (!file_name.length)
-                    return;
-
-                if (lbl.is(":visible")) {
-                    lbl.text(file_name);
-                    btn.text("Выбрать");
-                } else
-                    btn.text(file_name);
-            }).change();
-
-        });
-        $(window).resize(function () {
-            $(".file_upload input").triggerHandler("change");
-        });
-    </script>*@

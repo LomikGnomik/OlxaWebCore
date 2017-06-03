@@ -180,6 +180,27 @@ textarea {
 .btn-more:hover {
   background: #00b120;
 }
+.btn-long {
+  width: 100%;
+}
+.btn-ghost {
+  background-color: transparent;
+  border-color: #0094ff;
+  color: #0094ff;
+}
+.btn-ghost:hover {
+  background: #0094ff;
+  color: #fff;
+}
+.btn-ghost-more {
+  background-color: transparent;
+  border-color: #00e43c;
+  color: #00e43c;
+}
+.btn-ghost-more:hover {
+  background: #00e43c;
+  color: #fff;
+}
 /*---------------------------------------чекбоксы и радио*/
 .wrapper {
   display: flex;
@@ -389,7 +410,6 @@ textarea {
 footer {
   flex: 0 0 auto;
   padding-bottom: 2em;
-  margin-top: 5.25em;
 }
 footer .top-footer {
   width: 100%;
@@ -995,7 +1015,7 @@ section.tariff .promo-wrapper ul li:last-child {
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
-  padding: 0 1em 1em;
+  padding: 0 1em 0 1em;
 }
 .wrapper-shop .info-shop .shop-idea .shop-demo {
   display: flex;
@@ -1012,11 +1032,39 @@ section.tariff .promo-wrapper ul li:last-child {
   padding-top: 1em;
   border-top: 1px solid #cccccc;
 }
+.wrapper-shop .info-shop .shop-idea .shop-order a {
+  margin-bottom: 0;
+}
 .wrapper-shop .info-shop .shop-idea .shop-order .shop-price label {
   display: block;
 }
 .wrapper-shop .shop-description {
-  margin-top: 2em;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wrapper-shop .shop-description h3 {
+  padding: 1em 0 1em 1.5em;
+}
+.wrapper-shop .shop-description .contains {
+  border: 1px solid #e5f4ff;
+  width: 50%;
+  height: 15em;
+}
+.wrapper-shop .shop-description .extra {
+  background: #e5f4ff;
+  position: relative;
+  width: 50%;
+  height: 15em;
+}
+.wrapper-shop .shop-description .extra:after {
+  content: '';
+  position: absolute;
+  left: -12.5em;
+  bottom: 0;
+  border: 7.5em solid transparent;
+  border-right: 5em solid #e5f4ff;
 }
 /*---------------------------------------------------------------------------------------Портфолио*/
 section.portfolio {
@@ -1400,6 +1448,126 @@ section.price-solution .solution-row .solution-item-question .solution-title {
 section.price-solution .solution-row .solution-item-question .btn {
   margin-top: 2em;
 }
+/*-------------------------------------------------------------------Форма отправки заявки*/
+.form-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3em;
+  margin-bottom: 0;
+  padding: 4em 0;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.form-wrapper .small {
+  display: inline-block;
+  font-size: 0.8em;
+  margin-bottom: 1.5em;
+}
+.form-wrapper .small .mail {
+  color: #00e43c;
+  font-size: 16px;
+}
+.form-wrapper .brief-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+  width: 80%;
+}
+.form-wrapper .brief-wrap p {
+  color: #999999;
+}
+.form-wrapper .h2 {
+  margin-bottom: 1.4em;
+  letter-spacing: 0.1em;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.form-wrapper .h2,
+.form-wrapper p {
+  margin-top: 0.8em;
+}
+.form-wrapper .h2 .left,
+.form-wrapper p .left {
+  float: left !important;
+}
+.form-wrapper form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.form-wrapper form input {
+  width: 100%;
+}
+.form-wrapper form input[type="text"],
+.form-wrapper form [type="email"],
+.form-wrapper form textarea {
+  background: #000 !important;
+  border: 1px solid #cccccc;
+}
+.form-wrapper .append > input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+}
+.form-wrapper .append {
+  display: inline-block;
+  height: 3em;
+  line-height: 2.8em;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 0 1.56em;
+  margin: 0.625em 0;
+  margin-right: 0.625em;
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  min-width: 3.75em;
+  position: relative;
+  background: #333333;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 1px 3px #191919;
+}
+.form-wrapper .append .input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.form-wrapper .append .js-labelFile {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.form-wrapper .append .js-labelFile .icon:before {
+  content: "\f093";
+}
+.form-wrapper .append .js-labelFile.has-file .icon:before {
+  content: "\f00c";
+  color: #00e43c;
+}
+.form-wrapper .append .append-file-name {
+  width: 100%;
+}
+.form-wrapper .btn-form-group {
+  justify-content: space-between;
+}
 /*---------------------------------------------------------------модальное окно для оформления заявки*/
 .modal {
   /* затемнение */
@@ -1560,7 +1728,7 @@ section.price-solution .solution-row .solution-item-question .btn {
   background: #cccccc;
   margin-top: 1em;
 }
-/*---------------------------------------------------------------------------------Checkout-------Страница заказа*/
+/*-----------------------------------------------------------Checkout-------Страница заказа*/
 .form-wrap {
   justify-content: space-between;
 }
@@ -1580,7 +1748,7 @@ section.price-solution .solution-row .solution-item-question .btn {
   border: 1px solid #cccccc;
   padding: 1em;
 }
-/*----------------------------------------------------------------------------------------Страница Лендинга*/
+/*-------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
   min-height: 100vh;
   background: #e5f4ff;
@@ -1806,6 +1974,11 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     flex-direction: row;
   }
+  /*----------------------------------------------------форма заявки*/
+  .btn-form-group {
+    display: flex;
+    flex-direction: row;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
@@ -1870,6 +2043,11 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     flex-direction: row;
   }
+  /*----------------------------------------------------форма заявки*/
+  .btn-form-group {
+    display: flex;
+    flex-direction: row;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
@@ -1926,6 +2104,11 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .privilege-row {
     display: flex;
     flex-direction: row;
+  }
+  /*----------------------------------------------------форма заявки*/
+  .btn-form-group {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (max-width: 767px) {
@@ -1992,6 +2175,11 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     width: 117%;
   }
   /*-------------------------------------------Страница Лендинга*/
+  /*----------------------------------------------------форма заявки*/
+  .btn-form-group {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 640px) {
   /*------------------------------------------------------портфолио*/
@@ -2080,6 +2268,11 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     width: 73.5%;
   }
   /*-------------------------------------------Страница Лендинга*/
+  /*----------------------------------------------------форма заявки*/
+  .btn-form-group {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width: 480px) {
   html {
@@ -2132,6 +2325,11 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     width: 22em;
   }
   /*-------------------------------------------Страница Лендинга*/
+  /*----------------------------------------------------форма заявки*/
+  .btn-form-group {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 412px) {
   /*-----------------------------------------------------------chekout*/
@@ -2152,9 +2350,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   padding: 1em;
 }
 .container-admin {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 81.25em;
+  margin-right: 2em;
 }
 .header-admin {
   display: flex;
@@ -2175,13 +2371,15 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   color: #fff;
 }
 .wrap-nav {
+  display: flex;
   background: #333333;
-  width: 15em;
+  color: #fff;
   height: 100vh;
 }
 .navigation-admin {
   display: flex;
   flex-direction: column;
+  width: 15em;
   margin-right: auto;
   z-index: 950;
 }
