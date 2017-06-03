@@ -189,6 +189,10 @@ textarea {
 .wrapper .container {
   margin: 0 auto;
 }
+.wrapper header {
+  background: #fff;
+  z-index: 1000;
+}
 .wrapper main {
   flex: 1 0 auto;
   margin-top: 6em;
@@ -208,8 +212,6 @@ textarea {
 }
 .wrapper .navigation {
   width: 100%;
-  border-bottom: 1px solid #cccccc;
-  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
   background: #fff;
   top: 100px;
   /*высота шапки*/
@@ -224,6 +226,7 @@ textarea {
 .wrapper .navigation nav .main-menu {
   display: flex;
   list-style: none;
+  margin-bottom: 0;
 }
 .wrapper .navigation nav .main-menu li:hover > a {
   /*при выделении подменю сохраняется стиль*/
@@ -640,16 +643,17 @@ section.tariff .promo-wrapper ul li:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 75%;
+  width: 100%;
+  /*с сайдбаром 75%*/
   position: relative;
-  padding-right: 1.5em;
 }
 .blog .post .post__item {
   display: block;
-  width: 48.5%;
-  /*-----------чтоб было по одному посту поставить 100%*/
   border: 1px solid #cccccc;
   margin-bottom: 1.87em;
+}
+.blog .post .post__item:ntf-child(odd) {
+  margin-right: 1em;
 }
 .blog .post .post__item .post_img {
   display: block;
@@ -1276,8 +1280,9 @@ section.portfolio .nav-filters .active a:hover {
   cursor: default;
 }
 /*-------------------------------------------------------------------------Страница ЦЕНЫ*/
-section.price-solution .solution-row {
-  justify-content: space-between;
+section.price-solution .flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 section.price-solution .solution-row i {
   display: block;
@@ -1288,7 +1293,10 @@ section.price-solution .solution-row:first-child {
 }
 section.price-solution .solution-row .solution-item {
   text-align: center;
-  padding: 2em 4em;
+  padding: 2em 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 section.price-solution .solution-row .solution-item:hover {
   transition: background 0.4s ease-out, color 0.4s ease-in-out;
@@ -1304,6 +1312,9 @@ section.price-solution .solution-row .solution-item:hover .solution-title i {
 section.price-solution .solution-row .solution-item:hover .btn {
   background: #0094ff;
   color: #fff;
+}
+section.price-solution .solution-row .solution-item .solution-item-btn {
+  margin-bottom: 0;
 }
 section.price-solution .solution-row .solution-item .solution-title {
   display: block;
@@ -1697,11 +1708,14 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     justify-content: space-between;
   }
+  /*-------------------------------------------------Блог*/
+  .post__item {
+    width: 48.5%;
+  }
   /*---------------------------------------------портфолио*/
   /*--------------------------------------------------цены*/
-  .solution-row {
-    display: flex;
-    flex-direction: row;
+  .solution-item {
+    width: 33.333%;
   }
   /*-----------------------------------------------chekout*/
   .form-wrap {
@@ -1752,10 +1766,13 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     justify-content: space-between;
   }
+  /*-------------------------------------------------Блог*/
+  .post__item {
+    width: 48.5%;
+  }
   /*------------------------------------------------------цены*/
-  .solution-row {
-    display: flex;
-    flex-direction: row;
+  .solution-item {
+    width: 33.333%;
   }
   /*---------------------------------------------------chekout*/
   .form-wrap {
@@ -1802,15 +1819,18 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     justify-content: space-between;
   }
+  /*-------------------------------------------------Блог*/
+  .post__item {
+    width: 100%;
+  }
   /*-------------------------------------------------- портфолио*/
   .grid.isotope-grid.col-3 .grid-sizer,
   .grid.isotope-grid.col-3 .grid-item {
     width: 48.75%;
   }
   /*--------------------------------------------------------цены*/
-  .solution-row {
-    display: flex;
-    flex-direction: column;
+  .solution-item {
+    width: 50%;
   }
   /*------------------------------------------------------chekout*/
   .form-wrap {
@@ -1878,10 +1898,13 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     margin-bottom: 2.5%;
     backface-visibility: hidden;
   }
+  /*-------------------------------------------------Блог*/
+  .post__item {
+    width: 100%;
+  }
   /*---------------------------------------------------------цены*/
-  .solution-row {
-    display: flex;
-    flex-direction: column;
+  .solution-item {
+    flex-basis: 46%;
   }
   /*-------------------------------------------------------chekout*/
   input.inputs-long {
@@ -1962,10 +1985,13 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     opacity: 1;
     transform: scale(1);
   }
+  /*-------------------------------------------------Блог*/
+  .post__item {
+    width: 100%;
+  }
   /*-------------------------------------------------------цены*/
-  .solution-row {
-    display: flex;
-    flex-direction: column;
+  .solution-item {
+    flex-basis: 46%;
   }
   /*----------------------------------------------------chekout*/
   input.inputs-long {
@@ -2009,10 +2035,13 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     width: 100%;
     margin-bottom: 30px;
   }
+  /*---------------------------------------------------------Блог*/
+  .post__item {
+    width: 100%;
+  }
   /*-----------------------------------------------------------цены*/
-  .solution-row {
-    display: flex;
-    flex-direction: column;
+  .solution-item {
+    flex-basis: 90%;
   }
   /*--------------------------------------------------------chekout*/
   input.inputs-long {
@@ -2033,10 +2062,13 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   }
 }
 /*------------------------------------------------АДМИНКА--------------------------------------*/
-.sidebar {
-  /*------блог*/
+/*------------------блог*/
+.admin-create a.admin-btn {
+  position: absolute;
+  top: 14.5em;
+  left: 2.5em;
 }
-.sidebar .admin-create button {
+.admin-create button {
   width: 100%;
   background: #ff3136;
 }

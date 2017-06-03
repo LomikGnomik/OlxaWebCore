@@ -1,7 +1,6 @@
 ﻿<div class="container">
     <section class="price-solution">
-        <div class="solution-row">
-            <!--<div class="price-wrap">-->
+        <div class="solution-row flex">
             <div class="solution-item">
                 <a href="" class="solution-icon"><i class="fa fa-bug"></i></a>
 
@@ -9,10 +8,12 @@
                     <h2>Сайт визиткa</h2>
                 </a>
                 <p>
-                    Небольшой информационный сайт о компании. Быстрый и дешевый      
+                    Небольшой информационный сайт о компании. Быстрый и дешевый
                 </p>
-                <div class="solution-price">6 000p</div>
-                <a href="" class="btn">Подробнее</a>
+                <div class="solution-item-btn">
+                    <div class="solution-price">6 000p</div>
+                    <a href="" class="btn">Подробнее</a>
+                </div>
             </div>
             <div class="solution-item">
                 <a href="#" class="solution-title">
@@ -22,8 +23,10 @@
                 <p>
                     Cайт, который состоит из одной страницы, заточенный под одно действие: получить контакт или продать товар/услугу
                 </p>
-                <div class="solution-price">6 000p</div>
-                <a href="" class="btn">Подробнее</a>
+                <div class="solution-item-btn">
+                    <div class="solution-price">6 000p</div>
+                    <a href="" class="btn">Подробнее</a>
+                </div>
             </div>
             <div class="solution-item">
                 <a href="#" class="solution-title">
@@ -33,24 +36,27 @@
                 <p>
                     Iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
                 </p>
-                <div class="solution-price">6 000p</div>
-                <a href="" class="btn">Подробнее</a>
+
+                <div class="solution-item-btn">
+                    <div class="solution-price">6 000p</div>
+                    <a href="" class="btn">Подробнее</a>
+                </div>
             </div>
-            <!--</div>-->
-        </div>
-        <div class="solution-row">
-            <!--<div class="price-wrap">-->
             <div class="solution-item">
                 <a href="#" class="solution-title">
                     <i class="fa fa-bug"></i>
                     <h2>Интернет магазин</h2>
                 </a>
                 <p>
-                    Торгует товарами в Интернете. Позволяет пользователям сформировать заказ на покупку, выбрать способ оплаты и доставки заказа.
-                    Работает круглосуточно, ему не нужны больничные и отпуск – информация доступна посетителям 24 часа в сутки, 7 дней в неделю.
+                    Торгует товарами в Интернете. Позволяет пользователям сформировать заказ на
+                    покупку, выбрать способ оплаты и доставки заказа.<br/>
+                    Работает круглосуточно, ему не нужны больничные и отпуск – информация
+                    доступна посетителям 24 часа в сутки, 7 дней в неделю.
                 </p>
-                <div class="solution-price">25 000p</div>
-                <a href="" class="btn">Подробнее</a>
+                <div class="solution-item-btn">
+                    <div class="solution-price">6 000p</div>
+                    <a href="" class="btn">Подробнее</a>
+                </div>
             </div>
             <div class="solution-item">
                 <a href="#" class="solution-title">
@@ -60,8 +66,10 @@
                 <p>
                     к ним относятся: развлекательный, позновательный
                 </p>
-                <div class="solution-price">6 000p</div>
-                <a href="" class="btn">Подробнее</a>
+                <div class="solution-item-btn">
+                    <div class="solution-price">6 000p</div>
+                    <a href="" class="btn">Подробнее</a>
+                </div>
             </div>
             <div class="solution-item solution-item-question">
                 <a href="#" class="solution-title">
@@ -69,13 +77,13 @@
                     Не знаете что выбрать?
                 </a>
                 <p>
-                    Деление сайтов на виды, носит весьма условный характер, 
+                    Деление сайтов на виды, носит весьма условный характер,
                 </p>
-                <div class="solution-price"></div>
-                <a href="" class="btn">Кнопка</a>
+                <div class="solution-item-btn">
+                    <a href="" class="btn">Подробнее</a>
+                </div>
             </div>
-            <!--</div>-->
-        </div>
+        </div> @*solution-row flex*@
 
         @Html.Partial("_FormInSite_PartialView")
     </section>

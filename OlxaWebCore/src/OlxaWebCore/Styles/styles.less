@@ -247,6 +247,11 @@ textarea {
         margin: 0 auto;
     }
 
+    header {
+        background: #fff;
+        z-index: 1000;
+    }
+
     main {
         flex: 1 0 auto;
         margin-top: 6em;
@@ -255,6 +260,7 @@ textarea {
     .header {
         height: 9em;
         width: 100%;
+
 
         .toolbar {
             display: flex;
@@ -270,8 +276,8 @@ textarea {
 
     .navigation {
         width: 100%;
-        border-bottom: 1px solid @color-gray-light;
-        box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+        //border-bottom: 1px solid @color-gray-light;
+        //box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
         background: #fff;
         top: 100px; /*высота шапки*/
         position: fixed;
@@ -286,6 +292,7 @@ textarea {
             .main-menu {
                 display: flex;
                 list-style: none;
+                margin-bottom: 0;
 
                 li:hover > a { /*при выделении подменю сохраняется стиль*/
                     background-color: @color-base;
@@ -789,15 +796,18 @@ section.tariff {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 75%;
+        width: 100%; /*с сайдбаром 75%*/
         position: relative;
-        padding-right: 1.5em;
-
+        // padding-right: 1.5em;
         .post__item {
             display: block;
-            width: 48.5%; /*-----------чтоб было по одному посту поставить 100%*/
+            //   width: 48.5%; /*-----------чтоб было по одному посту поставить 100%*/
             .border;
             margin-bottom: 1.87em;
+
+            &:ntf-child(odd) {
+                margin-right: 1em;
+            }
 
             .post_img {
                 display: block;
@@ -1506,13 +1516,16 @@ section.portfolio {
 
 /*-------------------------------------------------------------------------Страница ЦЕНЫ*/
 section.price-solution {
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .solution-row {
         i {
             display: block;
             margin: 1em;
         }
-        //.row;
-        justify-content: space-between;
 
         &:first-child {
             border-bottom: 1px solid @color-gray-lighter;
@@ -1520,7 +1533,10 @@ section.price-solution {
 
         .solution-item {
             text-align: center;
-            padding: 2em 4em;
+            padding: 2em 1.2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             &:hover {
                 transition: background .4s ease-out,color .4s ease-in-out;
@@ -1541,6 +1557,10 @@ section.price-solution {
                     background: @color-base;
                     color: #fff;
                 }
+            }
+
+            .solution-item-btn {
+                margin-bottom: 0;
             }
 
             .solution-title {
@@ -2039,11 +2059,14 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
-
+    /*-------------------------------------------------Блог*/
+    .post__item {
+        width: 48.5%;
+    }
     /*---------------------------------------------портфолио*/
     /*--------------------------------------------------цены*/
-    .solution-row {
-        .row
+    .solution-item {
+        width: 33.333%;
     }
     /*-----------------------------------------------chekout*/
     .form-wrap {
@@ -2100,9 +2123,13 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
+    /*-------------------------------------------------Блог*/
+    .post__item {
+        width: 48.5%;
+    }
     /*------------------------------------------------------цены*/
-    .solution-row {
-        .row
+    .solution-item {
+        width: 33.333%;
     }
     /*---------------------------------------------------chekout*/
     .form-wrap {
@@ -2152,6 +2179,10 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
+        /*-------------------------------------------------Блог*/
+    .post__item {
+        width: 100%;
+    }
     /*-------------------------------------------------- портфолио*/
     .grid.isotope-grid.col-3 .grid-sizer,
     .grid.isotope-grid.col-3 .grid-item {
@@ -2159,8 +2190,8 @@ section.tabs {
     }
 
     /*--------------------------------------------------------цены*/
-    .solution-row {
-        .column;
+    .solution-item {
+        width: 50%;
     }
     /*------------------------------------------------------chekout*/
     .form-wrap {
@@ -2236,9 +2267,13 @@ section.tabs {
         margin-bottom: 2.5%;
         backface-visibility: hidden;
     }
+     /*-------------------------------------------------Блог*/
+    .post__item {
+        width: 100%;
+    }
     /*---------------------------------------------------------цены*/
-    .solution-row {
-        .column;
+    .solution-item {
+        flex-basis: 46%;
     }
     /*-------------------------------------------------------chekout*/
     input.inputs-long {
@@ -2331,9 +2366,14 @@ section.tabs {
         opacity: 1;
         transform: scale(1);
     }
+     /*-------------------------------------------------Блог*/
+    .post__item {
+       width: 100%;
+    }
     /*-------------------------------------------------------цены*/
-    .solution-row {
-        .column;
+
+    .solution-item {
+        flex-basis: 46%;
     }
 
     /*----------------------------------------------------chekout*/
@@ -2385,9 +2425,13 @@ section.tabs {
         width: 100%;
         margin-bottom: 30px;
     }
+     /*---------------------------------------------------------Блог*/
+    .post__item {
+        width: 100%;
+    }
     /*-----------------------------------------------------------цены*/
-    .solution-row {
-        .column;
+    .solution-item {
+        flex-basis: 90%;
     }
     /*--------------------------------------------------------chekout*/
     input.inputs-long {
@@ -2414,11 +2458,17 @@ section.tabs {
 
 
 /*------------------------------------------------АДМИНКА--------------------------------------*/
-.sidebar { /*------блог*/
-    .admin-create {
-        button {
-            width: 100%;
-            background: @color-bad-lighter1;
-        }
+
+/*------------------блог*/
+.admin-create {
+    a.admin-btn {
+        position: absolute;
+        top: 14.5em;
+        left: 2.5em;
+    }
+
+    button {
+        width: 100%;
+        background: @color-bad-lighter1;
     }
 }
