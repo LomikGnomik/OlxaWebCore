@@ -19,35 +19,43 @@ namespace OlxaWebCore.Controllers
             repository = repo;
         }
 
-        public ViewResult AllPosts(string category=null, int page = 1)
-        => View(
-            new BlogListViewModel
+        public ViewResult AllPosts(string category = null, int page = 1)
         {
-            Posts = repository.Posts
-            .Where(p => category == null || p.Category == category)
-            .OrderBy(p => p.PostID)
-            .Skip((page - 1) * PageSize)
-            .Take(PageSize),
-            PagingInfo = new PagingInfo
+            BlogListViewModel blogList = new BlogListViewModel
             {
-                CurrentPage = page,
-                ItemsPerPage = PageSize,
-                TotalItems = category == null ?
-                repository.Posts.Count() :
-                repository.Posts.Where(e =>
-                e.Category == category).Count()
-            },
-            CurrentCategory = category
+                Posts = repository.Posts
+              .Where(p => category == null || p.Category == category)
+              .OrderBy(p => p.PostID)
+              .Skip((page - 1) * PageSize)
+              .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalItems = category == null ?
+                  repository.Posts.Count() :
+                  repository.Posts.Where(e =>
+                  e.Category == category).Count()
+                },
+                CurrentCategory = category
+            };
+            return View(blogList);
         }
-        );
+
+    
 
         public ViewResult Post(int Id)
         {
             Post post = repository.Posts.FirstOrDefault(p => p.PostID == Id);
             return View(post);
         }
-        
+
         //ADMIN
+
+        public ViewResult AllPostsAdmin()
+        {
+             return View("~/Views/Admin/BlogList.cshtml",repository.Posts);
+        }
 
         // Создание 
         public ViewResult CreatePost() => View("EditPost", new Post());

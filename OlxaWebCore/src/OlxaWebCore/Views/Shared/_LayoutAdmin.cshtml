@@ -35,19 +35,21 @@
             <div class="container-admin">
                 <nav class="navigation-admin" role="navigation">
                     <ul class="admim-nav">
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Портфолио</a></li>
+                        <li><a asp-controller="Blog" asp-action="AllPostsAdmin">Блог</a></li>
+                        <li><a asp-controller="Portfolio" asp-action="All">Портфолио</a></li>
                         <li><a href="#">Элемент</a></li>
                         <li><a href="#">Элемент</a></li>
                     </ul>
                 </nav>
             </div>
+            @RenderBody()
         </div> @*wrap-nav*@
+
     </div> @*wrapper-admin*@
 
-    <div>
-        @RenderBody()
-    </div>
+
+
+
     <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
 </body>
 </html>

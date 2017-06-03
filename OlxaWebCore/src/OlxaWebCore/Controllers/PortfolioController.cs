@@ -37,9 +37,9 @@ namespace OlxaWebCore.Controllers
                   CurrentCategory = category
               }
           );
+
         public ViewResult WebSite()
         {
-
             return View();
         }
 

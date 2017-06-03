@@ -24,16 +24,7 @@ namespace OlxaWebCore.Components
                 .Distinct()
                 .OrderBy(x => x);
 
-         //   foreach (string c in Category)
-          //  {
-          //      int count  = repository.Posts
-          //      .Select(x => x.Category==c).Count();
-          //  }
-            
-
             return View(Category);
-
-
         }
     }
 }
