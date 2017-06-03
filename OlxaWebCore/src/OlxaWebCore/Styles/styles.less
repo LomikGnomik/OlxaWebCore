@@ -787,7 +787,7 @@ section.tariff {
         display: inline-block;
         vertical-align: middle;
         font-size: 0.687em;
-        color: @color-base;
+        //color: @color-base;
         margin-top: -0.312em;
         margin-right: 0.05em;
     }
@@ -2179,7 +2179,7 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
-        /*-------------------------------------------------Блог*/
+    /*-------------------------------------------------Блог*/
     .post__item {
         width: 100%;
     }
@@ -2267,7 +2267,7 @@ section.tabs {
         margin-bottom: 2.5%;
         backface-visibility: hidden;
     }
-     /*-------------------------------------------------Блог*/
+    /*-------------------------------------------------Блог*/
     .post__item {
         width: 100%;
     }
@@ -2366,9 +2366,9 @@ section.tabs {
         opacity: 1;
         transform: scale(1);
     }
-     /*-------------------------------------------------Блог*/
+    /*-------------------------------------------------Блог*/
     .post__item {
-       width: 100%;
+        width: 100%;
     }
     /*-------------------------------------------------------цены*/
 
@@ -2425,7 +2425,7 @@ section.tabs {
         width: 100%;
         margin-bottom: 30px;
     }
-     /*---------------------------------------------------------Блог*/
+    /*---------------------------------------------------------Блог*/
     .post__item {
         width: 100%;
     }
@@ -2470,5 +2470,28 @@ section.tabs {
     button {
         width: 100%;
         background: @color-bad-lighter1;
+    }
+}
+
+.admin-blog {
+    a {
+        border-bottom:none !important;
+        padding:0.3em;
+
+        .public {
+            background: @color-success;
+        }
+
+        .disabled {
+            background: @color-bad;
+        }
+
+        .edit {
+            background: @color-more;
+        }
+
+        i {
+            font-size: @size-font-base;
+        }
     }
 }

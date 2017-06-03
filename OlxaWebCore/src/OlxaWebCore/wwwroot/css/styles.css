@@ -635,7 +635,6 @@ section.tariff .promo-wrapper ul li:last-child {
   display: inline-block;
   vertical-align: middle;
   font-size: 0.687em;
-  color: #0094ff;
   margin-top: -0.312em;
   margin-right: 0.05em;
 }
@@ -2071,4 +2070,20 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 .admin-create button {
   width: 100%;
   background: #ff3136;
+}
+.admin-blog a {
+  border-bottom: none !important;
+  padding: 0.3em;
+}
+.admin-blog a .public {
+  background: #0d9706;
+}
+.admin-blog a .disabled {
+  background: #FD0006;
+}
+.admin-blog a .edit {
+  background: #00e43c;
+}
+.admin-blog a i {
+  font-size: 16px;
 }
