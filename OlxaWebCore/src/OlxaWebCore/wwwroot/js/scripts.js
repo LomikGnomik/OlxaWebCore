@@ -40,6 +40,14 @@ $(function () {
     });
 });
 
+/*----------------------------------плавная прокрутка к форме заявки-------------------*/
+$(function () {
+    $("a[href^='#']").click(function () {
+        var _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+});
 
 /*--------------------модальное окно инпут с загрузкой файлов--------------------------*/
 
@@ -77,7 +85,24 @@ $(window).resize(function () {
     $(".file_upload input").triggerHandler("change");
 });
 
+/*--------------------Загрузка файлов для формы----------------*/
+(function () {
 
+    'use strict';
+
+    $('.input-file').each(function () {
+        var $input = $(this),
+            $label = $input.next('.js-labelFile'),
+            labelVal = $label.html();
+
+        $input.on('change', function (element) {
+            var fileName = '';
+            if (element.target.value) fileName = element.target.value.split('\\').pop();
+            fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
+        });
+    });
+
+})();
 /*------------------слайдер для промо-сайта--------------------*/
 $('.slider').each(function () {
     var $this = $(this);
