@@ -1069,201 +1069,394 @@ section.tariff .promo-wrapper ul li:last-child {
 /*---------------------------------------------------------------------------------------Портфолио*/
 section.portfolio {
   /*.grid.isotope-grid {
+
         overflow: hidden;
+
     }
+
+
 
     .grid {
+
         position: relative;
+
     }
+
+
 
     .grid.isotope-grid:before, .grid.isotope-grid:after {
+
         content: " ";
+
         display: table;
+
     }
+
+
 
     .grid.isotope-grid.col-3 .grid-sizer, .grid.isotope-grid.col-3 .grid-item {
+
         width: 31.66667%;
+
     }
 
+
+
     .grid .gutter-sizer {
+
         width: 2.5%;
+
     }
+
+
 
     .grid-item {
+
         position: absolute;
+
         left: 0px;
+
         top: 0px;
+
     }
+
+
 
     .grid.isotope-grid.col-3 .grid-sizer, .grid.isotope-grid.col-3 .grid-item {
+
         width: 31.66667%;
+
     }
+
+
 
     .grid .grid-item {
+
         position: relative;
+
         float: left;
+
         margin-bottom: 2.5%;
+
         backface-visibility: hidden;
+
     }*/
   /*  .portfolio-item > .thumbnail:before {
+
         position: absolute;
+
         display: block;
+
         z-index: 2;
+
         content: "";
+
         width: 100%;
+
         height: 100%;
+
         top: 0;
+
         left: 0;
+
         background-color: rgba(40,149,241,0);
+
         border: 6px solid #1bdb68;
+
         opacity: 0;
+
         transition: all 0.35s;
+
     }
+
+
 
  .portfolio-item:hover > .thumbnail:before {
+
         background-color: rgba(40, 149, 241, 0.55);
+
         opacity: 1;
+
     }
+
+
 
     .portfolio-item > .thumbnail > .portfolio-title {
+
         position: absolute;
+
         z-index: 5;
+
         width: 100%;
+
         font-size: 24px;
+
         text-align: center;
+
         color: #fff;
+
         top: 50%;
+
         left: 0;
+
         margin-top: 0;
+
         opacity: 0;
+
         transform: translateY(-100%);
+
         transition: all 0.35s;
+
     }
+
+
 
     .portfolio-item .portfolio-title {
+
         display: block;
+
         font-size: 18px;
+
         font-weight: 600;
+
         margin-top: 12px;
+
         margin-bottom: 0;
+
     }
+
+
 
     .portfolio-item:hover > .thumbnail > .portfolio-title {
+
         opacity: 1;
+
         transform: translateY(-50%);
+
     }*/
   /*.grid {
+
         float: left;
+
         display: inline;
+
         .grid-item {
+
           //  position: absolute;
+
             left: 0;
+
             top: 0;
+
             float: left;
+
             margin-bottom: 2.5%;
+
             width: 31.66667%;
 
+
+
             .portfolio-item {
+
                 display: block;
 
+
+
                 .thumbnail {
+
                     position: relative;
+
                     width: 100%;
+
                     overflow: hidden;
+
                 }
+
             }
+
         }
+
     }
+
+
 
     .isotope-grid {
+
         overflow: hidden;
+
     }
 
+
+
     .grid .gutter-sizer {
+
         width: 2.5%;
+
     }*/
   /*.grid {
+
         position: relative;
+
         height: 50em;
+
     }
+
+
 
     .isotope-grid {
+
         overflow: hidden;
+
     }
 
+
+
     .grid .gutter-sizer {
+
         width: 2.5%;
+
     }
+
+
 
     .col-3 {
+
         .grid-item {
+
             position: absolute;
+
             left: 0;
+
             top: 0;
+
             float: left;
+
             margin-bottom: 2.5%;
+
             width: 31.66667%;
 
+
+
             .portfolio-item {
+
                 display: block;
 
+
+
                 .thumbnail {
+
                     position: relative;
+
                     width: 100%;
+
                     overflow: hidden;
+
+
 
                     img {
+
                         display: block;
+
                         vertical-align: bottom;
+
                         width: 100%;
+
                         backface-visibility: hidden;
+
                         transform: scale(1);
+
                         transition: all 0.6s;
+
                     }
+
+
 
                     .portfolio-title {
+
                         display: block;
+
                         position: absolute;
+
                         z-index: 5;
+
                         width: 100%;
+
                         font-size: 24px;
+
                         text-align: center;
+
                         color: #fff;
+
                         top: 50%;
+
                         left: 0;
+
                         margin-top: 0;
+
                         opacity: 0;
+
                         transform: translateY(-100%);
+
                         transition: all 0.35s;
+
                     }
+
+
 
                     &:before {
+
                         position: absolute;
+
                         display: block;
+
                         z-index: 2;
+
                         content: "";
+
                         width: 100%;
+
                         height: 100%;
+
                         top: 0;
+
                         left: 0;
+
                         background-color: rgba(40,149,241,0);
+
                         border: 6px solid #1bdb68;
+
                         opacity: 0;
+
                         transition: all 0.35s;
+
                     }
+
                 }
 
+
+
                 .waves-effect {
+
                     position: relative;
+
                     cursor: pointer;
+
                     display: inline-block;
+
                     overflow: hidden;
+
                     user-select: none;
+
                     -webkit-tap-highlight-color: transparent;
+
                     transition: all 0.3s ease-out;
+
                 }
+
             }
+
         }
+
     }*/
 }
 section.portfolio h2 {
@@ -2077,8 +2270,11 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     flex-basis: 31%;
   }
   /*.grid.isotope-grid.col-3 .grid-sizer,
+
     .grid.isotope-grid.col-3 .grid-item {
+
         width: 48.75%;
+
     }*/
   /*--------------------------------------------------------цены*/
   .solution-item {
@@ -2308,9 +2504,13 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     flex-basis: 46%;
   }
   /*.grid.isotope-grid.col-3 .grid-sizer,
+
     .grid.isotope-grid.col-3 .grid-item {
+
         float: none;
+
         width: 100%;
+
         margin-bottom: 30px;*/
   /*---------------------------------------------------------Блог*/
   .post__item {

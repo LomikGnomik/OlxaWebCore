@@ -38,13 +38,17 @@ namespace OlxaWebCore.Controllers
               }
           );
 
-        public ViewResult WebSite()
+        public ViewResult WebSite(int Id)
         {
-            return View();
+            return View(repository.Portfolios.FirstOrDefault(p=>p.PortfolioID==Id));
         }
 
         //ADMIN
 
+        public ViewResult AllPortfolioAdmin()
+        {
+            return View("~/Views/Admin/PortfolioList.cshtml", repository.Portfolios);
+        }
         // Создание 
         public ViewResult CreatePortfolio() => View("EditPortfolio", new Portfolio());
 

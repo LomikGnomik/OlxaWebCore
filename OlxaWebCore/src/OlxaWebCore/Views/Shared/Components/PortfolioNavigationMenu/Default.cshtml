@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+
+
+
+
+
+<div class="filter">
+    <ul class="nav-filters">
+        <li class="active"><a href="#" data-filter="*">Все сразу</a></li>
+
+        @foreach (var item in Model)
+        {
+            <li><a href="#" data-filter=".@item">@item</a></li>
+        }
+        
+        @*<li><a href="#" data-filter=".identity">Иднтити</a></li>
+        <li><a href="#" data-filter=".test">test</a></li>*@
+    </ul>
+</div>

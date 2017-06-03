@@ -1,24 +1,12 @@
 @model PortfolioListViewModel
 
 
-@foreach (var p in @Model.Portfolios)
-{
-
-    @p.Title
-}
 <div class="container">
     <section class="portfolio">
         <h2>Сайты разработанные в OlxaWeb</h2>
         <small>Тут еще что-то длинное,что б красиво смотрелось</small>
 
-        <div class="filter">
-            <ul class="nav-filters">
-                <li class="active"><a href="#" data-filter="*">Все сразу</a></li>
-                <li><a href="#" data-filter=".apps">Апс</a></li>
-                <li><a href="#" data-filter=".identity">Иднтити</a></li>
-                <li><a href="#" data-filter=".test">test</a></li>
-            </ul>
-        </div>
+        @await Component.InvokeAsync("PortfolioNavigationMenu")
 
         <!-- Portfolio Grid -->
         <div class="grid isotope-grid col-3 filter-grid">
@@ -26,67 +14,69 @@
                 <div class="grid-sizer"></div>
                 <div class="gutter-sizer"></div>
 
-                <div class="gallery__item medium-half large-third grid-item apps">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="http://topfonpack.ru/uploads/images/k/r/a/krasivie_vidi_prirodi_foto_visokogo_razreshenija_5.jpg" />
-                            <h3 class="gallery__title">Ого!</h3>
-                        </div>
-                    </a>
-                </div>
+                @foreach (var site in @Model.Portfolios)
+                {
+                    <div class="gallery__item medium-half large-third grid-item @site.Category">
+                        <a asp-controller="Portfolio" asp-action="WebSite" asp-route-Id="@site.PortfolioID" class="gallery__item-link">
+                            <div class="thumbnail">
+                                <img src="http://topfonpack.ru/uploads/images/k/r/a/krasivie_vidi_prirodi_foto_visokogo_razreshenija_5.jpg" />
+                                <h3 class="gallery__title">@site.Title</h3>
+                            </div>
+                        </a>
+                    </div>
+                }
+                @*<div class="gallery__item medium-half large-third grid-item identity">
+                        <a href="#" class="gallery__item-link">
+                            <div class="thumbnail">
+                                <img src="http://picview.info/download/20151015/lake-landscape-mountains-trees-fir-trees-summer-purity-2880x1800.jpg" />
+                                <h3 class="gallery__title">Ого!</h3>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="gallery__item medium-half large-third grid-item identity">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="http://picview.info/download/20151015/lake-landscape-mountains-trees-fir-trees-summer-purity-2880x1800.jpg" />
-                            <h3 class="gallery__title">Ого!</h3>
-                        </div>
-                    </a>
-                </div>
+                    <div class="gallery__item medium-half large-third apps">
+                        <a href="#" class="gallery__item-link">
+                            <div class="thumbnail">
+                                <img src="https://million-wallpapers.ru/wallpapers/0/81/432562707692533.png" />
+                                <h3 class="gallery__title">Ого!</h3>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="gallery__item medium-half large-third apps">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="https://million-wallpapers.ru/wallpapers/0/81/432562707692533.png" />
-                            <h3 class="gallery__title">Ого!</h3>
-                        </div>
-                    </a>
-                </div>
+                    <div class="gallery__item medium-half large-third identity">
+                        <a href="#" class="gallery__item-link">
+                            <div class="thumbnail">
+                                <img src="http://fishinpanama.com/wp-content/uploads/2017/03/Beautful-nature-waterfall-and-sun-light.jpg" />
+                                <h3 class="gallery__title">Ого!</h3>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="gallery__item medium-half large-third identity">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="http://fishinpanama.com/wp-content/uploads/2017/03/Beautful-nature-waterfall-and-sun-light.jpg" />
-                            <h3 class="gallery__title">Ого!</h3>
-                        </div>
-                    </a>
-                </div>
+                    <div class="gallery__item medium-half large-third identity">
+                        <a href="#" class="gallery__item-link">
+                            <div class="thumbnail">
+                                <img src="https://avatanplus.com/files/resources/original/587638be33f7d1598dcda705.jpg" />
+                                <h3 class="gallery__title">Ого!</h3>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="gallery__item medium-half large-third identity">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="https://avatanplus.com/files/resources/original/587638be33f7d1598dcda705.jpg" />
-                            <h3 class="gallery__title">Ого!</h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery__item medium-half large-third apps">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="http://i.wildlife2017.ru/u/11/cf3bb0992a11e6be0fc65b9173989e/-/2fons.ru-36296.jpg" />
-                            <h3 class="gallery__title">Ого!</h3>
-                        </div>
-                    </a>
-                </div>
+                    <div class="gallery__item medium-half large-third apps">
+                        <a href="#" class="gallery__item-link">
+                            <div class="thumbnail">
+                                <img src="http://i.wildlife2017.ru/u/11/cf3bb0992a11e6be0fc65b9173989e/-/2fons.ru-36296.jpg" />
+                                <h3 class="gallery__title">Ого!</h3>
+                            </div>
+                        </a>
+                    </div>*@
 
             </div>
             <!--</div>-->
         </div><!-- .isotope-masonry-grid -->
         <!-- Load More Button -->
-        <div class="text-center padding-top">
-            <a href="#" class="btn btn-default btn-ghost waves-effect">Load More</a>
-        </div>
+        @*<div class="text-center padding-top">
+                <a href="#" class="btn btn-default btn-ghost waves-effect">Load More</a>
+            </div>*@
 
 
     </section> <!--portfolio-->

@@ -4,7 +4,25 @@
     Layout = "_LayoutAdmin";
 }
 
-@foreach (var site in Model)
-{
+<div class="container">
+    <h3>Список всех сайтов</h3>
 
-}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Категория</th>
+        </tr>
+        @foreach (var site in @Model)
+        {
+            <tr>
+                <td>@site.PortfolioID</td>
+                <td>@site.Title</td>
+                <td>@site.Category</td>
+                <td><a asp-controller="Blog" asp-action="EditPost" asp-route-postID="@site.PortfolioID">Редактировать</a></td>
+                <td><a asp-controller="Blog" asp-action="DeletePost" asp-route-postID="@site.PortfolioID">Удалить</a></td>
+            </tr>
+        }
+
+    </table>
+</div>
