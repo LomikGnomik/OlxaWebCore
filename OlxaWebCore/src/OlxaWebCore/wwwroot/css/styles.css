@@ -2572,6 +2572,9 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   width: 90%;
   max-width: 81.25em;
 }
+.container-admin .content {
+  color: #333333;
+}
 i.logo {
   margin: 0.4em 0 0 2em;
   font-size: 3em;
