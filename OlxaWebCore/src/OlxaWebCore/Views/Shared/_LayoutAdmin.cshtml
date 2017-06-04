@@ -20,9 +20,9 @@
 <body>
     <div class="wrapper-admin">
         <div class="wrap-header">
+            <i class="fa fa-sun-o logo" aria-hidden="true"></i>
             <div class="container-admin">
                 <header class="header-admin" role="banner">
-                    <i class="fa fa-sun-o" aria-hidden="true"></i>
                     <h1>Админ Панель</h1>
                     <ul>
                         <li><a href="#">Посмотреть</a></li>
@@ -30,19 +30,24 @@
                 </header>
             </div>
         </div> @*wrap-header*@
-        <div class="wrap-nav">
+
+        <div class="wrap-content">
+
+            <nav class="navigation-admin" role="navigation">
+                <ul class="admim-nav">
+                    <li><a asp-controller="Blog" asp-action="AllPostsAdmin">Блог</a></li>
+                    <li><a asp-controller="Portfolio" asp-action="AllPortfolioAdmin">Портфолио</a></li>
+                    <li><a href="#">Элемент</a></li>
+                    <li><a href="#">Элемент</a></li>
+                </ul>
+            </nav>
+
             <div class="container-admin">
-                <nav class="navigation-admin" role="navigation">
-                    <ul class="admim-nav">
-                        <li><a asp-controller="Blog" asp-action="AllPostsAdmin">Блог</a></li>
-                        <li><a asp-controller="Portfolio" asp-action="AllPortfolioAdmin">Портфолио</a></li>
-                        <li><a href="#">Элемент</a></li>
-                        <li><a href="#">Элемент</a></li>
-                    </ul>
-                </nav>
-            </div>
-            @RenderBody()
-        </div> @*wrap-nav*@
+                <section class="content">
+                    @RenderBody()
+                </section>
+            </div> @*container-admin*@
+        </div> @*wrap-content*@
 
     </div> @*wrapper-admin*@
 

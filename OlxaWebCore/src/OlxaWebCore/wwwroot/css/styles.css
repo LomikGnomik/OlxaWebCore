@@ -516,12 +516,28 @@ footer .bottom-footer .footer-info .info-item ul a:hover {
   color: #ecf0f1;
 }
 /*footer*/
-/*-----------------------------------------------------------------------promo-site-----------сайт визитка*/
+/*---------------------------------------------------промо--------------promo-site-----------сайт визитка*/
 section.content {
   margin: 2em 0;
 }
 section.content h2 {
   margin-bottom: 1em;
+}
+section.content p {
+  text-indent: 2em;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+  text-align: justify;
+}
+section.content p::first-letter {
+  font-weight: 900;
+  color: #0094ff;
+  font-size: 1.25em;
+  letter-spacing: 0.1em;
+}
+section.content p span {
+  color: #0094ff;
+  font-weight: 900;
 }
 section.promo-site-slider .slider {
   margin: 0 auto;
@@ -2546,20 +2562,26 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 /*------------------------------------------------АДМИНКА--------------------------------------*/
 /*------------------------------------------Layout Admin*/
 .wrap-header {
+  display: flex;
+  align-items: baseline;
   background: #333333;
-  padding: 1em;
 }
 .container-admin {
   margin-right: 2em;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 81.25em;
+}
+i.logo {
+  margin: 0.4em 0 0 2em;
+  font-size: 3em;
+  color: #00e43c;
 }
 .header-admin {
   display: flex;
   align-items: baseline;
   color: #fff;
   z-index: 1000;
-}
-.header-admin i {
-  margin-right: 1em;
 }
 .header-admin h1 {
   font-size: 1.5;
@@ -2569,25 +2591,33 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 }
 .header-admin ul a {
   color: #fff;
+  border-bottom: 1px dotted;
+  transition: all 0.5s ease-in-out;
 }
-.wrap-nav {
+.header-admin ul a:hover {
+  color: #00e43c;
+  border-bottom: 1px solid;
+}
+.wrap-content {
   display: flex;
-  background: #333333;
   color: #fff;
-  height: 100vh;
 }
 .navigation-admin {
   display: flex;
   flex-direction: column;
+  background: #333333;
   width: 15em;
-  margin-right: auto;
+  padding-right: 3em;
+  padding-left: 1em;
   z-index: 950;
+  height: 100vh;
 }
 .navigation-admin ul {
   padding-top: 2em;
 }
 .navigation-admin ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.89);
+  cursor: pointer;
 }
 .navigation-admin ul li:hover {
   background: #999999;
