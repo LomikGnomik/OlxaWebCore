@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Portfolio>
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<a asp-action="CreatePortfolio" asp-controller="Portfolio">Добавить сайт в портфолио</a>
+<div class="container">
+    <h3>Список всех сайтов</h3>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Категория</th>
+        </tr>
+        @foreach (var site in @Model)
+        {
+            <tr>
+                <td>@site.PortfolioID</td>
+                <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID" >@site.Title</a></td>
+                <td>@site.Category</td>
+                <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID">Редактировать</a></td>
+                <td><a asp-controller="Portfolio" asp-action="DeletePortfolio" asp-route-portfolioID="@site.PortfolioID">Удалить</a></td>
+            </tr>
+        }
+    </table>
+</div>

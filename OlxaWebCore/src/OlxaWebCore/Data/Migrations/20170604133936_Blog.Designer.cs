@@ -8,9 +8,10 @@ using OlxaWebCore.Data;
 namespace OlxaWebCore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170604133936_Blog")]
+    partial class Blog
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -177,23 +178,11 @@ namespace OlxaWebCore.Data.Migrations
                     b.Property<int>("OrderID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<bool>("AddCRM");
-
-                    b.Property<string>("Comment");
-
-                    b.Property<DateTime>("DateOrder");
-
                     b.Property<string>("Email");
-
-                    b.Property<string>("File");
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Note");
-
                     b.Property<string>("Tel");
-
-                    b.Property<string>("UrlOrder");
 
                     b.HasKey("OrderID");
 
@@ -208,20 +197,6 @@ namespace OlxaWebCore.Data.Migrations
                     b.Property<string>("Category");
 
                     b.Property<string>("Description");
-
-                    b.Property<string>("DevelopmentTime");
-
-                    b.Property<string>("Image");
-
-                    b.Property<string>("Link");
-
-                    b.Property<string>("Meta");
-
-                    b.Property<decimal>("Price");
-
-                    b.Property<bool>("Published");
-
-                    b.Property<string>("Review");
 
                     b.Property<string>("Title");
 

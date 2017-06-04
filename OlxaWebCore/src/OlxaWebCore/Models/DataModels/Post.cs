@@ -15,25 +15,25 @@ namespace OlxaWebCore.Models.DataModels
         { get; set; }
 
 
-        //[Display(Name = "Короткое описание")]
-        //public virtual string ShortDescription
-        //{ get; set; }
+        [Display(Name = "Короткое описание")]
+        public virtual string ShortDescription
+        { get; set; }
 
-        //[Display(Name = "Описание")]
-        //public virtual string Description
-        //{ get; set; }
+        [Display(Name = "Описание")]
+        public virtual string Description
+        { get; set; }
 
-        //[Display(Name = "Мета")]
-        //public virtual string Meta
-        //{ get; set; }
+        [Display(Name = "Мета")]
+        public virtual string Meta
+        { get; set; }
 
         //[Display(Name = "")]
         //public virtual string UrlSlug
         //{ get; set; }
 
-        //[Display(Name = "Опубликованно?")]
-        //public virtual bool Published
-        //{ get; set; }
+        [Display(Name = "Опубликованно?")]
+        public virtual bool Published
+        { get; set; }
 
         [Display(Name = "Категория")]
         public virtual string Category

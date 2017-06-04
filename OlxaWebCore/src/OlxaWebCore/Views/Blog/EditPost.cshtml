@@ -2,17 +2,34 @@
 
 @{
     ViewData["Title"] = "EditPost";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "_LayoutAdmin";
 }
 
-<h2>EditPost</h2>
+
+
 
 <form asp-action="EditPost">
-    <input type="hidden" asp-for="PostID" />
-    <input type="text" asp-for="Title"  >
-    <input type="text" asp-for="Category">
- 
 
+    <input type="hidden" asp-for="PostID" />
+
+    <label asp-for="Title" ></label>
+    <input type="text" asp-for="Title"  >
+
+    <label asp-for="Category"></label>
+    <input type="text" asp-for="Category">
+
+    <label asp-for="ShortDescription"></label>
+    <input type="text" asp-for="ShortDescription">
+
+    <label asp-for="Description"></label>
+    <input type="text" asp-for="Description">
+    
+    <label asp-for="Meta"></label>
+    <input type="text" asp-for="Meta">
+
+    <label asp-for="Published"></label>
+    <input type="checkbox" asp-for="Published">
+ 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Save" class="btn btn-default" />
@@ -21,31 +38,11 @@
 </form>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="Blog" asp-action="AllPostsAdmin">Вернуться</a>
 </div>
 
-@section Scripts {
+@*@section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+}*@
 
 
-
-
-@*<div class="form-horizontal">
-    <h4>Post</h4>
-    <hr />
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <input type="hidden" asp-for="PostID" />
-    <div class="form-group">
-        <label asp-for="Title" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="Title" class="form-control" />
-            <span asp-validation-for="Title" class="text-danger" />
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
-        </div>
-    </div>
-</div>*@

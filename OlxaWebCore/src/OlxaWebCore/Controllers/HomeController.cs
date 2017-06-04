@@ -41,12 +41,5 @@ namespace OlxaWebCore.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> SendMessage() //отправка заказа нам на почту
-        {
-            EmailService emailService = new EmailService();
-            await emailService.SendEmailAsync("somemail@mail.ru", "Тема письма", "Тест письма: тест!");
-            return RedirectToAction("Index");
-        }
-
     }
 }

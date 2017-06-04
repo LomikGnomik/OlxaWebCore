@@ -8,9 +8,10 @@ using OlxaWebCore.Data;
 namespace OlxaWebCore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170604214333_DateOrder")]
+    partial class DateOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -180,8 +181,6 @@ namespace OlxaWebCore.Data.Migrations
                     b.Property<bool>("AddCRM");
 
                     b.Property<string>("Comment");
-
-                    b.Property<DateTime>("DateOrder");
 
                     b.Property<string>("Email");
 

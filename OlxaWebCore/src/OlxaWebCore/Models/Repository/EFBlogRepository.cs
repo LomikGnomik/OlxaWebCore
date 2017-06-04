@@ -31,14 +31,13 @@ namespace OlxaWebCore.Models.Repository
                     .FirstOrDefault(p=>p.PostID==post.PostID);
                 if (dbEntry != null)
                 {
-
                     dbEntry.Title = post.Title;
-                  //  dbEntry.ShortDescription = post.ShortDescription;
-                  //  dbEntry.Description = post.Description;
-                  //  dbEntry.Meta = post.Meta;
+                    dbEntry.ShortDescription = post.ShortDescription;
+                    dbEntry.Description = post.Description;
+                    dbEntry.Meta = post.Meta;
                   //  dbEntry.UrlSlug = post.UrlSlug;
-                  //  dbEntry.Published = post.Published;
-                  //  dbEntry.PostedOn = post.PostedOn;
+                    dbEntry.Published = post.Published;
+                 //   dbEntry.PostedOn = post.PostedOn;
                   //  dbEntry.Modified = post.Modified;
                     dbEntry.Category = post.Category;
                   //  dbEntry.Tags = post.Tags;

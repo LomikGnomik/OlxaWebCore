@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using OlxaWebCore.Models.Interfaces;
 using OlxaWebCore.Models.ViewModels;
 using OlxaWebCore.Models.DataModels;
+using System.Collections;
 
 namespace OlxaWebCore.Controllers
 {
@@ -45,9 +46,9 @@ namespace OlxaWebCore.Controllers
 
         //ADMIN
 
-        public ViewResult AllPortfolioAdmin()
+        public ViewResult AllAdmin()
         {
-            return View("~/Views/Admin/PortfolioList.cshtml", repository.Portfolios);
+            return View(repository.Portfolios);
         }
         // Создание 
         public ViewResult CreatePortfolio() => View("EditPortfolio", new Portfolio());
@@ -62,11 +63,12 @@ namespace OlxaWebCore.Controllers
         [HttpPost]
         public IActionResult EditPortfolio(Portfolio portfolio)
         {
+           
             if (ModelState.IsValid)
             {
                 repository.SavePortfolio(portfolio);
                 //  TempData["message"] = $"{post.Title} has been saved";
-                return RedirectToAction("All");
+                return RedirectToAction("AllAdmin");
             }
             else
             {

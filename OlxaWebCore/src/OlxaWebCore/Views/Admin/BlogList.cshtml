@@ -4,7 +4,7 @@
     Layout = "_LayoutAdmin";
 }
 
-
+<a asp-controller="Blog" asp-action="CreatePost">Создать пост</a>
 
 <div class="container">
     <h3>Список всех постов</h3>
@@ -25,7 +25,6 @@
                 <td><a asp-controller="Blog" asp-action="DeletePost" asp-route-postID="@post.PostID">Удалить</a></td>
             </tr>
         }
-
     </table>
 </div>
  

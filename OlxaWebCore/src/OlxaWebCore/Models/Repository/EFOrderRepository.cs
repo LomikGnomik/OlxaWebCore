@@ -18,17 +18,45 @@ namespace OlxaWebCore.Models.Repository
         }
 
         public IEnumerable<Order> Orders => context.Orders;
-        //.Include(o => o.Lines)
-        // .ThenInclude(l => l.Product);
 
+
+        // Save order
         public void SaveOrder(Order order)
         {
-            //context.AttachRange(order.Lines.Select(l => l.Product));
-            //if (order.OrderID == 0)
-            //{
-            //    context.Orders.Add(order);
-            //}
-            //context.SaveChanges();
+            if (order.OrderID == 0)
+            {
+                context.Orders.Add(order);
+            }
+            else
+            {
+                Order dbEntry = context.Orders
+                    .FirstOrDefault(p => p.OrderID == order.OrderID);
+                if (dbEntry != null)
+                {
+                    dbEntry.Comment = order.Comment;
+                    dbEntry.Email = order.Email;
+                    dbEntry.File = order.File;
+                    dbEntry.Tel = order.Tel;
+                    dbEntry.Name = order.Name;
+                    dbEntry.UrlOrder = order.UrlOrder;
+                    dbEntry.Note = order.Note;
+                    dbEntry.AddCRM = order.AddCRM;
+
+                }
+            }
+            context.SaveChanges();
+        }
+        // Delete order
+        public Order DeleteOrder(int orderID)
+        {
+            Order dbEntry = context.Orders
+                    .FirstOrDefault(p => p.OrderID == orderID);
+            if (dbEntry != null)
+            {
+                context.Orders.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
         }
     }
 }

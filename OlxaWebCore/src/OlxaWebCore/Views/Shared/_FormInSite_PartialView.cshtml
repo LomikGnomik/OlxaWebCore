@@ -10,10 +10,10 @@
             Скачать бриф на разработку сайта <br/> и заполнить самостоятельно
         </p>
     </div>
-    <form method="post" action="" role="form">
-        <input type="text" placeholder="Ваше имя" />
-        @*<input type="text" placeholder="Телефон" />*@
-        <input type="email" placeholder="Email" />
+    <form method="post" asp-action="NewOrder" asp-controller="Order" role="form">
+        <input type="text" name="name" placeholder="Ваше имя" />
+        @*<input type="text" name="tel" placeholder="Телефон" />*@
+        <input type="email" name="email" placeholder="Email" />
         <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
         <p class="left">
             Если у вас есть готовый бриф или ТЗ можете приложить их к письму
@@ -33,11 +33,8 @@
                                 <input type="file" name="attachment-file" value="1" id="custom-file-upload" />
                             </label>
                             </div>*@
-
-
             <button type="submit" class="btn btn-long btn-ghost-more">Отправить!</button>
         </div>
-
     </form>
 </div>
 </div>

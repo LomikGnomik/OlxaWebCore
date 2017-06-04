@@ -74,7 +74,7 @@ namespace OlxaWebCore.Controllers
             {
                 repository.SavePost(post);
               //  TempData["message"] = $"{post.Title} has been saved";
-                return RedirectToAction("AllPosts");
+                return RedirectToAction("AllPostsAdmin");
             }else
             {
                 // что-то не так со значениями данных 
@@ -83,7 +83,7 @@ namespace OlxaWebCore.Controllers
         }
 
         // удаление
-        [HttpPost]
+     //   [HttpPost]
         public IActionResult DeletePost(int postID)
         {
             Post deletedPost = repository.DeletePost(postID);
@@ -91,7 +91,7 @@ namespace OlxaWebCore.Controllers
             {
               //  TempData["message"] = $"{deletedPost.Title} was deleted";
             }
-            return RedirectToAction("AllPosts");
+            return RedirectToAction("AllPostsAdmin");
         }
     }
 }

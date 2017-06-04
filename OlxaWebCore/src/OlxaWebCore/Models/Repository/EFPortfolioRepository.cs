@@ -14,7 +14,7 @@ namespace OlxaWebCore.Models.Repository
 
         public EFPortfolioRepository(ApplicationDbContext ctx)
         {
-           context = ctx;
+            context = ctx;
         }
         public IEnumerable<Portfolio> Portfolios => context.Portfolios;
 
@@ -31,17 +31,16 @@ namespace OlxaWebCore.Models.Repository
                     .FirstOrDefault(p => p.PortfolioID == portfolio.PortfolioID);
                 if (dbEntry != null)
                 {
-
                     dbEntry.Title = portfolio.Title;
-                    //  dbEntry.ShortDescription = post.ShortDescription;
-                      dbEntry.Description = portfolio.Description;
-                    //  dbEntry.Meta = post.Meta;
-                    //  dbEntry.UrlSlug = post.UrlSlug;
-                    //  dbEntry.Published = post.Published;
-                    //  dbEntry.PostedOn = post.PostedOn;
-                    //  dbEntry.Modified = post.Modified;
+                    dbEntry.Description = portfolio.Description;
+                    dbEntry.Meta = portfolio.Meta;
+                    dbEntry.DevelopmentTime = portfolio.DevelopmentTime;
+                    dbEntry.Image = portfolio.Image;
+                    dbEntry.Link = portfolio.Link;
+                    dbEntry.Review = portfolio.Review;
+                    dbEntry.Price = portfolio.Price;
+                    dbEntry.Published = portfolio.Published;
                     dbEntry.Category = portfolio.Category;
-                    //  dbEntry.Tags = post.Tags;
                 }
             }
             context.SaveChanges();
