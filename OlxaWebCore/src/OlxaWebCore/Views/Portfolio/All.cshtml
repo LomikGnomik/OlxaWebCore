@@ -1,9 +1,12 @@
 @model PortfolioListViewModel
+@{
+ViewBag.Zagolovok="Сайты разработанные в OlxaWeb";
 
+}
 
 <div class="container">
     <section class="portfolio">
-        <h2>Сайты разработанные в OlxaWeb</h2>
+        <h2>@ViewBag.Zagolovok</h2>
         <small>Тут еще что-то длинное,что б красиво смотрелось</small>
 
         @await Component.InvokeAsync("PortfolioNavigationMenu")
@@ -17,7 +20,7 @@
                 @foreach (var site in @Model.Portfolios)
                 {
                     <div class="gallery__item medium-half large-third grid-item @site.Category">
-                        <a asp-controller="Portfolio" asp-action="WebSite" asp-route-Id="@site.PortfolioID" class="gallery__item-link">
+                        <a asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID" class="gallery__item-link">
                             <div class="thumbnail">
                                 <img src="http://topfonpack.ru/uploads/images/k/r/a/krasivie_vidi_prirodi_foto_visokogo_razreshenija_5.jpg" />
                                 <h3 class="gallery__title">@site.Title</h3>

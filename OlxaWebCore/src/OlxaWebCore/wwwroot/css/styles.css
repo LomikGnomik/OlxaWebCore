@@ -8,7 +8,6 @@
 /*большой вертикальный отступ*/
 /*отступы между секциями*/
 /*ЦВЕТА*/
-/*основной цвет*/
 /*дополнительный цвет*/
 /*цвет успеха*/
 /*цвет неудачи*/
@@ -158,13 +157,13 @@ textarea {
   background: #ecf0f1;
 }
 .btn-primary {
-  background: #0094ff;
+  background: #000000;
   color: #fff;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
-  background: #0087cc;
+  background: #000000;
 }
 .btn-icon-right {
   padding-right: 1.31em;
@@ -185,11 +184,11 @@ textarea {
 }
 .btn-ghost {
   background-color: transparent;
-  border-color: #0094ff;
-  color: #0094ff;
+  border-color: #000000;
+  color: #000000;
 }
 .btn-ghost:hover {
-  background: #0094ff;
+  background: #000000;
   color: #fff;
 }
 .btn-ghost-more {
@@ -251,7 +250,7 @@ textarea {
 }
 .wrapper .navigation nav .main-menu li:hover > a {
   /*при выделении подменю сохраняется стиль*/
-  background-color: #0094ff;
+  background-color: #000000;
   color: #ecf0f1;
 }
 .wrapper .navigation nav .main-menu .main-menu__item {
@@ -268,7 +267,7 @@ textarea {
   color: #333333;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a.active {
-  background-color: #0094ff;
+  background-color: #000000;
   color: #ecf0f1;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a.active::after {
@@ -279,7 +278,7 @@ textarea {
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #0094ff;
+  border-top: 6px solid #000000;
   left: 50%;
   bottom: -6px;
   margin-left: -6px;
@@ -294,7 +293,7 @@ textarea {
   transition: all 0.3s;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a.link:hover {
-  background-color: #0094ff;
+  background-color: #000000;
   color: #ecf0f1;
 }
 .wrapper .navigation nav .submenu {
@@ -304,7 +303,7 @@ textarea {
   padding-left: 0;
   padding: 1em 0;
   list-style: none;
-  background-color: #0094ff;
+  background-color: #000000;
   color: #ecf0f1;
   position: absolute;
   top: 100%;
@@ -341,7 +340,7 @@ textarea {
   display: inline-block;
   position: relative;
   padding: 0.5em 2.25em 0.5em 0.875em;
-  background-color: #0094ff;
+  background-color: #000000;
   overflow: hidden;
 }
 .wrapper .inner .title::before {
@@ -382,22 +381,22 @@ textarea {
   transition: all 0.25s;
   font-size: 0.8em;
   font-weight: 600;
-  color: #e5f4ff;
+  color: #737373;
 }
 .wrapper .inner .breadcrumbs a:hover {
-  color: #0094ff;
-  border-color: #0094ff;
+  color: #000000;
+  border-color: #000000;
 }
 .wrapper .inner .breadcrumbs span {
   font-size: 0.8em;
   font-weight: 600;
-  color: #0094ff;
+  color: #000000;
 }
 .wrapper .inner .breadcrumbs .delimiter {
   /* стрелка переход*/
   font-weight: 100;
   font-size: 0.8em;
-  color: #e5f4ff;
+  color: #737373;
 }
 .wrapper .inner .breadcrumbs > * {
   display: inline-block;
@@ -454,7 +453,7 @@ footer .top-footer .tools form button {
   right: 0;
   width: 3em;
   height: 100%;
-  background: #0094ff;
+  background: #000000;
   cursor: pointer;
   border: none;
 }
@@ -531,12 +530,12 @@ section.content p {
 }
 section.content p::first-letter {
   font-weight: 900;
-  color: #0094ff;
+  color: #000000;
   font-size: 1.25em;
   letter-spacing: 0.1em;
 }
 section.content p span {
-  color: #0094ff;
+  color: #000000;
   font-weight: 900;
 }
 section.promo-site-slider .slider {
@@ -576,7 +575,7 @@ section.promo-site-slider a.slide_btn {
 }
 section.promo-site-slider .slide_btn.active,
 section.promo-site-slider .slide_btn:hover {
-  color: #0094ff;
+  color: #000000;
   cursor: pointer;
 }
 section.promo-site-slider .directional_nav {
@@ -671,7 +670,7 @@ section.tariff .promo-wrapper ul li:last-child {
   display: inline-block;
   vertical-align: middle;
   font-size: 0.687em;
-  color: #0094ff;
+  color: #000000;
   margin-top: -0.312em;
   margin-right: 0.05em;
 }
@@ -717,7 +716,7 @@ section.tariff .promo-wrapper ul li:last-child {
   display: inline-block;
   font-size: 0.8em;
   font-weight: normal;
-  border-bottom: 1px dashed #0094ff;
+  border-bottom: 1px dashed #000000;
 }
 .blog .post .post__item .post-body .post-meta .post-comments {
   border-bottom: none;
@@ -730,7 +729,7 @@ section.tariff .promo-wrapper ul li:last-child {
   margin-bottom: 4.5em;
 }
 .blog .post .post__item .post-body .read-more {
-  color: #0094ff;
+  color: #000000;
   text-decoration: dotted;
 }
 .blog .sidebar {
@@ -767,7 +766,7 @@ section.tariff .promo-wrapper ul li:last-child {
   height: 4.31em;
   padding-left: 2.8em;
   margin-bottom: 0;
-  background: #e5f4ff;
+  background: #737373;
   transition: all 0.3s;
   border: none;
 }
@@ -784,7 +783,7 @@ section.tariff .promo-wrapper ul li:last-child {
   background: none;
   border: none;
   font-size: 16px -5;
-  color: #0094ff;
+  color: #000000;
   padding: 0;
   margin-top: -0.5em;
 }
@@ -873,7 +872,7 @@ section.tariff .promo-wrapper ul li:last-child {
   line-height: 1.5em;
   text-decoration: none;
   padding: 0 0.8em;
-  background-color: #0094ff;
+  background-color: #000000;
   margin: 0.312em 0.5em 0.312em 0;
   white-space: nowrap;
   transition: background-color 0.3s;
@@ -887,7 +886,7 @@ section.tariff .promo-wrapper ul li:last-child {
   top: 0;
   right: -0.5em;
   border-top: 0.75em solid transparent;
-  border-left: 0.5em solid #0094ff;
+  border-left: 0.5em solid #000000;
   border-bottom: 0.75em solid transparent;
   transition: border-color 0.3s;
 }
@@ -905,7 +904,7 @@ section.tariff .promo-wrapper ul li:last-child {
 .pagination .nav-links .current {
   cursor: default;
   color: #fff;
-  background: #0094ff;
+  background: #000000;
 }
 /*-------------------------------------------------------------отдельная страница поста в блоге*/
 .post-inner-body {
@@ -932,7 +931,7 @@ section.tariff .promo-wrapper ul li:last-child {
   display: inline-block;
   font-size: 0.8em;
   font-weight: normal;
-  border-bottom: 1px dashed #0094ff;
+  border-bottom: 1px dashed #000000;
 }
 .post-inner-body .post-meta .post-comments {
   border-bottom: none;
@@ -961,7 +960,7 @@ section.tariff .promo-wrapper ul li:last-child {
   line-height: 1.5em;
   text-decoration: none;
   padding: 0 0.8em;
-  background-color: #0094ff;
+  background-color: #000000;
   margin: 0.312em 0.5em 0.312em 0;
   white-space: nowrap;
   transition: background-color 0.3s;
@@ -975,7 +974,7 @@ section.tariff .promo-wrapper ul li:last-child {
   top: 0;
   right: -0.5em;
   border-top: 0.75em solid transparent;
-  border-left: 0.5em solid #0094ff;
+  border-left: 0.5em solid #000000;
   border-bottom: 0.75em solid transparent;
   transition: border-color 0.3s;
 }
@@ -1064,12 +1063,12 @@ section.tariff .promo-wrapper ul li:last-child {
   padding: 1em 0 1em 1.5em;
 }
 .wrapper-shop .shop-description .contains {
-  border: 1px solid #e5f4ff;
+  border: 1px solid #737373;
   width: 50%;
   height: 15em;
 }
 .wrapper-shop .shop-description .extra {
-  background: #e5f4ff;
+  background: #737373;
   position: relative;
   width: 50%;
   height: 15em;
@@ -1080,7 +1079,7 @@ section.tariff .promo-wrapper ul li:last-child {
   left: -12.5em;
   bottom: 0;
   border: 7.5em solid transparent;
-  border-right: 5em solid #e5f4ff;
+  border-right: 5em solid #737373;
 }
 /*---------------------------------------------------------------------------------------Портфолио*/
 section.portfolio {
@@ -1624,14 +1623,14 @@ section.price-solution .solution-row .solution-item:hover {
   box-shadow: 0px 1px 22px -5px #000000;
 }
 section.price-solution .solution-row .solution-item:hover .solution-title h2 {
-  color: #0094ff;
+  color: #000000;
   text-decoration: underline;
 }
 section.price-solution .solution-row .solution-item:hover .solution-title i {
-  color: #0094ff;
+  color: #000000;
 }
 section.price-solution .solution-row .solution-item:hover .btn {
-  background: #0094ff;
+  background: #000000;
   color: #fff;
 }
 section.price-solution .solution-row .solution-item .solution-item-btn {
@@ -1873,7 +1872,7 @@ section.price-solution .solution-row .solution-item-question .btn {
 }
 .modal .modal-footer label {
   width: 100%;
-  background: #0094ff;
+  background: #000000;
   color: #ecf0f1;
 }
 /*-------------------------------------------форма внутри модального окна */
@@ -1902,23 +1901,23 @@ section.price-solution .solution-row .solution-item-question .btn {
   transition: box-shadow 0.1s linear;
 }
 .modal-form .comment .file_upload:hover > button {
-  background: #0094ff;
-  text-shadow: #0094ff 0 -1px 0;
+  background: #000000;
+  text-shadow: #000000 0 -1px 0;
 }
 .modal-form .comment .file_upload:active > button {
-  background: #0094ff;
+  background: #000000;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
 }
 .modal-form .comment .file_upload button {
   float: right;
   width: 8em;
   height: 100%;
-  background: #0094ff;
+  background: #000000;
   transition: background 0.2s;
   border: 1px solid #cccccc;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
   color: #fff;
-  text-shadow: #0094ff 0 -1px 0;
+  text-shadow: #000000 0 -1px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -1962,7 +1961,7 @@ section.price-solution .solution-row .solution-item-question .btn {
 /*-------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
   min-height: 100vh;
-  background: #e5f4ff;
+  background: #737373;
   padding-bottom: 4em;
 }
 section.landing-description .description-wrap {

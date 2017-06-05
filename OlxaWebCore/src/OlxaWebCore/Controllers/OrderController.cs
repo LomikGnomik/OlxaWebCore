@@ -36,9 +36,11 @@ namespace OlxaWebCore.Controllers
             Order Order = new Order
             {
                 Name = name,
-                 Email=email,
-                  Comment=comment,
-                   DateOrder=DateTime.Now
+                Email = email,
+                Comment = comment,
+                DateOrder = DateTime.Now,
+             //   UrlOrder = Request.QueryString.Value
+
             };
             repository.SaveOrder(Order);
             // сохранить в базу

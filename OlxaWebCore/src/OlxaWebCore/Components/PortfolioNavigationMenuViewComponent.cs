@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OlxaWebCore.Models.DataModels;
 using OlxaWebCore.Models.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -18,8 +19,10 @@ namespace OlxaWebCore.Components
 
         public IViewComponentResult Invoke()
         {
-        //    ViewBag.SelectedCategory = RouteData.Values["category"]; // без маршрута не работает
+            //    ViewBag.SelectedCategory = RouteData.Values["category"]; // без маршрута не работает
+
             IEnumerable<string> Category = repository.Portfolios
+                .Where(p=>p.Published==true)
                 .Select(x => x.Category)
                 .Distinct()
                 .OrderBy(x => x);

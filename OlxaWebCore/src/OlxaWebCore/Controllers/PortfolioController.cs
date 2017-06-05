@@ -4,13 +4,14 @@ using OlxaWebCore.Models.Interfaces;
 using OlxaWebCore.Models.ViewModels;
 using OlxaWebCore.Models.DataModels;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace OlxaWebCore.Controllers
 {
     public class PortfolioController : Controller
     {
         private IPortfolioRepository repository;
-        public int PageSize = 2;
+        public int PageSize = 100;
 
         public PortfolioController(IPortfolioRepository repo)
         {
@@ -18,30 +19,37 @@ namespace OlxaWebCore.Controllers
         }
 
         public ViewResult All(string category = null, int page = 1)
-          => View(
-              new PortfolioListViewModel
-              {
-                  Portfolios = repository.Portfolios
-              .Where(p => category == null || p.Category == category)
-              .OrderBy(p => p.PortfolioID)
-              .Skip((page - 1) * PageSize)
-              .Take(PageSize),
-                  PagingInfo = new PagingInfo
-                  {
-                      CurrentPage = page,
-                      ItemsPerPage = PageSize,
-                      TotalItems = category == null ?
-                  repository.Portfolios.Count() :
-                  repository.Portfolios.Where(e =>
-                  e.Category == category).Count()
-                  },
-                  CurrentCategory = category
-              }
-          );
-
-        public ViewResult WebSite(int Id)
         {
-            return View(repository.Portfolios.FirstOrDefault(p=>p.PortfolioID==Id));
+            IEnumerable<Portfolio> UserPortfolio = repository.Portfolios
+                    .Where(p => p.Published == true);
+
+          PortfolioListViewModel PortfolioList=  new PortfolioListViewModel
+            {
+                Portfolios = UserPortfolio
+                  .Where(p => category == null || p.Category == category)
+                  .OrderBy(p => p.PortfolioID)
+                  .Skip((page - 1) * PageSize)
+                  .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalItems = category == null ?
+                      repository.Portfolios.Count() :
+                      repository.Portfolios.Where(e =>
+                      e.Category == category).Count()
+                },
+                CurrentCategory = category
+            };
+            return View(PortfolioList);
+        }
+               
+
+     
+
+        public ViewResult WebSite(int PortfolioID)
+        {
+            return View(repository.Portfolios.FirstOrDefault(p=>p.PortfolioID== PortfolioID));
         }
 
         //ADMIN

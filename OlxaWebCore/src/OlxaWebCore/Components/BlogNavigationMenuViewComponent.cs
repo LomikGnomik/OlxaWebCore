@@ -20,6 +20,7 @@ namespace OlxaWebCore.Components
         {
             ViewBag.SelectedCategory =RouteData.Values["category"]; // без маршрута не работает
             IEnumerable < string > Category= repository.Posts
+                .Where(p => p.Published == true)
                 .Select(x => x.Category)
                 .Distinct()
                 .OrderBy(x => x);

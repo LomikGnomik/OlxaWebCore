@@ -39,26 +39,23 @@ namespace OlxaWebCore.Models.DataModels
         public virtual string Category
         { get; set; }
 
-        //[DataType(DataType.Date)]
-        //[Display(Name = "Дата написания поста")]
-        //public virtual DateTime PostedOn
-        //{ get; set; }
+        [DataType(DataType.Date)]
+        [Display(Name = "Дата написания поста")]
+        public virtual DateTime PostedOn
+        { get; set; }
 
         //[DataType(DataType.Date)]
         //[Display(Name = "Пост изменён")]
         //public virtual DateTime? Modified
         //{ get; set; }
 
-        //[Display(Name = "Количество просмотров")]
-        //public virtual int Counter //счётчик просмотров
-        //{ get; set; }
+        [Display(Name = "Количество просмотров")]
+        public virtual int Counter //счётчик просмотров
+        { get; set; }
 
-        //[Display(Name = "Изображение")]
-        //public virtual string Picture
-        //{ get; set; }
-
-        //   public virtual IList<Tag> Tags
-        //  { get; set; }
+        [Display(Name = "Изображение")]
+        public virtual string Picture
+        { get; set; }
 
     }
 }

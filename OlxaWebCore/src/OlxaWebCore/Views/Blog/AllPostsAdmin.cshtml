@@ -1,4 +1,9 @@
-﻿@model IEnumerable<Post>
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Post>
 
 @{
     Layout = "_LayoutAdmin";
@@ -14,17 +19,18 @@
             <th>ID</th>
             <th>Название</th>
             <th>Категория</th>
+            <th>Виден?</th>
         </tr>
         @foreach (var post in @Model)
         {
             <tr>
                 <td>@post.PostID</td>
-                <td>@post.Title</td>
+                <td><a asp-controller="Blog" asp-action="EditPost" asp-route-postID="@post.PostID">@post.Title</a></td>
                 <td>@post.Category</td>
-                <td><a asp-controller="Blog" asp-action="EditPost" asp-route-postID="@post.PostID">Редактировать</a></td>
+                <td>@post.Published</td>
+                
                 <td><a asp-controller="Blog" asp-action="DeletePost" asp-route-postID="@post.PostID">Удалить</a></td>
             </tr>
         }
     </table>
 </div>
- 

@@ -196,9 +196,12 @@ $('.slider').each(function () {
 
 
 /*-----------------------фильтр в портфолио-----------------------------------------*/
-if ($('.filter-grid').length > 0) {
+if ($('.filter-grid').length > 0)
+{
     var $filterGrid = $('.filter-grid');
-    $('.nav-filters').on('click', 'a', function (e) {
+
+    $('.nav-filters').on('click', 'a', function (e)
+    {
         e.preventDefault();
         $('.nav-filters li').removeClass('active');
         $(this).parent().addClass('active');

@@ -12,7 +12,7 @@ namespace OlxaWebCore.Controllers
     public class BlogController : Controller
     {
         private IBlogRepository repository;
-        public int PageSize = 2;
+        public int PageSize = 10;
 
         public BlogController(IBlogRepository repo)
         {
@@ -21,10 +21,13 @@ namespace OlxaWebCore.Controllers
 
         public ViewResult AllPosts(string category = null, int page = 1)
         {
+            IEnumerable<Post> UserPost = repository.Posts
+                .Where(p => p.Published == true);
+
             BlogListViewModel blogList = new BlogListViewModel
             {
-                Posts = repository.Posts
-              .Where(p => category == null || p.Category == category)
+                Posts = UserPost
+              .Where( p => category == null || p.Category == category)
               .OrderBy(p => p.PostID)
               .Skip((page - 1) * PageSize)
               .Take(PageSize),
@@ -42,11 +45,10 @@ namespace OlxaWebCore.Controllers
             return View(blogList);
         }
 
-    
 
-        public ViewResult Post(int Id)
+        public ViewResult Post(int postID)
         {
-            Post post = repository.Posts.FirstOrDefault(p => p.PostID == Id);
+            Post post = repository.Posts.FirstOrDefault(p => p.PostID == postID);
             return View(post);
         }
 
@@ -54,7 +56,7 @@ namespace OlxaWebCore.Controllers
 
         public ViewResult AllPostsAdmin()
         {
-             return View("~/Views/Admin/BlogList.cshtml",repository.Posts);
+             return View(repository.Posts);
         }
 
         // Создание 

@@ -23,6 +23,7 @@ namespace OlxaWebCore.Models.Repository
         {
             if (post.PostID == 0)
             {
+                post.PostedOn = DateTime.Now;
                 context.Posts.Add(post);
             }
             else
@@ -37,7 +38,7 @@ namespace OlxaWebCore.Models.Repository
                     dbEntry.Meta = post.Meta;
                   //  dbEntry.UrlSlug = post.UrlSlug;
                     dbEntry.Published = post.Published;
-                 //   dbEntry.PostedOn = post.PostedOn;
+                    dbEntry.PostedOn = post.PostedOn;
                   //  dbEntry.Modified = post.Modified;
                     dbEntry.Category = post.Category;
                   //  dbEntry.Tags = post.Tags;

@@ -2,18 +2,17 @@
 @model Post
 
 <article class="post__item">
-    <a class="post__img" asp-action="Post" asp-controller="Blog" asp-route-Id=@Model.PostID><img src="~/images/blog/post01.jpg" alt="картиночка" /></a>
+    <a class="post__img" asp-action="Post" asp-controller="Blog" asp-route-Id=@Model.PostID>@*<img src="~/images/blog/post01.jpg" alt="картиночка" />*@</a>
     <div class="post-body">
         <div class="post-meta">
             <div class="meta-panel">
                 @*<span>в</span>*@
                 <div class="admin-blog">
-
-                    <a href="" class="public"><i class="fa fa-plus-square-o" aria-hidden="true" title="Опубликовать"></i></a>
+                    @*<a href="" class="public"><i class="fa fa-plus-square-o" aria-hidden="true" title="Опубликовать"></i></a>
                     <a href="" class="disabled"><i class="fa fa-minus-square-o" aria-hidden="true" title="Снять с публикации"></i></a>
-                    <a href="" class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true" title="Редактировать"></i></a>
-                                                          
-                    <a href="#">@Model.Category</a>
+                    <a href="" class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true" title="Редактировать"></i></a>*@                                    
+                   
+                     <div>В категории: @Model.Category</div>
                 </div>
                 @*<span>
                     <i class="fa fa-comment-o" aria-hidden="true"></i>
@@ -22,7 +21,7 @@
             </div>
             <div class="data">
                 <span>
-                    20.05.2016
+                 @Model.PostedOn.Day.@Model.PostedOn.Month.@Model.PostedOn.Year 
                 </span>
             </div>
         </div>  <!--post-meta-->
@@ -34,8 +33,7 @@
         </p>
         <a asp-action="Post" asp-controller="Blog" asp-route-Id="@Model.PostID" class="read-more" >Читать далее...</a>
 
-   <br><a asp-action="EditPost" asp-controller="Blog" asp-route-PostID="@Model.PostID" class="btn-danger">редактировать</a>
-
+   @*<br><a asp-action="EditPost" asp-controller="Blog" asp-route-PostID="@Model.PostID" class="btn-danger">редактировать</a>*@
 
 </div>
 </article>
