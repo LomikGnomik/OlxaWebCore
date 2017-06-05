@@ -1716,6 +1716,7 @@ section.price-solution .solution-row .solution-item-question .btn {
 .form-wrapper form textarea {
   background: #000 !important;
   border: 1px solid #cccccc;
+  color: #fff;
 }
 .form-wrapper .append > input[type="file"] {
   position: absolute;
@@ -1758,6 +1759,8 @@ section.price-solution .solution-row .solution-item-question .btn {
   z-index: -1;
 }
 .form-wrapper .append .js-labelFile {
+  display: inline-block;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
