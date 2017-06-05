@@ -1679,7 +1679,6 @@ section.price-solution .solution-row .solution-item-question .btn {
   font-size: 16px;
 }
 .form-wrapper .brief-wrap {
-  display: flex;
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 1.5em;
@@ -2190,6 +2189,16 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .btn-form-group {
     display: flex;
     flex-direction: row;
+  }
+  .brief-wrap {
+    display: flex;
+    flex-direction: row;
+    /*a{
+            order:1;
+        }
+        p{
+            order:2;
+        }*/
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
