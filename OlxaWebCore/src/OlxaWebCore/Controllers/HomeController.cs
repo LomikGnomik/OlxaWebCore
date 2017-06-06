@@ -41,5 +41,9 @@ namespace OlxaWebCore.Controllers
         {
             return View();
         }
+        public IActionResult PriceList()
+        {
+            return View();
+        }
     }
 }

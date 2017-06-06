@@ -1,6 +1,11 @@
 ﻿@model  BlogListViewModel
 
-@{Layout = "_LayoutBlogRightSidebar"; }
+@{Layout = "_LayoutBlogRightSidebar"; 
+ 
+ 
+      ViewData["Title"] = "";
+
+}
 
         <div class="post flex">
             @foreach (var p in Model.Posts)
