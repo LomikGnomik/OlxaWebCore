@@ -30,7 +30,7 @@
 
 /*ЦВЕТА*/
 
-@color-base: #000000;     // #0094ff; /*основной цвет*/
+@color-base: #333; // #0094ff; /*основной цвет*/
 
 @color-more: #00e43c; /*дополнительный цвет*/
 
@@ -439,9 +439,9 @@ textarea {
         position: fixed;
         z-index: 1000;
         transition: all 20ms linear;
-
-
-
+        /*.logo a{
+            display:none;
+        }*/
         nav {
             // margin:0 auto;    //центровка меню
             display: flex;
@@ -889,15 +889,17 @@ section.content {
         margin-bottom: 1em;
         line-height: 1.5em;
         text-align: justify;
-        &::first-letter{
-            font-weight:900;
-            color:@color-base;
-            font-size:@size-font-big;
-            letter-spacing:0.1em;
+
+        &::first-letter {
+            font-weight: 900;
+            color: @color-base;
+            font-size: @size-font-big;
+            letter-spacing: 0.1em;
         }
-        span{
-            color:@color-base;
-            font-weight:900;
+
+        span {
+            color: @color-base;
+            font-weight: 900;
         }
     }
 }
@@ -2446,14 +2448,332 @@ section.price-solution {
     }
 }
 
+/*-------------------------------------------------------------------------Главная Home/Index*/
+section.heading {
+    .wrap-title {
+        margin-top: 5em;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+    }
 
+    .wrap-title a {
+        color: #cccccc;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 150px;
+        cursor: default;
+        // text-shadow: 10px 10px 0px rgba(0,0,255,0.05);
+    }
+
+    @-webkit-keyframes title {
+        0% {
+            transform: translateY(-15px);
+        }
+
+        50% {
+            transform: translateY(-4px);
+        }
+
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @keyframes title {
+        0% {
+            transform: translateY(-15px);
+        }
+
+        50% {
+            transform: translateY(-4px);
+        }
+
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @-webkit-keyframes title-float {
+        100% {
+            -webkit-transform: translateY(-15px);
+            transform: translateY(- 15px);
+        }
+    }
+
+    @keyframes title-float {
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .title {
+        display: inline-block;
+        vertical-align: middle;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .title, .title:hover, .title:focus, .title:active {
+        animation-name: title-float, title;
+        animation-duration: .5s, 2.5s;
+        animation-delay: 0s, .5s;
+        animation-timing-function: ease-out, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-fill-mode: forwards;
+        animation-direction: normal, alternate;
+    }
+    /*---------------------------эффект описания-------------------*/
+    .content {
+        position: absolute;
+        top: 18em;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 160px;
+        overflow: hidden;
+        font-size: 35px;
+        line-height: 40px;
+        color: #ecf0f1;
+
+        .content__container {
+            font-weight: 600;
+            overflow: hidden;
+            height: 40px;
+            padding: 0 40px;
+
+            &:before {
+                content: '[';
+                left: 0;
+            }
+
+            &:after {
+                content: ']';
+                position: absolute;
+                right: 0;
+            }
+
+            &:after, &:before {
+                position: absolute;
+                top: 0;
+                color: #16a085;
+                font-size: 42px;
+                line-height: 40px;
+                animation-name: opacity;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            .content__container__text {
+                display: inline;
+                float: left;
+                margin: 0;
+                color: @color-base;
+            }
+
+            .content__container__list {
+                margin-top: 0;
+                padding-left: 110px;
+                text-align: left;
+                list-style: none;
+                animation-name: change;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+
+                .content__container__list__item {
+                    line-height: 40px;
+                    margin: 0;
+                    margin-left: 1em;
+                    color: @color-more;
+                }
+            }
+        }
+    }
+
+    @-webkit-keyframes opacity {
+        0%, 100% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes change {
+        0%, 12.66%, 100% {
+            transform: translate3d(0,0,0);
+        }
+
+        16.66%, 29.32% {
+            transform: translate3d(0,-25%,0);
+        }
+
+        33.32%,45.98% {
+            transform: translate3d(0,-50%,0);
+        }
+
+        49.98%,62.64% {
+            transform: translate3d(0,-75%,0);
+        }
+
+        66.64%,79.3% {
+            transform: translate3d(0,-50%,0);
+        }
+
+        83.3%,95.96% {
+            transform: translate3d(0,-25%,0);
+        }
+    }
+
+    @-o-keyframes opacity {
+        0%, 100% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes change {
+        0%, 12.66%, 100% {
+            transform: translate3d(0,0,0);
+        }
+
+        16.66%, 29.32% {
+            transform: translate3d(0,-25%,0);
+        }
+
+        33.32%,45.98% {
+            transform: translate3d(0,-50%,0);
+        }
+
+        49.98%,62.64% {
+            transform: translate3d(0,-75%,0);
+        }
+
+        66.64%,79.3% {
+            transform: translate3d(0,-50%,0);
+        }
+
+        83.3%,95.96% {
+            transform: translate3d(0,-25%,0);
+        }
+    }
+
+    @-moz-keyframes opacity {
+        0%, 100% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes change {
+        0%, 12.66%, 100% {
+            transform: translate3d(0,0,0);
+        }
+
+        16.66%, 29.32% {
+            transform: translate3d(0,-25%,0);
+        }
+
+        33.32%,45.98% {
+            transform: translate3d(0,-50%,0);
+        }
+
+        49.98%,62.64% {
+            transform: translate3d(0,-75%,0);
+        }
+
+        66.64%,79.3% {
+            transform: translate3d(0,-50%,0);
+        }
+
+        83.3%,95.96% {
+            transform: translate3d(0,-25%,0);
+        }
+    }
+
+    @keyframes opacity {
+        0%, 100% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes change {
+        0%, 12.66%, 100% {
+            transform: translate3d(0,0,0);
+        }
+
+        16.66%, 29.32% {
+            transform: translate3d(0,-25%,0);
+        }
+
+        33.32%,45.98% {
+            transform: translate3d(0,-50%,0);
+        }
+
+        49.98%,62.64% {
+            transform: translate3d(0,-75%,0);
+        }
+
+        66.64%,79.3% {
+            transform: translate3d(0,-50%,0);
+        }
+
+        83.3%,95.96% {
+            transform: translate3d(0,-25%,0);
+        }
+    }
+}
+
+section.about {
+    width: 100%;
+    //min-height:70vh;
+    padding: 5em 0;
+    background: @color-more-lighter2;
+
+    .about__wrap {
+        width: 100%;
+        margin: auto;
+    }
+
+    h2 {
+        //  padding:3em 0 2em;
+        padding-bottom: 2em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .about__row {
+        //.row;
+
+        .about__col__item {
+            h3 {
+                margin-bottom: 1em;
+            }
+
+            text-align: center;
+            margin: 1.5em;
+        }
+    }
+}
 
 /*-------------------------------------------------------------------Форма отправки заявки*/
 
 .form-wrapper {
     width: 100%;
     margin: 0 auto;
-    margin-top: 3em;
+    padding-top: 3em;
     margin-bottom: 0;
     padding: 4em 0;
     background: #000;
@@ -2530,7 +2850,7 @@ section.price-solution {
         input[type="text"], [type="email"], textarea {
             background: #000 !important;
             .border;
-            color:#fff;
+            color: #fff;
         }
     }
 
@@ -2586,8 +2906,8 @@ section.price-solution {
 
 
         .js-labelFile {
-            display:inline-block;
-            width:100%;
+            display: inline-block;
+            width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -3311,7 +3631,8 @@ section.tabs {
     .btn-form-group {
         .row
     }
-    .brief-wrap{
+
+    .brief-wrap {
         .row;
         /*a{
             order:1;
@@ -3319,6 +3640,13 @@ section.tabs {
         p{
             order:2;
         }*/
+    }
+    /*---------------------------------------------------Home/Index домашняя страница*/
+    section.about{
+        .about__row {
+        .row;
+
+        }
     }
 }
 
@@ -3429,6 +3757,13 @@ section.tabs {
     .btn-form-group {
         .row
     }
+    /*---------------------------------------------------Home/Index домашняя страница*/
+    section.about{
+        .about__row {
+        .row;
+
+        }
+    }
 }
 
 
@@ -3528,6 +3863,13 @@ section.tabs {
 
     .btn-form-group {
         .column
+    }
+    /*---------------------------------------------------Home/Index домашняя страница*/
+    section.about{
+        .about__row {
+        .row;
+
+        }
     }
 }
 
@@ -3646,6 +3988,13 @@ section.tabs {
 
     .btn-form-group {
         .column
+    }
+    /*---------------------------------------------------Home/Index домашняя страница*/
+    section.about{
+        .about__row {
+        .column;
+
+        }
     }
 }
 
@@ -3790,6 +4139,13 @@ section.tabs {
     .btn-form-group {
         .column
     }
+    /*---------------------------------------------------Home/Index домашняя страница*/
+    section.about{
+        .about__row {
+        .column;
+
+        }
+    }
 }
 
 
@@ -3923,7 +4279,6 @@ section.tabs {
 
 
 
-
 /*------------------------------------------------АДМИНКА--------------------------------------*/
 
 
@@ -3944,9 +4299,9 @@ section.tabs {
     margin: 0 auto;
     width: 90%;
     max-width: 81.25em;
-    
-    .content{
-        color:@color-gray-dark;
+
+    .content {
+        color: @color-gray-dark;
     }
 }
 
