@@ -10,9 +10,11 @@
             Скачать бриф на разработку сайта <br/> и заполнить самостоятельно
         </p>
     </div>
-    <form method="post" asp-action="NewOrder" asp-controller="Order" role="form" >
-       
-          <input type="text" name="name" placeholder="Ваше имя" />
+    @*<form method="post" asp-action="NewOrder" asp-controller="Order" role="form" >*@
+@using (Html.BeginForm("NewOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+          <input type="text" name="name" placeholder="Ваше имя"/>
         @*<input type="text" name="tel" placeholder="Телефон" />*@
         <input type="email" name="email" placeholder="Email" />
         <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
@@ -36,6 +38,7 @@
                             </div>*@
             <button type="submit" class="btn btn-long btn-ghost-more">Отправить!</button>
         </div>
-    </form>
+    @*</form>*@
+}
 </div>
 </div>

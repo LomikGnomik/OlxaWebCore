@@ -40,6 +40,11 @@ namespace OlxaWebCore.Controllers
         [HttpPost]
         public IActionResult NewOrder(string name, string email, string comment, IFormFile file)
         {
+            // Сохранить файл
+           
+
+
+            // сохранить в базу
             Order Order = new Order
             {
                 Name = name,
@@ -50,7 +55,8 @@ namespace OlxaWebCore.Controllers
 
             };
             repository.SaveOrder(Order);
-            // сохранить в базу
+            
+            
             // отослать нам письмо
             // отослать письмо клиенту
             // вернуть страницу с благодарностью
