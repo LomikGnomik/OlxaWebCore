@@ -20,7 +20,14 @@
 
     <label asp-for="Category"></label>
     @*<select asp-for="Category" asp-items="ViewBag.Category"></select>*@
-    <input type="text" asp-for="Category">
+    <select  name="Category">
+        <option value="Интернет-магазин">Интернет-магазин</option>
+        <option value="Сайт визитка">Сайт визитка</option>
+        <option value="Landing page">Landing page</option>
+        <option value="Информационный">Информационный</option>
+        <option value="Копоративный">Копоративный</option>
+    </select>
+    @*<input type="text" asp-for="Category">*@
 
     <label asp-for="Price"></label>
     <input type="text" asp-for="Price">

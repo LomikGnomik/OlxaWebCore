@@ -6,24 +6,30 @@ using Microsoft.AspNetCore.Mvc;
 using OlxaWebCore.Models.DataModels;
 using OlxaWebCore.Services;
 using OlxaWebCore.Models.Interfaces;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Internal;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OlxaWebCore.Controllers
 {
+  //  [Authorize(Roles = "admin")]
     public class OrderController : Controller
     {
         private IOrderRepository repository;
 
+        
         public OrderController(IOrderRepository repo)
         {
             repository = repo;
         }
 
-
+        
         public ViewResult OrderList()
         {
             return View(repository.Orders);
         }
 
+        
         public ViewResult Order(int orderId)
         {
             return View(repository.Orders.FirstOrDefault(o=>o.OrderID==orderId));
@@ -31,7 +37,8 @@ namespace OlxaWebCore.Controllers
 
 
         // приём данных из формы
-        public IActionResult NewOrder(string name, string email, string comment, byte file)
+        [HttpPost]
+        public IActionResult NewOrder(string name, string email, string comment, IFormFile file)
         {
             Order Order = new Order
             {
@@ -50,6 +57,7 @@ namespace OlxaWebCore.Controllers
             return View();
         }
 
+        
         public async Task<IActionResult> SendMessage() //отправка заказа нам на почту
         {
             EmailService emailService = new EmailService();

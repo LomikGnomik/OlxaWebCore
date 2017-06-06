@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>@ViewData["Title"]</title>
     <environment names="Development">
         @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
         <link rel="stylesheet" href="~/css/styles.css" />
@@ -23,7 +23,7 @@
             <i class="fa fa-sun-o logo" aria-hidden="true"></i>
             <div class="container-admin">
                 <header class="header-admin" role="banner">
-                    <h1>Админ Панель</h1>
+                    <h1>Админ Панель->@ViewData["Title"]</h1>
                     <ul>
                         <li><a asp-action="index" asp-controller="home">Посмотреть</a></li>
                     </ul>

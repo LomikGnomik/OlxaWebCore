@@ -1,12 +1,9 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@model IEnumerable<Post>
+﻿@model IEnumerable<Post>
 
 @{
     Layout = "_LayoutAdmin";
+
+    ViewData["Title"] = "Все посты";
 }
 
 <a asp-controller="Blog" asp-action="CreatePost">Создать пост</a>
