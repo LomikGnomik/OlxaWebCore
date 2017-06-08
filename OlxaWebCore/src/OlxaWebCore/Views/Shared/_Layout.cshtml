@@ -263,76 +263,19 @@
                 $(this).addClass('active');
             })
         </script>*@
+
     <script>
-    /*---------------------------------------этапы разработки steps-------------------------*/
-    (function ($) {
-        $.fn.vertigo = function (options) {
-            $(this).addClass("vertigo");
-            var list = $('.vertigo li');
-            var totallist = list.length;
-            $('.vertigo li').each(function (i) {
-                $(this).addClass("item" + (i + 1));
-            });
-        }
-        return false;
-    }(jQuery));
+        $(function () {                             // когда страница загружена
+            $('.main-menu li a').each(function () {      // проходим по нужным нам ссылками
+                var location = window.location.href // переменная с адресом страницы
+                var link = this.href                // переменная с url ссылки
+                var result = location.match(link);  // результат возвращает объект если совпадение найдено и null при обратном
 
-    // Custom
-    // =============
-    var $slideHeight, $nav, $goTo, $slide, $nownow, $max;
-
-    $slideHeight = $('.vertigo li').outerHeight();
-    $nav = $('#milestones li');
-    $max = $('#milestones li').length - 1
-
-    function jump(i) {
-        console.log('this is the index = ' + i);
-        $('#timeline li').css({
-            'top': '-' + i * $slideHeight + 'px'
-        });
-        $('#milestones li a').removeClass('active');
-        $('#milestones > li:nth-child(' + (i + 1) + ') > a').addClass('active');
-    };
-
-    $(document).ready(function ($) {
-        $($nav).click(function () {
-
-            $('#milestones > li > a').removeClass('active');
-            // /$(this).children().addClass('active'); // show that this is active
-            $goTo = ($(this).index());
-            jump($goTo);
-            $('.content').fadeIn();
-            console.log('ID is ...' + $goTo);
-            $slide = $goTo;
-            // $('#milestones').fadeOut();
-            $('#milestones li').addClass('gonav'); //turn vertical nav to horizontal
-            // $('#years').fadeIn();
-        });
-
-        $('.btn').click(function () {
-            if ($(this).hasClass('btn-pre')) {
-                console.log('yep it does');
-                if ($slide != 0) {
-                    --$slide;
-                    console.log('look is now at ' + $slide);
-                    jump($slide);
+                if (result != null) {                // если НЕ равно null
+                    $(this).addClass('active');    // добавляем класс
                 }
-            }
-
-            else if ($slide != $max) {
-
-                console.log('nope');
-                ++$slide;
-                console.log('look is now at ' + $slide);
-                jump($slide);
-            }
+            });
         });
-
-        $('.content').click(function () {
-            $(this).fadeOut();
-            $('#milestones li').removeClass('gonav');
-        });
-    });
     </script>
 
 </body>
