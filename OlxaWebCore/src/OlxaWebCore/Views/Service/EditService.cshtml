@@ -1,0 +1,44 @@
+﻿@model Service
+@{
+    Layout = "_LayoutAdmin";
+
+    ViewData["Title"] = "Услуга";
+}
+
+<form asp-action="EditService">
+
+    <input type="hidden" asp-for="ServiceID" />
+
+    <label asp-for="Title"></label>
+    <input type="text" asp-for="Title">
+
+    <label asp-for="Category"></label>
+    @*<select asp-for="Category" asp-items="ViewBag.Category"></select>*@
+    @*<select name="Category">
+        <option value="Сайты">Сайты</option>
+        <option value="Дополнительные услуги">Дополнительные</option>
+        <option value="Продвижение">Про</option>
+        <option value="Информационный">Информационный</option>
+        <option value="Копоративный">Копоративный</option>
+    </select>*@
+    <input type="text" asp-for="Category">
+
+    <label asp-for="Price"></label>
+    <input type="text" asp-for="Price">
+
+    <label asp-for="Description"></label>
+    <textarea asp-for="Description"></textarea>
+
+    <label asp-for="Published"></label>
+    <input type="checkbox" asp-for="Published">
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-controller="Service" asp-action="AllServiceAdmin">Back</a>
+</div>

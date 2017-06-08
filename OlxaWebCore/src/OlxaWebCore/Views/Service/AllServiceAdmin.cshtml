@@ -7,3 +7,9 @@
 
 <a asp-controller="Service" asp-action="CreateService"> Создать услугу</a>
 
+
+
+@foreach (var service in @Model)
+{
+    @service.Title
+}
