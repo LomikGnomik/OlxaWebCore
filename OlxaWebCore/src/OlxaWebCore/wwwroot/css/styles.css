@@ -3107,9 +3107,8 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 }
 .container-admin {
   margin-right: 2em;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 81.25em;
+  margin-left: 2em;
+  width: 95%;
 }
 .container-admin .content {
   color: #333333;
@@ -3144,6 +3143,12 @@ i.logo {
   display: flex;
   color: #fff;
 }
+.panel-group {
+  width: 100%;
+  background: #11c808;
+  margin: 1.5em auto;
+  padding: 0 0.5em;
+}
 .navigation-admin {
   display: flex;
   flex-direction: column;
@@ -3167,6 +3172,41 @@ i.logo {
 .navigation-admin ul a {
   color: #fff;
 }
+/*-------------------------------стили таблиц*/
+table {
+  background: white;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th {
+  font-weight: bold;
+  color: #1a1a1a;
+  border-bottom: 2px solid #00b120;
+  padding: 0.6em 0.5em;
+}
+td {
+  color: #333;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.65em 0.5em;
+  transition: .3s linear;
+}
+tr:hover td {
+  background: #b1ffc6;
+}
+/*.btn-del {
+        color: @color-gray-light;
+        cursor: pointer;
+        font-size: 1.875em;
+        text-decoration: dashed;
+        right: 0.312em;
+        top: 0;
+
+        &:hover {
+            color: red;
+        }
+    }*/
 /*------------------блог*/
 .admin-create a.admin-btn {
   position: absolute;

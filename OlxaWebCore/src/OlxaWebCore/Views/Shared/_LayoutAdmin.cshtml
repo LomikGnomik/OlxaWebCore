@@ -45,6 +45,9 @@
 
             <div class="container-admin">
                 <section class="content">
+                    <div class="panel-group">
+                        @RenderSection("ControlPanel",false)
+                    </div>
                     @RenderBody()
                 </section>
             </div> @*container-admin*@

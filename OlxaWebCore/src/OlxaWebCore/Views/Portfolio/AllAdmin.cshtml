@@ -5,8 +5,13 @@
     ViewData["Title"] = "Портфолио";
 }
 
-<a asp-action="CreatePortfolio" asp-controller="Portfolio">Добавить сайт в портфолио</a>
-<div class="container">
+@section ControlPanel{
+    <div class="btn">
+        <a asp-action="CreatePortfolio" asp-controller="Portfolio">Добавить сайт в портфолио</a>
+    </div>
+}
+
+
     <h3>Список всех сайтов</h3>
 
     <table>
@@ -14,6 +19,8 @@
             <th>ID</th>
             <th>Название</th>
             <th>Категория</th>
+            <th></th>
+            <th></th>
         </tr>
         @foreach (var site in @Model)
         {
@@ -26,4 +33,3 @@
             </tr>
         }
     </table>
-</div>

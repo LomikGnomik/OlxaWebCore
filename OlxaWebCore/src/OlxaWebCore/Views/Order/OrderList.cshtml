@@ -5,25 +5,30 @@
     ViewData["Title"] = "Заказы";
 }
 
-<div class="container">
+
     <h3>Список всех заказов</h3>
 
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Имя</th>
-            <th>Email</th>
-            <th>Комментарий</th>
-            <th>Файлы</th>
-        </tr>
-        @foreach (var order in @Model)
-        {
+    <div class="order-table">
+        <table>
             <tr>
-                <td>@order.OrderID</td>
-                <td><a asp-controller="Order" asp-action="Order" asp-route-orderId="@order.OrderID">@order.Name</a></td>
-                <td>@order.Email</td>
-                <td>@order.Comment</td>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Email</th>
+                <th>Комментарий</th>
+                <th>Файлы</th>
+                
             </tr>
-        }
-    </table>
-</div>
+            @foreach (var order in @Model)
+            {
+                <tr>
+                    <td>@order.OrderID</td>
+                    <td><a asp-controller="Order" asp-action="Order" asp-route-orderId="@order.OrderID">@order.Name</a></td>
+                    <td>@order.Email</td>
+                    <td>@order.Comment</td>
+                    <td>@order.File</td>
+                    @*<td><a href="#" class="btn-del">Х</a></td>*@
+                </tr>
+            }
+        </table>
+    </div>
+    

@@ -2807,7 +2807,7 @@ section.about {
 
 .steps_wrap {
     border: 3px solid white;
-    background:@color-success-lighter2;
+    background: @color-success-lighter2;
     overflow: hidden;
 
     .flex-col {
@@ -4544,10 +4544,9 @@ section.tabs {
 
 .container-admin {
     margin-right: 2em;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 81.25em;
-
+    margin-left: 2em;
+    width: 95%;
+    //  max-width: 90em;
     .content {
         color: @color-gray-dark;
     }
@@ -4586,12 +4585,16 @@ i.logo {
     }
 }
 
-
-
 .wrap-content {
     display: flex;
     //width:15em;
     color: #fff;
+}
+.panel-group{
+    width:100%;
+    background:@color-success-lighter1;
+    margin:1.5em auto;
+    padding:0 0.5em;
 }
 
 
@@ -4626,6 +4629,45 @@ i.logo {
         }
     }
 }
+/*-------------------------------стили таблиц*/
+
+table {
+    background: white;
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    font-weight: bold;
+    color: @color-base-darken1;
+    border-bottom: 2px solid @color-more-darken1;
+    padding: 0.6em 0.5em;
+}
+
+td {
+    color: @color-base;
+    border-bottom: 1px solid @color-gray-light;
+    padding: 0.65em 0.5em;
+    transition: .3s linear;
+}
+
+tr:hover td {
+    background: @color-more-lighter2;
+}
+/*.btn-del {
+        color: @color-gray-light;
+        cursor: pointer;
+        font-size: 1.875em;
+        text-decoration: dashed;
+        right: 0.312em;
+        top: 0;
+
+        &:hover {
+            color: red;
+        }
+    }*/
 
 header.header-admin {
 }
