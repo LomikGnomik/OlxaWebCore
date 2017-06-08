@@ -4,7 +4,31 @@
     ViewData["Title"] = "Услуги и Цены";
 }
 
-@foreach (var service in Model)
-{
-    <div>service.Title</div> 
-}
+
+
+    @foreach (string category in @ViewBag.CategoryService)
+    {
+         @category
+
+        <table>
+            @foreach (var service in Model)
+            {
+                if (category == service.Category)
+                {
+                    <tr>
+                        <td>@service.Title</td>
+                        <td>@service.Price</td>
+                    </tr>
+                }
+            }
+        </table>
+    }
+              
+
+
+
+
+
+
+
+
