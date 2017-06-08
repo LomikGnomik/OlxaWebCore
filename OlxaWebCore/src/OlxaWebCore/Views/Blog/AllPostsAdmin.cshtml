@@ -6,9 +6,11 @@
     ViewData["Title"] = "Блог";
 }
 
-<a asp-controller="Blog" asp-action="CreatePost">Создать пост</a>
 
-<div class="container">
+
+@section ControlPanel{
+<div class="btn"><a asp-controller="Blog" asp-action="CreatePost">Создать пост</a></div>
+}
     <h3>Список всех постов</h3>
 
     <table>
@@ -17,6 +19,7 @@
             <th>Название</th>
             <th>Категория</th>
             <th>Виден?</th>
+            <th></th>
         </tr>
         @foreach (var post in @Model)
         {
@@ -30,4 +33,4 @@
             </tr>
         }
     </table>
-</div>
+
