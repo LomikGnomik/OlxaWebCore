@@ -5,11 +5,30 @@
     ViewData["Title"]="Услуги";
 }
 
-<a asp-controller="Service" asp-action="CreateService"> Создать услугу</a>
-
-
-
-@foreach (var service in @Model)
-{
-    @service.Title
+@section ControlPanel{
+    <div class="btn">
+        <a asp-action="CreateService" asp-controller="Service">Добавить услугу</a>
+    </div>
 }
+
+<h3>Список всех услуг</h3>
+
+<table class="table-admin">
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Категория</th>
+        <th>Цена</th>
+        <th>Видно?</th>
+    </tr>
+    @foreach (var service in @Model)
+    {
+        <tr>
+            <td>@service.ServiceID</td>
+            <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Title</a></td>
+            <td>@service.Category</td>
+            <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>
+            <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Published</a></td>
+        </tr>
+    }
+</table>

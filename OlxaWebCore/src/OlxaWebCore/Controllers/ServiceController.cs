@@ -19,14 +19,26 @@ namespace OlxaWebCore.Controllers
 
         public IActionResult AllService()
         {
-            return View(repository.Services.Where(s=>s.Published==true));
+         IEnumerable<Service> serviceUser =  repository.Services.Where(s => s.Published == true);
+
+            ViewBag.CategoryService=repository.Services
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x);
+
+
+
+
+            return View(repository.Services);
         }
 
         //ADMIN
 
         public IActionResult AllServiceAdmin()
         {
+
             return View(repository.Services);
+
         }
 
         // Создание 
