@@ -2756,7 +2756,6 @@ section.about {
 
     .about__row {
         //.row;
-
         .about__col__item {
             h3 {
                 margin-bottom: 1em;
@@ -2767,6 +2766,260 @@ section.about {
         }
     }
 }
+/*------------------------------------------------------------------------Корпоративный сайт*/
+.title-corporete {
+    text-align: center;
+    margin: 1em auto;
+
+    .title-p {
+        display: inline-block;
+        margin: 1em auto;
+        max-width: 35em;
+        width: 90%;
+    }
+}
+
+.plus-corporate-wrap {
+    margin: 1em auto;
+    text-align: center;
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .plus-corporate-item {
+        padding: 1em;
+
+        .item-wrap {
+            /*.border;
+            padding: 1em;
+            width: 20em;
+            height: 20em;*/
+            p {
+                margin: 1em auto;
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------------Этапы работы steps*/
+
+.steps_wrap {
+    border: 3px solid white;
+    background:@color-success-lighter2;
+    overflow: hidden;
+
+    .flex-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .box {
+        text-align: center;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    ul li, a {
+        list-style-type: none;
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+
+    #milestones li {
+        margin: 12px auto;
+        padding: 20px 0px;
+    }
+
+    .gonav {
+        display: inline-block;
+        margin: 5px 15px !important;
+        padding: 6px 10px;
+        /* line-height: 75px; */
+        /* font-size: 13px; */
+    }
+
+
+    .hide {
+        opacity: 0.9;
+        /* height: 80px; */
+        overflow: hidden;
+        /* display: none; */
+    }
+
+
+
+    .highlight {
+        background: #0072a7;
+        border: 2px solid #0087c3;
+        width: 10%;
+        color: white;
+    }
+
+
+    .content {
+        max-width: 480px;
+        margin: 2em auto;
+        border: 1px solid black;
+        background-color: white;
+        opacity: 1;
+        padding: 30px;
+        overflow: hidden;
+        height: 235px;
+        top: 126px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    .btn-next {
+        /*  position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;*/
+        //  margin-top:20em;
+    }
+
+    .btn-pre {
+        /*   position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;*/
+    }
+
+    #timeline, #milestones {
+        margin: 0 auto;
+        position: relative;
+        padding-left: 0;
+    }
+
+    #timeline {
+    }
+
+    .vertigo {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .vertigo li {
+        list-style: none;
+        padding: 15px 0px;
+        display: inline-block;
+        position: relative;
+        height: 235px;
+        padding: 50px 30px;
+    }
+
+    .vertigo li img {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .vertigo li p {
+        margin: 0px;
+        text-align: center;
+        color: #404c6a;
+    }
+
+    .header {
+        width: 860px;
+        height: 560px;
+        position: fixed;
+        /* top: 20%; */
+        /* left: 25%; */
+        overflow: hidden;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        /* margin-left: 20%; */
+        margin-right: 0;
+        padding-left: 100px;
+    }
+
+    .blur {
+        -webkit-filter: blur(10px);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .color {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+        opacity: 0.7;
+    }
+
+
+    #years {
+        text-align: center;
+        padding: 2px 1px;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        color: #222;
+        line-height: 16px;
+        width: 10%;
+        margin: 0 auto;
+        margin-top: 18px;
+    }
+
+    .grow {
+        transition: all .2s ease;
+    }
+
+    .grow:hover {
+        transform: scale(1.1);
+    }
+
+    .move-up, .move-down {
+        transition: all .2s ease;
+        opacity: 0.8;
+    }
+
+    .move-up:hover {
+        -moz-transform: translate(0px, -5px);
+        -ms-transform: translate(0px, -5px);
+        -o-transform: translate(0px, -5px);
+        -webkit-transform: translate(0px, -5px);
+        transform: translate(0px, -5px);
+        opacity: 1;
+    }
+
+    .move-down:hover {
+        -moz-transform: translate(0px, 5px);
+        -ms-transform: translate(0px, 5px);
+        -o-transform: translate(0px, 5px);
+        -webkit-transform: translate(0px, 5px);
+        transform: translate(0px, 5px);
+        opacity: 1;
+    }
+
+    #milestones li:hover {
+        transform: scale(1.2,1.2);
+        transition: all .5s ease;
+    }
+
+
+    #milestones li .gonav:hover {
+        transform: scale(0);
+        transition: all .5s ease;
+    }
+
+    .active {
+        /* padding:3px 7px; */
+        border-bottom: 1px solid #03a9f4;
+        border-top: 1px solid #03a9f4;
+    }
+
+    #timeline li {
+        transition: all 0.7s ease;
+    }
+}
+
+
 
 /*-------------------------------------------------------------------Форма отправки заявки*/
 
@@ -3642,10 +3895,9 @@ section.tabs {
         }*/
     }
     /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about{
+    section.about {
         .about__row {
-        .row;
-
+            .row;
         }
     }
 }
@@ -3758,10 +4010,9 @@ section.tabs {
         .row
     }
     /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about{
+    section.about {
         .about__row {
-        .row;
-
+            .row;
         }
     }
 }
@@ -3865,10 +4116,9 @@ section.tabs {
         .column
     }
     /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about{
+    section.about {
         .about__row {
-        .row;
-
+            .row;
         }
     }
 }
@@ -3953,7 +4203,7 @@ section.tabs {
     /*------------------------------------------------------- портфолио*/
 
     .medium-half {
-        flex-basis: 31%;
+        flex-basis: 46%;
     }
 
     /*-------------------------------------------------Блог*/
@@ -3990,10 +4240,9 @@ section.tabs {
         .column
     }
     /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about{
+    section.about {
         .about__row {
-        .column;
-
+            .column;
         }
     }
 }
@@ -4140,10 +4389,9 @@ section.tabs {
         .column
     }
     /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about{
+    section.about {
         .about__row {
-        .column;
-
+            .column;
         }
     }
 }
@@ -4204,7 +4452,7 @@ section.tabs {
     /*------------------------------------------------------- портфолио*/
 
     .medium-half {
-        flex-basis: 46%;
+        flex-basis: 90%;
     }
 
     /*.grid.isotope-grid.col-3 .grid-sizer,
