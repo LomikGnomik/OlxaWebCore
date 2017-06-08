@@ -1,3 +1,10 @@
 ﻿@model IEnumerable<Service>
 
- ViewData["Title"] = "Цены на услуги";
+@{
+    ViewData["Title"] = "Услуги и Цены";
+}
+
+@foreach (var service in Model)
+{
+    <div>service.Title</div> 
+}

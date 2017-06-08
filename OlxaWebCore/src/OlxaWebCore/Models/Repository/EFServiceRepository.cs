@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OlxaWebCore.Models.Repository
 {
-    public class EFServiceRepository:IServiceRepository
+    public class EFServiceRepository: IServiceRepository
     {
         private ApplicationDbContext context;
 

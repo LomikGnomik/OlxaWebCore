@@ -62,7 +62,6 @@ namespace OlxaWebCore.Controllers
         public ViewResult CreatePortfolio() => View("EditPortfolio", new Portfolio());
 
         // редактирование
-
         public ViewResult EditPortfolio(int portfolioID) =>
             View(repository.Portfolios
                 .FirstOrDefault(p => p.PortfolioID == portfolioID));

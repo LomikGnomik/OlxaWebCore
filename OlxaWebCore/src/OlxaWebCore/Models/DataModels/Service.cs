@@ -7,16 +7,16 @@ namespace OlxaWebCore.Models.DataModels
 {
     public class Service
     {
-        public int ServiceID { get; set; }
+        public virtual int ServiceID { get; set; }
 
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
-        public decimal Price { get; set; }
+        public virtual decimal Price { get; set; }
 
-        public bool Published { get; set; }
+        public virtual bool Published { get; set; }
 
-        public string Category { get; set; }
+        public virtual string Category { get; set; }
     }
 }
