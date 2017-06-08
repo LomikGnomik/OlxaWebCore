@@ -10,13 +10,7 @@ namespace OlxaWebCore.Controllers
 {
     public class Web_sitesController : Controller
     {
-        private ISiteRepository repository;
-        
-
-        public Web_sitesController(ISiteRepository repo)
-        {
-            repository = repo;
-        }
+     
 
         public IActionResult Promosite()
         {
@@ -32,7 +26,6 @@ namespace OlxaWebCore.Controllers
         }
         public IActionResult Shop()
         {
-           
             return View();
         }
         public IActionResult Information()

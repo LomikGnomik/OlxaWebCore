@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace OlxaWebCore.Models.Interfaces
 {
-   public interface ISiteRepository
+    public interface IServiceRepository
     {
-        IEnumerable<Site> Sites { get; }
+        IEnumerable<Service> Services { get; }
 
-        void SaveSite(Site site);
-        Site DeleteSite(int siteID);
+        void SaveService(Service service);
+        Service DeleteService(int serviceID);
     }
 }

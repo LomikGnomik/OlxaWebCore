@@ -9,6 +9,8 @@ using OlxaWebCore.Models.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Authorization;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace OlxaWebCore.Controllers
 {
@@ -16,11 +18,12 @@ namespace OlxaWebCore.Controllers
     public class OrderController : Controller
     {
         private IOrderRepository repository;
+        IHostingEnvironment _appEnvironment;
 
-        
-        public OrderController(IOrderRepository repo)
+        public OrderController(IOrderRepository repo, IHostingEnvironment appEnvironment)
         {
             repository = repo;
+            _appEnvironment = appEnvironment;
         }
 
         
@@ -38,25 +41,22 @@ namespace OlxaWebCore.Controllers
 
         // приём данных из формы
         [HttpPost]
-        public IActionResult NewOrder(string name, string email, string comment, IFormFile file)
+        public IActionResult NewOrder( Order order, IFormFile file)
         {
             // Сохранить файл
-           
-
-
-            // сохранить в базу
-            Order Order = new Order
+            if (file != null)
             {
-                Name = name,
-                Email = email,
-                Comment = comment,
-                DateOrder = DateTime.Now,
-             //   UrlOrder = Request.QueryString.Value
+                // путь к папке Files
+                string path = "/Files/Client/"+ file.FileName;
+                // сохраняем файл в папку Files в каталоге wwwroot
+                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                {
+                     file.CopyToAsync(fileStream);
+                }
+            }
+            // сохранить в базу
+            repository.SaveOrder(order);
 
-            };
-            repository.SaveOrder(Order);
-            
-            
             // отослать нам письмо
             // отослать письмо клиенту
             // вернуть страницу с благодарностью

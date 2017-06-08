@@ -20,7 +20,7 @@ namespace OlxaWebCore.Data
         public DbSet<Portfolio> Portfolios { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<Site> Sites { get; set; }
+        public DbSet<Service> Services { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)

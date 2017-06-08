@@ -16,6 +16,9 @@ namespace OlxaWebCore.Models.DataModels
         [Display(Name = "Ссылка на сайт")]
         public string Link { get; set; }
 
+        [Display(Name = "Короткое описание")]
+        public string ShortDescription { get; set; }
+
         [Display(Name = "Описание")]
         public string Description { get; set; }
 
@@ -39,5 +42,6 @@ namespace OlxaWebCore.Models.DataModels
 
         [Display(Name = "Мета")]
         public string Meta { get; set; }
+
     }
 }
