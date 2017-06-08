@@ -6,24 +6,43 @@
 
 
 
-    @foreach (string category in @ViewBag.CategoryService)
-    {
-         @category
 
-        <table>
-            @foreach (var service in Model)
-            {
-                if (category == service.Category)
+<div class="container">
+    
+        <div class="accordion">
+            <ul>
+                @foreach (string category in @ViewBag.CategoryService)
                 {
-                    <tr>
-                        <td>@service.Title</td>
-                        <td>@service.Price</td>
-                    </tr>
+
+                    <li>
+                        <input type="checkbox">
+                        <i></i>
+                        <h2 class="title_block">@category</h2>
+                        <div class="content">
+                            <table class="service">
+                                @foreach (var service in Model)
+                                {
+                                    if (category == service.Category)
+                                    {
+                                        <tr>
+                                            <td>@service.Title</td>
+                                            <td>@service.Price</td>
+                                            <td><a href="#">Пример</a></td>
+                                            <td class="add">+</td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        </div>
+                    </li>
+
                 }
-            }
-        </table>
-    }
-              
+            </ul>
+        </div>
+   
+
+</div>
+
 
 
 

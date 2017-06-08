@@ -299,6 +299,10 @@ textarea {
   background-color: #333;
   color: #ecf0f1;
 }
+.wrapper .navigation nav .main-menu .main-menu__item a.link.active:focus {
+  background-color: #333;
+  color: #ecf0f1;
+}
 .wrapper .navigation nav .submenu {
   display: flex;
   margin-top: 0;
@@ -1982,182 +1986,276 @@ section.about .about__row .about__col__item h3 {
 .plus-corporate-wrap .plus-corporate-item .item-wrap p {
   margin: 1em auto;
 }
+/*---------------------------------------------------------Страница услуги service */
+table.service {
+  background: white;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+table.service td {
+  color: #333;
+  border-bottom: 1px solid #cccccc;
+  padding: 0 0.3em;
+  transition: .3s linear;
+  max-width: 2em;
+  line-height: 1em;
+}
+table.service tr:hover td {
+  background: #a6a6a6;
+}
+table.service td.add {
+  color: #cccccc;
+  cursor: pointer;
+  font-size: 1.875em;
+  text-decoration: dashed;
+  right: 0.312em;
+  top: 0;
+  text-align: end;
+}
+table.service td.add:hover {
+  color: #1bdb68;
+}
 /*--------------------------------------------------------------------Этапы работы steps*/
-.steps_wrap {
-  border: 3px solid white;
-  background: #8efa88;
-  overflow: hidden;
-}
-.steps_wrap .flex-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.steps_wrap .box {
+.steps h1 {
   text-align: center;
-  margin: 0 auto;
-  padding: 30px;
+  line-height: 3;
 }
-.steps_wrap ul li,
-.steps_wrap a {
-  list-style-type: none;
-  text-decoration: none;
-  color: inherit;
-}
-.steps_wrap #milestones li {
-  margin: 12px auto;
-  padding: 20px 0px;
-}
-.steps_wrap .gonav {
-  display: inline-block;
-  margin: 5px 15px !important;
-  padding: 6px 10px;
-  /* line-height: 75px; */
-  /* font-size: 13px; */
-}
-.steps_wrap .hide {
-  opacity: 0.9;
-  /* height: 80px; */
-  overflow: hidden;
-  /* display: none; */
-}
-.steps_wrap .highlight {
-  background: #0072a7;
-  border: 2px solid #0087c3;
-  width: 10%;
-  color: white;
-}
-.steps_wrap .content {
-  max-width: 480px;
-  margin: 2em auto;
-  border: 1px solid black;
-  background-color: white;
-  opacity: 1;
-  padding: 30px;
-  overflow: hidden;
-  height: 235px;
-  top: 126px;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-.steps_wrap .btn-next {
-  /*  position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;*/
-}
-.steps_wrap .btn-pre {
-  /*   position: absolute;
-    top: -5px;
-    left: 0;
-    right: 0;*/
-}
-.steps_wrap #timeline,
-.steps_wrap #milestones {
-  margin: 0 auto;
-  position: relative;
-  padding-left: 0;
-}
-.steps_wrap .vertigo {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-.steps_wrap .vertigo li {
-  list-style: none;
-  padding: 15px 0px;
-  display: inline-block;
-  position: relative;
-  height: 235px;
-  padding: 50px 30px;
-}
-.steps_wrap .vertigo li img {
-  float: left;
-  margin-right: 10px;
-}
-.steps_wrap .vertigo li p {
-  margin: 0px;
+.steps section.sub-nav {
   text-align: center;
-  color: #404c6a;
+  padding: 1em;
 }
-.steps_wrap .header {
-  width: 860px;
-  height: 560px;
-  position: fixed;
-  /* top: 20%; */
-  /* left: 25%; */
+.steps section.sub-nav div {
+  display: inline-block;
+}
+.steps section.sub-nav div a {
+  padding: 0.62em;
+  border: 1px solid darkGray;
+  border-radius: 4px;
+  transition: property(all);
+  transition: duration(0.2s);
+  transition: timing-function(ease-in-out);
+}
+.steps section.sub-nav div a:hover {
+  background: darkGray;
+}
+.steps section.sub-nav div.active-slide > a {
+  background: darkGray;
+}
+.steps section.slider {
+  position: relative;
+  height: 300px;
   overflow: hidden;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  /* margin-left: 20%; */
-  margin-right: 0;
-  padding-left: 100px;
 }
-.steps_wrap .blur {
-  -webkit-filter: blur(10px);
+.steps section.slider .controls {
+  position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 10;
+}
+.steps section.slider .controls .prev,
+.steps section.slider .controls .next {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  margin-top: -42px;
+  opacity: 0.62;
 }
-.steps_wrap .color {
-  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.5) 100%);
-  opacity: 0.7;
+.steps section.slider .controls .prev:hover,
+.steps section.slider .controls .next:hover {
+  opacity: 1;
 }
-.steps_wrap #years {
-  text-align: center;
-  padding: 2px 1px;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  color: #222;
-  line-height: 16px;
-  width: 10%;
+.steps section.slider .controls .prev {
+  left: 20px;
+}
+.steps section.slider .controls .next {
+  right: 20px;
+}
+.steps section.slider .slide {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: property(transform);
+  transition: duration(0.5s);
+  transition: timing-function(ease-in);
+}
+.steps section.slider .slide.slide-1 {
+  background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), darkslategray;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+.steps section.slider .slide.slide-2 {
+  background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), DarkCyan;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+.steps section.slider .slide.slide-3 {
+  background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), DarkGoldenRod;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+.steps section.slider .slide.slide-4 {
+  background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), LightSlateGray;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+.steps section.slider .slide.active-slide {
+  transform: translateX(0);
+  z-index: 3;
+}
+.steps section.slider .slide.move-right,
+.steps section.slider .slide.next-slide {
+  transform: translateX(100%);
+  z-index: 1;
+}
+.steps section.slider .slide.move-left,
+.steps section.slider .slide.previous-slide {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+.steps section.slider .slide.recent-slide {
+  z-index: 2;
+}
+.steps section.slider .slide .text-content {
+  /*@include
+                span-columns(4);
+                @include
+                shift(1);*/
+  padding: 70px 0;
+  text-align: left;
+}
+.steps section.slider .slide .image-content {
+  /*@include
+                span-columns(7);*/
+}
+.steps section.slider .slide .image-content img {
+  max-width: 100%;
+}
+/*----------------------------------------------------------------Аккордион*/
+.accordion {
+  width: 100%;
+  min-height: 0;
+  display: block;
+  position: relative;
   margin: 0 auto;
-  margin-top: 18px;
+  padding: 0;
+  background-color: #fefffa;
+  overflow: hidden;
+  /* заголовки панелей аккордеона */
+  /* Формируем неупорядоченный список */
+  /* Определяем и формируем отдельный элемент списка 
+ * в который поместим скрытый флажек,
+ * заголовок панелей и блок с содержанием
+*/
+  /* устанавливаем время ожидания перед воспроизведением анимации 
+ * на основе нумерации в дереве элементов
+*/
+  /*указатель */
+  /* ерансформация указателя при переключении */
+  /* Когда установлен checked блок скрыт*/
+  /* А указатель показывает вниз */
+  /*эффект перехода между двумя состояниями указателя */
 }
-.steps_wrap .grow {
-  transition: all .2s ease;
+.accordion h2 {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: #ecf0f1;
+  background: #333;
+  border-top: 1px solid #a6a6a6;
+  border-bottom: 1px solid #000000;
 }
-.steps_wrap .grow:hover {
-  transform: scale(1.1);
-}
-.steps_wrap .move-up,
-.steps_wrap .move-down {
-  transition: all .2s ease;
-  opacity: 0.8;
-}
-.steps_wrap .move-up:hover {
-  -moz-transform: translate(0px, -5px);
-  -ms-transform: translate(0px, -5px);
-  -o-transform: translate(0px, -5px);
-  -webkit-transform: translate(0px, -5px);
-  transform: translate(0px, -5px);
+.accordion .content {
+  position: relative;
+  overflow: hidden;
   opacity: 1;
+  transform: translate(0, 0);
 }
-.steps_wrap .move-down:hover {
-  -moz-transform: translate(0px, 5px);
-  -ms-transform: translate(0px, 5px);
-  -o-transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  transform: translate(0px, 5px);
-  opacity: 1;
+.accordion .content p {
+  color: rgba(48, 69, 92, 0.8);
+  font-size: 0.8em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
 }
-.steps_wrap #milestones li:hover {
-  transform: scale(1.2, 1.2);
-  transition: all .5s ease;
+.accordion ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
 }
-.steps_wrap #milestones li .gonav:hover {
-  transform: scale(0);
-  transition: all .5s ease;
+.accordion ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
-.steps_wrap .active {
-  /* padding:3px 7px; */
-  border-bottom: 1px solid #03a9f4;
-  border-top: 1px solid #03a9f4;
+.accordion ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
 }
-.steps_wrap #timeline li {
-  transition: all 0.7s ease;
+.accordion ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.accordion ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.accordion ul li:last-of-type {
+  padding-bottom: 0;
+}
+.accordion ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  /* указатель на панели заголовка */
+  right: 25px;
+}
+.accordion ul li i:before,
+.accordion .accordion ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #ecf0f1;
+  width: 0.1875em;
+  height: 0.5625em;
+}
+.accordion ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.accordion ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.accordion ul li input[type=checkbox]:checked ~ div.content {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.accordion ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordion ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+.accordion div.content,
+.accordion ul li i:before,
+.accordion ul li i:after {
+  transition: all 0.5s ease-in-out;
 }
 /*-------------------------------------------------------------------Форма отправки заявки*/
 .form-wrapper {
@@ -3025,6 +3123,16 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     flex-direction: column;
   }
 }
+/* ------------------------------------------------------------------Аккордион */
+@media (max-width: 550px) {
+  .accordion {
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+}
 @media (max-width: 480px) {
   html {
     text-size-adjust: none;
@@ -3173,29 +3281,13 @@ i.logo {
   color: #fff;
 }
 /*-------------------------------стили таблиц*/
-table {
+table.table-admin {
   background: white;
   max-width: 100%;
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-}
-th {
-  font-weight: bold;
-  color: #1a1a1a;
-  border-bottom: 2px solid #00b120;
-  padding: 0.6em 0.5em;
-}
-td {
-  color: #333;
-  border-bottom: 1px solid #cccccc;
-  padding: 0.65em 0.5em;
-  transition: .3s linear;
-}
-tr:hover td {
-  background: #b1ffc6;
-}
-/*.btn-del {
+  /*.btn-del {
         color: @color-gray-light;
         cursor: pointer;
         font-size: 1.875em;
@@ -3207,6 +3299,22 @@ tr:hover td {
             color: red;
         }
     }*/
+}
+table.table-admin th {
+  font-weight: bold;
+  color: #1a1a1a;
+  border-bottom: 2px solid #00b120;
+  padding: 0.6em 0.5em;
+}
+table.table-admin td {
+  color: #333;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.65em 0.5em;
+  transition: .3s linear;
+}
+table.table-admin tr:hover td {
+  background: #b1ffc6;
+}
 /*------------------блог*/
 .admin-create a.admin-btn {
   position: absolute;

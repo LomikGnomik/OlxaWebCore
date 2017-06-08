@@ -523,6 +523,11 @@ textarea {
                             color: @font-color-reverce;
                         }
                     }
+
+                    a.link.active:focus {
+                        background-color: @color-base;
+                        color: @font-color-reverce;
+                    }
                 }
             }
 
@@ -2802,227 +2807,318 @@ section.about {
         }
     }
 }
+/*---------------------------------------------------------Страница услуги service */
 
-/*--------------------------------------------------------------------Этапы работы steps*/
 
-.steps_wrap {
-    border: 3px solid white;
-    background: @color-success-lighter2;
-    overflow: hidden;
+table.service {
+    background: white;
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
 
-    .flex-col {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    td {
+        color: @color-base;
+        border-bottom: 1px solid @color-gray-light;
+        padding: 0 0.3em;
+        transition: .3s linear;
+        max-width:2em;
+        line-height:1.5em;
     }
 
-    .box {
-        text-align: center;
-        margin: 0 auto;
-        padding: 30px;
+    tr:hover td {
+        background: @color-base-lighter2;
     }
 
-    ul li, a {
-        list-style-type: none;
-        text-decoration: none;
-        color: inherit;
-    }
-
-
-
-    #milestones li {
-        margin: 12px auto;
-        padding: 20px 0px;
-    }
-
-    .gonav {
-        display: inline-block;
-        margin: 5px 15px !important;
-        padding: 6px 10px;
-        /* line-height: 75px; */
-        /* font-size: 13px; */
-    }
-
-
-    .hide {
-        opacity: 0.9;
-        /* height: 80px; */
-        overflow: hidden;
-        /* display: none; */
-    }
-
-
-
-    .highlight {
-        background: #0072a7;
-        border: 2px solid #0087c3;
-        width: 10%;
-        color: white;
-    }
-
-
-    .content {
-        max-width: 480px;
-        margin: 2em auto;
-        border: 1px solid black;
-        background-color: white;
-        opacity: 1;
-        padding: 30px;
-        overflow: hidden;
-        height: 235px;
-        top: 126px;
-        left: 0;
-        right: 0;
-        z-index: 10;
-    }
-
-    .btn-next {
-        /*  position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;*/
-        //  margin-top:20em;
-    }
-
-    .btn-pre {
-        /*   position: absolute;
-    top: -5px;
-    left: 0;
-    right: 0;*/
-    }
-
-    #timeline, #milestones {
-        margin: 0 auto;
-        position: relative;
-        padding-left: 0;
-    }
-
-    #timeline {
-    }
-
-    .vertigo {
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-    }
-
-    .vertigo li {
-        list-style: none;
-        padding: 15px 0px;
-        display: inline-block;
-        position: relative;
-        height: 235px;
-        padding: 50px 30px;
-    }
-
-    .vertigo li img {
-        float: left;
-        margin-right: 10px;
-    }
-
-    .vertigo li p {
-        margin: 0px;
-        text-align: center;
-        color: #404c6a;
-    }
-
-    .header {
-        width: 860px;
-        height: 560px;
-        position: fixed;
-        /* top: 20%; */
-        /* left: 25%; */
-        overflow: hidden;
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-        /* margin-left: 20%; */
-        margin-right: 0;
-        padding-left: 100px;
-    }
-
-    .blur {
-        -webkit-filter: blur(10px);
-        width: 100%;
-        height: 100%;
-        position: absolute;
+    td.add {
+        color: @color-gray-light;
+        cursor: pointer;
+        font-size: 1.875em;
+        text-decoration: dashed;
+        right: 0.312em;
         top: 0;
-        left: 0;
-    }
+        text-align:end;
 
-    .color {
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
-        opacity: 0.7;
-    }
-
-
-    #years {
-        text-align: center;
-        padding: 2px 1px;
-        border-left: 2px solid black;
-        border-right: 2px solid black;
-        color: #222;
-        line-height: 16px;
-        width: 10%;
-        margin: 0 auto;
-        margin-top: 18px;
-    }
-
-    .grow {
-        transition: all .2s ease;
-    }
-
-    .grow:hover {
-        transform: scale(1.1);
-    }
-
-    .move-up, .move-down {
-        transition: all .2s ease;
-        opacity: 0.8;
-    }
-
-    .move-up:hover {
-        -moz-transform: translate(0px, -5px);
-        -ms-transform: translate(0px, -5px);
-        -o-transform: translate(0px, -5px);
-        -webkit-transform: translate(0px, -5px);
-        transform: translate(0px, -5px);
-        opacity: 1;
-    }
-
-    .move-down:hover {
-        -moz-transform: translate(0px, 5px);
-        -ms-transform: translate(0px, 5px);
-        -o-transform: translate(0px, 5px);
-        -webkit-transform: translate(0px, 5px);
-        transform: translate(0px, 5px);
-        opacity: 1;
-    }
-
-    #milestones li:hover {
-        transform: scale(1.2,1.2);
-        transition: all .5s ease;
-    }
-
-
-    #milestones li .gonav:hover {
-        transform: scale(0);
-        transition: all .5s ease;
-    }
-
-    .active {
-        /* padding:3px 7px; */
-        border-bottom: 1px solid #03a9f4;
-        border-top: 1px solid #03a9f4;
-    }
-
-    #timeline li {
-        transition: all 0.7s ease;
+        &:hover {
+            color: #1bdb68;
+        }
     }
 }
 
+/*--------------------------------------------------------------------Этапы работы steps*/
+.steps {
+    h1 {
+        text-align: center;
+        line-height: 3;
+    }
 
+    section.sub-nav {
+        text-align: center;
+        padding: 1em;
 
+        div {
+            display: inline-block;
+
+            a {
+                padding: 0.62em;
+                border: 1px solid darkGray;
+                border-radius: 4px;
+                transition: property(all);
+                transition: duration(0.2s);
+                transition: timing-function(ease-in-out);
+
+                &:hover {
+                    background: darkGray;
+                }
+            }
+
+            &.active-slide > a {
+                background: darkGray;
+            }
+        }
+    }
+
+    section.slider {
+        //outer:container(100%);
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+
+        .controls {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+
+            .prev,
+            .next {
+                position: absolute;
+                top: 50%;
+                margin-top: -42px;
+                opacity: 0.62;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .prev {
+                left: 20px;
+            }
+
+            .next {
+                right: 20px;
+            }
+        }
+
+        .slide {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            transition: property(transform);
+            transition: duration(.5s);
+            transition: timing-function(ease-in);
+
+            &.slide-1 {
+                background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), darkslategray;
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: 60%;
+            }
+
+            &.slide-2 {
+                background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), DarkCyan;
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: 60%;
+            }
+
+            &.slide-3 {
+                background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), DarkGoldenRod;
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: 60%;
+            }
+
+            &.slide-4 {
+                background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), LightSlateGray;
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: 60%;
+            }
+
+            &.active-slide {
+                transform: (translateX(0));
+                z-index: 3;
+            }
+
+            &.move-right,
+            &.next-slide {
+                transform: (translateX(100%));
+                z-index: 1;
+            }
+
+            &.move-left,
+            &.previous-slide {
+                transform: (translateX(-100%));
+                z-index: 1;
+            }
+
+            &.recent-slide {
+                z-index: 2;
+            }
+
+            .text-content {
+                /*@include
+                span-columns(4);
+                @include
+                shift(1);*/
+                padding: 70px 0;
+                text-align: left;
+            }
+
+            .image-content {
+                /*@include
+                span-columns(7);*/
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+/*----------------------------------------------------------------Аккордион*/
+.accordion {
+    width: 100%;
+    // max-width: 600px;
+    min-height: 0;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fefffa;
+    overflow: hidden;
+    /* заголовки панелей аккордеона */
+    h2 {
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        display: block;
+        margin: 0;
+        padding: 10px 25px;
+        cursor: pointer;
+        color: @font-color-reverce;
+        background: @color-base;
+        border-top: 1px solid @color-base-lighter2;
+        border-bottom: 1px solid @color-base-darken2;
+    }
+
+    .content {
+        position: relative;
+        overflow: hidden;
+        // max-height: 800px;
+        opacity: 1;
+        transform: translate(0, 0);
+
+        p {
+            color: rgba(48, 69, 92, 0.8);
+            font-size: @size-font-small;
+            line-height: 1.2em;
+            letter-spacing: 1px;
+         //   padding: 0 1.2em;
+        }
+    }
+    /* Формируем неупорядоченный список */
+    ul {
+        list-style: none;
+        perspective: 900;
+        padding: 0;
+        margin: 0;
+    }
+    /* Определяем и формируем отдельный элемент списка 
+ * в который поместим скрытый флажек,
+ * заголовок панелей и блок с содержанием
+*/
+    ul li {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+    /* устанавливаем время ожидания перед воспроизведением анимации 
+ * на основе нумерации в дереве элементов
+*/
+    ul li:nth-of-type(1) {
+        animation-delay: 0.5s;
+    }
+
+    ul li:nth-of-type(2) {
+        animation-delay: 0.75s;
+    }
+
+    ul li:nth-of-type(3) {
+        animation-delay: 1s;
+    }
+
+    ul li:last-of-type {
+        padding-bottom: 0;
+    }
+
+    ul li i {
+        position: absolute;
+        transform: translate(-6px, 0);
+        margin-top: 16px;
+        /* указатель на панели заголовка */
+        right: 25px;
+    }
+    /*указатель */
+    ul li i:before, .accordion ul li i:after {
+        content: "";
+        position: absolute;
+        background-color: @font-color-reverce;
+        width: 0.1875em;
+        height: 0.5625em;
+    }
+    /* ерансформация указателя при переключении */
+    ul li i:before {
+        transform: translate(-2px, 0) rotate(45deg);
+    }
+
+    ul li i:after {
+        transform: translate(2px, 0) rotate(-45deg);
+    }
+
+    ul li input[type=checkbox] {
+        position: absolute;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+    }
+    /* Когда установлен checked блок скрыт*/
+    ul li input[type=checkbox]:checked ~ div.content {
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        transform: translate(0, 50%);
+    }
+    /* А указатель показывает вниз */
+    ul li input[type=checkbox]:checked ~ i:before {
+        transform: translate(2px, 0) rotate(45deg);
+    }
+
+    ul li input[type=checkbox]:checked ~ i:after {
+        transform: translate(-2px, 0) rotate(-45deg);
+    }
+    /*эффект перехода между двумя состояниями указателя */
+    div.content, ul li i:before, ul li i:after {
+        transition: all 0.5s ease-in-out;
+    }
+}
 /*-------------------------------------------------------------------Форма отправки заявки*/
-
 .form-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -3200,13 +3296,7 @@ section.about {
         justify-content: space-between;
     }
 }
-
-
-
-
-
 /*---------------------------------------------------------------модальное окно для оформления заявки*/
-
 .modal {
 
     h4 {
@@ -3336,9 +3426,7 @@ section.about {
         }
     }
 }
-
 /*-------------------------------------------форма внутри модального окна */
-
 .modal-form {
 
 
@@ -3439,11 +3527,7 @@ section.about {
         }
     }
 }
-
-
-
 /*-----------------------------------------------------------Checkout-------Страница заказа*/
-
 .form-wrap {
     justify-content: space-between;
 
@@ -3482,11 +3566,7 @@ section.about {
         }
     }
 }
-
 /*-------------------------------------------------------------------------Страница Лендинга*/
-
-
-
 section.landing-description {
     min-height: 100vh;
     background: @color-base-lighter2;
@@ -3639,15 +3719,7 @@ section.landing-privilege {
         }
     }
 }
-
-
-
-
-
-
-
 /*------------------------------------------------------------------------ТАБЫ*/
-
 section.tabs {
     position: relative;
     width: 100%;
@@ -3732,11 +3804,7 @@ section.tabs {
         opacity: 1;
     }
 }
-
-
-
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
-
 #toTop {
     width: 1.5em;
     position: fixed;
@@ -3791,9 +3859,7 @@ section.tabs {
     .tariff-wrap {
         .row
     }
-
     /*тарифы в промосайтах*/
-
     .promo-wrapper {
         max-width: 22em;
     }
@@ -3823,29 +3889,19 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
-
     /*-------------------------------------------------Блог*/
-
     .post__item {
         width: 48.5%;
     }
-
     /*------------------------------------------------------- портфолио*/
-
     .medium-half {
         flex-basis: 31%;
     }
-
-
-
     /*--------------------------------------------------цены*/
-
     .solution-item {
         width: 33.333%;
     }
-
     /*-----------------------------------------------chekout*/
-
     .form-wrap {
         .row;
 
@@ -3858,11 +3914,7 @@ section.tabs {
             }
         }
     }
-
     /*------------------------------------------Страница Лендинга*/
-
-
-
     .description-wrap {
         .row;
     }
@@ -3878,9 +3930,7 @@ section.tabs {
     .privilege-row {
         .row;
     }
-
     /*----------------------------------------------------форма заявки*/
-
     .btn-form-group {
         .row
     }
@@ -3947,27 +3997,19 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
-
     /*------------------------------------------------------- портфолио*/
-
     .medium-half {
         flex-basis: 31%;
     }
-
     /*-------------------------------------------------Блог*/
-
     .post__item {
         width: 48.5%;
     }
-
     /*------------------------------------------------------цены*/
-
     .solution-item {
         width: 33.333%;
     }
-
     /*---------------------------------------------------chekout*/
-
     .form-wrap {
         .row;
 
@@ -3983,11 +4025,7 @@ section.tabs {
             }
         }
     }
-
     /*-------------------------------------------Страница Лендинга*/
-
-
-
     .description-wrap {
         .row;
     }
@@ -4003,9 +4041,7 @@ section.tabs {
     .privilege-row {
         .row;
     }
-
     /*----------------------------------------------------форма заявки*/
-
     .btn-form-group {
         .row
     }
@@ -4049,19 +4085,14 @@ section.tabs {
         display: flex;
         justify-content: space-between;
     }
-
     /*-------------------------------------------------Блог*/
-
     .post__item {
         width: 100%;
     }
-
     /*------------------------------------------------------- портфолио*/
-
     .medium-half {
         flex-basis: 31%;
     }
-
     /*.grid.isotope-grid.col-3 .grid-sizer,
 
     .grid.isotope-grid.col-3 .grid-item {
@@ -4069,17 +4100,11 @@ section.tabs {
         width: 48.75%;
 
     }*/
-
-
-
     /*--------------------------------------------------------цены*/
-
     .solution-item {
         width: 50%;
     }
-
     /*------------------------------------------------------chekout*/
-
     .form-wrap {
         .row;
 
@@ -4089,11 +4114,7 @@ section.tabs {
             width: 94%;
         }
     }
-
     /*-------------------------------------------Страница Лендинга*/
-
-
-
     .description-wrap {
         .row;
     }
@@ -4109,9 +4130,7 @@ section.tabs {
     .privilege-row {
         .row;
     }
-
     /*----------------------------------------------------форма заявки*/
-
     .btn-form-group {
         .column
     }
@@ -4150,9 +4169,7 @@ section.tabs {
     .comment {
         display: block;
     }
-
     /*type file в окне заяки*/
-
     .file_upload > div {
         display: none;
     }
@@ -4162,11 +4179,7 @@ section.tabs {
     .file_upload > button {
         width: 100%;
     }
-
-
-
     /*-------------------------------------------------- портфолио*/
-
     .grid.isotope-grid {
         overflow: hidden;
     }
@@ -4199,27 +4212,19 @@ section.tabs {
         margin-bottom: 2.5%;
         backface-visibility: hidden;
     }
-
     /*------------------------------------------------------- портфолио*/
-
     .medium-half {
         flex-basis: 46%;
     }
-
     /*-------------------------------------------------Блог*/
-
     .post__item {
         width: 100%;
     }
-
     /*---------------------------------------------------------цены*/
-
     .solution-item {
         flex-basis: 46%;
     }
-
     /*-------------------------------------------------------chekout*/
-
     input.inputs-long {
         width: 73%;
     }
@@ -4229,13 +4234,8 @@ section.tabs {
     .details {
         width: 117%;
     }
-
     /*-------------------------------------------Страница Лендинга*/
-
-
-
     /*----------------------------------------------------форма заявки*/
-
     .btn-form-group {
         .column
     }
@@ -4250,9 +4250,7 @@ section.tabs {
 
 
 @media screen and (max-width:640px) {
-
     /*------------------------------------------------------портфолио*/
-
     .portfolio-item {
         display: block;
         text-decoration: none;
@@ -4348,43 +4346,24 @@ section.tabs {
         opacity: 1;
         transform: scale(1);
     }
-
     /*------------------------------------------------------- портфолио*/
-
     .medium-half {
         flex-basis: 46%;
     }
-
     /*-------------------------------------------------Блог*/
-
     .post__item {
         width: 100%;
     }
-
     /*-------------------------------------------------------цены*/
-
-
-
     .solution-item {
         flex-basis: 46%;
     }
-
-
-
     /*----------------------------------------------------chekout*/
-
     input.inputs-long {
         width: 73.5%;
     }
-
     /*-------------------------------------------Страница Лендинга*/
-
-
-
-
-
     /*----------------------------------------------------форма заявки*/
-
     .btn-form-group {
         .column
     }
@@ -4395,8 +4374,16 @@ section.tabs {
         }
     }
 }
-
-
+/* ------------------------------------------------------------------Аккордион */
+@media (max-width: 550px) {
+    .accordion {
+        transform: translate(0, 0);
+        max-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        left: 0;
+    }
+}
 
 @media (max-width: 480px) {
 
@@ -4434,11 +4421,7 @@ section.tabs {
     .comment {
         display: block;
     }
-
-
-
     /*type file в окне заяки*/
-
     .file_upload > div {
         display: none;
     }
@@ -4448,13 +4431,10 @@ section.tabs {
     .file_upload > button {
         width: 100%;
     }
-
     /*------------------------------------------------------- портфолио*/
-
     .medium-half {
         flex-basis: 90%;
     }
-
     /*.grid.isotope-grid.col-3 .grid-sizer,
 
     .grid.isotope-grid.col-3 .grid-item {
@@ -4464,75 +4444,42 @@ section.tabs {
         width: 100%;
 
         margin-bottom: 30px;*/
-
-
-
     /*---------------------------------------------------------Блог*/
-
     .post__item {
         width: 100%;
     }
-
     /*-----------------------------------------------------------цены*/
-
     .solution-item {
         flex-basis: 90%;
     }
-
     /*--------------------------------------------------------chekout*/
-
     input.inputs-long {
         width: 22em;
     }
-
     /*-------------------------------------------Страница Лендинга*/
-
-
-
-
-
     /*----------------------------------------------------форма заявки*/
-
     .btn-form-group {
         .column
     }
 }
 
 
-
-
-
 @media screen and (max-width:412px) {
-
     /*-----------------------------------------------------------chekout*/
-
     input.inputs-long {
         width: 96.5%;
     }
 }
 
 
-
 @media screen and (max-width:320px) {
-
     /*-----------------------------------------------------------chekout*/
-
     input.inputs-long {
         width: 110%;
     }
 }
-
-
-
-
-
-
 /*------------------------------------------------АДМИНКА--------------------------------------*/
-
-
-
 /*------------------------------------------Layout Admin*/
-
 .wrapper-admin {
 }
 
@@ -4590,11 +4537,12 @@ i.logo {
     //width:15em;
     color: #fff;
 }
-.panel-group{
-    width:100%;
-    background:@color-success-lighter1;
-    margin:1.5em auto;
-    padding:0 0.5em;
+
+.panel-group {
+    width: 100%;
+    background: @color-success-lighter1;
+    margin: 1.5em auto;
+    padding: 0 0.5em;
 }
 
 
@@ -4630,33 +4578,31 @@ i.logo {
     }
 }
 /*-------------------------------стили таблиц*/
-
-table {
+table.table-admin {
     background: white;
     max-width: 100%;
     width: 100%;
     border-collapse: collapse;
     text-align: left;
-}
 
-th {
-    font-weight: bold;
-    color: @color-base-darken1;
-    border-bottom: 2px solid @color-more-darken1;
-    padding: 0.6em 0.5em;
-}
+    th {
+        font-weight: bold;
+        color: @color-base-darken1;
+        border-bottom: 2px solid @color-more-darken1;
+        padding: 0.6em 0.5em;
+    }
 
-td {
-    color: @color-base;
-    border-bottom: 1px solid @color-gray-light;
-    padding: 0.65em 0.5em;
-    transition: .3s linear;
-}
+    td {
+        color: @color-base;
+        border-bottom: 1px solid @color-gray-light;
+        padding: 0.65em 0.5em;
+        transition: .3s linear;
+    }
 
-tr:hover td {
-    background: @color-more-lighter2;
-}
-/*.btn-del {
+    tr:hover td {
+        background: @color-more-lighter2;
+    }
+    /*.btn-del {
         color: @color-gray-light;
         cursor: pointer;
         font-size: 1.875em;
@@ -4668,12 +4614,13 @@ tr:hover td {
             color: red;
         }
     }*/
+}
+
+
 
 header.header-admin {
 }
-
 /*------------------блог*/
-
 .admin-create {
 
     a.admin-btn {
