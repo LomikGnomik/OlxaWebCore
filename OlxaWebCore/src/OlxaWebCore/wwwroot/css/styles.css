@@ -2021,6 +2021,8 @@ table.service td.add:hover {
 /*--------------------------------------------------------------------Этапы работы steps*/
 .steps-wrap {
   padding: 10em 0 30em;
+}
+.steps-wrap * {
   transition: all 1000ms;
 }
 .steps-wrap header {
