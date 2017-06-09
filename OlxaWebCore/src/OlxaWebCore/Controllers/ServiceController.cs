@@ -21,15 +21,11 @@ namespace OlxaWebCore.Controllers
         {
          IEnumerable<Service> serviceUser =  repository.Services.Where(s => s.Published == true);
 
-            ViewBag.CategoryService=repository.Services
+            ViewBag.CategoryService = serviceUser
                 .Select(x => x.Category)
-                .Distinct()
-                .OrderBy(x => x);
-
-
-
-
-            return View(repository.Services);
+                .Distinct();
+                
+            return View(serviceUser);
         }
 
         //ADMIN

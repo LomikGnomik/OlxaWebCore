@@ -29,7 +29,7 @@ namespace OlxaWebCore.Controllers
         
         public ViewResult OrderList()
         {
-            return View(repository.Orders);
+            return View(repository.Orders.OrderByDescending(x=>x.DateOrder));
         }
 
         

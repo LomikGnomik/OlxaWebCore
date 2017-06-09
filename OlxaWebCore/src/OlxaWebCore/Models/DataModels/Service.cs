@@ -18,5 +18,7 @@ namespace OlxaWebCore.Models.DataModels
         public virtual bool Published { get; set; }
 
         public virtual string Category { get; set; }
+
+      //  public virtual int Sorted { get; set; } // вес сортировки
     }
 }

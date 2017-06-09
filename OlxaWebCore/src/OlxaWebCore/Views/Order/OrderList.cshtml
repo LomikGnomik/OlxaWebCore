@@ -12,23 +12,30 @@
         <table class="table-admin">
             <tr>
                 <th>ID</th>
+                <th>Дата</th>
                 <th>Имя</th>
                 <th>Email</th>
                 <th>Комментарий</th>
                 <th>Файлы</th>
-                
+                <th>Заметки</th>
+                <th>Есть в CRM?</th>
             </tr>
             @foreach (var order in @Model)
             {
                 <tr>
                     <td>@order.OrderID</td>
+                    <td>@order.DateOrder</td>
                     <td><a asp-controller="Order" asp-action="Order" asp-route-orderId="@order.OrderID">@order.Name</a></td>
                     <td>@order.Email</td>
                     <td>@order.Comment</td>
                     <td>@order.File</td>
+                    <td><input type="text" asp-for="@order.Note"></td>
+                    <td><input type="checkbox" asp-for="@order.AddCRM"></td>
+                    <td>@order.UrlOrder</td>
+
                     @*<td><a href="#" class="btn-del">Х</a></td>*@
                 </tr>
             }
         </table>
     </div>
-    
+

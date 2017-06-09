@@ -2000,7 +2000,7 @@ table.service td {
   padding: 0 0.3em;
   transition: .3s linear;
   max-width: 2em;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 table.service tr:hover td {
   background: #a6a6a6;

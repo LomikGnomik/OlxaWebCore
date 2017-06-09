@@ -25,6 +25,7 @@ namespace OlxaWebCore.Models.Repository
         {
             if (order.OrderID == 0)
             {
+                order.DateOrder = DateTime.Now;
                 context.Orders.Add(order);
             }
             else
@@ -41,7 +42,6 @@ namespace OlxaWebCore.Models.Repository
                     dbEntry.UrlOrder = order.UrlOrder;
                     dbEntry.Note = order.Note;
                     dbEntry.AddCRM = order.AddCRM;
-
                 }
             }
             context.SaveChanges();
