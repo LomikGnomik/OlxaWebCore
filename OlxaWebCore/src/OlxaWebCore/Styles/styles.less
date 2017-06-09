@@ -2822,8 +2822,8 @@ table.service {
         border-bottom: 1px solid @color-gray-light;
         padding: 0 0.3em;
         transition: .3s linear;
-        max-width:2em;
-        line-height:1.5em;
+        max-width: 2em;
+        line-height: 1.5em;
     }
 
     tr:hover td {
@@ -2837,7 +2837,8 @@ table.service {
         text-decoration: dashed;
         right: 0.312em;
         top: 0;
-        text-align:end;
+        text-align: end;
+        padding-right:0.7em;
 
         &:hover {
             color: #1bdb68;
@@ -2846,153 +2847,126 @@ table.service {
 }
 
 /*--------------------------------------------------------------------Этапы работы steps*/
-.steps {
-    h1 {
-        text-align: center;
-        line-height: 3;
+.steps-wrap {
+    padding: 10em 0 30em;
+    transition: all 1000ms;
+
+    @min_unit: 0.1rem;
+    @white_tint: rgba(255,255,255,0.2);
+    @black_tint: rgba(0,0,0,0.2);
+    @c_1: #38e;
+    @c_2: #6f8db3;
+
+
+
+
+    header {
+        width: 100vw;
+        margin: 0;
+        float: left;
+        padding: @min_unit*20 0;
     }
 
-    section.sub-nav {
-        text-align: center;
-        padding: 1em;
-
-        div {
-            display: inline-block;
-
-            a {
-                padding: 0.62em;
-                border: 1px solid darkGray;
-                border-radius: 4px;
-                transition: property(all);
-                transition: duration(0.2s);
-                transition: timing-function(ease-in-out);
-
-                &:hover {
-                    background: darkGray;
-                }
-            }
-
-            &.active-slide > a {
-                background: darkGray;
-            }
-        }
-    }
-
-    section.slider {
-        //outer:container(100%);
+    #steps {
+        float: left;
+        left: 50%;
         position: relative;
-        height: 300px;
-        overflow: hidden;
+        transform: translateX(-50%);
+        background-color: #fff;
+        box-shadow: -@min_unit*2.5 @min_unit*2.5 @min_unit*2.5 rgba(0,0,0,0.1), @min_unit*2.5 @min_unit*2.5 @min_unit*2.5 rgba(0,0,0,0.1), 0 @min_unit*2 @min_unit*2 rgba(0,0,0,0.1);
+    }
 
-        .controls {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
+    #steps > div {
+        float: left;
+        border-radius: 50%;
+        background-color: @c_2;
+        padding: 1vw;
+        margin: 1vw;
+        box-sizing: border-box;
+        width: 4vw;
+        height: 4vw;
+        color: lighten( @c_1, 30% );
+        font-size: 2rem;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: inset 100px 0 0 darken( @c_1, 20% );
+    }
 
-            .prev,
-            .next {
-                position: absolute;
-                top: 50%;
-                margin-top: -42px;
-                opacity: 0.62;
+    #steps > div.active {
+        color: lighten( @c_1, 100%);
+        background-color: @c_1;
+        box-shadow: inset 0 0 0 @c_1;
+    }
 
-                &:hover {
-                    opacity: 1;
-                }
-            }
+    #steps div.done {
+        color: @c_1;
+        box-shadow: inset -100px 0 0 lighten( @c_1, 20% );
+    }
 
-            .prev {
-                left: 20px;
-            }
+    .article_container {
+        float: left;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40vw;
+    }
 
-            .next {
-                right: 20px;
-            }
-        }
+    article {
+        width: 100%;
+        top: 0;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: -@min_unit*2.5 @min_unit*2.5 @min_unit*2.5 rgba(0,0,0,0.1), @min_unit*2.5 @min_unit*2.5 @min_unit*2.5 rgba(0,0,0,0.1), 0 @min_unit*2 @min_unit*2 rgba(0,0,0,0.1);
+    }
 
-        .slide {
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            transition: property(transform);
-            transition: duration(.5s);
-            transition: timing-function(ease-in);
+    article.active_m_2 {
+        left: -110vw;
+        opacity: 0;
+    }
 
-            &.slide-1 {
-                background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), darkslategray;
-                background-position: right;
-                background-repeat: no-repeat;
-                background-size: 60%;
-            }
+    article.active_m_1 {
+        left: -110%;
+        opacity: 0.3;
+    }
 
-            &.slide-2 {
-                background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), DarkCyan;
-                background-position: right;
-                background-repeat: no-repeat;
-                background-size: 60%;
-            }
+    article.active {
+        left: 0;
+        opacity: 1;
+    }
 
-            &.slide-3 {
-                background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), DarkGoldenRod;
-                background-position: right;
-                background-repeat: no-repeat;
-                background-size: 60%;
-            }
+    article.active_p_1 {
+        left: 110%;
+        opacity: 0.3;
+    }
 
-            &.slide-4 {
-                background: url("http://jirimaha.com/avg/img/product/slider1-bg.png"), LightSlateGray;
-                background-position: right;
-                background-repeat: no-repeat;
-                background-size: 60%;
-            }
+    article.active_p_2 {
+        left: 110vw;
+        opacity: 0;
+    }
 
-            &.active-slide {
-                transform: (translateX(0));
-                z-index: 3;
-            }
+    article * {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding: @min_unit*10;
+    }
 
-            &.move-right,
-            &.next-slide {
-                transform: (translateX(100%));
-                z-index: 1;
-            }
+    article h2 {
+        background-color: @c_1;
+        color: lighten( @c_1, 50% );
+        font-size: 1.5rem;
+        letter-spacing: @min_unit*1.2;
+    }
 
-            &.move-left,
-            &.previous-slide {
-                transform: (translateX(-100%));
-                z-index: 1;
-            }
-
-            &.recent-slide {
-                z-index: 2;
-            }
-
-            .text-content {
-                /*@include
-                span-columns(4);
-                @include
-                shift(1);*/
-                padding: 70px 0;
-                text-align: left;
-            }
-
-            .image-content {
-                /*@include
-                span-columns(7);*/
-                img {
-                    max-width: 100%;
-                }
-            }
-        }
+    article p {
+        width: 100%;
+        line-height: 1.2rem;
     }
 }
 /*----------------------------------------------------------------Аккордион*/
+
 .accordion {
     width: 100%;
-    // max-width: 600px;
     min-height: 0;
     display: block;
     position: relative;
@@ -3000,87 +2974,81 @@ table.service {
     padding: 0;
     background-color: #fefffa;
     overflow: hidden;
-    /* заголовки панелей аккордеона */
     h2 {
-        font-size: 16px;
+        font-size:1em;
         font-weight: 300;
         letter-spacing: 1px;
         display: block;
         margin: 0;
-        padding: 10px 25px;
+        padding: 0.6em 0.2em;
         cursor: pointer;
         color: @font-color-reverce;
         background: @color-base;
         border-top: 1px solid @color-base-lighter2;
-        border-bottom: 1px solid @color-base-darken2;
+        border-bottom: 1px solid @color-base-darken1;
+        //box-sizing: border-box;
     }
-
+    /*блоки с содержанием */
     .content {
         position: relative;
         overflow: hidden;
-        // max-height: 800px;
+        max-height: 50em;
         opacity: 1;
         transform: translate(0, 0);
-
-        p {
+        
+        .content p {
             color: rgba(48, 69, 92, 0.8);
-            font-size: @size-font-small;
+            font-size: @size-small;
             line-height: 1.2em;
             letter-spacing: 1px;
-         //   padding: 0 1.2em;
+            padding: 0 1.2em;
         }
     }
-    /* Формируем неупорядоченный список */
     ul {
         list-style: none;
-        perspective: 900;
+        //perspective: 900;
         padding: 0;
         margin: 0;
-    }
-    /* Определяем и формируем отдельный элемент списка 
- * в который поместим скрытый флажек,
- * заголовок панелей и блок с содержанием
-*/
-    ul li {
-        position: relative;
-        padding: 0;
-        margin: 0;
-    }
-    /* устанавливаем время ожидания перед воспроизведением анимации 
- * на основе нумерации в дереве элементов
-*/
-    ul li:nth-of-type(1) {
-        animation-delay: 0.5s;
-    }
 
-    ul li:nth-of-type(2) {
-        animation-delay: 0.75s;
-    }
+        li {
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+        /*ожидание начала анимации*/
+        :nth-of-type(1) {
+            animation-delay: 0.5s;
+        }
 
-    ul li:nth-of-type(3) {
-        animation-delay: 1s;
-    }
+        :nth-of-type(2) {
+            animation-delay: 0.75s;
+        }
 
-    ul li:last-of-type {
-        padding-bottom: 0;
-    }
+        :nth-of-type(3) {
+            animation-delay: 1s;
+        }
 
+        :last-of-type {
+           // padding-bottom: 0;
+        }
+    }
+    /*указатель переключения состояния аккордеона */
     ul li i {
         position: absolute;
         transform: translate(-6px, 0);
-        margin-top: 16px;
-        /* указатель на панели заголовка */
-        right: 25px;
+        margin-top: 1em;
+        /* расположим указатель на панели заголовка справа */
+        right: 1.5em;
     }
     /*указатель */
-    ul li i:before, .accordion ul li i:after {
+    ul li i:before, ul li i:after {
         content: "";
         position: absolute;
         background-color: @font-color-reverce;
         width: 0.1875em;
         height: 0.5625em;
     }
-    /* ерансформация указателя при переключении */
+    /* Добавляем элемент трансформации указателя при переключении */
     ul li i:before {
         transform: translate(-2px, 0) rotate(45deg);
     }
@@ -3088,7 +3056,6 @@ table.service {
     ul li i:after {
         transform: translate(2px, 0) rotate(-45deg);
     }
-
     ul li input[type=checkbox] {
         position: absolute;
         cursor: pointer;
@@ -3098,14 +3065,13 @@ table.service {
         padding: 0;
         opacity: 0;
     }
-    /* Когда установлен checked блок скрыт*/
+    /* Когда у флажка установлен checked блок с содержанием скрыт*/
     ul li input[type=checkbox]:checked ~ div.content {
         margin-top: 0;
         max-height: 0;
         opacity: 0;
         transform: translate(0, 50%);
     }
-    /* А указатель показывает вниз */
     ul li input[type=checkbox]:checked ~ i:before {
         transform: translate(2px, 0) rotate(45deg);
     }
@@ -3113,11 +3079,12 @@ table.service {
     ul li input[type=checkbox]:checked ~ i:after {
         transform: translate(-2px, 0) rotate(-45deg);
     }
-    /*эффект перехода между двумя состояниями указателя */
+    /* переход между двумя состояниями указателя */
     div.content, ul li i:before, ul li i:after {
         transition: all 0.5s ease-in-out;
     }
 }
+
 /*-------------------------------------------------------------------Форма отправки заявки*/
 .form-wrapper {
     width: 100%;
