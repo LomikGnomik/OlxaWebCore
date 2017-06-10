@@ -146,11 +146,13 @@ html,
 body {
     height: 100%;
     color: @color-gray-dark;
+    
 }
 
 
 
 *,
+body,
 *:before,
 *:after {
     margin: 0;
@@ -2581,8 +2583,9 @@ section.portfolio {
             }
         }
     }
-    .description-more{
-        margin:8em auto 2em;
+
+    .description-more {
+        margin: 8em auto 2em;
     }
 }
 
@@ -3790,12 +3793,46 @@ table.service {
 }
 /*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
+   
     min-height: 100vh;
-    background: @color-base-lighter2;
+   // background: @color-gray-dark;
     padding-bottom: @size-margin-section;
+    /*---------------эффект*/
+    canvas {
+        display: block;
+        vertical-align: bottom;
+    }
 
+    #particles-js {
+      //  overflow-x:hidden;
+        width: 100vw;
+        height: 100%;
+    }
 
-
+    h1 {
+        font-size: 7rem;
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        color: #FFF;
+        font-family: teko;
+        font-weight: 400;
+        text-shadow: 5px 5px #5F6D72;
+        text-transform: uppercase;
+    }
+    /*---------конец эффекта*/
+    p{
+        display:inline-block;
+        width:35em;
+        position: absolute;
+        top: 55%;
+        left: 35%;
+        color: #FFF;
+        font-family: teko;
+        font-weight: normal;
+       // text-shadow: 5px 5px #5F6D72;
+        text-transform: capitalize;
+    }
     .description-wrap {
         justify-content: space-between;
 

@@ -35,6 +35,7 @@ body {
   color: #333333;
 }
 *,
+body,
 *:before,
 *:after {
   margin: 0;
@@ -2735,8 +2736,39 @@ table.service td.add:hover {
 /*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
   min-height: 100vh;
-  background: #dae5f2;
   padding-bottom: 4em;
+  /*---------------эффект*/
+  /*---------конец эффекта*/
+}
+section.landing-description canvas {
+  display: block;
+  vertical-align: bottom;
+}
+section.landing-description #particles-js {
+  width: 100vw;
+  height: 100%;
+}
+section.landing-description h1 {
+  font-size: 7rem;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  color: #FFF;
+  font-family: teko;
+  font-weight: 400;
+  text-shadow: 5px 5px #5F6D72;
+  text-transform: uppercase;
+}
+section.landing-description p {
+  display: inline-block;
+  width: 35em;
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  color: #FFF;
+  font-family: teko;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 section.landing-description .description-wrap {
   justify-content: space-between;

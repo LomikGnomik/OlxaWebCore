@@ -3,21 +3,23 @@
 }
 
 <section class="landing-description">
-    <div class="container">
-        <div class="description-wrap">
-            <div class="description-img">
-                <img src="~/images/landing/post01.jpg" alt="Лендинг" />
-            </div>
-            <div class="description-title">
-                <h1>Лендинг</h1>
-                <p>
-                    Tincidunt integer eu augue augue nunc elit dolor,
-                    luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
-                    vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                </p>
-            </div>
-        </div> <!--description-wrap-->
-    </div> <!--container-->
+    <div id="particles-js">
+        <div class="container">
+            <div class="description-wrap">
+                @*<div class="description-img">
+                    <img src="~/images/landing/post01.jpg" alt="Лендинг" />
+                </div>*@
+                <div class="description-title">
+                    <h1>landing</h1>
+                    <p>
+                        Tincidunt integer eu augue augue nunc elit dolor,
+                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                    </p>
+                </div>
+            </div> <!--description-wrap-->
+        </div> <!--container-->
+    </div> <!--Эффект-->
 </section>
 
 <section class="landing-plus">
@@ -175,9 +177,9 @@
 </section>
 
 <section class="landing-steps">
-    <div class="container">
-
-    </div> <!--container-->
+    @*<div class="container">*@
+        @Html.Partial("_StepsPartialView")
+    @*</div>*@ <!--container-->
 </section>
 
 <section class="landing-tariff">
@@ -195,9 +197,7 @@
 
     </div>
 </section>
-<section>
-    @Html.Partial("_StepsPartialView")
-</section>
+
 <section>
 @await Component.InvokeAsync("OrderForm")
 </section>
