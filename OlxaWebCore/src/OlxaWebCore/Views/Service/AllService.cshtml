@@ -8,7 +8,6 @@
 
 
 <div class="container">
-    
         <div class="accordion">
             <ul>
                 @foreach (string category in @ViewBag.CategoryService)
@@ -17,7 +16,7 @@
                     <li>
                         <input type="checkbox">
                         <i></i>
-                        <h2 class="title_block">@category</h2>
+                        <h2 class="title_block">  @category</h2>
                         <div class="content">
                             <table class="service">
                                 @foreach (var service in Model)
@@ -28,20 +27,20 @@
                                             <td>@service.Title</td>
                                             <td>@service.Price</td>
                                             <td><a href="#">Пример</a></td>
-                                            <td class="add">+</td>
+                                            @*<td class="add">+</td>*@
                                         </tr>
                                     }
                                 }
                             </table>
                         </div>
                     </li>
-
                 }
             </ul>
         </div>
-   
-
 </div>
+@*<section>
+    @await Component.InvokeAsync("OrderForm")
+</section>*@
 
 
 
