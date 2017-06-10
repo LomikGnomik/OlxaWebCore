@@ -110,7 +110,7 @@ input[type=url]:focus,
 input[type=time]:focus,
 input[type=tel]:focus,
 input[type=search]:focus {
-  outline-color: #00e43c;
+  outline-color: #06c438;
 }
 textarea {
   resize: vertical;
@@ -157,13 +157,13 @@ textarea {
   background: #ecf0f1;
 }
 .btn-primary {
-  background: #333;
+  background: #3c6eaa;
   color: #fff;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
-  background: #1a1a1a;
+  background: #2f5d84;
 }
 .btn-icon-right {
   padding-right: 1.31em;
@@ -173,31 +173,31 @@ textarea {
   margin-top: -0.25em;
 }
 .btn-more {
-  background: #00e43c;
+  background: #06c438;
   color: #fff;
 }
 .btn-more:hover {
-  background: #00b120;
+  background: #04931e;
 }
 .btn-long {
   width: 100%;
 }
 .btn-ghost {
   background-color: transparent;
-  border-color: #333;
-  color: #333;
+  border-color: #3c6eaa;
+  color: #3c6eaa;
 }
 .btn-ghost:hover {
-  background: #333;
+  background: #3c6eaa;
   color: #fff;
 }
 .btn-ghost-more {
   background-color: transparent;
-  border-color: #00e43c;
-  color: #00e43c;
+  border-color: #06c438;
+  color: #06c438;
 }
 .btn-ghost-more:hover {
-  background: #00e43c;
+  background: #06c438;
   color: #fff;
 }
 /*---------------------------------------чекбоксы и радио*/
@@ -253,7 +253,7 @@ textarea {
 }
 .wrapper .navigation nav .main-menu li:hover > a {
   /*при выделении подменю сохраняется стиль*/
-  background-color: #333;
+  background-color: #3c6eaa;
   color: #ecf0f1;
 }
 .wrapper .navigation nav .main-menu .main-menu__item {
@@ -270,7 +270,7 @@ textarea {
   color: #333333;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a.active {
-  background-color: #333;
+  background-color: #3c6eaa;
   color: #ecf0f1;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a.active::after {
@@ -281,7 +281,7 @@ textarea {
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #333;
+  border-top: 6px solid #3c6eaa;
   left: 50%;
   bottom: -6px;
   margin-left: -6px;
@@ -296,11 +296,11 @@ textarea {
   transition: all 0.3s;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a.link:hover {
-  background-color: #333;
+  background-color: #3c6eaa;
   color: #ecf0f1;
 }
 .wrapper .navigation nav .main-menu .main-menu__item a.link.active:focus {
-  background-color: #333;
+  background-color: #3c6eaa;
   color: #ecf0f1;
 }
 .wrapper .navigation nav .submenu {
@@ -310,7 +310,7 @@ textarea {
   padding-left: 0;
   padding: 1em 0;
   list-style: none;
-  background-color: #333;
+  background-color: #3c6eaa;
   color: #ecf0f1;
   position: absolute;
   top: 100%;
@@ -333,10 +333,10 @@ textarea {
   margin-bottom: 0.3em;
   width: 85%;
   font-weight: 500;
-  border: 2px solid #00e43c;
+  border: 2px solid #06c438;
 }
 .wrapper .navigation nav .submenu .submenu__item a:hover {
-  background: #00e43c;
+  background: #06c438;
 }
 .wrapper .inner {
   display: flex;
@@ -347,7 +347,7 @@ textarea {
   display: inline-block;
   position: relative;
   padding: 0.5em 2.25em 0.5em 0.875em;
-  background-color: #333;
+  background-color: #3c6eaa;
   overflow: hidden;
 }
 .wrapper .inner .title::before {
@@ -388,22 +388,22 @@ textarea {
   transition: all 0.25s;
   font-size: 0.8em;
   font-weight: 600;
-  color: #a6a6a6;
+  color: #dae5f2;
 }
 .wrapper .inner .breadcrumbs a:hover {
-  color: #333;
-  border-color: #333;
+  color: #3c6eaa;
+  border-color: #3c6eaa;
 }
 .wrapper .inner .breadcrumbs span {
   font-size: 0.8em;
   font-weight: 600;
-  color: #333;
+  color: #3c6eaa;
 }
 .wrapper .inner .breadcrumbs .delimiter {
   /* стрелка переход*/
   font-weight: 100;
   font-size: 0.8em;
-  color: #a6a6a6;
+  color: #dae5f2;
 }
 .wrapper .inner .breadcrumbs > * {
   display: inline-block;
@@ -460,7 +460,7 @@ footer .top-footer .tools form button {
   right: 0;
   width: 3em;
   height: 100%;
-  background: #333;
+  background: #3c6eaa;
   cursor: pointer;
   border: none;
 }
@@ -514,11 +514,11 @@ footer .bottom-footer .footer-info .info-item ul a {
   text-decoration: none;
   color: #333333;
   padding: 0 1.75em 0 0.75em;
-  border: 1px solid #00e43c;
+  border: 1px solid #06c438;
   transition: all 0.3s;
 }
 footer .bottom-footer .footer-info .info-item ul a:hover {
-  background: #00e43c;
+  background: #06c438;
   color: #ecf0f1;
 }
 /*footer*/
@@ -537,12 +537,12 @@ section.content p {
 }
 section.content p::first-letter {
   font-weight: 900;
-  color: #333;
+  color: #3c6eaa;
   font-size: 1.25em;
   letter-spacing: 0.1em;
 }
 section.content p span {
-  color: #333;
+  color: #3c6eaa;
   font-weight: 900;
 }
 section.promo-site-slider .slider {
@@ -582,7 +582,7 @@ section.promo-site-slider a.slide_btn {
 }
 section.promo-site-slider .slide_btn.active,
 section.promo-site-slider .slide_btn:hover {
-  color: #333;
+  color: #3c6eaa;
   cursor: pointer;
 }
 section.promo-site-slider .directional_nav {
@@ -637,7 +637,7 @@ section.tariff .promo-wrapper {
   width: 100%;
   text-align: center;
   padding-top: 0.6em;
-  border: 2px solid #00e43c;
+  border: 2px solid #06c438;
   margin: 0 auto 1.88em;
 }
 section.tariff .promo-wrapper [class*="header-promo"] {
@@ -677,7 +677,7 @@ section.tariff .promo-wrapper ul li:last-child {
   display: inline-block;
   vertical-align: middle;
   font-size: 0.687em;
-  color: #333;
+  color: #3c6eaa;
   margin-top: -0.312em;
   margin-right: 0.05em;
 }
@@ -723,7 +723,7 @@ section.tariff .promo-wrapper ul li:last-child {
   display: inline-block;
   font-size: 0.8em;
   font-weight: normal;
-  border-bottom: 1px dashed #333;
+  border-bottom: 1px dashed #3c6eaa;
 }
 .blog .post .post__item .post-body .post-meta .post-comments {
   border-bottom: none;
@@ -736,7 +736,7 @@ section.tariff .promo-wrapper ul li:last-child {
   margin-bottom: 4.5em;
 }
 .blog .post .post__item .post-body .read-more {
-  color: #333;
+  color: #3c6eaa;
   text-decoration: dotted;
 }
 .blog .sidebar {
@@ -773,7 +773,7 @@ section.tariff .promo-wrapper ul li:last-child {
   height: 4.31em;
   padding-left: 2.8em;
   margin-bottom: 0;
-  background: #a6a6a6;
+  background: #dae5f2;
   transition: all 0.3s;
   border: none;
 }
@@ -790,7 +790,7 @@ section.tariff .promo-wrapper ul li:last-child {
   background: none;
   border: none;
   font-size: 16px -5;
-  color: #333;
+  color: #3c6eaa;
   padding: 0;
   margin-top: -0.5em;
 }
@@ -814,7 +814,7 @@ section.tariff .promo-wrapper ul li:last-child {
   display: block;
   color: #333333;
   padding: 0 1.75em 0 0.75em;
-  border: 1px solid #00e43c;
+  border: 1px solid #06c438;
   transition: all 0.3s;
 }
 .blog .sidebar .categories ul li a span {
@@ -826,11 +826,11 @@ section.tariff .promo-wrapper ul li:last-child {
   transition: color 0.3s;
 }
 .blog .sidebar .categories ul li .active {
-  background: #00e43c;
+  background: #06c438;
   color: #fff;
 }
 .blog .sidebar .categories ul li :hover {
-  background: #00e43c;
+  background: #06c438;
   color: #ecf0f1;
 }
 .blog .sidebar .categories ul li :hover > span {
@@ -879,7 +879,7 @@ section.tariff .promo-wrapper ul li:last-child {
   line-height: 1.5em;
   text-decoration: none;
   padding: 0 0.8em;
-  background-color: #333;
+  background-color: #3c6eaa;
   margin: 0.312em 0.5em 0.312em 0;
   white-space: nowrap;
   transition: background-color 0.3s;
@@ -893,7 +893,7 @@ section.tariff .promo-wrapper ul li:last-child {
   top: 0;
   right: -0.5em;
   border-top: 0.75em solid transparent;
-  border-left: 0.5em solid #333;
+  border-left: 0.5em solid #3c6eaa;
   border-bottom: 0.75em solid transparent;
   transition: border-color 0.3s;
 }
@@ -911,7 +911,7 @@ section.tariff .promo-wrapper ul li:last-child {
 .pagination .nav-links .current {
   cursor: default;
   color: #fff;
-  background: #333;
+  background: #3c6eaa;
 }
 /*-------------------------------------------------------------отдельная страница поста в блоге*/
 .post-inner-body {
@@ -938,7 +938,7 @@ section.tariff .promo-wrapper ul li:last-child {
   display: inline-block;
   font-size: 0.8em;
   font-weight: normal;
-  border-bottom: 1px dashed #333;
+  border-bottom: 1px dashed #3c6eaa;
 }
 .post-inner-body .post-meta .post-comments {
   border-bottom: none;
@@ -967,7 +967,7 @@ section.tariff .promo-wrapper ul li:last-child {
   line-height: 1.5em;
   text-decoration: none;
   padding: 0 0.8em;
-  background-color: #333;
+  background-color: #3c6eaa;
   margin: 0.312em 0.5em 0.312em 0;
   white-space: nowrap;
   transition: background-color 0.3s;
@@ -981,7 +981,7 @@ section.tariff .promo-wrapper ul li:last-child {
   top: 0;
   right: -0.5em;
   border-top: 0.75em solid transparent;
-  border-left: 0.5em solid #333;
+  border-left: 0.5em solid #3c6eaa;
   border-bottom: 0.75em solid transparent;
   transition: border-color 0.3s;
 }
@@ -1070,12 +1070,12 @@ section.tariff .promo-wrapper ul li:last-child {
   padding: 1em 0 1em 1.5em;
 }
 .wrapper-shop .shop-description .contains {
-  border: 1px solid #a6a6a6;
+  border: 1px solid #dae5f2;
   width: 50%;
   height: 15em;
 }
 .wrapper-shop .shop-description .extra {
-  background: #a6a6a6;
+  background: #dae5f2;
   position: relative;
   width: 50%;
   height: 15em;
@@ -1086,7 +1086,7 @@ section.tariff .promo-wrapper ul li:last-child {
   left: -12.5em;
   bottom: 0;
   border: 7.5em solid transparent;
-  border-right: 5em solid #a6a6a6;
+  border-right: 5em solid #dae5f2;
 }
 /*---------------------------------------------------------------------------------------Портфолио*/
 section.portfolio {
@@ -1606,7 +1606,213 @@ section.portfolio .gallery__item-link:hover > .thumbnail > .gallery__title {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/*-------------------------------------------------------------------------Страница ЦЕНЫ*/
+/*----------------------------------------------------------------отдельная страница портфолио*/
+.portfolio-inner-wrap section {
+  margin: 2em auto;
+}
+.portfolio-inner-wrap section.heading {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-inner-wrap section.heading i {
+  font-size: 2em;
+}
+.portfolio-inner-wrap section.heading .portfolio-inner-name {
+  text-align: center;
+  padding: 0 2em;
+  margin: 0 2em;
+}
+.portfolio-inner-wrap section.heading .portfolio-inner-name i.fa-arrow-circle-o-left {
+  font-size: 3em;
+}
+.portfolio-inner-wrap section.heading .portfolio-inner-name .h2 {
+  font-size: 2em;
+}
+.portfolio-inner-wrap section.heading .portfolio-inner-name a {
+  text-decoration: dashed;
+  color: #3c6eaa;
+}
+.portfolio-inner-wrap section.heading .portfolio-inner-name :visited {
+  color: #dae5f2;
+}
+.portfolio-inner-wrap section.heading .portfolio-inner-name :hover {
+  color: #21475f;
+}
+.portfolio-inner-wrap section.heading .portfolio-inner-name :active {
+  color: #21475f;
+}
+.portfolio-inner-wrap section.description {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio-inner-wrap section.description .small-description,
+.portfolio-inner-wrap section.description .review {
+  width: 30em;
+  text-align: justify;
+}
+.portfolio-inner-wrap section.device .tabs {
+  position: relative;
+  display: flex;
+}
+.portfolio-inner-wrap section.device .tabs .label-wrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -7.19em;
+}
+.portfolio-inner-wrap section.device .tabs .label-wrap i {
+  font-size: 3em;
+  margin: 0.5em;
+}
+.portfolio-inner-wrap section.device .tabs .label-wrap label {
+  color: #333333;
+  cursor: pointer;
+  display: block;
+  line-height: 2.8em;
+  font-weight: 600;
+  top: 0.125em;
+  text-align: center;
+  padding: 0 1em;
+}
+.portfolio-inner-wrap section.device .tabs input {
+  display: none;
+}
+.portfolio-inner-wrap section.device .tabs #tab_1:checked ~ .label-wrap #tab_l1,
+.portfolio-inner-wrap section.device .tabs #tab_2:checked ~ .label-wrap #tab_l2,
+.portfolio-inner-wrap section.device .tabs #tab_3:checked ~ .label-wrap #tab_l3 {
+  top: 0;
+  z-index: 3;
+}
+.portfolio-inner-wrap section.device .tabs .tabs_cont {
+  position: relative;
+  padding-top: 2em;
+  z-index: 2;
+}
+.portfolio-inner-wrap section.device .tabs .tabs_cont > div {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.portfolio-inner-wrap section.device .tabs #tab_1:checked ~ .tabs_cont #tab_c1,
+.portfolio-inner-wrap section.device .tabs #tab_2:checked ~ .tabs_cont #tab_c2,
+.portfolio-inner-wrap section.device .tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
+  position: static;
+  left: 0;
+  opacity: 1;
+  transition: opacity 2500ms;
+}
+.portfolio-inner-wrap section.device .tabs .devieces-outer-wrap-monitor {
+  width: 1040px;
+  height: 652px;
+  padding: 30px 28px 70px 28px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  border-radius: 32px;
+  position: relative;
+}
+.portfolio-inner-wrap section.device .tabs .devices-inner-wrap-monitor {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  overflow: hidden;
+}
+.portfolio-inner-wrap section.device .tabs .monitor {
+  max-height: 100%;
+  margin-right: -100px;
+  padding-right: 82px;
+  box-sizing: content-box;
+  overflow: auto;
+}
+.portfolio-inner-wrap section.device .tabs .devieces-outer-wrap-tablet {
+  border-radius: 48px;
+  padding: 18px 84px;
+  height: 601px;
+  width: 940px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  position: relative;
+  right: -4.5em;
+}
+.portfolio-inner-wrap section.device .tabs .devices-inner-wrap-tablet {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  overflow: hidden;
+}
+.portfolio-inner-wrap section.device .tabs .tablet {
+  max-height: 100%;
+  margin-right: -100px;
+  padding-right: 82px;
+  box-sizing: content-box;
+  overflow: auto;
+}
+.portfolio-inner-wrap section.device .tabs .devieces-outer-wrap-mobile {
+  border-radius: 32px;
+  padding: 80px 12px;
+  height: 695px;
+  width: 326px;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  position: relative;
+  right: -25em;
+}
+.portfolio-inner-wrap section.device .tabs .devices-inner-wrap-mobile {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  overflow: hidden;
+}
+.portfolio-inner-wrap section.device .tabs .mobile {
+  max-height: 100%;
+  margin-right: -100px;
+  padding-right: 82px;
+  overflow: auto;
+}
+.portfolio-inner-wrap section.device .tabs .desktop {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -170px;
+}
+.portfolio-inner-wrap section.device .tabs .ipad-b-cicrle {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -22px;
+}
+.portfolio-inner-wrap section.device .tabs .ipad-sm-circle {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  margin-top: -4px;
+}
+.portfolio-inner-wrap section.device .tabs .iphone-b-circle {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -24px;
+}
+.portfolio-inner-wrap section.device .tabs .iphone-sm-circle {
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  margin-left: -6px;
+}
+.portfolio-inner-wrap .description-more {
+  margin: 8em auto 2em;
+}
+/*---------------------------------страница после заказа order/orderList*/
+.order-wrap {
+  text-align: center;
+}
+/*------------------------------------------------------------------------------Страница ЦЕНЫ*/
 section.price-solution .flex {
   display: flex;
   flex-wrap: wrap;
@@ -1630,14 +1836,14 @@ section.price-solution .solution-row .solution-item:hover {
   box-shadow: 0px 1px 22px -5px #000000;
 }
 section.price-solution .solution-row .solution-item:hover .solution-title h2 {
-  color: #333;
+  color: #3c6eaa;
   text-decoration: underline;
 }
 section.price-solution .solution-row .solution-item:hover .solution-title i {
-  color: #333;
+  color: #3c6eaa;
 }
 section.price-solution .solution-row .solution-item:hover .btn {
-  background: #333;
+  background: #3c6eaa;
   color: #fff;
 }
 section.price-solution .solution-row .solution-item .solution-item-btn {
@@ -1773,7 +1979,7 @@ section.heading .content .content__container .content__container__text {
   display: inline;
   float: left;
   margin: 0;
-  color: #333;
+  color: #3c6eaa;
 }
 section.heading .content .content__container .content__container__list {
   margin-top: 0;
@@ -1788,7 +1994,7 @@ section.heading .content .content__container .content__container__list .content_
   line-height: 40px;
   margin: 0;
   margin-left: 1em;
-  color: #00e43c;
+  color: #06c438;
 }
 @-webkit-keyframes opacity {
   0%,
@@ -1937,7 +2143,7 @@ section.heading .content .content__container .content__container__list .content_
 section.about {
   width: 100%;
   padding: 5em 0;
-  background: #b1ffc6;
+  background: #9afcb4;
 }
 section.about .about__wrap {
   width: 100%;
@@ -1955,7 +2161,7 @@ section.about .about__row .about__col__item {
 section.about .about__row .about__col__item h3 {
   margin-bottom: 1em;
 }
-/*------------------------------------------------------------------------Корпоративный сайт*/
+/*--------------------------------------------------------------------------Корпоративный сайт*/
 .title-corporete {
   text-align: center;
   margin: 1em auto;
@@ -1986,7 +2192,7 @@ section.about .about__row .about__col__item h3 {
 .plus-corporate-wrap .plus-corporate-item .item-wrap p {
   margin: 1em auto;
 }
-/*---------------------------------------------------------Страница услуги service */
+/*---------------------------------------------------------------------Страница услуги service */
 table.service {
   background: white;
   max-width: 100%;
@@ -1995,7 +2201,7 @@ table.service {
   text-align: left;
 }
 table.service td {
-  color: #333;
+  color: #3c6eaa;
   border-bottom: 1px solid #cccccc;
   padding: 0 0.3em;
   transition: .3s linear;
@@ -2003,7 +2209,7 @@ table.service td {
   line-height: 1.5em;
 }
 table.service tr:hover td {
-  background: #a6a6a6;
+  background: #dae5f2;
 }
 table.service td.add {
   color: #cccccc;
@@ -2018,7 +2224,7 @@ table.service td.add {
 table.service td.add:hover {
   color: #1bdb68;
 }
-/*--------------------------------------------------------------------Этапы работы steps*/
+/*---------------------------------------------------------------------------Этапы работы steps*/
 .steps-wrap {
   padding: 10em 0 30em;
 }
@@ -2113,7 +2319,7 @@ table.service td.add:hover {
   width: 100%;
   line-height: 1.2rem;
 }
-/*----------------------------------------------------------------Аккордион*/
+/*-------------------------------------------------------------------------------------Аккордион*/
 .accordion {
   width: 100%;
   min-height: 0;
@@ -2139,14 +2345,14 @@ table.service td.add:hover {
   padding: 0.6em 0.2em;
   cursor: pointer;
   color: #ecf0f1;
-  background: #333;
-  border-top: 1px solid #a6a6a6;
-  border-bottom: 1px solid #1a1a1a;
+  background: #3c6eaa;
+  border-top: 1px solid #dae5f2;
+  border-bottom: 1px solid #2f5d84;
 }
 .accordion .content {
   position: relative;
   overflow: hidden;
-  max-height: 50em;
+  max-height: 80em;
   opacity: 1;
   transform: translate(0, 0);
 }
@@ -2224,7 +2430,7 @@ table.service td.add:hover {
 .accordion ul li i:after {
   transition: all 0.5s ease-in-out;
 }
-/*-------------------------------------------------------------------Форма отправки заявки*/
+/*--------------------------------------------------------------------------Форма отправки заявки*/
 .form-wrapper {
   width: 100%;
   margin: 0 auto;
@@ -2242,7 +2448,7 @@ table.service td.add:hover {
   margin-bottom: 1.5em;
 }
 .form-wrapper .small .mail {
-  color: #00e43c;
+  color: #06c438;
   font-size: 16px;
 }
 .form-wrapper .brief-wrap {
@@ -2338,7 +2544,7 @@ table.service td.add:hover {
 }
 .form-wrapper .append .js-labelFile.has-file .icon:before {
   content: "\f00c";
-  color: #00e43c;
+  color: #06c438;
 }
 .form-wrapper .append .append-file-name {
   width: 100%;
@@ -2440,10 +2646,10 @@ table.service td.add:hover {
 }
 .modal .modal-footer label {
   width: 100%;
-  background: #333;
+  background: #3c6eaa;
   color: #ecf0f1;
 }
-/*-------------------------------------------форма внутри модального окна */
+/*------------------------------------------------------------------форма внутри модального окна */
 .modal-form .information {
   margin-bottom: 1em;
 }
@@ -2469,23 +2675,23 @@ table.service td.add:hover {
   transition: box-shadow 0.1s linear;
 }
 .modal-form .comment .file_upload:hover > button {
-  background: #333;
-  text-shadow: #333 0 -1px 0;
+  background: #3c6eaa;
+  text-shadow: #3c6eaa 0 -1px 0;
 }
 .modal-form .comment .file_upload:active > button {
-  background: #333;
+  background: #3c6eaa;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
 }
 .modal-form .comment .file_upload button {
   float: right;
   width: 8em;
   height: 100%;
-  background: #333;
+  background: #3c6eaa;
   transition: background 0.2s;
   border: 1px solid #cccccc;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
   color: #fff;
-  text-shadow: #333 0 -1px 0;
+  text-shadow: #3c6eaa 0 -1px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2506,7 +2712,7 @@ table.service td.add:hover {
   background: #cccccc;
   margin-top: 1em;
 }
-/*-----------------------------------------------------------Checkout-------Страница заказа*/
+/*-----------------------------------------------------------------Checkout-------Страница заказа*/
 .form-wrap {
   justify-content: space-between;
 }
@@ -2526,10 +2732,10 @@ table.service td.add:hover {
   border: 1px solid #cccccc;
   padding: 1em;
 }
-/*-------------------------------------------------------------------------Страница Лендинга*/
+/*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
   min-height: 100vh;
-  background: #a6a6a6;
+  background: #dae5f2;
   padding-bottom: 4em;
 }
 section.landing-description .description-wrap {
@@ -2635,7 +2841,7 @@ section.tabs label:ntf-child(2) {
   border-right: none;
 }
 section.tabs label:hover {
-  color: #00e43c;
+  color: #06c438;
 }
 section.tabs input {
   display: none;
@@ -2643,7 +2849,7 @@ section.tabs input {
 section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
 section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
 section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
-  border: 2px solid #00e43c;
+  border: 2px solid #06c438;
   top: 0;
   z-index: 3;
 }
@@ -3191,7 +3397,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 i.logo {
   margin: 0.4em 0 0 2em;
   font-size: 3em;
-  color: #00e43c;
+  color: #06c438;
 }
 .header-admin {
   display: flex;
@@ -3211,7 +3417,7 @@ i.logo {
   transition: all 0.5s ease-in-out;
 }
 .header-admin ul a:hover {
-  color: #00e43c;
+  color: #06c438;
   border-bottom: 1px solid;
 }
 .wrap-content {
@@ -3232,7 +3438,7 @@ i.logo {
   padding-right: 3em;
   padding-left: 1em;
   z-index: 950;
-  height: 100vh;
+  height: 100%;
 }
 .navigation-admin ul {
   padding-top: 2em;
@@ -3269,18 +3475,18 @@ table.table-admin {
 }
 table.table-admin th {
   font-weight: bold;
-  color: #1a1a1a;
-  border-bottom: 2px solid #00b120;
+  color: #2f5d84;
+  border-bottom: 2px solid #04931e;
   padding: 0.6em 0.5em;
 }
 table.table-admin td {
-  color: #333;
+  color: #3c6eaa;
   border-bottom: 1px solid #cccccc;
   padding: 0.65em 0.5em;
   transition: .3s linear;
 }
 table.table-admin tr:hover td {
-  background: #b1ffc6;
+  background: #9afcb4;
 }
 /*------------------блог*/
 .admin-create a.admin-btn {
