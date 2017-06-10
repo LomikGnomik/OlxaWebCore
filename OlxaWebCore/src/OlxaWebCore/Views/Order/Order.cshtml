@@ -7,3 +7,8 @@
 }
 
 @Html.DisplayForModel()
+
+<form asp-action="DeleteOrder" asp-controller="Order">
+    <input type="hidden" asp-for="@Model.OrderID" />
+    <input type="submit" value="Delete" class="btn btn-default" />
+</form>

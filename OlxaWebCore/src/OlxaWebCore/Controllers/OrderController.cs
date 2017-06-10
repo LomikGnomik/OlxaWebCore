@@ -38,7 +38,6 @@ namespace OlxaWebCore.Controllers
             return View(repository.Orders.FirstOrDefault(o=>o.OrderID==orderId));
         }
 
-
         // приём данных из формы
         [HttpPost]
         public IActionResult NewOrder( Order order, IFormFile file)
@@ -58,19 +57,31 @@ namespace OlxaWebCore.Controllers
             repository.SaveOrder(order);
 
             // отослать нам письмо
+            string text = order.Name+order.Email+order.Comment;
+            SendMessage("lomik248@mail.ru","Заявка от клиента",text);
+
             // отослать письмо клиенту
-            // вернуть страницу с благодарностью
+            SendMessage(order.Email,"Заявка на создание сайта","Заявка принята");
+
             return View();
         }
 
-        
-        public async Task<IActionResult> SendMessage() //отправка заказа нам на почту
+        //отправка заказа нам на почту
+        public async void  SendMessage(string email, string theme ,string text) 
         {
             EmailService emailService = new EmailService();
-            await emailService.SendEmailAsync("somemail@mail.ru", "Тема письма", "Тест письма: тест!");
-            return RedirectToAction("Index");
+            await emailService.SendEmailAsync(email, theme, text);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteOrder(int orderID)
+        {
+            Order deletedOrder = repository.DeleteOrder(orderID);
+            if (deletedOrder != null)
+            {
+                //  TempData["message"] = $"{deletedPost.Title} was deleted";
+            }
+            return RedirectToAction("OrderList");
         }
     }
 }
-
-//ДОБАВИТЬ УДАЛЕНИЕ

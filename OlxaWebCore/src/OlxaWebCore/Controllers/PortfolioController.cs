@@ -5,17 +5,23 @@ using OlxaWebCore.Models.ViewModels;
 using OlxaWebCore.Models.DataModels;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace OlxaWebCore.Controllers
 {
     public class PortfolioController : Controller
     {
         private IPortfolioRepository repository;
+        IHostingEnvironment _appEnvironment;
+
         public int PageSize = 100;
 
-        public PortfolioController(IPortfolioRepository repo)
+        public PortfolioController(IPortfolioRepository repo , IHostingEnvironment appEnvironment)
         {
             repository = repo;
+            _appEnvironment = appEnvironment;
         }
 
         public ViewResult All(string category = null, int page = 1)
@@ -68,9 +74,21 @@ namespace OlxaWebCore.Controllers
 
         // редактирование POST
         [HttpPost]
-        public IActionResult EditPortfolio(Portfolio portfolio)
+        public IActionResult EditPortfolio(Portfolio portfolio, IFormFile file)
         {
-           
+
+            //сохранение картинок
+            if (file != null)
+            {
+                // путь к папке Files
+                string path = "/Files/Portfolio/" + file.FileName;
+                // сохраняем файл в папку Files в каталоге wwwroot
+                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                {
+                    file.CopyToAsync(fileStream);
+                }
+            }
+
             if (ModelState.IsValid)
             {
                 repository.SavePortfolio(portfolio);

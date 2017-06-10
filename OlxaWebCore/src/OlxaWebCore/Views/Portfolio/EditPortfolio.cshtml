@@ -9,54 +9,56 @@
 
 <h2>@Model.Title</h2>
 
-<form asp-action="EditPortfolio">
 
-    <input type="hidden" asp-for="PortfolioID" />
+    <form asp-action="EditPortfolio" asp-controller="Portfolio" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="PortfolioID" />
 
-    <label asp-for="Title"></label>
-    <input type="text" asp-for="Title">
+        <label asp-for="Title"></label>
+        <input type="text" asp-for="Title">
 
-    <label asp-for="Link"></label>
-    <input type="text" asp-for="Link">
+        <label asp-for="Link"></label>
+        <input type="text" asp-for="Link">
 
-    <label asp-for="Category"></label>
-    @*<select asp-for="Category" asp-items="ViewBag.Category"></select>*@
-    <select  name="Category">
-        <option value="Интернет-магазин">Интернет-магазин</option>
-        <option value="Сайт визитка">Сайт визитка</option>
-        <option value="Landing page">Landing page</option>
-        <option value="Информационный">Информационный</option>
-        <option value="Копоративный">Копоративный</option>
-    </select>
-    @*<input type="text" asp-for="Category">*@
+        <label asp-for="Category"></label>
+        @*<select asp-for="Category" asp-items="ViewBag.Category"></select>*@
+        <select name="Category">
+            <option value="Интернет-магазин">Интернет-магазин</option>
+            <option value="Сайт визитка">Сайт визитка</option>
+            <option value="Landing page">Landing page</option>
+            <option value="Информационный">Информационный</option>
+            <option value="Копоративный">Копоративный</option>
+        </select>
+        @*<input type="text" asp-for="Category">*@
 
-    <label asp-for="Price"></label>
-    <input type="text" asp-for="Price">
+        <label asp-for="Price"></label>
+        <input type="text" asp-for="Price">
 
-    <label asp-for="DevelopmentTime"></label>
-    <input type="text" asp-for="DevelopmentTime">
+        <label asp-for="DevelopmentTime"></label>
+        <input type="text" asp-for="DevelopmentTime">
 
-    <label asp-for="Description"></label>
-    <textarea asp-for="Description"></textarea>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
 
-    <label asp-for="Image"></label>
-    <input type="text" asp-for="Image">
+        <input type="file" name="file" id="file" class="input-file">
 
-    <label asp-for="Review"></label>
-    <textarea asp-for="Review"></textarea>
+        @*<label asp-for="Image"></label>
+            <input type="text" asp-for="Image">*@
 
-    <label asp-for="Meta"></label>
-    <input type="text" asp-for="Meta">
+        <label asp-for="Review"></label>
+        <textarea asp-for="Review"></textarea>
 
-    <label asp-for="Published"></label>
-    <input type="checkbox" asp-for="Published">
+        <label asp-for="Meta"></label>
+        <input type="text" asp-for="Meta">
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+        <label asp-for="Published"></label>
+        <input type="checkbox" asp-for="Published">
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 
 <div>
     <a asp-controller="Blog" asp-action="AllAdmin">Back</a>

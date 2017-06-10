@@ -10,5 +10,6 @@ namespace OlxaWebCore.Models.Interfaces
     {
         IEnumerable<Order> Orders { get; }
         void SaveOrder(Order order);
+        Order DeleteOrder(int orderID);
     }
 }
