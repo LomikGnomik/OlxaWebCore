@@ -30,9 +30,9 @@
 
 /*ЦВЕТА*/
 
-@color-base: #333; // #0094ff; /*основной цвет*/
+@color-base: #3c6eaa; // #0094ff; /*основной цвет*/
 
-@color-more: #00e43c; /*дополнительный цвет*/
+@color-more: #06c438; /*дополнительный цвет*/
 
 @color-success: #0d9706; /*цвет успеха*/
 
@@ -2341,9 +2341,258 @@ section.portfolio {
     }*/
 }
 
+/*----------------------------------------------------------------отдельная страница портфолио*/
+.portfolio-inner-wrap {
+    section {
+        margin: 2em auto;
+    }
+
+    section.heading {
+        display: flex;
+        justify-content: center;
+
+        i {
+            font-size: 2em;
+        }
+
+        .portfolio-inner-name {
+            text-align: center;
+            padding: 0 2em;
+            margin: 0 2em;
+
+            i.fa-arrow-circle-o-left {
+                font-size: 3em;
+            }
+
+            .h2 {
+                font-size: 2em;
+            }
+
+            a {
+                text-decoration: dashed;
+                color: @color-base;
+            }
+
+            :visited {
+                color: @color-base-lighter2;
+            }
+
+            :hover {
+                color: @color-base-darken2;
+            }
+
+            :active {
+                color: @color-base-darken2;
+            }
+        }
+    }
+
+    section.description {
+        display: flex;
+        justify-content: space-between;
+
+        .small-description, .review {
+            width: 30em;
+            text-align: justify;
+        }
+    }
+
+    section.device {
+        .tabs {
+            position: relative;
+            display: flex;
+
+            .label-wrap {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                margin-top: -7.19em;
+
+                i {
+                    font-size: 3em;
+                    margin: 0.5em;
+                }
+
+                label {
+                    color: @color-gray-dark;
+                    cursor: pointer;
+                    display: block;
+                    line-height: 2.8em;
+                    font-weight: 600;
+                    top: 0.125em;
+                    text-align: center;
+                    padding: 0 1em;
+                }
+            }
+
+            input {
+                display: none;
+            }
+
+            #tab_1:checked ~ .label-wrap #tab_l1,
+            #tab_2:checked ~ .label-wrap #tab_l2,
+            #tab_3:checked ~ .label-wrap #tab_l3 {
+                top: 0;
+                z-index: 3;
+            }
+
+            .tabs_cont {
+                position: relative;
+                //left:20em;
+                padding-top: 2em;
+                z-index: 2;
+                // height: 15em;
+            }
+
+            .tabs_cont > div {
+                position: absolute;
+                left: -9999px;
+                top: 0;
+                opacity: 0;
+                // height: 40em;
+                // overflow-y: auto;
+                //overflow-x: hidden;
+                transition: opacity .5s ease-in-out;
+            }
+
+            #tab_1:checked ~ .tabs_cont #tab_c1,
+            #tab_2:checked ~ .tabs_cont #tab_c2,
+            #tab_3:checked ~ .tabs_cont #tab_c3 {
+                position: static;
+                left: 0;
+                opacity: 1;
+                transition: opacity 2500ms;
+            }
+
+            .devieces-outer-wrap-monitor {
+                width: 1040px;
+                height: 652px;
+                padding: 30px 28px 70px 28px;
+                margin: 0 auto;
+                border: 1px solid #000000;
+                border-radius: 32px;
+                position: relative;
+            }
+
+            .devices-inner-wrap-monitor {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                border: 1px solid #000000;
+                overflow: hidden;
+            }
+
+            .monitor {
+                max-height: 100%;
+                margin-right: -100px;
+                padding-right: 82px;
+                box-sizing: content-box;
+                overflow: auto;
+            }
+
+            .devieces-outer-wrap-tablet {
+                border-radius: 48px;
+                padding: 18px 84px;
+                height: 601px;
+                width: 940px;
+                margin: 0 auto;
+                border: 1px solid #000000;
+                position: relative;
+                right: -4.5em;
+            }
+
+            .devices-inner-wrap-tablet {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                border: 1px solid #000000;
+                overflow: hidden;
+            }
+
+            .tablet {
+                max-height: 100%;
+                margin-right: -100px;
+                padding-right: 82px;
+                box-sizing: content-box;
+                overflow: auto;
+            }
+
+            .devieces-outer-wrap-mobile {
+                border-radius: 32px;
+                padding: 80px 12px;
+                height: 695px;
+                width: 326px;
+                margin: 0 auto;
+                border: 1px solid #000000;
+                position: relative;
+                right: -25em;
+            }
+
+            .devices-inner-wrap-mobile {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                border: 1px solid #000000;
+                overflow: hidden;
+            }
+
+            .mobile {
+                max-height: 100%;
+                margin-right: -100px;
+                padding-right: 82px;
+                overflow: auto;
+            }
+
+            .desktop {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -170px;
+            }
+
+            .ipad-b-cicrle {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                margin-top: -22px;
+            }
+
+            .ipad-sm-circle {
+                position: absolute;
+                top: 50%;
+                left: 40px;
+                margin-top: -4px;
+            }
+
+            .iphone-b-circle {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                margin-left: -24px;
+            }
+
+            .iphone-sm-circle {
+                position: absolute;
+                top: 34px;
+                left: 50%;
+                margin-left: -6px;
+            }
+        }
+    }
+    .description-more{
+        margin:8em auto 2em;
+    }
+}
 
 
-/*-------------------------------------------------------------------------Страница ЦЕНЫ*/
+
+/*---------------------------------страница после заказа order/orderList*/
+.order-wrap {
+    text-align: center;
+}
+/*------------------------------------------------------------------------------Страница ЦЕНЫ*/
 
 section.price-solution {
 
@@ -2771,7 +3020,7 @@ section.about {
         }
     }
 }
-/*------------------------------------------------------------------------Корпоративный сайт*/
+/*--------------------------------------------------------------------------Корпоративный сайт*/
 .title-corporete {
     text-align: center;
     margin: 1em auto;
@@ -2807,8 +3056,7 @@ section.about {
         }
     }
 }
-/*---------------------------------------------------------Страница услуги service */
-
+/*---------------------------------------------------------------------Страница услуги service */
 
 table.service {
     background: white;
@@ -2838,7 +3086,7 @@ table.service {
         right: 0.312em;
         top: 0;
         text-align: end;
-        padding-right:0.7em;
+        padding-right: 0.7em;
 
         &:hover {
             color: #1bdb68;
@@ -2846,10 +3094,13 @@ table.service {
     }
 }
 
-/*--------------------------------------------------------------------Этапы работы steps*/
+/*---------------------------------------------------------------------------Этапы работы steps*/
 .steps-wrap {
     padding: 10em 0 30em;
-   *{transition: all 1000ms;}
+
+    * {
+        transition: all 1000ms;
+    }
 
     @min_unit: 0.1rem;
     @white_tint: rgba(255,255,255,0.2);
@@ -2963,7 +3214,7 @@ table.service {
         line-height: 1.2rem;
     }
 }
-/*----------------------------------------------------------------Аккордион*/
+/*-------------------------------------------------------------------------------------Аккордион*/
 
 .accordion {
     width: 100%;
@@ -2974,8 +3225,9 @@ table.service {
     padding: 0;
     background-color: #fefffa;
     overflow: hidden;
+
     h2 {
-        font-size:1em;
+        font-size: 1em;
         font-weight: 300;
         letter-spacing: 1px;
         display: block;
@@ -2992,10 +3244,10 @@ table.service {
     .content {
         position: relative;
         overflow: hidden;
-        max-height: 50em;
+        max-height: 80em;
         opacity: 1;
         transform: translate(0, 0);
-        
+
         .content p {
             color: rgba(48, 69, 92, 0.8);
             font-size: @size-small;
@@ -3004,6 +3256,7 @@ table.service {
             padding: 0 1.2em;
         }
     }
+
     ul {
         list-style: none;
         //perspective: 900;
@@ -3029,7 +3282,7 @@ table.service {
         }
 
         :last-of-type {
-           // padding-bottom: 0;
+            // padding-bottom: 0;
         }
     }
     /*указатель переключения состояния аккордеона */
@@ -3056,6 +3309,7 @@ table.service {
     ul li i:after {
         transform: translate(2px, 0) rotate(-45deg);
     }
+
     ul li input[type=checkbox] {
         position: absolute;
         cursor: pointer;
@@ -3072,6 +3326,7 @@ table.service {
         opacity: 0;
         transform: translate(0, 50%);
     }
+
     ul li input[type=checkbox]:checked ~ i:before {
         transform: translate(2px, 0) rotate(45deg);
     }
@@ -3085,7 +3340,7 @@ table.service {
     }
 }
 
-/*-------------------------------------------------------------------Форма отправки заявки*/
+/*--------------------------------------------------------------------------Форма отправки заявки*/
 .form-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -3393,7 +3648,7 @@ table.service {
         }
     }
 }
-/*-------------------------------------------форма внутри модального окна */
+/*------------------------------------------------------------------форма внутри модального окна */
 .modal-form {
 
 
@@ -3494,7 +3749,7 @@ table.service {
         }
     }
 }
-/*-----------------------------------------------------------Checkout-------Страница заказа*/
+/*-----------------------------------------------------------------Checkout-------Страница заказа*/
 .form-wrap {
     justify-content: space-between;
 
@@ -3533,7 +3788,7 @@ table.service {
         }
     }
 }
-/*-------------------------------------------------------------------------Страница Лендинга*/
+/*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
     min-height: 100vh;
     background: @color-base-lighter2;
@@ -4523,7 +4778,7 @@ i.logo {
     padding-right: 3em;
     padding-left: 1em;
     z-index: 950;
-    height: 100vh;
+    height: 100%;
 
 
 
