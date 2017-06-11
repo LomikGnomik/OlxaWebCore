@@ -2225,102 +2225,88 @@ table.service td.add {
 table.service td.add:hover {
   color: #1bdb68;
 }
-/*---------------------------------------------------------------------------Этапы работы steps*/
-.steps-wrap {
-  padding: 10em 0 30em;
-}
-.steps-wrap * {
-  transition: all 1000ms;
-}
-.steps-wrap header {
-  width: 100vw;
-  margin: 0;
-  float: left;
-  padding: 2rem 0;
-}
-.steps-wrap #steps {
-  float: left;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-  background-color: #fff;
-  box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1), 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-}
-.steps-wrap #steps > div {
-  float: left;
-  border-radius: 50%;
-  background-color: #6f8db3;
-  padding: 1vw;
-  margin: 1vw;
-  box-sizing: border-box;
-  width: 4vw;
-  height: 4vw;
-  color: #c0dafa;
-  font-size: 2rem;
-  text-align: center;
+/*------------------------------------------------------------------------Шаги/Этапы/Step*/
+.steps-wrap label {
+  color: #666;
+  font-size: 18px;
   cursor: pointer;
-  box-shadow: inset 100px 0 0 #0e56ad;
+  padding: 0.8em 1em 0.8em 0;
 }
-.steps-wrap #steps > div.active {
-  color: #ffffff;
-  background-color: #38e;
-  box-shadow: inset 0 0 0 #38e;
+.steps-wrap label:hover {
+  color: #06c438;
 }
-.steps-wrap #steps div.done {
-  color: #38e;
-  box-shadow: inset -100px 0 0 #91bff6;
+.steps-wrap label:hover:before {
+  background: #b8fdca;
 }
-.steps-wrap .article_container {
-  float: left;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40vw;
+.steps-wrap label:before {
+  font-family: 'Impact';
+  text-align: center;
+  content: counter(li);
+  border: 2px solid #06c438;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  margin: 0 0.5em 0 0;
+  background: white;
+  color: #06c438;
 }
-.steps-wrap article {
-  width: 100%;
-  top: 0;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1), 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+.steps-wrap .css-accordion {
+  list-style-type: none;
+  counter-reset: li;
+  padding: 20px;
+  width: 100% /*600px*/;
 }
-.steps-wrap article.active_m_2 {
-  left: -110vw;
-  opacity: 0;
-}
-.steps-wrap article.active_m_1 {
-  left: -110%;
-  opacity: 0.3;
-}
-.steps-wrap article.active {
-  left: 0;
-  opacity: 1;
-}
-.steps-wrap article.active_p_1 {
-  left: 110%;
-  opacity: 0.3;
-}
-.steps-wrap article.active_p_2 {
-  left: 110vw;
-  opacity: 0;
-}
-.steps-wrap article * {
-  box-sizing: border-box;
-  width: 100%;
+.steps-wrap .css-accordion .accordion-item {
+  counter-increment: li;
+  padding: 0;
   margin: 0;
-  padding: 1rem;
 }
-.steps-wrap article h2 {
-  background-color: #38e;
-  color: #ffffff;
-  font-size: 1.5rem;
-  letter-spacing: 0.12rem;
+.steps-wrap .css-accordion .accordion-item .item-content-container {
+  border-left: 2px solid #06c438;
+  padding: 6px 0;
+  margin: -2px 0 -2px 21px;
 }
-.steps-wrap article p {
-  width: 100%;
-  line-height: 1.2rem;
+.steps-wrap .css-accordion .accordion-item .item-content-container .item-content {
+  background: #eee;
+  padding: 0 1em;
+  overflow: hidden;
+  margin: 0 0 0 36px;
+  border-radius: 2px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(255, 255, 255, 0.9);
 }
-/*-------------------------------------------------------------------------------------Аккордион*/
+.steps-wrap .css-accordion .accordion-item .item-content-container .item-content p {
+  margin: 0.5em 0;
+  font-size: 14px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+.steps-wrap .css-accordion .accordion-item input[type=radio] {
+  display: none;
+}
+.steps-wrap .css-accordion .accordion-item input[type=radio] ~ .item-content-container {
+  overflow: hidden;
+}
+.steps-wrap .css-accordion .accordion-item input[type=radio] ~ .item-content-container .item-content {
+  height: 0;
+  transition: all 0.3s linear;
+}
+.steps-wrap .css-accordion .accordion-item input[type=radio]:checked ~ .item-content-container {
+  height: auto;
+  overflow: visible;
+}
+.steps-wrap .css-accordion .accordion-item input[type=radio]:checked ~ .item-content-container .item-content {
+  height: 200px;
+  overflow-y: auto;
+  transition: all 0.5s linear;
+}
+.steps-wrap .css-accordion .accordion-item input[type=radio]:checked + label {
+  color: #06c438;
+}
+.steps-wrap .css-accordion .accordion-item input[type=radio]:checked + label:before {
+  background: #fdfffe;
+}
+/*------------------------------------------------------------------------------Аккордион*/
 .accordion {
   width: 100%;
   min-height: 0;
@@ -2738,26 +2724,29 @@ section.landing-description {
   min-height: 100vh;
   padding-bottom: 4em;
   /*---------------эффект*/
+  /*canvas {
+        display: block;
+        vertical-align: bottom;
+    }
+
+    #particles-js {
+        //  overflow-x:hidden;
+        width: 100vw;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 7rem;
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        color: #FFF;
+        font-family: teko;
+        font-weight: 400;
+        text-shadow: 5px 5px #5F6D72;
+        text-transform: uppercase;
+    }*/
   /*---------конец эффекта*/
-}
-section.landing-description canvas {
-  display: block;
-  vertical-align: bottom;
-}
-section.landing-description #particles-js {
-  width: 100vw;
-  height: 100%;
-}
-section.landing-description h1 {
-  font-size: 7rem;
-  position: absolute;
-  top: 40%;
-  left: 35%;
-  color: #FFF;
-  font-family: teko;
-  font-weight: 400;
-  text-shadow: 5px 5px #5F6D72;
-  text-transform: uppercase;
 }
 section.landing-description p {
   display: inline-block;
@@ -3465,12 +3454,14 @@ i.logo {
 .navigation-admin {
   display: flex;
   flex-direction: column;
+  position: relative;
+  bottom: 0;
+  height: 100vh;
   background: #333333;
   width: 15em;
   padding-right: 3em;
   padding-left: 1em;
   z-index: 950;
-  height: 100%;
 }
 .navigation-admin ul {
   padding-top: 2em;

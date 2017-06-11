@@ -3,7 +3,7 @@
 }
 
 <section class="landing-description">
-    <div id="particles-js">
+    @*<div id="particles-js">*@
         <div class="container">
             <div class="description-wrap">
                 @*<div class="description-img">
@@ -19,7 +19,7 @@
                 </div>
             </div> <!--description-wrap-->
         </div> <!--container-->
-    </div> <!--Эффект-->
+    @*</div>*@ <!--Эффект-->
 </section>
 
 <section class="landing-plus">
@@ -176,10 +176,8 @@
     </div> <!--container-->
 </section>
 
-<section class="landing-steps">
-    @*<div class="container">*@
-        @Html.Partial("_StepsPartialView")
-    @*</div>*@ <!--container-->
+<section class="landing-steps">    
+        @Html.Partial("_StepsPartialView")    
 </section>
 
 <section class="landing-tariff">
@@ -196,8 +194,6 @@
     <div class="container">
 
     </div>
-</section>
 
-<section>
 @await Component.InvokeAsync("OrderForm")
 </section>
