@@ -2995,7 +2995,7 @@ section.heading {
 section.about {
     width: 100%;
     //min-height:70vh;
-    padding: 5em 0;
+    padding-bottom: 20%;
     background: @color-more-lighter2;
 
     .about__wrap {
@@ -3005,6 +3005,7 @@ section.about {
 
     h2 {
         //  padding:3em 0 2em;
+        padding-top: 10%;
         padding-bottom: 2em;
         text-align: center;
         text-transform: uppercase;
@@ -3012,6 +3013,8 @@ section.about {
 
     .about__row {
         //.row;
+        padding-top: 15%;
+
         .about__col__item {
             h3 {
                 margin-bottom: 1em;
@@ -3019,6 +3022,180 @@ section.about {
 
             text-align: center;
             margin: 1.5em;
+        }
+    }
+}
+
+section.portfolio-index {
+    background: linear-gradient(to left, @color-gray-dark 0,@font-color-reverce 50%, @color-gray 100%);
+    padding: 5em;
+
+    .galery-wrap {
+
+        #all {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        a:link, a:visited {
+            color: @color-gray-dark;
+            border-bottom: 1px solid @color-gray-dark;
+            transition: .3s;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: @color-gray-dark;
+            border-bottom: 1px solid @color-gray-dark;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #allcontent {
+            margin: 0 auto;
+            width: 95%;
+            height: 37em;
+            position: relative;
+            animation: comein 1.5s ease-in-out;
+        }
+
+        .portfolio {
+            width: 100%;
+            max-width: 1000px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: #fff;
+            transition: .2s;
+            cursor: pointer;
+            -webkit-box-shadow: -2px 0 3px rgba(0,0,0,0.3);
+            -moz-box-shadow: -2px 0 3px rgba(0,0,0,0.3);
+            box-shadow: -2px 0 3px rgba(0,0,0,0.3);
+        }
+
+
+        .portfolio:nth-child(1) {
+            left: 10px;
+        }
+
+        .portfolio:nth-child(1):hover {
+            transform: rotate(-2deg);
+            left: 0;
+        }
+
+        .portfolio:nth-child(2) {
+            left: 10%;
+        }
+
+        .portfolio:nth-child(2):hover {
+            transform: rotate(-2deg);
+            left: 5%;
+        }
+
+        .portfolio:nth-child(3) {
+            left: 20%;
+        }
+
+        .portfolio:nth-child(3):hover {
+            transform: rotate(-2deg);
+            left: 15%;
+        }
+
+        .portfolio:nth-child(4) {
+            left: 30%;
+        }
+
+        .portfolio:nth-child(4):hover {
+            transform: rotate(-2deg);
+            left: 25%;
+        }
+
+        .portfolio:nth-child(5) {
+            left: 40%;
+        }
+
+        .portfolio:nth-child(5):hover {
+            transform: rotate(-2deg);
+            left: 35%;
+        }
+
+        .opened {
+            z-index: 1000;
+            left: 0 !important;
+            transform: rotate(0deg);
+            -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 1140px;
+        }
+
+        .opened img {
+            z-index: 5;
+        }
+
+        .ombra {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            width: 90%;
+            height: 20px;
+            -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            transform: rotate(-2deg);
+            display: none;
+            z-index: -1;
+        }
+
+        .ombra:after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            right: -93px;
+            width: 90%;
+            height: 20px;
+            -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+            transform: rotate(4deg);
+        }
+
+        .txt {
+            display: block;
+            margin: -2px 0 0 0;
+            padding-top: 20px;
+            //width: 98%;
+            padding-left: 2%;
+            height: 4em;
+            background: #f7f7f7;
+        }
+        /* loading */
+        #loading {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            left: 0;
+            z-index: 10001;
+            position: absolute;
+        }
+
+        .loader {
+            display: block;
+            height: 30px;
+            left: 50%;
+            margin: -15px 0 0 -15px;
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            animation: spin 1s infinite linear;
         }
     }
 }
@@ -3095,9 +3272,202 @@ table.service {
         }
     }
 }
+/*----------------------------------------------------------------страница разработки*/
+section.develop {
+    .step-develop-wrap {
 
+        #tabs {
+            width: 700px;
+            display: flex;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 50px;
+            height: auto;
+            min-height: 200px;
+            max-height: 600px;
+            overflow: hidden;
+        }
+
+        ul {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            vertical-align: top;
+            width: 50%;
+        }
+
+        ul li a {
+            position: relative;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: #3b3b3b;
+            border-top: solid 2px #e9e9e9;
+            padding: 20px 5px;
+            z-index: 1;
+            opacity: .5;
+            -webkit-transition: 0.3s ease;
+            -moz-transition: 0.3s ease;
+            -o-transition: 0.3s ease;
+            transition: 0.3s ease;
+        }
+
+        ul li:focus, a:focus {
+            outline: none;
+        }
+
+        ul li:nth-child(1) a {
+            border-top: none;
+        }
+
+        ul li a.active {
+            opacity: 1;
+        }
+
+        .para-a {
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 0;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            border: none;
+            font-family: 'Montserrat';
+            color: #2b2b2b;
+        }
+
+        .tag {
+            position: relative;
+            width: 100%;
+        }
+
+        .icon {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #c7c7c7;
+            border-radius: 100%;
+            vertical-align: middle;
+        }
+
+        .block {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            border: solid 2px #7b7b7b;
+            border-radius: 5px;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .circle {
+            position: absolute;
+            padding: 2px;
+            border: solid 2px #7b7b7b;
+            border-radius: 100%;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .title {
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 0 10px;
+            vertical-align: middle;
+            color: #7b7b7b;
+        }
+
+        .addon {
+            position: relative;
+            width: 80%;
+            top: -25px;
+            margin-left: 70px;
+            letter-spacing: 0;
+            font-size: 13px;
+            color: #9b9b9b;
+            opacity: 0;
+            font-family: 'Open Sans';
+        }
+
+        .addon.fadein {
+            opacity: 1;
+        }
+
+        .browser {
+            width: 45%;
+            height: 95%;
+            position: absolute;
+            border-style: solid;
+            border-width: 2px 0 2px 2px;
+            border-color: #7b7b7b transparent #7b7b7b #7b7b7b;
+            right: 0;
+            border-radius: 10px 0 0 10px;
+            overflow: hidden;
+        }
+
+        .top-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            background: #fff;
+            border-bottom: solid 2px #7b7b7b;
+            z-index: 2;
+        }
+
+        .dot {
+            position: relative;
+            display: inline-block;
+            padding: 4px;
+            background: #c7c7c7;
+            border-radius: 100%;
+        }
+
+        .dot:nth-child(1) {
+            margin-left: 7px;
+        }
+
+        #tabs-1, #tabs-2, #tabs-3 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #tabs-1 {
+            background: #9b9b9b;
+        }
+
+        #tabs-2 {
+            background: #c9c9c9;
+        }
+
+        #tabs-3 {
+            background: #1b1b1b;
+        }
+    }
+}
 /*------------------------------------------------------------------------Шаги/Этапы/Step*/
 .steps-wrap {
+
     label {
         color: #666;
         font-size: 18px;
@@ -3775,79 +4145,32 @@ table.service {
 }
 /*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
-   // min-height: 100vh;
+    height: 100vh;
+    // background: linear-gradient(to bottom, #fff 0, #000 100%);
+    background: -moz-linear-gradient(white 0,white 25%,black 100% ); /* FF 3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff ),color-stop(25%,#ffffff ), color-stop(100%,#000000 )); /* Safari 4+, Chrome 2+ */
+    background: -webkit-linear-gradient(white 0,white 25%,black 100% ); /* Safari 5.1+, Chrome 10+ */
+    background: -o-linear-gradient(white 0,white 25%,black 100% ); /* Opera 11.10 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000')"; /* IE8+ */
+    background: linear-gradient(white 0,white 25%,black 100% ); /* the standard */
+    background-attachment: fixed;
+
+    h1 {
+        color: transparent;
+        font-size: 7rem;
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        color: @font-color-reverce;
+        font-weight: 400;
+        text-shadow: 5px 5px @color-gray-light;
+        text-transform: uppercase;
+    }
+    // min-height: 100vh;
     // background: @color-gray-dark;
-  //  padding-bottom: @size-margin-section;
+    //  padding-bottom: @size-margin-section;
     /*---------------эффект*/
-
-
-@blue:#8DD9FF;
-@yellow:#FFDA00;
-
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-}
-
-.intro {
-  position: relative;
-  height: auto;
-  transform: translateZ(0);
-  background-image: linear-gradient(35deg, @blue, @yellow);
-  
-  img {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    mix-blend-mode: multiply;
-  }
-}
-
-.intro .caption {
-  position: absolute;
-  bottom: 25%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 3;
-  color: white;
-  
-  h1 {
-    display: inline-block;
-    width: 70%;
-    font-size: 6vw;
-    font-weight: 100;
-  }
-}
-
-.intro .overlay {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-  
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
     /*---------конец эффекта*/
     p {
         display: inline-block;
@@ -4017,7 +4340,6 @@ section.tabs {
 
     .label-wrap {
         display: flex;
-        //justify-content: space-between;
     }
 
 
@@ -4032,7 +4354,6 @@ section.tabs {
         top: 0.125em;
         text-align: center;
         padding: 0 1em;
-        // width: 100%;
         &:ntf-child(2) {
             border-left: none;
             border-right: none;
@@ -4238,492 +4559,531 @@ section.tabs {
             .row;
         }
     }
-}
 
-
-
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .container {
-        width: 60em;
-    }
-
-
-
-    .tariff-wrap {
-        .row
-    }
-
-
-
-    .promo-wrapper {
-        max-width: 18em;
-    }
-
-
-
-    .information {
-        justify-content: space-between;
-        .row;
-
-
-
-        input {
-            margin-right: 1em;
-        }
-
-
-
-        :last-child {
-            margin-right: 0;
-        }
-    }
-
-
-
-    .comment {
-        display: flex;
-        justify-content: space-between;
-    }
-    /*------------------------------------------------------- портфолио*/
-    .medium-half {
-        flex-basis: 31%;
-    }
-    /*-------------------------------------------------Блог*/
-    .post__item {
-        width: 48.5%;
-    }
-    /*------------------------------------------------------цены*/
-    .solution-item {
-        width: 33.333%;
-    }
-    /*---------------------------------------------------chekout*/
-    .form-wrap {
-        .row;
-
-
-
-        .inputs {
-            margin-right: 1em;
-
-
-
-            .inputs-row-two {
-                .row;
+    section.portfolio-index {
+        .galery-wrap {
+            #allcontent {
+                max-width: 960px;
             }
         }
     }
-    /*-------------------------------------------Страница Лендинга*/
-    .description-wrap {
-        .row;
-    }
 
 
 
-    .plus-row {
-        .row;
-    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+        .container {
+            width: 60em;
+        }
 
 
 
-    .privilege-row {
-        .row;
-    }
-    /*----------------------------------------------------форма заявки*/
-    .btn-form-group {
-        .row
-    }
-    /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about {
-        .about__row {
+        .tariff-wrap {
+            .row
+        }
+
+
+
+        .promo-wrapper {
+            max-width: 18em;
+        }
+
+
+
+        .information {
+            justify-content: space-between;
+            .row;
+
+
+
+            input {
+                margin-right: 1em;
+            }
+
+
+
+            :last-child {
+                margin-right: 0;
+            }
+        }
+
+
+
+        .comment {
+            display: flex;
+            justify-content: space-between;
+        }
+        /*------------------------------------------------------- портфолио*/
+        .medium-half {
+            flex-basis: 31%;
+        }
+        /*-------------------------------------------------Блог*/
+        .post__item {
+            width: 48.5%;
+        }
+        /*------------------------------------------------------цены*/
+        .solution-item {
+            width: 33.333%;
+        }
+        /*---------------------------------------------------chekout*/
+        .form-wrap {
+            .row;
+
+
+
+            .inputs {
+                margin-right: 1em;
+
+
+
+                .inputs-row-two {
+                    .row;
+                }
+            }
+        }
+        /*-------------------------------------------Страница Лендинга*/
+        .description-wrap {
             .row;
         }
+
+
+
+        .plus-row {
+            .row;
+        }
+
+
+
+        .privilege-row {
+            .row;
+        }
+        /*----------------------------------------------------форма заявки*/
+        .btn-form-group {
+            .row
+        }
+        /*---------------------------------------------------Home/Index домашняя страница*/
+        section.about {
+            .about__row {
+                .row;
+            }
+        }
+
+        section.portfolio-index {
+            .galery-wrap {
+                #allcontent {
+                    max-width: 900px;
+                }
+            }
+        }
     }
-}
 
 
 
-@media (min-width: 768px) and (max-width: 991px) {
+    @media (min-width: 768px) and (max-width: 991px) {
 
-    .container {
-        width: 45em;
-    }
-
-
-
-    .tariff-wrap {
-        .row
-    }
+        .container {
+            width: 45em;
+        }
 
 
 
-    .promo-wrapper {
-        max-width: 13em;
-    }
+        .tariff-wrap {
+            .row
+        }
 
 
 
-    .information {
-        .column;
-    }
+        .promo-wrapper {
+            max-width: 13em;
+        }
 
 
 
-    .comment {
-        display: flex;
-        justify-content: space-between;
-    }
-    /*-------------------------------------------------Блог*/
-    .post__item {
-        width: 100%;
-    }
-    /*------------------------------------------------------- портфолио*/
-    .medium-half {
-        flex-basis: 31%;
-    }
-    /*.grid.isotope-grid.col-3 .grid-sizer,
+        .information {
+            .column;
+        }
+
+
+
+        .comment {
+            display: flex;
+            justify-content: space-between;
+        }
+        /*-------------------------------------------------Блог*/
+        .post__item {
+            width: 100%;
+        }
+        /*------------------------------------------------------- портфолио*/
+        .medium-half {
+            flex-basis: 31%;
+        }
+        /*.grid.isotope-grid.col-3 .grid-sizer,
 
     .grid.isotope-grid.col-3 .grid-item {
 
         width: 48.75%;
 
     }*/
-    /*--------------------------------------------------------цены*/
-    .solution-item {
-        width: 50%;
-    }
-    /*------------------------------------------------------chekout*/
-    .form-wrap {
-        .row;
-
-
-
-        input.inputs-long {
-            width: 94%;
+        /*--------------------------------------------------------цены*/
+        .solution-item {
+            width: 50%;
         }
-    }
-    /*-------------------------------------------Страница Лендинга*/
-    .description-wrap {
-        .row;
-    }
+        /*------------------------------------------------------chekout*/
+        .form-wrap {
+            .row;
 
 
 
-    .plus-row {
-        .row;
-    }
-
-
-
-    .privilege-row {
-        .row;
-    }
-    /*----------------------------------------------------форма заявки*/
-    .btn-form-group {
-        .column
-    }
-    /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about {
-        .about__row {
+            input.inputs-long {
+                width: 94%;
+            }
+        }
+        /*-------------------------------------------Страница Лендинга*/
+        .description-wrap {
             .row;
         }
-    }
-}
 
 
 
-@media (max-width: 767px) {
-
-    .container {
-        width: 30em;
-    }
+        .plus-row {
+            .row;
+        }
 
 
 
-    .tariff-wrap {
-        .column
-    }
+        .privilege-row {
+            .row;
+        }
+        /*----------------------------------------------------форма заявки*/
+        .btn-form-group {
+            .column
+        }
+        /*---------------------------------------------------Home/Index домашняя страница*/
+        section.about {
+            .about__row {
+                .row;
+            }
+        }
 
-
-
-    .information {
-        .column;
-    }
-
-
-
-
-
-    .comment {
-        display: block;
-    }
-    /*type file в окне заяки*/
-    .file_upload > div {
-        display: none;
-    }
-
-
-
-    .file_upload > button {
-        width: 100%;
-    }
-    /*-------------------------------------------------- портфолио*/
-    .grid.isotope-grid {
-        overflow: hidden;
-    }
-
-
-
-    .grid.isotope-grid:before, .grid.isotope-grid:after {
-        content: " ";
-        display: table;
-    }
-
-
-
-    .grid.isotope-grid:after {
-        clear: both;
-    }
-
-
-
-    .grid.isotope-grid.col-3 .grid-sizer,
-    .grid.isotope-grid.col-3 .grid-item {
-        width: 31.66667%;
-    }
-
-
-
-    .grid .grid-item {
-        position: relative;
-        float: left;
-        margin-bottom: 2.5%;
-        backface-visibility: hidden;
-    }
-    /*------------------------------------------------------- портфолио*/
-    .medium-half {
-        flex-basis: 46%;
-    }
-    /*-------------------------------------------------Блог*/
-    .post__item {
-        width: 100%;
-    }
-    /*---------------------------------------------------------цены*/
-    .solution-item {
-        flex-basis: 46%;
-    }
-    /*-------------------------------------------------------chekout*/
-    input.inputs-long {
-        width: 73%;
-    }
-
-
-
-    .details {
-        width: 117%;
-    }
-    /*-------------------------------------------Страница Лендинга*/
-    /*----------------------------------------------------форма заявки*/
-    .btn-form-group {
-        .column
-    }
-    /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about {
-        .about__row {
-            .column;
+        section.portfolio-index {
+            .galery-wrap {
+                #allcontent {
+                    max-width: 750px;
+                }
+            }
         }
     }
-}
 
 
 
-@media screen and (max-width:640px) {
-    /*------------------------------------------------------портфолио*/
-    .portfolio-item {
-        display: block;
-        text-decoration: none;
-        border: none;
-    }
+    @media (max-width: 767px) {
+
+        .container {
+            width: 30em;
+        }
 
 
 
-    .portfolio-item .portfolio-title {
-        display: block;
-        font-size: 18px;
-        font-weight: 600;
-        margin-top: 12px;
-        margin-bottom: 0;
-    }
+        .tariff-wrap {
+            .column
+        }
 
 
 
-    .portfolio-item > .thumbnail {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-
-
-
-    .portfolio-item > .thumbnail > img {
-        display: block;
-        vertical-align: bottom;
-        width: 100%;
-        backface-visibility: hidden;
-        transform: scale(1);
-        transition: all 0.6s;
-    }
-
-
-
-    .portfolio-item > .thumbnail:before {
-        position: absolute;
-        display: block;
-        z-index: 2;
-        content: "";
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: rgba(40, 149, 241, 0);
-        border: 6px solid #1bdb68;
-        opacity: 0;
-        transition: all 0.35s;
-    }
-
-
-
-    .portfolio-item > .thumbnail > .portfolio-title {
-        position: absolute;
-        z-index: 5;
-        width: 100%;
-        font-size: 24px;
-        text-align: center;
-        color: #fff;
-        top: 50%;
-        left: 0;
-        margin-top: 0;
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: all 0.35s;
-    }
-
-
-
-    .portfolio-item:hover > .thumbnail > img {
-        transform: scale(1.15);
-    }
-
-
-
-    .portfolio-item:hover > .thumbnail > .portfolio-title {
-        opacity: 1;
-        transform: translateY(-50%);
-    }
-
-
-
-    .portfolio-item:hover > .thumbnail:before {
-        background-color: rgba(40, 149, 241, 0.55);
-        opacity: 1;
-    }
-
-
-
-    .portfolio-item:hover > i {
-        opacity: 1;
-        transform: scale(1);
-    }
-    /*------------------------------------------------------- портфолио*/
-    .medium-half {
-        flex-basis: 46%;
-    }
-    /*-------------------------------------------------Блог*/
-    .post__item {
-        width: 100%;
-    }
-    /*-------------------------------------------------------цены*/
-    .solution-item {
-        flex-basis: 46%;
-    }
-    /*----------------------------------------------------chekout*/
-    input.inputs-long {
-        width: 73.5%;
-    }
-    /*-------------------------------------------Страница Лендинга*/
-    /*----------------------------------------------------форма заявки*/
-    .btn-form-group {
-        .column
-    }
-    /*---------------------------------------------------Home/Index домашняя страница*/
-    section.about {
-        .about__row {
+        .information {
             .column;
         }
+
+
+
+
+
+        .comment {
+            display: block;
+        }
+        /*type file в окне заяки*/
+        .file_upload > div {
+            display: none;
+        }
+
+
+
+        .file_upload > button {
+            width: 100%;
+        }
+        /*-------------------------------------------------- портфолио*/
+        .grid.isotope-grid {
+            overflow: hidden;
+        }
+
+
+
+        .grid.isotope-grid:before, .grid.isotope-grid:after {
+            content: " ";
+            display: table;
+        }
+
+
+
+        .grid.isotope-grid:after {
+            clear: both;
+        }
+
+
+
+        .grid.isotope-grid.col-3 .grid-sizer,
+        .grid.isotope-grid.col-3 .grid-item {
+            width: 31.66667%;
+        }
+
+
+
+        .grid .grid-item {
+            position: relative;
+            float: left;
+            margin-bottom: 2.5%;
+            backface-visibility: hidden;
+        }
+        /*------------------------------------------------------- портфолио*/
+        .medium-half {
+            flex-basis: 46%;
+        }
+        /*-------------------------------------------------Блог*/
+        .post__item {
+            width: 100%;
+        }
+        /*---------------------------------------------------------цены*/
+        .solution-item {
+            flex-basis: 46%;
+        }
+        /*-------------------------------------------------------chekout*/
+        input.inputs-long {
+            width: 73%;
+        }
+
+
+
+        .details {
+            width: 117%;
+        }
+        /*-------------------------------------------Страница Лендинга*/
+        /*----------------------------------------------------форма заявки*/
+        .btn-form-group {
+            .column
+        }
+        /*---------------------------------------------------Home/Index домашняя страница*/
+        section.about {
+            .about__row {
+                .column;
+            }
+        }
+
+        section.portfolio-index {
+            .galery-wrap {
+                #allcontent {
+                    max-width: 700px;
+                }
+            }
+        }
     }
-}
-/* ------------------------------------------------------------------Аккордион */
-@media (max-width: 550px) {
-    .accordion {
-        transform: translate(0, 0);
-        max-width: 100%;
-        min-height: 100%;
-        margin: 0;
-        left: 0;
+
+
+
+    @media screen and (max-width:640px) {
+        /*------------------------------------------------------портфолио*/
+        .portfolio-item {
+            display: block;
+            text-decoration: none;
+            border: none;
+        }
+
+
+
+        .portfolio-item .portfolio-title {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+
+
+
+        .portfolio-item > .thumbnail {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+
+        .portfolio-item > .thumbnail > img {
+            display: block;
+            vertical-align: bottom;
+            width: 100%;
+            backface-visibility: hidden;
+            transform: scale(1);
+            transition: all 0.6s;
+        }
+
+
+
+        .portfolio-item > .thumbnail:before {
+            position: absolute;
+            display: block;
+            z-index: 2;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(40, 149, 241, 0);
+            border: 6px solid #1bdb68;
+            opacity: 0;
+            transition: all 0.35s;
+        }
+
+
+
+        .portfolio-item > .thumbnail > .portfolio-title {
+            position: absolute;
+            z-index: 5;
+            width: 100%;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+            top: 50%;
+            left: 0;
+            margin-top: 0;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: all 0.35s;
+        }
+
+
+
+        .portfolio-item:hover > .thumbnail > img {
+            transform: scale(1.15);
+        }
+
+
+
+        .portfolio-item:hover > .thumbnail > .portfolio-title {
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+
+
+
+        .portfolio-item:hover > .thumbnail:before {
+            background-color: rgba(40, 149, 241, 0.55);
+            opacity: 1;
+        }
+
+
+
+        .portfolio-item:hover > i {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /*------------------------------------------------------- портфолио*/
+        .medium-half {
+            flex-basis: 46%;
+        }
+        /*-------------------------------------------------Блог*/
+        .post__item {
+            width: 100%;
+        }
+        /*-------------------------------------------------------цены*/
+        .solution-item {
+            flex-basis: 46%;
+        }
+        /*----------------------------------------------------chekout*/
+        input.inputs-long {
+            width: 73.5%;
+        }
+        /*-------------------------------------------Страница Лендинга*/
+        /*----------------------------------------------------форма заявки*/
+        .btn-form-group {
+            .column
+        }
+        /*---------------------------------------------------Home/Index домашняя страница*/
+        section.about {
+            .about__row {
+                .column;
+            }
+        }
+
+        section.portfolio-index {
+            .galery-wrap {
+                #allcontent {
+                    max-width: 600px;
+                }
+            }
+        }
     }
-}
-
-@media (max-width: 480px) {
-
-    html {
-        text-size-adjust: none; //отключаем регулировку размера шрифта.
+    /* ------------------------------------------------------------------Аккордион */
+    @media (max-width: 550px) {
+        .accordion {
+            transform: translate(0, 0);
+            max-width: 100%;
+            min-height: 100%;
+            margin: 0;
+            left: 0;
+        }
     }
 
+    @media (max-width: 480px) {
 
-
-    main-menu a {
-        font-size: 90%;
-        padding: 10px 8px;
-    }
-
-
-
-    .container {
-        width: 100%;
-    }
+        html {
+            text-size-adjust: none; //отключаем регулировку размера шрифта.
+        }
 
 
 
-    .tariff-wrap {
-        .column
-    }
+        main-menu a {
+            font-size: 90%;
+            padding: 10px 8px;
+        }
 
 
 
-    .information {
-        .column;
-    }
+        .container {
+            width: 100%;
+        }
 
 
 
-    .comment {
-        display: block;
-    }
-    /*type file в окне заяки*/
-    .file_upload > div {
-        display: none;
-    }
+        .tariff-wrap {
+            .column
+        }
 
 
 
-    .file_upload > button {
-        width: 100%;
-    }
-    /*------------------------------------------------------- портфолио*/
-    .medium-half {
-        flex-basis: 90%;
-    }
-    /*.grid.isotope-grid.col-3 .grid-sizer,
+        .information {
+            .column;
+        }
+
+
+
+        .comment {
+            display: block;
+        }
+        /*type file в окне заяки*/
+        .file_upload > div {
+            display: none;
+        }
+
+
+
+        .file_upload > button {
+            width: 100%;
+        }
+        /*------------------------------------------------------- портфолио*/
+        .medium-half {
+            flex-basis: 90%;
+        }
+        /*.grid.isotope-grid.col-3 .grid-sizer,
 
     .grid.isotope-grid.col-3 .grid-item {
 
@@ -4732,167 +5092,167 @@ section.tabs {
         width: 100%;
 
         margin-bottom: 30px;*/
-    /*---------------------------------------------------------Блог*/
-    .post__item {
+        /*---------------------------------------------------------Блог*/
+        .post__item {
+            width: 100%;
+        }
+        /*-----------------------------------------------------------цены*/
+        .solution-item {
+            flex-basis: 90%;
+        }
+        /*--------------------------------------------------------chekout*/
+        input.inputs-long {
+            width: 22em;
+        }
+        /*-------------------------------------------Страница Лендинга*/
+        /*----------------------------------------------------форма заявки*/
+        .btn-form-group {
+            .column
+        }
+    }
+
+
+    @media screen and (max-width:412px) {
+        /*-----------------------------------------------------------chekout*/
+        input.inputs-long {
+            width: 96.5%;
+        }
+    }
+
+
+    @media screen and (max-width:320px) {
+        /*-----------------------------------------------------------chekout*/
+        input.inputs-long {
+            width: 110%;
+        }
+    }
+    /*------------------------------------------------АДМИНКА--------------------------------------*/
+    /*------------------------------------------Layout Admin*/
+    .wrapper-admin {
+    }
+
+    .wrap-header {
+        display: flex;
+        align-items: baseline;
+        background: @color-gray-dark;
+    }
+
+    .container-admin {
+        margin-right: 2em;
+        margin-left: 2em;
+        width: 95%;
+        //  max-width: 90em;
+        .content {
+            color: @color-gray-dark;
+        }
+    }
+
+    i.logo {
+        margin: 0.4em 0 0 2em;
+        font-size: 3em;
+        color: @color-more;
+    }
+
+    .header-admin {
+        display: flex;
+        align-items: baseline;
+        color: #fff;
+        z-index: 1000;
+
+
+        h1 {
+            font-size: @size-font-bigger;
+        }
+
+        ul {
+            margin-left: auto;
+
+            a {
+                color: #fff;
+                border-bottom: 1px dotted;
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    color: @color-more;
+                    border-bottom: 1px solid;
+                }
+            }
+        }
+    }
+
+    .wrap-content {
+        display: flex;
+        //width:15em;
+        color: #fff;
+    }
+
+    .panel-group {
         width: 100%;
-    }
-    /*-----------------------------------------------------------цены*/
-    .solution-item {
-        flex-basis: 90%;
-    }
-    /*--------------------------------------------------------chekout*/
-    input.inputs-long {
-        width: 22em;
-    }
-    /*-------------------------------------------Страница Лендинга*/
-    /*----------------------------------------------------форма заявки*/
-    .btn-form-group {
-        .column
-    }
-}
-
-
-@media screen and (max-width:412px) {
-    /*-----------------------------------------------------------chekout*/
-    input.inputs-long {
-        width: 96.5%;
-    }
-}
-
-
-@media screen and (max-width:320px) {
-    /*-----------------------------------------------------------chekout*/
-    input.inputs-long {
-        width: 110%;
-    }
-}
-/*------------------------------------------------АДМИНКА--------------------------------------*/
-/*------------------------------------------Layout Admin*/
-.wrapper-admin {
-}
-
-.wrap-header {
-    display: flex;
-    align-items: baseline;
-    background: @color-gray-dark;
-}
-
-.container-admin {
-    margin-right: 2em;
-    margin-left: 2em;
-    width: 95%;
-    //  max-width: 90em;
-    .content {
-        color: @color-gray-dark;
-    }
-}
-
-i.logo {
-    margin: 0.4em 0 0 2em;
-    font-size: 3em;
-    color: @color-more;
-}
-
-.header-admin {
-    display: flex;
-    align-items: baseline;
-    color: #fff;
-    z-index: 1000;
-
-
-    h1 {
-        font-size: @size-font-bigger;
+        background: @color-success-lighter1;
+        margin: 1.5em auto;
+        padding: 0 0.5em;
     }
 
-    ul {
-        margin-left: auto;
 
-        a {
-            color: #fff;
-            border-bottom: 1px dotted;
-            transition: all .5s ease-in-out;
 
-            &:hover {
-                color: @color-more;
-                border-bottom: 1px solid;
+    .navigation-admin {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 0;
+        height: 100vh;
+        background: @color-gray-dark;
+        width: 15em;
+        padding-right: 3em;
+        padding-left: 1em;
+        z-index: 950;
+
+
+
+
+        ul {
+            padding-top: 2em;
+
+            li {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.89);
+                cursor: pointer;
+
+                &:hover {
+                    background: @color-gray;
+                }
+            }
+
+            a {
+                color: #fff;
             }
         }
     }
-}
+    /*-------------------------------стили таблиц*/
+    table.table-admin {
+        background: white;
+        max-width: 100%;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
 
-.wrap-content {
-    display: flex;
-    //width:15em;
-    color: #fff;
-}
-
-.panel-group {
-    width: 100%;
-    background: @color-success-lighter1;
-    margin: 1.5em auto;
-    padding: 0 0.5em;
-}
-
-
-
-.navigation-admin {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 0;
-    height: 100vh;
-    background: @color-gray-dark;
-    width: 15em;
-    padding-right: 3em;
-    padding-left: 1em;
-    z-index: 950;
-
-
-
-
-    ul {
-        padding-top: 2em;
-
-        li {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.89);
-            cursor: pointer;
-
-            &:hover {
-                background: @color-gray;
-            }
+        th {
+            font-weight: bold;
+            color: @color-base-darken1;
+            border-bottom: 2px solid @color-more-darken1;
+            padding: 0.6em 0.5em;
         }
 
-        a {
-            color: #fff;
+        td {
+            color: @color-base;
+            border-bottom: 1px solid @color-gray-light;
+            padding: 0.65em 0.5em;
+            transition: .3s linear;
         }
-    }
-}
-/*-------------------------------стили таблиц*/
-table.table-admin {
-    background: white;
-    max-width: 100%;
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
 
-    th {
-        font-weight: bold;
-        color: @color-base-darken1;
-        border-bottom: 2px solid @color-more-darken1;
-        padding: 0.6em 0.5em;
-    }
-
-    td {
-        color: @color-base;
-        border-bottom: 1px solid @color-gray-light;
-        padding: 0.65em 0.5em;
-        transition: .3s linear;
-    }
-
-    tr:hover td {
-        background: @color-more-lighter2;
-    }
-    /*.btn-del {
+        tr:hover td {
+            background: @color-more-lighter2;
+        }
+        /*.btn-del {
         color: @color-gray-light;
         cursor: pointer;
         font-size: 1.875em;
@@ -4904,25 +5264,26 @@ table.table-admin {
             color: red;
         }
     }*/
-}
-
-
-
-header.header-admin {
-}
-/*------------------блог*/
-.admin-create {
-
-    a.admin-btn {
-        position: absolute;
-        top: 14.5em;
-        left: 2.5em;
     }
 
 
 
-    button {
-        width: 100%;
-        background: @color-bad-lighter1;
+    header.header-admin {
+    }
+    /*------------------блог*/
+    .admin-create {
+
+        a.admin-btn {
+            position: absolute;
+            top: 14.5em;
+            left: 2.5em;
+        }
+
+
+
+        button {
+            width: 100%;
+            background: @color-bad-lighter1;
+        }
     }
 }
