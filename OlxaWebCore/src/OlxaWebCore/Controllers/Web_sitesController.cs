@@ -32,5 +32,9 @@ namespace OlxaWebCore.Controllers
         {
             return View();
         }
+        public IActionResult Develop()
+        {
+            return View();
+        }
     }
 }
