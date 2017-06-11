@@ -2143,7 +2143,7 @@ section.heading .content .content__container .content__container__list .content_
 }
 section.about {
   width: 100%;
-  padding: 5em 0;
+  padding-bottom: 20%;
   background: #9afcb4;
 }
 section.about .about__wrap {
@@ -2151,9 +2151,13 @@ section.about .about__wrap {
   margin: auto;
 }
 section.about h2 {
+  padding-top: 10%;
   padding-bottom: 2em;
   text-align: center;
   text-transform: uppercase;
+}
+section.about .about__row {
+  padding-top: 15%;
 }
 section.about .about__row .about__col__item {
   text-align: center;
@@ -2161,6 +2165,155 @@ section.about .about__row .about__col__item {
 }
 section.about .about__row .about__col__item h3 {
   margin-bottom: 1em;
+}
+section.portfolio-index {
+  background: linear-gradient(to left, #333333 0, #ecf0f1 50%, #999999 100%);
+  padding: 5em;
+}
+section.portfolio-index .galery-wrap {
+  /* loading */
+}
+section.portfolio-index .galery-wrap #all {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+section.portfolio-index .galery-wrap a:link,
+section.portfolio-index .galery-wrap a:visited {
+  color: #333333;
+  border-bottom: 1px solid #333333;
+  transition: .3s;
+  text-decoration: none;
+}
+section.portfolio-index .galery-wrap a:hover {
+  color: #333333;
+  border-bottom: 1px solid #333333;
+  text-decoration: none;
+}
+section.portfolio-index .galery-wrap img {
+  width: 100%;
+}
+section.portfolio-index .galery-wrap #allcontent {
+  margin: 0 auto;
+  width: 95%;
+  height: 37em;
+  position: relative;
+  animation: comein 1.5s ease-in-out;
+}
+section.portfolio-index .galery-wrap .portfolio {
+  width: 100%;
+  max-width: 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fff;
+  transition: .2s;
+  cursor: pointer;
+  -webkit-box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3);
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(1) {
+  left: 10px;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(1):hover {
+  transform: rotate(-2deg);
+  left: 0;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(2) {
+  left: 10%;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(2):hover {
+  transform: rotate(-2deg);
+  left: 5%;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(3) {
+  left: 20%;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(3):hover {
+  transform: rotate(-2deg);
+  left: 15%;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(4) {
+  left: 30%;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(4):hover {
+  transform: rotate(-2deg);
+  left: 25%;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(5) {
+  left: 40%;
+}
+section.portfolio-index .galery-wrap .portfolio:nth-child(5):hover {
+  transform: rotate(-2deg);
+  left: 35%;
+}
+section.portfolio-index .galery-wrap .opened {
+  z-index: 1000;
+  left: 0 !important;
+  transform: rotate(0deg);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 1140px;
+}
+section.portfolio-index .galery-wrap .opened img {
+  z-index: 5;
+}
+section.portfolio-index .galery-wrap .ombra {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 90%;
+  height: 20px;
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  transform: rotate(-2deg);
+  display: none;
+  z-index: -1;
+}
+section.portfolio-index .galery-wrap .ombra:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: -93px;
+  width: 90%;
+  height: 20px;
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  transform: rotate(4deg);
+}
+section.portfolio-index .galery-wrap .txt {
+  display: block;
+  margin: -2px 0 0 0;
+  padding-top: 20px;
+  padding-left: 2%;
+  height: 4em;
+  background: #f7f7f7;
+}
+section.portfolio-index .galery-wrap #loading {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  position: absolute;
+}
+section.portfolio-index .galery-wrap .loader {
+  display: block;
+  height: 30px;
+  left: 50%;
+  margin: -15px 0 0 -15px;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  animation: spin 1s infinite linear;
 }
 /*--------------------------------------------------------------------------Корпоративный сайт*/
 .title-corporete {
@@ -2224,6 +2377,176 @@ table.service td.add {
 }
 table.service td.add:hover {
   color: #1bdb68;
+}
+/*----------------------------------------------------------------страница разработки*/
+section.develop .step-develop-wrap #tabs {
+  width: 700px;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: auto;
+  min-height: 200px;
+  max-height: 600px;
+  overflow: hidden;
+}
+section.develop .step-develop-wrap ul {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  vertical-align: top;
+  width: 50%;
+}
+section.develop .step-develop-wrap ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #3b3b3b;
+  border-top: solid 2px #e9e9e9;
+  padding: 20px 5px;
+  z-index: 1;
+  opacity: .5;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+section.develop .step-develop-wrap ul li:focus,
+section.develop .step-develop-wrap a:focus {
+  outline: none;
+}
+section.develop .step-develop-wrap ul li:nth-child(1) a {
+  border-top: none;
+}
+section.develop .step-develop-wrap ul li a.active {
+  opacity: 1;
+}
+section.develop .step-develop-wrap .para-a {
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  border: none;
+  font-family: 'Montserrat';
+  color: #2b2b2b;
+}
+section.develop .step-develop-wrap .tag {
+  position: relative;
+  width: 100%;
+}
+section.develop .step-develop-wrap .icon {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #c7c7c7;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+section.develop .step-develop-wrap .block {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  border: solid 2px #7b7b7b;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section.develop .step-develop-wrap .circle {
+  position: absolute;
+  padding: 2px;
+  border: solid 2px #7b7b7b;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section.develop .step-develop-wrap .title {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0 10px;
+  vertical-align: middle;
+  color: #7b7b7b;
+}
+section.develop .step-develop-wrap .addon {
+  position: relative;
+  width: 80%;
+  top: -25px;
+  margin-left: 70px;
+  letter-spacing: 0;
+  font-size: 13px;
+  color: #9b9b9b;
+  opacity: 0;
+  font-family: 'Open Sans';
+}
+section.develop .step-develop-wrap .addon.fadein {
+  opacity: 1;
+}
+section.develop .step-develop-wrap .browser {
+  width: 45%;
+  height: 95%;
+  position: absolute;
+  border-style: solid;
+  border-width: 2px 0 2px 2px;
+  border-color: #7b7b7b transparent #7b7b7b #7b7b7b;
+  right: 0;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+}
+section.develop .step-develop-wrap .top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  background: #fff;
+  border-bottom: solid 2px #7b7b7b;
+  z-index: 2;
+}
+section.develop .step-develop-wrap .dot {
+  position: relative;
+  display: inline-block;
+  padding: 4px;
+  background: #c7c7c7;
+  border-radius: 100%;
+}
+section.develop .step-develop-wrap .dot:nth-child(1) {
+  margin-left: 7px;
+}
+section.develop .step-develop-wrap #tabs-1,
+section.develop .step-develop-wrap #tabs-2,
+section.develop .step-develop-wrap #tabs-3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+section.develop .step-develop-wrap #tabs-1 {
+  background: #9b9b9b;
+}
+section.develop .step-develop-wrap #tabs-2 {
+  background: #c9c9c9;
+}
+section.develop .step-develop-wrap #tabs-3 {
+  background: #1b1b1b;
 }
 /*------------------------------------------------------------------------Шаги/Этапы/Step*/
 .steps-wrap label {
@@ -2721,66 +3044,35 @@ table.service td.add:hover {
 }
 /*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
+  height: 100vh;
+  background: -moz-linear-gradient(white 0, white 25%, black 100%);
+  /* FF 3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(25%, #ffffff), color-stop(100%, #000000));
+  /* Safari 4+, Chrome 2+ */
+  background: -webkit-linear-gradient(white 0, white 25%, black 100%);
+  /* Safari 5.1+, Chrome 10+ */
+  background: -o-linear-gradient(white 0, white 25%, black 100%);
+  /* Opera 11.10 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000');
+  /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000')";
+  /* IE8+ */
+  background: linear-gradient(white 0, white 25%, black 100%);
+  /* the standard */
+  background-attachment: fixed;
   /*---------------эффект*/
   /*---------конец эффекта*/
 }
-section.landing-description *,
-section.landing-description *:before,
-section.landing-description *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-section.landing-description html,
-section.landing-description body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-}
-section.landing-description .intro {
-  position: relative;
-  height: auto;
-  transform: translateZ(0);
-  background-image: linear-gradient(35deg, #8DD9FF, #FFDA00);
-}
-section.landing-description .intro img {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  mix-blend-mode: multiply;
-}
-section.landing-description .intro .caption {
+section.landing-description h1 {
+  color: transparent;
+  font-size: 7rem;
   position: absolute;
-  bottom: 25%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 3;
-  color: white;
-}
-section.landing-description .intro .caption h1 {
-  display: inline-block;
-  width: 70%;
-  font-size: 6vw;
-  font-weight: 100;
-}
-section.landing-description .intro .overlay {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-section.landing-description .intro .overlay svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 35%;
+  left: 35%;
+  color: #ecf0f1;
+  font-weight: 400;
+  text-shadow: 5px 5px #cccccc;
+  text-transform: uppercase;
 }
 section.landing-description p {
   display: inline-block;
@@ -2872,62 +3164,88 @@ section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap h
   margin: 1em;
 }
 /*------------------------------------------------------------------------ТАБЫ*/
-section.tabs {
-  position: relative;
-  width: 100%;
-  margin-bottom: 2em;
-}
-section.tabs .label-wrap {
-  display: flex;
-}
-section.tabs label {
-  color: #333333;
-  cursor: pointer;
-  display: block;
-  line-height: 2.8em;
-  font-weight: 600;
-  border: 1px solid #cccccc;
-  top: 0.125em;
-  text-align: center;
-  padding: 0 1em;
-}
-section.tabs label:ntf-child(2) {
-  border-left: none;
-  border-right: none;
-}
-section.tabs label:hover {
-  color: #06c438;
-}
-section.tabs input {
-  display: none;
-}
-section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
-section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
-section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
-  border: 2px solid #06c438;
-  top: 0;
-  z-index: 3;
-}
-section.tabs .tabs_cont {
-  position: relative;
-  padding-top: 2em;
-  z-index: 2;
-  height: 15em;
-}
-section.tabs .tabs_cont > div {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-section.tabs #tab_1:checked ~ .tabs_cont #tab_c1,
-section.tabs #tab_2:checked ~ .tabs_cont #tab_c2,
-section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
-  position: static;
-  left: 0;
-  opacity: 1;
-}
+/*section.tabs {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2em;
+
+
+
+    .label-wrap {
+        display: flex;
+    }
+
+
+
+    label {
+        color: @color-gray-dark;
+        cursor: pointer;
+        display: block;
+        line-height: 2.8em;
+        font-weight: 600;
+        .border;
+        top: 0.125em;
+        text-align: center;
+        padding: 0 1em;
+        &:ntf-child(2) {
+            border-left: none;
+            border-right: none;
+        }
+
+
+
+        &:hover {
+            color: @color-more;
+        }
+    }
+
+
+
+    input {
+        display: none;
+    }
+
+
+
+
+
+    #tab_1:checked ~ .label-wrap #tab_l1,
+    #tab_2:checked ~ .label-wrap #tab_l2,
+    #tab_3:checked ~ .label-wrap #tab_l3 {
+        .border-more;
+        top: 0;
+        z-index: 3;
+    }
+
+
+
+    .tabs_cont {
+        position: relative;
+        padding-top: 2em;
+        z-index: 2;
+        height: 15em;
+    }
+
+
+
+    .tabs_cont > div {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+
+
+
+    #tab_1:checked ~ .tabs_cont #tab_c1,
+    #tab_2:checked ~ .tabs_cont #tab_c2,
+    #tab_3:checked ~ .tabs_cont #tab_c3 {
+        position: static;
+        left: 0;
+        opacity: 1;
+    }
+}*/
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
 #toTop {
   width: 1.5em;
@@ -3033,8 +3351,133 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     flex-direction: row;
   }
+  section.portfolio-index .galery-wrap #allcontent {
+    max-width: 960px;
+  }
+  /* ------------------------------------------------------------------Аккордион */
+  /*------------------------------------------------АДМИНКА--------------------------------------*/
+  /*------------------------------------------Layout Admin*/
+  .wrap-header {
+    display: flex;
+    align-items: baseline;
+    background: #333333;
+  }
+  .container-admin {
+    margin-right: 2em;
+    margin-left: 2em;
+    width: 95%;
+  }
+  .container-admin .content {
+    color: #333333;
+  }
+  i.logo {
+    margin: 0.4em 0 0 2em;
+    font-size: 3em;
+    color: #06c438;
+  }
+  .header-admin {
+    display: flex;
+    align-items: baseline;
+    color: #fff;
+    z-index: 1000;
+  }
+  .header-admin h1 {
+    font-size: 1.5;
+  }
+  .header-admin ul {
+    margin-left: auto;
+  }
+  .header-admin ul a {
+    color: #fff;
+    border-bottom: 1px dotted;
+    transition: all 0.5s ease-in-out;
+  }
+  .header-admin ul a:hover {
+    color: #06c438;
+    border-bottom: 1px solid;
+  }
+  .wrap-content {
+    display: flex;
+    color: #fff;
+  }
+  .panel-group {
+    width: 100%;
+    background: #11c808;
+    margin: 1.5em auto;
+    padding: 0 0.5em;
+  }
+  .navigation-admin {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    height: 100vh;
+    background: #333333;
+    width: 15em;
+    padding-right: 3em;
+    padding-left: 1em;
+    z-index: 950;
+  }
+  .navigation-admin ul {
+    padding-top: 2em;
+  }
+  .navigation-admin ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.89);
+    cursor: pointer;
+  }
+  .navigation-admin ul li:hover {
+    background: #999999;
+  }
+  .navigation-admin ul a {
+    color: #fff;
+  }
+  /*-------------------------------стили таблиц*/
+  table.table-admin {
+    background: white;
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    /*.btn-del {
+        color: @color-gray-light;
+        cursor: pointer;
+        font-size: 1.875em;
+        text-decoration: dashed;
+        right: 0.312em;
+        top: 0;
+
+        &:hover {
+            color: red;
+        }
+    }*/
+  }
+  table.table-admin th {
+    font-weight: bold;
+    color: #2f5d84;
+    border-bottom: 2px solid #04931e;
+    padding: 0.6em 0.5em;
+  }
+  table.table-admin td {
+    color: #3c6eaa;
+    border-bottom: 1px solid #cccccc;
+    padding: 0.65em 0.5em;
+    transition: .3s linear;
+  }
+  table.table-admin tr:hover td {
+    background: #9afcb4;
+  }
+  /*------------------блог*/
+  .admin-create a.admin-btn {
+    position: absolute;
+    top: 14.5em;
+    left: 2.5em;
+  }
+  .admin-create button {
+    width: 100%;
+    background: #ff3136;
+  }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1200px) and (min-width: 992px) and (max-width: 1199px) {
   .container {
     width: 60em;
   }
@@ -3060,19 +3503,15 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     justify-content: space-between;
   }
-  /*------------------------------------------------------- портфолио*/
   .medium-half {
     flex-basis: 31%;
   }
-  /*-------------------------------------------------Блог*/
   .post__item {
     width: 48.5%;
   }
-  /*------------------------------------------------------цены*/
   .solution-item {
     width: 33.333%;
   }
-  /*---------------------------------------------------chekout*/
   .form-wrap {
     display: flex;
     flex-direction: row;
@@ -3084,7 +3523,6 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     flex-direction: row;
   }
-  /*-------------------------------------------Страница Лендинга*/
   .description-wrap {
     display: flex;
     flex-direction: row;
@@ -3097,18 +3535,19 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     flex-direction: row;
   }
-  /*----------------------------------------------------форма заявки*/
   .btn-form-group {
     display: flex;
     flex-direction: row;
   }
-  /*---------------------------------------------------Home/Index домашняя страница*/
   section.about .about__row {
     display: flex;
     flex-direction: row;
   }
+  section.portfolio-index .galery-wrap #allcontent {
+    max-width: 900px;
+  }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 1200px) and (min-width: 768px) and (max-width: 991px) {
   .container {
     width: 45em;
   }
@@ -3127,26 +3566,15 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     justify-content: space-between;
   }
-  /*-------------------------------------------------Блог*/
   .post__item {
     width: 100%;
   }
-  /*------------------------------------------------------- портфолио*/
   .medium-half {
     flex-basis: 31%;
   }
-  /*.grid.isotope-grid.col-3 .grid-sizer,
-
-    .grid.isotope-grid.col-3 .grid-item {
-
-        width: 48.75%;
-
-    }*/
-  /*--------------------------------------------------------цены*/
   .solution-item {
     width: 50%;
   }
-  /*------------------------------------------------------chekout*/
   .form-wrap {
     display: flex;
     flex-direction: row;
@@ -3154,7 +3582,6 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .form-wrap input.inputs-long {
     width: 94%;
   }
-  /*-------------------------------------------Страница Лендинга*/
   .description-wrap {
     display: flex;
     flex-direction: row;
@@ -3167,18 +3594,19 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     flex-direction: row;
   }
-  /*----------------------------------------------------форма заявки*/
   .btn-form-group {
     display: flex;
     flex-direction: column;
   }
-  /*---------------------------------------------------Home/Index домашняя страница*/
   section.about .about__row {
     display: flex;
     flex-direction: row;
   }
+  section.portfolio-index .galery-wrap #allcontent {
+    max-width: 750px;
+  }
 }
-@media (max-width: 767px) {
+@media (min-width: 1200px) and (max-width: 767px) {
   .container {
     width: 30em;
   }
@@ -3193,14 +3621,12 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .comment {
     display: block;
   }
-  /*type file в окне заяки*/
   .file_upload > div {
     display: none;
   }
   .file_upload > button {
     width: 100%;
   }
-  /*-------------------------------------------------- портфолио*/
   .grid.isotope-grid {
     overflow: hidden;
   }
@@ -3222,39 +3648,34 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     margin-bottom: 2.5%;
     backface-visibility: hidden;
   }
-  /*------------------------------------------------------- портфолио*/
   .medium-half {
     flex-basis: 46%;
   }
-  /*-------------------------------------------------Блог*/
   .post__item {
     width: 100%;
   }
-  /*---------------------------------------------------------цены*/
   .solution-item {
     flex-basis: 46%;
   }
-  /*-------------------------------------------------------chekout*/
   input.inputs-long {
     width: 73%;
   }
   .details {
     width: 117%;
   }
-  /*-------------------------------------------Страница Лендинга*/
-  /*----------------------------------------------------форма заявки*/
   .btn-form-group {
     display: flex;
     flex-direction: column;
   }
-  /*---------------------------------------------------Home/Index домашняя страница*/
   section.about .about__row {
     display: flex;
     flex-direction: column;
   }
+  section.portfolio-index .galery-wrap #allcontent {
+    max-width: 700px;
+  }
 }
-@media screen and (max-width: 640px) {
-  /*------------------------------------------------------портфолио*/
+@media (min-width: 1200px) and screen and (max-width: 640px) {
   .portfolio-item {
     display: block;
     text-decoration: none;
@@ -3323,36 +3744,31 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     opacity: 1;
     transform: scale(1);
   }
-  /*------------------------------------------------------- портфолио*/
   .medium-half {
     flex-basis: 46%;
   }
-  /*-------------------------------------------------Блог*/
   .post__item {
     width: 100%;
   }
-  /*-------------------------------------------------------цены*/
   .solution-item {
     flex-basis: 46%;
   }
-  /*----------------------------------------------------chekout*/
   input.inputs-long {
     width: 73.5%;
   }
-  /*-------------------------------------------Страница Лендинга*/
-  /*----------------------------------------------------форма заявки*/
   .btn-form-group {
     display: flex;
     flex-direction: column;
   }
-  /*---------------------------------------------------Home/Index домашняя страница*/
   section.about .about__row {
     display: flex;
     flex-direction: column;
   }
+  section.portfolio-index .galery-wrap #allcontent {
+    max-width: 600px;
+  }
 }
-/* ------------------------------------------------------------------Аккордион */
-@media (max-width: 550px) {
+@media (min-width: 1200px) and (max-width: 550px) {
   .accordion {
     transform: translate(0, 0);
     max-width: 100%;
@@ -3361,7 +3777,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     left: 0;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: 1200px) and (max-width: 480px) {
   html {
     text-size-adjust: none;
   }
@@ -3383,175 +3799,36 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .comment {
     display: block;
   }
-  /*type file в окне заяки*/
   .file_upload > div {
     display: none;
   }
   .file_upload > button {
     width: 100%;
   }
-  /*------------------------------------------------------- портфолио*/
   .medium-half {
     flex-basis: 90%;
   }
-  /*.grid.isotope-grid.col-3 .grid-sizer,
-
-    .grid.isotope-grid.col-3 .grid-item {
-
-        float: none;
-
-        width: 100%;
-
-        margin-bottom: 30px;*/
-  /*---------------------------------------------------------Блог*/
   .post__item {
     width: 100%;
   }
-  /*-----------------------------------------------------------цены*/
   .solution-item {
     flex-basis: 90%;
   }
-  /*--------------------------------------------------------chekout*/
   input.inputs-long {
     width: 22em;
   }
-  /*-------------------------------------------Страница Лендинга*/
-  /*----------------------------------------------------форма заявки*/
   .btn-form-group {
     display: flex;
     flex-direction: column;
   }
 }
-@media screen and (max-width: 412px) {
-  /*-----------------------------------------------------------chekout*/
+@media (min-width: 1200px) and screen and (max-width: 412px) {
   input.inputs-long {
     width: 96.5%;
   }
 }
-@media screen and (max-width: 320px) {
-  /*-----------------------------------------------------------chekout*/
+@media (min-width: 1200px) and screen and (max-width: 320px) {
   input.inputs-long {
     width: 110%;
   }
-}
-/*------------------------------------------------АДМИНКА--------------------------------------*/
-/*------------------------------------------Layout Admin*/
-.wrap-header {
-  display: flex;
-  align-items: baseline;
-  background: #333333;
-}
-.container-admin {
-  margin-right: 2em;
-  margin-left: 2em;
-  width: 95%;
-}
-.container-admin .content {
-  color: #333333;
-}
-i.logo {
-  margin: 0.4em 0 0 2em;
-  font-size: 3em;
-  color: #06c438;
-}
-.header-admin {
-  display: flex;
-  align-items: baseline;
-  color: #fff;
-  z-index: 1000;
-}
-.header-admin h1 {
-  font-size: 1.5;
-}
-.header-admin ul {
-  margin-left: auto;
-}
-.header-admin ul a {
-  color: #fff;
-  border-bottom: 1px dotted;
-  transition: all 0.5s ease-in-out;
-}
-.header-admin ul a:hover {
-  color: #06c438;
-  border-bottom: 1px solid;
-}
-.wrap-content {
-  display: flex;
-  color: #fff;
-}
-.panel-group {
-  width: 100%;
-  background: #11c808;
-  margin: 1.5em auto;
-  padding: 0 0.5em;
-}
-.navigation-admin {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 0;
-  height: 100vh;
-  background: #333333;
-  width: 15em;
-  padding-right: 3em;
-  padding-left: 1em;
-  z-index: 950;
-}
-.navigation-admin ul {
-  padding-top: 2em;
-}
-.navigation-admin ul li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.89);
-  cursor: pointer;
-}
-.navigation-admin ul li:hover {
-  background: #999999;
-}
-.navigation-admin ul a {
-  color: #fff;
-}
-/*-------------------------------стили таблиц*/
-table.table-admin {
-  background: white;
-  max-width: 100%;
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  /*.btn-del {
-        color: @color-gray-light;
-        cursor: pointer;
-        font-size: 1.875em;
-        text-decoration: dashed;
-        right: 0.312em;
-        top: 0;
-
-        &:hover {
-            color: red;
-        }
-    }*/
-}
-table.table-admin th {
-  font-weight: bold;
-  color: #2f5d84;
-  border-bottom: 2px solid #04931e;
-  padding: 0.6em 0.5em;
-}
-table.table-admin td {
-  color: #3c6eaa;
-  border-bottom: 1px solid #cccccc;
-  padding: 0.65em 0.5em;
-  transition: .3s linear;
-}
-table.table-admin tr:hover td {
-  background: #9afcb4;
-}
-/*------------------блог*/
-.admin-create a.admin-btn {
-  position: absolute;
-  top: 14.5em;
-  left: 2.5em;
-}
-.admin-create button {
-  width: 100%;
-  background: #ff3136;
 }
