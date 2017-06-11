@@ -2304,7 +2304,7 @@ table.service td.add:hover {
   color: #06c438;
 }
 .steps-wrap .css-accordion .accordion-item input[type=radio]:checked + label:before {
-  background: #fdfffe;
+  background: #b8fdca;
 }
 /*------------------------------------------------------------------------------Аккордион*/
 .accordion {
@@ -2721,32 +2721,66 @@ table.service td.add:hover {
 }
 /*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
-  min-height: 100vh;
-  padding-bottom: 4em;
   /*---------------эффект*/
-  /*canvas {
-        display: block;
-        vertical-align: bottom;
-    }
-
-    #particles-js {
-        //  overflow-x:hidden;
-        width: 100vw;
-        height: 100%;
-    }
-
-    h1 {
-        font-size: 7rem;
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        color: #FFF;
-        font-family: teko;
-        font-weight: 400;
-        text-shadow: 5px 5px #5F6D72;
-        text-transform: uppercase;
-    }*/
   /*---------конец эффекта*/
+}
+section.landing-description *,
+section.landing-description *:before,
+section.landing-description *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section.landing-description html,
+section.landing-description body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+section.landing-description .intro {
+  position: relative;
+  height: auto;
+  transform: translateZ(0);
+  background-image: linear-gradient(35deg, #8DD9FF, #FFDA00);
+}
+section.landing-description .intro img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+section.landing-description .intro .caption {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  color: white;
+}
+section.landing-description .intro .caption h1 {
+  display: inline-block;
+  width: 70%;
+  font-size: 6vw;
+  font-weight: 100;
+}
+section.landing-description .intro .overlay {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+section.landing-description .intro .overlay svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 section.landing-description p {
   display: inline-block;

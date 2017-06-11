@@ -3117,7 +3117,7 @@ table.service {
             text-align: center;
             content: counter(li);
             .border-more;
-           // border-radius: 40px;
+            // border-radius: 40px;
             display: inline-block;
             width: 40px;
             height: 40px;
@@ -3133,11 +3133,10 @@ table.service {
         list-style-type: none;
         counter-reset: li;
         padding: 20px;
-       // margin: 20px;
-        width: 100%/*600px*/;
+        // margin: 20px;
+        width: 100% /*600px*/;
         //border: 1px solid #dddddd;
-       // background: #f4f4f4;
-
+        // background: #f4f4f4;
         .accordion-item {
             counter-increment: li;
             padding: 0;
@@ -3192,7 +3191,7 @@ table.service {
                         color: @color-more;
 
                         &:before {
-                            background: lighten(@color-more,60%);
+                            background: lighten(@color-more,46%);
                         }
                     }
                 }
@@ -3776,32 +3775,79 @@ table.service {
 }
 /*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
-    min-height: 100vh;
+   // min-height: 100vh;
     // background: @color-gray-dark;
-    padding-bottom: @size-margin-section;
+  //  padding-bottom: @size-margin-section;
     /*---------------эффект*/
-    /*canvas {
-        display: block;
-        vertical-align: bottom;
-    }
 
-    #particles-js {
-        //  overflow-x:hidden;
-        width: 100vw;
-        height: 100%;
-    }
 
-    h1 {
-        font-size: 7rem;
-        position: absolute;
-        top: 40%;
-        left: 35%;
-        color: #FFF;
-        font-family: teko;
-        font-weight: 400;
-        text-shadow: 5px 5px #5F6D72;
-        text-transform: uppercase;
-    }*/
+@blue:#8DD9FF;
+@yellow:#FFDA00;
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+  position: relative;
+  height: auto;
+  transform: translateZ(0);
+  background-image: linear-gradient(35deg, @blue, @yellow);
+  
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+}
+
+.intro .caption {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  color: white;
+  
+  h1 {
+    display: inline-block;
+    width: 70%;
+    font-size: 6vw;
+    font-weight: 100;
+  }
+}
+
+.intro .overlay {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
     /*---------конец эффекта*/
     p {
         display: inline-block;
