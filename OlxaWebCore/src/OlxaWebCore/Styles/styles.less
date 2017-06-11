@@ -146,7 +146,6 @@ html,
 body {
     height: 100%;
     color: @color-gray-dark;
-    
 }
 
 
@@ -3097,127 +3096,111 @@ table.service {
     }
 }
 
-/*---------------------------------------------------------------------------Этапы работы steps*/
+/*------------------------------------------------------------------------Шаги/Этапы/Step*/
 .steps-wrap {
-    padding: 10em 0 30em;
-
-    * {
-        transition: all 1000ms;
-    }
-
-    @min_unit: 0.1rem;
-    @white_tint: rgba(255,255,255,0.2);
-    @black_tint: rgba(0,0,0,0.2);
-    @c_1: #38e;
-    @c_2: #6f8db3;
-
-
-
-
-    header {
-        width: 100vw;
-        margin: 0;
-        float: left;
-        padding: @min_unit*20 0;
-    }
-
-    #steps {
-        float: left;
-        left: 50%;
-        position: relative;
-        transform: translateX(-50%);
-        background-color: #fff;
-        box-shadow: -@min_unit*2.5 @min_unit*2.5 @min_unit*2.5 rgba(0,0,0,0.1), @min_unit*2.5 @min_unit*2.5 @min_unit*2.5 rgba(0,0,0,0.1), 0 @min_unit*2 @min_unit*2 rgba(0,0,0,0.1);
-    }
-
-    #steps > div {
-        float: left;
-        border-radius: 50%;
-        background-color: @c_2;
-        padding: 1vw;
-        margin: 1vw;
-        box-sizing: border-box;
-        width: 4vw;
-        height: 4vw;
-        color: lighten( @c_1, 30% );
-        font-size: 2rem;
-        text-align: center;
+    label {
+        color: #666;
+        font-size: 18px;
         cursor: pointer;
-        box-shadow: inset 100px 0 0 darken( @c_1, 20% );
+        padding: 0.8em 1em 0.8em 0;
+
+        &:hover {
+            color: @color-more;
+
+            &:before {
+                background: lighten(@color-more,46%);
+            }
+        }
+
+        &:before {
+            font-family: 'Impact';
+            text-align: center;
+            content: counter(li);
+            .border-more;
+           // border-radius: 40px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 24px;
+            margin: 0 0.5em 0 0;
+            background: white;
+            color: @color-more;
+        }
     }
 
-    #steps > div.active {
-        color: lighten( @c_1, 100%);
-        background-color: @c_1;
-        box-shadow: inset 0 0 0 @c_1;
-    }
+    .css-accordion {
+        list-style-type: none;
+        counter-reset: li;
+        padding: 20px;
+       // margin: 20px;
+        width: 100%/*600px*/;
+        //border: 1px solid #dddddd;
+       // background: #f4f4f4;
 
-    #steps div.done {
-        color: @c_1;
-        box-shadow: inset -100px 0 0 lighten( @c_1, 20% );
-    }
+        .accordion-item {
+            counter-increment: li;
+            padding: 0;
+            margin: 0;
 
-    .article_container {
-        float: left;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40vw;
-    }
+            .item-content-container {
+                border-left: 2px solid @color-more;
+                padding: 6px 0;
+                margin: -2px 0 -2px 21px;
 
-    article {
-        width: 100%;
-        top: 0;
-        position: absolute;
-        background-color: #fff;
-        box-shadow: -@min_unit*2.5 @min_unit*2.5 @min_unit*2.5 rgba(0,0,0,0.1), @min_unit*2.5 @min_unit*2.5 @min_unit*2.5 rgba(0,0,0,0.1), 0 @min_unit*2 @min_unit*2 rgba(0,0,0,0.1);
-    }
+                .item-content {
+                    background: #eee;
+                    padding: 0 1em;
+                    overflow: hidden;
+                    margin: 0 0 0 36px;
+                    border-radius: 2px;
+                    box-shadow: inset 0 2px 8px rgba(0,0,0,0.5), 0 1px 2px rgba(255,255,255,0.9);
 
-    article.active_m_2 {
-        left: -110vw;
-        opacity: 0;
-    }
+                    p {
+                        margin: 0.5em 0;
+                        font-size: 14px;
+                        text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+                    }
+                }
+            }
 
-    article.active_m_1 {
-        left: -110%;
-        opacity: 0.3;
-    }
+            input[type=radio] {
+                display: none;
 
-    article.active {
-        left: 0;
-        opacity: 1;
-    }
+                ~ .item-content-container {
+                    overflow: hidden;
 
-    article.active_p_1 {
-        left: 110%;
-        opacity: 0.3;
-    }
+                    .item-content {
+                        height: 0;
+                        transition: all 0.3s linear;
+                    }
+                }
 
-    article.active_p_2 {
-        left: 110vw;
-        opacity: 0;
-    }
+                &:checked {
+                    ~ .item-content-container {
+                        height: auto;
+                        overflow: visible;
 
-    article * {
-        box-sizing: border-box;
-        width: 100%;
-        margin: 0;
-        padding: @min_unit*10;
-    }
+                        .item-content {
+                            height: 200px;
+                            overflow-y: auto;
+                            transition: all 0.5s linear;
+                        }
+                    }
 
-    article h2 {
-        background-color: @c_1;
-        color: lighten( @c_1, 50% );
-        font-size: 1.5rem;
-        letter-spacing: @min_unit*1.2;
-    }
+                    + label {
+                        color: @color-more;
 
-    article p {
-        width: 100%;
-        line-height: 1.2rem;
+                        &:before {
+                            background: lighten(@color-more,60%);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-/*-------------------------------------------------------------------------------------Аккордион*/
+/*------------------------------------------------------------------------------Аккордион*/
 
 .accordion {
     width: 100%;
@@ -3793,18 +3776,17 @@ table.service {
 }
 /*-----------------------------------------------------------------------------Страница Лендинга*/
 section.landing-description {
-   
     min-height: 100vh;
-   // background: @color-gray-dark;
+    // background: @color-gray-dark;
     padding-bottom: @size-margin-section;
     /*---------------эффект*/
-    canvas {
+    /*canvas {
         display: block;
         vertical-align: bottom;
     }
 
     #particles-js {
-      //  overflow-x:hidden;
+        //  overflow-x:hidden;
         width: 100vw;
         height: 100%;
     }
@@ -3819,20 +3801,21 @@ section.landing-description {
         font-weight: 400;
         text-shadow: 5px 5px #5F6D72;
         text-transform: uppercase;
-    }
+    }*/
     /*---------конец эффекта*/
-    p{
-        display:inline-block;
-        width:35em;
+    p {
+        display: inline-block;
+        width: 35em;
         position: absolute;
         top: 55%;
         left: 35%;
         color: #FFF;
         font-family: teko;
         font-weight: normal;
-       // text-shadow: 5px 5px #5F6D72;
+        // text-shadow: 5px 5px #5F6D72;
         text-transform: capitalize;
     }
+
     .description-wrap {
         justify-content: space-between;
 
@@ -4809,13 +4792,15 @@ i.logo {
 .navigation-admin {
     display: flex;
     flex-direction: column;
+    position: relative;
+    bottom: 0;
+    height: 100vh;
     background: @color-gray-dark;
     width: 15em;
-    //margin-right: auto;
     padding-right: 3em;
     padding-left: 1em;
     z-index: 950;
-    height: 100%;
+
 
 
 
