@@ -3164,88 +3164,62 @@ section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap h
   margin: 1em;
 }
 /*------------------------------------------------------------------------ТАБЫ*/
-/*section.tabs {
-    position: relative;
-    width: 100%;
-    margin-bottom: 2em;
-
-
-
-    .label-wrap {
-        display: flex;
-    }
-
-
-
-    label {
-        color: @color-gray-dark;
-        cursor: pointer;
-        display: block;
-        line-height: 2.8em;
-        font-weight: 600;
-        .border;
-        top: 0.125em;
-        text-align: center;
-        padding: 0 1em;
-        &:ntf-child(2) {
-            border-left: none;
-            border-right: none;
-        }
-
-
-
-        &:hover {
-            color: @color-more;
-        }
-    }
-
-
-
-    input {
-        display: none;
-    }
-
-
-
-
-
-    #tab_1:checked ~ .label-wrap #tab_l1,
-    #tab_2:checked ~ .label-wrap #tab_l2,
-    #tab_3:checked ~ .label-wrap #tab_l3 {
-        .border-more;
-        top: 0;
-        z-index: 3;
-    }
-
-
-
-    .tabs_cont {
-        position: relative;
-        padding-top: 2em;
-        z-index: 2;
-        height: 15em;
-    }
-
-
-
-    .tabs_cont > div {
-        position: absolute;
-        left: -9999px;
-        top: 0;
-        opacity: 0;
-        transition: opacity .5s ease-in-out;
-    }
-
-
-
-    #tab_1:checked ~ .tabs_cont #tab_c1,
-    #tab_2:checked ~ .tabs_cont #tab_c2,
-    #tab_3:checked ~ .tabs_cont #tab_c3 {
-        position: static;
-        left: 0;
-        opacity: 1;
-    }
-}*/
+section.tabs {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2em;
+}
+section.tabs .label-wrap {
+  display: flex;
+}
+section.tabs label {
+  color: #333333;
+  cursor: pointer;
+  display: block;
+  line-height: 2.8em;
+  font-weight: 600;
+  border: 1px solid #cccccc;
+  top: 0.125em;
+  text-align: center;
+  padding: 0 1em;
+}
+section.tabs label:ntf-child(2) {
+  border-left: none;
+  border-right: none;
+}
+section.tabs label:hover {
+  color: #06c438;
+}
+section.tabs input {
+  display: none;
+}
+section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
+section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
+section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
+  border: 2px solid #06c438;
+  top: 0;
+  z-index: 3;
+}
+section.tabs .tabs_cont {
+  position: relative;
+  padding-top: 2em;
+  z-index: 2;
+  height: 15em;
+}
+section.tabs .tabs_cont > div {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+section.tabs #tab_1:checked ~ .tabs_cont #tab_c1,
+section.tabs #tab_2:checked ~ .tabs_cont #tab_c2,
+section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
+  position: static;
+  left: 0;
+  opacity: 1;
+}
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
 #toTop {
   width: 1.5em;
