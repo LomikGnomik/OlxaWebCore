@@ -74,26 +74,17 @@ namespace OlxaWebCore.Controllers
 
         // редактирование POST
         [HttpPost]
-        public IActionResult EditPortfolio(Portfolio portfolio, IFormFileCollection file)
+        public IActionResult EditPortfolio(Portfolio portfolio, IFormFile desktop, IFormFile tablet, IFormFile mobile, IFormFile preview)
         {
             if (ModelState.IsValid)
             {
                 repository.SavePortfolio(portfolio);
 
-                foreach (var picture in file)
-                {
-                    //сохранение картинок
-                    if (file != null)
-                    {
-                        // путь к папке Files
-                        string path = "/Files/Portfolio/Image/"+portfolio.PortfolioID + picture.FileName;
-                        // сохраняем файл в папку Files в каталоге wwwroot
-                        using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
-                        {
-                            picture.CopyToAsync(fileStream);
-                        }
-                    }
-                }
+                SaveFile(desktop, "/Files/Portfolio/Image/Desktop/"+portfolio.Image);
+                SaveFile(tablet, "/Files/Portfolio/Image/Tablet/" + portfolio.Image);
+                SaveFile(mobile, "/Files/Portfolio/Image/Mobile/" + portfolio.Image);
+                SaveFile(preview, "/Files/Portfolio/Image/Preview/" + portfolio.Image);
+
                 //  TempData["message"] = $"{post.Title} has been saved";
                 return RedirectToAction("AllAdmin");
             }
@@ -101,6 +92,18 @@ namespace OlxaWebCore.Controllers
             {
                 // что-то не так со значениями данных 
                 return View(portfolio);
+            }
+        }
+
+        public async void SaveFile(IFormFile file , string path)
+        {
+            if (file != null)
+            {
+                // сохраняем в каталоге wwwroot/Files/Portfolio
+                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                {
+                   await file.CopyToAsync(fileStream);
+                }
             }
         }
 

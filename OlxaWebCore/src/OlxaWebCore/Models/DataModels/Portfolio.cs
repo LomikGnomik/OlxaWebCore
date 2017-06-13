@@ -34,7 +34,7 @@ namespace OlxaWebCore.Models.DataModels
         [Display(Name = "Опубликованно?")]
         public bool Published { get; set; }
 
-        [Display(Name = "Ссылка на папку с картинками")]
+        [Display(Name = "Имена изображений")]
         public string Image { get; set; }
 
         [Display(Name = "Отзыв")]

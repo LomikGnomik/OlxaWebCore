@@ -2,7 +2,7 @@
 @model Post
 
 <article class="post__item">
-    <a class="post__img" asp-action="Post" asp-controller="Blog" asp-route-Id=@Model.PostID>@*<img src="~/images/blog/post01.jpg" alt="картиночка" />*@</a>
+    <a class="post__img" asp-action="Post" asp-controller="Blog" asp-route-postID=@Model.PostID>@*<img src="~/images/blog/post01.jpg" alt="картиночка" />*@</a>
     <div class="post-body">
         <div class="post-meta">
             <div class="meta-panel">
@@ -29,9 +29,9 @@
             <h3>@Model.Title</h3>
         </a>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea co...
+           @Html.Raw(@Model.ShortDescription)
         </p>
-        <a asp-action="Post" asp-controller="Blog" asp-route-Id="@Model.PostID" class="read-more" >Читать далее...</a>
+        <a asp-action ="Post" asp-controller="Blog" asp-route-postID="@Model.PostID" class="read-more">Читать далее...</a>
 
    @*<br><a asp-action="EditPost" asp-controller="Blog" asp-route-PostID="@Model.PostID" class="btn-danger">редактировать</a>*@
 

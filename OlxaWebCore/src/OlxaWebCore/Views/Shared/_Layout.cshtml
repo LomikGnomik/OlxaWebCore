@@ -11,6 +11,8 @@
     <environment names="Development">
         @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
         <link rel="stylesheet" href="~/css/styles.css" />
+
+
     </environment>
 
     <environment names="Staging,Production">
@@ -21,9 +23,15 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
+   
+
+
 
 </head>
 <body>
+
+
+
     <div class="wrapper">
         <header>
             <div class="header">
@@ -235,6 +243,7 @@
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
+        
 
         @*CDN.нет файла на сервере -фильтр в портфолио*@
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> 

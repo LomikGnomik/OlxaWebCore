@@ -8,6 +8,7 @@
 
 
 
+
 <form asp-action="EditPost">
 
     <input type="hidden" asp-for="PostID" />
@@ -19,10 +20,13 @@
     <input type="text" asp-for="Category">
 
     <label asp-for="ShortDescription"></label>
-    <input type="text" asp-for="ShortDescription">
+    <textarea asp-for="ShortDescription"></textarea>
+    @*<input type="text" asp-for="ShortDescription">*@
 
     <label asp-for="Description"></label>
-    <input type="text" asp-for="Description">
+    <textarea  asp-for="Description"></textarea>
+
+    @*<input type="text" asp-for="Description">*@
     
     <label asp-for="Meta"></label>
     <input type="text" asp-for="Meta">

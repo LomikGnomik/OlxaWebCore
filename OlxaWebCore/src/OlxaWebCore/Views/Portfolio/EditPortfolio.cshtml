@@ -22,6 +22,7 @@
         <label asp-for="Category"></label>
         @*<select asp-for="Category" asp-items="ViewBag.Category"></select>*@
         <select name="Category">
+            <option value="@Model.Category">@Model.Category</option>
             <option value="Интернет-магазин">Интернет-магазин</option>
             <option value="Сайт визитка">Сайт визитка</option>
             <option value="Landing page">Landing page</option>
@@ -39,12 +40,17 @@
         <label asp-for="Description"></label>
         <textarea asp-for="Description"></textarea>
 
-        <input type="file" name="file" id="file" class="input-file"><br>
-        <input type="file" name="file" id="file" class="input-file"><br>
-        <input type="file" name="file" id="file" class="input-file"><br>
+        <label>Компьютер</label>
+        <input type="file" name="desktop" id="file" class="input-file"><br>
+        <label>Планшет</label>
+        <input type="file" name="tablet" id="file" class="input-file"><br>
+        <label>Сотовый</label>
+        <input type="file" name="mobile" id="file" class="input-file"><br>
+        <label>Превьюшка</label>
+        <input type="file" name="preview" id="file" class="input-file"><br>
 
-        @*<label asp-for="Image"></label>
-            <input type="text" asp-for="Image">*@
+        <label asp-for="Image"></label>
+            <input type="text" asp-for="Image" value=".jpg">
 
         <label asp-for="Review"></label>
         <textarea asp-for="Review"></textarea>

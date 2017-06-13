@@ -25,10 +25,6 @@ namespace OlxaWebCore.Models.Repository
             if (portfolio.PortfolioID == 0)
             {
                 context.Portfolios.Add(portfolio);
-
-        // Создаёт папку
-                DirectoryInfo Dir = new DirectoryInfo("/Files/Portfolio");
-                Dir.CreateSubdirectory("we");//portfolio.PortfolioID.ToString());
             }
             else
             {
