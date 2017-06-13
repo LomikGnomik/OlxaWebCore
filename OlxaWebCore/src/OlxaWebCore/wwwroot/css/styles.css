@@ -2387,7 +2387,6 @@ section.develop .step-develop-wrap #tabs {
   margin-top: 50px;
   height: auto;
   min-height: 200px;
-  max-height: 600px;
   overflow: hidden;
 }
 section.develop .step-develop-wrap ul {

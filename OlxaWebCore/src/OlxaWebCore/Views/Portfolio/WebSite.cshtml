@@ -1,4 +1,4 @@
-﻿
+﻿@model Portfolio
 <div class="container">
     <div class="portfolio-inner-wrap">
         <section class="heading">
@@ -49,7 +49,7 @@
                         <div class="devieces-outer-wrap-monitor">
                             <div class="devices-inner-wrap-monitor">
                                 <div id="first-page" class="monitor">
-                                    <img src="https://www.dotorg.ru/content/layout/media/img/Kleinhouse-desktop.jpg" alt="Сайт на компьютере">
+                                    <img src="~/Files/Portfolio/Image/Desktop/@Model.PortfolioID" alt="Сайт на компьютере">
                                 </div>
                             </div>
                             <svg class="desktop" x="0" y="0" width="338px" height="97px" viewBox="0 0 338 97" enable-background="new 0 0 338 97">
@@ -68,7 +68,7 @@
                         <div class="devieces-outer-wrap-tablet">
                             <div class="devices-inner-wrap-tablet">
                                 <div id="second-page" class="tablet">
-                                    <img src="https://www.dotorg.ru/content/layout/media/img/Kleinhouse-tab.jpg" alt="Сайт на планшете">
+                                    <img src="~/Files/Portfolio/Image/Tablet/@Model.PortfolioID" alt="Сайт на планшете">
                                 </div>
                             </div>
                             <svg class="ipad-b-cicrle" x="0px" y="0px" width="45px" height="45px" viewBox="0 0 45 45" enable-background="new 0 0 45 45">
@@ -88,7 +88,7 @@
                         <div class="devieces-outer-wrap-mobile">
                             <div class="devices-inner-wrap-mobile">
                                 <div id="third-page" class="mobile">
-                                    <img src="https://www.dotorg.ru/content/layout/media/img/Kleinhouse-phone.jpg" alt="Сайт на мобильном">
+                                    <img src="~/Files/Portfolio/Image/Mobile/@Model.PortfolioID" alt="Сайт на мобильном">
                                 </div>
                             </div>
                             <svg class="iphone-b-circle"x="0px" y="0px"width="49px" height="49px" viewBox="0 0 49 49" enable-background="new 0 0 49 49">
@@ -101,7 +101,6 @@
                             c3.314,0,6,2.687,6,6c0,3.314-2.686,6-6,6c-3.313,0-6-2.686-6-6C0.5,3.187,3.187,0.5,6.5,0.5z" />
                         </svg>
                         </div>
-
                     </div>
                 </div>
             </div>

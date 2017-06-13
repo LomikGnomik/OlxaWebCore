@@ -85,7 +85,7 @@ namespace OlxaWebCore.Controllers
         }
 
         // удаление
-     //   [HttpPost]
+        [HttpPost]
         public IActionResult DeletePost(int postID)
         {
             Post deletedPost = repository.DeletePost(postID);

@@ -18,7 +18,7 @@ namespace OlxaWebCore.Controllers
 
         public int PageSize = 100;
 
-        public PortfolioController(IPortfolioRepository repo , IHostingEnvironment appEnvironment)
+        public PortfolioController(IPortfolioRepository repo, IHostingEnvironment appEnvironment)
         {
             repository = repo;
             _appEnvironment = appEnvironment;
@@ -29,33 +29,33 @@ namespace OlxaWebCore.Controllers
             IEnumerable<Portfolio> UserPortfolio = repository.Portfolios
                     .Where(p => p.Published == true);
 
-          PortfolioListViewModel PortfolioList=  new PortfolioListViewModel
+            PortfolioListViewModel PortfolioList = new PortfolioListViewModel
             {
                 Portfolios = UserPortfolio
-                  .Where(p => category == null || p.Category == category)
-                  .OrderBy(p => p.PortfolioID)
-                  .Skip((page - 1) * PageSize)
-                  .Take(PageSize),
+                    .Where(p => category == null || p.Category == category)
+                    .OrderBy(p => p.PortfolioID)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize),
                 PagingInfo = new PagingInfo
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
                     TotalItems = category == null ?
-                      repository.Portfolios.Count() :
-                      repository.Portfolios.Where(e =>
-                      e.Category == category).Count()
+                        repository.Portfolios.Count() :
+                        repository.Portfolios.Where(e =>
+                        e.Category == category).Count()
                 },
                 CurrentCategory = category
             };
             return View(PortfolioList);
         }
-               
 
-     
+
+
 
         public ViewResult WebSite(int PortfolioID)
         {
-            return View(repository.Portfolios.FirstOrDefault(p=>p.PortfolioID== PortfolioID));
+            return View(repository.Portfolios.FirstOrDefault(p => p.PortfolioID == PortfolioID));
         }
 
         //ADMIN
@@ -74,24 +74,26 @@ namespace OlxaWebCore.Controllers
 
         // редактирование POST
         [HttpPost]
-        public IActionResult EditPortfolio(Portfolio portfolio, IFormFile file)
+        public IActionResult EditPortfolio(Portfolio portfolio, IFormFileCollection file)
         {
-
-            //сохранение картинок
-            if (file != null)
-            {
-                // путь к папке Files
-                string path = "/Files/Portfolio/" + file.FileName;
-                // сохраняем файл в папку Files в каталоге wwwroot
-                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
-                {
-                    file.CopyToAsync(fileStream);
-                }
-            }
-
             if (ModelState.IsValid)
             {
                 repository.SavePortfolio(portfolio);
+
+                foreach (var picture in file)
+                {
+                    //сохранение картинок
+                    if (file != null)
+                    {
+                        // путь к папке Files
+                        string path = "/Files/Portfolio/Image/"+portfolio.PortfolioID + picture.FileName;
+                        // сохраняем файл в папку Files в каталоге wwwroot
+                        using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                        {
+                            picture.CopyToAsync(fileStream);
+                        }
+                    }
+                }
                 //  TempData["message"] = $"{post.Title} has been saved";
                 return RedirectToAction("AllAdmin");
             }
@@ -111,7 +113,7 @@ namespace OlxaWebCore.Controllers
             {
                 //  TempData["message"] = $"{deletedPost.Title} was deleted";
             }
-            return RedirectToAction("All");
+            return RedirectToAction("AllAdmin");
         }
-    }             
     }
+}

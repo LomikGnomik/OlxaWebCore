@@ -1,8 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Разработка веб сайта";
 }
+
+@*Тут заголовок по середине
+подзаголовок по середине
+описание про разработку сайтов*@
+
 <section class="develop">
-    <div class="container">
+    
         <div class="step-develop-wrap">
 
             <div id="tabs">
@@ -15,7 +20,7 @@
                                         <div class="circle"></div>
                                     </div>
                                 </div>
-                                <span class="title">Feature One</span>
+                                <span class="title">НАЧАЛО РАБОТ</span>
                             </div>
                         </a>
                         <div class="addon fadein">
@@ -33,7 +38,7 @@
                                         <div class="circle"></div>
                                     </div>
                                 </div>
-                                <span class="title">Feature Two</span>
+                                <span class="title">ПРОЕКТИРОВАНИЕ</span>
                             </div>
                         </a>
                         <div class="addon">
@@ -51,7 +56,7 @@
                                         <div class="circle"></div>
                                     </div>
                                 </div>
-                                <span class="title">Feature Three</span>
+                                <span class="title">ДИЗАЙН</span>
                             </div>
                         </a>
                         <div class="addon">
@@ -61,19 +66,99 @@
                             <a class="para-a" href="#">Learn More</a>
                         </div>
                     </li>
+                    <li>
+                        <a href="#tabs-4">
+                            <div class="tag">
+                                <div class="icon">
+                                    <div class="block">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                                <span class="title">ВЕРСТКА И ПРОГРАММИРОВАНИЕ</span>
+                            </div>
+                        </a>
+                        <div class="addon">
+                            <span>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </span>
+                            <a class="para-a" href="#">Learn More</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#tabs-5">
+                            <div class="tag">
+                                <div class="icon">
+                                    <div class="block">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                                <span class="title">НАПОЛНЕНИЕ</span>
+                            </div>
+                        </a>
+                        <div class="addon">
+                            <span>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </span>
+                            <a class="para-a" href="#">Learn More</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#tabs-6">
+                            <div class="tag">
+                                <div class="icon">
+                                    <div class="block">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                                <span class="title">ТЕСТИРОВАНИЕ</span>
+                            </div>
+                        </a>
+                        <div class="addon">
+                            <span>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </span>
+                            <a class="para-a" href="#">Learn More</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#tabs-7">
+                            <div class="tag">
+                                <div class="icon">
+                                    <div class="block">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                                <span class="title">ПОДДЕРЖКА</span>
+                            </div>
+                        </a>
+                        <div class="addon">
+                            <span>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </span>
+                            <a class="para-a" href="#">Learn More</a>
+                        </div>
+                    </li>
+
                 </ul>
+
                 <div class="browser">
-                    <div class="top-bar">
+                    @*<div class="top-bar">
                         <div class="dot"></div>
                         <div class="dot"></div>
                         <div class="dot"></div>
-                    </div>
+                    </div>*@
                     <div id="tabs-1"></div>
                     <div id="tabs-2"></div>
                     <div id="tabs-3"></div>
+                    <div id="tabs-4"></div>
+                    <div id="tabs-5"></div>
+                    <div id="tabs-6"></div>
+                    <div id="tabs-7"></div>
                 </div>
             </div>
-
         </div>
-    </div>
+</section>
+<section>
+    @await Component.InvokeAsync("OrderForm")
 </section>
