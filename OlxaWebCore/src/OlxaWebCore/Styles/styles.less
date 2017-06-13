@@ -1119,54 +1119,76 @@ section.tariff {
 
 
 
-/*---------------------------------------------------------------------------------------------------------блог*/
+/*------------------------------------------------------------------------------------------------блог*/
 
 .blog {
     display: flex;
-
-
-
-    i {
+    /*i {
         display: inline-block;
         vertical-align: middle;
         font-size: 0.687em;
         color: @color-base;
         margin-top: -0.312em;
         margin-right: 0.05em;
-    }
-
-
-
+    }*/
     .post {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+       // justify-content: space-between;       
         width: 100%; /*с сайдбаром 75%*/
         position: relative;
         // padding-right: 1.5em;
         .post__item {
-            display: block;
-            //   width: 48.5%; /*-----------чтоб было по одному посту поставить 100%*/
-            .border;
-            margin-bottom: 1.87em;
-
-
-
-            &:ntf-child(odd) {
-                margin-right: 1em;
+            //width: 33.333%;
+            //.border;
+            //margin-bottom: 1.87em;
+            &:nth-child(odd) {
+                background: @color-gray-light;
             }
 
+            &:nth-child(even) {
+                background: @color-gray-lighter;
+            }
 
+            .post-body {
+                padding: 1em;                
+                flex-direction: column;
+                text-align: left;
+                min-height:20em;
 
-            .post_img {
+                .category, .date {
+                    text-transform: uppercase;
+                    display:flex;
+                    justify-content:space-between;
+                    font-size: @size-font-extra-small;
+                    color: @color-gray;
+                    margin:1em auto;
+                }
+
+                .title {
+                    margin:0.5em auto;
+                }
+
+                .short-description {
+                    margin:0.5em auto;
+                }
+
+                .read-more {
+                    text-align:right;
+                    color: @color-base;
+                    text-decoration: dotted;
+                    margin:0.5em auto;
+                }
+            }
+            /*&:ntf-child(odd) {
+                margin-right: 1em;
+            }*/
+            /*.post_img {
                 display: block;
                 padding-bottom: 0;
                 border: none;
-            }
-
-
-
-            .post-body {
+            }*/
+            /*.post-body {
                 text-align: center;
                 padding: 1.06em 1.5em 2.25em 1.5em;
 
@@ -1220,15 +1242,14 @@ section.tariff {
                     color: @color-base;
                     text-decoration: dotted;
                 }
-            }
+            }*/
         }
     }
 
 
 
-    .sidebar {
-        position: relative;
-        // width: 40em;
+    /*.sidebar {
+        position: relative;        
         .widget-sidebar {
             padding: 1.125em 1.5em 1.5em 1.5em;
             margin-bottom: 1.5em;
@@ -1461,7 +1482,7 @@ section.tariff {
                 }
             }
         }
-    }
+    }*/
 }
 
 
@@ -3284,7 +3305,7 @@ section.develop {
             margin-top: 50px;
             height: auto;
             min-height: 200px;
-           // max-height: 600px;
+            // max-height: 600px;
             overflow: hidden;
         }
 
@@ -4354,6 +4375,7 @@ section.tabs {
         top: 0.125em;
         text-align: center;
         padding: 0 1em;
+
         &:ntf-child(2) {
             border-left: none;
             border-right: none;
@@ -4499,9 +4521,10 @@ section.tabs {
         justify-content: space-between;
     }
     /*-------------------------------------------------Блог*/
-    .post__item {
+    /*.post__item {
         width: 48.5%;
-    }
+    }*/
+     .post__item {width: 33.333%;}
     /*------------------------------------------------------- портфолио*/
     .medium-half {
         flex-basis: 31%;
@@ -4618,9 +4641,8 @@ section.tabs {
             flex-basis: 31%;
         }
         /*-------------------------------------------------Блог*/
-        .post__item {
-            width: 48.5%;
-        }
+        /*.post__item {width: 48.5%;}*/
+        .post__item {width: 33.333%;}
         /*------------------------------------------------------цены*/
         .solution-item {
             width: 33.333%;
@@ -4710,9 +4732,8 @@ section.tabs {
             justify-content: space-between;
         }
         /*-------------------------------------------------Блог*/
-        .post__item {
-            width: 100%;
-        }
+        /*.post__item {width: 100%;}*/
+        .post__item {width: 33.333%;}
         /*------------------------------------------------------- портфолио*/
         .medium-half {
             flex-basis: 31%;
@@ -4849,9 +4870,8 @@ section.tabs {
             flex-basis: 46%;
         }
         /*-------------------------------------------------Блог*/
-        .post__item {
-            width: 100%;
-        }
+        /*.post__item {width: 100%;}*/
+        .post__item {width: 48%;}
         /*---------------------------------------------------------цены*/
         .solution-item {
             flex-basis: 46%;
@@ -4991,9 +5011,8 @@ section.tabs {
             flex-basis: 46%;
         }
         /*-------------------------------------------------Блог*/
-        .post__item {
-            width: 100%;
-        }
+        /*.post__item {width: 100%;}*/
+        .post__item {width: 90%;}
         /*-------------------------------------------------------цены*/
         .solution-item {
             flex-basis: 46%;
@@ -5093,9 +5112,8 @@ section.tabs {
 
         margin-bottom: 30px;*/
         /*---------------------------------------------------------Блог*/
-        .post__item {
-            width: 100%;
-        }
+        /*.post__item {width: 100%;}*/
+        .post__item {width: 90%;}
         /*-----------------------------------------------------------цены*/
         .solution-item {
             flex-basis: 90%;
