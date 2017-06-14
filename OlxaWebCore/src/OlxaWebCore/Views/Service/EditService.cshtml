@@ -2,7 +2,7 @@
 @{
     Layout = "_LayoutAdmin";
 
-    ViewData["Title"] = "Услуга";
+    ViewData["Title"] = "  Услуга: "+@Model.Title;
 }
 
 <form asp-action="EditService">
@@ -17,7 +17,7 @@
     @*<select name="Category">
         <option value="Сайты">Сайты</option>
         <option value="Дополнительные услуги">Дополнительные</option>
-        <option value="Продвижение">Про</option>
+        <option value="Продвижение">Продвижение</option>
         <option value="Информационный">Информационный</option>
         <option value="Копоративный">Копоративный</option>
     </select>*@
@@ -39,6 +39,15 @@
     </div>
 </form>
 
-<div>
-    <a asp-controller="Service" asp-action="AllServiceAdmin">Back</a>
-</div>
+
+<form asp-action="DeleteService">
+    <input type="hidden" asp-for="ServiceID" />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    </div>
+</form>
+    <div>
+        <a asp-controller="Service" asp-action="AllServiceAdmin">Вернуться</a>
+    </div>

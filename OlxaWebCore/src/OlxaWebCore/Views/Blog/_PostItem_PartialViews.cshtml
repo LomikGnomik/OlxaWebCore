@@ -44,9 +44,8 @@
                 @Model.PostedOn.Day.@Model.PostedOn.Month.@Model.PostedOn.Year
             </span>
         </div>
-        <div class="title"><h3>@Model.Title</h3></div>
-        <div class="short-description">Тут какой-то текст выдержка из статьи длинная <br /> прридлинная интересная приинтересная</div>
+        <div class="title"><a asp-controller="Blog" asp-action="Post" asp-route-postID="@Model.PostID"><h3>@Model.Title</h3></a></div>
+        <div class="short-description">@Model.ShortDescription</div>
         <div class="read-more"><a asp-action="Post" asp-controller="Blog" asp-route-postID="@Model.PostID" class="read-more">Читать далее...</a></div>
-        
     </div>
 </article>

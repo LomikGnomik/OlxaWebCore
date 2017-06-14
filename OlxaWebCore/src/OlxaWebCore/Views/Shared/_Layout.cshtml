@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
-   
+
 
 
 
@@ -47,7 +47,7 @@
             <div class="navigation">
                 <nav class="container">
                     <div class="logo">
-                        <a asp-controller="Home" asp-action="Index"><img src="~/images/2017-06-05_22-10-40.png"  width="100" height="30"></a>
+                        <a asp-controller="Home" asp-action="Index"><img src="~/images/2017-06-05_22-10-40.png" width="100" height="30"></a>
                     </div>
                     <ul class="main-menu">
                         <li class="main-menu__item"><a asp-area="" asp-controller="Portfolio" asp-action="All" class="link">Портфолио</a></li>
@@ -112,28 +112,28 @@
 
         <footer>
             @*<div class="top-footer">
-                <div class="container">
-                    <div class="tools">
-                        <div class="tools-item">
-                            <img src="" alt="Email">
-                            <span><a href="mailto:nfo@olxaweb.ru">info@olxaweb.ru</a></span>
+                    <div class="container">
+                        <div class="tools">
+                            <div class="tools-item">
+                                <img src="" alt="Email">
+                                <span><a href="mailto:nfo@olxaweb.ru">info@olxaweb.ru</a></span>
+                            </div>
+                            <div class="tools-item">
+                                <i><img src="" alt="Телефон"></i>
+                                <span><a href="#">555-555-55-55</a></span>
+                            </div>
+                            <div class="tools-item">
+                                <i><img src="" alt="Чат"></i>
+                                <span><a href="#">Живой чат</a></span>
+                            </div>
+                            <form action="" method="post">
+                                <label for="email"></label>
+                                <input type="email" class="form-control" id="email" placeholder="Ваш email" />
+                                <button type="submit"></button>
+                            </form>
                         </div>
-                        <div class="tools-item">
-                            <i><img src="" alt="Телефон"></i>
-                            <span><a href="#">555-555-55-55</a></span>
-                        </div>
-                        <div class="tools-item">
-                            <i><img src="" alt="Чат"></i>
-                            <span><a href="#">Живой чат</a></span>
-                        </div>
-                        <form action="" method="post">
-                            <label for="email"></label>
-                            <input type="email" class="form-control" id="email" placeholder="Ваш email" />
-                            <button type="submit"></button>
-                        </form>
                     </div>
-                </div> 
-            </div>*@ <!--top-footer-->
+                </div>*@ <!--top-footer-->
             <div class="bottom-footer">
                 <div class="container">
                     <div class="footer-info">
@@ -141,7 +141,7 @@
                             <img src="~/images/2017-06-05_22-10-40.png" width="100" height="30">
                             <p>
                                 Мы занимаемся созданием веб сайтов на Asp .NET фреймворке.
-                                
+
                             </p>
                         </div>
                         <div class="info-item">
@@ -150,11 +150,11 @@
 
                                 @*<li><a href="#">Помощь</a></li>*@
 
-                                <li><a href="#">Как мы работаем</a></li>
-                                <li><a href="#">Контакты</a></li>
-                                <li><a href="#">Портфолио</a></li>
+                                <li><a>Как мы работаем</a></li>
+                                <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                                <li><a asp-controller="Service" asp-action="AllService">Услуги и цены</a></li>
                                 <li><a asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
-
+                                <li><a asp-controller="Portfolio" asp-action="All">Портфолио</a></li>
                                 @*<li><a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>                                </li>
                                     <li><a asp-action="Login" asp-controller="Account">Вход</a></li>*@
                             </ul>
@@ -162,28 +162,28 @@
                         <div class="info-item">
                             <h3>Создание сайтов</h3>
                             <ul>
-                                <li><a href="#">Сайт-визитка</a></li>
-                                <li><a href="#">Landing Page</a></li>
-                                <li><a href="#">Корпоративный</a></li>
-                                <li><a href="#">Интернет-магазин</a></li>
-                                <li><a href="#">Информационный</a></li>
+                                <li><a asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
+                                <li><a asp-controller="Web_sites" asp-action="Landing">Landing Page</a></li>
+                                <li><a asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
+                                <li><a asp-controller="Web_sites" asp-action="Shop">Интернет-магазин</a></li>
+                                <li><a asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
                             </ul>
                         </div>
-                        <div class="info-item">
-                            <h3>Продвижение и поддержка сайтов</h3>
-                            @*<ul>
-                                    <li><a asp-area="" asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
-                                    <li><a href="#">Помощь</a></li>
-                                    <li><a href="#">Связь с нами</a></li>
-                                    <li><a href="#">Оплата</a></li>
-                                    <li><a href="#">Контакты</a></li>
-                                </ul>*@
-                        </div>
+                       <div class="info-item">
+                          @*  <h3>Продвижение и поддержка сайтов</h3>
+    <ul>
+            <li><a asp-area="" asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
+            <li><a href="#">Помощь</a></li>
+            <li><a href="#">Связь с нами</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>*@
+    </div>
                     </div> <!--footer-info-->
                     <div class="copyright">
                         <div class="copy">
                             <p>
-                                <a asp-action="OrderList"asp-controller="Order">OlxaWeb</a> 2016-2017
+                                <a asp-action="OrderList" asp-controller="Order">OlxaWeb</a> 2016-2017
                             </p>
                         </div>
                     </div>
@@ -195,58 +195,57 @@
             <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
         </div>
     </div> <!--wrapper-->
-
     <!-- Модальное окно -->
     @*<div class="modal">
-        <input class="modal-open" id="modal-window" type="checkbox" hidden>
-        <div class="modal-wrap" aria-hidden="true" role="dialog">
-            <label class="modal-overlay" for="modal-window"></label>
-            <div class="modal-dialog">
-                <div class="modal-header">
-                    <h4>Контактная информация </h4>
-                    <label class="btn-close" for="modal-window" aria-hidden="true">×</label>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="" id="shop_order" class="modal-form" role="form">
-                        <section class="information">
-                            <input type="text" placeholder="Имя" />
-                            <input type="tel" placeholder="Телефон" />
-                            <input type="email" placeholder="Email" />
-                            <p>*выбирите наиболее предпочтительный вид связи</p>
-                        </section>
-                        <section class="comment">
-                            <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
-                            <div class="file">
-                                <p>
-                                    Если у вас есть готовый бриф или ТЗ можете приложить их к письму
-                                </p>
+            <input class="modal-open" id="modal-window" type="checkbox" hidden>
+            <div class="modal-wrap" aria-hidden="true" role="dialog">
+                <label class="modal-overlay" for="modal-window"></label>
+                <div class="modal-dialog">
+                    <div class="modal-header">
+                        <h4>Контактная информация </h4>
+                        <label class="btn-close" for="modal-window" aria-hidden="true">×</label>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="" id="shop_order" class="modal-form" role="form">
+                            <section class="information">
+                                <input type="text" placeholder="Имя" />
+                                <input type="tel" placeholder="Телефон" />
+                                <input type="email" placeholder="Email" />
+                                <p>*выбирите наиболее предпочтительный вид связи</p>
+                            </section>
+                            <section class="comment">
+                                <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
+                                <div class="file">
+                                    <p>
+                                        Если у вас есть готовый бриф или ТЗ можете приложить их к письму
+                                    </p>
 
-                                <div class="file_upload">
-                                    <button type="button">Выбрать</button>
-                                    <div>Файл не выбран</div>
-                                    <input type="file">
+                                    <div class="file_upload">
+                                        <button type="button">Выбрать</button>
+                                        <div>Файл не выбран</div>
+                                        <input type="file">
+                                    </div>
+                                    <div class="capcha">
+                                        тут капча
+                                    </div>
                                 </div>
-                                <div class="capcha">
-                                    тут капча
-                                </div>
-                            </div>
-                        </section>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <label class="btn " for="modal-window">Отправить!</label>
+                            </section>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <label class="btn " for="modal-window">Отправить!</label>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>*@
+        </div>*@
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
-        
+
 
         @*CDN.нет файла на сервере -фильтр в портфолио*@
-        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> 
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
         @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
         <script src="~/js/scripts.js" asp-append-version="true"></script>

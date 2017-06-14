@@ -2,7 +2,7 @@
 
 @{
     Layout = "_LayoutAdmin";
-    ViewData["Title"] = "Редактирование: "+Model.Title;
+    ViewData["Title"] = "  Редактирование: "+Model.Title;
 }
 
 
@@ -68,6 +68,15 @@
         </div>
     </form>
 
+<form asp-action="EditPortfolio">
+    <input type="hidden" asp-for="PortfolioID" />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    </div>
+</form>
+
 <div>
-    <a asp-controller="Blog" asp-action="AllAdmin">Back</a>
+    <a asp-controller="Portfolio" asp-action="AllAdmin">Назад</a>
 </div>
