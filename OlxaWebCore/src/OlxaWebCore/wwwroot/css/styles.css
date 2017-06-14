@@ -267,6 +267,9 @@ textarea {
   display: block;
   width: 15em;
 }
+.wrapper .navigation nav .main-menu .main-menu__item:hover > .submenu-double {
+  width: 25em;
+}
 .wrapper .navigation nav .main-menu .main-menu__item a {
   color: #333333;
 }
@@ -338,6 +341,13 @@ textarea {
 }
 .wrapper .navigation nav .submenu .submenu__item a:hover {
   background: #06c438;
+}
+.wrapper .navigation nav .submenu-double .submenu__item {
+  margin-left: 0.3em;
+  text-align: left;
+}
+.wrapper .navigation nav .submenu-double .submenu__item a {
+  width: 50%;
 }
 .wrapper .inner {
   display: flex;
@@ -1000,27 +1010,33 @@ section.tariff .promo-wrapper ul li:last-child {
   flex-direction: column;
   text-align: left;
   min-height: 20em;
+  max-height: 20em;
 }
-.blog .post .post__item .post-body .category,
-.blog .post .post__item .post-body .date {
-  text-transform: uppercase;
+.blog .post .post__item .post-body .meta {
   display: flex;
   justify-content: space-between;
-  font-size: 16px -5;
+}
+.blog .post .post__item .post-body .meta .category,
+.blog .post .post__item .post-body .meta .date {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 16px -5 -1;
   color: #999999;
-  margin: 1em auto;
 }
 .blog .post .post__item .post-body .title {
   margin: 0.5em auto;
 }
 .blog .post .post__item .post-body .short-description {
+  display: inline-block;
+  text-overflow: ellipsis;
   margin: 0.5em auto;
 }
 .blog .post .post__item .post-body .read-more {
   text-align: right;
   color: #3c6eaa;
   text-decoration: dotted;
-  margin: 0.5em auto;
+  position: relative;
+  bottom: -5.5em;
 }
 .pagination {
   padding-top: 1em;
@@ -1195,12 +1211,13 @@ section.tariff .promo-wrapper ul li:last-child {
   padding: 1em 0 1em 1.5em;
 }
 .wrapper-shop .shop-description .contains {
-  border: 1px solid #dae5f2;
+  border: 1px solid #000000;
   width: 50%;
   height: 15em;
 }
 .wrapper-shop .shop-description .extra {
-  background: #dae5f2;
+  background: #000000;
+  color: #ecf0f1;
   position: relative;
   width: 50%;
   height: 15em;
@@ -1211,7 +1228,7 @@ section.tariff .promo-wrapper ul li:last-child {
   left: -12.5em;
   bottom: 0;
   border: 7.5em solid transparent;
-  border-right: 5em solid #dae5f2;
+  border-right: 5em solid #000000;
 }
 /*---------------------------------------------------------------------------------------Портфолио*/
 section.portfolio {
@@ -1605,6 +1622,10 @@ section.portfolio {
         }
 
     }*/
+}
+section.portfolio .grid {
+  display: flex;
+  flex-wrap: wrap;
 }
 section.portfolio h2 {
   text-align: center;
@@ -3402,7 +3423,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     width: 33.333%;
   }
   /*------------------------------------------------------- портфолио*/
-  .medium-half {
+  /*.gallery__item{
+        width:33.333%
+    }*/
+  .large-third {
     flex-basis: 31%;
   }
   /*--------------------------------------------------цены*/
@@ -3603,7 +3627,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
     display: flex;
     justify-content: space-between;
   }
-  .medium-half {
+  .large-third {
     flex-basis: 31%;
   }
   .post__item {
@@ -3669,7 +3693,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .post__item {
     width: 33.333%;
   }
-  .medium-half {
+  .large-third {
     flex-basis: 31%;
   }
   .solution-item {
