@@ -477,6 +477,10 @@ textarea {
                         width: 15em;
                     }
 
+                    &:hover > .submenu-double {
+                        width: 25em;
+                    }
+
 
 
                     a {
@@ -532,8 +536,6 @@ textarea {
                 }
             }
 
-
-
             .submenu {
                 display: flex;
                 margin-top: 0;
@@ -575,6 +577,17 @@ textarea {
                         &:hover {
                             background: @color-more;
                         }
+                    }
+                }
+            }
+
+            .submenu-double {
+                .submenu__item {
+                    margin-left: 0.3em;
+                    text-align: left;
+
+                    a {
+                        width: 50%;
                     }
                 }
             }
@@ -1134,7 +1147,7 @@ section.tariff {
     .post {
         display: flex;
         flex-wrap: wrap;
-       // justify-content: space-between;       
+        // justify-content: space-between;
         width: 100%; /*с сайдбаром 75%*/
         position: relative;
         // padding-right: 1.5em;
@@ -1151,33 +1164,44 @@ section.tariff {
             }
 
             .post-body {
-                padding: 1em;                
+                padding: 1em;
                 flex-direction: column;
                 text-align: left;
-                min-height:20em;
+                min-height: 20em;
+                max-height:20em;              
 
-                .category, .date {
-                    text-transform: uppercase;
-                    display:flex;
-                    justify-content:space-between;
-                    font-size: @size-font-extra-small;
-                    color: @color-gray;
-                    margin:1em auto;
+                .meta {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .category, .date {
+                        display: inline-block;
+                        text-transform: uppercase;
+                        font-size: @size-font-extra-small -1;
+                        color: @color-gray;
+                    }
                 }
 
+
+
                 .title {
-                    margin:0.5em auto;
+                    margin: 0.5em auto;
                 }
 
                 .short-description {
-                    margin:0.5em auto;
+                    display:inline-block;
+                    text-overflow:ellipsis;
+                    margin: 0.5em auto;
+                    
                 }
 
                 .read-more {
-                    text-align:right;
+                    text-align: right;
                     color: @color-base;
                     text-decoration: dotted;
-                    margin:0.5em auto;
+                    // margin: 0.5em auto;
+                    position: relative;
+                    bottom: -5.5em;
                 }
             }
             /*&:ntf-child(odd) {
@@ -1245,9 +1269,6 @@ section.tariff {
             }*/
         }
     }
-
-
-
     /*.sidebar {
         position: relative;        
         .widget-sidebar {
@@ -1763,7 +1784,7 @@ section.tariff {
 
 
         .contains {
-            border: 1px solid @color-base-lighter2;
+            border: 1px solid #000000;
             width: 50%;
             height: 15em;
         }
@@ -1771,7 +1792,8 @@ section.tariff {
 
 
         .extra {
-            background: @color-base-lighter2;
+            background: #000000;
+            color:@font-color-reverce;
             position: relative;
             width: 50%;
             height: 15em;
@@ -1784,7 +1806,7 @@ section.tariff {
                 left: -12.5em;
                 bottom: 0;
                 border: 7.5em solid transparent;
-                border-right: 5em solid @color-base-lighter2;
+                border-right: 5em solid #000000;
             }
         }
     }
@@ -1793,6 +1815,10 @@ section.tariff {
 /*---------------------------------------------------------------------------------------Портфолио*/
 
 section.portfolio {
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     h2 {
         text-align: center;
@@ -4524,9 +4550,14 @@ section.tabs {
     /*.post__item {
         width: 48.5%;
     }*/
-     .post__item {width: 33.333%;}
+    .post__item {
+        width: 33.333%;
+    }
     /*------------------------------------------------------- портфолио*/
-    .medium-half {
+    /*.gallery__item{
+        width:33.333%
+    }*/
+    .large-third {
         flex-basis: 31%;
     }
     /*--------------------------------------------------цены*/
@@ -4637,12 +4668,14 @@ section.tabs {
             justify-content: space-between;
         }
         /*------------------------------------------------------- портфолио*/
-        .medium-half {
+        .large-third {
             flex-basis: 31%;
         }
         /*-------------------------------------------------Блог*/
         /*.post__item {width: 48.5%;}*/
-        .post__item {width: 33.333%;}
+        .post__item {
+            width: 33.333%;
+        }
         /*------------------------------------------------------цены*/
         .solution-item {
             width: 33.333%;
@@ -4733,11 +4766,14 @@ section.tabs {
         }
         /*-------------------------------------------------Блог*/
         /*.post__item {width: 100%;}*/
-        .post__item {width: 33.333%;}
+        .post__item {
+            width: 33.333%;
+        }
         /*------------------------------------------------------- портфолио*/
-        .medium-half {
+        .large-third {
             flex-basis: 31%;
         }
+
         /*.grid.isotope-grid.col-3 .grid-sizer,
 
     .grid.isotope-grid.col-3 .grid-item {
@@ -4871,7 +4907,9 @@ section.tabs {
         }
         /*-------------------------------------------------Блог*/
         /*.post__item {width: 100%;}*/
-        .post__item {width: 48%;}
+        .post__item {
+            width: 48%;
+        }
         /*---------------------------------------------------------цены*/
         .solution-item {
             flex-basis: 46%;
@@ -5012,7 +5050,9 @@ section.tabs {
         }
         /*-------------------------------------------------Блог*/
         /*.post__item {width: 100%;}*/
-        .post__item {width: 90%;}
+        .post__item {
+            width: 90%;
+        }
         /*-------------------------------------------------------цены*/
         .solution-item {
             flex-basis: 46%;
@@ -5113,7 +5153,9 @@ section.tabs {
         margin-bottom: 30px;*/
         /*---------------------------------------------------------Блог*/
         /*.post__item {width: 100%;}*/
-        .post__item {width: 90%;}
+        .post__item {
+            width: 90%;
+        }
         /*-----------------------------------------------------------цены*/
         .solution-item {
             flex-basis: 90%;

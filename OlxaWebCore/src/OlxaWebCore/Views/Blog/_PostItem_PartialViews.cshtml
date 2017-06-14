@@ -38,12 +38,16 @@
     </article>*@
 <article class="post__item">
     <div class="post-body">
-        <div class="category date">
-            @Model.Category
-            <span>
-                @Model.PostedOn.Day.@Model.PostedOn.Month.@Model.PostedOn.Year
-            </span>
-        </div>
+        <div class="meta">
+            <div class="category">
+                @Model.Category
+            </div>
+            <div class="date">
+                <span>
+                    @Model.PostedOn.Day.@Model.PostedOn.Month.@Model.PostedOn.Year
+                </span>
+            </div>
+        </div>       
         <div class="title"><a asp-controller="Blog" asp-action="Post" asp-route-postID="@Model.PostID"><h3>@Model.Title</h3></a></div>
         <div class="short-description">@Model.ShortDescription</div>
         <div class="read-more"><a asp-action="Post" asp-controller="Blog" asp-route-postID="@Model.PostID" class="read-more">Читать далее...</a></div>

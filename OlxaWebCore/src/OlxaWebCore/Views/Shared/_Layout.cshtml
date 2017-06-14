@@ -51,15 +51,18 @@
                     </div>
                     <ul class="main-menu">
                         <li class="main-menu__item"><a asp-area="" asp-controller="Portfolio" asp-action="All" class="link">Портфолио</a></li>
-                        <li class="main-menu__item">
+                        <li class="main-menu__item main-menu__item-double">
                             <a asp-area="" asp-controller="Home" asp-action="Price" class="link">Создать Сайт</a>
-                            <ul class="submenu">
+                            <ul class="submenu submenu-double">
                                 <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
                                 <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Landing">Лендинг</a></li>
                                 <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
                                 <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
                                 <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
                             </ul>
+                            @*<div class="content">
+                                <img src="~/images/landing/post_prev_01.jpg" alt="" />
+                            </div>*@
                         </li>
                         <li class="main-menu__item"><a asp-controller="Service" asp-action="AllService" class="link">Услуги / Цены</a></li>
                         <li class="main-menu__item">
