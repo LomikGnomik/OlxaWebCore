@@ -8,6 +8,8 @@
     "jquery-validation-unobtrusive": "3.2.6",
     "jqueri-ui": "1.12.1",
     "isotope": "3.0.4",
-    "tinymce": "4.6.4"
+    "tinymce": "4.6.4",
+    "ckeditor": "4.7.0"
+    
   }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using OlxaWebCore.Services;
+using System.IO;
 
 namespace OlxaWebCore.Controllers
 {
@@ -44,6 +45,11 @@ namespace OlxaWebCore.Controllers
         public IActionResult PriceList()
         {
             return View();
+        }
+        public VirtualFileResult DownloadBrief()
+        {
+            var filepath = Path.Combine("~/Files/Document", "Brief_Olxa.docx");
+            return File(filepath, "text/plain", "Brief_Olxa.docx");
         }
     }
 }
