@@ -4073,9 +4073,6 @@ table.table-admin tr:hover td {
 .edit-post-portfolio .portfolio-description-wrap .portfolio-review {
   width: 100%;
 }
-.edit-post-portfolio .portfolio-description-wrap .portfolio-review textarea {
-  height: 13.2em;
-}
 .edit-post-portfolio .portfolio-images {
   display: flex;
   justify-content: center;

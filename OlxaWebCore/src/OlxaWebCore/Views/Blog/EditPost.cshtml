@@ -7,18 +7,27 @@
 
 
 
-
+@*~/lib/fileman/index.html*@
 
 <form asp-action="EditPost" class="edit-post">
 
 
     <textarea id="editor1" name="editor1">&lt;p&gt;Initial value.&lt;/p&gt;</textarea>
 
-    <script type="text/javascript">
+    @*<script type="text/javascript">
 	CKEDITOR.replace( 'editor1' );
+    </script>*@
+
+    <script>
+
+        var roxyFileman = '/lib/fileman/index.html';
+$(function(){
+   CKEDITOR.replace( 'editor1',{filebrowserBrowseUrl:roxyFileman,
+                                filebrowserImageBrowseUrl:roxyFileman+'?type=image',
+                                removeDialogTabs: 'link:upload;image:upload'});
+});
     </script>
-
-
+   
 
 
     <input type="hidden" asp-for="PostID" />
