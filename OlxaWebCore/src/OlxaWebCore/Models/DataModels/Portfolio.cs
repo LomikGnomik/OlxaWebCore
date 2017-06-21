@@ -16,7 +16,7 @@ namespace OlxaWebCore.Models.DataModels
         [Display(Name = "Ссылка на сайт")]
         public string Link { get; set; }
 
-        [Display(Name = "Короткое описание")]
+        [Display(Name = "Аннотация")]
         public string ShortDescription { get; set; }
 
         [Display(Name = "Описание")]
