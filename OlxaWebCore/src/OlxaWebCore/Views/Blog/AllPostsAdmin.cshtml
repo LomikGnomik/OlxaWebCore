@@ -19,7 +19,7 @@
             <th>Название</th>
             <th>Категория</th>
             <th>Виден?</th>
-            <th></th>
+            <th>Просмотров</th>
         </tr>
         @foreach (var post in @Model)
         {
@@ -28,6 +28,7 @@
                 <td><a asp-controller="Blog" asp-action="EditPost" asp-route-postID="@post.PostID">@post.Title</a></td>
                 <td>@post.Category</td>
                 <td>@post.Published</td>
+                <td>@post.Counter</td>
                 
                 <td><a asp-controller="Blog" asp-action="DeletePost" asp-route-postID="@post.PostID">Удалить</a></td>
             </tr>

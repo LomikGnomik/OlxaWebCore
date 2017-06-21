@@ -3225,9 +3225,8 @@ section.landing-description p {
   top: 55%;
   left: 35%;
   color: #FFF;
-  font-family: teko;
   font-weight: normal;
-  text-transform: capitalize;
+  font-size: 1.25em;
 }
 section.landing-description .description-wrap {
   justify-content: space-between;
