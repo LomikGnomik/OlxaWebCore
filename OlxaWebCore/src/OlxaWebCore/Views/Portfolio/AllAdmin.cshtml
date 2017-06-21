@@ -28,7 +28,7 @@
                 <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID" >@site.Title</a></td>
                 <td>@site.Category</td>
                 <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID">Редактировать</a></td>
-                <td><a asp-controller="Portfolio" asp-action="DeletePortfolio" asp-route-portfolioID="@site.PortfolioID">Удалить</a></td>
+                <td><a asp-controller="Portfolio" asp-action="DeletePortfolio" asp-route-portfolioID="@site.PortfolioID"class="btn-close" title="Удалить">X</a></td>
             </tr>
         }
     </table>

@@ -2,52 +2,65 @@
 @{
     Layout = "_LayoutAdmin";
 
-    ViewData["Title"] = "  Услуга: "+@Model.Title;
+    ViewData["Title"] = "  Услуга: " + @Model.Title;
 }
 
-<form asp-action="EditService">
+<form asp-action="EditService" class="service-form">
 
     <input type="hidden" asp-for="ServiceID" />
 
-    <label asp-for="Title"></label>
-    <input type="text" asp-for="Title">
-
-    <label asp-for="Category"></label>
-    @*<select asp-for="Category" asp-items="ViewBag.Category"></select>*@
-    @*<select name="Category">
-        <option value="Сайты">Сайты</option>
-        <option value="Дополнительные услуги">Дополнительные</option>
-        <option value="Продвижение">Продвижение</option>
-        <option value="Информационный">Информационный</option>
-        <option value="Копоративный">Копоративный</option>
-    </select>*@
-    <input type="text" asp-for="Category">
-
-    <label asp-for="Price"></label>
-    <input type="text" asp-for="Price">
-
-    <label asp-for="Description"></label>
-    <textarea asp-for="Description"></textarea>
-
-    <label asp-for="Published"></label>
-    <input type="checkbox" asp-for="Published">
-
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+    <div class="service-wrap">
+        <div class="title">
+            <label asp-for="Title"></label>
+            <input type="text" asp-for="Title">
         </div>
-    </div>
-</form>
-
-
-<form asp-action="DeleteService">
-    <input type="hidden" asp-for="ServiceID" />
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Delete" class="btn btn-default" />
+        <div class="category">
+            <label asp-for="Category"></label>
+            @*<select asp-for="Category" asp-items="ViewBag.Category"></select>*@
+            @*<select name="Category">
+                    <option value="Сайты">Сайты</option>
+                    <option value="Дополнительные услуги">Дополнительные</option>
+                    <option value="Продвижение">Продвижение</option>
+                    <option value="Информационный">Информационный</option>
+                    <option value="Копоративный">Копоративный</option>
+                </select>*@
+            <input type="text" asp-for="Category">
         </div>
+
+        <div class="price">
+            <label asp-for="Price"></label>
+            <input type="text" asp-for="Price">
+        </div>
+
+
     </div>
-</form>
-    <div>
+
+
+    <div class="description">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+
+    <div class="published">
+        <label asp-for="Published"></label>
+        <input type="checkbox" asp-for="Published">
+    </div>
+
+
+    <div class="option-service">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
         <a asp-controller="Service" asp-action="AllServiceAdmin">Вернуться</a>
     </div>
+</form>
+
+
+<form asp-action="DeleteService"class="btn-service-delete">
+    <input type="hidden" asp-for="ServiceID" />    
+    <input type="submit" value="X" class="btn-close" title="Удалить"/>
+</form>
+
+
