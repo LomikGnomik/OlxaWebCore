@@ -3963,115 +3963,6 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 .wrapper-admin main article {
   flex: 20 1 auto;
 }
-/*.wrapper-admin {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        min-height: 100vh;
-    }
-
-    .wrap-header {
-        flex: 0 0 auto;
-        // display: flex;
-        align-items: baseline;
-        background: @color-gray-dark;
-    }
-
-    .wrap-content {
-        display: flex;
-        flex: 1 1 auto;
-        // display: flex;
-        color: #fff;
-
-        .navigation-admin {
-            flex: 1 0 10em;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            bottom: 0;
-            height: 100vh;
-            background: @color-gray-dark;
-            width: 15em;
-            padding-right: 3em;
-            padding-left: 1em;
-            z-index: 950;
-
-
-
-
-            ul {
-                padding-top: 2em;
-
-                li {
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.89);
-                    cursor: pointer;
-
-                    &:hover {
-                        background: @color-gray;
-                    }
-                }
-
-                a {
-                    display: inline-block;
-                    width: 100%;
-                    color: #fff;
-                }
-            }
-        }
-
-        .container-admin {
-            flex: 20 1 auto;
-            /*margin-right: 2em;
-        margin-left: 2em;
-        width: 95%;*/
-/* .content {
-        color: @color-gray-dark;
-    }
-}*/
-/*
-i.logo {
-    margin: 0.4em 0 0 2em;
-    font-size: 3em;
-    color: @color-more;
-}
-
-.header-admin {
-    display: flex;
-    align-items: baseline;
-    color: #fff;
-    z-index: 1000;
-
-
-    h1 {
-        font-size: @size-font-bigger;
-    }
-
-    ul {
-        margin-left: auto;
-
-        a {
-            color: #fff;
-            border-bottom: 1px dotted;
-            transition: all .5s ease-in-out;
-
-            &:hover {
-                color: @color-more;
-                border-bottom: 1px solid;
-            }
-        }
-    }
-}
-
-
-
-.panel-group {
-    width: 100%;
-    background: @color-success-lighter1;
-    margin: 1.5em auto;
-    padding: 0 0.5em;
-}
-
-}*/
 /*-------------------------------стили таблиц*/
 table.table-admin {
   background: white;
@@ -4141,4 +4032,130 @@ table.table-admin tr:hover td {
 }
 .edit-post .post-description {
   margin: 1em auto;
+}
+/*--------------------------------------------------------Портфолио*/
+/*---------------------добавление сайта в портфолио*/
+.edit-post-portfolio {
+  margin: 1em auto;
+}
+.edit-post-portfolio label {
+  margin-bottom: 1em;
+  font-weight: 700;
+  color: #06c438;
+}
+.edit-post-portfolio .portfolo-btn-group {
+  display: flex;
+  margin: 1em auto;
+}
+.edit-post-portfolio .portfolo-btn-group .portfolio-title,
+.edit-post-portfolio .portfolo-btn-group .portfilo-link,
+.edit-post-portfolio .portfolo-btn-group .portfolio-category {
+  width: 100%;
+}
+.edit-post-portfolio .portfolo-btn-group .portfolio-title,
+.edit-post-portfolio .portfolo-btn-group .portfilo-link {
+  margin-right: 1em;
+}
+.edit-post-portfolio .portfolo-btn-group .porfolio-price,
+.edit-post-portfolio .portfolo-btn-group .portfolio-time {
+  width: 100%;
+}
+.edit-post-portfolio .portfolo-btn-group .porfolio-price {
+  margin-right: 1em;
+}
+.edit-post-portfolio .portfolio-description-wrap {
+  display: flex;
+}
+.edit-post-portfolio .portfolio-description-wrap .portfolio-short-description {
+  margin-right: 1em;
+  width: 100%;
+}
+.edit-post-portfolio .portfolio-description-wrap .portfolio-review {
+  width: 100%;
+}
+.edit-post-portfolio .portfolio-description-wrap .portfolio-review textarea {
+  height: 13.2em;
+}
+.edit-post-portfolio .portfolio-images {
+  display: flex;
+  justify-content: center;
+}
+.edit-post-portfolio .containers {
+  height: 12em;
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+.edit-post-portfolio .containers .image-wrapper {
+  border: 1px solid #888;
+  width: 12em;
+  max-height: 15em;
+  margin-right: 2em;
+  padding-bottom: 70%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.edit-post-portfolio .containers .image-wrapper img {
+  height: 100%;
+  width: initial;
+  max-height: 100%;
+  max-width: initial;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.edit-post-portfolio .file-upload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+.edit-post-portfolio .file-upload input.file-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  height: 100%;
+}
+.edit-post-portfolio .portfolio-description {
+  margin: 1em auto;
+  width: 100%;
+}
+.btn-control {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.btn-control a {
+  text-decoration: underline;
+  color: #3c6eaa;
+}
+.btn-control a:hover {
+  color: #06c438;
+}
+.btn-control input[type=submit].btn-close {
+  margin-left: 2em;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  color: #cccccc;
+  cursor: pointer;
+  font-size: 1.875em;
+  text-decoration: none;
+  right: 0.312em;
+  top: 0;
+}
+.btn-control input[type=submit].btn-close:hover {
+  color: red;
+}
+.btn-control input[type=submit].btn-close:focus {
+  outline: none;
 }

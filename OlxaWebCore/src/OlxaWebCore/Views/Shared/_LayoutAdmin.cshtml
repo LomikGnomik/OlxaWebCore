@@ -84,7 +84,18 @@
     </div>
 
 
-
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
+        <script src="~/js/admin_scripts.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery">
+        </script>
+        <script src="~/js/admin_scripts.js" asp-append-version="true"></script>
+    </environment>
 
     <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
 </body>
