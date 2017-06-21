@@ -31,7 +31,8 @@
                 <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Description</a></td>
                 <td>@service.Category</td>
                 <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>
-                <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Published</a></td>
+                @*<td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Published</a></td>*@
+                <td class="@(service.Published == true ? "post-published" : "post-no-published")"><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID"></a></td>
             </tr>
         }
     </table>

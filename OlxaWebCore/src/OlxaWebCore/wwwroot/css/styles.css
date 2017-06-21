@@ -541,16 +541,15 @@ section.content h2 {
   margin-bottom: 1em;
 }
 section.content p {
-  text-indent: 2em;
   margin-bottom: 1em;
   line-height: 1.5em;
   text-align: justify;
 }
 section.content p::first-letter {
-  font-weight: 900;
-  color: #3c6eaa;
-  font-size: 1.25em;
-  letter-spacing: 0.1em;
+  /*font-weight: 900;
+            color: @color-base;
+            font-size: @size-font-big;
+            letter-spacing: 0.1em;*/
 }
 section.content p span {
   color: #3c6eaa;
@@ -3970,18 +3969,6 @@ table.table-admin {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  /*.btn-del {
-        color: @color-gray-light;
-        cursor: pointer;
-        font-size: 1.875em;
-        text-decoration: dashed;
-        right: 0.312em;
-        top: 0;
-
-        &:hover {
-            color: red;
-        }
-    }*/
 }
 table.table-admin th {
   font-weight: bold;
@@ -3998,7 +3985,28 @@ table.table-admin td {
 table.table-admin tr:hover td {
   background: #9afcb4;
 }
-/*------------------блог*/
+table.table-admin .btn-del {
+  color: #cccccc;
+  cursor: pointer;
+  font-size: 1.875em;
+  text-decoration: dashed;
+  right: 0.312em;
+  top: 0;
+}
+table.table-admin .btn-del:hover {
+  color: red;
+}
+table.table-admin .post-published::after {
+  text-align: center;
+  content: "\2714";
+  color: #06c438;
+}
+table.table-admin .post-no-published::before {
+  text-align: center;
+  content: "\2718";
+  color: #FD0006;
+}
+/*-------------------------------------------------блог*/
 .admin-create a.admin-btn {
   position: absolute;
   top: 14.5em;
@@ -4032,6 +4040,34 @@ table.table-admin tr:hover td {
 }
 .edit-post .post-description {
   margin: 1em auto;
+}
+.btn-control-post {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.btn-control-post .btn-post-delete input[type=submit].btn-close {
+  right: 1.5em;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  color: #cccccc;
+  cursor: pointer;
+  font-size: 1.875em;
+  text-decoration: none;
+}
+.btn-control-post .btn-post-delete input[type=submit].btn-close:hover {
+  color: red;
+}
+.btn-control-post .btn-post-delete input[type=submit].btn-close:focus {
+  outline: none;
+}
+.btn-control-post a {
+  text-decoration: underline;
+  color: #3c6eaa;
+}
+.btn-control-post a:hover {
+  color: #06c438;
 }
 /*--------------------------------------------------------Портфолио*/
 /*---------------------добавление сайта в портфолио*/
@@ -4126,20 +4162,16 @@ table.table-admin tr:hover td {
   margin: 1em auto;
   width: 100%;
 }
-.btn-control {
+.btn-control-portfolio {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.btn-control a {
-  text-decoration: underline;
-  color: #3c6eaa;
+.btn-control-portfolio .btn-portfolio-delete {
+  /*кнопка удаления*/
 }
-.btn-control a:hover {
-  color: #06c438;
-}
-.btn-control input[type=submit].btn-close {
-  margin-left: 2em;
+.btn-control-portfolio .btn-portfolio-delete input[type=submit].btn-close {
+  right: 1.5em;
   background: rgba(0, 0, 0, 0);
   border: none;
   outline: none;
@@ -4147,12 +4179,122 @@ table.table-admin tr:hover td {
   cursor: pointer;
   font-size: 1.875em;
   text-decoration: none;
-  right: 0.312em;
-  top: 0;
 }
-.btn-control input[type=submit].btn-close:hover {
+.btn-control-portfolio .btn-portfolio-delete input[type=submit].btn-close:hover {
   color: red;
 }
-.btn-control input[type=submit].btn-close:focus {
+.btn-control-portfolio .btn-portfolio-delete input[type=submit].btn-close:focus {
+  outline: none;
+}
+.btn-control-portfolio a {
+  text-decoration: underline;
+  color: #3c6eaa;
+}
+.btn-control-portfolio a:hover {
+  color: #06c438;
+}
+/*-----------------------страница отдельного/конкретного заказа*/
+.order-form-item label {
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+.order-form-item .info-client-wrap {
+  margin: 1em 0;
+  /*.contacts-wrap {
+            margin-right: 1em;
+        }
+
+        .comments-wrap {
+            margin-left: 1em;
+        }*/
+}
+.order-form-item .info-client-wrap .info-client {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #06c438;
+}
+.order-form-item .info-client-wrap .name,
+.order-form-item .info-client-wrap .email,
+.order-form-item .info-client-wrap .tel,
+.order-form-item .info-client-wrap .files,
+.order-form-item .info-client-wrap .comment {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+.order-form-item .info-more-wrap {
+  margin: 1em 0;
+}
+.order-form-item .info-more-wrap .info-more {
+  display: flex;
+  flex-direction: column;
+}
+.order-form-item .info-more-wrap .info-more .meta {
+  display: flex;
+}
+.order-form-item .info-more-wrap .info-more .meta .order-url,
+.order-form-item .info-more-wrap .info-more .meta .order-date {
+  display: flex;
+  flex-direction: column;
+  margin: 1em auto;
+  width: 100%;
+}
+.order-form-item .info-more-wrap .info-more .meta .order-date {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.order-form-item .info-more-wrap .info-more .note {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+  width: 50%;
+}
+/*------------------страница отдельной/конкретной услуги*/
+.service-form .service-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.service-form .service-wrap .title,
+.service-form .service-wrap .category {
+  margin-right: 1em;
+}
+.service-form .service-wrap .title,
+.service-form .service-wrap .category,
+.service-form .service-wrap .price {
+  width: 100%;
+}
+.service-form .published {
+  margin: 1em 0;
+}
+.service-form .option-service {
+  display: flex;
+  align-items: baseline;
+}
+.service-form .option-service a {
+  text-decoration: underline;
+  margin-left: 2em;
+}
+.service-form .option-service a:hover {
+  color: #06c438;
+}
+.btn-service-delete {
+  /*кнопка удаления*/
+}
+.btn-service-delete input[type=submit].btn-close {
+  position: absolute;
+  top: 17.4em;
+  right: 1.5em;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  color: #cccccc;
+  cursor: pointer;
+  font-size: 1.875em;
+  text-decoration: none;
+}
+.btn-service-delete input[type=submit].btn-close:hover {
+  color: red;
+}
+.btn-service-delete input[type=submit].btn-close:focus {
   outline: none;
 }
