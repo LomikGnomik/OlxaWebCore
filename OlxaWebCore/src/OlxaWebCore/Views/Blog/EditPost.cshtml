@@ -9,7 +9,7 @@
 
 
 
-<form asp-action="EditPost">
+<form asp-action="EditPost" class="edit-post">
 
 
     <textarea id="editor1" name="editor1">&lt;p&gt;Initial value.&lt;/p&gt;</textarea>
@@ -23,24 +23,41 @@
 
     <input type="hidden" asp-for="PostID" />
 
-    <label asp-for="Title" ></label>
-    <input type="text" asp-for="Title"  >
-    <span asp-validation-for="Title" />
+    <div class="post-title">
+        <label asp-for="Title"></label>
+        <input type="text" asp-for="Title">
+        <span asp-validation-for="Title" />
+    </div>
 
-    <label asp-for="Category"></label>
-    <input type="text" asp-for="Category">
 
-    <label asp-for="ShortDescription"></label>
-    <textarea asp-for="ShortDescription"></textarea>
-    @*<input type="text" asp-for="ShortDescription">*@
+    <div class="meta-description">
 
-    <label asp-for="Description"></label>
-    <textarea  asp-for="Description"></textarea>
+        <div class="short-description">
+            <label asp-for="ShortDescription"></label>
+            <textarea asp-for="ShortDescription"></textarea>
+            @*<input type="text" asp-for="ShortDescription">*@
+        </div>
 
-    @*<input type="text" asp-for="Description">*@
+
+        <div class="meta-catigory">
+            <label asp-for="Category"></label>
+            <input type="text" asp-for="Category">
+
+            <label asp-for="Meta"></label>
+            <input type="text" asp-for="Meta">
+
+        </div>
+    </div>
+       
+    <div class="post-description">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+
+        @*<input type="text" asp-for="Description">*@
+    </div>
+
     
-    <label asp-for="Meta"></label>
-    <input type="text" asp-for="Meta">
+    
 
     <label asp-for="Published"></label>
     <input type="checkbox" asp-for="Published">

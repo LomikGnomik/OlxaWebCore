@@ -2,7 +2,7 @@
 
 @{
     Layout = "_LayoutAdmin";
-    ViewData["Title"]="Услуги";
+    ViewData["Title"] = "Услуги";
 }
 
 @section ControlPanel{
@@ -13,24 +13,25 @@
 
 <h3>Список всех услуг</h3>
 
-<table class="table-admin">
-    <tr>
-        <th>ID</th>
-        <th>Название</th>
-        <th>Описание</th>
-        <th>Категория</th>
-        <th>Цена</th>
-        <th>Видно?</th>
-    </tr>
-    @foreach (var service in @Model)
-    {
+
+    <table class="table-admin">
         <tr>
-            <td>@service.ServiceID</td>
-            <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Title</a></td>
-            <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Description</a></td>
-             <td>@service.Category</td>
-            <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>
-            <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Published</a></td>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Категория</th>
+            <th>Цена</th>
+            <th>Видно?</th>
         </tr>
-    }
-</table>
+        @foreach (var service in @Model)
+        {
+            <tr>
+                <td>@service.ServiceID</td>
+                <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Title</a></td>
+                <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Description</a></td>
+                <td>@service.Category</td>
+                <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>
+                <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Published</a></td>
+            </tr>
+        }
+    </table>
