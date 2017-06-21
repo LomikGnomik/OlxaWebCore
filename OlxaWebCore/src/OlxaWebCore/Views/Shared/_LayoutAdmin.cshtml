@@ -52,43 +52,36 @@
   });
     </script>
 
-
     <div class="wrapper-admin">
-        <div class="wrap-header">
+        <div class="admin-header-wrap">
             <i class="fa fa-sun-o logo" aria-hidden="true"></i>
-            <div class="container-admin">
-                <header class="header-admin" role="banner">
-                    <h1>@ViewData["Title"]</h1>
-                    <ul>
-                        <li><a asp-action="index" asp-controller="home">Посмотреть</a></li>
-                    </ul>
-                </header>
-            </div>
-        </div> @*wrap-header*@
-
-        <div class="wrap-content">
-
+            <header class="header-admin" role="banner">
+                <h1>@ViewData["Title"]</h1>
+                <ul>
+                    <li><a asp-action="index" asp-controller="home">Посмотреть</a></li>
+                </ul>
+            </header>
+        </div>
+        <main class="admin-control">
             <nav class="navigation-admin" role="navigation">
                 <ul class="admim-nav">
                     <li><a asp-controller="Order" asp-action="OrderList">Заказы</a></li>
                     <li><a asp-controller="Service" asp-action="AllServiceAdmin">Услуги</a></li>
                     <li><a asp-controller="Portfolio" asp-action="AllAdmin">Портфолио</a></li>
                     <li><a asp-controller="Blog" asp-action="AllPostsAdmin">Блог</a></li>
-                    
+
                 </ul>
             </nav>
-
-            <div class="container-admin">
+            <article class="adnin-content">
                 <section class="content">
                     <div class="panel-group">
-                        @RenderSection("ControlPanel",false)
+                        @RenderSection("ControlPanel", false)
                     </div>
                     @RenderBody()
                 </section>
-            </div> @*container-admin*@
-        </div> @*wrap-content*@
-
-    </div> @*wrapper-admin*@
+            </article>
+        </main>
+    </div>
 
 
 
