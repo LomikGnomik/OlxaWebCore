@@ -185,4 +185,6 @@
         </section>*@
 </div> <!--container-->
 @Html.Partial("_StepsPartialView")
+
+@await Component.InvokeAsync("ExamplesSites", new { category = "Сайт визитка" })
 @await Component.InvokeAsync("OrderForm")

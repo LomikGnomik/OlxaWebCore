@@ -57,6 +57,12 @@ namespace OlxaWebCore.Models.Repository
                 context.SaveChanges();
             }
             return dbEntry;
-         } 
+         }
+        // Счётчик просмотров
+        public void CountView(int postID)
+        {  
+            context.Posts.FirstOrDefault(p => p.PostID == postID).Counter++;
+            context.SaveChanges();
+        }
     }
 }

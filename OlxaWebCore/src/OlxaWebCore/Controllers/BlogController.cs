@@ -49,6 +49,7 @@ namespace OlxaWebCore.Controllers
         public ViewResult Post(int postID)
         {
             Post post = repository.Posts.FirstOrDefault(p => p.PostID == postID);
+            repository.CountView(postID);
             return View(post);
         }
 

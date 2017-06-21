@@ -12,5 +12,6 @@ namespace OlxaWebCore.Models.Interfaces
 
             void SavePost (Post post );
             Post DeletePost(int postID);
+            void CountView(int postID);
     }
 }
