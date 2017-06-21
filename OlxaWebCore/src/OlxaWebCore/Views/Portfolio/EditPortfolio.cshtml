@@ -139,13 +139,13 @@
     </div>
 </form>
 
-<div class="btn-control">    
+<div class="btn-control-portfolio">    
         <a asp-controller="Portfolio" asp-action="AllAdmin">Назад</a>  
 
-    <form asp-action="EditPortfolio">
+    <form asp-action="EditPortfolio" class="btn-portfolio-delete">
         <input type="hidden" asp-for="PortfolioID" />
         @*<label class="btn-close" for="modal-window" aria-hidden="true">×</label>*@
-        <input type="submit" value="X" class="btn-close" />
+        <input type="submit" value="X" class="btn-close" title="Удалить"/>
     </form>
 
 </div>

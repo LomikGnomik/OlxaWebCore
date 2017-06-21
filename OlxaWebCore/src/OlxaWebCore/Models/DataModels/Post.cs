@@ -10,17 +10,17 @@ namespace OlxaWebCore.Models.DataModels
     {
         public int PostID { get; set; }
 
-        [Required(ErrorMessage = "Поле должно быть установлено")]
+        //[Required(ErrorMessage = "Поле должно быть установлено")]
         [Display(Name = "Заголовок")]
         public virtual string Title
         { get; set; }
 
-        [Required(ErrorMessage = "Поле должно быть установлено")]
+        //[Required(ErrorMessage = "Поле должно быть установлено")]
         [Display(Name = "Короткое описание")]
         public virtual string ShortDescription
         { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Описание")]
         public virtual string Description
         { get; set; }
@@ -38,7 +38,7 @@ namespace OlxaWebCore.Models.DataModels
         { get; set; }
 
 
-        [Required]
+        //[Required]
         [Display(Name = "Категория")]
         public virtual string Category
         { get; set; }

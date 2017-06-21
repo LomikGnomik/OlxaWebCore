@@ -20,6 +20,7 @@
             <th>Категория</th>
             <th>Виден?</th>
             <th>Просмотров</th>
+            <th></th>
         </tr>
         @foreach (var post in @Model)
         {
@@ -27,11 +28,12 @@
                 <td>@post.PostID</td>
                 <td><a asp-controller="Blog" asp-action="EditPost" asp-route-postID="@post.PostID">@post.Title</a></td>
                 <td>@post.Category</td>
-                <td>@post.Published</td>
+                <td class="@(post.Published== true ? "post-published" : "post-no-published")"></td>
                 <td>@post.Counter</td>
                 
-                <td><a asp-controller="Blog" asp-action="DeletePost" asp-route-postID="@post.PostID">Удалить</a></td>
+                <td><a asp-controller="Blog" asp-action="DeletePost" asp-route-postID="@post.PostID"class="btn-close" title="Удалить">X</a></td>
             </tr>
+            
         }
     </table>
 

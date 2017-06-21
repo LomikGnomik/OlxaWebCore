@@ -2,11 +2,70 @@
 
 @{
     Layout = "_LayoutAdmin";
-    
-        ViewData["Title"] = "";
+
+    ViewData["Title"] = "";
 }
 
-@Html.DisplayForModel()
+
+
+<form asp-action="DeleteOrder" asp-controller="Order" method="post" class="order-form-item">
+    <input type="hidden" asp-for="OrderID" />
+    <div class="info-client-wrap">
+        <h3>Информация о клиенте</h3>
+        <div class="info-client">
+            <div class="name">
+                <label asp-for="Name"></label>
+                <p>@Model.Name</p>
+            </div>
+            <div class="email">
+                <label asp-for="Email"></label>
+                <p>@Model.Email</p>
+            </div>
+            <div class="tel">
+                <label asp-for="Tel"></label>
+                <p>@Model.Tel</p>
+            </div>
+            <div class="files">
+                <label asp-for="File"></label>
+                <p>@Model.File</p>
+            </div>
+            <div class="comment">
+                <label asp-for="Comment"></label>
+                <p>@Model.Comment</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="info-more-wrap">
+        <h3>Дополнительная информация</h3>
+        <div class="info-more">
+            <div class="meta">
+                <div class="order-url">
+                    <label asp-for="UrlOrder"></label>
+                    <p>@Model.UrlOrder</p>
+                </div>
+                <div class="order-date">
+                    @*<label asp-for="DateOrder"></label>*@
+                    <p>@Model.DateOrder</p>
+                </div>
+            </div>
+
+            <div class="note">
+                <label asp-for="Note"></label>
+                <textarea></textarea>
+            </div>
+            <div class="order-crm">
+                <label asp-for="AddCRM"></label>
+                <input type="checkbox" asp-for="AddCRM" />
+            </div>
+
+
+
+        </div>
+
+    </div>
+</form>
 
 <form asp-action="DeleteOrder" asp-controller="Order">
     <input type="hidden" asp-for="@Model.OrderID" />
