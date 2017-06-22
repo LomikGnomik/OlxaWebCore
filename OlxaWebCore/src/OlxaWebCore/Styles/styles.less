@@ -5281,20 +5281,22 @@ table.table-admin {
         font-weight: bold;
         color: @color-base-darken1;
         border-bottom: 2px solid @color-more-darken1;
+        text-align: center;
         padding: 0.6em 0.5em;
     }
 
     td {
         color: @color-base;
-        border-bottom: 1px solid @color-gray-light;
+        border: 1px solid @color-gray-light;
+        text-align: center;
         padding: 0.65em 0.5em;
         transition: .3s linear;
-        // border-left:1px solid @color-gray-light;
     }
 
     tr:hover td {
         background: @color-more-lighter2;
     }
+
     .btn-del {
         color: @color-gray-light;
         cursor: pointer;
@@ -5307,19 +5309,27 @@ table.table-admin {
             color: red;
         }
     }
-    .post-published{
-        &::after{
-            text-align:center;
-            content:"\2714";
-            color:@color-more;
+
+    .post-published {
+        &::after {
+            text-align: center;
+            content: "\2714";
+            color: @color-more;
         }
     }
-    .post-no-published{
-        &::before{
-            text-align:center;
-            content:"\2718";
-            color:@color-bad;
+
+    .post-no-published {
+        &::before {
+            text-align: center;
+            content: "\2718";
+            color: @color-bad;
         }
+    }
+
+    .client-file::after {
+        color: @color-more;
+        content: "\270E";
+        font-size:2em;
     }
 }
 
@@ -5335,6 +5345,7 @@ header.header-admin {
         top: 14.5em;
         left: 2.5em;
     }
+
     button {
         width: 100%;
         background: @color-bad-lighter1;

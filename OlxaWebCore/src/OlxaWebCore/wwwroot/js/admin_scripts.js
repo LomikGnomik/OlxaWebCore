@@ -13,4 +13,12 @@ $('.file-input').change(function () {
     reader.readAsDataURL(this.files[0]);
 });
 
- 
+/*-------------------------------------скрипт для таблицы---------------------*/
+$(function () {
+    $("table").colResizable();
+    $("#service-table").colResizable({
+        liveDrag: true,
+        postbackSafe: true,
+        headerOnly: false
+    });
+});
