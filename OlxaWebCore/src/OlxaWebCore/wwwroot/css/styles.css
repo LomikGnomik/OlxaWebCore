@@ -3186,7 +3186,7 @@ section.develop .step-develop-wrap #tabs-3 {
   padding: 1em;
 }
 /*-----------------------------------------------------------------------------Страница Лендинга*/
-section.landing-description {
+.landing-wrapper section.landing-description {
   height: 100vh;
   background: -moz-linear-gradient(white 0, white 25%, black 100%);
   /* FF 3.6+ */
@@ -3206,7 +3206,7 @@ section.landing-description {
   /*---------------эффект*/
   /*---------конец эффекта*/
 }
-section.landing-description h1 {
+.landing-wrapper section.landing-description h1 {
   color: transparent;
   font-size: 7rem;
   position: absolute;
@@ -3217,7 +3217,7 @@ section.landing-description h1 {
   text-shadow: 5px 5px #cccccc;
   text-transform: uppercase;
 }
-section.landing-description p {
+.landing-wrapper section.landing-description p {
   display: inline-block;
   width: 35em;
   position: absolute;
@@ -3227,47 +3227,222 @@ section.landing-description p {
   font-weight: normal;
   font-size: 1.25em;
 }
-section.landing-description .description-wrap {
+.landing-wrapper section.landing-description .description-wrap {
   justify-content: space-between;
 }
-section.landing-description .description-wrap .description-img img {
+.landing-wrapper section.landing-description .description-wrap .description-img img {
   display: inline-block;
 }
-section.landing-description .description-wrap .description-title {
+.landing-wrapper section.landing-description .description-wrap .description-title {
   text-align: center;
   padding: 2em;
   line-height: 1.5;
 }
-section.landing-plus {
+.landing-wrapper section.landing-plus {
   background: #ffe3e4;
 }
-section.landing-plus .plus-wrap {
+.landing-wrapper section.landing-plus .plus-wrap {
   text-align: center;
   padding: 2em;
 }
-section.landing-plus .plus-wrap .plus-row .plus-inner {
+.landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 1.5em;
 }
-section.landing-plus .plus-wrap .plus-row .plus-inner .plus-img {
+.landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner .plus-img {
   margin: 2em;
 }
-section.landing-plus .plus-wrap .plus-row .plus-inner .plus-img img {
+.landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner .plus-img img {
   display: inline-block;
 }
-section.landing-plus .plus-wrap .plus-row .plus-inner .plus-title h3 {
+.landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner .plus-title h3 {
   margin: 1em;
 }
-section.landing-privilege .privilege-wrap {
+.landing-wrapper section.landing-steps {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.landing-wrapper section.landing-steps .tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2em;
+  /*z-index не отмеченных*/
+  /*z-index активных*/
+  /*спрятанный контент при не выбраном элемента*/
+  /*контент при выбраном элемента*/
+}
+.landing-wrapper section.landing-steps .tabs .label-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: flex-start;
+  justify-content: center;
+}
+.landing-wrapper section.landing-steps .tabs .label-wrap p {
+  position: relative;
+}
+.landing-wrapper section.landing-steps .tabs label {
+  display: block;
+  color: #999999;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  display: flex;
+  line-height: 2em;
+  font-weight: 500;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.landing-wrapper section.landing-steps .tabs label:hover {
+  color: tomato;
+  transition: all 0.2s ease-out;
+}
+.landing-wrapper section.landing-steps .tabs input {
+  display: none;
+}
+.landing-wrapper section.landing-steps .tabs #tab_1 ~ .label-wrap #tab_l1,
+.landing-wrapper section.landing-steps .tabs #tab_2 ~ .label-wrap #tab_l2,
+.landing-wrapper section.landing-steps .tabs #tab_3 ~ .label-wrap #tab_l3,
+.landing-wrapper section.landing-steps .tabs #tab_4 ~ .label-wrap #tab_l4,
+.landing-wrapper section.landing-steps .tabs #tab_5 ~ .label-wrap #tab_l5,
+.landing-wrapper section.landing-steps .tabs #tab_6 ~ .label-wrap #tab_l6,
+.landing-wrapper section.landing-steps .tabs #tab_7 ~ .label-wrap #tab_l7 {
+  top: 0;
+  z-index: 3;
+}
+.landing-wrapper section.landing-steps .tabs #tab_1:checked ~ .label-wrap #tab_l1,
+.landing-wrapper section.landing-steps .tabs #tab_2:checked ~ .label-wrap #tab_l2,
+.landing-wrapper section.landing-steps .tabs #tab_3:checked ~ .label-wrap #tab_l3,
+.landing-wrapper section.landing-steps .tabs #tab_4:checked ~ .label-wrap #tab_l4,
+.landing-wrapper section.landing-steps .tabs #tab_5:checked ~ .label-wrap #tab_l5,
+.landing-wrapper section.landing-steps .tabs #tab_6:checked ~ .label-wrap #tab_l6,
+.landing-wrapper section.landing-steps .tabs #tab_7:checked ~ .label-wrap #tab_l7 {
+  color: tomato;
+  top: 0;
+  z-index: 3;
+}
+.landing-wrapper section.landing-steps .tabs .tabs_cont {
+  position: relative;
+  width: 75%;
+  overflow: hidden;
+  margin: 0 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-height: 30em;
+}
+.landing-wrapper section.landing-steps .tabs #tab_1 ~ .tabs_cont #tab_c1,
+.landing-wrapper section.landing-steps .tabs #tab_2 ~ .tabs_cont #tab_c2,
+.landing-wrapper section.landing-steps .tabs #tab_3 ~ .tabs_cont #tab_c3,
+.landing-wrapper section.landing-steps .tabs #tab_4 ~ .tabs_cont #tab_c4,
+.landing-wrapper section.landing-steps .tabs #tab_5 ~ .tabs_cont #tab_c5,
+.landing-wrapper section.landing-steps .tabs #tab_6 ~ .tabs_cont #tab_c6,
+.landing-wrapper section.landing-steps .tabs #tab_7 ~ .tabs_cont #tab_c7 {
+  position: absolute;
+  transition: all 0.6s ease-in-out;
+  margin-top: -20em;
+  opacity: 0;
+  width: 75%;
+  overflow: hidden;
+}
+.landing-wrapper section.landing-steps .tabs #tab_1:checked ~ .tabs_cont #tab_c1,
+.landing-wrapper section.landing-steps .tabs #tab_2:checked ~ .tabs_cont #tab_c2,
+.landing-wrapper section.landing-steps .tabs #tab_3:checked ~ .tabs_cont #tab_c3,
+.landing-wrapper section.landing-steps .tabs #tab_4:checked ~ .tabs_cont #tab_c4,
+.landing-wrapper section.landing-steps .tabs #tab_5:checked ~ .tabs_cont #tab_c5,
+.landing-wrapper section.landing-steps .tabs #tab_6:checked ~ .tabs_cont #tab_c6,
+.landing-wrapper section.landing-steps .tabs #tab_7:checked ~ .tabs_cont #tab_c7 {
+  margin-top: 0;
+  position: relative;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+  width: 75%;
+  overflow: hidden;
+}
+.landing-wrapper section.landing-steps .tabs #border {
+  height: 32em;
+  width: 1px;
+  background-color: #cccccc;
+}
+.landing-wrapper section.landing-steps .tabs #border #line {
+  width: 5px;
+  height: 54px;
+  background-color: #FD0006;
+  margin-left: -2px;
+  margin-top: 35px;
+  transition: all 0.4s ease-in-out;
+}
+.landing-wrapper section.landing-steps .tabs #tab_1:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 0.9em;
+  transition: all 0.4s ease-in-out;
+}
+.landing-wrapper section.landing-steps .tabs #tab_2:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 4.68em;
+  transition: all 0.4s ease-in-out;
+}
+.landing-wrapper section.landing-steps .tabs #tab_3:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 9em;
+  transition: all 0.4s ease-in-out;
+}
+.landing-wrapper section.landing-steps .tabs #tab_4:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 13em;
+  transition: all 0.4s ease-in-out;
+}
+.landing-wrapper section.landing-steps .tabs #tab_5:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 18.5em;
+  transition: all 0.4s ease-in-out;
+}
+.landing-wrapper section.landing-steps .tabs #tab_6:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 24em;
+  transition: all 0.4s ease-in-out;
+}
+.landing-wrapper section.landing-steps .tabs #tab_7:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 28em;
+  transition: all 0.4s ease-in-out;
+}
+.landing-wrapper section.landing-privilege .privilege-wrap {
   text-align: center;
   margin-top: 4em;
 }
-section.landing-privilege .privilege-wrap .privilege-row {
+.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row {
   justify-content: space-between;
 }
-section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap {
+.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap {
   position: relative;
   z-index: 1;
   min-height: 15.6em;
@@ -3277,10 +3452,10 @@ section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap {
   margin: 2em auto 1.5em auto;
   cursor: default;
 }
-section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap:hover {
+.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap:hover {
   z-index: 5;
 }
-section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner {
+.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner {
   position: absolute;
   width: 100%;
   max-height: 15.625em;
@@ -3295,14 +3470,14 @@ section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .
   text-align: center;
   padding: 1.5em;
 }
-section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner:hover {
+.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner:hover {
   border-color: #1bdb68;
   max-height: 37.5em;
 }
-section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner img {
+.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner img {
   display: inline-block;
 }
-section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap h3 {
+.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap h3 {
   margin: 1em;
 }
 /*------------------------------------------------------------------------ТАБЫ*/
@@ -3978,6 +4153,7 @@ table.table-admin th {
   padding: 0.6em 0.5em;
 }
 table.table-admin td {
+  max-height: 3em;
   color: #3c6eaa;
   border: 1px solid #cccccc;
   text-align: center;
@@ -3994,6 +4170,8 @@ table.table-admin .btn-del {
   text-decoration: dashed;
   right: 0.312em;
   top: 0;
+  border: none;
+  background-color: transparent;
 }
 table.table-admin .btn-del:hover {
   color: red;
@@ -4009,6 +4187,11 @@ table.table-admin .post-no-published::before {
   color: #FD0006;
 }
 table.table-admin .client-file::after {
+  color: #06c438;
+  content: "\2711";
+  font-size: 2em;
+}
+table.table-admin .edit::after {
   color: #06c438;
   content: "\270E";
   font-size: 2em;
@@ -4053,7 +4236,7 @@ table.table-admin .client-file::after {
   justify-content: space-between;
   width: 100%;
 }
-.btn-control-post .btn-post-delete input[type=submit].btn-close {
+.btn-control-post .btn-post-delete .btn-close {
   right: 1.5em;
   background: rgba(0, 0, 0, 0);
   border: none;
@@ -4063,10 +4246,10 @@ table.table-admin .client-file::after {
   font-size: 1.875em;
   text-decoration: none;
 }
-.btn-control-post .btn-post-delete input[type=submit].btn-close:hover {
+.btn-control-post .btn-post-delete .btn-close:hover {
   color: red;
 }
-.btn-control-post .btn-post-delete input[type=submit].btn-close:focus {
+.btn-control-post .btn-post-delete .btn-close:focus {
   outline: none;
 }
 .btn-control-post a {
@@ -4177,7 +4360,7 @@ table.table-admin .client-file::after {
 .btn-control-portfolio .btn-portfolio-delete {
   /*кнопка удаления*/
 }
-.btn-control-portfolio .btn-portfolio-delete input[type=submit].btn-close {
+.btn-control-portfolio .btn-portfolio-delete .btn-close {
   right: 1.5em;
   background: rgba(0, 0, 0, 0);
   border: none;
@@ -4187,10 +4370,10 @@ table.table-admin .client-file::after {
   font-size: 1.875em;
   text-decoration: none;
 }
-.btn-control-portfolio .btn-portfolio-delete input[type=submit].btn-close:hover {
+.btn-control-portfolio .btn-portfolio-delete .btn-close:hover {
   color: red;
 }
-.btn-control-portfolio .btn-portfolio-delete input[type=submit].btn-close:focus {
+.btn-control-portfolio .btn-portfolio-delete .btn-close:focus {
   outline: none;
 }
 .btn-control-portfolio a {
@@ -4287,7 +4470,7 @@ table.table-admin .client-file::after {
 .btn-service-delete {
   /*кнопка удаления*/
 }
-.btn-service-delete input[type=submit].btn-close {
+.btn-service-delete .btn-close {
   position: absolute;
   top: 17.4em;
   right: 1.5em;
@@ -4299,9 +4482,9 @@ table.table-admin .client-file::after {
   font-size: 1.875em;
   text-decoration: none;
 }
-.btn-service-delete input[type=submit].btn-close:hover {
+.btn-service-delete .btn-close:hover {
   color: red;
 }
-.btn-service-delete input[type=submit].btn-close:focus {
+.btn-service-delete .btn-close:focus {
   outline: none;
 }

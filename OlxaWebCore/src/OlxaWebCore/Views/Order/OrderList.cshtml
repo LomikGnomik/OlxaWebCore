@@ -19,7 +19,7 @@
                 <th width="2.5%">Файлы</th>
                 <th width="20%">Заметки</th>
                 <th width="2.5%">CRM</th>
-                <th width="10%"></th>
+                <th width="2.5%"></th>
             </tr>
             @foreach (var order in @Model)
             {
@@ -28,7 +28,7 @@
                     <td>@order.DateOrder.Day.@order.DateOrder.Month.@order.DateOrder.Year<br/>@order.DateOrder.Hour:@order.DateOrder.Minute</td>
                     <td><a asp-controller="Order" asp-action="Order" asp-route-orderId="@order.OrderID">@order.Name</a></td>
                     <td>@order.Email</td>
-                    <td style="text-align:justify; vertical-align:text-top;">@order.Comment</td>
+                    <td style="text-align:justify; vertical-align:text-top;overflow-y:scroll;">@order.Comment</td>
                     <td><a class="client-file"href="#"> @order.File</a></td>
                     <td><input type="text" asp-for="@order.Note"></td>
                     <td><input type="checkbox" asp-for="@order.AddCRM"></td>

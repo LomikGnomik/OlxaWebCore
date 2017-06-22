@@ -9,31 +9,37 @@
 
 
 @section ControlPanel{
-<div class="btn"><a asp-controller="Blog" asp-action="CreatePost">Создать пост</a></div>
+    <div class="btn"><a asp-controller="Blog" asp-action="CreatePost">Создать пост</a></div>
 }
-    <h3>Список всех постов</h3>
+<h3>Список всех постов</h3>
 
-    <table class="table-admin">
+<table class="table-admin">
+    <tr>
+        <th width="3%">ID</th>
+        <th>Название</th>
+        <th>Категория</th>
+        <th width="5%">Виден?</th>
+        <th width="6%">Просмотров</th>
+        <th width="5%"></th>
+    </tr>
+    @foreach (var post in @Model)
+    {
         <tr>
-            <th>ID</th>
-            <th>Название</th>
-            <th>Категория</th>
-            <th>Виден?</th>
-            <th>Просмотров</th>
-            <th></th>
+            <td>@post.PostID</td>
+            <td><a asp-controller="Blog" asp-action="EditPost" asp-route-postID="@post.PostID">@post.Title</a></td>
+            <td>@post.Category</td>
+            <td class="@(post.Published== true ? "post-published" : "post-no-published")"></td>
+            <td>@post.Counter</td>
+            <td>
+                <form method="post" asp-action="DeletePost">
+                    <input type="hidden" name="postID" value="@post.PostID" /> 
+                    <button type="submit" href="#del" class="btn-del" title="Удалить">X</button>          
+                </form>
+            </td>
+
         </tr>
-        @foreach (var post in @Model)
-        {
-            <tr>
-                <td>@post.PostID</td>
-                <td><a asp-controller="Blog" asp-action="EditPost" asp-route-postID="@post.PostID">@post.Title</a></td>
-                <td>@post.Category</td>
-                <td class="@(post.Published== true ? "post-published" : "post-no-published")"></td>
-                <td>@post.Counter</td>
-                
-                <td><a asp-controller="Blog" asp-action="DeletePost" asp-route-postID="@post.PostID"class="btn-close" title="Удалить">X</a></td>
-            </tr>
-            
-        }
-    </table>
+    }
+</table>
+
+
 
