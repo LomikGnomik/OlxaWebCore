@@ -6,29 +6,34 @@
 }
 
 @section ControlPanel{
-    
-        <a class="btn" asp-action="CreatePortfolio" asp-controller="Portfolio">Добавить сайт в портфолио</a>
-    
+
+    <a class="btn" asp-action="CreatePortfolio" asp-controller="Portfolio">Добавить сайт в портфолио</a>
+
 }
 
-    <h3>Список всех сайтов</h3>
+<h3>Список всех сайтов</h3>
 
-    <table class="table-admin">
+<table class="table-admin">
+    <tr>
+        <th width="5%">ID</th>
+        <th>Название</th>
+        <th>Категория</th>
+        <th width="5%"></th>
+        <th width="5%"></th>
+    </tr>
+    @foreach (var site in @Model)
+    {
         <tr>
-            <th>ID</th>
-            <th>Название</th>
-            <th>Категория</th>
-            <th></th>
-            <th></th>
+            <td>@site.PortfolioID</td>
+            <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID">@site.Title</a></td>
+            <td>@site.Category</td>
+            <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID"class="edit"></a></td>
+            <td>
+                <form method="post" asp-action="DeletePortfolio">                    
+                    <input type="hidden" name="portfolioID" value="@site.PortfolioID" />
+                    <button type="submit" href="#del" class="btn-del" title="Удалить">X</button>
+                </form>
+            </td>
         </tr>
-        @foreach (var site in @Model)
-        {
-            <tr>
-                <td>@site.PortfolioID</td>
-                <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID" >@site.Title</a></td>
-                <td>@site.Category</td>
-                <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID">Редактировать</a></td>
-                <td><a asp-controller="Portfolio" asp-action="DeletePortfolio" asp-route-portfolioID="@site.PortfolioID"class="btn-close" title="Удалить">X</a></td>
-            </tr>
-        }
-    </table>
+    }
+</table>
