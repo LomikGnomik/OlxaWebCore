@@ -11,24 +11,25 @@
     <div class="order-table">
         <table class="table-admin">
             <tr>
-                <th>ID</th>
-                <th>Дата</th>
-                <th>Имя</th>
-                <th>Email</th>
-                <th>Комментарий</th>
-                <th>Файлы</th>
-                <th>Заметки</th>
-                <th>Есть в CRM?</th>
+                <th width="3%">ID</th>
+                <th width="5%">Дата</th>
+                <th width="10%">Имя</th>
+                <th width="10%">Email</th>
+                <th width="20%">Комментарий</th>
+                <th width="2.5%">Файлы</th>
+                <th width="20%">Заметки</th>
+                <th width="2.5%">CRM</th>
+                <th width="10%"></th>
             </tr>
             @foreach (var order in @Model)
             {
                 <tr>
                     <td>@order.OrderID</td>
-                    <td>@order.DateOrder</td>
+                    <td>@order.DateOrder.Day.@order.DateOrder.Month.@order.DateOrder.Year<br/>@order.DateOrder.Hour:@order.DateOrder.Minute</td>
                     <td><a asp-controller="Order" asp-action="Order" asp-route-orderId="@order.OrderID">@order.Name</a></td>
                     <td>@order.Email</td>
-                    <td>@order.Comment</td>
-                    <td>@order.File</td>
+                    <td style="text-align:justify; vertical-align:text-top;">@order.Comment</td>
+                    <td><a class="client-file"href="#"> @order.File</a></td>
                     <td><input type="text" asp-for="@order.Note"></td>
                     <td><input type="checkbox" asp-for="@order.AddCRM"></td>
                     <td>@order.UrlOrder</td>

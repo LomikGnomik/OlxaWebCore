@@ -3974,11 +3974,13 @@ table.table-admin th {
   font-weight: bold;
   color: #2f5d84;
   border-bottom: 2px solid #04931e;
+  text-align: center;
   padding: 0.6em 0.5em;
 }
 table.table-admin td {
   color: #3c6eaa;
-  border-bottom: 1px solid #cccccc;
+  border: 1px solid #cccccc;
+  text-align: center;
   padding: 0.65em 0.5em;
   transition: .3s linear;
 }
@@ -4005,6 +4007,11 @@ table.table-admin .post-no-published::before {
   text-align: center;
   content: "\2718";
   color: #FD0006;
+}
+table.table-admin .client-file::after {
+  color: #06c438;
+  content: "\270E";
+  font-size: 2em;
 }
 /*-------------------------------------------------блог*/
 .admin-create a.admin-btn {
