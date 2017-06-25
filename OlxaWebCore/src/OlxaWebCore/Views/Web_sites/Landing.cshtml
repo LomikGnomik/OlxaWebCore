@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Создание Landing page";
 }
-<div class="landing-wrapper">
+<main class="landing-wrapper">
     <section class="landing-description">
 
         <div class="container">
@@ -113,9 +113,9 @@
     </section>
 
     <section class="landing-plus">
+        <h2>Преимущества создания Landing Page в OlxaWeb</h2>
         <div class="container">
             <div class="plus-wrap">
-                <h2>Преимущества создания Landing Page в OlxaWeb</h2>
                 <div class="plus-row">
                     <div class="plus-inner">
                         <div class="plus-img">
@@ -158,6 +158,7 @@
 
 
     <section class="landing-steps">
+        <h2>Схема сотрудничества</h2>
         <div class="container">
             <div class="tabs" role="tab">
                 <input id="tab_1" type="radio" name="tab" checked="checked" />
@@ -255,15 +256,16 @@
         </div> <!--container-->
     </section>
 
-    <section class="landing-form">
-        <div class="container">
-
+    <section class="landing-example">
+        <h2 class="section-example-title">Примеры Landing Page</h2>
+        <div class="example-wrap">
+            @await Component.InvokeAsync("ExamplesSites", new { category = "Landing page" })
         </div>
 
-        @await Component.InvokeAsync("ExamplesSites", new { category = "Landing page" })
+    </section>
 
-
+    <section class="landing-form">
         @await Component.InvokeAsync("OrderForm")
     </section>
-</div>
+</main>
 
