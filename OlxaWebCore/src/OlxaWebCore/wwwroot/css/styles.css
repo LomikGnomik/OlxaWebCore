@@ -2474,10 +2474,10 @@ section.portfolio-index .galery-wrap .loader {
   animation: spin 1s infinite linear;
 }
 section.steps-divelopment {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /*height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;*/
 }
 section.form-index {
   height: 100vh;
@@ -2718,86 +2718,106 @@ section.develop .step-develop-wrap #tabs-3 {
   background: #1b1b1b;
 }
 /*------------------------------------------------------------------------Шаги/Этапы/Step*/
-.steps-wrap label {
-  color: #666;
-  font-size: 18px;
-  cursor: pointer;
-  padding: 0.8em 1em 0.8em 0;
-}
-.steps-wrap label:hover {
-  color: #06c438;
-}
-.steps-wrap label:hover:before {
-  background: #b8fdca;
-}
-.steps-wrap label:before {
-  font-family: 'Impact';
-  text-align: center;
-  content: counter(li);
-  border: 2px solid #06c438;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 24px;
-  margin: 0 0.5em 0 0;
-  background: white;
-  color: #06c438;
-}
-.steps-wrap .css-accordion {
-  list-style-type: none;
-  counter-reset: li;
-  padding: 20px;
-  width: 100% /*600px*/;
-}
-.steps-wrap .css-accordion .accordion-item {
-  counter-increment: li;
-  padding: 0;
-  margin: 0;
-}
-.steps-wrap .css-accordion .accordion-item .item-content-container {
-  border-left: 2px solid #06c438;
-  padding: 6px 0;
-  margin: -2px 0 -2px 21px;
-}
-.steps-wrap .css-accordion .accordion-item .item-content-container .item-content {
-  background: #eee;
-  padding: 0 1em;
-  overflow: hidden;
-  margin: 0 0 0 36px;
-  border-radius: 2px;
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(255, 255, 255, 0.9);
-}
-.steps-wrap .css-accordion .accordion-item .item-content-container .item-content p {
-  margin: 0.5em 0;
-  font-size: 14px;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
-}
-.steps-wrap .css-accordion .accordion-item input[type=radio] {
-  display: none;
-}
-.steps-wrap .css-accordion .accordion-item input[type=radio] ~ .item-content-container {
-  overflow: hidden;
-}
-.steps-wrap .css-accordion .accordion-item input[type=radio] ~ .item-content-container .item-content {
-  height: 0;
-  transition: all 0.3s linear;
-}
-.steps-wrap .css-accordion .accordion-item input[type=radio]:checked ~ .item-content-container {
-  height: auto;
-  overflow: visible;
-}
-.steps-wrap .css-accordion .accordion-item input[type=radio]:checked ~ .item-content-container .item-content {
-  height: 200px;
-  overflow-y: auto;
-  transition: all 0.5s linear;
-}
-.steps-wrap .css-accordion .accordion-item input[type=radio]:checked + label {
-  color: #06c438;
-}
-.steps-wrap .css-accordion .accordion-item input[type=radio]:checked + label:before {
-  background: #b8fdca;
-}
+/*.steps-wrap {
+
+    label {
+        color: #666;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 0.8em 1em 0.8em 0;
+
+        &:hover {
+            color: @color-more;
+
+            &:before {
+                background: lighten(@color-more,46%);
+            }
+        }
+
+        &:before {
+            font-family: 'Impact';
+            text-align: center;
+            content: counter(li);
+            .border-more;
+            // border-radius: 40px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 24px;
+            margin: 0 0.5em 0 0;
+            background: white;
+            color: @color-more;
+        }
+    }
+
+    .css-accordion {
+        list-style-type: none;
+        counter-reset: li;
+        padding: 20px;
+        width: 100% ;
+        .accordion-item {
+            counter-increment: li;
+            padding: 0;
+            margin: 0;
+
+            .item-content-container {
+                border-left: 2px solid @color-more;
+                padding: 6px 0;
+                margin: -2px 0 -2px 21px;
+
+                .item-content {
+                    background: #eee;
+                    padding: 0 1em;
+                    overflow: hidden;
+                    margin: 0 0 0 36px;
+                    border-radius: 2px;
+                    box-shadow: inset 0 2px 8px rgba(0,0,0,0.5), 0 1px 2px rgba(255,255,255,0.9);
+
+                    p {
+                        margin: 0.5em 0;
+                        font-size: 14px;
+                        text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+                    }
+                }
+            }
+
+            input[type=radio] {
+                display: none;
+
+                ~ .item-content-container {
+                    overflow: hidden;
+
+                    .item-content {
+                        height: 0;
+                        transition: all 0.3s linear;
+                    }
+                }
+
+                &:checked {
+                    ~ .item-content-container {
+                        height: auto;
+                        overflow: visible;
+
+                        .item-content {
+                            height: 200px;
+                            overflow-y: auto;
+                            transition: all 0.5s linear;
+                        }
+                    }
+
+                    + label {
+                        color: @color-more;
+
+                        &:before {
+                            background: lighten(@color-more,46%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}*/
 /*------------------------------------------------------------------------------Аккордион*/
 .accordion {
   width: 100%;
@@ -3212,7 +3232,7 @@ section.develop .step-develop-wrap #tabs-3 {
   border: 1px solid #cccccc;
   padding: 1em;
 }
-/*-----------------------------------------------------------------------------Страница Лендинга*/
+/*---------------------------------------------------------------------Страница Лендинга*/
 .landing-wrapper section.landing-description {
   height: 100vh;
   display: flex;
@@ -3321,187 +3341,7 @@ section.develop .step-develop-wrap #tabs-3 {
 .landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner .plus-title h3 {
   margin: 1em;
 }
-.landing-wrapper section.landing-steps {
-  padding: 2em;
-  height: 100vh;
-  align-items: center;
-}
-.landing-wrapper section.landing-steps h2 {
-  text-align: center;
-  margin-bottom: 2em;
-}
-.landing-wrapper section.landing-steps .tabs {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 3em;
-  /*z-index не отмеченных*/
-  /*z-index активных*/
-  /*спрятанный контент при не выбраном элемента*/
-  /*контент при выбраном элемента*/
-}
-.landing-wrapper section.landing-steps .tabs .label-wrap {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  align-items: flex-start;
-  justify-content: center;
-}
-.landing-wrapper section.landing-steps .tabs .label-wrap p {
-  position: relative;
-}
-.landing-wrapper section.landing-steps .tabs label {
-  display: block;
-  color: #999999;
-  padding-top: 0.6em;
-  padding-bottom: 0.6em;
-  display: flex;
-  line-height: 2em;
-  font-weight: 500;
-  font-size: 1.25em;
-  cursor: pointer;
-  transition: all 0.2s ease-out;
-}
-.landing-wrapper section.landing-steps .tabs label:hover {
-  color: tomato;
-  transition: all 0.2s ease-out;
-}
-.landing-wrapper section.landing-steps .tabs input {
-  display: none;
-}
-.landing-wrapper section.landing-steps .tabs #tab_1 ~ .label-wrap #tab_l1,
-.landing-wrapper section.landing-steps .tabs #tab_2 ~ .label-wrap #tab_l2,
-.landing-wrapper section.landing-steps .tabs #tab_3 ~ .label-wrap #tab_l3,
-.landing-wrapper section.landing-steps .tabs #tab_4 ~ .label-wrap #tab_l4,
-.landing-wrapper section.landing-steps .tabs #tab_5 ~ .label-wrap #tab_l5,
-.landing-wrapper section.landing-steps .tabs #tab_6 ~ .label-wrap #tab_l6,
-.landing-wrapper section.landing-steps .tabs #tab_7 ~ .label-wrap #tab_l7 {
-  top: 0;
-  z-index: 3;
-}
-.landing-wrapper section.landing-steps .tabs #tab_1:checked ~ .label-wrap #tab_l1,
-.landing-wrapper section.landing-steps .tabs #tab_2:checked ~ .label-wrap #tab_l2,
-.landing-wrapper section.landing-steps .tabs #tab_3:checked ~ .label-wrap #tab_l3,
-.landing-wrapper section.landing-steps .tabs #tab_4:checked ~ .label-wrap #tab_l4,
-.landing-wrapper section.landing-steps .tabs #tab_5:checked ~ .label-wrap #tab_l5,
-.landing-wrapper section.landing-steps .tabs #tab_6:checked ~ .label-wrap #tab_l6,
-.landing-wrapper section.landing-steps .tabs #tab_7:checked ~ .label-wrap #tab_l7 {
-  color: tomato;
-  top: 0;
-  z-index: 3;
-}
-.landing-wrapper section.landing-steps .tabs .tabs_cont {
-  position: relative;
-  width: 75%;
-  overflow: hidden;
-  margin: 0 4em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  max-height: 30em;
-}
-.landing-wrapper section.landing-steps .tabs #tab_1 ~ .tabs_cont #tab_c1,
-.landing-wrapper section.landing-steps .tabs #tab_2 ~ .tabs_cont #tab_c2,
-.landing-wrapper section.landing-steps .tabs #tab_3 ~ .tabs_cont #tab_c3,
-.landing-wrapper section.landing-steps .tabs #tab_4 ~ .tabs_cont #tab_c4,
-.landing-wrapper section.landing-steps .tabs #tab_5 ~ .tabs_cont #tab_c5,
-.landing-wrapper section.landing-steps .tabs #tab_6 ~ .tabs_cont #tab_c6,
-.landing-wrapper section.landing-steps .tabs #tab_7 ~ .tabs_cont #tab_c7 {
-  position: absolute;
-  transition: all 0.6s ease-in-out;
-  margin-top: -20em;
-  opacity: 0;
-  width: 75%;
-  overflow: hidden;
-}
-.landing-wrapper section.landing-steps .tabs #tab_1:checked ~ .tabs_cont #tab_c1,
-.landing-wrapper section.landing-steps .tabs #tab_2:checked ~ .tabs_cont #tab_c2,
-.landing-wrapper section.landing-steps .tabs #tab_3:checked ~ .tabs_cont #tab_c3,
-.landing-wrapper section.landing-steps .tabs #tab_4:checked ~ .tabs_cont #tab_c4,
-.landing-wrapper section.landing-steps .tabs #tab_5:checked ~ .tabs_cont #tab_c5,
-.landing-wrapper section.landing-steps .tabs #tab_6:checked ~ .tabs_cont #tab_c6,
-.landing-wrapper section.landing-steps .tabs #tab_7:checked ~ .tabs_cont #tab_c7 {
-  margin-top: 0;
-  position: relative;
-  opacity: 1;
-  transition: all 0.6s ease-in-out;
-  width: 75%;
-  overflow: hidden;
-}
-.landing-wrapper section.landing-steps .tabs #border {
-  height: 32em;
-  width: 1px;
-  background-color: #cccccc;
-}
-.landing-wrapper section.landing-steps .tabs #border #line {
-  width: 5px;
-  height: 54px;
-  background-color: #FD0006;
-  margin-left: -2px;
-  margin-top: 35px;
-  transition: all 0.4s ease-in-out;
-}
-.landing-wrapper section.landing-steps .tabs #tab_1:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  margin-top: 0.9em;
-  transition: all 0.4s ease-in-out;
-}
-.landing-wrapper section.landing-steps .tabs #tab_2:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  margin-top: 4.68em;
-  transition: all 0.4s ease-in-out;
-}
-.landing-wrapper section.landing-steps .tabs #tab_3:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  margin-top: 9em;
-  transition: all 0.4s ease-in-out;
-}
-.landing-wrapper section.landing-steps .tabs #tab_4:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  margin-top: 13em;
-  transition: all 0.4s ease-in-out;
-}
-.landing-wrapper section.landing-steps .tabs #tab_5:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  margin-top: 18.5em;
-  transition: all 0.4s ease-in-out;
-}
-.landing-wrapper section.landing-steps .tabs #tab_6:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  margin-top: 24em;
-  transition: all 0.4s ease-in-out;
-}
-.landing-wrapper section.landing-steps .tabs #tab_7:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  margin-top: 28em;
-  transition: all 0.4s ease-in-out;
-}
 .landing-wrapper section.landing-example {
-  height: 100vh;
   background: #000;
 }
 .landing-wrapper section.landing-example h2.section-example-title {
@@ -3623,6 +3463,187 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .example-sites-content .view-second:hover a.info {
   transform: translate(0px, 0px);
+}
+/*------------------------------этапы разработки/шаги/step*/
+.steps-wrap {
+  margin-top: 2em;
+  padding: 2em;
+  height: 100vh;
+  align-items: center;
+}
+.steps-wrap h2 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.steps-wrap .tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3em;
+  /*z-index не отмеченных*/
+  /*z-index активных*/
+  /*спрятанный контент при не выбраном элемента*/
+  /*контент при выбраном элемента*/
+}
+.steps-wrap .tabs .label-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: flex-start;
+  justify-content: center;
+}
+.steps-wrap .tabs .label-wrap p {
+  position: relative;
+}
+.steps-wrap .tabs label {
+  display: block;
+  color: #999999;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  display: flex;
+  line-height: 2em;
+  font-weight: 500;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.steps-wrap .tabs label:hover {
+  color: tomato;
+  transition: all 0.2s ease-out;
+}
+.steps-wrap .tabs input {
+  display: none;
+}
+.steps-wrap .tabs #tab_1 ~ .label-wrap #tab_l1,
+.steps-wrap .tabs #tab_2 ~ .label-wrap #tab_l2,
+.steps-wrap .tabs #tab_3 ~ .label-wrap #tab_l3,
+.steps-wrap .tabs #tab_4 ~ .label-wrap #tab_l4,
+.steps-wrap .tabs #tab_5 ~ .label-wrap #tab_l5,
+.steps-wrap .tabs #tab_6 ~ .label-wrap #tab_l6,
+.steps-wrap .tabs #tab_7 ~ .label-wrap #tab_l7 {
+  top: 0;
+  z-index: 3;
+}
+.steps-wrap .tabs #tab_1:checked ~ .label-wrap #tab_l1,
+.steps-wrap .tabs #tab_2:checked ~ .label-wrap #tab_l2,
+.steps-wrap .tabs #tab_3:checked ~ .label-wrap #tab_l3,
+.steps-wrap .tabs #tab_4:checked ~ .label-wrap #tab_l4,
+.steps-wrap .tabs #tab_5:checked ~ .label-wrap #tab_l5,
+.steps-wrap .tabs #tab_6:checked ~ .label-wrap #tab_l6,
+.steps-wrap .tabs #tab_7:checked ~ .label-wrap #tab_l7 {
+  color: tomato;
+  top: 0;
+  z-index: 3;
+}
+.steps-wrap .tabs .tabs_cont {
+  position: relative;
+  width: 75%;
+  overflow: hidden;
+  margin: 0 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-height: 30em;
+}
+.steps-wrap .tabs #tab_1 ~ .tabs_cont #tab_c1,
+.steps-wrap .tabs #tab_2 ~ .tabs_cont #tab_c2,
+.steps-wrap .tabs #tab_3 ~ .tabs_cont #tab_c3,
+.steps-wrap .tabs #tab_4 ~ .tabs_cont #tab_c4,
+.steps-wrap .tabs #tab_5 ~ .tabs_cont #tab_c5,
+.steps-wrap .tabs #tab_6 ~ .tabs_cont #tab_c6,
+.steps-wrap .tabs #tab_7 ~ .tabs_cont #tab_c7 {
+  position: absolute;
+  transition: all 0.6s ease-in-out;
+  margin-top: -20em;
+  opacity: 0;
+  width: 75%;
+  overflow: hidden;
+}
+.steps-wrap .tabs #tab_1:checked ~ .tabs_cont #tab_c1,
+.steps-wrap .tabs #tab_2:checked ~ .tabs_cont #tab_c2,
+.steps-wrap .tabs #tab_3:checked ~ .tabs_cont #tab_c3,
+.steps-wrap .tabs #tab_4:checked ~ .tabs_cont #tab_c4,
+.steps-wrap .tabs #tab_5:checked ~ .tabs_cont #tab_c5,
+.steps-wrap .tabs #tab_6:checked ~ .tabs_cont #tab_c6,
+.steps-wrap .tabs #tab_7:checked ~ .tabs_cont #tab_c7 {
+  margin-top: 0;
+  position: relative;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+  width: 75%;
+  overflow: hidden;
+}
+.steps-wrap .tabs #border {
+  height: 32em;
+  width: 1px;
+  background-color: #cccccc;
+}
+.steps-wrap .tabs #border #line {
+  width: 5px;
+  height: 54px;
+  background-color: #FD0006;
+  margin-left: -2px;
+  margin-top: 35px;
+  transition: all 0.4s ease-in-out;
+}
+.steps-wrap .tabs #tab_1:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 0.9em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-wrap .tabs #tab_2:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 4.68em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-wrap .tabs #tab_3:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 9em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-wrap .tabs #tab_4:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 13em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-wrap .tabs #tab_5:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 18.5em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-wrap .tabs #tab_6:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 24em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-wrap .tabs #tab_7:checked ~ #border #line {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  margin-top: 28em;
+  transition: all 0.4s ease-in-out;
 }
 /*@bg1: url(http://www.designshock.com/wp-content/uploads/2014/08/181.jpg);
 @bg2: url(http://www.designshock.com/wp-content/uploads/2014/08/63.jpg);
@@ -3965,7 +3986,7 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   /*------------------------примеры сайтов на странице----------------*/
   .example-sites-content .view {
     width: 33.333%;
-    height: 12.5em;
+    height: 11em;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {

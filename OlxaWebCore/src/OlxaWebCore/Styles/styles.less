@@ -3265,10 +3265,10 @@ section.portfolio-index {
 }
 
 section.steps-divelopment {
-    height: 100vh;
+    /*height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
 }
 
 section.form-index {
@@ -3544,7 +3544,7 @@ section.develop {
     }
 }
 /*------------------------------------------------------------------------Шаги/Этапы/Step*/
-.steps-wrap {
+/*.steps-wrap {
 
     label {
         color: #666;
@@ -3581,10 +3581,7 @@ section.develop {
         list-style-type: none;
         counter-reset: li;
         padding: 20px;
-        // margin: 20px;
-        width: 100% /*600px*/;
-        //border: 1px solid #dddddd;
-        // background: #f4f4f4;
+        width: 100% ;
         .accordion-item {
             counter-increment: li;
             padding: 0;
@@ -3646,7 +3643,7 @@ section.develop {
             }
         }
     }
-}
+}*/
 /*------------------------------------------------------------------------------Аккордион*/
 
 .accordion {
@@ -4211,7 +4208,7 @@ section.develop {
         }
     }
 }
-/*-----------------------------------------------------------------------------Страница Лендинга*/
+/*---------------------------------------------------------------------Страница Лендинга*/
 .landing-wrapper {
     section.landing-description {
         height: 100vh;
@@ -4390,208 +4387,11 @@ section.develop {
     }
 
     section.landing-steps {
-        padding: 2em;
-        height: 100vh;
-        align-items: center;
-
-        h2 {
-            text-align: center;
-            margin-bottom: 2em;
-        }
-
-        .tabs {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            // position: relative;
-            width: 100%;
-            margin-bottom: 3em;
-
-            .label-wrap {
-                display: flex;
-                flex-direction: column;
-                //height: 70%;
-                width: 25%;
-                align-items: flex-start;
-                justify-content: center;
-
-                p {
-                    position: relative;
-                }
-            }
-
-            label {
-                display: block;
-                color: @color-gray;
-                padding-top: 0.6em;
-                padding-bottom: 0.6em;
-                display: flex;
-                line-height: 2em;
-                font-weight: 500;
-                font-size: @size-font-big;
-                cursor: pointer;
-                transition: all .2s ease-out;
-
-                &:hover {
-                    color: @color-accent;
-                    transition: all .2s ease-out;
-                }
-            }
-
-            input {
-                display: none;
-            }
-            /*z-index не отмеченных*/
-            #tab_1 ~ .label-wrap #tab_l1,
-            #tab_2 ~ .label-wrap #tab_l2,
-            #tab_3 ~ .label-wrap #tab_l3,
-            #tab_4 ~ .label-wrap #tab_l4,
-            #tab_5 ~ .label-wrap #tab_l5,
-            #tab_6 ~ .label-wrap #tab_l6,
-            #tab_7 ~ .label-wrap #tab_l7 {
-                top: 0;
-                z-index: 3;
-            }
-            /*z-index активных*/
-            #tab_1:checked ~ .label-wrap #tab_l1,
-            #tab_2:checked ~ .label-wrap #tab_l2,
-            #tab_3:checked ~ .label-wrap #tab_l3,
-            #tab_4:checked ~ .label-wrap #tab_l4,
-            #tab_5:checked ~ .label-wrap #tab_l5,
-            #tab_6:checked ~ .label-wrap #tab_l6,
-            #tab_7:checked ~ .label-wrap #tab_l7 {
-                color: @color-accent;
-                top: 0;
-                z-index: 3;
-            }
-
-            .tabs_cont {
-                position: relative;
-                width: 75%;
-                overflow: hidden;
-                margin: 0 4em;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 2;
-                max-height: 30em;
-            }
-            /*спрятанный контент при не выбраном элемента*/
-            #tab_1 ~ .tabs_cont #tab_c1,
-            #tab_2 ~ .tabs_cont #tab_c2,
-            #tab_3 ~ .tabs_cont #tab_c3,
-            #tab_4 ~ .tabs_cont #tab_c4,
-            #tab_5 ~ .tabs_cont #tab_c5,
-            #tab_6 ~ .tabs_cont #tab_c6,
-            #tab_7 ~ .tabs_cont #tab_c7 {
-                position: absolute;
-                transition: all 0.6s ease-in-out;
-                margin-top: -20em;
-                opacity: 0;
-                width: 75%;
-                overflow: hidden;
-            }
-            /*контент при выбраном элемента*/
-            #tab_1:checked ~ .tabs_cont #tab_c1,
-            #tab_2:checked ~ .tabs_cont #tab_c2,
-            #tab_3:checked ~ .tabs_cont #tab_c3,
-            #tab_4:checked ~ .tabs_cont #tab_c4,
-            #tab_5:checked ~ .tabs_cont #tab_c5,
-            #tab_6:checked ~ .tabs_cont #tab_c6,
-            #tab_7:checked ~ .tabs_cont #tab_c7 {
-                margin-top: 0;
-                position: relative;
-                opacity: 1;
-                transition: all 0.6s ease-in-out;
-                width: 75%;
-                overflow: hidden;
-            }
-
-
-
-            #border {
-                height: 32em;
-                width: 1px;
-                background-color: @color-gray-light;
-
-                #line {
-                    width: 5px;
-                    height: 54px;
-                    background-color: @color-bad;
-                    margin-left: -2px;
-                    margin-top: 35px;
-                    transition: all .4s ease-in-out;
-                }
-            }
-
-            #tab_1:checked ~ #border #line {
-                width: 0.3em;
-                height: 3em;
-                background-color: @color-bad;
-                margin-left: -0.125em;
-                margin-top: 0.9em;
-                transition: all .4s ease-in-out;
-            }
-
-            #tab_2:checked ~ #border #line {
-                width: 0.3em;
-                height: 3em;
-                background-color: @color-bad;
-                margin-left: -0.125em;
-                margin-top: 4.68em;
-                transition: all .4s ease-in-out;
-            }
-
-            #tab_3:checked ~ #border #line {
-                width: 0.3em;
-                height: 3em;
-                background-color: @color-bad;
-                margin-left: -0.125em;
-                margin-top: 9em;
-                transition: all .4s ease-in-out;
-            }
-
-            #tab_4:checked ~ #border #line {
-                width: 0.3em;
-                height: 3em;
-                background-color: @color-bad;
-                margin-left: -0.125em;
-                margin-top: 13em;
-                transition: all .4s ease-in-out;
-            }
-
-            #tab_5:checked ~ #border #line {
-                width: 0.3em;
-                height: 3em;
-                background-color: @color-bad;
-                margin-left: -0.125em;
-                margin-top: 18.5em;
-                transition: all .4s ease-in-out;
-            }
-
-            #tab_6:checked ~ #border #line {
-                width: 0.3em;
-                height: 3em;
-                background-color: @color-bad;
-                margin-left: -0.125em;
-                margin-top: 24em;
-                transition: all .4s ease-in-out;
-            }
-
-            #tab_7:checked ~ #border #line {
-                width: 0.3em;
-                height: 3em;
-                background-color: @color-bad;
-                margin-left: -0.125em;
-                margin-top: 28em;
-                transition: all .4s ease-in-out;
-            }
-        }
     }
 
+
     section.landing-example {
-        height: 100vh;
+        // height: 100vh;
         background: #000;
 
         h2.section-example-title {
@@ -4673,7 +4473,7 @@ section.develop {
         -webkit-box-shadow: 0 0 5px #000;
         -moz-box-shadow: 0 0 5px #000;
         box-shadow: 0 0 5px #000;
-        background:@color-more-darken1;
+        background: @color-more-darken1;
     }
 
 
@@ -4740,6 +4540,208 @@ section.develop {
     }
 }
 
+/*------------------------------этапы разработки/шаги/step*/
+.steps-wrap {
+    margin-top:2em;
+    padding: 2em;
+    height: 100vh;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        // position: relative;
+        width: 100%;
+        margin-bottom: 3em;
+
+        .label-wrap {
+            display: flex;
+            flex-direction: column;
+            //height: 70%;
+            width: 25%;
+            align-items: flex-start;
+            justify-content: center;
+
+            p {
+                position: relative;
+            }
+        }
+
+        label {
+            display: block;
+            color: @color-gray;
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+            display: flex;
+            line-height: 2em;
+            font-weight: 500;
+            font-size: @size-font-big;
+            cursor: pointer;
+            transition: all .2s ease-out;
+
+            &:hover {
+                color: @color-accent;
+                transition: all .2s ease-out;
+            }
+        }
+
+        input {
+            display: none;
+        }
+        /*z-index не отмеченных*/
+        #tab_1 ~ .label-wrap #tab_l1,
+        #tab_2 ~ .label-wrap #tab_l2,
+        #tab_3 ~ .label-wrap #tab_l3,
+        #tab_4 ~ .label-wrap #tab_l4,
+        #tab_5 ~ .label-wrap #tab_l5,
+        #tab_6 ~ .label-wrap #tab_l6,
+        #tab_7 ~ .label-wrap #tab_l7 {
+            top: 0;
+            z-index: 3;
+        }
+        /*z-index активных*/
+        #tab_1:checked ~ .label-wrap #tab_l1,
+        #tab_2:checked ~ .label-wrap #tab_l2,
+        #tab_3:checked ~ .label-wrap #tab_l3,
+        #tab_4:checked ~ .label-wrap #tab_l4,
+        #tab_5:checked ~ .label-wrap #tab_l5,
+        #tab_6:checked ~ .label-wrap #tab_l6,
+        #tab_7:checked ~ .label-wrap #tab_l7 {
+            color: @color-accent;
+            top: 0;
+            z-index: 3;
+        }
+
+        .tabs_cont {
+            position: relative;
+            width: 75%;
+            overflow: hidden;
+            margin: 0 4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            max-height: 30em;
+        }
+        /*спрятанный контент при не выбраном элемента*/
+        #tab_1 ~ .tabs_cont #tab_c1,
+        #tab_2 ~ .tabs_cont #tab_c2,
+        #tab_3 ~ .tabs_cont #tab_c3,
+        #tab_4 ~ .tabs_cont #tab_c4,
+        #tab_5 ~ .tabs_cont #tab_c5,
+        #tab_6 ~ .tabs_cont #tab_c6,
+        #tab_7 ~ .tabs_cont #tab_c7 {
+            position: absolute;
+            transition: all 0.6s ease-in-out;
+            margin-top: -20em;
+            opacity: 0;
+            width: 75%;
+            overflow: hidden;
+        }
+        /*контент при выбраном элемента*/
+        #tab_1:checked ~ .tabs_cont #tab_c1,
+        #tab_2:checked ~ .tabs_cont #tab_c2,
+        #tab_3:checked ~ .tabs_cont #tab_c3,
+        #tab_4:checked ~ .tabs_cont #tab_c4,
+        #tab_5:checked ~ .tabs_cont #tab_c5,
+        #tab_6:checked ~ .tabs_cont #tab_c6,
+        #tab_7:checked ~ .tabs_cont #tab_c7 {
+            margin-top: 0;
+            position: relative;
+            opacity: 1;
+            transition: all 0.6s ease-in-out;
+            width: 75%;
+            overflow: hidden;
+        }
+
+
+
+        #border {
+            height: 32em;
+            width: 1px;
+            background-color: @color-gray-light;
+
+            #line {
+                width: 5px;
+                height: 54px;
+                background-color: @color-bad;
+                margin-left: -2px;
+                margin-top: 35px;
+                transition: all .4s ease-in-out;
+            }
+        }
+
+        #tab_1:checked ~ #border #line {
+            width: 0.3em;
+            height: 3em;
+            background-color: @color-bad;
+            margin-left: -0.125em;
+            margin-top: 0.9em;
+            transition: all .4s ease-in-out;
+        }
+
+        #tab_2:checked ~ #border #line {
+            width: 0.3em;
+            height: 3em;
+            background-color: @color-bad;
+            margin-left: -0.125em;
+            margin-top: 4.68em;
+            transition: all .4s ease-in-out;
+        }
+
+        #tab_3:checked ~ #border #line {
+            width: 0.3em;
+            height: 3em;
+            background-color: @color-bad;
+            margin-left: -0.125em;
+            margin-top: 9em;
+            transition: all .4s ease-in-out;
+        }
+
+        #tab_4:checked ~ #border #line {
+            width: 0.3em;
+            height: 3em;
+            background-color: @color-bad;
+            margin-left: -0.125em;
+            margin-top: 13em;
+            transition: all .4s ease-in-out;
+        }
+
+        #tab_5:checked ~ #border #line {
+            width: 0.3em;
+            height: 3em;
+            background-color: @color-bad;
+            margin-left: -0.125em;
+            margin-top: 18.5em;
+            transition: all .4s ease-in-out;
+        }
+
+        #tab_6:checked ~ #border #line {
+            width: 0.3em;
+            height: 3em;
+            background-color: @color-bad;
+            margin-left: -0.125em;
+            margin-top: 24em;
+            transition: all .4s ease-in-out;
+        }
+
+        #tab_7:checked ~ #border #line {
+            width: 0.3em;
+            height: 3em;
+            background-color: @color-bad;
+            margin-left: -0.125em;
+            margin-top: 28em;
+            transition: all .4s ease-in-out;
+        }
+    }
+}
 
 
 
