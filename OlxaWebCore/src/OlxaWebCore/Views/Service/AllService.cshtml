@@ -5,45 +5,56 @@
 }
 
 
+<div class="all-service-wrap">
+    <section class="catalog">
+        <div class="container">
+            <div class="accordion">
+                <ul>
+                    @foreach (string category in @ViewBag.CategoryService)
+            {
 
-
-<div class="container">
-        <div class="accordion">
-            <ul>
-                @foreach (string category in @ViewBag.CategoryService)
-                {
-
-                    <li>
-                        <input type="checkbox">
-                        <i></i>
-                        <h2 class="title_block">  @category</h2>
-                        <div class="content">
-                            <table class="service">
-                                @foreach (var service in Model)
-                                {
-                                    if (category == service.Category)
+                        <li>
+                            <input type="checkbox">
+                            <i></i>
+                            <h2 class="title_block">  @category</h2>
+                            <div class="content">
+                                <table class="service">
+                                    @foreach (var service in Model)
                                     {
-                                        <tr>
-                                            <td>@service.Title</td>
-                                            <td>@service.Price</td>
-                                            <td><a href="#">Пример</a></td>
-                                            @*<td class="add">+</td>*@
-                                        </tr>
+                                        if (category == service.Category)
+                                        {
+                                            <tr>
+                                                <td>@service.Title</td>
+                                                <td>@service.Price</td>
+                                                <td>
+                                                    
+                                                </td>
+                                                @*<td class="add">+</td>*@
+
+                                            </tr>
+                                        }
                                     }
-                                }
-                            </table>
-                        </div>
-                    </li>
-                }
-            </ul>
+                                </table>
+                            </div>
+                        </li>
+                    }
+                </ul>                
+            </div>
         </div>
+    </section>
+
+    <section>
+        @await Component.InvokeAsync("OrderForm")
+    </section>
 </div>
-<section>
-    @await Component.InvokeAsync("OrderForm")
-</section>
 
 
-
+<a href="#win4" class="button button-orange">Пример</a>
+<a href="#x" class="overlay" id="win4"></a>
+<div class="popup">
+    <img class="is-image" src="ваша-картинка.jpg" alt="" />
+    <a class="close" title="Закрыть" href="#close"></a>
+</div>
 
 
 

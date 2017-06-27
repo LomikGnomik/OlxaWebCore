@@ -2517,14 +2517,18 @@ section.form-index {
   margin: 1em auto;
 }
 /*---------------------------------------------------------------------Страница услуги service */
-table.service {
+.all-service-wrap section.catalog {
+  height: 100vh;
+  padding-top: 2em;
+}
+.all-service-wrap section.catalog table.service {
   background: white;
   max-width: 100%;
   width: 100%;
   border-collapse: collapse;
   text-align: left;
 }
-table.service td {
+.all-service-wrap section.catalog table.service td {
   color: #3c6eaa;
   border-bottom: 1px solid #cccccc;
   padding: 0 0.3em;
@@ -2532,10 +2536,10 @@ table.service td {
   max-width: 2em;
   line-height: 1.5em;
 }
-table.service tr:hover td {
+.all-service-wrap section.catalog table.service tr:hover td {
   background: #dae5f2;
 }
-table.service td.add {
+.all-service-wrap section.catalog table.service td.add {
   color: #cccccc;
   cursor: pointer;
   font-size: 1.875em;
@@ -2545,8 +2549,141 @@ table.service td.add {
   text-align: end;
   padding-right: 0.7em;
 }
-table.service td.add:hover {
+.all-service-wrap section.catalog table.service td.add:hover {
   color: #1bdb68;
+}
+/*-------------------------------------------модальное окно с примером сайта/изображением*/
+.overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  /* фон затемнения */
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  /* фиксированное поцизионирование */
+  cursor: default;
+  /* тип курсара */
+}
+/* активируем слой затемнения */
+.overlay:target {
+  display: block;
+}
+/* стили модального окна */
+.popup {
+  top: -100%;
+  right: 0;
+  left: 50%;
+  font-size: 14px;
+  z-index: 20;
+  margin: 0;
+  width: 85%;
+  min-width: 320px;
+  max-width: 600px;
+  /* фиксированное позиционирование, окно стабильно при прокрутке */
+  position: fixed;
+  padding: 15px;
+  border: 1px solid #383838;
+  background: #fefefe;
+  /* скругление углов */
+  border-radius: 4px;
+  font: 14px/18px 'Tahoma', Arial, sans-serif;
+  /* внешняя тень */
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -500%);
+  -webkit-transition: -webkit-transform 0.6s ease-out;
+  -moz-transition: -moz-transform 0.6s ease-out;
+  -o-transition: -o-transform 0.6s ease-out;
+  transition: transform 0.6s ease-out;
+}
+/* активируем модальный блок */
+.overlay:target + .popup {
+  transform: translate(-50%, 0);
+  top: 20%;
+}
+/* формируем кнопку закрытия */
+.close {
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  padding: 0;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  background-color: rgba(61, 61, 61, 0.8);
+  -webkit-box-shadow: 0px 0px 10px #000;
+  -moz-box-shadow: 0px 0px 10px #000;
+  box-shadow: 0px 0px 10px #000;
+  text-align: center;
+  text-decoration: none;
+  font: 13px/20px 'Tahoma', Arial, sans-serif;
+  font-weight: bold;
+  transition: all ease .8s;
+}
+.close:before {
+  color: rgba(255, 255, 255, 0.9);
+  content: "X";
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+  font-size: 12px;
+}
+.close:hover {
+  background-color: rgba(252, 20, 0, 0.8);
+  transform: rotate(360deg);
+}
+/* изображения внутри окна */
+.popup img {
+  width: 100%;
+  height: auto;
+}
+/* миниатюры слева/справа */
+.pic-left,
+.pic-right {
+  width: 25%;
+  height: auto;
+}
+.pic-left {
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+.pic-right {
+  float: right;
+  margin: 5px 0 5px 15px;
+}
+/* элементы м-медиа, фреймы */
+.popup embed,
+.popup iframe {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+  min-width: 320px;
+  max-width: 600px;
+  width: 100%;
+}
+.popup h2 {
+  /* заголовок 2 */
+  margin: 0;
+  color: #008000;
+  padding: 5px 0px 10px;
+  text-align: left;
+  text-shadow: 1px 1px 3px #adadad;
+  font-weight: 500;
+  font-size: 1.4em;
+  font-family: 'Tahoma', Arial, sans-serif;
+  line-height: 1.3;
+}
+/* параграфы */
+.popup p {
+  margin: 0;
+  padding: 5px 0;
 }
 /*----------------------------------------------------------------страница разработки*/
 section.develop .step-develop-wrap #tabs {
@@ -3052,7 +3189,7 @@ section.develop .step-develop-wrap #tabs-3 {
 .form-wrapper .btn-form-group {
   justify-content: space-between;
 }
-/*---------------------------------------------------------------модальное окно для оформления заявки*/
+/*----------------------------------------------------модальное окно для оформления заявки*/
 .modal {
   /* затемнение */
   /* активация слоя затемнения и модального блока */
@@ -3645,86 +3782,6 @@ section.develop .step-develop-wrap #tabs-3 {
   margin-top: 28em;
   transition: all 0.4s ease-in-out;
 }
-/*@bg1: url(http://www.designshock.com/wp-content/uploads/2014/08/181.jpg);
-@bg2: url(http://www.designshock.com/wp-content/uploads/2014/08/63.jpg);
-@bg3: url(http://www.designshock.com/wp-content/uploads/2014/08/98.jpg);
-@bg4: url(http://www.designshock.com/wp-content/uploads/2014/08/77.jpg);
-@bg5: url(http://www.designshock.com/wp-content/uploads/2014/08/75.jpg);
-@bg6: url(http://www.designshock.com/wp-content/uploads/2014/08/711.jpg);
-
-.contain {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 95%;
-
-    .box {
-        height: 50%;
-        width: 33.333%;
-        background-repeat: no-repeat;
-        background-size: 115%;
-        background-position: 50% 50%;
-        transition: background-size 0.275s ease-in-out;
-        flex-grow: 1;
-        cursor: pointer;
-        user-select: none;
-
-        &:hover {
-            background-size: 100%;
-        }
-
-        .img-sites {
-            img {
-                
-                
-            }
-        }
-
-        &:nth-of-type(1) {
-             background-image: @bg1;
-        }
-
-        &:nth-of-type(2) {
-              background-image: @bg2;
-        }
-
-        &:nth-of-type(3) {
-            background-image: @bg3;
-        }
-
-        &:nth-of-type(4) {
-            background-image: @bg4;
-        }
-
-        &:nth-of-type(5) {
-            background-image: @bg5;
-        }
-
-        &:nth-of-type(6) {
-            background-image: @bg6;
-        }
-
-        .box-info {
-            background: rgba( 35, 35, 35, 0.7 );
-            box-sizing: border-box;
-            height: 100%;
-            width: 100%;
-            transition: opacity 0.45s ease-in-out;
-            text-align: center;
-            padding: 20% 0 0;
-            font-weight: 900;
-            font-size: 30px;
-            font-family: "Lato", Helvetica, Arial, sans-serif;
-            color: #fff;
-            opacity: 0;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-}*/
 /*-------------------------------------------------------------------------------------ТАБЫ*/
 section.tabs {
   position: relative;
