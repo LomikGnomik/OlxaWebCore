@@ -22,7 +22,18 @@ $(function () {
         }
     });
 });
+/*---------------------------------------кнопка меню для мобильных----------------------*/
+$(document).ready(function () {
 
+    $('.menu-trigger').click(function () {
+        $('.main-menu').slideToggle(500);
+    });
+    $(window).resize(function () {
+        if ($(window).width() > 500) {
+            $('.main-menu').removeAttr('style');
+        }
+    });
+});
 /*--------------------------------прокрутка наверх--------------------------------------*/
 $(function () {
     $(window).scroll(function () {
@@ -254,7 +265,7 @@ $("#navi div").click(function () {
 
     $(this).addClass("activenav");
 });
- 
+
 /*-------------------этапы/шаги разработки/страница разработки-----------------------*/
 $(function () {
     $("#tabs").tabs({
@@ -277,7 +288,7 @@ $(function () {
 
 /*--------------------прокрутка от сексии к секции------------*/
 //$(document).ready(function() {  
-  
+
 //    $(".landing-wrapper").onepage_scroll({
 //        sectionContainer: "section",
 //        easing: "ease",
