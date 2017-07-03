@@ -158,6 +158,13 @@ textarea {
   margin-top: -0.125em;
   font-size: 1.19em;
 }
+button[type="submit"]:disabled {
+  background: #999999;
+  color: #3c6eaa;
+  border: 2px solid #cccccc;
+  cursor: default;
+  opacity: 0.3;
+}
 .btn:hover,
 .btn:focus {
   background: #ecf0f1;
@@ -225,7 +232,7 @@ textarea {
 }
 .wrapper main {
   flex: 1 0 auto;
-  margin-top: 6em;
+  margin-top: 2em;
 }
 .wrapper .header {
   height: 9em;
@@ -493,12 +500,13 @@ footer .top-footer .tools form button::before {
 }
 footer .bottom-footer .footer-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 1em 0;
 }
 footer .bottom-footer .footer-info .info-item {
-  width: 25%;
   padding: 2em;
+  transition: all 1s ease;
 }
 footer .bottom-footer .footer-info .info-item:first-child {
   padding-left: 0;
@@ -541,28 +549,137 @@ footer .bottom-footer .footer-info .info-item ul a:hover {
   background: #06c438;
   color: #ecf0f1;
 }
-/*footer*/
-/*---------------------------------------------------промо--------------promo-site-----------сайт визитка*/
-section.content {
-  margin: 2em 0;
+footer .bottom-footer .footer-info .info-social {
+  padding: 0 1.75em 0 0.75em;
+  text-align: center;
 }
-section.content h2 {
+footer .bottom-footer .footer-info .info-social a {
+  display: inline-block;
+  height: 2.25em;
+  width: 2.25em;
+  font-size: 1em;
+  line-height: 2.25em;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  border: none;
+  transition: all 0.3s;
+}
+footer .bottom-footer .footer-info .info-social .fb {
+  color: #3b5998;
+  background-color: rgba(59, 89, 152, 0.1);
+}
+footer .bottom-footer .footer-info .info-social .fb:hover {
+  color: white;
+  background-color: #3b5998;
+}
+footer .bottom-footer .footer-info .info-social .vk {
+  color: #0092c8;
+  background-color: rgba(23, 120, 156, 0.1);
+}
+footer .bottom-footer .footer-info .info-social .vk:hover {
+  color: white;
+  background-color: #0092c8;
+}
+footer .bottom-footer .footer-info .info-social .skype {
+  color: #00aff0;
+  background-color: rgba(0, 175, 240, 0.1);
+}
+footer .bottom-footer .footer-info .info-social .skype:hover {
+  color: white;
+  background-color: #00aff0;
+}
+/*footer*/
+/*---------------------------------промо--------------promo-site-----------сайт визитка*/
+section.content {
+  margin-bottom: 2em;
+}
+section.content .card-wrap {
+  height: 65vh;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Flip effect*/
+}
+section.content .card-wrap .card {
+  position: relative;
+  top: -2em;
+  width: 50em;
+  height: 25em;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+section.content .card-wrap .card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1.9em;
+  backface-visibility: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+section.content .card-wrap .front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: opacity 0s linear 0.5s;
+  background: #303030;
+}
+section.content .card-wrap .front .logo {
+  text-transform: uppercase;
+  font: 3em;
+  font-weight: 300;
+  display: inline-block;
+  color: #606060;
+}
+section.content .card-wrap .back {
+  z-index: -1;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: #2f99ff;
+  color: #133d66;
+  line-height: 16px;
+  transform: rotateY(-180deg);
+  transition: opacity 1s linear 0s;
+}
+section.content .card-wrap .back h2 {
+  font: 700 4em;
   margin-bottom: 1em;
+  color: #133d66;
+}
+section.content .card-wrap .back h3 {
+  font: 400 3em;
+  margin-bottom: 0.5em;
+  color: #acd6ff;
+}
+section.content .card-wrap .back .info {
+  bottom: 30px;
+  left: 30px;
+}
+section.content .card-wrap .back .property {
+  color: #acd6ff;
+}
+section.content .card-wrap .back .link {
+  text-decoration: none;
+  color: #133d66;
+}
+section.content .card-wrap .card-container {
+  perspective: 800px;
+}
+section.content .card-wrap .card-container:hover .card {
+  transform: rotateY(-180deg);
+}
+section.content .card-wrap .card-container:hover .front {
+  opacity: 0;
 }
 section.content p {
   margin-bottom: 1em;
   line-height: 1.5em;
   text-align: justify;
-}
-section.content p::first-letter {
-  /*font-weight: 900;
-            color: @color-base;
-            font-size: @size-font-big;
-            letter-spacing: 0.1em;*/
-}
-section.content p span {
-  color: #3c6eaa;
-  font-weight: 900;
 }
 section.promo-site-slider .slider {
   margin: 0 auto;
@@ -690,6 +807,7 @@ section.tariff .promo-wrapper ul li:last-child {
 }
 /*------------------------------------------------------------------------------------------------блог*/
 .blog {
+  margin-top: 3em;
   display: flex;
   /*i {
         display: inline-block;
@@ -1073,6 +1191,7 @@ section.tariff .promo-wrapper ul li:last-child {
 }
 /*------------------------------------------------------отдельная страница поста в блоге*/
 .post-inner-body {
+  margin-top: 3em;
   border-bottom: 1px solid #cccccc;
   padding-bottom: 2.5em;
 }
@@ -1183,6 +1302,9 @@ section.tariff .promo-wrapper ul li:last-child {
   background: #3b5998;
 }
 /*-----------------------------------------------------------------------интернет магазин*/
+.wrapper-shop {
+  margin-top: 3em;
+}
 .wrapper-shop .info-shop {
   display: flex;
   justify-content: space-between;
@@ -1249,6 +1371,7 @@ section.tariff .promo-wrapper ul li:last-child {
 }
 /*---------------------------------------------------------------------------------------Портфолио*/
 section.portfolio {
+  margin-top: 3em;
   /*.grid.isotope-grid {
 
         overflow: hidden;
@@ -1770,6 +1893,9 @@ section.portfolio .gallery__item-link:hover > .thumbnail > .gallery__title {
   transform: translateY(-50%);
 }
 /*----------------------------------------------------------------отдельная страница портфолио*/
+.portfolio-inner-wrap {
+  margin-top: 3em;
+}
 .portfolio-inner-wrap section {
   margin: 2em auto;
 }
@@ -1812,6 +1938,9 @@ section.portfolio .gallery__item-link:hover > .thumbnail > .gallery__title {
 .portfolio-inner-wrap section.description .review {
   width: 30em;
   text-align: justify;
+}
+.portfolio-inner-wrap section.device {
+  height: 100vh;
 }
 .portfolio-inner-wrap section.device .tabs {
   position: relative;
@@ -1976,6 +2105,9 @@ section.portfolio .gallery__item-link:hover > .thumbnail > .gallery__title {
   text-align: center;
 }
 /*------------------------------------------------------------------------------Страница ЦЕНЫ*/
+section.price-solution {
+  margin-top: 3em;
+}
 section.price-solution .flex {
   display: flex;
   flex-wrap: wrap;
@@ -2034,6 +2166,281 @@ section.price-solution .solution-row .solution-item-question .btn {
 }
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
 section.heading {
+  margin-top: 3em;
+  /*background-size: cover;
+    text-align: center;
+    padding: 0em;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0px;
+    border-bottom: none;
+    background-color: #00B5AD;
+    background-image: -webkit-radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
+    background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
+    transition: background-color 3s ease-in-out 2s;
+    perspective: 1000px;
+
+    &::after {
+        position: absolute;
+        z-index: 1;
+        width: 135%;
+        height: 135%;
+        top: 18%;
+        left: 0px;
+        content: '';
+        background: url(https://semantic-ui.com/images/ui.png);
+        transform-origin: 50% 50%;
+        transform-style: preserve-3d;
+        animation-name: splash;
+        transition: opacity 3s ease-in-out, transform 5s ease-in-out;
+        opacity: 0.06;
+        animation-duration: 15s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
+    }
+
+    @keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @-moz-keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @-webkit-keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @-ms-keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @-o-keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }
+
+    @-moz-keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }
+
+    @-webkit-keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }
+
+    @-ms-keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }
+
+    @-o-keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }*/
   /*---------------------------эффект описания-------------------*/
 }
 section.heading .wrap-title {
@@ -2501,6 +2908,7 @@ section.form-index {
 /*-------------------------------------------------------------------страница о нас/about */
 /*----------------------------------------------------------------------Корпоративный сайт*/
 .title-corporete {
+  margin-top: 3em;
   text-align: center;
   margin: 1em auto;
 }
@@ -2531,6 +2939,9 @@ section.form-index {
   margin: 1em auto;
 }
 /*---------------------------------------------------------------------Страница услуги service */
+.all-service-wrap {
+  margin-top: 3em;
+}
 .all-service-wrap section.catalog {
   height: 100vh;
   padding-top: 2em;
@@ -2549,6 +2960,11 @@ section.form-index {
   transition: .3s linear;
   max-width: 2em;
   line-height: 1.5em;
+}
+.all-service-wrap section.catalog table.service td a {
+  margin-right: 0;
+  height: 2em;
+  line-height: 1.9em;
 }
 .all-service-wrap section.catalog table.service tr:hover td {
   background: #dae5f2;
@@ -3121,9 +3537,22 @@ section.develop .step-develop-wrap #tabs-3 {
 .form-wrapper p {
   margin-top: 0.8em;
 }
-.form-wrapper .h2 .left,
-.form-wrapper p .left {
-  float: left !important;
+.form-wrapper .info {
+  display: flex;
+  justify-content: space-between;
+}
+.form-wrapper .info .left {
+  display: inline-block;
+}
+.form-wrapper .info .confidentiality {
+  display: flex;
+}
+.form-wrapper a.link-more {
+  color: #06c438;
+  text-decoration: underline;
+}
+.form-wrapper a.link-more:hover {
+  color: #08f546;
 }
 .form-wrapper form {
   width: 80%;
@@ -3133,6 +3562,9 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .form-wrapper form input {
   width: 100%;
+}
+.form-wrapper form input[type="checkbox"] {
+  width: 1em;
 }
 .form-wrapper form input[type="text"],
 .form-wrapper form [type="email"],
@@ -3161,7 +3593,7 @@ section.develop .step-develop-wrap #tabs-3 {
   text-decoration: none;
   padding: 0 1.56em;
   margin: 0.625em 0;
-  margin-right: 0.625em;
+  margin-right: 4em;
   white-space: nowrap;
   user-select: none;
   transition: color 0.3s ease-out, background-color 0.3s ease-out;
@@ -3492,6 +3924,38 @@ section.develop .step-develop-wrap #tabs-3 {
 .landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner .plus-title h3 {
   margin: 1em;
 }
+.landing-wrapper section.landing-price-table {
+  height: 100vh;
+  text-align: center;
+}
+.landing-wrapper section.landing-price-table h2 {
+  margin-bottom: 1.5em;
+}
+.landing-wrapper section.landing-price-table table {
+  margin-top: 1em;
+  width: 100%;
+  border-collapse: collapse;
+}
+.landing-wrapper section.landing-price-table table tr {
+  border-bottom: 1px solid #999999;
+  /*&:hover td {
+                    background: @color-more-lighter2;
+                }
+
+                &:hover th {
+                    background: @color-more-lighter2;
+                }*/
+}
+.landing-wrapper section.landing-price-table table tr:hover {
+  border-bottom: 1px solid #06c438;
+  box-shadow: 0 6px 4px -4px #06c438;
+}
+.landing-wrapper section.landing-price-table table tr td {
+  max-height: 3em;
+  color: #3c6eaa;
+  text-align: center;
+  transition: .3s linear;
+}
 .landing-wrapper section.landing-example {
   background: #000;
 }
@@ -3797,15 +4261,16 @@ section.develop .step-develop-wrap #tabs-3 {
   transition: all 0.4s ease-in-out;
 }
 /*-------------------------------------------------------------------------------------ТАБЫ*/
-section.tabs {
+section.tabs-all {
   position: relative;
   width: 100%;
   margin-bottom: 2em;
 }
-section.tabs .label-wrap {
+section.tabs-all .label-wrapper {
   display: flex;
 }
-section.tabs label {
+section.tabs-all label {
+  width: 100%;
   color: #333333;
   cursor: pointer;
   display: block;
@@ -3816,39 +4281,41 @@ section.tabs label {
   text-align: center;
   padding: 0 1em;
 }
-section.tabs label:ntf-child(2) {
+section.tabs-all label:ntf-child(2) {
   border-left: none;
   border-right: none;
 }
-section.tabs label:hover {
+section.tabs-all label:hover {
   color: #06c438;
 }
-section.tabs input {
+section.tabs-all input {
   display: none;
 }
-section.tabs #tab_1:checked ~ .label-wrap #tab_l1,
-section.tabs #tab_2:checked ~ .label-wrap #tab_l2,
-section.tabs #tab_3:checked ~ .label-wrap #tab_l3 {
+section.tabs-all #tab__1:checked ~ .label-wrapper #tab__l1,
+section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2,
+section.tabs-all #tab__3:checked ~ .label-wrapper #tab__l3 {
   border: 2px solid #06c438;
+  border-bottom: none;
+  background: #ecf0f1;
   top: 0;
   z-index: 3;
 }
-section.tabs .tabs_cont {
+section.tabs-all .tabs_content {
   position: relative;
-  padding-top: 2em;
   z-index: 2;
-  height: 15em;
 }
-section.tabs .tabs_cont > div {
+section.tabs-all .tabs_content > div {
   position: absolute;
   left: -9999px;
   top: 0;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-section.tabs #tab_1:checked ~ .tabs_cont #tab_c1,
-section.tabs #tab_2:checked ~ .tabs_cont #tab_c2,
-section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
+section.tabs-all #tab__1:checked ~ .tabs_content #tab__c1,
+section.tabs-all #tab__2:checked ~ .tabs_content #tab__c2,
+section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
+  padding-top: 2em;
+  background: #ecf0f1;
   position: static;
   left: 0;
   opacity: 1;
@@ -3879,6 +4346,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 @media (min-width: 1200px) {
   .container {
     width: 73.125em;
+  }
+  /*колонки в футере*/
+  .bottom-footer .footer-info .info-item {
+    width: 25%;
   }
   .tariff-wrap {
     display: flex;
@@ -3979,6 +4450,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .container {
     width: 60em;
   }
+  /*колонки в футере*/
+  .bottom-footer .footer-info .info-item {
+    width: 25%;
+  }
   .tariff-wrap {
     display: flex;
     flex-direction: row;
@@ -4063,6 +4538,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
 @media (min-width: 768px) and (max-width: 991px) {
   .container {
     width: 45em;
+  }
+  /*колонки в футере*/
+  .bottom-footer .footer-info .info-item {
+    width: 50%;
   }
   .tariff-wrap {
     display: flex;
@@ -4151,6 +4630,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   .container {
     width: 30em;
   }
+  /*колонки в футере*/
+  .bottom-footer .footer-info .info-item {
+    width: 50%;
+  }
   .tariff-wrap {
     display: flex;
     flex-direction: column;
@@ -4238,6 +4721,10 @@ section.tabs #tab_3:checked ~ .tabs_cont #tab_c3 {
   }
 }
 @media screen and (max-width: 640px) {
+  /*колонки в футере*/
+  .bottom-footer .footer-info .info-item {
+    width: 90%;
+  }
   /*--------------------------------меню для мобильных*/
   .navigation nav .menu-trigger {
     display: block;
