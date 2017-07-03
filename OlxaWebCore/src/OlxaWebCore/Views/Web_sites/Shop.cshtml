@@ -5,58 +5,78 @@
 }
 
 <div class="container">
-    <div class="wrapper-shop">
-        <h1>Интернет магазин</h1>
-        <section class="info-shop">
-            <div class="shop-preview">
-                <img src="~/images/shop/post01.jpg" alt="интернет магазин" />
-            </div>
-            <div class="shop-idea">
-                <h2>Интернет магазин</h2>
-                <p>
-                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                </p>
-                <div class="shop-demo">
-                    <a href="#" class="btn">Демо сайта</a>
-                    <a href="#" class="btn">Демо админки</a>
-                </div>
-                <div class="shop-order">
-                    @*<div class="shop-price">
-                            <label> <input type="radio" name="order" />Купить 25 000р</label>
-                            <label> <input type="radio" name="order" />Арендовать от 2 000 р/мес</label>
-                        </div>*@
-                    @*<label class="btn" for="modal-window">Заказать</label>*@ <!--вызов мод.окна-->
-                    <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
-                </div>
-            </div>
-        </section>
-        <section class="description-shop"></section>
-        <section class="step-work"></section>
+    <section class="tabs-all"role="tab">
+        <input id="tab__1" type="radio" name="tabs" checked="checked" />
+        <input id="tab__2" type="radio" name="tabs" />
+        <input id="tab__3" type="radio" name="tabs" />
 
-        <div class="shop-description">
-            <div class="contains">
-                <h3>В стоимость входит</h3>
-                <ul>
-                    <li>Любой из 5 шаблонов на выбор</li>
-                    <li>Установка CMS на хостинге</li>
-                    <li>Настройка магазина</li>
-                    <li>Хостинг и доменое имя на 1год</li>
-                    <li>Почтовый ящик с Вашим доменом</li>
-
-                </ul>
-            </div>
-            <div class="extra">
-                <h3>Дополнительные услуги</h3>
-                <ul>
-                    <li>Базовое SEO</li>
-                    <li>Доработка</li>
-                    <li>И еще это</li>
-                    <li>И вот</li>
-                </ul>
-            </div>
+        <div class="label-wrapper">
+            <label for="tab__1" id="tab__l1">Готовые решения</label>
+            <label for="tab__2" id="tab__l2">Создание сайта</label>
+            <label for="tab__3" id="tab__l3">Разработка сайта</label>
         </div>
 
-    </div>
+        <div class="tabs_content">
+            <div id="tab__c1">
+                <div class="wrapper-shop">
+                    <h1>Интернет магазин</h1>
+                    <section class="info-shop">
+                        <div class="shop-preview">
+                            <img src="~/images/shop/post01.jpg" alt="интернет магазин" />
+                        </div>
+                        <div class="shop-idea">
+                            <h2>Интернет магазин</h2>
+                            <p>
+                                Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                            </p>
+                            <div class="shop-demo">
+                                <a href="#" class="btn">Демо сайта</a>
+                                <a href="#" class="btn">Демо админки</a>
+                            </div>
+                            <div class="shop-order">
+                                @*<div class="shop-price">
+                                        <label> <input type="radio" name="order" />Купить 25 000р</label>
+                                        <label> <input type="radio" name="order" />Арендовать от 2 000 р/мес</label>
+                                    </div>*@
+                                @*<label class="btn" for="modal-window">Заказать</label>*@ <!--вызов мод.окна-->
+                                <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="description-shop"></section>
+                    <section class="step-work"></section>
+
+                    <div class="shop-description">
+                        <div class="contains">
+                            <h3>В стоимость входит</h3>
+                            <ul>
+                                <li>Любой из 5 шаблонов на выбор</li>
+                                <li>Установка CMS на хостинге</li>
+                                <li>Настройка магазина</li>
+                                <li>Хостинг и доменое имя на 1год</li>
+                                <li>Почтовый ящик с Вашим доменом</li>
+
+                            </ul>
+                        </div>
+                        <div class="extra">
+                            <h3>Дополнительные услуги</h3>
+                            <ul>
+                                <li>Базовое SEO</li>
+                                <li>Доработка</li>
+                                <li>И еще это</li>
+                                <li>И вот</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div> @*tab__c1*@
+            <div id="tab__c2">Это про второе</div> @*tab__c2*@
+            <div id="tab__c3">Это про третье</div> @*tab__c3*@
+        </div>
+    </section>
+
+
 </div> <!--container-->
 @Html.Partial("_StepsPartialView")
 @await Component.InvokeAsync("ExamplesSites", new { category = "Интернет-магазин" })
@@ -64,7 +84,6 @@
 
 
 <!-- Nav Tabs -->
-
 @*<div class="shop-description">
         <section class="tabs">
             <input id="tab_1" type="radio" name="tab" checked="checked" />

@@ -298,7 +298,13 @@ textarea {
     }
 }
 
-
+button[type="submit"]:disabled {
+    background: @color-gray;
+    color: @color-base;
+    border: 2px solid @color-gray-light;
+    cursor: default;
+    opacity:0.3;
+}
 
 .btn:hover, .btn:focus {
     background: @font-color-reverce;
@@ -408,7 +414,7 @@ textarea {
 
     main {
         flex: 1 0 auto;
-        margin-top: 6em;
+        margin-top: 2em;
     }
 
 
@@ -817,14 +823,16 @@ footer {
 
         .footer-info {
             display: flex;
+            flex-wrap:wrap;
             justify-content: space-between;
             margin: 1em 0;
 
 
 
             .info-item {
-                width: 25%;
+               // width: 25%;
                 padding: 2em;
+                transition:all 1s ease;
 
 
 
@@ -894,38 +902,183 @@ footer {
                     }
                 }
             }
+
+            .info-social {
+                padding: 0 1.75em 0 0.75em;
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    height: 2.25em;
+                    width: 2.25em;
+                    font-size: 1em;
+                    line-height: 2.25em;
+                    text-align: center;
+                    text-decoration: none;
+                    letter-spacing: 0;
+                    margin-right: 2px;
+                    margin-bottom: 6px;
+                    border: none;
+                    transition: all 0.3s;
+                }
+
+                .fb {
+                    color: #3b5998;
+                    background-color: rgba(59,89,152,0.1);
+
+                    &:hover {
+                        color: white;
+                        background-color: #3b5998;
+                    }
+                }
+
+                .vk {
+                    color: #0092c8;
+                    background-color: rgba(23, 120, 156, 0.10);
+
+                    &:hover {
+                        color: white;
+                        background-color: #0092c8;
+                    }
+                }
+
+                .skype {
+                    color: #00aff0;
+                    background-color: rgba(0,175,240,0.1);
+
+                    &:hover {
+                        color: white;
+                        background-color: #00aff0;
+                    }
+                }
+            }
         }
     }
 }
 
 /*footer*/
 
-/*---------------------------------------------------промо--------------promo-site-----------сайт визитка*/
+/*---------------------------------промо--------------promo-site-----------сайт визитка*/
 
 section.content {
-    margin: 2em 0;
+    //display: flex;
+    margin-bottom: 2em;
 
-    h2 {
-        margin-bottom: 1em;
+    .card-wrap {
+        // width: 100%;
+        height: 65vh;
+        overflow: hidden;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .card {
+            position: relative;
+            top: -2em;
+            width: 50em;
+            height: 25em;
+            transition: transform 1s ease-in-out;
+            transform-style: preserve-3d;
+        }
+
+
+        .card .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 1.9em;
+            backface-visibility: hidden;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .front {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            transition: opacity 0s linear 0.5s;
+            background: #303030;
+        }
+
+
+
+        .front .logo {
+            text-transform: uppercase;
+            font: 3em;
+            font-weight: 300;
+            display: inline-block;
+            color: #606060;
+        }
+
+
+        .back {
+            z-index: -1;
+            text-transform: uppercase;
+            font-weight: 400;
+            background: #2f99ff;
+            color: #133d66;
+            line-height: 16px;
+            transform: rotateY(-180deg);
+            transition: opacity 1s linear 0s;
+        }
+
+
+
+
+        .back h2 {
+            font: 700 4em;
+            margin-bottom: 1em;
+            color: #133d66;
+        }
+
+
+        .back h3 {
+            font: 400 3em;
+            margin-bottom: 0.5em;
+            color: #acd6ff;
+        }
+
+
+        .back .info {
+            // position: absolute;
+            bottom: 30px;
+            left: 30px;
+            // letter-spacing: 4px;
+            //vertical-align: bottom;
+        }
+
+
+        .back .property {
+            color: #acd6ff;
+        }
+
+
+        .back .link {
+            text-decoration: none;
+            color: #133d66;
+        }
+        /* Flip effect*/
+        .card-container {
+            perspective: 800px;
+        }
+
+
+        .card-container:hover .card {
+            transform: rotateY(-180deg);
+        }
+
+
+        .card-container:hover .front {
+            opacity: 0;
+        }
     }
 
     p {
-        //text-indent: 2em;
         margin-bottom: 1em;
         line-height: 1.5em;
         text-align: justify;
-
-        &::first-letter {
-            /*font-weight: 900;
-            color: @color-base;
-            font-size: @size-font-big;
-            letter-spacing: 0.1em;*/
-        }
-
-        span {
-            color: @color-base;
-            font-weight: 900;
-        }
     }
 }
 
@@ -1141,6 +1294,7 @@ section.tariff {
 /*------------------------------------------------------------------------------------------------блог*/
 
 .blog {
+    margin-top: 3em;
     display: flex;
     /*i {
         display: inline-block;
@@ -1555,6 +1709,7 @@ section.tariff {
 /*------------------------------------------------------отдельная страница поста в блоге*/
 
 .post-inner-body {
+    margin-top: 3em;
     border-bottom: 1px solid@color-gray-light;
     padding-bottom: 2.5em;
 
@@ -1727,6 +1882,7 @@ section.tariff {
 /*-----------------------------------------------------------------------интернет магазин*/
 
 .wrapper-shop {
+    margin-top: 3em;
 
     .info-shop {
         display: flex;
@@ -1832,6 +1988,8 @@ section.tariff {
 /*---------------------------------------------------------------------------------------Портфолио*/
 
 section.portfolio {
+    margin-top: 3em;
+
     .grid {
         display: flex;
         flex-wrap: wrap;
@@ -2408,6 +2566,8 @@ section.portfolio {
 
 /*----------------------------------------------------------------отдельная страница портфолио*/
 .portfolio-inner-wrap {
+    margin-top: 3em;
+
     section {
         margin: 2em auto;
     }
@@ -2463,6 +2623,8 @@ section.portfolio {
     }
 
     section.device {
+        height: 100vh;
+
         .tabs {
             position: relative;
             display: flex;
@@ -2661,6 +2823,7 @@ section.portfolio {
 /*------------------------------------------------------------------------------Страница ЦЕНЫ*/
 
 section.price-solution {
+    margin-top: 3em;
 
     .flex {
         display: flex;
@@ -2770,6 +2933,281 @@ section.price-solution {
 
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
 section.heading {
+    margin-top: 3em;
+    /*background-size: cover;
+    text-align: center;
+    padding: 0em;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0px;
+    border-bottom: none;
+    background-color: #00B5AD;
+    background-image: -webkit-radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
+    background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
+    transition: background-color 3s ease-in-out 2s;
+    perspective: 1000px;
+
+    &::after {
+        position: absolute;
+        z-index: 1;
+        width: 135%;
+        height: 135%;
+        top: 18%;
+        left: 0px;
+        content: '';
+        background: url(https://semantic-ui.com/images/ui.png);
+        transform-origin: 50% 50%;
+        transform-style: preserve-3d;
+        animation-name: splash;
+        transition: opacity 3s ease-in-out, transform 5s ease-in-out;
+        opacity: 0.06;
+        animation-duration: 15s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
+    }
+
+    @keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @-moz-keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @-webkit-keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @-ms-keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @-o-keyframes splash {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 0% -475px;
+        }
+    }
+
+    @keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }
+
+    @-moz-keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }
+
+    @-webkit-keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }
+
+    @-ms-keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }
+
+    @-o-keyframes colors {
+        0% {
+            background-color: #00B5AD;
+        }
+
+        12% {
+            background-color: #3B83C0;
+        }
+
+        25% {
+            background-color: #E07B53;
+        }
+
+        37% {
+            background-color: #D9499A;
+        }
+
+        50% {
+            background-color: #564F8A;
+        }
+
+        62% {
+            background-color: #F2C61F;
+        }
+
+        75% {
+            background-color: #D95C5C;
+        }
+
+        87% {
+            background-color: #5BBD72;
+        }
+
+        100% {
+            background-color: #F2C61F;
+        }
+    }*/
     .wrap-title {
         margin-top: 5em;
         height: 100vh;
@@ -3292,6 +3730,7 @@ section.form-index {
 /*-------------------------------------------------------------------страница о нас/about */
 /*----------------------------------------------------------------------Корпоративный сайт*/
 .title-corporete {
+    margin-top: 3em;
     text-align: center;
     margin: 1em auto;
 
@@ -3328,6 +3767,8 @@ section.form-index {
 }
 /*---------------------------------------------------------------------Страница услуги service */
 .all-service-wrap {
+    margin-top: 3em;
+
     section.catalog {
         height: 100vh;
         padding-top: 2em;
@@ -3346,6 +3787,12 @@ section.form-index {
                 transition: .3s linear;
                 max-width: 2em;
                 line-height: 1.5em;
+
+                a {
+                    margin-right: 0;
+                    height: 2em;
+                    line-height: 1.9em;
+                }
             }
 
             tr:hover td {
@@ -3979,14 +4426,30 @@ section.develop {
 
     .h2, p {
         margin-top: 0.8em;
+    }
 
-
+    .info {
+        display: flex;
+        justify-content: space-between;
 
         .left {
-            float: left !important;
+            display: inline-block;
+            // float: left !important;
+        }
+
+        .confidentiality {
+            display: flex;
         }
     }
 
+    a.link-more {
+        color: @color-more;
+        text-decoration: underline;
+
+        &:hover {
+            color: @color-more-lighter1;
+        }
+    }
 
 
     form {
@@ -3995,12 +4458,13 @@ section.develop {
         display: flex;
         flex-direction: column;
 
-
-
         input {
             width: 100%;
         }
 
+        input[type="checkbox"] {
+            width: 1em;
+        }
 
 
         input[type="text"], [type="email"], textarea {
@@ -4036,7 +4500,7 @@ section.develop {
         text-decoration: none;
         padding: 0 1.56em;
         margin: 0.625em 0;
-        margin-right: 0.625em;
+        margin-right: 4em;
         white-space: nowrap;
         user-select: none;
         transition: color 0.3s ease-out, background-color 0.3s ease-out;
@@ -4540,6 +5004,45 @@ section.develop {
         }
     }
 
+    section.landing-price-table {
+        height: 100vh;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 1.5em;
+        }
+
+        table {
+            margin-top: 1em;
+            width: 100%;
+            border-collapse: collapse;
+
+            tr {
+                border-bottom: 1px solid @color-gray;
+
+                &:hover {
+                    border-bottom: 1px solid @color-more;
+                    box-shadow: 0 6px 4px -4px @color-more;
+                }
+                /*&:hover td {
+                    background: @color-more-lighter2;
+                }
+
+                &:hover th {
+                    background: @color-more-lighter2;
+                }*/
+                td {
+                    max-height: 3em;
+                    color: @color-base;
+                    //border: 1px solid @color-gray-light;
+                    text-align: center;
+                    //padding: 0.65em 0.5em;
+                    transition: .3s linear;
+                }
+            }
+        }
+    }
+
     section.landing-steps {
     }
 
@@ -4897,24 +5400,22 @@ section.develop {
     }
 }
 
-
-
-
 /*-------------------------------------------------------------------------------------ТАБЫ*/
-section.tabs {
+section.tabs-all {
     position: relative;
     width: 100%;
     margin-bottom: 2em;
 
 
 
-    .label-wrap {
+    .label-wrapper {
         display: flex;
     }
 
 
 
     label {
+        width: 100%;
         color: @color-gray-dark;
         cursor: pointer;
         display: block;
@@ -4929,8 +5430,6 @@ section.tabs {
             border-left: none;
             border-right: none;
         }
-
-
 
         &:hover {
             color: @color-more;
@@ -4947,26 +5446,28 @@ section.tabs {
 
 
 
-    #tab_1:checked ~ .label-wrap #tab_l1,
-    #tab_2:checked ~ .label-wrap #tab_l2,
-    #tab_3:checked ~ .label-wrap #tab_l3 {
+    #tab__1:checked ~ .label-wrapper #tab__l1,
+    #tab__2:checked ~ .label-wrapper #tab__l2,
+    #tab__3:checked ~ .label-wrapper #tab__l3 {
         .border-more;
+        border-bottom: none;
+        background: #ecf0f1;
         top: 0;
         z-index: 3;
     }
 
 
 
-    .tabs_cont {
+    .tabs_content {
         position: relative;
-        padding-top: 2em;
+        // padding-top: 2em;
         z-index: 2;
-        height: 15em;
+        //height: 15em;
     }
 
 
 
-    .tabs_cont > div {
+    .tabs_content > div {
         position: absolute;
         left: -9999px;
         top: 0;
@@ -4976,9 +5477,11 @@ section.tabs {
 
 
 
-    #tab_1:checked ~ .tabs_cont #tab_c1,
-    #tab_2:checked ~ .tabs_cont #tab_c2,
-    #tab_3:checked ~ .tabs_cont #tab_c3 {
+    #tab__1:checked ~ .tabs_content #tab__c1,
+    #tab__2:checked ~ .tabs_content #tab__c2,
+    #tab__3:checked ~ .tabs_content #tab__c3 {
+        padding-top: 2em;
+        background: #ecf0f1;
         position: static;
         left: 0;
         opacity: 1;
@@ -5023,7 +5526,10 @@ section.tabs {
     .container {
         width: 73.125em;
     }
-
+        /*колонки в футере*/
+    .bottom-footer .footer-info .info-item{
+        width:25%;
+    }
     .tariff-wrap {
         .row
     }
@@ -5153,7 +5659,10 @@ section.tabs {
         width: 60em;
     }
 
-
+        /*колонки в футере*/
+    .bottom-footer .footer-info .info-item{
+        width:25%;
+    }
 
     .tariff-wrap {
         .row
@@ -5279,7 +5788,10 @@ section.tabs {
         width: 45em;
     }
 
-
+    /*колонки в футере*/
+    .bottom-footer .footer-info .info-item{
+        width:50%;
+    }
 
     .tariff-wrap {
         .row
@@ -5401,7 +5913,10 @@ section.tabs {
     .container {
         width: 30em;
     }
-
+        /*колонки в футере*/
+    .bottom-footer .footer-info .info-item{
+        width:50%;
+    }
 
     .tariff-wrap {
         .column
@@ -5512,6 +6027,10 @@ section.tabs {
 
 
 @media screen and (max-width:640px) {
+        /*колонки в футере*/
+    .bottom-footer .footer-info .info-item{
+        width:90%;
+    }
     /*--------------------------------меню для мобильных*/
     .navigation {
         nav {
