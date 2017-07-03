@@ -15,6 +15,7 @@ namespace OlxaWebCore.Models.DataModels
         [Display(Name = "Имя клиента")]
         public string Name { get; set; }
 
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Некорректный адрес")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
