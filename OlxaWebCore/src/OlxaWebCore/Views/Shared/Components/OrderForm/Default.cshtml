@@ -19,9 +19,11 @@
             @*<input type="text" name="tel" placeholder="Телефон" />*@
             <input type="email" name="email" placeholder="Email" />
             <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
-            <p class="left">
-                Если у вас есть готовый бриф или ТЗ можете приложить их к письму
-            </p>
+            <div class="info">
+                <p class="left">
+                    Если у вас есть готовый бриф или ТЗ можете приложить их к письму
+                </p>
+            </div>
             <div class="btn-form-group">
                 <div class="append">
                     <input type="file" name="file" id="file" class="input-file">
@@ -36,9 +38,14 @@
                                     <input type="file" name="attachment-file" value="1" id="custom-file-upload" />
                                 </label>
                                 </div>*@
-                <button type="submit" class="btn btn-long btn-ghost-more">Отправить!</button>
+                <button type="submit" id="continue" class="btn btn-ghost-more btn-long">Отправить!</button>
             </div>
-            @*</form>*@
+                @*</form>*@
+                <div class="confidentiality">
+                    <input type="checkbox" name="agreed-check" id="agree"/>
+                    <label for="agree">Я согласен с условиями политики конфиденциальности </label>
+                    <a href="#" class="link-more">Подробнее</a>
+                </div>
         }
+
     </div>
-</div>

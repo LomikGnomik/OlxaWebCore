@@ -286,6 +286,15 @@ $(function () {
 });
 
 
+/*-----------------согласие на обработку информации----------------------------*/
+$(document).ready(function () {
+    $('#continue').prop('disabled', true);
+    $('#agree').change(function () {
+        $('#continue').prop('disabled', function (i, val) {
+            return !val;
+        })
+    });
+})
 /*--------------------прокрутка от сексии к секции------------*/
 //$(document).ready(function() {  
 
