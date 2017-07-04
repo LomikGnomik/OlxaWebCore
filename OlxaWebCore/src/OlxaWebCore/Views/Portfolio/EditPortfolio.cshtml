@@ -62,62 +62,63 @@
         </div>
     </div>
 
-
+<hr />
     <div class="portfolio-images">
 
         <div class="img-preview">
+            <span>preview</span>
             <div class="containers">
                 <div class="image-wrapper">
-                    <img class="image" src="~/images/portfolio/preview.jpg" alt="preview" />
+                    <img class="image" src="~/Files/Portfolio/Image/Preview/@Model.Image" alt="preview" />
                 </div>
             </div>
             <div class="btn file-upload">
-                <input type="file" class="file-input">Выбирите файл
+                <input type="file" name="preview" class="file-input">Выбирите файл
             </div>
         </div>
 
         <div class="img-desktop">
+            <span>desktop</span>
             <div class="containers">
                 <div class="image-wrapper">
-                    <img class="image" src="~/images/portfolio/preview.jpg" alt="desktop" />
+                    <img class="image" src="~/Files/Portfolio/Image/Desktop/@Model.Image" alt="desktop" />
                 </div>
             </div>
             <div class="btn file-upload">
-                <input type="file" class="file-input">Выбирите файл
+                <input type="file" name="desktop" class="file-input">Выбирите файл
             </div>
         </div>
 
         <div class="img-tablet">
+            <span>tablet</span>
             <div class="containers">
                 <div class="image-wrapper">
-                    <img class="image" src="~/images/portfolio/preview.jpg" alt="tablet" />
+                    <img class="image" src="~/Files/Portfolio/Image/Tablet/@Model.Image" alt="tablet" />
                 </div>
             </div>
             <div class="btn file-upload">
-                <input type="file" class="file-input">Выбирите файл
+                <input type="file" name="tablet" class="file-input">Выбирите файл
             </div>
         </div>
 
         <div class="img-mobile">
+            <span>mobile</span>
             <div class="containers">
                 <div class="image-wrapper">
-                    <img class="image" src="~/images/portfolio/preview.jpg" alt="mobile" />
+                    <img class="image"  src="~/Files/Portfolio/Image/Mobile/@Model.Image" alt="mobile" />
                 </div>
             </div>
             <div class="btn file-upload">
-                <input type="file" class="file-input">Выбирите файл
+                <input type="file" name="mobile" class="file-input">Выбирите файл
             </div>
         </div>
 
-
-
-
     </div>
 
-    <div class="portfolio-image-name">
+    @*<div class="portfolio-image-name">
         <label asp-for="Image"></label>
         <input type="text" asp-for="Image" value=".jpg">
-    </div>
+    </div>*@
 
     <div class="portfolio-description">
         <label asp-for="Description"></label>
@@ -142,7 +143,7 @@
 <div class="btn-control-portfolio">    
         <a asp-controller="Portfolio" asp-action="AllAdmin">Назад</a>  
 
-    <form asp-action="EditPortfolio" class="btn-portfolio-delete">
+    <form asp-action="DeletePortfolio" class="btn-portfolio-delete">
         <input type="hidden" asp-for="PortfolioID" />
         @*<label class="btn-close" for="modal-window" aria-hidden="true">×</label>*@
         <input type="submit" value="X" class="btn-close" title="Удалить"/>

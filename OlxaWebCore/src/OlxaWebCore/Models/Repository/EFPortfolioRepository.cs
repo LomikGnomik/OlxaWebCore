@@ -36,7 +36,7 @@ namespace OlxaWebCore.Models.Repository
                     dbEntry.Description = portfolio.Description;
                     dbEntry.Meta = portfolio.Meta;
                     dbEntry.DevelopmentTime = portfolio.DevelopmentTime;
-                    dbEntry.Image = portfolio.Image;
+                    dbEntry.Image = (portfolio.PortfolioID).ToString()+".jpg";
                     dbEntry.Link = portfolio.Link;
                     dbEntry.Review = portfolio.Review;
                     dbEntry.Price = portfolio.Price;

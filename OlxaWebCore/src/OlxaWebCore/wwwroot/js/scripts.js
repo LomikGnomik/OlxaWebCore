@@ -288,7 +288,7 @@ $(function () {
 
 /*-----------------согласие на обработку информации----------------------------*/
 $(document).ready(function () {
-    $('#continue').prop('disabled', true);
+    $('#continue').prop('disabled', false);
     $('#agree').change(function () {
         $('#continue').prop('disabled', function (i, val) {
             return !val;

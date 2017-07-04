@@ -79,6 +79,8 @@ namespace OlxaWebCore.Controllers
             if (ModelState.IsValid)
             {
                 repository.SavePortfolio(portfolio);
+                // Название картинки
+                portfolio.Image = portfolio.PortfolioID.ToString() + ".jpg";
 
                 SaveFile(desktop, "/Files/Portfolio/Image/Desktop/"+portfolio.Image);
                 SaveFile(tablet, "/Files/Portfolio/Image/Tablet/" + portfolio.Image);
