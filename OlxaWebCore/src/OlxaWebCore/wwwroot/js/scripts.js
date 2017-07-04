@@ -50,13 +50,13 @@ $(function () {
 });
 
 /*----------------------------------плавная прокрутка к форме заявки-------------------*/
-$(function () {
-    $("a[href^='#']").click(function () {
-        var _href = $(this).attr("href");
-        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
-        return false;
-    });
-});
+//$(function () {
+//    $("a[href^='#']").click(function () {
+//        var _href = $(this).attr("href");
+//        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+//        return false;
+//    });
+//});
 
 
 /*--------------------модальное окно инпут с загрузкой файлов--------------------------*/

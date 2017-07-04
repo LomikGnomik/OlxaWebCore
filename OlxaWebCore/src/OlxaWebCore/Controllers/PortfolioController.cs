@@ -99,13 +99,22 @@ namespace OlxaWebCore.Controllers
 
         public async void SaveFile(IFormFile file , string path)
         {
+            string road = _appEnvironment.WebRootPath + path;
             if (file != null)
             {
-                // сохраняем в каталоге wwwroot/Files/Portfolio
-                using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
+                try
                 {
-                   await file.CopyToAsync(fileStream);
+                    // сохраняем в каталоге wwwroot/Files/Portfolio
+                    using (var fileStream = new FileStream(road, FileMode.Create))
+                    {
+                        await file.CopyToAsync(fileStream);
+                    }
                 }
+                catch
+                {
+
+                }
+               
             }
         }
 

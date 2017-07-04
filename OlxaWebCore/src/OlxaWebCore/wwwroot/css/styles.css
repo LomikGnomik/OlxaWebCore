@@ -3549,6 +3549,7 @@ section.information-title figcaption p {
 }
 .about-wrap .contacts-wrapper .contacts .info {
   margin-left: 1em;
+  line-height: 2em;
 }
 .about-wrap .contacts-wrapper .contacts .info span {
   display: inline-block;

@@ -69,8 +69,13 @@ namespace OlxaWebCore.Controllers
         //отправка заказа нам на почту
         public async void  SendMessage(string email, string theme ,string text) 
         {
-            EmailService emailService = new EmailService();
-            await emailService.SendEmailAsync(email, theme, text);
+            try
+            {
+                EmailService emailService = new EmailService();
+                await emailService.SendEmailAsync(email, theme, text);
+            }
+            catch { }
+            
         }
 
         [HttpPost]
