@@ -6,18 +6,18 @@
 
 <div class="container">
     <section class="tabs-all"role="tab">
-        <input id="tab__1" type="radio" name="tabs" checked="checked" />
-        <input id="tab__2" type="radio" name="tabs" />
+        @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
+        <input id="tab__2" type="radio" name="tabs"checked="checked" />
         <input id="tab__3" type="radio" name="tabs" />
 
         <div class="label-wrapper">
-            <label for="tab__1" id="tab__l1">Готовые решения</label>
+            @*<label for="tab__1" id="tab__l1">Готовые решения</label>*@
             <label for="tab__2" id="tab__l2">Создание сайта</label>
             <label for="tab__3" id="tab__l3">Разработка сайта</label>
         </div>
 
         <div class="tabs_content">
-            <div id="tab__c1">
+            @*<div id="tab__c1">
                 <div class="wrapper-shop">
                     <h1>Интернет магазин</h1>
                     <section class="info-shop">
@@ -33,12 +33,7 @@
                                 <a href="#" class="btn">Демо сайта</a>
                                 <a href="#" class="btn">Демо админки</a>
                             </div>
-                            <div class="shop-order">
-                                @*<div class="shop-price">
-                                        <label> <input type="radio" name="order" />Купить 25 000р</label>
-                                        <label> <input type="radio" name="order" />Арендовать от 2 000 р/мес</label>
-                                    </div>*@
-                                @*<label class="btn" for="modal-window">Заказать</label>*@ <!--вызов мод.окна-->
+                            <div class="shop-order">                                
                                 <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
                             </div>
                         </div>
@@ -70,7 +65,7 @@
                     </div>
 
                 </div>
-            </div> @*tab__c1*@
+            </div>*@ @*tab__c1*@
             <div id="tab__c2">Это про второе</div> @*tab__c2*@
             <div id="tab__c3">Это про третье</div> @*tab__c3*@
         </div>
