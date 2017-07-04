@@ -70,8 +70,11 @@
     <section class="portfolio-index">
 
         <div class="galery-wrap">
+            <div class="small hidden">
+                @await Component.InvokeAsync("ExamplesSites", new { category = "Сайт визитка" })
+            </div>
 
-            <div id="all">
+            <div id="all"class="big">
                 <div id="allcontent">
                     <div id="maincontent">
                         <div class="portfolio">

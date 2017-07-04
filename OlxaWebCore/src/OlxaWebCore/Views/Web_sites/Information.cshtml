@@ -2,25 +2,73 @@
 @{
     ViewData["Title"] = "Создание информационного сайта";
 }
-<div class="container">
-    <section class="tabs-all" role="tab">
-        <input id="tab__1" type="radio" name="tabs" checked="checked" />
-        <input id="tab__2" type="radio" name="tabs" />
-        <input id="tab__3" type="radio" name="tabs" />
 
-        <div class="label-wrapper">
-            <label for="tab__1" id="tab__l1">Готовые решения</label>
-            <label for="tab__2" id="tab__l2">Создание сайта</label>
-            <label for="tab__3" id="tab__l3">Разработка сайта</label>
-        </div>
+<section class="information-title">
+    <div class="component">
+        <ul class="align">
+            <!-- Book 1 -->
+            <li>
+                <figure class='book'>
+                    <!-- Front -->
+                    <ul class='hardcover_front'>
+                        <li>
+                            <img src="https://s.cdpn.io/13060/book1.jpg" alt="" width="100%" max-height="100%">
+                            
+                        </li>
+                        <li></li>
+                    </ul>
+                    <!-- Pages -->
+                    <ul class='page'>
+                        <li></li>
+                        <li>
+                            <a class="learn" href="#">Узнать больше</a>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <!-- Back -->
+                    <ul class='hardcover_back'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <figcaption>
+                        <h1>Название книги</h1>
+                        <span>Автор</span>
+                        <p>From mobile browsers to netbooks and tablets, users are visiting your sites from an increasing array of devices and browsers. </p>
+                    </figcaption>
+                </figure>
+                
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="information-tab">
+    <div class="container">
+        <section class="tabs-all" role="tab">
+            @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
+            <input id="tab__2" type="radio" name="tabs"checked="checked" />
+            <input id="tab__3" type="radio" name="tabs" />
 
-        <div class="tabs_content">
-            <div id="tab__c1">Это первое</div> @*tab__c1*@
-            <div id="tab__c2">Это про второе</div> @*tab__c2*@
-            <div id="tab__c3">Это про третье</div> @*tab__c3*@
-        </div>
-    </section>
-</div>
+            <div class="label-wrapper">
+                @*<label for="tab__1" id="tab__l1">Готовые решения</label>*@
+                <label for="tab__2" id="tab__l2">Создание сайта</label>
+                <label for="tab__3" id="tab__l3">Разработка сайта</label>
+            </div>
+
+            <div class="tabs_content">
+                @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
+                <div id="tab__c2">Это про второе</div> @*tab__c2*@
+                <div id="tab__c3">Это про третье</div> @*tab__c3*@
+            </div>
+        </section>
+    </div>
+</section>
+
 
 @await Component.InvokeAsync("ExamplesSites", new { category = "Информационный" })
 @await Component.InvokeAsync("OrderForm")
