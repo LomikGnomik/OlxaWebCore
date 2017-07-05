@@ -67,17 +67,27 @@ namespace OlxaWebCore.Controllers
             int index = Array.IndexOf(allSites, SiteId);
 
 
-           int nextId =allSites[index+1];
-           int previousId = allSites[index - 1];
+
+            if (index == 0)
+            {
+                index = allSites.Count();
+            }
+              else if(index==allSites.Count())
+            {
+                index = 0;
+            }  
+
 
             Portfolio site=new Portfolio(); 
 
             if (next == true )
             {
+int nextId =allSites[index+1];
 site= repository.Portfolios.FirstOrDefault(p => p.PortfolioID == nextId);
             }
             else
             {
+int previousId = allSites[index - 1];
 site= repository.Portfolios.FirstOrDefault(p => p.PortfolioID == previousId);
             }
             
