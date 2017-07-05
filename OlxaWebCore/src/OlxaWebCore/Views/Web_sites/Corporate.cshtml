@@ -91,7 +91,7 @@
 
                 </div>
             </div>*@ @*plus-corporate flex*@
-        </div>
+        @*</div>*@
         @*--------------табы*@
         <section class="tabs-all" role="tab">
             @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
@@ -106,13 +106,14 @@
 
             <div class="tabs_content">
                 @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
-                <div id="tab__c2">Это про второе</div> @*tab__c2*@
+                <div id="tab__c2">
+                @Html.Partial("_StepsPartialView")
+                </div> @*tab__c2*@
                 <div id="tab__c3">Это про третье</div> @*tab__c3*@
             </div>
         </section>
     </div>
-
 </div>
-@Html.Partial("_StepsPartialView")
+
 @await Component.InvokeAsync("ExamplesSites", new { category = "Копоративный" })
 @await Component.InvokeAsync("OrderForm")
