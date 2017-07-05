@@ -8,40 +8,43 @@ namespace OlxaWebCore.Models.DataModels
 {
     public class Portfolio
     {
-        public int PortfolioID { get; set; }
+        public virtual int PortfolioID { get; set; }
 
         [Display(Name = "Заголовок")]
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         [Display(Name = "Ссылка на сайт")]
-        public string Link { get; set; }
+        public virtual string Link { get; set; }
 
         [Display(Name = "Аннотация")]
-        public string ShortDescription { get; set; }
+        public virtual string ShortDescription { get; set; }
 
         [Display(Name = "Описание")]
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
         [Display(Name = "Категория")]
-        public string Category { get; set; }
+        public virtual string Category { get; set; }
 
         [Display(Name = "Цена")]
-        public decimal Price { get; set; }
+        public virtual decimal Price { get; set; }
 
         [Display(Name = "Срок разработки")]
-        public string DevelopmentTime { get; set; }
+        public virtual string DevelopmentTime { get; set; }
 
         [Display(Name = "Опубликованно?")]
-        public bool Published { get; set; }
+        public virtual bool Published { get; set; }
 
         [Display(Name = "Имена изображений")]
-        public string Image { get; set; }
+        public virtual string Image { get; set; }
 
         [Display(Name = "Отзыв")]
-        public string Review { get; set; }
+        public virtual string Review { get; set; }
 
         [Display(Name = "Мета")]
-        public string Meta { get; set; }
+        public virtual string Meta { get; set; }
+
+        [Display(Name ="Вес Сортировки")]
+        public virtual int SortingWeight { get; set; }
 
     }
 }

@@ -20,7 +20,25 @@ namespace OlxaWebCore.Components
 
         public IViewComponentResult Invoke(string category)
         {
-            IEnumerable<Portfolio> site = repository.Portfolios.Where(p => p.Published == true & p.Category == category);
+            IEnumerable<Portfolio> site;
+
+            if (category == "Главная")
+            {
+                
+                site = repository.Portfolios
+                    .Where(p => p.Published == true)
+                    .OrderByDescending(p => p.SortingWeight)
+                    .Take(5);
+                    ViewBag.PortfolioIndex = true;
+            }
+            else
+            {
+                site = repository.Portfolios
+                                 .Where(p => p.Published == true & p.Category == category)
+                                 .OrderByDescending(p => p.SortingWeight)
+                                 .Take(3);
+            }
+            
 
             return View(site);
         }

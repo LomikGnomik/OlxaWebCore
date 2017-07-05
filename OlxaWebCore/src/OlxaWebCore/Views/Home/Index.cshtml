@@ -70,11 +70,11 @@
     <section class="portfolio-index">
 
         <div class="galery-wrap">
-            <div class="small hidden">
-                @await Component.InvokeAsync("ExamplesSites", new { category = "Сайт визитка" })
-            </div>
-
-            <div id="all"class="big">
+            @*<div class="small hidden">
+                @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
+            </div>*@
+            @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
+            @*<div id="all"class="big">
                 <div id="allcontent">
                     <div id="maincontent">
                         <div class="portfolio">
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>*@
         </div>
     </section>
     <section class="steps-divelopment">

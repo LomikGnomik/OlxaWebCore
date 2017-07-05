@@ -12,6 +12,8 @@ namespace OlxaWebCore.Controllers
     {
         public IActionResult Index()
         {
+
+
             return View();
         }
 

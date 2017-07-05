@@ -42,6 +42,7 @@ namespace OlxaWebCore.Models.Repository
                     dbEntry.Price = portfolio.Price;
                     dbEntry.Published = portfolio.Published;
                     dbEntry.Category = portfolio.Category;
+                    dbEntry.SortingWeight = portfolio.SortingWeight;
                 }
             }
             context.SaveChanges();

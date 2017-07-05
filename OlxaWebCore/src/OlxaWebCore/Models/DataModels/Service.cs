@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,6 +20,7 @@ namespace OlxaWebCore.Models.DataModels
 
         public virtual string Category { get; set; }
 
-      //  public virtual int Sorted { get; set; } // вес сортировки
+        [Display(Name = "Вес Сортировки")]
+        public virtual int SortingWeight { get; set; }
     }
 }

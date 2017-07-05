@@ -33,7 +33,7 @@ namespace OlxaWebCore.Controllers
             {
                 Portfolios = UserPortfolio
                     .Where(p => category == null || p.Category == category)
-                    .OrderBy(p => p.PortfolioID)
+                    .OrderByDescending(p => p.SortingWeight)
                     .Skip((page - 1) * PageSize)
                     .Take(PageSize),
                 PagingInfo = new PagingInfo
@@ -49,8 +49,6 @@ namespace OlxaWebCore.Controllers
             };
             return View(PortfolioList);
         }
-
-
 
 
         public ViewResult WebSite(int PortfolioID)

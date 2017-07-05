@@ -8,9 +8,10 @@ using OlxaWebCore.Data;
 namespace OlxaWebCore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170705111032_SortingWeight")]
+    partial class SortingWeight
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -225,8 +226,6 @@ namespace OlxaWebCore.Data.Migrations
 
                     b.Property<string>("ShortDescription");
 
-                    b.Property<int>("SortingWeight");
-
                     b.Property<string>("Title");
 
                     b.HasKey("PortfolioID");
@@ -255,8 +254,6 @@ namespace OlxaWebCore.Data.Migrations
 
                     b.Property<string>("ShortDescription");
 
-                    b.Property<int>("SortingWeight");
-
                     b.Property<string>("Title");
 
                     b.HasKey("PostID");
@@ -276,8 +273,6 @@ namespace OlxaWebCore.Data.Migrations
                     b.Property<decimal>("Price");
 
                     b.Property<bool>("Published");
-
-                    b.Property<int>("SortingWeight");
 
                     b.Property<string>("Title");
 
