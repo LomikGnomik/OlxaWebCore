@@ -1,14 +1,15 @@
-﻿@model Order
-<div class="container">
-    <div class="order-wrap">
-        <h3>
-            Спасибо за заказ @Model.Name !
-        </h3>
-        <p>
-            Мы скоро свяжемся c вами.
-        </p>
-    </div>
-    <h3>
-        Спасибо за заказ @Model.Name !
-    </h3>
-</div>
+﻿@model Order
+
+<div class="order-wrap">
+    <div class="container">
+        <section class="order-title">
+            <h3>
+              <span>@Model.Name,</span> спасибо за обращение в OlxaWeb!
+            </h3>
+            <p>
+                Мы скоро свяжемся c вами.
+            </p>
+        </section>
+    </div>
+</div>
+

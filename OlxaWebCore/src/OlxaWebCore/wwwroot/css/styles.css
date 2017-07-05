@@ -1886,10 +1886,15 @@ section.portfolio .grid.isotope-grid:after {
 /*---------------------------------страница после заказа order/orderList*/
 .order-wrap {
   min-height: 100vh;
-  display: flex;
-  vertical-align: middle;
   text-align: center;
   background: url(http://relaxonpro.com/img.jpg) no-repeat;
+}
+.order-wrap .order-title {
+  padding-top: 7em;
+  line-height: 2em;
+}
+.order-wrap .order-title span {
+  color: #3c6eaa;
 }
 /*------------------------------------------------------------------------------Страница ЦЕНЫ*/
 section.price-solution {
@@ -2796,7 +2801,6 @@ section.information-title {
   /* thickness of book spine */
   /*events*/
   /* figcaption */
-  /* Media Queries */
 }
 section.information-title ul {
   margin: 0;
@@ -4389,9 +4393,8 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .steps-wrap .tabs .tabs_cont {
   position: relative;
-  width: 75%;
+  width: 90%;
   overflow: hidden;
-  margin: 0 4em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4409,7 +4412,7 @@ section.develop .step-develop-wrap #tabs-3 {
   transition: all 0.6s ease-in-out;
   margin-top: -20em;
   opacity: 0;
-  width: 75%;
+  width: 90%;
   overflow: hidden;
 }
 .steps-wrap .tabs #tab_1:checked ~ .tabs_cont #tab_c1,
@@ -4423,7 +4426,7 @@ section.develop .step-develop-wrap #tabs-3 {
   position: relative;
   opacity: 1;
   transition: all 0.6s ease-in-out;
-  width: 75%;
+  width: 90%;
   overflow: hidden;
 }
 .steps-wrap .tabs #border {
@@ -4444,7 +4447,6 @@ section.develop .step-develop-wrap #tabs-3 {
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
-  margin-top: 0.9em;
   transition: all 0.4s ease-in-out;
 }
 .steps-wrap .tabs #tab_2:checked ~ #border #line {
@@ -4452,7 +4454,6 @@ section.develop .step-develop-wrap #tabs-3 {
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
-  margin-top: 4.68em;
   transition: all 0.4s ease-in-out;
 }
 .steps-wrap .tabs #tab_3:checked ~ #border #line {
@@ -4460,7 +4461,6 @@ section.develop .step-develop-wrap #tabs-3 {
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
-  margin-top: 9em;
   transition: all 0.4s ease-in-out;
 }
 .steps-wrap .tabs #tab_4:checked ~ #border #line {
@@ -4468,7 +4468,6 @@ section.develop .step-develop-wrap #tabs-3 {
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
-  margin-top: 13em;
   transition: all 0.4s ease-in-out;
 }
 .steps-wrap .tabs #tab_5:checked ~ #border #line {
@@ -4476,7 +4475,6 @@ section.develop .step-develop-wrap #tabs-3 {
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
-  margin-top: 18.5em;
   transition: all 0.4s ease-in-out;
 }
 .steps-wrap .tabs #tab_6:checked ~ #border #line {
@@ -4484,7 +4482,6 @@ section.develop .step-develop-wrap #tabs-3 {
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
-  margin-top: 24em;
   transition: all 0.4s ease-in-out;
 }
 .steps-wrap .tabs #tab_7:checked ~ #border #line {
@@ -4492,8 +4489,137 @@ section.develop .step-develop-wrap #tabs-3 {
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
-  margin-top: 28em;
   transition: all 0.4s ease-in-out;
+}
+@media (min-width: 1200px) {
+  #tab_1:checked ~ #border #line {
+    margin-top: 0.9em;
+  }
+  #tab_2:checked ~ #border #line {
+    margin-top: 4.68em;
+  }
+  #tab_3:checked ~ #border #line {
+    margin-top: 9em;
+  }
+  #tab_4:checked ~ #border #line {
+    margin-top: 13em;
+  }
+  #tab_5:checked ~ #border #line {
+    margin-top: 18.5em;
+  }
+  #tab_6:checked ~ #border #line {
+    margin-top: 24em;
+  }
+  #tab_7:checked ~ #border #line {
+    margin-top: 28em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .steps-wrap .tabs #tab_1:checked ~ #border #line {
+    margin-top: 0.3em;
+  }
+  #tab_2:checked ~ #border #line {
+    margin-top: 4.08em;
+  }
+  #tab_3:checked ~ #border #line {
+    margin-top: 9.05em;
+  }
+  #tab_4:checked ~ #border #line {
+    margin-top: 13em;
+  }
+  #tab_5:checked ~ #border #line {
+    margin-top: 18.5em;
+  }
+  #tab_6:checked ~ #border #line {
+    margin-top: 25em;
+  }
+  #tab_7:checked ~ #border #line {
+    margin-top: 29em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .steps-wrap .tabs .label-wrap {
+    width: 40%;
+    padding-left: 1em;
+  }
+  .steps-wrap .tabs #tab_1:checked ~ #border #line {
+    margin-top: 0;
+  }
+  #tab_2:checked ~ #border #line {
+    margin-top: 4em;
+  }
+  #tab_3:checked ~ #border #line {
+    margin-top: 8em;
+  }
+  #tab_4:checked ~ #border #line {
+    margin-top: 12em;
+  }
+  #tab_5:checked ~ #border #line {
+    margin-top: 17em;
+  }
+  #tab_6:checked ~ #border #line {
+    margin-top: 25em;
+  }
+  #tab_7:checked ~ #border #line {
+    margin-top: 29em;
+  }
+}
+@media (max-width: 767px) {
+  .steps-wrap .tabs .label-wrap {
+    width: 60%;
+    padding-right: 2em;
+  }
+  .steps-wrap .tabs .tabs_cont {
+    width: 90%;
+    padding-left: 1.5em;
+  }
+  .steps-wrap .tabs #border {
+    height: 36em;
+  }
+  .steps-wrap .tabs #tab_1:checked ~ #border #line {
+    margin-top: 0.6em;
+  }
+  #tab_2:checked ~ #border #line {
+    margin-top: 5em;
+  }
+  #tab_3:checked ~ #border #line {
+    margin-top: 9em;
+  }
+  #tab_4:checked ~ #border #line {
+    margin-top: 13em;
+  }
+  #tab_5:checked ~ #border #line {
+    margin-top: 20em;
+  }
+  #tab_6:checked ~ #border #line {
+    margin-top: 28.5em;
+  }
+  #tab_7:checked ~ #border #line {
+    margin-top: 32.5em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .steps-wrap .tabs #tab_1:checked ~ #border #line {
+    margin-top: 0em;
+  }
+  #tab_2:checked ~ #border #line {
+    margin-top: 5em;
+  }
+  #tab_3:checked ~ #border #line {
+    margin-top: 10em;
+  }
+  #tab_4:checked ~ #border #line {
+    margin-top: 14em;
+  }
+  #tab_5:checked ~ #border #line {
+    margin-top: 21em;
+  }
+  #tab_6:checked ~ #border #line {
+    margin-top: 29.5em;
+  }
+  #tab_7:checked ~ #border #line {
+    margin-top: 33.5em;
+  }
 }
 /*-------------------------------------------------------------------------------------ТАБЫ*/
 section.tabs-all {
