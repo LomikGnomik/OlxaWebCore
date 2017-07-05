@@ -11,14 +11,13 @@
         @await Component.InvokeAsync("PortfolioNavigationMenu")
        
             <!-- Portfolio Grid -->
-            <div class="grid isotope-grid col-3 filter-grid">
+            <div class="grid isotope-grid filter-grid">
 
                 <div class="grid-sizer"></div>
                 <div class="gutter-sizer"></div>
-                @*<div class="gallery flex">*@
                 @foreach (var site in @Model.Portfolios)
                 {
-                    <div class="gallery__item medium-half large-third grid-item  @site.Category">
+                    <div class="gallery__item medium-half large-third grid-item view @site.Category">
                         <a asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID" class="gallery__item-link">
                             <div class="thumbnail">
 <img src="~/Files/Portfolio/Image/Preview/@site.Image" />
@@ -26,59 +25,9 @@
                             </div>
                         </a>
                     </div>
-                }
-                @*</div>*@
-                @*<div class="gallery__item medium-half large-third grid-item identity">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="http://picview.info/download/20151015/lake-landscape-mountains-trees-fir-trees-summer-purity-2880x1800.jpg" />
-                            <h3 class="gallery__title">ќго!</h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery__item medium-half large-third landing">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="https://million-wallpapers.ru/wallpapers/0/81/432562707692533.png" />
-                            <h3 class="gallery__title">ќго!</h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery__item medium-half large-third identity">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="http://fishinpanama.com/wp-content/uploads/2017/03/Beautful-nature-waterfall-and-sun-light.jpg" />
-                            <h3 class="gallery__title">ќго!</h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery__item medium-half large-third identity">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="https://avatanplus.com/files/resources/original/587638be33f7d1598dcda705.jpg" />
-                            <h3 class="gallery__title">ќго!</h3>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="gallery__item medium-half large-third apps">
-                    <a href="#" class="gallery__item-link">
-                        <div class="thumbnail">
-                            <img src="http://i.wildlife2017.ru/u/11/cf3bb0992a11e6be0fc65b9173989e/-/2fons.ru-36296.jpg" />
-                            <h3 class="gallery__title">ќго!</h3>
-                        </div>
-                    </a>
-                </div>*@
-
-
-
-
-                <!--</div>-->
-            </div><!-- .isotope-masonry-grid -->
-            @*</div>*@
+                }                
+            </div>
+            
 
 
 
