@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using System;
 
 namespace OlxaWebCore.Controllers
 {
@@ -54,6 +55,34 @@ namespace OlxaWebCore.Controllers
         public ViewResult WebSite(int PortfolioID)
         {
             return View(repository.Portfolios.FirstOrDefault(p => p.PortfolioID == PortfolioID));
+        }
+
+        // предыщий или следующий сайт при просмотре конкретного портфолио
+        public ViewResult PreviousNextSite(int SiteId, bool next)
+        {
+            int[] allSites = repository.Portfolios
+                .Where(p=>p.Published==true)
+                .Select(d=>d.PortfolioID).ToArray();
+
+            int index = Array.IndexOf(allSites, SiteId);
+
+
+           int nextId =allSites[index+1];
+           int previousId = allSites[index - 1];
+
+            Portfolio site=new Portfolio(); 
+
+            if (next == true )
+            {
+site= repository.Portfolios.FirstOrDefault(p => p.PortfolioID == nextId);
+            }
+            else
+            {
+site= repository.Portfolios.FirstOrDefault(p => p.PortfolioID == previousId);
+            }
+            
+
+            return View("WebSite",site);
         }
 
         //ADMIN
@@ -110,12 +139,9 @@ namespace OlxaWebCore.Controllers
                 }
                 catch
                 {
-
                 }
-               
             }
         }
-
         // удаление
         [HttpPost]
         public IActionResult DeletePortfolio(int portfolioID)

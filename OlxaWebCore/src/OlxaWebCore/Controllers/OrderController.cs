@@ -42,15 +42,20 @@ namespace OlxaWebCore.Controllers
         [HttpPost]
         public IActionResult NewOrder( Order order, IFormFile file)
         {
-   // сохранить в базу
-            repository.SaveOrder(order);
+            // сохранить в базу
 
+           
+           // order.File ="_"+file.FileName;
+            
+            
+            repository.SaveOrder(order);
 
             // Сохранить файл
             if (file != null)
             {
+
                 // путь к папке Files
-                string path = _appEnvironment.WebRootPath+"/Files/Client/" +order.OrderID ;
+                string path = _appEnvironment.WebRootPath+"/Files/Client/" +order.OrderID+order.File ;
                 // сохраняем файл в папку Files в каталоге wwwroot
                 using (var fileStream = new FileStream( path, FileMode.Create))
                 {
@@ -64,7 +69,8 @@ namespace OlxaWebCore.Controllers
             // отослать письмо клиенту
             SendMessage(order.Email,"Заявка на создание сайта","Заявка принята");
 
-            return View();
+
+            return View(order);
         }
 
         //отправка заказа нам на почту

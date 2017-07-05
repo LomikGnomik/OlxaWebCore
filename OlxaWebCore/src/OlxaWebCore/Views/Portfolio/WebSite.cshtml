@@ -6,12 +6,12 @@
 <div class="container">
     <div class="portfolio-inner-wrap">
         <section class="heading">
-            <a href="#"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
+            <a asp-controller="Portfolio" asp-action="PreviousNextSite" asp-route-siteId="@Model.PortfolioID" asp-route-next="false"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
             <div class="portfolio-inner-name">
                 <div class="h2">@Model.Title</div>
                 <a href="@Model.Link">@Model.Link</a>
             </div>
-            <a href="#"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+            <a asp-controller="Portfolio" asp-action="PreviousNextSite" asp-route-siteId="@Model.PortfolioID" asp-route-next="false"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
         </section>
         <section class="description">
             <div class="small-description">
