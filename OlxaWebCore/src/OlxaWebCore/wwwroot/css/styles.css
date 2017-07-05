@@ -458,6 +458,7 @@ button[type="submit"]:disabled {
 footer {
   flex: 0 0 auto;
   padding-bottom: 2em;
+  padding-top: 2.5em;
 }
 footer .top-footer {
   width: 100%;
@@ -512,6 +513,9 @@ footer .top-footer .tools form button::before {
   color: #ecf0f1;
   font-size: 20px;
   font-weight: bold;
+}
+footer .bottom-footer:after {
+  clear: both;
 }
 footer .bottom-footer .footer-info {
   display: flex;
@@ -606,6 +610,21 @@ footer .bottom-footer .footer-info .info-social .skype:hover {
   color: white;
   background-color: #00aff0;
 }
+/*@media screen and (min-width: 861px) {
+     .bottom-footer {
+        padding-top: 11em;
+    }
+}
+@media (min-width: 861px) and (max-width: 860px) {
+     .bottom-footer {
+        padding-top: 11em;
+    }
+}
+@media (min-width: 440px) and (max-width: 860px) {
+    .bottom-footer {
+        padding-top: 13em;
+    }
+}*/
 /*footer*/
 /*---------------------------------промо--------------promo-site-----------сайт визитка*/
 section.content {
@@ -822,7 +841,7 @@ section.tariff .promo-wrapper ul li:last-child {
 }
 /*------------------------------------------------------------------------------------------------блог*/
 .blog {
-  margin-top: 3em;
+  margin-top: 5em;
   display: flex;
   /*i {
         display: inline-block;
@@ -1317,66 +1336,70 @@ section.tariff .promo-wrapper ul li:last-child {
   background: #3b5998;
 }
 /*-----------------------------------------------------------------------интернет магазин*/
-.wrapper-shop {
+.shop-wrap {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.shop-wrap .wrapper-shop {
   margin-top: 3em;
 }
-.wrapper-shop .info-shop {
+.shop-wrap .wrapper-shop .info-shop {
   display: flex;
   justify-content: space-between;
 }
-.wrapper-shop .info-shop .shop-preview {
+.shop-wrap .wrapper-shop .info-shop .shop-preview {
   width: 50%;
 }
-.wrapper-shop .info-shop .shop-idea {
+.shop-wrap .wrapper-shop .info-shop .shop-idea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
   padding: 0 1em 0 1em;
 }
-.wrapper-shop .info-shop .shop-idea .shop-demo {
+.shop-wrap .wrapper-shop .info-shop .shop-idea .shop-demo {
   display: flex;
   justify-content: center;
 }
-.wrapper-shop .info-shop .shop-idea .shop-demo a {
+.shop-wrap .wrapper-shop .info-shop .shop-idea .shop-demo a {
   display: inline-block;
   text-align: center;
   margin: 1em;
 }
-.wrapper-shop .info-shop .shop-idea .shop-order {
+.shop-wrap .wrapper-shop .info-shop .shop-idea .shop-order {
   display: flex;
   justify-content: space-between;
   padding-top: 1em;
   border-top: 1px solid #cccccc;
 }
-.wrapper-shop .info-shop .shop-idea .shop-order a {
+.shop-wrap .wrapper-shop .info-shop .shop-idea .shop-order a {
   margin-bottom: 0;
 }
-.wrapper-shop .info-shop .shop-idea .shop-order .shop-price label {
+.shop-wrap .wrapper-shop .info-shop .shop-idea .shop-order .shop-price label {
   display: block;
 }
-.wrapper-shop .shop-description {
+.shop-wrap .wrapper-shop .shop-description {
   margin-top: 3em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.wrapper-shop .shop-description h3 {
+.shop-wrap .wrapper-shop .shop-description h3 {
   padding: 1em 0 1em 1.5em;
 }
-.wrapper-shop .shop-description .contains {
+.shop-wrap .wrapper-shop .shop-description .contains {
   border: 1px solid #000000;
   width: 50%;
   height: 15em;
 }
-.wrapper-shop .shop-description .extra {
+.shop-wrap .wrapper-shop .shop-description .extra {
   background: #000000;
   color: #ecf0f1;
   position: relative;
   width: 50%;
   height: 15em;
 }
-.wrapper-shop .shop-description .extra:after {
+.shop-wrap .wrapper-shop .shop-description .extra:after {
   content: '';
   position: absolute;
   left: -12.5em;
@@ -1386,7 +1409,7 @@ section.tariff .promo-wrapper ul li:last-child {
 }
 /*-------------------------------------------------------------------------------Портфолио*/
 section.portfolio {
-  margin-top: 3em;
+  margin-top: 4.5em;
   /*@media (min-width: 768px) and (max-width: 991px) {
         .grid.isotope-grid .grid-sizer,
         .grid.isotope-grid.grid-item {
@@ -1411,6 +1434,8 @@ section.portfolio small {
   margin-bottom: 3em;
 }
 section.portfolio .filter {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
   text-align: center;
 }
 section.portfolio .nav-filters {
@@ -1698,7 +1723,7 @@ section.portfolio .grid.isotope-grid:after {
   text-align: justify;
 }
 .portfolio-inner-wrap section.device {
-  height: 100vh;
+  min-height: 100vh;
 }
 .portfolio-inner-wrap section.device .tabs {
   position: relative;
@@ -1860,11 +1885,15 @@ section.portfolio .grid.isotope-grid:after {
 }
 /*---------------------------------страница после заказа order/orderList*/
 .order-wrap {
+  min-height: 100vh;
+  display: flex;
+  vertical-align: middle;
   text-align: center;
+  background: url(http://relaxonpro.com/img.jpg) no-repeat;
 }
 /*------------------------------------------------------------------------------Страница ЦЕНЫ*/
 section.price-solution {
-  margin-top: 3em;
+  margin-top: 4em;
   margin-bottom: 3em;
 }
 section.price-solution .flex {
@@ -1874,9 +1903,6 @@ section.price-solution .flex {
 section.price-solution .solution-row i {
   display: block;
   margin: 1em;
-}
-section.price-solution .solution-row:first-child {
-  border-bottom: 1px solid #e5e5e5;
 }
 section.price-solution .solution-row .solution-item {
   text-align: center;
@@ -1924,7 +1950,7 @@ section.price-solution .solution-row .solution-item-question .btn {
   margin-top: 2em;
 }
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
-section.heading {
+.index-wrap section.heading {
   margin-top: 3em;
   /*background-size: cover;
     text-align: center;
@@ -2202,13 +2228,13 @@ section.heading {
     }*/
   /*---------------------------эффект описания-------------------*/
 }
-section.heading .wrap-title {
+.index-wrap section.heading .wrap-title {
   margin-top: 5em;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
 }
-section.heading .wrap-title a {
+.index-wrap section.heading .wrap-title a {
   color: #cccccc;
   text-decoration: none;
   font-weight: bold;
@@ -2248,17 +2274,17 @@ section.heading .wrap-title a {
     transform: translateY(-15px);
   }
 }
-section.heading .title {
+.index-wrap section.heading .title {
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
-section.heading .title,
-section.heading .title:hover,
-section.heading .title:focus,
-section.heading .title:active {
+.index-wrap section.heading .title,
+.index-wrap section.heading .title:hover,
+.index-wrap section.heading .title:focus,
+.index-wrap section.heading .title:active {
   animation-name: title-float, title;
   animation-duration: .5s, 2.5s;
   animation-delay: 0s, .5s;
@@ -2267,7 +2293,7 @@ section.heading .title:active {
   animation-fill-mode: forwards;
   animation-direction: normal, alternate;
 }
-section.heading .content {
+.index-wrap section.heading .content {
   position: absolute;
   top: 18em;
   left: 50%;
@@ -2278,23 +2304,23 @@ section.heading .content {
   line-height: 40px;
   color: #ecf0f1;
 }
-section.heading .content .content__container {
+.index-wrap section.heading .content .content__container {
   font-weight: 600;
   overflow: hidden;
   height: 40px;
   padding: 0 40px;
 }
-section.heading .content .content__container:before {
+.index-wrap section.heading .content .content__container:before {
   content: '[';
   left: 0;
 }
-section.heading .content .content__container:after {
+.index-wrap section.heading .content .content__container:after {
   content: ']';
   position: absolute;
   right: 0;
 }
-section.heading .content .content__container:after,
-section.heading .content .content__container:before {
+.index-wrap section.heading .content .content__container:after,
+.index-wrap section.heading .content .content__container:before {
   position: absolute;
   top: 0;
   color: #16a085;
@@ -2304,13 +2330,13 @@ section.heading .content .content__container:before {
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-section.heading .content .content__container .content__container__text {
+.index-wrap section.heading .content .content__container .content__container__text {
   display: inline;
   float: left;
   margin: 0;
   color: #3c6eaa;
 }
-section.heading .content .content__container .content__container__list {
+.index-wrap section.heading .content .content__container .content__container__list {
   margin-top: 0;
   padding-left: 110px;
   text-align: left;
@@ -2319,7 +2345,7 @@ section.heading .content .content__container .content__container__list {
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
-section.heading .content .content__container .content__container__list .content__container__list__item {
+.index-wrap section.heading .content .content__container .content__container__list .content__container__list__item {
   line-height: 40px;
   margin: 0;
   margin-left: 1em;
@@ -2469,77 +2495,78 @@ section.heading .content .content__container .content__container__list .content_
     transform: translate3d(0, -25%, 0);
   }
 }
-section.about {
+.index-wrap section.about {
   width: 100%;
   padding-bottom: 20%;
   background-image: linear-gradient(#8b9da9, #fff6e4);
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
 }
-section.about .about__wrap {
+.index-wrap section.about .about__wrap {
   width: 100%;
   margin: auto;
 }
-section.about h2 {
+.index-wrap section.about h2 {
   padding-top: 10%;
   padding-bottom: 2em;
   text-align: center;
   text-transform: uppercase;
 }
-section.about .about__row {
+.index-wrap section.about .about__row {
   display: flex;
   flex-wrap: wrap;
   padding-top: 15%;
 }
-section.about .about__row .about__col {
+.index-wrap section.about .about__row .about__col {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2em 1.2em;
 }
-section.about .about__row .about__col .about__col__item {
+.index-wrap section.about .about__row .about__col .about__col__item {
   text-align: center;
   margin: 1.5em;
 }
-section.about .about__row .about__col .about__col__item h3 {
+.index-wrap section.about .about__row .about__col .about__col__item h3 {
   margin-bottom: 1em;
 }
-section.portfolio-index {
+.index-wrap section.portfolio-index {
   background: linear-gradient(to left, #333333 0, #ecf0f1 50%, #999999 100%);
   padding: 10%;
-  height: 100vh;
+  min-height: 100vh;
 }
-section.portfolio-index .galery-wrap {
+.index-wrap section.portfolio-index .galery-wrap {
   /* loading */
 }
-section.portfolio-index .galery-wrap #all {
+.index-wrap section.portfolio-index .galery-wrap #all {
   width: 100%;
   height: 100%;
   position: relative;
 }
-section.portfolio-index .galery-wrap a:link,
-section.portfolio-index .galery-wrap a:visited {
+.index-wrap section.portfolio-index .galery-wrap a:link,
+.index-wrap section.portfolio-index .galery-wrap a:visited {
   color: #333333;
   border-bottom: 1px solid #333333;
   transition: .3s;
   text-decoration: none;
 }
-section.portfolio-index .galery-wrap a:hover {
+.index-wrap section.portfolio-index .galery-wrap a:hover {
   color: #333333;
   border-bottom: 1px solid #333333;
   text-decoration: none;
 }
-section.portfolio-index .galery-wrap img {
+.index-wrap section.portfolio-index .galery-wrap img {
   width: 100%;
+  height: 30em;
 }
-section.portfolio-index .galery-wrap #allcontent {
+.index-wrap section.portfolio-index .galery-wrap #allcontent {
   margin: 0 auto;
   width: 95%;
   height: 37em;
   position: relative;
   animation: comein 1.5s ease-in-out;
 }
-section.portfolio-index .galery-wrap .portfolio {
+.index-wrap section.portfolio-index .galery-wrap .portfolio {
   width: 100%;
   max-width: 1000px;
   position: absolute;
@@ -2552,42 +2579,42 @@ section.portfolio-index .galery-wrap .portfolio {
   -moz-box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3);
   box-shadow: -2px 0 3px rgba(0, 0, 0, 0.3);
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(1) {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(1) {
   left: 10px;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(1):hover {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(1):hover {
   transform: rotate(-2deg);
   left: 0;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(2) {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(2) {
   left: 10%;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(2):hover {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(2):hover {
   transform: rotate(-2deg);
   left: 5%;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(3) {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(3) {
   left: 20%;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(3):hover {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(3):hover {
   transform: rotate(-2deg);
   left: 15%;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(4) {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(4) {
   left: 30%;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(4):hover {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(4):hover {
   transform: rotate(-2deg);
   left: 25%;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(5) {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(5) {
   left: 40%;
 }
-section.portfolio-index .galery-wrap .portfolio:nth-child(5):hover {
+.index-wrap section.portfolio-index .galery-wrap .portfolio:nth-child(5):hover {
   transform: rotate(-2deg);
   left: 35%;
 }
-section.portfolio-index .galery-wrap .opened {
+.index-wrap section.portfolio-index .galery-wrap .opened {
   z-index: 1000;
   left: 0 !important;
   transform: rotate(0deg);
@@ -2597,10 +2624,10 @@ section.portfolio-index .galery-wrap .opened {
   width: 100%;
   max-width: 1140px;
 }
-section.portfolio-index .galery-wrap .opened img {
+.index-wrap section.portfolio-index .galery-wrap .opened img {
   z-index: 5;
 }
-section.portfolio-index .galery-wrap .ombra {
+.index-wrap section.portfolio-index .galery-wrap .ombra {
   position: absolute;
   bottom: 20px;
   left: 10px;
@@ -2613,7 +2640,7 @@ section.portfolio-index .galery-wrap .ombra {
   display: none;
   z-index: -1;
 }
-section.portfolio-index .galery-wrap .ombra:after {
+.index-wrap section.portfolio-index .galery-wrap .ombra:after {
   display: block;
   content: "";
   position: absolute;
@@ -2626,7 +2653,7 @@ section.portfolio-index .galery-wrap .ombra:after {
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
   transform: rotate(4deg);
 }
-section.portfolio-index .galery-wrap .txt {
+.index-wrap section.portfolio-index .galery-wrap .txt {
   display: block;
   margin: -2px 0 0 0;
   padding-top: 20px;
@@ -2634,7 +2661,7 @@ section.portfolio-index .galery-wrap .txt {
   height: 4em;
   background: #f7f7f7;
 }
-section.portfolio-index .galery-wrap #loading {
+.index-wrap section.portfolio-index .galery-wrap #loading {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -2644,7 +2671,7 @@ section.portfolio-index .galery-wrap #loading {
   z-index: 10001;
   position: absolute;
 }
-section.portfolio-index .galery-wrap .loader {
+.index-wrap section.portfolio-index .galery-wrap .loader {
   display: block;
   height: 30px;
   left: 50%;
@@ -2654,22 +2681,23 @@ section.portfolio-index .galery-wrap .loader {
   width: 30px;
   animation: spin 1s infinite linear;
 }
-section.steps-divelopment {
-  /*height: 100vh;
+.index-wrap section.steps-divelopment {
+  padding-top: 2em;
+  /*min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;*/
 }
-section.form-index {
-  height: 100vh;
+.index-wrap section.form-index {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 /*----------------------------------------------------------------------Корпоративный сайт*/
 .corporete-wrap {
-  margin-top: 3em;
-  margin-bottom: 2em;
+  margin-top: 7em;
+  margin-bottom: 3em;
   /*.plus-corporate-wrap {
         margin: 1em auto;
         text-align: center;
@@ -2693,6 +2721,7 @@ section.form-index {
 .corporete-wrap .corporete-title {
   text-align: center;
   margin: 1em auto;
+  margin-bottom: 4em;
   display: flex;
   justify-content: center;
 }
@@ -3089,7 +3118,7 @@ section.information-title figcaption p {
   margin-top: 3em;
 }
 .all-service-wrap section.catalog {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 2em;
 }
 .all-service-wrap section.catalog table.service {
@@ -3263,6 +3292,7 @@ section.information-title figcaption p {
 }
 /*-----------------------------------------------------------страница О НАС/Контакты*/
 .about-wrap {
+  padding-top: 3em;
   background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
   background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
   background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
@@ -3278,8 +3308,8 @@ section.information-title figcaption p {
 }
 .about-wrap .about-wrapper .about-title h2 {
   padding: 2em;
-  text-shadow: 0px 1px 0px #cccccc, 0px 2px 0px #c9c9c9, 0px 3px 0px #bbbbbb, 0px 4px 0px #b9b9b9, 0px 5px 0px #aaaaaa, 0px 6px 1px rgba(0, 0, 0, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.25), 0px 20px 20px rgba(0, 0, 0, 0.15);
   color: #FFFFFF;
+  font-size: 3em;
   letter-spacing: 0.02em;
   text-align: center;
 }
@@ -3700,7 +3730,7 @@ section.develop .step-develop-wrap #tabs-3 {
 /*--------------------------------------------------------------Форма отправки заявки*/
 .form-wrapper {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   padding-top: 3em;
   margin-bottom: 0;
@@ -4018,7 +4048,7 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 /*---------------------------------------------------------------------Страница Лендинга*/
 .landing-wrapper section.landing-description {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   background: linear-gradient(to bottom, #fff, #cccccc, #fff);
@@ -4050,7 +4080,7 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .landing-wrapper section.landing-privilege {
   padding: 3em 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4102,7 +4132,7 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .landing-wrapper section.landing-plus {
   padding: 3em 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 .landing-wrapper section.landing-plus h2 {
   text-align: center;
@@ -4126,7 +4156,7 @@ section.develop .step-develop-wrap #tabs-3 {
   margin: 1em;
 }
 .landing-wrapper section.landing-price-table {
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 }
 .landing-wrapper section.landing-price-table h2 {
@@ -4161,9 +4191,6 @@ section.develop .step-develop-wrap #tabs-3 {
   text-align: center;
   padding: 0.65em 0.5em;
   transition: .3s linear;
-}
-.landing-wrapper section.landing-example {
-  background: #000;
 }
 .landing-wrapper section.landing-example h2.section-example-title {
   padding-top: 2em;
@@ -4289,7 +4316,7 @@ section.develop .step-develop-wrap #tabs-3 {
 .steps-wrap {
   margin-top: 2em;
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
 }
 .steps-wrap h2 {
@@ -4329,6 +4356,8 @@ section.develop .step-develop-wrap #tabs-3 {
   font-size: 1.25em;
   cursor: pointer;
   transition: all 0.2s ease-out;
+  border: none;
+  text-align: left;
 }
 .steps-wrap .tabs label:hover {
   color: tomato;
@@ -4468,6 +4497,7 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 /*-------------------------------------------------------------------------------------ТАБЫ*/
 section.tabs-all {
+  min-height: 100vh;
   position: relative;
   width: 100%;
   margin-bottom: 2em;
@@ -4501,8 +4531,7 @@ section.tabs-all #tab__1:checked ~ .label-wrapper #tab__l1,
 section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2,
 section.tabs-all #tab__3:checked ~ .label-wrapper #tab__l3 {
   border: 2px solid #06c438;
-  border-bottom: none;
-  background: #ecf0f1;
+  box-shadow: 0px 8px 19px -7px #000000;
   top: 0;
   z-index: 3;
 }
@@ -4521,7 +4550,6 @@ section.tabs-all #tab__1:checked ~ .tabs_content #tab__c1,
 section.tabs-all #tab__2:checked ~ .tabs_content #tab__c2,
 section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   padding-top: 2em;
-  background: #ecf0f1;
   position: static;
   left: 0;
   opacity: 1;
