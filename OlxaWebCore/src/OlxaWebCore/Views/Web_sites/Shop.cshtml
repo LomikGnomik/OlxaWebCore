@@ -2,10 +2,32 @@
 
 @{
     ViewData["Title"] = "Создание интернет-магазина";
+    ViewBag.PortfolioExample = "Примеры интернет магазинов";
 }
 
 <div class="shop-wrap">
     <div class="container">
+        <div class="wrapper-shop">
+            <section class="info-shop">
+                <div class="shop-preview">
+                    <img src="~/images/shop/post01.jpg" alt="интернет магазин" />
+                </div>
+                <div class="shop-idea">
+                    <h2>Интернет магазин</h2>
+                    <p>
+                        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                    </p>
+                    @*<div class="shop-demo">
+                            <a href="http://nopcommerce.olxaweb.ru" class="btn">Демо сайта</a>
+                            <a href="http://nopcommerce.olxaweb.ru/admin" class="btn">Демо админки</a>
+                        </div>
+                        <div class="shop-order">
+                            <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
+                        </div>*@
+                </div>
+            </section>
+
+        </div>
         <section class="tabs-all" role="tab">
             <input id="tab__1" type="radio" name="tabs" checked="checked" />
             <input id="tab__2" type="radio" name="tabs" checked="checked" />
@@ -19,54 +41,55 @@
 
             <div class="tabs_content">
                 <div id="tab__c1">
-                    <div class="wrapper-shop">
-                        <h1>Интернет магазин</h1>
-                        <section class="info-shop">
-                            <div class="shop-preview">
-                                <img src="~/images/shop/post01.jpg" alt="интернет магазин" />
+                    <div class="wrap-info">
+                        <div class="info-inner">
+                            <div class="info-item-price">
+                                <h2>Цена</h2>
+                                <p>от 250 000р</p>
                             </div>
-                            <div class="shop-idea">
-                                <h2>Интернет магазин</h2>
-                                <p>
-                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                                </p>
-                                <div class="shop-demo">
-                                    <a href="http://nopcommerce.olxaweb.ru" class="btn">Демо сайта</a>
-                                    <a href="http://nopcommerce.olxaweb.ru/admin" class="btn">Демо админки</a>
+                            <div class="info-item-time">
+                                <h2>Срок</h2>
+                                <p>от 2 месяев</p>
+                            </div>
+                            <div class="info-buttons-group">
+                                <div class="info-demo">
+                                    <h2>Демо</h2>
+                                    <div class="demo-btn-wrap">
+                                        <a href="#" class="demo">сайт</a>
+                                        <a href="#" class="demo">админка</a>
+                                    </div>
                                 </div>
-                                <div class="shop-order">
-                                    <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
+
+                                <div class="info-button-bay">
+                                    <a href="#" class="bay">Закзать</a>
                                 </div>
-                            </div>
-                        </section>
-                        <section class="description-shop"></section>
-                        <section class="step-work"></section>
-
-                        <div class="shop-description">
-                            <div class="contains">
-                                <h3>В стоимость входит</h3>
-                                <ul>
-                                    <li>Любой из 5 шаблонов на выбор</li>
-                                    <li>Установка CMS на хостинге</li>
-                                    <li>Настройка магазина</li>
-                                    <li>Хостинг и доменое имя на 1год</li>
-                                    <li>Почтовый ящик с Вашим доменом</li>
-
-                                </ul>
-                            </div>
-                            <div class="extra">
-                                <h3>Дополнительные услуги</h3>
-                                <ul>
-                                    <li>Базовое SEO</li>
-                                    <li>Доработка</li>
-                                    <li>И еще это</li>
-                                    <li>И вот</li>
-                                </ul>
                             </div>
                         </div>
+                    </div>
+                    <div class="shop-description">
+                        <div class="contains">
+                            <h3>В стоимость входит</h3>
+                            <ul>
+                                <li>Любой из 5 шаблонов на выбор</li>
+                                <li>Установка CMS на хостинге</li>
+                                <li>Настройка магазина</li>
+                                <li>Хостинг и доменое имя на 1год</li>
+                                <li>Почтовый ящик с Вашим доменом</li>
 
+                            </ul>
+                        </div>
+                        <div class="extra">
+                            <h3>Дополнительные услуги</h3>
+                            <ul>
+                                <li>Базовое SEO</li>
+                                <li>Доработка</li>
+                                <li>И еще это</li>
+                                <li>И вот</li>
+                            </ul>
+                        </div>
                     </div>
                 </div> @*tab__c1*@
+
                 <div id="tab__c2">
                     @Html.Partial("_StepsPartialView")
                 </div> @*tab__c2*@
@@ -82,47 +105,4 @@
 </div>
 
 
-<!-- Модальное окно -->
-@*<div class="modal">
-    <input class="modal-open" id="modal-window" type="checkbox" hidden>
-    <div class="modal-wrap" aria-hidden="true" role="dialog">
-        <label class="modal-overlay" for="modal-window"></label>
-        <div class="modal-dialog">
-            <div class="modal-header">
-                <h4>Контактная информация </h4>
-                <label class="btn-close" for="modal-window" aria-hidden="true">×</label>
-            </div>
-            <div class="modal-body">
-                <form method="post" action="" id="shop_order" class="modal-form" role="form">
-                    <section class="information">
-                        <input type="text" placeholder="Имя" />
-                        <input type="tel" placeholder="Телефон" />
-                        <input type="email" placeholder="Email" />*@
-<!--<p>*выбирите наиболее предпочтительный вид связи</p>-->
-@*</section>
-                        <section class="comment">
-                            <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
-                            <div class="file">
-                                <p>
-                                    Если у вас есть готовый бриф или ТЗ можете приложить их к письму
-                                </p>
-
-                                <div class="file_upload">
-                                    <button type="button">Выбрать</button>
-                                    <div>Файл не выбран</div>
-                                    <input type="file">
-                                </div>
-                                <div class="capcha">
-                                    тут капча
-                                </div>
-                            </div>
-                        </section>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <label class="btn " for="modal-window">Отправить!</label>
-                </div>
-            </div>
-        </div>
-    </div>*@
 
