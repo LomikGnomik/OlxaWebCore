@@ -1,38 +1,42 @@
 ﻿@model IEnumerable<Portfolio>
 
 @*портфолио на главной*@
-@if (ViewBag.PortfolioIndex == true) 
+@if (ViewBag.PortfolioIndex == true)
 {
-    <div id="all"class="big">
-            <div id="allcontent">
-                <div id="maincontent">
-                    @foreach (var site in Model)
-                    {
-                        <div class="portfolio">
-                            <img src="~/Files/Portfolio/Image/Preview/@site.Image" alt="@site.Title"><br>
-                            <span class="txt">@site.Title</span>
-                            <div class="ombra"></div>
-                        </div>
-                    }
-                </div>
+    <div id="all" class="big">
+        <div id="allcontent">
+            <div id="maincontent">
+                @foreach (var site in Model)
+                {
+                    <div class="portfolio">
+                        <img src="~/Files/Portfolio/Image/Preview/@site.Image" alt="@site.Title"><br>
+                        <span class="txt">@site.Title</span>
+                        <div class="ombra"></div>
+                    </div>
+                }
             </div>
         </div>
+    </div>
 }
 else
 {
     <div class="example-sites-content">
-        @foreach (var site in Model)
-        {
-            <div class="view view-second">
-                <img src="~/Files/Portfolio/Image/Preview/@site.Image"alt="@site.Title"/>
-                <div class="mask"></div>
-                <div class="content">
-                    <h2>@site.Title</h2>
-                    <p>@site.Link</p>
-                    <a asp-action="WebSite" asp-controller="Portfolio" asp-route-PortfolioID="@site.PortfolioID" class="info">Узнать больше</a>
+        <h2 class="title-section ">@ViewBag.PortfolioExample</h2>
+        <div class="example-wrapper">
+            @foreach (var site in Model)
+            {
+                <div class="view view-second">
+                    <img src="~/Files/Portfolio/Image/Preview/@site.Image" alt="@site.Title" />
+                    <div class="mask"></div>
+                    <div class="content">
+                        <h2>@site.Title</h2>
+                        <p>@site.Link</p>
+                        <a asp-action="WebSite" asp-controller="Portfolio" asp-route-PortfolioID="@site.PortfolioID" class="info">Узнать больше</a>
+                    </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
+
     </div>
 }
 
