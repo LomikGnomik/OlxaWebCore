@@ -312,3 +312,31 @@ $(document).ready(function () {
 //});
 
 
+/*---------------------интернет магазин эффект*/
+$('.avTile').hover(function () {
+    $('.avFeature').toggleClass('active');
+});
+$('.firewallTile').hover(function () {
+    $('.firewallFeature').toggleClass('active');
+});
+$('.backupTile').hover(function () {
+    $('.backupFeature').toggleClass('active');
+});
+$('.vulnerabilitiesTile').hover(function () {
+    $('.vulnerabilitiesFeature').toggleClass('active');
+});
+$('.spamfilterTile').hover(function () {
+    $('.spamfilterFeature').toggleClass('active');
+});
+$('.smpTile').hover(function () {
+    $('.smpFeature').toggleClass('active');
+});
+$('.tuneupTile').hover(function () {
+    $('.tuneupFeature').toggleClass('active');
+});
+$('.idpTile').hover(function () {
+    $('.idpFeature').toggleClass('active');
+});
+$('.parentalTile').hover(function () {
+    $('.parentalFeature').toggleClass('active');
+});
