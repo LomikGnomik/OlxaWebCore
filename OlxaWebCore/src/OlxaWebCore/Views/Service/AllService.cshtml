@@ -26,33 +26,41 @@
                                             <tr>
                                                 <td>@service.Title</td>
                                                 <td>@service.Price</td>
-                                                <td align="right"><a href="#" class="btn btn-ghost">Подробнее</a></td>
+                                                <td align="right">
+                                                    <a href="#modal" class="btn btn-ghost">
+                                                        Подробнее
+                                                    </a>
+                                                </td>
                                                 @*<td class="add">+</td>*@
 
                                             </tr>
+
                                         }
                                     }
                                 </table>
                             </div>
                         </li>
                     }
-                </ul>                
+                </ul>
             </div>
         </div>
     </section>
+
 
     <section>
         @await Component.InvokeAsync("OrderForm")
     </section>
 </div>
+@*модальное окно*@
+<section class="modal-window-service">
+    <a href="#" class="overlay_det" id="modal"></a>
+    <div class="popup_det">
+        cjlth;bvjt
+        <a class="close_det" title="Закрыть" href="#close_det"></a>
+    </div>
+</section>
 
 
-<a href="#win4" class="button button-orange">Пример</a>
-<a href="#x" class="overlay" id="win4"></a>
-<div class="popup">
-    <img class="is-image" src="ваша-картинка.jpg" alt="" />
-    <a class="close" title="Закрыть" href="#close"></a>
-</div>
 
 
 

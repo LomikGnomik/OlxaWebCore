@@ -1340,6 +1340,234 @@ section.tariff .promo-wrapper ul li:last-child {
   margin-top: 3em;
   margin-bottom: 3em;
 }
+.shop-wrap .avFeaturesContainer {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.shop-wrap .avFeaturesRapper {
+  position: relative;
+  width: 100%;
+  height: 809px;
+  perspective: 1000px;
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avFeatures_Bg.jpg) right top #171717 no-repeat;
+  padding-right: 229px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+.shop-wrap .avFeaturesRapper h1 {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding-top: 45px;
+  font-size: 38px;
+  font-weight: 300;
+}
+.shop-wrap .screenRap {
+  width: 1519px;
+  height: 623px;
+  position: absolute;
+  top: 142px;
+  right: -81px;
+  z-index: 3;
+  transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
+  -webkit-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
+  -moz-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
+}
+.shop-wrap .screenRap div {
+  width: 270px;
+  height: 271px;
+  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  float: left;
+  cursor: pointer;
+  margin: 8px;
+  text-indent: -9999px;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  position: relative;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.23) 19px 19px 30px;
+  left: 0;
+}
+.shop-wrap .screenRap:hover div {
+  animation: none !important;
+}
+.shop-wrap .screenRap div:hover {
+  z-index: 2;
+  left: -70px !important;
+  transform: scale(1.8, 1.8) !important;
+}
+.shop-wrap .screenRap .avTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avTile.jpg) no-repeat;
+}
+.shop-wrap .screenRap .firewallTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallTile.jpg) no-repeat;
+}
+.shop-wrap .screenRap .backupTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupTile.jpg) no-repeat;
+  animation: tileLoadScale .6s 2.2s forwards;
+  -webkit-animation: tileLoadScale .6s 2.2s forwards;
+  -moz-animation: tileLoadScale .6s 2.2s forwards;
+}
+.shop-wrap .screenRap .vulnerabilitiesTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerableTile.jpg) no-repeat;
+}
+.shop-wrap .screenRap .spamfilterTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterTile.jpg) no-repeat;
+  animation: tileLoadScale .6s 2.7s forwards;
+  -webkit-animation: tileLoadScale .6s 2.7s forwards;
+  -moz-animation: tileLoadScale .6s 2.7s forwards;
+}
+.shop-wrap .screenRap .smpTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpTile.jpg) no-repeat;
+  animation: tileLoadScale .6s 2s forwards;
+  -webkit-animation: tileLoadScale .6s 2s forwards;
+  -moz-animation: tileLoadScale .6s 2s forwards;
+}
+.shop-wrap .screenRap .tuneupTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupTile.jpg) no-repeat;
+}
+.shop-wrap .screenRap .idpTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpTile.jpg) no-repeat;
+}
+.shop-wrap .screenRap .parentalTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalTile.jpg) no-repeat;
+  animation: tileLoadScale .6s 2.4s forwards;
+  -webkit-animation: tileLoadScale .6s 2.4s forwards;
+  -moz-animation: tileLoadScale .6s 2.4s forwards;
+}
+.shop-wrap .feature {
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity .1s ease;
+  -webkit-transition: opacity .1s ease;
+  -moz-transition: opacity .1s ease;
+  width: 30%;
+  top: 188px;
+  left: 95px;
+}
+.shop-wrap .feature.active {
+  opacity: 1;
+}
+.shop-wrap .feature h2 {
+  font-size: 37px;
+  padding: 12px 0 10px 72px;
+  margin: 0 0 10px -120px;
+  opacity: 0;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+}
+.shop-wrap .feature.active h2 {
+  opacity: 1;
+  margin: 0 0 10px -72px;
+  color: #fff;
+  font-weight: 400;
+}
+.shop-wrap .feature div {
+  width: 0;
+  opacity: 0;
+  transition: width .3s ease, opacity .7s ease;
+  -webkit-transition: width .3s ease, opacity .7s ease;
+  -moz-transition: width .3s ease, opacity .7s ease;
+}
+.shop-wrap .feature.active div {
+  width: 100%;
+  opacity: 1;
+}
+.shop-wrap .feature div span {
+  width: 100%;
+  border-top: #fff solid 1px;
+  height: 1px;
+  display: block;
+  opacity: .4;
+}
+.shop-wrap .feature p {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.8;
+  padding: 32px 32px 0 0;
+  opacity: 0;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+}
+.shop-wrap .feature.active p {
+  opacity: 1;
+}
+.shop-wrap .smallNotice {
+  font-style: italic;
+  opacity: .5;
+  font-size: 11px;
+}
+.shop-wrap .avFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avIcon.png) left center no-repeat;
+}
+.shop-wrap .firewallFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallIcon.png) left center no-repeat;
+}
+.shop-wrap .backupFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupIcon.png) left center no-repeat;
+}
+.shop-wrap .vulnerabilitiesFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerabilitiesIcon.png) left center no-repeat;
+}
+.shop-wrap .spamfilterFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterIcon.png) left center no-repeat;
+}
+.shop-wrap .smpFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpIcon.png) left center no-repeat;
+}
+.shop-wrap .tuneupFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupIcon.png) left center no-repeat;
+}
+.shop-wrap .idpFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpIcon.png) left center no-repeat;
+}
+.shop-wrap .parentalFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalIcon.png) left center no-repeat;
+}
+.shop-wrap .hoverIcon {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/mouseHoverIcon.png) center top no-repeat;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 28px;
+  width: 140px;
+  text-align: center;
+  left: 50%;
+  margin-left: -192px;
+  padding-top: 41px;
+}
+@keyframes tileLoadScale {
+  50% {
+    transform: scale(1.4, 1.4);
+    left: -50px;
+    z-index: 2;
+  }
+}
+@-webkit-keyframes tileLoadScale {
+  50% {
+    transform: scale(1.4, 1.4);
+    -webkit-transform: scale(1.4, 1.4);
+    -moz-transform: scale(1.4, 1.4);
+    left: -50px;
+    z-index: 2;
+  }
+}
+@-moz-keyframes tileLoadScale {
+  50% {
+    transform: scale(1.4, 1.4);
+    -moz-transform: scale(1.4, 1.4);
+    left: -50px;
+    z-index: 2;
+  }
+}
 .shop-wrap .wrapper-shop {
   margin-top: 3em;
   margin-bottom: 3em;
@@ -1413,16 +1641,26 @@ section.tariff .promo-wrapper ul li:last-child {
 .shop-wrap .wrap-info .info-inner .info-buttons-group {
   display: flex;
 }
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo h2 {
+.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo {
+  display: flex;
+}
+.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-title {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1em;
+  padding: 0.5em;
+}
+.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-title h2 {
   font-weight: 600;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 .shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-btn-wrap {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
 }
 .shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-btn-wrap .demo {
   width: 7em;
+  height: 50%;
   margin: 0;
   line-height: 2em;
   background: #3c6eaa;
@@ -1441,13 +1679,14 @@ section.tariff .promo-wrapper ul li:last-child {
   background: #2f5d84;
 }
 .shop-wrap .wrap-info .info-inner .info-buttons-group .info-button-bay .bay {
-  height: 5em;
+  height: 100%;
   margin: 0;
   margin-right: -2px;
   background: #06c438;
   display: inline-block;
   color: #ecf0f1;
   text-align: center;
+  line-height: 4.5em;
   vertical-align: central;
   padding: 0 1.56em;
   touch-action: manipulation;
@@ -3385,137 +3624,102 @@ section.information-title figcaption p {
   color: #1bdb68;
 }
 /*-------------------------------------------модальное окно с примером сайта/изображением*/
-.overlay {
+.modal-window-service {
+  /* Базовые стили слоя затемнения и модального окна  */
+  /* стили модального окна */
+  /* активация мод. окна */
+  /*кнопка закрытия */
+  /* планшет */
+  /* смарт */
+  /* изображения внутри окна */
+}
+.modal-window-service .overlay_det {
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 10;
-  display: none;
+  z-index: 9999;
+  visibility: hidden;
   /* фон затемнения */
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
   position: fixed;
-  /* фиксированное поцизионирование */
   cursor: default;
-  /* тип курсара */
+  transition: all 0.6s;
 }
-/* активируем слой затемнения */
-.overlay:target {
-  display: block;
+.modal-window-service .overlay_det:target {
+  visibility: visible;
+  opacity: 1;
 }
-/* стили модального окна */
-.popup {
-  top: -100%;
+.modal-window-service .popup_det {
+  top: 0;
   right: 0;
   left: 50%;
   font-size: 14px;
-  z-index: 20;
-  margin: 0;
-  width: 85%;
+  font-family: 'Tahoma', Arial, sans-serif;
+  z-index: 10000;
+  margin: 0 auto;
+  width: 100%;
   min-width: 320px;
-  max-width: 600px;
-  /* фиксированное позиционирование, окно стабильно при прокрутке */
+  max-width: 820px;
   position: fixed;
   padding: 15px;
   border: 1px solid #383838;
-  background: #fefefe;
-  /* скругление углов */
-  border-radius: 4px;
-  font: 14px/18px 'Tahoma', Arial, sans-serif;
-  /* внешняя тень */
-  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
-  -ms-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  background-color: #FFFFFF;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
-  transform: translate(-50%, -500%);
-  -webkit-transition: -webkit-transform 0.6s ease-out;
-  -moz-transition: -moz-transform 0.6s ease-out;
-  -o-transition: -o-transform 0.6s ease-out;
+  transform: translate(-50%, -150%);
   transition: transform 0.6s ease-out;
 }
-/* активируем модальный блок */
-.overlay:target + .popup {
-  transform: translate(-50%, 0);
-  top: 20%;
+.modal-window-service .overlay_det:target + .popup_det {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-/* формируем кнопку закрытия */
-.close {
-  top: -10px;
-  right: -10px;
-  width: 20px;
-  height: 20px;
+.modal-window-service .close_det {
   position: absolute;
   padding: 0;
+  top: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
   border: 2px solid #ccc;
-  border-radius: 15px;
+  border-radius: 50%;
   background-color: rgba(61, 61, 61, 0.8);
-  -webkit-box-shadow: 0px 0px 10px #000;
-  -moz-box-shadow: 0px 0px 10px #000;
   box-shadow: 0px 0px 10px #000;
   text-align: center;
   text-decoration: none;
-  font: 13px/20px 'Tahoma', Arial, sans-serif;
   font-weight: bold;
-  transition: all ease .8s;
+  line-height: 20px;
+  transition: background-color ease 0.7s;
 }
-.close:before {
+.modal-window-service .close_det:before {
   color: rgba(255, 255, 255, 0.9);
-  content: "X";
+  content: '\2715';
   text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
   font-size: 12px;
 }
-.close:hover {
+.modal-window-service .close_det:hover {
   background-color: rgba(252, 20, 0, 0.8);
-  transform: rotate(360deg);
 }
-/* изображения внутри окна */
-.popup img {
-  width: 100%;
-  height: auto;
+.modal-window-service .popup_det p {
+  margin: 0;
+  padding: 10px;
 }
-/* миниатюры слева/справа */
-.pic-left,
-.pic-right {
-  width: 25%;
-  height: auto;
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .modal-window-service .popup_det {
+    width: 95%;
+  }
 }
-.pic-left {
-  float: left;
-  margin: 5px 15px 5px 0;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .modal-window-service .popup_det {
+    width: 85%;
+  }
 }
-.pic-right {
-  float: right;
-  margin: 5px 0 5px 15px;
-}
-/* элементы м-медиа, фреймы */
-.popup embed,
-.popup iframe {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.modal-window-service .popup_det img {
   display: block;
-  margin: auto;
-  min-width: 320px;
-  max-width: 600px;
+  border: none;
   width: 100%;
-}
-.popup h2 {
-  /* заголовок 2 */
-  margin: 0;
-  color: #008000;
-  padding: 5px 0px 10px;
-  text-align: left;
-  text-shadow: 1px 1px 3px #adadad;
-  font-weight: 500;
-  font-size: 1.4em;
-  font-family: 'Tahoma', Arial, sans-serif;
-  line-height: 1.3;
-}
-/* параграфы */
-.popup p {
-  margin: 0;
-  padding: 5px 0;
+  height: auto;
 }
 /*-----------------------------------------------------------страница О НАС/Контакты*/
 .about-wrap {
@@ -4092,103 +4296,6 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .form-wrapper .btn-form-group {
   justify-content: space-between;
-}
-/*----------------------------------------------------модальное окно для оформления заявки*/
-.modal {
-  /* затемнение */
-  /* активация слоя затемнения и модального блока */
-  /* элементы модального окна */
-}
-.modal h4 {
-  color: #555;
-  font-size: 1.25em;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0;
-}
-.modal .btn-close {
-  color: #cccccc;
-  cursor: pointer;
-  font-size: 1.875em;
-  text-decoration: none;
-  position: absolute;
-  right: 0.312em;
-  top: 0;
-}
-.modal .btn-close:hover {
-  color: red;
-}
-.modal .modal-wrap:before {
-  content: "";
-  display: none;
-  background: rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 101;
-}
-.modal .modal-overlay {
-  bottom: 0;
-  display: none;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 102;
-}
-.modal .modal-open:checked ~ .modal-wrap:before,
-.modal .modal-open:checked ~ .modal-wrap .modal-overlay {
-  display: block;
-}
-.modal .modal-open:checked ~ .modal-wrap .modal-dialog {
-  transform: translate(-50%, 0);
-  top: 20%;
-}
-.modal .modal-dialog {
-  background: #ecf0f1;
-  border: none;
-  position: fixed;
-  padding: 1.375em;
-  width: 80%;
-  max-width: 60em;
-  left: 50%;
-  top: -100%;
-  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
-  transform: translate(-50%, -500%);
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  -moz-transition: -moz-transform 0.4s ease-out;
-  -o-transition: -o-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
-  z-index: 103;
-}
-.modal .modal-body {
-  padding: 1.25em;
-}
-.modal .modal-body p {
-  margin: 0;
-}
-.modal .modal-header,
-.modal .modal-footer {
-  padding: 1.25em 1.25em;
-}
-.modal .modal-header {
-  border-bottom: 1px solid #cccccc;
-}
-.modal .modal-header h2 {
-  font-size: 1.25em;
-  margin: 0;
-}
-.modal .modal-footer {
-  border-top: 1px solid #cccccc;
-}
-.modal .modal-footer label {
-  width: 100%;
-  background: #3c6eaa;
-  color: #ecf0f1;
 }
 /*------------------------------------------------------------------форма внутри модального окна */
 .modal-form .information {
