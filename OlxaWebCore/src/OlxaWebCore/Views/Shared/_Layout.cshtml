@@ -1,205 +1,21 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - OlxaWebCore</title>
-    <environment names="Development">
-        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
-        <link rel="stylesheet" href="~/css/styles.css" />        
+﻿@{
+    Layout = "_LayoutLibrary";
+}
 
-    </environment>
-
-    <environment names="Staging,Production">
-        <!--подключить минимизированные стили,перед запуском-->
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
-    @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
-
-</head>
-<body>
     <div class="wrapper">
-        <header>
-            <div class="@(ViewBag.IndexNavigation==true ? "" : "header")">
-
-                <div class="nav-toggle"><span></span></div> <!--для мобильных-->
-                @*<div class="toolbar container">
-                            <a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>
-                            <a asp-action="Login" asp-controller="Account"class="btn">Вход</a>
-                    </div>*@
-
-            </div>
-
-            <div class="@(ViewBag.IndexNavigation==true ? "index-navigation" : "navigation")">
-                <nav id="index-navigation" class="container" role="navigation">
-                    <div class="logo">
-                        <a asp-controller="Home" asp-action="Index"><img src="~/images/2017-06-05_22-10-40.png" width="100" height="30"></a>
-                    </div>
-                    <a href="#" class="menu-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>
-                    <ul class="main-menu">
-                        <li class="main-menu__item"><a asp-area="" asp-controller="Portfolio" asp-action="All" class="link">Портфолио</a></li>
-                        <li class="main-menu__item">
-                            <a asp-area="" asp-controller="Home" asp-action="Price" class="link">Создать Сайт</a>
-                            <ul class="submenu">
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Landing">Лендинг</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
-                            </ul>
-                            @*<div class="content">
-                                    <img src="~/images/landing/post_prev_01.jpg" alt="" />
-                                </div>*@
-                        </li>
-                        <li class="main-menu__item"><a asp-controller="Service" asp-action="AllService" class="link">Услуги / Цены</a></li>
-                        <li class="main-menu__item">
-                            <a asp-area="" asp-controller="Home" asp-action="About" class="link">О нас</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            @*<div class="container">
-                    <div class="inner">
-                        <div class="title">
-                            <h1>Сайт визитка</h1>
-                        </div>
-                        <div class="breadcrumbs">
-                            <a href="#">Цены</a> <span class="delimiter"><i class="fa fa-arrow-right"></i></span> <span>Сайт-визитка</span>
-                        </div>
-                    </div>
-                </div>*@
-        </header>
+        @Html.Partial("_HeaderPartialView")
 
         <main>
             @RenderBody()
         </main>
 
-        <footer>
-            <div class="bottom-footer">
-                <div class="container">
-                    <div class="footer-info">
-                        <div class="info-item">
-                            <img src="~/images/2017-06-05_22-10-40.png" width="100" height="30">
-                            <p>
-                                Мы занимаемся созданием веб сайтов на Asp .NET фреймворке.
-
-                            </p>
-                        </div>
-                        <div class="info-item">
-                            <h3> О Нас </h3>
-                            <ul>
-
-                                @*<li><a href="#">Помощь</a></li>*@
-
-                                <li><a>Как мы работаем</a></li>
-                                <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
-                                <li><a asp-controller="Service" asp-action="AllService">Услуги и цены</a></li>
-                                <li><a asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
-                                <li><a asp-controller="Portfolio" asp-action="All">Портфолио</a></li>
-                                @*<li><a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>                                </li>
-                                    <li><a asp-action="Login" asp-controller="Account">Вход</a></li>*@
-                            </ul>
-                        </div>
-                        <div class="info-item">
-                            <h3>Создание сайтов</h3>
-                            <ul>
-                                <li><a asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
-                                <li><a asp-controller="Web_sites" asp-action="Landing">Landing Page</a></li>
-                                <li><a asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
-                                <li><a asp-controller="Web_sites" asp-action="Shop">Интернет-магазин</a></li>
-                                <li><a asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
-                            </ul>
-                        </div>
-                        <div class="info-item">
-                            <h3>Эксклюзивные сайты</h3>
-                            <ul>
-                                @*<li><a asp-area="" asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
-                                    <li><a href="#">Помощь</a></li>
-                                    <li><a href="#">Связь с нами</a></li>
-                                    <li><a href="#">Оплата</a></li>*@
-                                <li><a asp-controller="Web_sites" asp-action="Develop">Разработка сайта</a></li>
-                            </ul>
-                            <h3>Мы в соцсетях</h3>
-                            <div class="info-social">
-                                <a href="#" class="fb">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" class="vk">
-                                    <i class="fa fa-vk" aria-hidden="true"></i>
-                                </a>
-                                <a href="#" class="skype">
-                                    <i class="fa fa-skype" aria-hidden="true"></i>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div> <!--footer-info-->
-                    <div class="copyright">
-                        <div class="copy">
-                            <p>
-                                <a asp-action="OrderList" asp-controller="Order">OlxaWeb</a> 2016-2017
-                            </p>
-                        </div>
-                    </div>
-                </div> <!--container-->
-            </div> <!--bottom-footer-->
-        </footer>
+        @Html.Partial("_FooterPartialView")
 
         <div id="toTop">
             <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
         </div>
     </div> <!--wrapper-->
 
-    <environment names="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
-       
-        @*основной файл скриптов*@
-        <script src="~/js/scripts.js" asp-append-version="true"></script>
-
-
-
-        @*CDN.нет файла на сервере -фильтр в портфолио*@
-        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-        @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
-    </environment>
-    <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-
-        @*<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
-                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-            </script>*@
-
-        <script src="~/js/scripts.js" asp-append-version="true"></script>
-    </environment>
-
     @RenderSection("scripts", required: false)
-    <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
-
-    @*@await Html.PartialAsync("_LoginPartial")>*@
 
 
-    <script>
-        $(function () {                             // когда страница загружена
-            $('.main-menu li a').each(function () {      // проходим по нужным нам ссылками
-                var location = window.location.href // переменная с адресом страницы
-                var link = this.href                // переменная с url ссылки
-                var result = location.match(link);  // результат возвращает объект если совпадение найдено и null при обратном
-
-                if (result != null) {                // если НЕ равно null
-                    $(this).addClass('active');    // добавляем класс
-                }
-            });
-        });
-    </script>
-
-</body>
-
-</html>
