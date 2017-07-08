@@ -142,37 +142,7 @@
         <div class="tabs_content">
 
             <div id="tab__c1">
-                <div class="wrap-info">
-                    <div class="info-inner">
-                        <div class="info-item-price">
-                            <h2>Цена</h2>
-                            <p>от 250 000р</p>
-                        </div>
-                        <div class="info-item-time">
-                            <h2>Срок</h2>
-                            <p>от 2 месяев</p>
-                        </div>
-                        <div class="info-buttons-group">
-                            <div class="info-demo">
-                                <div class="demo-title">
-                                    <h2>Д</h2>
-                                    <h2>е</h2>
-                                    <h2>м</h2>
-                                    <h2>о</h2>
-                                </div>
-
-                                <div class="demo-btn-wrap">
-                                    <a href="#" class="demo">сайт</a>
-                                    <a href="#" class="demo">админка</a>
-                                </div>
-                            </div>
-
-                            <div class="info-button-bay">
-                                <a href="#" class="bay">Закзать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @await Component.InvokeAsync("PriceTimeDemo")
                 <div class="shop-description">
                     <div class="contains">
                         <h3>В стоимость входит</h3>

@@ -36,6 +36,12 @@ namespace OlxaWebCore.Models.Repository
                     dbEntry.Published = service.Published;
                     dbEntry.Category = service.Category;
                     dbEntry.Price = service.Price;
+                    dbEntry.DemoAdmin = service.DemoAdmin;
+                    dbEntry.DemoSite = service.DemoSite;
+                    dbEntry.PriceForClient = service.PriceForClient;
+                    dbEntry.SortingWeight = service.SortingWeight;
+                    dbEntry.TimeDevelopForClient = service.TimeDevelopForClient;
+                    
                 }
             }
             context.SaveChanges();

@@ -16,6 +16,15 @@ namespace OlxaWebCore.Models.DataModels
 
         public virtual decimal Price { get; set; }
 
+        //строка с диапозоном цены для клиента
+        public virtual string PriceForClient { get; set; }
+        //время разработки.строка для клиентов
+        public virtual string TimeDevelopForClient { get; set; }
+        //
+        public virtual string DemoSite { get; set; }
+        //
+        public virtual string DemoAdmin { get; set; }
+
         public virtual bool Published { get; set; }
 
         public virtual string Category { get; set; }

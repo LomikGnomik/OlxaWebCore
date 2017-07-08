@@ -1,0 +1,33 @@
+﻿@model Service
+
+<div class="wrap-info">
+    <div class="info-inner">
+        <div class="info-item-price">
+            <h2>Цена</h2>
+            <p>@Model.Price</p>
+        </div>
+        <div class="info-item-time">
+            <h2>Срок</h2>
+            <p>@Model.TimeDevelopForClient</p>
+        </div>
+        <div class="info-buttons-group">
+            <div class="info-demo">
+                <div class="demo-title">
+                    <h2>Д</h2>
+                    <h2>е</h2>
+                    <h2>м</h2>
+                    <h2>о</h2>
+                </div>
+
+                <div class="demo-btn-wrap">
+                    <a href="@Model.DemoSite" class="demo">сайт</a>
+                    <a href="@Model.DemoAdmin" class="demo">админка</a>
+                </div>
+            </div>
+
+            <div class="info-button-bay">
+                <a href="#" class="bay">Закзать</a>
+            </div>
+        </div>
+    </div>
+</div>
