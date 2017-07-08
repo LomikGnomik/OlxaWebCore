@@ -1,0 +1,50 @@
+﻿<header>
+    <div class="@(ViewBag.IndexNavigation==true ? "" : "header")">
+
+        <div class="nav-toggle"><span></span></div> <!--для мобильных-->
+        @*<div class="toolbar container">
+                    <a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>
+                    <a asp-action="Login" asp-controller="Account"class="btn">Вход</a>
+            </div>*@
+
+    </div>
+
+    <div class="@(ViewBag.IndexNavigation==true ? "index-navigation" : "navigation")">
+        <nav id="index-navigation" class="container" role="navigation">
+            <div class="logo">
+                <a asp-controller="Home" asp-action="Index"><img src="~/images/2017-06-05_22-10-40.png" width="100" height="30"></a>
+            </div>
+            <a href="#" class="menu-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>
+            <ul class="main-menu">
+                <li class="main-menu__item"><a asp-area="" asp-controller="Portfolio" asp-action="All" class="link">Портфолио</a></li>
+                <li class="main-menu__item">
+                    <a asp-area="" asp-controller="Home" asp-action="Price" class="link">Создать Сайт</a>
+                    <ul class="submenu">
+                        <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
+                        <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Landing">Лендинг</a></li>
+                        <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
+                        <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
+                        <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
+                    </ul>
+                    @*<div class="content">
+                            <img src="~/images/landing/post_prev_01.jpg" alt="" />
+                        </div>*@
+                </li>
+                <li class="main-menu__item"><a asp-controller="Service" asp-action="AllService" class="link">Услуги / Цены</a></li>
+                <li class="main-menu__item">
+                    <a asp-area="" asp-controller="Home" asp-action="About" class="link">О нас</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    @*<div class="container">
+            <div class="inner">
+                <div class="title">
+                    <h1>Сайт визитка</h1>
+                </div>
+                <div class="breadcrumbs">
+                    <a href="#">Цены</a> <span class="delimiter"><i class="fa fa-arrow-right"></i></span> <span>Сайт-визитка</span>
+                </div>
+            </div>
+        </div>*@
+</header>

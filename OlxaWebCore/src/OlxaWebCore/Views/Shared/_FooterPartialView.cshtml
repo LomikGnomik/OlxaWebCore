@@ -1,0 +1,70 @@
+﻿<footer>
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="footer-info">
+                <div class="info-item">
+                    <img src="~/images/2017-06-05_22-10-40.png" width="100" height="30">
+                    <p>
+                        Мы занимаемся созданием веб сайтов на Asp .NET фреймворке.
+
+                    </p>
+                </div>
+                <div class="info-item">
+                    <h3> О Нас </h3>
+                    <ul>
+
+                        @*<li><a href="#">Помощь</a></li>*@
+
+                        <li><a>Как мы работаем</a></li>
+                        <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                        <li><a asp-controller="Service" asp-action="AllService">Услуги и цены</a></li>
+                        <li><a asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
+                        <li><a asp-controller="Portfolio" asp-action="All">Портфолио</a></li>
+                        @*<li><a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>                                </li>
+                            <li><a asp-action="Login" asp-controller="Account">Вход</a></li>*@
+                    </ul>
+                </div>
+                <div class="info-item">
+                    <h3>Создание сайтов</h3>
+                    <ul>
+                        <li><a asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
+                        <li><a asp-controller="Web_sites" asp-action="Landing">Landing Page</a></li>
+                        <li><a asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
+                        <li><a asp-controller="Web_sites" asp-action="Shop">Интернет-магазин</a></li>
+                        <li><a asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
+                    </ul>
+                </div>
+                <div class="info-item">
+                    <h3>Эксклюзивные сайты</h3>
+                    <ul>
+                        @*<li><a asp-area="" asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
+                            <li><a href="#">Помощь</a></li>
+                            <li><a href="#">Связь с нами</a></li>
+                            <li><a href="#">Оплата</a></li>*@
+                        <li><a asp-controller="Web_sites" asp-action="Develop">Разработка сайта</a></li>
+                    </ul>
+                    <h3>Мы в соцсетях</h3>
+                    <div class="info-social">
+                        <a href="#" class="fb">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="vk">
+                            <i class="fa fa-vk" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="skype">
+                            <i class="fa fa-skype" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div> <!--footer-info-->
+            <div class="copyright">
+                <div class="copy">
+                    <p>
+                        <a asp-action="OrderList" asp-controller="Order">OlxaWeb</a> 2016-2017
+                    </p>
+                </div>
+            </div>
+        </div> <!--container-->
+    </div> <!--bottom-footer-->
+</footer>
