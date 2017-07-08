@@ -246,6 +246,14 @@ button[type="submit"]:disabled {
   text-decoration: none;
   margin-left: 1em;
 }
+.wrapper .index-navigation {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background: #fff;
+  z-index: 1000;
+  transition: all 20ms linear;
+}
 .wrapper .navigation {
   width: 100%;
   background: #fff;
@@ -258,28 +266,28 @@ button[type="submit"]:disabled {
             display:none;
         }*/
 }
-.wrapper .navigation nav {
+.wrapper nav#index-navigation {
   display: flex;
   justify-content: space-between;
 }
-.wrapper .navigation nav .main-menu {
+.wrapper nav#index-navigation .main-menu {
   display: flex;
   list-style: none;
   margin-top: 1em;
 }
-.wrapper .navigation nav .main-menu li:hover > a.link {
+.wrapper nav#index-navigation .main-menu li:hover > a.link {
   /*при выделении подменю сохраняется стиль*/
   border-top: 2px solid #3c6eaa;
   border-bottom: 2px solid #3c6eaa;
   padding: 3px 0;
 }
-.wrapper .navigation nav .main-menu .main-menu__item {
+.wrapper nav#index-navigation .main-menu .main-menu__item {
   position: relative;
   text-align: center;
   flex: auto;
   transition: all 0.3s;
 }
-.wrapper .navigation nav .main-menu .main-menu__item:hover > .submenu {
+.wrapper nav#index-navigation .main-menu .main-menu__item:hover > .submenu {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
@@ -287,14 +295,14 @@ button[type="submit"]:disabled {
   display: block;
   width: 15em;
 }
-.wrapper .navigation nav .main-menu .main-menu__item a {
+.wrapper nav#index-navigation .main-menu .main-menu__item a {
   color: #333333;
 }
-.wrapper .navigation nav .main-menu .main-menu__item a.active {
+.wrapper nav#index-navigation .main-menu .main-menu__item a.active {
   background-color: #06c438;
   color: #ecf0f1;
 }
-.wrapper .navigation nav .main-menu .main-menu__item a.active::after {
+.wrapper nav#index-navigation .main-menu .main-menu__item a.active::after {
   /*position: absolute;
                             display: block;
                             content: "";
@@ -307,7 +315,7 @@ button[type="submit"]:disabled {
                             bottom: -6px;
                             margin-left: -6px;*/
 }
-.wrapper .navigation nav .main-menu .main-menu__item a.link {
+.wrapper nav#index-navigation .main-menu .main-menu__item a.link {
   /*text-decoration: none;
                         line-height: 2;
                         padding: 1em;
@@ -325,18 +333,18 @@ button[type="submit"]:disabled {
   padding: 10px 0;
   margin: 0 20px;
 }
-.wrapper .navigation nav .main-menu .main-menu__item a.link:hover {
+.wrapper nav#index-navigation .main-menu .main-menu__item a.link:hover {
   /*background-color: @color-base;
                             color: @font-color-reverce;*/
   border-top: 2px solid #3c6eaa;
   border-bottom: 2px solid #3c6eaa;
   padding: 3px 0;
 }
-.wrapper .navigation nav .main-menu .main-menu__item a.link.active:focus {
+.wrapper nav#index-navigation .main-menu .main-menu__item a.link.active:focus {
   background-color: #3c6eaa;
   color: #333333;
 }
-.wrapper .navigation nav .submenu {
+.wrapper nav#index-navigation .submenu {
   display: flex;
   flex-direction: column;
   margin-top: 0;
@@ -353,13 +361,13 @@ button[type="submit"]:disabled {
   opacity: 0;
   z-index: -1;
 }
-.wrapper .navigation nav .submenu .submenu__item {
+.wrapper nav#index-navigation .submenu .submenu__item {
   position: relative;
   text-align: center;
   flex: auto;
   transition: all 0.3s;
 }
-.wrapper .navigation nav .submenu .submenu__item a {
+.wrapper nav#index-navigation .submenu .submenu__item a {
   min-width: 85%;
   padding: 0 11px;
   white-space: nowrap;
@@ -376,7 +384,7 @@ button[type="submit"]:disabled {
   font-weight: 500;
   border: 2px solid #06c438;
 }
-.wrapper .navigation nav .submenu .submenu__item a:hover {
+.wrapper nav#index-navigation .submenu .submenu__item a:hover {
   background: #06c438;
   color: #ecf0f1;
 }
@@ -459,60 +467,6 @@ footer {
   flex: 0 0 auto;
   padding-bottom: 2em;
   padding-top: 2.5em;
-}
-footer .top-footer {
-  width: 100%;
-  border-bottom: 1px solid #cccccc;
-  border-top: 1px solid #cccccc;
-}
-footer .top-footer .tools {
-  display: flex;
-  justify-content: space-between;
-}
-footer .top-footer .tools .tools-item {
-  padding: 1em 0;
-}
-footer .top-footer .tools form {
-  position: relative;
-  border: none;
-}
-footer .top-footer .tools form input[type=email] {
-  height: 100%;
-  background: rgba(0, 38, 255, 0.1);
-  padding-left: 15px;
-  border: none;
-}
-footer .top-footer .tools form input[type=email]:focus {
-  outline: none;
-  /*убираем подсветку при фокусе*/
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-footer .top-footer .tools form input[type=email]::-webkit-input-placeholder {
-  font-style: italic;
-}
-footer .top-footer .tools form input[type=email]:-ms-input-placeholder {
-  font-style: italic;
-}
-footer .top-footer .tools form input[type=email]:-moz-placeholder {
-  font-style: italic;
-}
-footer .top-footer .tools form button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3em;
-  height: 100%;
-  background: #3c6eaa;
-  cursor: pointer;
-  border: none;
-}
-footer .top-footer .tools form button::before {
-  content: "\f105";
-  font-family: FontAwesome;
-  color: #ecf0f1;
-  font-size: 20px;
-  font-weight: bold;
 }
 footer .bottom-footer:after {
   clear: both;
@@ -714,83 +668,6 @@ section.content p {
   margin-bottom: 1em;
   line-height: 1.5em;
   text-align: justify;
-}
-section.promo-site-slider .slider {
-  margin: 0 auto;
-  width: 100%;
-}
-section.promo-site-slider .slider .slide_viewer {
-  height: 30em;
-  overflow: hidden;
-  position: relative;
-}
-section.promo-site-slider .slider .slide_group {
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-section.promo-site-slider .slider .slide {
-  display: none;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-section.promo-site-slider .slider .slide:first-child {
-  display: block;
-}
-section.promo-site-slider .slide_buttons {
-  left: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-}
-section.promo-site-slider a.slide_btn {
-  color: #999999;
-  font-size: 2.6em;
-  margin: 0 0.175em;
-  transition: all 0.4s ease-in-out;
-}
-section.promo-site-slider .slide_btn.active,
-section.promo-site-slider .slide_btn:hover {
-  color: #3c6eaa;
-  cursor: pointer;
-}
-section.promo-site-slider .directional_nav {
-  margin: 0 auto;
-  max-width: 59em;
-  position: relative;
-  top: -15em;
-}
-section.promo-site-slider .directional_nav .previous_btn {
-  bottom: 0;
-  left: -4em;
-  margin: auto;
-  position: absolute;
-  top: 0;
-}
-section.promo-site-slider .directional_nav .next_btn {
-  bottom: 0;
-  margin: auto;
-  position: absolute;
-  right: -5em;
-  top: 0;
-}
-section.promo-site-slider .directional_nav .previous_btn,
-section.promo-site-slider .directional_nav .next_btn {
-  cursor: pointer;
-  height: 65px;
-  opacity: 0.5;
-  transition: opacity 0.4s ease-in-out;
-  width: 65px;
-}
-section.promo-site-slider .directional_nav .previous_btn i,
-section.promo-site-slider .directional_nav .next_btn i {
-  font-size: 4em;
-  color: #fff;
-}
-section.promo-site-slider .previous_btn:hover,
-section.promo-site-slider .next_btn:hover {
-  opacity: 1;
 }
 section.tariff {
   margin-top: 4em;
@@ -1568,6 +1445,9 @@ section.tariff .promo-wrapper ul li:last-child {
     z-index: 2;
   }
 }
+.shop-wrap .shop-tabs {
+  margin-top: 3em;
+}
 .shop-wrap .wrapper-shop {
   margin-top: 3em;
   margin-bottom: 3em;
@@ -1618,108 +1498,104 @@ section.tariff .promo-wrapper ul li:last-child {
                     }
                 }*/
 }
-.shop-wrap .wrap-info {
-  border: 1px solid gray;
+/*----------------------------------------------------полоса информации в табах*/
+.wrap-info {
+  background: #000;
+  margin-top: 2em;
   width: 100%;
 }
-.shop-wrap .wrap-info .info-inner {
+.wrap-info .info-inner {
   display: flex;
   justify-content: space-between;
 }
-.shop-wrap .wrap-info .info-inner [class*=info-item-] {
+.wrap-info .info-inner [class*=info-item-] {
   margin: 0 1em;
   padding: 1em;
 }
-.shop-wrap .wrap-info .info-inner [class*=info-item-] h2 {
+.wrap-info .info-inner [class*=info-item-] h2 {
   font-weight: 600;
   font-size: 0.8em;
+  color: #fff;
+  margin-bottom: 1em;
 }
-.shop-wrap .wrap-info .info-inner [class*=info-item-] p {
-  color: gray;
-  font-size: 1.3em;
+.wrap-info .info-inner [class*=info-item-] p {
+  color: #cccccc;
+  font-weight: 500;
 }
-.shop-wrap .wrap-info .info-inner .info-buttons-group {
-  display: flex;
-}
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo {
-  display: flex;
-}
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-title {
-  display: flex;
-  flex-direction: column;
-  margin-right: 1em;
-  padding: 0.5em;
-}
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-title h2 {
-  font-weight: 600;
+.wrap-info .info-inner [class*=info-item-] p a {
+  color: #cccccc;
   font-size: 1em;
+  cursor: pointer;
+  text-decoration: underline;
 }
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-btn-wrap {
+.wrap-info .info-inner [class*=info-item-] p a:hover {
+  color: #06c438;
+}
+.wrap-info .info-inner [class*=info-item-] p span {
+  color: #06c438;
+}
+.wrap-info .info-inner .info-button-bay .bay {
   display: flex;
-  flex-direction: column;
-}
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-btn-wrap .demo {
-  width: 7em;
-  height: 50%;
-  margin: 0;
-  line-height: 2em;
-  background: #3c6eaa;
-  display: inline-block;
-  color: #ecf0f1;
-  text-align: center;
-  vertical-align: central;
-  padding: 0 1.56em;
-  touch-action: manipulation;
-  cursor: pointer;
-  white-space: nowrap;
-  user-select: none;
-  transition: color 0.3s ease-out, background-color 0.3s ease-out;
-}
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-demo .demo-btn-wrap .demo:hover {
-  background: #2f5d84;
-}
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-button-bay .bay {
-  height: 100%;
-  margin: 0;
+  align-items: center;
   margin-right: -2px;
+  outline: none;
+  border: 1px solid #b1b1b1;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  color: #ffffff;
+  z-index: 0;
+  border-radius: 0px;
+  border-width: 0;
   background: #06c438;
-  display: inline-block;
-  color: #ecf0f1;
-  text-align: center;
-  line-height: 4.5em;
-  vertical-align: central;
-  padding: 0 1.56em;
-  touch-action: manipulation;
-  cursor: pointer;
-  white-space: nowrap;
+  font-size: 1.375em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  position: relative;
+  vertical-align: top;
   user-select: none;
-  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  /*height: 100%;
+                    margin: 0;
+                    margin-right: -2px;                  
+                    margin-bottom:-2px;                   
+                    background: @color-more;
+                    display: inline-block;
+                    color: @font-color-reverce;
+                    text-align: center;
+                    line-height: 4.5em;
+                    vertical-align: central;
+                    padding: 0 1.56em;
+                    touch-action: manipulation;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    user-select: none;
+                    transition: color 0.3s ease-out, background-color 0.3s ease-out;*/
 }
-.shop-wrap .wrap-info .info-inner .info-buttons-group .info-button-bay .bay:hover {
+.wrap-info .info-inner .info-button-bay .bay:hover {
   background: #04931e;
 }
-.shop-wrap .shop-description {
+.shop-description {
   margin-top: 3em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.shop-wrap .shop-description h3 {
+.shop-description h3 {
   padding: 1em 0 1em 1.5em;
 }
-.shop-wrap .shop-description .contains {
-  border: 1px solid #000000;
+.shop-description .contains {
   width: 50%;
   height: 15em;
 }
-.shop-wrap .shop-description .extra {
+.shop-description .extra {
   background: #000000;
   color: #ecf0f1;
   position: relative;
   width: 50%;
   height: 15em;
 }
-.shop-wrap .shop-description .extra:after {
+.shop-description .extra:after {
   content: '';
   position: absolute;
   left: -12.5em;
@@ -2418,7 +2294,7 @@ section.price-solution .solution-row .solution-item-question .btn {
 }
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
 .index-wrap section.heading {
-  margin-top: 3em;
+  padding-top: 6em;
   /*background-size: cover;
     text-align: center;
     padding: 0em;
@@ -2965,15 +2841,14 @@ section.price-solution .solution-row .solution-item-question .btn {
 .index-wrap section.about {
   width: 100%;
   padding-bottom: 20%;
-  background-image: linear-gradient(#8b9da9, #fff6e4);
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(#8b9da9, #fff6e4, #ffffff);
 }
 .index-wrap section.about .about__wrap {
   width: 100%;
   margin: auto;
 }
 .index-wrap section.about h2 {
-  padding-top: 10%;
+  padding-top: 3em;
   padding-bottom: 2em;
   text-align: center;
   text-transform: uppercase;
@@ -2981,21 +2856,16 @@ section.price-solution .solution-row .solution-item-question .btn {
 .index-wrap section.about .about__row {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 15%;
 }
 .index-wrap section.about .about__row .about__col {
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2em 1.2em;
 }
-.index-wrap section.about .about__row .about__col .about__col__item {
-  text-align: center;
-  margin: 1.5em;
-}
 .index-wrap section.about .about__row .about__col .about__col__item h3 {
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 .index-wrap section.portfolio-index {
   background: linear-gradient(to left, #333333 0, #ecf0f1 50%, #999999 100%);
@@ -4538,7 +4408,6 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
-  background: #000000;
   border-bottom: 1px solid #06c438;
 }
 .example-sites-content h2.title-section {
@@ -4694,6 +4563,7 @@ section.develop .step-develop-wrap #tabs-3 {
   align-items: center;
 }
 .steps-wrap h2 {
+  text-transform: uppercase;
   text-align: center;
   margin-bottom: 2em;
 }
@@ -5045,7 +4915,6 @@ section.tabs-all .tabs_content > div {
 section.tabs-all #tab__1:checked ~ .tabs_content #tab__c1,
 section.tabs-all #tab__2:checked ~ .tabs_content #tab__c2,
 section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
-  padding-top: 2em;
   position: static;
   left: 0;
   opacity: 1;
@@ -5932,12 +5801,21 @@ table.table-admin .edit::after {
   justify-content: space-between;
 }
 .service-form .service-wrap .title,
-.service-form .service-wrap .category {
+.service-form .service-wrap .category,
+.service-form .service-wrap .price,
+.service-form .service-wrap .demo-site,
+.service-form .service-wrap .demo-admin,
+.service-form .service-wrap .time-develop {
   margin-right: 1em;
 }
 .service-form .service-wrap .title,
 .service-form .service-wrap .category,
-.service-form .service-wrap .price {
+.service-form .service-wrap .price,
+.service-form .service-wrap .price-client,
+.service-form .service-wrap .demo-site,
+.service-form .service-wrap .demo-admin,
+.service-form .service-wrap .time-develop,
+.service-form .service-wrap .sorting {
   width: 100%;
 }
 .service-form .published {

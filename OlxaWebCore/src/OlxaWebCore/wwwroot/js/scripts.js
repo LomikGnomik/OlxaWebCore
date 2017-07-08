@@ -113,96 +113,6 @@ $(window).resize(function () {
     });
 
 })();
-/*------------------слайдер для промо-сайта--------------------*/
-$('.slider').each(function () {
-    var $this = $(this);
-    var $group = $this.find('.slide_group');
-    var $slides = $this.find('.slide');
-    var bulletArray = [];
-    var currentIndex = 0;
-    var timeout;
-
-    function move(newIndex) {
-        var animateLeft, slideLeft;
-
-        advance();
-
-        if ($group.is(':animated') || currentIndex === newIndex) {
-            return;
-        }
-
-        bulletArray[currentIndex].removeClass('active');
-        bulletArray[newIndex].addClass('active');
-
-        if (newIndex > currentIndex) {
-            slideLeft = '100%';
-            animateLeft = '-100%';
-        } else {
-            slideLeft = '-100%';
-            animateLeft = '100%';
-        }
-
-        $slides.eq(newIndex).css({
-            display: 'block',
-            left: slideLeft
-        });
-        $group.animate({
-            left: animateLeft
-        }, function () {
-            $slides.eq(currentIndex).css({
-                display: 'none'
-            });
-            $slides.eq(newIndex).css({
-                left: 0
-            });
-            $group.css({
-                left: 0
-            });
-            currentIndex = newIndex;
-        });
-    }
-
-    function advance() {
-        clearTimeout(timeout);
-        timeout = setTimeout(function () {
-            if (currentIndex < ($slides.length - 1)) {
-                move(currentIndex + 1);
-            } else {
-                move(0);
-            }
-        }, 4000);
-    }
-
-    $('.next_btn').on('click', function () {
-        if (currentIndex < ($slides.length - 1)) {
-            move(currentIndex + 1);
-        } else {
-            move(0);
-        }
-    });
-
-    $('.previous_btn').on('click', function () {
-        if (currentIndex !== 0) {
-            move(currentIndex - 1);
-        } else {
-            move(3);
-        }
-    });
-
-    $.each($slides, function (index) {
-        var $button = $('<a class="slide_btn">&bull;</a>');
-
-        if (index === currentIndex) {
-            $button.addClass('active');
-        }
-        $button.on('click', function () {
-            move(index);
-        }).appendTo('.slide_buttons');
-        bulletArray.push($button);
-    });
-
-    advance();
-});
 
 
 /*-----------------------фильтр в портфолио-----------------------------------------*/
@@ -217,54 +127,6 @@ if ($('.filter-grid').length > 0) {
         $filterGrid.isotope({ filter: $filterValue });
     });
 }
-
-/*--------------------Галерея на главной странице------------------------------*/
-$('.portfolio').each(function (index) {
-    $(this).attr('id', 'img' + (index + 1));
-});
-
-$('.portfolio').each(function () {
-    $('#navi').append('<div class="circle"></div>');
-});
-
-$('.circle').each(function (index) {
-    $(this).attr('id', 'circle' + (index + 1));
-});
-
-$('.portfolio').click(function () {
-    if ($(this).hasClass('opened')) {
-        $(this).removeClass('opened');
-        $(".portfolio").fadeIn("fast");
-        $(this).find('.ombra').fadeOut();
-        $("#navi div").removeClass("activenav");
-    }
-    else {
-        var indexi = $("#maincontent .portfolio").index(this) + 1;
-        $(this).addClass('opened');
-        $(".portfolio").not(this).fadeOut("fast");
-        $(this).find('.ombra').fadeIn();
-        $("#circle" + indexi).addClass('activenav');
-    }
-});
-
-//navi buttons
-$("#navi div").click(function () {
-    if ($(this).hasClass("activenav")) {
-        return false;
-    }
-
-    $("#navi div").removeClass("activenav");
-    $(".portfolio").removeClass('opened');
-    $(".portfolio").show();
-    $('.ombra').hide();
-
-    var index = $("#navi div").index(this) + 1;
-    $("#img" + index).addClass('opened');
-    $(".portfolio").not("#img" + index).fadeOut("fast");
-    $("#img" + index).find('.ombra').fadeIn();
-
-    $(this).addClass("activenav");
-});
 
 /*-------------------этапы/шаги разработки/страница разработки-----------------------*/
 $(function () {
@@ -295,21 +157,6 @@ $(document).ready(function () {
         })
     });
 })
-/*--------------------прокрутка от сексии к секции------------*/
-//$(document).ready(function() {  
-
-//    $(".landing-wrapper").onepage_scroll({
-//        sectionContainer: "section",
-//        easing: "ease",
-//        animationTime: 1000,
-//        pagination: true,
-//        updateURL: false,
-//        loop: false,
-//        keyboard: true,
-//        responsiveFallback: false,
-//        direction: "vertical"
-//    });
-//});
 
 
 /*---------------------интернет магазин эффект*/
@@ -340,3 +187,4 @@ $('.idpTile').hover(function () {
 $('.parentalTile').hover(function () {
     $('.parentalFeature').toggleClass('active');
 });
+

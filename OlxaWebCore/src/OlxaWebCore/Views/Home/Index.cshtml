@@ -1,10 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "OlxaWeb-делаем сайты";
+    ViewData["Title"] = "OlxaWeb-делаем сайты";    
 }
+<link href="~/lib/fullpage.js/jquery.fullPage.css" type="text/css" rel="stylesheet" />
+@section scripts{
+    @*скрипты для прокрутки по секциям*@
+    <script src="~/lib/fullpage.js/vendors/jquery.easings.min.js"></script>
+    <script src="~/lib/fullpage.js/vendors/scrolloverflow.min.js"></script>
+    <script src="~/lib/fullpage.js/jquery.fullPage.js"></script>
+    <script>
+            $(document).ready(function () {
+                $('#fullpage').fullpage();
+            });
+    </script>
+    <script src="~/js/PortfolioIndex.js"></script>
+}
+<div class="index-wrap" id="fullpage">
 
-<div class="index-wrap">
-
-    <section class="heading">
+    <section class="heading section">
         <div class="wrap-title">
             <a href="#" class="title">ОЛЬХА</a>
         </div>
@@ -25,7 +37,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about section">
         <div class="about__wrap">
             <h2>Сайты которые мы делаем</h2>
             <div class="container">
@@ -67,19 +79,43 @@
         </div>
 
     </section>
-    <section class="portfolio-index">
+    <section class="steps-divelopment section">
+        <section class="tabs-all shop-tabs" role="tab">
+            <input id="tab__1" type="radio" name="tabs" checked="checked" />
+            <input id="tab__2" type="radio" name="tabs" checked="checked" />
+            <input id="tab__3" type="radio" name="tabs" />
 
+            <div class="label-wrapper">
+                <label for="tab__1" id="tab__l1">Готовые решения</label>
+                <label for="tab__2" id="tab__l2">Создание сайта</label>
+                <label for="tab__3" id="tab__l3">Разработка сайта</label>
+            </div>
+
+            <div class="tabs_content">
+
+                <div id="tab__c1">
+                    @await Component.InvokeAsync("PriceTimeDemo")
+                    @*tab__c1*@
+
+                    <div id="tab__c2">
+                        @Html.Partial("_StepsCreatePartialView")
+                    </div> @*tab__c2*@
+                    <div id="tab__c3">Это про третье</div> @*tab__c3*@
+                </div>
+        </section>
+
+    </section>
+    <section class="portfolio-index section">
+        <h2>Сайты созданные OlxaWeb</h2>
         <div class="galery-wrap">
             @*<div class="small hidden">
-                @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
-            </div>*@
-            @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })            
+                    @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
+                </div>*@
+            @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
         </div>
     </section>
-    <section class="steps-divelopment">
-        @Html.Partial("_StepsCreatePartialView")
-    </section>
-    <section class="form-index">
+
+    <section class="form-index section">
         @await Component.InvokeAsync("OrderForm")
     </section>
 
