@@ -12,7 +12,7 @@ namespace OlxaWebCore.Controllers
     {
         public IActionResult Index()
         {
-
+            ViewBag.IndexNavigation = true;
 
             return View();
         }

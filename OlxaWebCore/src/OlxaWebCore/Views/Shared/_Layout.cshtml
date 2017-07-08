@@ -1,18 +1,13 @@
 ﻿<!DOCTYPE html>
-
-
-
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OlxaWebCore</title>
     <environment names="Development">
         @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
-        <link rel="stylesheet" href="~/css/styles.css" />
+        <link rel="stylesheet" href="~/css/styles.css" />        
 
-       
     </environment>
 
     <environment names="Staging,Production">
@@ -24,25 +19,22 @@
     </environment>
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
 
-
-
-
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <div class="header">
+            <div class="@(ViewBag.IndexNavigation==true ? "" : "header")">
 
                 <div class="nav-toggle"><span></span></div> <!--для мобильных-->
                 @*<div class="toolbar container">
-                        <a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>
-                        <a asp-action="Login" asp-controller="Account"class="btn">Вход</a>
+                            <a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>
+                            <a asp-action="Login" asp-controller="Account"class="btn">Вход</a>
                     </div>*@
 
             </div>
 
-            <div class="navigation">
-                <nav class="container" role="navigation">
+            <div class="@(ViewBag.IndexNavigation==true ? "index-navigation" : "navigation")">
+                <nav id="index-navigation" class="container" role="navigation">
                     <div class="logo">
                         <a asp-controller="Home" asp-action="Index"><img src="~/images/2017-06-05_22-10-40.png" width="100" height="30"></a>
                     </div>
@@ -65,11 +57,6 @@
                         <li class="main-menu__item"><a asp-controller="Service" asp-action="AllService" class="link">Услуги / Цены</a></li>
                         <li class="main-menu__item">
                             <a asp-area="" asp-controller="Home" asp-action="About" class="link">О нас</a>
-                            @*<ul class="submenu">
-                                <li class="submenu__item"><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
-                                <li class="submenu__item"><a href="#">Этапы работы/сроки</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Blog" asp-action="AllPosts" asp-route-category="">Блог</a></li>
-                            </ul>*@
                         </li>
                     </ul>
                 </nav>
@@ -85,56 +72,12 @@
                     </div>
                 </div>*@
         </header>
-        @*<div class="navbar navbar-inverse navbar-fixed-top
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">OlxaWebCore</a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                        </ul>
-                                    @await Html.PartialAsync("_LoginPartial")
 
-                    </div>
-                </div>
-            </div>*@
         <main>
             @RenderBody()
         </main>
 
         <footer>
-            @*<div class="top-footer">
-                    <div class="container">
-                        <div class="tools">
-                            <div class="tools-item">
-                                <img src="" alt="Email">
-                                <span><a href="mailto:nfo@olxaweb.ru">info@olxaweb.ru</a></span>
-                            </div>
-                            <div class="tools-item">
-                                <i><img src="" alt="Телефон"></i>
-                                <span><a href="#">555-555-55-55</a></span>
-                            </div>
-                            <div class="tools-item">
-                                <i><img src="" alt="Чат"></i>
-                                <span><a href="#">Живой чат</a></span>
-                            </div>
-                            <form action="" method="post">
-                                <label for="email"></label>
-                                <input type="email" class="form-control" id="email" placeholder="Ваш email" />
-                                <button type="submit"></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>*@ <!--top-footer-->
             <div class="bottom-footer">
                 <div class="container">
                     <div class="footer-info">
@@ -209,62 +152,19 @@
             <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
         </div>
     </div> <!--wrapper-->
-    <!-- Модальное окно -->
-    @*<div class="modal">
-            <input class="modal-open" id="modal-window" type="checkbox" hidden>
-            <div class="modal-wrap" aria-hidden="true" role="dialog">
-                <label class="modal-overlay" for="modal-window"></label>
-                <div class="modal-dialog">
-                    <div class="modal-header">
-                        <h4>Контактная информация </h4>
-                        <label class="btn-close" for="modal-window" aria-hidden="true">×</label>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post" action="" id="shop_order" class="modal-form" role="form">
-                            <section class="information">
-                                <input type="text" placeholder="Имя" />
-                                <input type="tel" placeholder="Телефон" />
-                                <input type="email" placeholder="Email" />
-                                <p>*выбирите наиболее предпочтительный вид связи</p>
-                            </section>
-                            <section class="comment">
-                                <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
-                                <div class="file">
-                                    <p>
-                                        Если у вас есть готовый бриф или ТЗ можете приложить их к письму
-                                    </p>
-
-                                    <div class="file_upload">
-                                        <button type="button">Выбрать</button>
-                                        <div>Файл не выбран</div>
-                                        <input type="file">
-                                    </div>
-                                    <div class="capcha">
-                                        тут капча
-                                    </div>
-                                </div>
-                            </section>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <label class="btn " for="modal-window">Отправить!</label>
-                    </div>
-                </div>
-            </div>
-        </div>*@
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
+       
+        @*основной файл скриптов*@
         <script src="~/js/scripts.js" asp-append-version="true"></script>
-        
-
 
 
 
         @*CDN.нет файла на сервере -фильтр в портфолио*@
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-        @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@        
+        @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
     </environment>
     <environment names="Staging,Production">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
@@ -281,17 +181,10 @@
     </environment>
 
     @RenderSection("scripts", required: false)
-
     <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
 
-    @*<script>
-            //активная ссылка
-            $(".link").click(function (e) {
-                e.preventDefault();
-                $("link").removeClass('active');
-                $(this).addClass('active');
-            })
-        </script>*@
+    @*@await Html.PartialAsync("_LoginPartial")>*@
+
 
     <script>
         $(function () {                             // когда страница загружена

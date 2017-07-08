@@ -15,7 +15,6 @@
             <input type="text" asp-for="Title">
         </div>
 
-
         <div class="category">
             <label asp-for="Category"></label>
             @*<select asp-for="Category" asp-items="ViewBag.Category"></select>*@
@@ -34,29 +33,52 @@
             <input type="text" asp-for="Price">
         </div>
 
-
-    </div>
-
-
-    <div class="description">
-        <label asp-for="Description"></label>
-        <textarea asp-for="Description"></textarea>
-    </div>
-
-    <div class="published">
-        <label asp-for="Published"></label>
-        <input type="checkbox" asp-for="Published">
-    </div>
-
-
-    <div class="option-service">
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
+        <div class="price-client">
+            <label asp-for="PriceForClient"></label>
+            <input type="text" asp-for="PriceForClient">
         </div>
-        <a asp-controller="Service" asp-action="AllServiceAdmin">Вернуться</a>
     </div>
+    <div class="service-wrap">
+
+        <div class="demo-site">
+            <label asp-for="DemoSite"></label>
+            <input type="text" asp-for="DemoSite" />
+        </div>
+        <div class="demo-admin">
+            <label asp-for="DemoAdmin"></label>
+            <input type="text" asp-for="DemoAdmin" />
+        </div>
+        <div class="time-develop">
+            <label asp-for="TimeDevelopForClient"></label>
+            <input type="text" asp-for="TimeDevelopForClient" />
+        </div>
+        <div class="sorting">
+            <label asp-for="SortingWeight"></label>
+            <input type="number" asp-for="SortingWeight" />
+        </div>
+    </div>
+
+
+        <div class="description">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description"></textarea>
+        </div>
+
+        <div class="published">
+            <label asp-for="Published"></label>
+            <input type="checkbox" asp-for="Published">
+        </div>
+    
+
+
+        <div class="option-service">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+            <a asp-controller="Service" asp-action="AllServiceAdmin">Вернуться</a>
+        </div>
 </form>
 
 
