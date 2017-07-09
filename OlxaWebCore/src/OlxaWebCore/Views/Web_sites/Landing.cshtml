@@ -3,6 +3,7 @@
     ViewBag.PortfolioExample = "Примеры Landing Page";
 }
 @section scripts{
+    <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/js/LandingScripts.js"></script>
 }
 <main class="landing-wrapper">
@@ -16,7 +17,7 @@
                         <i class="material-icons md-light md-24" id="drawerOpener"><i class="fa fa-bars" aria-hidden="true"></i></i>
                     </div>
                     <div class="content">
-                        <div class="card"></div>
+                        <div class="card">текст</div>
                         <div class="card"></div>
                         <div class="card"></div>
                     </div>
@@ -53,96 +54,299 @@
     </section>
 
     <section class="landing-privilege">
-        <div class="container">
-            <div class="privilege-wrap">
-                <h2>Преимущества Landing Page</h2>
-                <div class="privilege-row">
+        <h2>Преимущества Landing Page</h2>
+        <div class="zqWrap clearfix">
+            <ul class="zqUL ">
+                <!--first -->
+                <li class="zqLI zqLeft">
+                    <div>
+                        <!-- first icon -->
+                        <div class="zqIcon">    </div>
 
-                    <div class="privilege-inner-wrap">
-                        <div class="privilege-inner">
-                            <div class="privilege-img">
-                                <img src="~/images/landing/post_prev_01.jpg" alt="Ничего лишнего" />
-                            </div>
-                            <div class="privilege-title">
-                                <h3>Ничего лишнего</h3>
-                                <p>
-                                    Посетитель получает ЧЕТКУЮ структурированную ИНФОРМАЦИЮ, ДОСТАТОЧНУЮ для принятия решения о покупке.
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!--privilege-inner-wrap-->
+                        <h4 class="zqH">Ничего лишнего</h4>
+                        <p class="zqP">
+                            Посетитель получает ЧЕТКУЮ структурированную ИНФОРМАЦИЮ, ДОСТАТОЧНУЮ для принятия решения о покупке.
+                        </p>
+                    </div>
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>
 
-                    <div class="privilege-inner-wrap">
-                        <div class="privilege-inner">
-                            <div class="privilege-img">
-                                <img src="~/images/landing/post_prev_01.jpg" alt="Побуждает к действию" />
-                            </div>
-                            <div class="privilege-title">
-                                <h3>Побуждает к действию</h3>
-                                <p>
-                                    Структура landing page направлена на совершение посетителем ЦЕЛЕВОГО ДЕЙСТВИЯ (заказ, звонок, заявка).
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!--privilege-inner-wrap-->
-                    <div class="privilege-inner-wrap">
-                        <div class="privilege-inner">
-                            <div class="privilege-img">
-                                <img src="~/images/landing/post_prev_01.jpg" alt="Не капризный" />
-                            </div>
-                            <div class="privilege-title">
-                                <h3>Не капризный</h3>
-                                <p>
-                                    ИДЕАЛЬНЫЙ ПРОДАВЕЦ. Работает 24 часа в день, 7 дней в неделю. Без больничных и выходных. Точно по написанному скрипту продаж.
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!--privilege-row-->
-                </div> <!--privilege-inner-wrap-->
-                <div class="privilege-row">
+                <!-- second -->
+                <li class="zqLI zqRight">
+                    <div>
+                        <!-- second icon -->
+                        <div class="zqIcon">
 
-                    <div class="privilege-inner-wrap">
-                        <div class="privilege-inner">
-                            <div class="privilege-img">
-                                <img src="~/images/landing/post_prev_01.jpg" alt="Не дорогой" />
-                            </div>
-                            <div class="privilege-title">
-                                <h3>Не дорогой</h3>
-                                <p>
-                                    СТОИМОСТЬ разработки landing page НИЖЕ, чем стоимость разработки обычного сайта.
-                                </p>
+                        </div>
+                        <h4 class="zqH">Побуждает к действию</h4>
+                        <p class="zqP">
+                            Структура landing page направлена на совершение посетителем
+                            ЦЕЛЕВОГО ДЕЙСТВИЯ (заказ, звонок, заявка).
+                        </p>
+                    </div>
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>
+
+
+                <li class="zqLI zqLeft">
+                    <div>
+
+                        <div class="zqIcon">
+
+                        </div>
+                        <h4 class="zqH">Не капризный</h4>
+                        <p class="zqP">
+                            ИДЕАЛЬНЫЙ ПРОДАВЕЦ. Работает 24 часа в день, 7 дней в неделю. Без больничных и выходных.
+                            Точно по написанному скрипту продаж.
+                        </p>
+                    </div>
+
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>
+
+                <!-- fourth -->
+                <li class="zqLI zqRight">
+                    <div>
+                        <!-- fourth icon -->
+                        <div class="zqIcon">
+
+                        </div>
+                        <h4 class="zqH">Не дорогой</h4>
+                        <p class="zqP">
+                            СТОИМОСТЬ разработки landing page НИЖЕ, чем стоимость разработки обычного сайта.
+                        </p>
+                    </div>
+
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>
+                <!--пятный-->
+
+                <li class="zqLI zqLeft">
+                    <div>
+
+                        <div class="zqIcon">
+
+                        </div>
+                        <h4 class="zqH">Эффективный</h4>
+                        <p class="zqP">
+                            ВЫСОКАЯ КОНВЕРСИЯ посетителей сайта в покупателей.
+                        </p>
+                    </div>
+
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>
+
+                <!--шестой-->
+                <li class="zqLI zqRight">
+                    <div>
+
+                        <div class="zqIcon">
+
+                        </div>
+                        <h4 class="zqH"> Быстрый</h4>
+                        <p class="zqP">
+                            Более КОРОТКИЕ СРОКИ изготовления по сравнению со стандартной web-разработкой.  </p>
+                    </div>
+
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>
+
+                <li class="zqLI zqRight">
+            <div>
+
+                <div class="zqIcon hidden">
+
+                </div>
+                <h4 class="zqH hidden"> reader coordinator reveiw</h4>
+                <p class="zqP hidden">
+                    Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
+                </p>
+            </div>
+
+            <div class="zqLineWrap">
+                <div class="zqLine"></div>
+            </div>
+        </li>
+                @*<li class="zqLI zqLeft">
+                    <div>
+
+                        <div class="zqIcon">
+
+                        </div>
+                        <h4 class="zqH"> reader coordinator reveiw</h4>
+                        <p class="zqP">
+                            Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
+                        </p>
+                    </div>
+
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>*@
+
+                @*<li class="zqLI zqRight">
+                    <div>
+
+                        <div class="zqIcon">
+
+                        </div>
+                        <h4 class="zqH"> reader coordinator reveiw</h4>
+                        <p class="zqP">
+                            Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
+                        </p>
+                    </div>
+
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>*@
+
+
+
+                @*<li class="zqLI zqLeft">
+                    <div>
+
+                        <div class="zqIcon">
+
+                        </div>
+                        <h4 class="zqH"> reader coordinator reveiw</h4>
+                        <p class="zqP">
+                            Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
+                        </p>
+                    </div>
+
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>*@
+
+                @*<li class="zqLI zqRight">
+                    <div>
+
+                        <div class="zqIcon">
+
+                        </div>
+                        <h4 class="zqH"> reader coordinator reveiw</h4>
+                        <p class="zqP">
+                            Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
+                        </p>
+                    </div>
+
+                    <div class="zqLineWrap">
+                        <div class="zqLine"></div>
+                    </div>
+                </li>*@
+
+
+
+                
+
+            </ul>
+        </div>
+
+
+        @*<div class="container">
+                <div class="privilege-wrap">
+                    <h2>Преимущества Landing Page</h2>
+                    <div class="privilege-row">
+
+                        <div class="privilege-inner-wrap">
+                            <div class="privilege-inner">
+                                <div class="privilege-img">
+                                    <img src="~/images/landing/post_prev_01.jpg" alt="Ничего лишнего" />
+                                </div>
+                                <div class="privilege-title">
+                                    <h3>Ничего лишнего</h3>
+                                    <p>
+                                        Посетитель получает ЧЕТКУЮ структурированную ИНФОРМАЦИЮ, ДОСТАТОЧНУЮ для принятия решения о покупке.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div> <!--privilege-inner-wrap-->
-                    <div class="privilege-inner-wrap">
-                        <div class="privilege-inner">
-                            <div class="privilege-img">
-                                <img src="~/images/landing/post_prev_01.jpg" alt="Эффективный" />
-                            </div>
-                            <div class="privilege-title">
-                                <h3>Эффективный</h3>
-                                <p>
-                                    ВЫСОКАЯ КОНВЕРСИЯ посетителей сайта в покупателей.
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!--privilege-inner-wrap-->
-                    <div class="privilege-inner-wrap">
-                        <div class="privilege-inner">
-                            <div class="privilege-img">
-                                <img src="~/images/landing/post_prev_01.jpg" alt="Быстрый" />
-                            </div>
-                            <div class="privilege-title">
-                                <h3>Быстрый</h3>
-                                <p>
-                                    Более КОРОТКИЕ СРОКИ изготовления по сравнению со стандартной web-разработкой.
-                                </p>
+
+                        <div class="privilege-inner-wrap">
+                            <div class="privilege-inner">
+                                <div class="privilege-img">
+                                    <img src="~/images/landing/post_prev_01.jpg" alt="Побуждает к действию" />
+                                </div>
+                                <div class="privilege-title">
+                                    <h3>Побуждает к действию</h3>
+                                    <p>
+                                        Структура landing page направлена на совершение посетителем ЦЕЛЕВОГО ДЕЙСТВИЯ (заказ, звонок, заявка).
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div> <!--privilege-inner-wrap-->
-                </div> <!--privilege-row-->
-            </div> <!--privilege-wrap-->
-        </div> <!--container-->
+                        <div class="privilege-inner-wrap">
+                            <div class="privilege-inner">
+                                <div class="privilege-img">
+                                    <img src="~/images/landing/post_prev_01.jpg" alt="Не капризный" />
+                                </div>
+                                <div class="privilege-title">
+                                    <h3>Не капризный</h3>
+                                    <p>
+                                        ИДЕАЛЬНЫЙ ПРОДАВЕЦ. Работает 24 часа в день, 7 дней в неделю. Без больничных и выходных. Точно по написанному скрипту продаж.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="privilege-row">
+
+                        <div class="privilege-inner-wrap">
+                            <div class="privilege-inner">
+                                <div class="privilege-img">
+                                    <img src="~/images/landing/post_prev_01.jpg" alt="Не дорогой" />
+                                </div>
+                                <div class="privilege-title">
+                                    <h3>Не дорогой</h3>
+                                    <p>
+                                        СТОИМОСТЬ разработки landing page НИЖЕ, чем стоимость разработки обычного сайта.
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <
+                        <div class="privilege-inner-wrap">
+                            <div class="privilege-inner">
+                                <div class="privilege-img">
+                                    <img src="~/images/landing/post_prev_01.jpg" alt="Эффективный" />
+                                </div>
+                                <div class="privilege-title">
+                                    <h3>Эффективный</h3>
+                                    <p>
+                                        ВЫСОКАЯ КОНВЕРСИЯ посетителей сайта в покупателей.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="privilege-inner-wrap">
+                            <div class="privilege-inner">
+                                <div class="privilege-img">
+                                    <img src="~/images/landing/post_prev_01.jpg" alt="Быстрый" />
+                                </div>
+                                <div class="privilege-title">
+                                    <h3>Быстрый</h3>
+                                    <p>
+                                        Более КОРОТКИЕ СРОКИ изготовления по сравнению со стандартной web-разработкой.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
     </section>
 
     <section class="landing-plus">
@@ -231,7 +435,8 @@
 
 
     <section class="landing-example">
-        <h2 class="section-example-title">Примеры Landing Page</h2>
+
+
         <div class="example-wrap">
             @await Component.InvokeAsync("ExamplesSites", new { category = "Landing" })
         </div>
