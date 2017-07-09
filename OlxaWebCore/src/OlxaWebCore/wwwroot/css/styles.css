@@ -1217,239 +1217,9 @@ section.tariff .promo-wrapper ul li:last-child {
 }
 /*-----------------------------------------------------------------------интернет магазин*/
 .shop-wrap {
+  min-height: 100vh;
   margin-top: 3em;
   margin-bottom: 3em;
-}
-.shop-wrap .avFeaturesContainer {
-  width: 100%;
-  overflow-x: hidden;
-  position: relative;
-}
-.shop-wrap .avFeaturesRapper {
-  position: relative;
-  width: 100%;
-  height: 809px;
-  perspective: 1000px;
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avFeatures_Bg.jpg) right top #171717 no-repeat;
-  padding-right: 229px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-}
-.shop-wrap .avFeaturesRapper h1 {
-  color: #fff;
-  display: block;
-  text-align: center;
-  padding-top: 45px;
-  font-size: 38px;
-  font-weight: 300;
-}
-.shop-wrap .screenRap {
-  width: 1519px;
-  height: 623px;
-  position: absolute;
-  top: 142px;
-  right: -81px;
-  z-index: 3;
-  transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
-  -webkit-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
-  -moz-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
-}
-.shop-wrap .screenRap div {
-  width: 270px;
-  height: 271px;
-  transform: scale(1, 1);
-  -webkit-transform: scale(1, 1);
-  -moz-transform: scale(1, 1);
-  float: left;
-  cursor: pointer;
-  margin: 8px;
-  text-indent: -9999px;
-  transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  position: relative;
-  z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0.23) 19px 19px 30px;
-  left: 0;
-}
-.shop-wrap .screenRap:hover div {
-  animation: none !important;
-}
-.shop-wrap .screenRap div:hover {
-  z-index: 2;
-  left: -70px !important;
-  transform: scale(1.8, 1.8) !important;
-}
-.shop-wrap .screenRap .avTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avTile.jpg) no-repeat;
-}
-.shop-wrap .screenRap .firewallTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallTile.jpg) no-repeat;
-}
-.shop-wrap .screenRap .backupTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupTile.jpg) no-repeat;
-  animation: tileLoadScale .6s 2.2s forwards;
-  -webkit-animation: tileLoadScale .6s 2.2s forwards;
-  -moz-animation: tileLoadScale .6s 2.2s forwards;
-}
-.shop-wrap .screenRap .vulnerabilitiesTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerableTile.jpg) no-repeat;
-}
-.shop-wrap .screenRap .spamfilterTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterTile.jpg) no-repeat;
-  animation: tileLoadScale .6s 2.7s forwards;
-  -webkit-animation: tileLoadScale .6s 2.7s forwards;
-  -moz-animation: tileLoadScale .6s 2.7s forwards;
-}
-.shop-wrap .screenRap .smpTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpTile.jpg) no-repeat;
-  animation: tileLoadScale .6s 2s forwards;
-  -webkit-animation: tileLoadScale .6s 2s forwards;
-  -moz-animation: tileLoadScale .6s 2s forwards;
-}
-.shop-wrap .screenRap .tuneupTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupTile.jpg) no-repeat;
-}
-.shop-wrap .screenRap .idpTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpTile.jpg) no-repeat;
-}
-.shop-wrap .screenRap .parentalTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalTile.jpg) no-repeat;
-  animation: tileLoadScale .6s 2.4s forwards;
-  -webkit-animation: tileLoadScale .6s 2.4s forwards;
-  -moz-animation: tileLoadScale .6s 2.4s forwards;
-}
-.shop-wrap .feature {
-  position: absolute;
-  opacity: 0;
-  z-index: 3;
-  transition: opacity .1s ease;
-  -webkit-transition: opacity .1s ease;
-  -moz-transition: opacity .1s ease;
-  width: 30%;
-  top: 188px;
-  left: 95px;
-}
-.shop-wrap .feature.active {
-  opacity: 1;
-}
-.shop-wrap .feature h2 {
-  font-size: 37px;
-  padding: 12px 0 10px 72px;
-  margin: 0 0 10px -120px;
-  opacity: 0;
-  transition: all .2s ease;
-  -webkit-transition: all .2s ease;
-  -moz-transition: all .2s ease;
-}
-.shop-wrap .feature.active h2 {
-  opacity: 1;
-  margin: 0 0 10px -72px;
-  color: #fff;
-  font-weight: 400;
-}
-.shop-wrap .feature div {
-  width: 0;
-  opacity: 0;
-  transition: width .3s ease, opacity .7s ease;
-  -webkit-transition: width .3s ease, opacity .7s ease;
-  -moz-transition: width .3s ease, opacity .7s ease;
-}
-.shop-wrap .feature.active div {
-  width: 100%;
-  opacity: 1;
-}
-.shop-wrap .feature div span {
-  width: 100%;
-  border-top: #fff solid 1px;
-  height: 1px;
-  display: block;
-  opacity: .4;
-}
-.shop-wrap .feature p {
-  font-size: 15px;
-  color: #fff;
-  line-height: 1.8;
-  padding: 32px 32px 0 0;
-  opacity: 0;
-  transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-}
-.shop-wrap .feature.active p {
-  opacity: 1;
-}
-.shop-wrap .smallNotice {
-  font-style: italic;
-  opacity: .5;
-  font-size: 11px;
-}
-.shop-wrap .avFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avIcon.png) left center no-repeat;
-}
-.shop-wrap .firewallFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallIcon.png) left center no-repeat;
-}
-.shop-wrap .backupFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupIcon.png) left center no-repeat;
-}
-.shop-wrap .vulnerabilitiesFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerabilitiesIcon.png) left center no-repeat;
-}
-.shop-wrap .spamfilterFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterIcon.png) left center no-repeat;
-}
-.shop-wrap .smpFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpIcon.png) left center no-repeat;
-}
-.shop-wrap .tuneupFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupIcon.png) left center no-repeat;
-}
-.shop-wrap .idpFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpIcon.png) left center no-repeat;
-}
-.shop-wrap .parentalFeature h2 {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalIcon.png) left center no-repeat;
-}
-.shop-wrap .hoverIcon {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/mouseHoverIcon.png) center top no-repeat;
-  color: #fff;
-  font-size: 11px;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 28px;
-  width: 140px;
-  text-align: center;
-  left: 50%;
-  margin-left: -192px;
-  padding-top: 41px;
-}
-@keyframes tileLoadScale {
-  50% {
-    transform: scale(1.4, 1.4);
-    left: -50px;
-    z-index: 2;
-  }
-}
-@-webkit-keyframes tileLoadScale {
-  50% {
-    transform: scale(1.4, 1.4);
-    -webkit-transform: scale(1.4, 1.4);
-    -moz-transform: scale(1.4, 1.4);
-    left: -50px;
-    z-index: 2;
-  }
-}
-@-moz-keyframes tileLoadScale {
-  50% {
-    transform: scale(1.4, 1.4);
-    -moz-transform: scale(1.4, 1.4);
-    left: -50px;
-    z-index: 2;
-  }
-}
-.shop-wrap .shop-tabs {
-  margin-top: 3em;
 }
 .shop-wrap .wrapper-shop {
   margin-top: 3em;
@@ -2250,49 +2020,82 @@ section.price-solution .solution-row i {
   display: block;
   margin: 1em;
 }
-section.price-solution .solution-row .solution-item {
+section.price-solution .solution-row .solution-item-wrap {
   text-align: center;
   padding: 2em 1.2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-section.price-solution .solution-row .solution-item:hover {
+section.price-solution .solution-row .solution-item-wrap .solution-item {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  padding-top: 10px;
+  border: 2px solid #06c438;
+  margin: 0 auto 30px auto;
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.price-solution .solution-row .solution-item-wrap .solution-item:hover {
   transition: background 0.4s ease-out, color 0.4s ease-in-out;
   box-shadow: 0px 1px 22px -5px #000000;
 }
-section.price-solution .solution-row .solution-item:hover .solution-title h2 {
-  color: #3c6eaa;
-  text-decoration: underline;
+section.price-solution .solution-row .solution-item-wrap .solution-title-wrap {
+  padding: 0 0.8em;
+  height: 15em;
 }
-section.price-solution .solution-row .solution-item:hover .solution-title i {
+section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .solution-title h2 {
   color: #3c6eaa;
 }
-section.price-solution .solution-row .solution-item:hover .btn {
+section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .solution-title p {
+  margin: 2em auto;
+}
+section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .solution-title i {
+  color: #3c6eaa;
+}
+section.price-solution .solution-row .solution-item-wrap .btn-price-solution {
   background: #3c6eaa;
   color: #fff;
+  width: 10em;
+  margin: 0 auto;
+  margin-bottom: 2em;
 }
-section.price-solution .solution-row .solution-item .solution-item-btn {
-  margin-bottom: 0;
-}
-section.price-solution .solution-row .solution-item .solution-title {
+section.price-solution .solution-row .solution-title {
   display: block;
   margin-bottom: 1em;
 }
-section.price-solution .solution-row .solution-item .solution-icon {
+section.price-solution .solution-row .solution-icon {
   display: inline-block;
   font-size: 1.5;
 }
-section.price-solution .solution-row .solution-item .solution-price {
+section.price-solution .solution-row .solution-price {
   margin: 1em 0;
   font-weight: 600;
 }
-section.price-solution .solution-row .solution-item-question .solution-title {
+section.price-solution .solution-row ul {
+  padding: 0;
+}
+section.price-solution .solution-row ul li {
+  display: block;
+  color: gray;
+  padding: 10px 15px;
+  border-top: 1px solid #d9d9d9;
+}
+section.price-solution .solution-row ul li strong {
+  color: #000;
+  font-weight: bold;
+  float: right;
+  margin-right: 4em;
+}
+section.price-solution .solution-item-question .solution-title {
   font-size: 1.5em;
   font-weight: 600;
   margin: 1em;
 }
-section.price-solution .solution-row .solution-item-question .btn {
+section.price-solution .solution-item-question .btn {
   margin-top: 2em;
 }
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
@@ -2839,18 +2642,263 @@ section.price-solution .solution-row .solution-item-question .btn {
     transform: translate3d(0, -25%, 0);
   }
 }
+.index-wrap section.plus .avFeaturesContainer {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.index-wrap section.plus .avFeaturesRapper {
+  padding: 2em 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  perspective: 1000px;
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avFeatures_Bg.jpg) right top #171717 no-repeat;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+.index-wrap section.plus .avFeaturesRapper h1 {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding-top: 1.5em;
+  font-size: 38px;
+  font-weight: 300;
+}
+.index-wrap section.plus .screenRap {
+  width: 1519px;
+  height: 623px;
+  position: absolute;
+  top: 250px;
+  right: 50px;
+  z-index: 3;
+  transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
+  -webkit-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
+  -moz-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
+}
+.index-wrap section.plus .screenRap div {
+  width: 270px;
+  height: 271px;
+  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  float: left;
+  cursor: pointer;
+  margin: 8px;
+  text-indent: -9999px;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  position: relative;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.23) 19px 19px 30px;
+  left: 0;
+}
+.index-wrap section.plus .screenRap:hover div {
+  animation: none !important;
+}
+.index-wrap section.plus .screenRap div:hover {
+  z-index: 2;
+  left: -70px !important;
+  transform: scale(1.8, 1.8) !important;
+}
+.index-wrap section.plus .screenRap .avTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avTile.jpg) no-repeat;
+}
+.index-wrap section.plus .screenRap .firewallTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallTile.jpg) no-repeat;
+}
+.index-wrap section.plus .screenRap .backupTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupTile.jpg) no-repeat;
+  animation: tileLoadScale .6s 2.2s forwards;
+  -webkit-animation: tileLoadScale .6s 2.2s forwards;
+  -moz-animation: tileLoadScale .6s 2.2s forwards;
+}
+.index-wrap section.plus .screenRap .vulnerabilitiesTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerableTile.jpg) no-repeat;
+}
+.index-wrap section.plus .screenRap .spamfilterTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterTile.jpg) no-repeat;
+  animation: tileLoadScale .6s 2.7s forwards;
+  -webkit-animation: tileLoadScale .6s 2.7s forwards;
+  -moz-animation: tileLoadScale .6s 2.7s forwards;
+}
+.index-wrap section.plus .screenRap .smpTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpTile.jpg) no-repeat;
+  animation: tileLoadScale .6s 2s forwards;
+  -webkit-animation: tileLoadScale .6s 2s forwards;
+  -moz-animation: tileLoadScale .6s 2s forwards;
+}
+.index-wrap section.plus .screenRap .tuneupTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupTile.jpg) no-repeat;
+}
+.index-wrap section.plus .screenRap .idpTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpTile.jpg) no-repeat;
+}
+.index-wrap section.plus .screenRap .parentalTile {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalTile.jpg) no-repeat;
+  animation: tileLoadScale .6s 2.4s forwards;
+  -webkit-animation: tileLoadScale .6s 2.4s forwards;
+  -moz-animation: tileLoadScale .6s 2.4s forwards;
+}
+.index-wrap section.plus .feature {
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity .1s ease;
+  -webkit-transition: opacity .1s ease;
+  -moz-transition: opacity .1s ease;
+  width: 30%;
+  top: 188px;
+  left: 95px;
+}
+.index-wrap section.plus .feature.active {
+  opacity: 1;
+}
+.index-wrap section.plus .feature h2 {
+  font-size: 37px;
+  padding: 12px 0 10px 72px;
+  margin: 0 0 10px -120px;
+  opacity: 0;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+}
+.index-wrap section.plus .feature.active h2 {
+  opacity: 1;
+  margin: 0 0 10px -72px;
+  color: #fff;
+  font-weight: 400;
+}
+.index-wrap section.plus .feature div {
+  width: 0;
+  opacity: 0;
+  transition: width .3s ease, opacity .7s ease;
+  -webkit-transition: width .3s ease, opacity .7s ease;
+  -moz-transition: width .3s ease, opacity .7s ease;
+}
+.index-wrap section.plus .feature.active div {
+  width: 100%;
+  opacity: 1;
+}
+.index-wrap section.plus .feature div span {
+  width: 100%;
+  border-top: #fff solid 1px;
+  height: 1px;
+  display: block;
+  opacity: .4;
+}
+.index-wrap section.plus .feature p {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.8;
+  padding: 32px 32px 0 0;
+  opacity: 0;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+}
+.index-wrap section.plus .feature.active p {
+  opacity: 1;
+}
+.index-wrap section.plus .smallNotice {
+  font-style: italic;
+  opacity: .5;
+  font-size: 11px;
+}
+.index-wrap section.plus .avFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .firewallFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .backupFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .vulnerabilitiesFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerabilitiesIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .spamfilterFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .smpFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .tuneupFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .idpFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .parentalFeature h2 {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalIcon.png) left center no-repeat;
+}
+.index-wrap section.plus .hoverIcon {
+  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/mouseHoverIcon.png) center top no-repeat;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 28px;
+  width: 140px;
+  text-align: center;
+  left: 50%;
+  margin-left: -192px;
+  padding-top: 41px;
+}
+@keyframes tileLoadScale {
+  50% {
+    transform: scale(1.4, 1.4);
+    left: -50px;
+    z-index: 2;
+  }
+}
+@-webkit-keyframes tileLoadScale {
+  50% {
+    transform: scale(1.4, 1.4);
+    -webkit-transform: scale(1.4, 1.4);
+    -moz-transform: scale(1.4, 1.4);
+    left: -50px;
+    z-index: 2;
+  }
+}
+@-moz-keyframes tileLoadScale {
+  50% {
+    transform: scale(1.4, 1.4);
+    -moz-transform: scale(1.4, 1.4);
+    left: -50px;
+    z-index: 2;
+  }
+}
 .index-wrap section.about {
   width: 100%;
+  min-height: 100vh;
   background-image: linear-gradient(#8b9da9, #fff6e4, #ffffff);
 }
 .index-wrap section.about .about__wrap {
   width: 100%;
   margin: auto;
 }
-.index-wrap section.about h2 {
+.index-wrap section.about .title-wrap {
+  padding-top: 3em;
   padding-bottom: 4em;
+}
+.index-wrap section.about .title-wrap h2 {
   text-align: center;
+  color: #5688c3;
   text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 22px;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+}
+.index-wrap section.about .title-wrap .headline {
+  font-size: 32px;
+  margin-top: 32px;
+  font-family: 'futura-reg';
+  line-height: 1.2;
+  text-align: center;
 }
 .index-wrap section.about .about__row {
   display: flex;
@@ -2864,13 +2912,20 @@ section.price-solution .solution-row .solution-item-question .btn {
   padding: 2em 1.2em;
 }
 .index-wrap section.about .about__row .about__col .about__col__item h3 {
-  margin-bottom: 3em;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.index-wrap section.about .about__row .about__col .about__col__item p {
+  font-size: 0.8em;
 }
 .index-wrap section.steps-divelopment {
   /*min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;*/
+}
+.index-wrap .index-tabs {
+  margin-top: 6em;
 }
 .index-wrap section.portfolio-index {
   background: linear-gradient(to left, #333333 0, #ecf0f1 50%, #999999 100%);
@@ -4259,7 +4314,6 @@ section.develop .step-develop-wrap #tabs-3 {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background: linear-gradient(to right bottom, #CC59EA 20%, #647CF5, #4FC9FB 80%);
 }
 .landing-wrapper section.landing-description h1 {
   color: transparent;
@@ -4272,7 +4326,6 @@ section.develop .step-develop-wrap #tabs-3 {
 .landing-wrapper section.landing-description p {
   display: inline-block;
   width: 35em;
-  color: #FFF;
   font-weight: normal;
   font-size: 1.25em;
 }
@@ -4286,6 +4339,7 @@ section.develop .step-develop-wrap #tabs-3 {
   display: block;
   width: 100%;
   height: 420px;
+  margin-top: 3em;
 }
 .landing-wrapper section.landing-description .description-wrap .demo .isometric {
   transform: rotateX(45deg) rotateY(0deg) rotateZ(-30deg) translate(-14%, -34%) scale3d(1, 1, 1);
@@ -4688,7 +4742,7 @@ section.develop .step-develop-wrap #tabs-3 {
   font-weight: 300;
 }
 .landing-wrapper section.landing-description .description-wrap .demo .desc a {
-  color: #3c6eaa;
+  color: #008fa1;
   font-weight: 500;
   text-decoration: none;
 }
@@ -4717,56 +4771,176 @@ section.develop .step-develop-wrap #tabs-3 {
   width: 80%;
 }
 .landing-wrapper section.landing-privilege {
-  padding: 3em 0;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*line connecting sections*/
+  /*you can lower this to 700 and it will still work great.  Just set it to 900 cause, codepen preview.  */
+  /*.privilege-wrap {
+            text-align: center;
+            margin-top: @size-margin-section;
+
+
+
+            .privilege-row {
+                justify-content: space-between;
+
+
+
+                .privilege-inner-wrap {
+                    position: relative;
+                    z-index: 1;
+                    min-height: 15.6em;
+                    display: block;
+                    width: 100%;
+                    max-width: 23.75em;
+                    margin: 2em auto 1.5em auto;
+                    cursor: default;
+
+
+
+                    &:hover {
+                        z-index: 5;
+                    }
+
+
+
+                    .privilege-inner {
+                        position: absolute;
+                        width: 100%;
+                        max-height: 15.625em;
+                        background: #fff;
+                        top: 0;
+                        left: 0;
+                        border: 2px solid transparent;
+                        overflow: hidden;
+                        transition: all 0.4s ease;
+
+
+
+                        &:hover {
+                            border-color: #1bdb68;
+                            max-height: 37.5em;
+                        }
+
+                        .column;
+                        text-align: center;
+                        padding: 1.5em;
+
+
+
+                        img {
+                            display: inline-block;
+                        }
+                    }
+
+
+
+                    h3 {
+                        margin: 1em;
+                    }
+                }
+            }
+        }*/
 }
-.landing-wrapper section.landing-privilege .privilege-wrap {
+.landing-wrapper section.landing-privilege h2 {
   text-align: center;
-  margin-top: 4em;
-}
-.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row {
-  justify-content: space-between;
-}
-.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap {
-  position: relative;
-  z-index: 1;
-  min-height: 15.6em;
-  display: block;
   width: 100%;
-  max-width: 23.75em;
-  margin: 2em auto 1.5em auto;
-  cursor: default;
+  background: #333;
+  color: #fff;
 }
-.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap:hover {
-  z-index: 5;
+.landing-wrapper section.landing-privilege .hidden {
+  visibility: hidden;
 }
-.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner {
-  position: absolute;
-  width: 100%;
-  max-height: 15.625em;
-  background: #fff;
-  top: 0;
-  left: 0;
-  border: 2px solid transparent;
+.landing-wrapper section.landing-privilege .zqWrap {
   overflow: hidden;
-  transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  opacity: .9999;
+  font-family: sans-serif;
+}
+.landing-wrapper section.landing-privilege .zqUL {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+.landing-wrapper section.landing-privilege .zqLI {
+  position: relative;
+  margin: 0 auto .1em;
   text-align: center;
-  padding: 1.5em;
+  width: 70%;
+  padding: 2%;
 }
-.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner:hover {
-  border-color: #1bdb68;
-  max-height: 37.5em;
+.landing-wrapper section.landing-privilege .zqLeft {
+  float: left;
 }
-.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap .privilege-inner img {
+.landing-wrapper section.landing-privilege .zqRight {
+  float: right;
+}
+.landing-wrapper section.landing-privilege .zqLineWrap {
+  z-index: -1;
+  /*it's rotated so, width is sorta like height*/
+  width: 70em;
+  height: 2000%;
+  /*the lower the top: number, the further down it will move.  Well, technically higher but.  Move it from 800% to 790% and it will move down.  */
+  top: -900%;
+  margin: 0;
+  background: #2b2b2b;
+  position: absolute;
+}
+.landing-wrapper section.landing-privilege .zqLeft .zqLineWrap {
+  transform: rotate(-75deg) translate(60%, 0%);
+}
+.landing-wrapper section.landing-privilege .zqRight .zqLineWrap {
+  transform: rotate(75deg) translate(-60%, 0%);
+}
+.landing-wrapper section.landing-privilege .zqLine {
+  opacity: 0;
+  width: 100%;
+  height: 0;
+  background: #1a1a1a;
+  transition: all 1s ease-out;
+}
+.landing-wrapper section.landing-privilege .zqJS {
+  opacity: 1;
+  height: 100%;
+}
+.landing-wrapper section.landing-privilege .zqIcon {
+  z-index: 2;
   display: inline-block;
+  width: 8em;
+  height: 8em;
+  border-radius: 5%;
+  background: #40bf6a;
+  background-size: cover;
+  margin-bottom: 1em;
 }
-.landing-wrapper section.landing-privilege .privilege-wrap .privilege-row .privilege-inner-wrap h3 {
-  margin: 1em;
+.landing-wrapper section.landing-privilege .zqH {
+  font-size: 3vmax;
+  color: #27ae60;
+}
+.landing-wrapper section.landing-privilege .zqP {
+  font-size: 1.5em;
+  line-height: 1.8;
+  color: #fff;
+}
+@media (min-width: 0px) and (max-width: 900px) {
+  .landing-wrapper section.landing-privilege .zqIcon {
+    z-index: 2;
+    display: block;
+    margin: 1em auto;
+    padding: 0;
+  }
+  .landing-wrapper section.landing-privilege .zqLI {
+    position: relative;
+    width: 98%;
+    margin: 0 auto .1em 0;
+    text-align: center;
+  }
+  .landing-wrapper section.landing-privilege .zqLineWrap {
+    top: -800%;
+  }
+  .landing-wrapper section.landing-privilege .zqH {
+    font-size: 3em;
+  }
 }
 .landing-wrapper section.landing-plus {
   padding: 3em 0;
@@ -4829,12 +5003,6 @@ section.develop .step-develop-wrap #tabs-3 {
   text-align: center;
   padding: 0.65em 0.5em;
   transition: .3s linear;
-}
-.landing-wrapper section.landing-example h2.section-example-title {
-  padding-top: 2em;
-  padding-bottom: 5em;
-  text-align: center;
-  color: #ecf0f1;
 }
 .landing-wrapper section.landing-example .example-wrap {
   display: flex;
@@ -5416,7 +5584,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     width: 33.333%;
   }
   /*--------------------------------------------------цены*/
-  .solution-item {
+  .solution-item-wrap {
     width: 33.333%;
   }
   /*-----------------------------------------------chekout*/
@@ -5526,7 +5694,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     width: 33.333%;
   }
   /*------------------------------------------------------цены*/
-  .solution-item {
+  .solution-item-wrap {
     width: 33.333%;
   }
   /*---------------------------------------------------chekout*/
@@ -5589,7 +5757,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     width: 33.333%;
   }
   /*--------------------------------------------------------цены*/
-  .solution-item {
+  .solution-item-wrap {
     width: 50%;
   }
   /*------------------------------------------------------chekout*/
@@ -5695,7 +5863,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     width: 48%;
   }
   /*---------------------------------------------------------цены*/
-  .solution-item {
+  .solution-item-wrap {
     flex-basis: 46%;
   }
   /*-------------------------------------------------------chekout*/
@@ -5760,7 +5928,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     width: 90%;
   }
   /*-------------------------------------------------------цены*/
-  .solution-item {
+  .solution-item-wrap {
     flex-basis: 46%;
   }
   /*----------------------------------------------------chekout*/
@@ -5830,7 +5998,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     width: 90%;
   }
   /*-----------------------------------------------------------цены*/
-  .solution-item {
+  .solution-item-wrap {
     flex-basis: 90%;
   }
   /*--------------------------------------------------------chekout*/
