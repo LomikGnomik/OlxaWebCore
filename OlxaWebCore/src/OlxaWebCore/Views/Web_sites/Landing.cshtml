@@ -2,19 +2,53 @@
     ViewData["Title"] = "Создание Landing page";
     ViewBag.PortfolioExample = "Примеры Landing Page";
 }
+@section scripts{
+    <script src="~/js/LandingScripts.js"></script>
+}
 <main class="landing-wrapper">
     <section class="landing-description">
 
-        <div class="container">
-            <div class="description-wrap">
-                <div class="description-title">
-                    <h1>landing</h1>
-                    <p>
-                        Лендинг - веб-страница, построенная определенным образом, основной задачей которой является сбор контактов целевой аудитории, обладает более высокой конверсией по сравнению с обычным сайтом. Для усиления эффекта используются побуждающие и призывающие к действию слоганы, акции, торговые преимущества, яркие и крупные кнопки, а также минималистичный плоский дизайн.
-                    </p>
+
+        <div class="description-wrap">
+            <div class="demo">
+                <div class="floor isometric">
+                    <div class="appBar">
+                        <i class="material-icons md-light md-24" id="drawerOpener"><i class="fa fa-bars" aria-hidden="true"></i></i>
+                    </div>
+                    <div class="content">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                    <div class="fab dialogOpener toasted"></div>
+                    <div class="button dialogOpener"></div>
+                    <div class="dialogContainer hidden" id="dialog">
+                        <div class="dialog"></div>
+                    </div>
+                    <div class="drawerContainer hidden" id="drawer">
+                        <div class="drawer">
+                            <div class="header"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div><!--container-->
+            <div class="description-title">
+                <div class="description-title-wrap">
+                    <h1>landing</h1>
+                    <p>
+                        Лендинг - веб-страница, построенная определенным образом,
+                        основной задачей которой является сбор контактов целевой
+                        аудитории, обладает более высокой конверсией по сравнению
+                        @*с обычным сайтом. Для усиления эффекта используются
+                            побуждающие и призывающие к действию слоганы, акции,
+                            торговые преимущества, яркие и крупные кнопки, а
+                            также минималистичный плоский дизайн.*@
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
 
     </section>
 
@@ -194,7 +228,7 @@
         @Html.Partial("_StepsCreatePartialView")
     </section>
 
-   
+
 
     <section class="landing-example">
         <h2 class="section-example-title">Примеры Landing Page</h2>
