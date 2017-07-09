@@ -1,6 +1,7 @@
 ﻿/// <autosync enabled="true" />
 /// <reference path="../gulpfile.js" />
 /// <reference path="js/admin_scripts.js" />
+/// <reference path="js/landingscripts.js" />
 /// <reference path="js/portfolioindex.js" />
 /// <reference path="js/scripts.js" />
 /// <reference path="js/site.js" />

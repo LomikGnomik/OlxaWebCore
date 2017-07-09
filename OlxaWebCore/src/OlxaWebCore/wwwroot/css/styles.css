@@ -4259,9 +4259,7 @@ section.develop .step-develop-wrap #tabs-3 {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background: linear-gradient(to bottom, #fff, #cccccc, #fff);
-  /*---------------эффект*/
-  /*---------конец эффекта*/
+  background: linear-gradient(to right bottom, #CC59EA 20%, #647CF5, #4FC9FB 80%);
 }
 .landing-wrapper section.landing-description h1 {
   color: transparent;
@@ -4278,13 +4276,445 @@ section.develop .step-develop-wrap #tabs-3 {
   font-weight: normal;
   font-size: 1.25em;
 }
-.landing-wrapper section.landing-description .description-wrap .description-img img {
-  display: inline-block;
+.landing-wrapper section.landing-description .description-wrap {
+  margin-top: 6.5em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.landing-wrapper section.landing-description .description-wrap .demo {
+  display: block;
+  width: 100%;
+  height: 420px;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .isometric {
+  transform: rotateX(45deg) rotateY(0deg) rotateZ(-30deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  transform-style: preserve-3d;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .appBar {
+  width: 100%;
+  height: 56px;
+  border-radius: 0;
+  background: #3c6eaa;
+  border-bottom: 2px solid #2f5d84;
+  border-left: 2px solid #2f5d84;
+  transform: translate3d(0, 0, 24px);
+  box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
+  -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transform-style: preserve-3d;
+  animation: hideDelay 1s, drop 2s 1s;
+  box-sizing: border-box;
+  padding: 14px;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .appBar:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
+  content: "4dp";
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .appBar:hover {
+  transform: translate3d(0, 0, 30px);
+  box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .appBar:hover:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 56px);
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .appBar:active {
+  transform: translate3d(0, 0, 24px);
+  box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .appBar:active:before {
+  content: "4dp";
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #d9004a;
+  border-bottom: 2px solid #962048;
+  border-left: 2px solid #962048;
+  transform: translate3d(0, 0, 36px);
+  box-shadow: -43.2px 54px 18px rgba(0, 0, 0, 0.1), -43.2px 46.8px 18px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
+  -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transform-style: preserve-3d;
+  animation: hideDelay 1.5s, drop 2s 1.5s;
+  cursor: pointer;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .fab:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
+  content: "6dp";
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .fab:hover {
+  transform: translate3d(0, 0, 42px);
+  box-shadow: -50.4px 63px 21px rgba(0, 0, 0, 0.1), -50.4px 54.6px 21px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .fab:hover:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 56px);
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .fab:active {
+  transform: translate3d(0, 0, 72px);
+  box-shadow: -86.4px 108px 36px rgba(0, 0, 0, 0.1), -86.4px 93.6px 36px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .fab:active:before {
+  content: "12dp";
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .button {
+  width: 100px;
+  height: 36px;
+  border-radius: 2px;
+  background: #e1e1e1;
+  border-bottom: 2px solid #aeaeae;
+  border-left: 2px solid #aeaeae;
+  transform: translate3d(0, 0, 12px);
+  box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
+  -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transform-style: preserve-3d;
+  animation: hideDelay 0.5s, drop 2s 0.5s;
+  cursor: pointer;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .button:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
+  content: "2dp";
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .button:hover {
+  transform: translate3d(0, 0, 18px);
+  box-shadow: -21.6px 27px 9px rgba(0, 0, 0, 0.1), -21.6px 23.4px 9px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .button:hover:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 56px);
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .button:active {
+  transform: translate3d(0, 0, 48px);
+  box-shadow: -57.6px 72px 24px rgba(0, 0, 0, 0.1), -57.6px 62.4px 24px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .button:active:before {
+  content: "8dp";
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .dialogContainer {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.25s;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .dialog {
+  width: 240px;
+  height: 240px;
+  border-radius: 2px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #cccccc;
+  border-left: 2px solid #cccccc;
+  transform: translate3d(0, 0, 144px);
+  box-shadow: -172.8px 216px 72px rgba(0, 0, 0, 0.1), -172.8px 187.2px 72px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
+  -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transform-style: preserve-3d;
+  animation: hideDelay 6s, drop 2s 6s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -120px;
+  margin-top: -120px;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .dialog:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
+  content: "24dp";
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .dialog:hover {
+  transform: translate3d(0, 0, 150px);
+  box-shadow: -180px 225px 75px rgba(0, 0, 0, 0.1), -180px 195px 75px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .dialog:hover:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 56px);
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .dialog:active {
+  transform: translate3d(0, 0, 144px);
+  box-shadow: -172.8px 216px 72px rgba(0, 0, 0, 0.1), -172.8px 187.2px 72px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .dialog:active:before {
+  content: "24dp";
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawerContainer {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.25s, margin-left 0.5s;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawerContainer.hidden {
+  margin-left: -100%;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawer {
+  width: 264px;
+  height: 100%;
+  border-radius: 2px;
+  background: #FFFFFF;
+  border-bottom: 2px solid #cccccc;
+  border-left: 2px solid #cccccc;
+  transform: translate3d(0, 0, 96px);
+  box-shadow: -115.2px 144px 48px rgba(0, 0, 0, 0.1), -115.2px 124.8px 48px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
+  -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transform-style: preserve-3d;
+  animation: hideDelay 4s, drop 2s 4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawer:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
+  content: "16dp";
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawer:hover {
+  transform: translate3d(0, 0, 102px);
+  box-shadow: -122.4px 153px 51px rgba(0, 0, 0, 0.1), -122.4px 132.6px 51px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawer:hover:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 56px);
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawer:active {
+  transform: translate3d(0, 0, 96px);
+  box-shadow: -115.2px 144px 48px rgba(0, 0, 0, 0.1), -115.2px 124.8px 48px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawer:active:before {
+  content: "16dp";
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .drawer .header {
+  width: 100%;
+  height: 160px;
+  border-bottom: 1px solid #B6B6B6;
+  background: #e1e1e1;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .content {
+  padding: 8px;
+  transform-style: preserve-3d;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .card {
+  width: 100%;
+  height: 160px;
+  border-radius: 2px;
+  background: #FAFAFA;
+  border-bottom: 2px solid #c7c7c7;
+  border-left: 2px solid #c7c7c7;
+  transform: translate3d(0, 0, 12px);
+  box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
+  -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
+  transform-style: preserve-3d;
+  animation: hideDelay 0.5s, drop 2s 0.5s;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  padding: 8px;
+  float: left;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .card:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
+  content: "2dp";
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .card:hover {
+  transform: translate3d(0, 0, 18px);
+  box-shadow: -21.6px 27px 9px rgba(0, 0, 0, 0.1), -21.6px 23.4px 9px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .card:hover:before {
+  transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 56px);
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .card:active {
+  transform: translate3d(0, 0, 48px);
+  box-shadow: -57.6px 72px 24px rgba(0, 0, 0, 0.1), -57.6px 62.4px 24px rgba(0, 0, 0, 0.1);
+}
+.landing-wrapper section.landing-description .description-wrap .demo .card:active:before {
+  content: "8dp";
+  opacity: 0.8;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .floor {
+  width: auto;
+  height: auto;
+  border-radius: 2px;
+  background: #EEEEEE;
+  border-bottom: 2px solid #bbbbbb;
+  border-left: 2px solid #bbbbbb;
+  display: block;
+  width: 22em;
+  height: 45em;
+  padding: 0;
+  position: relative;
+  left: 63%;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+@-webkit-keyframes drop {
+  0%,
+  from {
+    -webkit-transform: translate3d(0, 0, 90px);
+    box-shadow: -108px 135px 45px rgba(0, 0, 0, 0.1), -108px 117px 45px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes drop {
+  0%,
+  from {
+    -moz-transform: translate3d(0, 0, 90px);
+    box-shadow: -108px 135px 45px rgba(0, 0, 0, 0.1), -108px 117px 45px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes drop {
+  0%,
+  from {
+    transform: translate3d(0, 0, 90px);
+    box-shadow: -108px 135px 45px rgba(0, 0, 0, 0.1), -108px 117px 45px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes hideDelay {
+  from,
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes hideDelay {
+  from,
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hideDelay {
+  from,
+  to {
+    opacity: 0;
+  }
+}
+.landing-wrapper section.landing-description .description-wrap .demo .desc {
+  text-align: center;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .desc h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .desc a {
+  color: #3c6eaa;
+  font-weight: 500;
+  text-decoration: none;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .material-icons.md-24 {
+  font-size: 24px;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .material-icons.md-36 {
+  font-size: 36px;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .material-icons.md-48 {
+  font-size: 48px;
+}
+.landing-wrapper section.landing-description .description-wrap .demo .md-light {
+  color: #FFFFFF;
+}
+.landing-wrapper section.landing-description .description-wrap .demo #drawerOpener {
+  cursor: pointer;
 }
 .landing-wrapper section.landing-description .description-wrap .description-title {
   text-align: center;
   padding: 2em;
+  margin-right: 2em;
   line-height: 1.5;
+}
+.landing-wrapper section.landing-description .description-wrap .description-title .description-title-wrap p {
+  width: 80%;
 }
 .landing-wrapper section.landing-privilege {
   padding: 3em 0;
