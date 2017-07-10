@@ -108,9 +108,12 @@
             <div class="tabs_content">
                 @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
                 <div id="tab__c2">
-                @Html.Partial("_StepsCreatePartialView")
+                    @await Component.InvokeAsync("PriceTimeDemo")
+                    @Html.Partial("_StepsCreatePartialView")
                 </div> @*tab__c2*@
-                <div id="tab__c3">Это про третье</div> @*tab__c3*@
+                <div id="tab__c3">
+                @await Component.InvokeAsync("PriceTimeDemo")
+                </div> @*tab__c3*@
             </div>
         </section>
     </div>
