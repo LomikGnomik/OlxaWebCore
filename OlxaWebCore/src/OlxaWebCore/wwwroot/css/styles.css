@@ -2045,7 +2045,7 @@ section.price-solution .solution-row .solution-item-wrap .solution-item:hover {
 }
 section.price-solution .solution-row .solution-item-wrap .solution-title-wrap {
   padding: 0 0.8em;
-  height: 15em;
+  height: 10em;
 }
 section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .solution-title h2 {
   color: #3c6eaa;
@@ -2703,41 +2703,22 @@ section.price-solution .solution-item-question .btn {
   left: -70px !important;
   transform: scale(1.8, 1.8) !important;
 }
-.index-wrap section.plus .screenRap .avTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avTile.jpg) no-repeat;
-}
-.index-wrap section.plus .screenRap .firewallTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallTile.jpg) no-repeat;
-}
 .index-wrap section.plus .screenRap .backupTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupTile.jpg) no-repeat;
   animation: tileLoadScale .6s 2.2s forwards;
   -webkit-animation: tileLoadScale .6s 2.2s forwards;
   -moz-animation: tileLoadScale .6s 2.2s forwards;
 }
-.index-wrap section.plus .screenRap .vulnerabilitiesTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerableTile.jpg) no-repeat;
-}
 .index-wrap section.plus .screenRap .spamfilterTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterTile.jpg) no-repeat;
   animation: tileLoadScale .6s 2.7s forwards;
   -webkit-animation: tileLoadScale .6s 2.7s forwards;
   -moz-animation: tileLoadScale .6s 2.7s forwards;
 }
 .index-wrap section.plus .screenRap .smpTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpTile.jpg) no-repeat;
   animation: tileLoadScale .6s 2s forwards;
   -webkit-animation: tileLoadScale .6s 2s forwards;
   -moz-animation: tileLoadScale .6s 2s forwards;
 }
-.index-wrap section.plus .screenRap .tuneupTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupTile.jpg) no-repeat;
-}
-.index-wrap section.plus .screenRap .idpTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpTile.jpg) no-repeat;
-}
 .index-wrap section.plus .screenRap .parentalTile {
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalTile.jpg) no-repeat;
   animation: tileLoadScale .6s 2.4s forwards;
   -webkit-animation: tileLoadScale .6s 2.4s forwards;
   -moz-animation: tileLoadScale .6s 2.4s forwards;
