@@ -2676,17 +2676,22 @@ section.price-solution .solution-item-question .btn {
   transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
   -webkit-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
   -moz-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
+  /*а {
+                font-size: 2em;
+            }*/
+}
+.index-wrap section.plus .font {
+  font-size: 2em;
 }
 .index-wrap section.plus .screenRap div {
-  width: 270px;
-  height: 271px;
+  width: 300px;
+  height: 301px;
   transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   float: left;
   cursor: pointer;
   margin: 8px;
-  text-indent: -9999px;
   transition: all .2s;
   -webkit-transition: all .2s;
   -moz-transition: all .2s;
@@ -4441,7 +4446,7 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .landing-wrapper section.landing-description .description-wrap .demo .button:before {
   transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-  content: "2dp";
+  content: "СЛОВО";
   display: block;
   position: absolute;
   right: 100%;
