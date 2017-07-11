@@ -5,54 +5,93 @@
 }
 
 <section class="information-title">
-    <div class="component">
-        <ul class="align">
-            <!-- Book 1 -->
-            <li>
-                <figure class='book'>
-                    <!-- Front -->
-                    <ul class='hardcover_front'>
-                        <li>
-                            <img src="https://s.cdpn.io/13060/book1.jpg" alt="" width="100%" max-height="100%">
-                            
-                        </li>
-                        <li></li>
-                    </ul>
-                    <!-- Pages -->
-                    <ul class='page'>
-                        <li></li>
-                        <li>
-                            <a class="learn" href="#">Узнать больше</a>
-                        </li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <!-- Back -->
-                    <ul class='hardcover_back'>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <ul class='book_spine'>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <figcaption>
-                        <h1>Название книги</h1>
-                        <span>Автор</span>
-                        <p>From mobile browsers to netbooks and tablets, users are visiting your sites from an increasing array of devices and browsers. </p>
-                    </figcaption>
-                </figure>
-                
-            </li>
-        </ul>
+    <div class="presentation presentation-promo">        
+            <div class="isometric-wrapper">
+                <div class="floor isometric information">
+                    <div class="slider">
+                        <div class="card"></div>
+                    </div>
+                    <div class="information-inner-wrap">
+                        <div class="menu-information-wrap">
+                            <div class="menu-information appBar"></div>
+                            <div class="menu-information appBar small"></div>
+                        </div>
+                        <div class="content">
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                    </div>
+
+                    <div class="fab dialogOpener toasted"></div>
+                    <div class="dialogContainer hidden" id="dialog">
+                        <div class="dialog"></div>
+                    </div>
+                    <div class="drawerContainer hidden" id="drawer">
+                        <div class="drawer">
+                            <div class="header"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description description-information">
+                <h1>Информационный</h1>
+                <p>
+                    Tincidunt integer eu augue augue nunc elit dolor,
+                    luctus placerat scelerisque euismod, iaculis eu
+                    lacus nunc mi elit, vehicula ut laoreet ac,
+                    aliquam sit amet justo nunc tempor, metus vel.
+                </p>
+            </div>        
     </div>
+    @* <div class="component">
+            <ul class="align">
+
+                <li>
+                    <figure class='book'>
+
+                        <ul class='hardcover_front'>
+                            <li>
+                                <img src="" alt="" width="100%" max-height="100%">
+
+                            </li>
+                            <li></li>
+                        </ul>
+
+                        <ul class='page'>
+                            <li></li>
+                            <li>
+                                <a class="learn" href="#">Узнать больше</a>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+
+                        <ul class='hardcover_back'>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class='book_spine'>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <figcaption>
+                            <h1>Название книги</h1>
+                            <span>Автор</span>
+                            <p>From mobile browsers to netbooks and tablets, users are visiting your sites from an increasing array of devices and browsers. </p>
+                        </figcaption>
+                    </figure>
+
+                </li>
+            </ul>
+        </div>*@
 </section>
 <section class="information-tab">
     <div class="container">
         <section class="tabs-all" role="tab">
             @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
-            <input id="tab__2" type="radio" name="tabs"checked="checked" />
+            <input id="tab__2" type="radio" name="tabs" checked="checked" />
             <input id="tab__3" type="radio" name="tabs" />
 
             <div class="label-wrapper">
@@ -64,10 +103,10 @@
             <div class="tabs_content">
                 @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
                 <div id="tab__c2">
-                @await Component.InvokeAsync("PriceTimeDemo")
+                    @await Component.InvokeAsync("PriceTimeDemo")
                 </div> @*tab__c2*@
                 <div id="tab__c3">
-                @await Component.InvokeAsync("PriceTimeDemo")
+                    @await Component.InvokeAsync("PriceTimeDemo")
                 </div> @*tab__c3*@
             </div>
         </section>
