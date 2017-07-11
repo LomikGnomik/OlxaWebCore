@@ -6,84 +6,151 @@
 }
 
 <div class="shop-wrap">    
-    @*<div class="wrapper-shop">
-        <section class="info-shop">
-            <div class="shop-preview">
-                <img src="~/images/shop/post01.jpg" alt="интернет магазин" />
-            </div>
-            <div class="shop-idea">
-                <h2>Интернет магазин</h2>
-                <p>
-                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                </p>
-                @*<div class="shop-demo">
-                        <a href="http://nopcommerce.olxaweb.ru" class="btn">Демо сайта</a>
-                        <a href="http://nopcommerce.olxaweb.ru/admin" class="btn">Демо админки</a>
+    <div class="presentation presentation-shop">        
+            <div class="isometric-wrapper">
+                <div class="floor isometric shop">
+                    <div class="shop-admin" id="adminOpenen">
+                        <p class="md-light md-24">Админка</p>
                     </div>
-                    <div class="shop-order">
-                        <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
-                    </div>*@
-@*</div>
-            </section>
-
-        </div>*@
-<div class="container">
-
-    <section class="tabs-all shop-tabs" role="tab">
-        <input id="tab__1" type="radio" name="tabs" checked="checked" />
-        <input id="tab__2" type="radio" name="tabs" checked="checked" />
-        <input id="tab__3" type="radio" name="tabs" />
-
-        <div class="label-wrapper">
-            <label for="tab__1" id="tab__l1">Готовые решения</label>
-            <label for="tab__2" id="tab__l2">Создание сайта</label>
-            <label for="tab__3" id="tab__l3">Разработка сайта</label>
-        </div>
-
-        <div class="tabs_content">
-
-            <div id="tab__c1">
-                @await Component.InvokeAsync("PriceTimeDemo")
-                <div class="shop-description">
-                    <div class="contains">
-                        <h3>В стоимость входит</h3>
-                        <ul>
-                            <li>Любой из 5 шаблонов на выбор</li>
-                            <li>Установка CMS на хостинге</li>
-                            <li>Настройка магазина</li>
-                            <li>Хостинг и доменое имя на 1год</li>
-                            <li>Почтовый ящик с Вашим доменом</li>
-
-                        </ul>
+                    <div class="appBar menu-buy">
+                        <div class="buy" id="drawerOpener">Kk</div>
                     </div>
-                    <div class="extra">
-                        <h3>Дополнительные услуги</h3>
-                        <ul>
-                            <li>Базовое SEO</li>
-                            <li>Доработка</li>
-                            <li>И еще это</li>
-                            <li>И вот</li>
-                        </ul>
+                    <div class="content">
+                        <div class="card">  </div>
+                        <div class="card-shop-wrapper">
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                        <div class="card-shop-wrapper">
+                            <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                    </div>
+                    <div class="fab dialogOpener toasted"></div>
+                    <div class="dialogContainer hidden" id="dialog">
+                        <div class="dialog"></div>
+                    </div>
+                    <div class="drawerContainer hidden" id="drawer">
+                        <div class="drawer">
+                            <div class="header"></div>
+                        </div>
+                    </div>
+                    <div class="adminContainer hidden" id="admin">
+                        <div class="admin">
+                            <div class="card-admin-wrap">
+                                <div class="card">
+                                    <img src="http://anub.ru/uploads/07.2008/121751263099_2.jpg" alt="">
+                                </div>
+                                <div class="card">
+                                    <img src="http://sartus.eu/images/gallery/b6f4f00a07935aef3a4c166432544a6f.png" alt="">
+                                </div>
+                                <div class="card"></div>
+                            </div>
+                            <div class="card-admin-wrap">
+                                <div class="card">
+                                    <img src="http://anub.ru/uploads/07.2008/121751263099_2.jpg" alt="">
+                                </div>
+                                <div class="card">
+                                    <img src="http://sartus.eu/images/gallery/b6f4f00a07935aef3a4c166432544a6f.png" alt="">
+                                </div>
+                                <div class="card"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> @*tab__c1*@
+            </div>
+            <div class="description description-shop">
+                <h1>Интернет магазин</h1>
+                <p>
+                    Tincidunt integer eu augue augue nunc elit dolor,
+                    luctus placerat scelerisque euismod, iaculis eu
+                    lacus nunc mi elit, vehicula ut laoreet ac,
+                    aliquam sit amet justo nunc tempor, metus vel.
+                </p>
+            </div>        
+    </div>
 
-            <div id="tab__c2">
-                @await Component.InvokeAsync("PriceTimeDemo")
-                @Html.Partial("_StepsCreatePartialView")
-            </div> @*tab__c2*@
-            <div id="tab__c3">
-            @await Component.InvokeAsync("PriceTimeDemo")
-            </div> @*tab__c3*@
-        </div>
-    </section>
+
+        @*<div class="wrapper-shop">
+            <section class="info-shop">
+                <div class="shop-preview">
+                    <img src="~/images/shop/post01.jpg" alt="интернет магазин" />
+                </div>
+                <div class="shop-idea">
+                    <h2>Интернет магазин</h2>
+                    <p>
+                        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                    </p>
+                    @*<div class="shop-demo">
+                            <a href="http://nopcommerce.olxaweb.ru" class="btn">Демо сайта</a>
+                            <a href="http://nopcommerce.olxaweb.ru/admin" class="btn">Демо админки</a>
+                        </div>
+                        <div class="shop-order">
+                            <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
+                        </div>*@
+        @*</div>
+                </section>
+
+            </div>*@
+        <div class="container">
+
+            <section class="tabs-all shop-tabs" role="tab">
+                <input id="tab__1" type="radio" name="tabs" checked="checked" />
+                <input id="tab__2" type="radio" name="tabs" checked="checked" />
+                <input id="tab__3" type="radio" name="tabs" />
+
+                <div class="label-wrapper">
+                    <label for="tab__1" id="tab__l1">Готовые решения</label>
+                    <label for="tab__2" id="tab__l2">Создание сайта</label>
+                    <label for="tab__3" id="tab__l3">Разработка сайта</label>
+                </div>
+
+                <div class="tabs_content">
+
+                    <div id="tab__c1">
+                        @await Component.InvokeAsync("PriceTimeDemo")
+                        <div class="shop-description">
+                            <div class="contains">
+                                <h3>В стоимость входит</h3>
+                                <ul>
+                                    <li>Любой из 5 шаблонов на выбор</li>
+                                    <li>Установка CMS на хостинге</li>
+                                    <li>Настройка магазина</li>
+                                    <li>Хостинг и доменое имя на 1год</li>
+                                    <li>Почтовый ящик с Вашим доменом</li>
+
+                                </ul>
+                            </div>
+                            <div class="extra">
+                                <h3>Дополнительные услуги</h3>
+                                <ul>
+                                    <li>Базовое SEO</li>
+                                    <li>Доработка</li>
+                                    <li>И еще это</li>
+                                    <li>И вот</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> @*tab__c1*@
+
+                    <div id="tab__c2">
+                        @await Component.InvokeAsync("PriceTimeDemo")
+                        @Html.Partial("_StepsCreatePartialView")
+                    </div> @*tab__c2*@
+                    <div id="tab__c3">
+                        @await Component.InvokeAsync("PriceTimeDemo")
+                    </div> @*tab__c3*@
+                </div>
+            </section>
 
 
-</div> <!--container-->
+        </div> <!--container-->
 
-@await Component.InvokeAsync("ExamplesSites", new { category = "Интернет-магазин" })
-@await Component.InvokeAsync("OrderForm")
-</div>
+        @await Component.InvokeAsync("ExamplesSites", new { category = "Интернет-магазин" })
+        @await Component.InvokeAsync("OrderForm")
+    </div>
 
 
 

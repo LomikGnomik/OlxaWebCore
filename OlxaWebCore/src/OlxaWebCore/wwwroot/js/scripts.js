@@ -188,3 +188,34 @@ $('.parentalTile').hover(function () {
     $('.parentalFeature').toggleClass('active');
 });
 
+/*------------------------первый экран с видами сайтов картинки в изометрии-------------------*/
+var dialogOpener = $('.dialogOpener');
+var dialog = $('#dialog');
+var drawerOpener = $('#drawerOpener');
+var drawer = $('#drawer');
+var adminOpenen = $('#adminOpenen');
+var admin = $('#admin');
+
+dialogOpener.on('click', function () {
+    dialog.removeClass('hidden');
+});
+
+dialog.on('click', function () {
+    dialog.addClass('hidden');
+})
+
+drawerOpener.on('click', function () {
+    drawer.toggleClass('hidden');
+});
+
+drawer.on('click', function () {
+    drawer.addClass('hidden');
+})
+
+adminOpenen.on('click', function () {
+    admin.toggleClass('hidden');
+});
+
+drawer.on('click', function () {
+    admin.addClass('hidden');
+})
