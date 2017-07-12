@@ -1,14 +1,19 @@
 ﻿
 @{
+    Layout = "_LayoutLibrary";
     ViewData["Title"] = "Создание информационного сайта";
     ViewBag.PortfolioExample = "Примеры информационных сайтов";
 }
+<div class="information-wrapper">
+    <section class="header">
+        @Html.Partial("_HeaderPartialView")
+    </section>
 
-<section class="information-title">
-    <div class="presentation presentation-promo">        
+    <section class="information-title">
+        <div class="presentation presentation-promo">
             <div class="isometric-wrapper">
                 <div class="floor isometric information">
-                    <div class="slider">
+                    <div class="slider appBar">
                         <div class="card"></div>
                     </div>
                     <div class="information-inner-wrap">
@@ -23,7 +28,7 @@
                         </div>
                     </div>
 
-                    <div class="fab dialogOpener toasted"></div>
+                    @*<div class="fab dialogOpener toasted"></div>*@
                     <div class="dialogContainer hidden" id="dialog">
                         <div class="dialog"></div>
                     </div>
@@ -42,53 +47,53 @@
                     lacus nunc mi elit, vehicula ut laoreet ac,
                     aliquam sit amet justo nunc tempor, metus vel.
                 </p>
-            </div>        
-    </div>
-    @* <div class="component">
-            <ul class="align">
+            </div>
+        </div>
+        @* <div class="component">
+                <ul class="align">
 
-                <li>
-                    <figure class='book'>
+                    <li>
+                        <figure class='book'>
 
-                        <ul class='hardcover_front'>
-                            <li>
-                                <img src="" alt="" width="100%" max-height="100%">
+                            <ul class='hardcover_front'>
+                                <li>
+                                    <img src="" alt="" width="100%" max-height="100%">
 
-                            </li>
-                            <li></li>
-                        </ul>
+                                </li>
+                                <li></li>
+                            </ul>
 
-                        <ul class='page'>
-                            <li></li>
-                            <li>
-                                <a class="learn" href="#">Узнать больше</a>
-                            </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                            <ul class='page'>
+                                <li></li>
+                                <li>
+                                    <a class="learn" href="#">Узнать больше</a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
 
-                        <ul class='hardcover_back'>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <ul class='book_spine'>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <figcaption>
-                            <h1>Название книги</h1>
-                            <span>Автор</span>
-                            <p>From mobile browsers to netbooks and tablets, users are visiting your sites from an increasing array of devices and browsers. </p>
-                        </figcaption>
-                    </figure>
+                            <ul class='hardcover_back'>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class='book_spine'>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <figcaption>
+                                <h1>Название книги</h1>
+                                <span>Автор</span>
+                                <p>From mobile browsers to netbooks and tablets, users are visiting your sites from an increasing array of devices and browsers. </p>
+                            </figcaption>
+                        </figure>
 
-                </li>
-            </ul>
-        </div>*@
-</section>
-<section class="information-tab">
-    <div class="container">
+                    </li>
+                </ul>
+            </div>*@
+    </section>
+    <section class="information-tab">
+
         <section class="tabs-all" role="tab">
             @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
             <input id="tab__2" type="radio" name="tabs" checked="checked" />
@@ -103,16 +108,24 @@
             <div class="tabs_content">
                 @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
                 <div id="tab__c2">
-                    @await Component.InvokeAsync("PriceTimeDemo")
+                    <div class="tab-inner-content">
+                        @await Component.InvokeAsync("PriceTimeDemo")
+                    </div>
                 </div> @*tab__c2*@
                 <div id="tab__c3">
-                    @await Component.InvokeAsync("PriceTimeDemo")
+                    <div class="tab-inner-content">
+                        @await Component.InvokeAsync("PriceTimeDemo")
+                    </div>
                 </div> @*tab__c3*@
             </div>
         </section>
-    </div>
-</section>
 
+    </section>
 
-@await Component.InvokeAsync("ExamplesSites", new { category = "Информационный" })
-@await Component.InvokeAsync("OrderForm")
+    @await Component.InvokeAsync("ExamplesSites", new { category = "Информационный" })
+    @await Component.InvokeAsync("OrderForm")
+
+    <section class="footer">
+        @Html.Partial("_FooterPartialView")
+    </section>
+</div>

@@ -415,8 +415,8 @@ main {
     // margin-top: 2em;
 }
 
-
-.header {
+/*шапка с хедером,при прокрутке скрывается*/
+/*.header {
     height: 9em;
     width: 100%;
 
@@ -438,28 +438,26 @@ main {
     }
 }
 
-.index-navigation {
+.navigation {
+    width: 100%;   
+    background: #fff;
+    top: 100px; 
+    position: fixed;
+    z-index: 1000;
+    transition: all 20ms linear;
+    
+}*/
+
+.navigation-sm {
     width: 100%;
     top: 0;
     position: fixed;
     background: #fff;
     z-index: 1000;
     transition: all 20ms linear;
+    padding-top: 0.5em;
 }
 
-.navigation {
-    width: 100%;
-    //border-bottom: 1px solid @color-gray-light;
-    //box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
-    background: #fff;
-    top: 100px; /*высота шапки*/
-    position: fixed;
-    z-index: 1000;
-    transition: all 20ms linear;
-    /*.logo a{
-            display:none;
-        }*/
-}
 
 nav#index-navigation {
     // margin:0 auto;    //центровка меню
@@ -1763,34 +1761,48 @@ section.tariff {
     }
 }
 /*----------------------------------------------------полоса информации в табах*/
-.wrap-info {
-    background: #000;
-    margin-top: 2em;
-    // border: 1px solid gray;
+.border-bottom-line {
+    border-bottom: 1px solid @color-gray;
     width: 100%;
+}
+
+.wrap-info {
+    width: 25%;
+    border:1px solid @color-gray-light;
+    margin-top:2em;
+    //background: #000;
+    //margin-top: 2em;
+    // border: 1px solid gray;
+    // width: 100%;
+    // padding-top: 4em;
+    /* border-bottom:1px solid @color-gray;
+    border-left:1px solid @color-gray;
+    border-right:1px solid @color-gray;*/
     //.shadow-lite;
     .info-inner {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         // align-items: center;
         [class*=info-item-] {
+            display: flex;
             margin: 0 1em;
             padding: 1em;
             // text-align: center;
             h2 {
                 font-weight: 600;
-                font-size: 0.8em;
-                color: #fff;
-                margin-bottom: 1em;
+                font-size: 1em;
+                color: @color-gray-dark;
+                margin-right: 2em;
             }
 
             p {
-                color: @color-gray-light;
+                color: @color-gray;
                 //font-size: 1.3em;
                 font-weight: 500;
 
                 a {
-                    color: @color-gray-light;
+                    color: @color-gray;
                     font-size: 1em;
                     cursor: pointer;
                     text-decoration: underline;
@@ -1807,8 +1819,9 @@ section.tariff {
         }
 
         .info-button-bay {
+            margin:0.5em;
             .bay {
-                display: flex;
+                /*display: flex;
                 align-items: center;
                 margin-right: -2px;
                 outline: none;
@@ -1827,7 +1840,7 @@ section.tariff {
                 padding-right: 1.25em;
                 position: relative;
                 vertical-align: top;
-                user-select: none;
+                user-select: none;*/
                 /*height: 100%;
                     margin: 0;
                     margin-right: -2px;                  
@@ -5398,7 +5411,7 @@ section.develop {
 
 .landing-wrapper {
     section.landing-description {
-        min-height: 100vh;
+        //min-height: 100vh;
         display: flex;
         justify-content: center;
         /* h1 {
@@ -5441,130 +5454,6 @@ section.develop {
     }
 
     section.landing-privilege {
-        //padding: 3em 0;
-        min-height: 100vh;
-        //.content-center;
-        h2 {
-            text-align: center;
-            width: 100%;
-            background: #333;
-            color: #fff;
-        }
-
-        .hidden {
-            visibility: hidden;
-        }
-
-        .zqWrap {
-            overflow: hidden;
-            margin: 0;
-            opacity: .9999;
-            font-family: sans-serif;
-        }
-
-        .zqUL {
-            margin: 0 auto;
-            padding: 0;
-            width: 100%;
-            list-style: none;
-        }
-
-        .zqLI {
-            position: relative;
-            margin: 0 auto .1em;
-            text-align: center;
-            width: 70%;
-            padding: 2%;
-        }
-
-        .zqLeft {
-            float: left;
-        }
-
-        .zqRight {
-            float: right;
-        }
-        /*line connecting sections*/
-        .zqLineWrap {
-            z-index: -1;
-            /*it's rotated so, width is sorta like height*/
-            width: 70em;
-            height: 2000%;
-            /*the lower the top: number, the further down it will move.  Well, technically higher but.  Move it from 800% to 790% and it will move down.  */
-            top: -900%;
-            margin: 0;
-            background: hsl(0,0%,17%);
-            position: absolute;
-        }
-
-        .zqLeft .zqLineWrap {
-            transform: rotate(-75deg) translate(60%,0%);
-        }
-
-        .zqRight .zqLineWrap {
-            transform: rotate(75deg) translate(-60%,0%);
-        }
-
-        .zqLine {
-            opacity: 0;
-            width: 100%;
-            height: 0;
-            background: hsl(0,0%,10%);
-            transition: all 1s ease-out;
-        }
-
-        .zqJS {
-            opacity: 1;
-            height: 100%;
-        }
-
-        .zqIcon {
-            z-index: 2;
-            display: inline-block;
-            width: 8em;
-            height: 8em;
-            border-radius: 5%;
-            background: hsl(140,50%,50%);
-            background-size: cover;
-            margin-bottom: 1em;
-        }
-
-
-
-        .zqH {
-            font-size: 3vmax;
-            color: #27ae60;
-        }
-
-        .zqP {
-            font-size: 1.5em;
-            line-height: 1.8;
-            color: #fff;
-        }
-        /*you can lower this to 700 and it will still work great.  Just set it to 900 cause, codepen preview.  */
-        @media (min-width:0px) and (max-width:900px) {
-            .zqIcon {
-                z-index: 2;
-                display: block;
-                margin: 1em auto;
-                padding: 0;
-            }
-
-            .zqLI {
-                position: relative;
-                width: 98%;
-                margin: 0 auto .1em 0;
-                text-align: center;
-            }
-
-            .zqLineWrap {
-                top: -800%;
-            }
-
-            .zqH {
-                font-size: 3em;
-            }
-        }
         /*.privilege-wrap {
             text-align: center;
             margin-top: @size-margin-section;
@@ -5734,19 +5623,27 @@ section.develop {
 }
 /*----------------------------------------------первый экран видов сайтов с картинками в изометрии*/
 .presentation {
-    margin-top:6em;
+    margin-top: 12em;
     display: flex;
     justify-content: center;
-
+    //height: 35em;
     .description {
         width: 50%;
         max-width: 40em;
+    }
+
+    .description-landing.description {
+        padding-left: 8em;
+    }
+
+    .description-information.description {
+        padding-left: 2em;
     }
 }
 /*------------------------------общие стили*/
 .isometric-wrapper {
     display: block;
-    width: 50%;
+    width: 45%;
     height: 420px;
 
     .title {
@@ -5754,6 +5651,12 @@ section.develop {
         width: 50%;
         height: 10px;
         background: @color-gray-light;
+    }
+
+    .description {
+        h1 {
+            font-size: 2em;
+        }
     }
 
     .text {
@@ -5771,7 +5674,7 @@ section.develop {
         border-bottom: 2px solid #bbbbbb;
         border-left: 2px solid #bbbbbb;
         display: block;
-        width: 320px;
+        width: 20em;
         height: 560px;
         padding: 0;
         position: absolute;
@@ -5799,6 +5702,7 @@ section.develop {
             animation: hideDelay 1s, drop 2s 1s;
             box-sizing: border-box;
             padding: 14px;
+            cursor: pointer;
 
             &:before {
                 transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
@@ -6181,7 +6085,24 @@ section.develop {
     }
     /*---------------------Сайт визитка*/
     .visit.floor {
-        left: 40%;
+        left: 30%;
+        width: 30em;
+        height: 30em;
+
+        .visit-menu {
+            width: 29em;
+            margin: 0 2em 1em 1.1em;
+            background: @color-gray-lighter;
+            border-bottom: 2px solid @color-gray;
+            border-left: 2px solid @color-gray;
+            transform: translate3d(0, 0, 10px);
+            margin-left: 0.8em;
+
+            &:hover {
+                transform: translate3d(0, 0, 20px);
+                box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
     }
 
     .visit {
@@ -6193,6 +6114,7 @@ section.develop {
 
             .card {
                 width: 48%;
+                height: 12em;
             }
         }
 
@@ -6216,10 +6138,10 @@ section.develop {
             }
 
             .buttons-form {
-                margin-top: 12%;
+                margin-top: 8%;
 
                 .right {
-                    margin-left: 60%;
+                    margin-left: 70%;
                 }
 
                 p {
@@ -6231,7 +6153,20 @@ section.develop {
     }
     /*---------------------Лендинг*/
     .landing {
-        height: 36em;
+        height: 47em;
+        top: 5em;
+
+        .landing-menu {
+            background: @color-gray-lighter;
+            border-bottom: 2px solid @color-gray;
+            border-left: 2px solid @color-gray;
+            transform: translate3d(0, 0, 10px);
+
+            &:hover {
+                transform: translate3d(0, 0, 30px);
+                box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
 
         .card-inner-block1 {
             display: flex;
@@ -6277,11 +6212,11 @@ section.develop {
 
                 .batton-landing1 {
                     margin: 0 auto;
-                    margin-top: 40%;
+                    margin-top: 65%;
 
                     p {
-                        padding: 5px;
-                        padding-left: 20px;
+                        display: table-cell;
+                        text-align: center;
                     }
                 }
             }
@@ -6296,24 +6231,73 @@ section.develop {
                 width: 50%;
             }
         }
+
+        .button.right {
+            margin-left: 10em;
+            margin-top: 6em;
+
+            p {
+                display: table-cell;
+                text-align: center;
+            }
+        }
     }
     /*---------------------Корпоративный*/
     .corporate.floor {
-        left: 40%;
-        top: 12em;
+        left: 35%;
+        top: 9em;
     }
 
+
     .corporate {
+        .card-corporate.card {
+            height: 13em;
+        }
+
         .card.header {
             height: 5em;
             margin-bottom: 2em;
             background: @color-gray-light;
+
+            .button {
+                display: table-cell;
+                text-align: center;
+                background: @color-base;
+                border-bottom: 1px solid @color-base-darken1;
+                border-left: 1px solid @color-base-darken1;
+                color: @font-color-reverce;
+                font-size: 1.5em;
+                // margin-left: 10.5em;
+                // margin-top: 2em;
+            }
+        }
+
+
+
+        .button.right {
+            margin-left: 10.5em;
+            margin-top: 9em;
+
+            p {
+                padding: 5% 15%;
+            }
         }
     }
     /*---------------------Интернет магазин*/
     .shop.floor {
-        left: 40%;
-        top: 11em;
+        left: 35%;
+        top: 9em;
+
+        .shop-admin {
+            border-bottom: 2px solid @color-gray;
+            border-left: 2px solid @color-gray;
+            transform: translate3d(0, 0, 10px);
+
+            &:hover {
+                transform: translate3d(0, 0, 30px);
+                box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
     }
 
     .shop {
@@ -6323,15 +6307,27 @@ section.develop {
         .menu-buy {
             display: flex;
             background: #f3f3f3;
-            border-color: #222;
+            background: @color-gray-lighter;
+            border-bottom: 2px solid @color-gray;
+            border-left: 2px solid @color-gray;
+            transform: translate3d(0, 0, 10px);
+            // width: 19em;
+            &:hover {
+                transform: translate3d(0, 0, 30px);
+                box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
+            }
 
             .buy {
+                display: table-cell;
+                text-align: center;
+                background: @color-base;
+                border-bottom: 2px solid @color-base-darken1;
+                border-left: 2px solid @color-base-darken1;
+                color: @font-color-reverce;
+                font-size: 1.5em;
                 width: 20%;
-                margin-left: 18em;
-                height: 2em;
-                background: #33f;
-                border-bottom: 2px solid #00626e;
-                border-left: 2px solid #00626e;
+                margin-left: 12em;
+                height: 1.5em;
                 transform: translate3d(0, 0, 10px);
                 box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
                 -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
@@ -6591,15 +6587,21 @@ section.develop {
     }
     /*---------------------Информационный*/
     .information.floor {
-        left: 40%;
-        top: 14em;
+        left: 30%;
+        top: 10em;
     }
 
     .information {
-        .slider .card {
+        width: 30em;
+        height: 37em;
+
+        .slider.appBar {
             height: 8em;
-            background: pink;
-            transform: translate3d(0, 0, 25px);
+            margin-bottom: 1.5em;
+            background: @color-gray-light;
+            transform: translate3d(0, 0, 10px);
+            border-bottom: 2px solid @color-gray;
+            border-left: 2px solid @color-gray;
         }
 
         .information-inner-wrap {
@@ -6607,6 +6609,7 @@ section.develop {
             justify-content: space-between;
             width: 100%;
             height: 100%;
+
 
             .menu-information-wrap {
                 width: 30%;
@@ -6616,10 +6619,12 @@ section.develop {
                     height: 40%;
                     margin-bottom: 1em;
                     background: #fff;
+                    border-bottom: 2px solid @color-gray;
+                    border-left: 2px solid @color-gray;
                 }
 
                 .menu-information.small {
-                    height: 27%;
+                    height: 30%;
                 }
             }
 
@@ -6628,7 +6633,7 @@ section.develop {
 
                 .card {
                     display: flex;
-                    height: 7em;
+                    height: 8em;
                     padding: 1em;
                     margin-bottom: 1em;
                     background: blue;
@@ -7251,6 +7256,11 @@ section.develop {
     }
 }
 /*-------------------------------------------------------------------------------------ТАБЫ*/
+.tab-inner-content {
+    display: flex;
+    flex-direction: column;
+}
+
 section.tabs-all {
     //margin: 2em;
     min-height: 100vh;
@@ -7262,25 +7272,36 @@ section.tabs-all {
 
     .label-wrapper {
         display: flex;
+        justify-content: flex-end;
+        border-bottom: 4px solid @color-gray-lighter;
+        //border-bottom: 4px solid @color-gray-lighter;
+        //border-top: 1px solid @color-gray;
     }
 
 
 
     label {
-        width: 100%;
         color: @color-gray-dark;
+        background: #fff;
+        // border-bottom:4px solid @color-gray-lighter;
         cursor: pointer;
         display: block;
         line-height: 2.8em;
         font-weight: 600;
-        .border;
+        font-size: 1.2em;
+        // .border;
         top: 0.125em;
         text-align: center;
         padding: 0 1em;
+        min-width: 20em;
 
         &:ntf-child(2) {
             border-left: none;
             border-right: none;
+        }
+
+        &:last-child {
+            margin-right: 1em;
         }
 
         &:hover {
@@ -7288,24 +7309,22 @@ section.tabs-all {
         }
     }
 
-
-
     input {
         display: none;
     }
 
-
-
-
-
     #tab__1:checked ~ .label-wrapper #tab__l1,
     #tab__2:checked ~ .label-wrapper #tab__l2,
     #tab__3:checked ~ .label-wrapper #tab__l3 {
-        .border-more;
-        box-shadow: 0px -5px 24px -4px #000000;
-        // border-bottom: none;
-        top: 0;
+        // box-shadow: 0px -5px 24px -4px #000000;
+        border-left: 4px solid @color-gray-lighter;
+        border-right: 4px solid @color-gray-lighter;
+        border-top: 4px solid @color-gray-lighter;
+        position: relative;
+        top: 4px;
+        //top: 0;
         z-index: 3;
+        background: #fff;
     }
 
 
@@ -7336,6 +7355,7 @@ section.tabs-all {
         position: static;
         left: 0;
         opacity: 1;
+        //background:@color-gray-light;
     }
 }
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
