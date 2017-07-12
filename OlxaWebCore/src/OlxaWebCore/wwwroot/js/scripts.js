@@ -1,27 +1,27 @@
 ﻿/*----------------------------------------фиксированное меню---------------------------*/
-var h_hght = 100; // высота шапки
-var h_mrg = 0;    // отступ когда шапка уже не видна
-$(function () {
-    var elem = $('.navigation');
-    var top = $(this).scrollTop();
-    if (top > h_hght) {
-        elem.css('top', h_mrg);
-    }
-    $(window).scroll(function () {
-        top = $(this).scrollTop();
-        if (top + h_mrg < h_hght) {
-            elem.css('top', (h_hght - top));
-            elem.css('box-shadow', ('none'));
-            elem.css('border-bottom', ('none'));
-        }
-        else {
-            elem.css('top', h_mrg);
-            elem.css('border-bottom', ('1px solid @color-gray-light'));
-            elem.css('box-shadow', ('0 6px 4px -4px rgba(0, 0, 0, .2'));
+//var h_hght = 100; // высота шапки
+//var h_mrg = 0;    // отступ когда шапка уже не видна
+//$(function () {
+//    var elem = $('.navigation');
+//    var top = $(this).scrollTop();
+//    if (top > h_hght) {
+//        elem.css('top', h_mrg);
+//    }
+//    $(window).scroll(function () {
+//        top = $(this).scrollTop();
+//        if (top + h_mrg < h_hght) {
+//            elem.css('top', (h_hght - top));
+//            elem.css('box-shadow', ('none'));
+//            elem.css('border-bottom', ('none'));
+//        }
+//        else {
+//            elem.css('top', h_mrg);
+//            elem.css('border-bottom', ('1px solid @color-gray-light'));
+//            elem.css('box-shadow', ('0 6px 4px -4px rgba(0, 0, 0, .2'));
 
-        }
-    });
-});
+//        }
+//    });
+//});
 /*---------------------------------------кнопка меню для мобильных----------------------*/
 $(document).ready(function () {
 
@@ -216,6 +216,6 @@ adminOpenen.on('click', function () {
     admin.toggleClass('hidden');
 });
 
-drawer.on('click', function () {
+admin.on('click', function () {
     admin.addClass('hidden');
 })

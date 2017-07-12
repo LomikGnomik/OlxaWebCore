@@ -1,4 +1,5 @@
 ﻿@{
+    Layout = "_LayoutLibrary";
     ViewData["Title"] = "Создание Landing page";
     ViewBag.PortfolioExample = "Примеры Landing Page";
 }
@@ -7,8 +8,12 @@
     <script src="~/js/LandingScripts.js"></script>
 }
 <main class="landing-wrapper">
+    <section class="header">
+        @Html.Partial("_HeaderPartialView")
+    </section>
     <section class="landing-description">
         <div class="presentation presentation-landing">
+
             <div class="isometric-wrapper">
                 <div class="floor isometric landing">
                     <div class="appBar">
@@ -29,261 +34,80 @@
                         </div>
                         <div class="card">
                             <!--  <div class="card-inner-block2">
-                              <div class="column-left">
-                                <div class="text"></div>
-                                <div class="text"></div>
-                                <div class="text"></div>
-                                <div class="text"></div>
-                              </div>
-                              <div class="column-right">
-                                <div class="text"></div>
-                                <div class="text"></div>
-                                <div class="text"></div>
-                                <div class="text"></div>
-                              </div>
-                            </div> -->
+                        <div class="column-left">
+                          <div class="text"></div>
+                          <div class="text"></div>
+                          <div class="text"></div>
+                          <div class="text"></div>
                         </div>
-                        <div class="card">
-                            <div class="form-inner-card-wrapper">
-                                <div class="inputs-wrapper">
-                                    <div class="input"></div>
-                                    <div class="input"></div>
-                                </div>
-                                <div class="buttons-form">
-                                    <div class="button right">
-                                        <p>Заказать</p>
+                        <div class="column-right">
+                          <div class="text"></div>
+                          <div class="text"></div>
+                          <div class="text"></div>
+                          <div class="text"></div>
+                        </div>
+                      </div> -->
+                        </div>
+                        <div class="card"></div>
+                            <div class="card">
+                                <div class="form-inner-card-wrapper">
+                                    <div class="inputs-wrapper">
+                                        <div class="input"></div>
+                                        <div class="input"></div>
+                                    </div>
+                                    <div class="buttons-form">
+                                        <div class="button right">
+                                            <p>Заказать</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="description description-promo">
+                </div>
+            </div><div class="description description-landing">
                 <h1>landing</h1>
                 <p>
                     Лендинг - веб-страница, построенная определенным образом,
                     основной задачей которой является сбор контактов целевой
                     аудитории, обладает более высокой конверсией по сравнению
                     @*с обычным сайтом. Для усиления эффекта используются
-                побуждающие и призывающие к действию слоганы, акции,
-                торговые преимущества, яркие и крупные кнопки, а
-                также минималистичный плоский дизайн.*@
+                        побуждающие и призывающие к действию слоганы, акции,
+                        торговые преимущества, яркие и крупные кнопки, а
+                        также минималистичный плоский дизайн.*@
                 </p>
             </div>
         </div>
-
-
-
-
-
-
     </section>
 
-    <section class="landing-privilege">
-        <h2>Преимущества Landing Page</h2>
-        <div class="zqWrap clearfix">
-            <ul class="zqUL ">
-                <!--first -->
-                <li class="zqLI zqLeft">
-                    <div>
-                        <!-- first icon -->
-                        <div class="zqIcon">    </div>
+    <section class="tabs-all" role="tab">
+        @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
+        <input id="tab__2" type="radio" name="tabs" checked="checked" />
+        <input id="tab__3" type="radio" name="tabs" />
 
-                        <h4 class="zqH">Ничего лишнего</h4>
-                        <p class="zqP">
-                            Посетитель получает ЧЕТКУЮ структурированную ИНФОРМАЦИЮ, ДОСТАТОЧНУЮ для принятия решения о покупке.
-                        </p>
-                    </div>
-                    <div class="zqLineWrap">
-                        <div class="zqLine"></div>
-                    </div>
-                </li>
-
-                <!-- second -->
-                <li class="zqLI zqRight">
-                    <div>
-                        <!-- second icon -->
-                        <div class="zqIcon">
-
-                        </div>
-                        <h4 class="zqH">Побуждает к действию</h4>
-                        <p class="zqP">
-                            Структура landing page направлена на совершение посетителем
-                            ЦЕЛЕВОГО ДЕЙСТВИЯ (заказ, звонок, заявка).
-                        </p>
-                    </div>
-                    <div class="zqLineWrap">
-                        <div class="zqLine"></div>
-                    </div>
-                </li>
-
-
-                <li class="zqLI zqLeft">
-                    <div>
-
-                        <div class="zqIcon">
-
-                        </div>
-                        <h4 class="zqH">Не капризный</h4>
-                        <p class="zqP">
-                            ИДЕАЛЬНЫЙ ПРОДАВЕЦ. Работает 24 часа в день, 7 дней в неделю. Без больничных и выходных.
-                            Точно по написанному скрипту продаж.
-                        </p>
-                    </div>
-
-                    <div class="zqLineWrap">
-                        <div class="zqLine"></div>
-                    </div>
-                </li>
-
-                <!-- fourth -->
-                <li class="zqLI zqRight">
-                    <div>
-                        <!-- fourth icon -->
-                        <div class="zqIcon">
-
-                        </div>
-                        <h4 class="zqH">Не дорогой</h4>
-                        <p class="zqP">
-                            СТОИМОСТЬ разработки landing page НИЖЕ, чем стоимость разработки обычного сайта.
-                        </p>
-                    </div>
-
-                    <div class="zqLineWrap">
-                        <div class="zqLine"></div>
-                    </div>
-                </li>
-                <!--пятный-->
-
-                <li class="zqLI zqLeft">
-                    <div>
-
-                        <div class="zqIcon">
-
-                        </div>
-                        <h4 class="zqH">Эффективный</h4>
-                        <p class="zqP">
-                            ВЫСОКАЯ КОНВЕРСИЯ посетителей сайта в покупателей.
-                        </p>
-                    </div>
-
-                    <div class="zqLineWrap">
-                        <div class="zqLine"></div>
-                    </div>
-                </li>
-
-                <!--шестой-->
-                <li class="zqLI zqRight">
-                    <div>
-
-                        <div class="zqIcon">
-
-                        </div>
-                        <h4 class="zqH"> Быстрый</h4>
-                        <p class="zqP">
-                            Более КОРОТКИЕ СРОКИ изготовления по сравнению со стандартной web-разработкой.
-                        </p>
-                    </div>
-
-                    <div class="zqLineWrap">
-                        <div class="zqLine"></div>
-                    </div>
-                </li>
-
-                <li class="zqLI zqRight">
-                    <div>
-
-                        <div class="zqIcon hidden">
-
-                        </div>
-                        <h4 class="zqH hidden"> reader coordinator reveiw</h4>
-                        <p class="zqP hidden">
-                            Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
-                        </p>
-                    </div>
-
-                    <div class="zqLineWrap">
-                        <div class="zqLine"></div>
-                    </div>
-                </li>
-                @*<li class="zqLI zqLeft">
-                        <div>
-
-                            <div class="zqIcon">
-
-                            </div>
-                            <h4 class="zqH"> reader coordinator reveiw</h4>
-                            <p class="zqP">
-                                Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
-                            </p>
-                        </div>
-
-                        <div class="zqLineWrap">
-                            <div class="zqLine"></div>
-                        </div>
-                    </li>*@
-
-                @*<li class="zqLI zqRight">
-                        <div>
-
-                            <div class="zqIcon">
-
-                            </div>
-                            <h4 class="zqH"> reader coordinator reveiw</h4>
-                            <p class="zqP">
-                                Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
-                            </p>
-                        </div>
-
-                        <div class="zqLineWrap">
-                            <div class="zqLine"></div>
-                        </div>
-                    </li>*@
-
-
-
-                @*<li class="zqLI zqLeft">
-                        <div>
-
-                            <div class="zqIcon">
-
-                            </div>
-                            <h4 class="zqH"> reader coordinator reveiw</h4>
-                            <p class="zqP">
-                                Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
-                            </p>
-                        </div>
-
-                        <div class="zqLineWrap">
-                            <div class="zqLine"></div>
-                        </div>
-                    </li>*@
-
-                @*<li class="zqLI zqRight">
-                        <div>
-
-                            <div class="zqIcon">
-
-                            </div>
-                            <h4 class="zqH"> reader coordinator reveiw</h4>
-                            <p class="zqP">
-                                Your completed coverage is passed onto our script reader coordinator where they review all three coverages and address any issues with your individual reader.
-                            </p>
-                        </div>
-
-                        <div class="zqLineWrap">
-                            <div class="zqLine"></div>
-                        </div>
-                    </li>*@
-
-
-
-
-
-            </ul>
+        <div class="label-wrapper">
+            @*<label for="tab__1" id="tab__l1">Готовые решения</label>*@
+            <label for="tab__2" id="tab__l2">Создание сайта</label>
+            <label for="tab__3" id="tab__l3">Разработка сайта</label>
         </div>
 
+        <div class="tabs_content">
+            @*<div id="tab__c1"></div>*@ @*tab__c1*@
+            <div id="tab__c2">
+                <div class="tab-inner-content">
+                    @await Component.InvokeAsync("PriceTimeDemo")
+
+                </div>
+            </div> @*tab__c2*@
+            <div id="tab__c3">
+                <div class="tab-inner-content">
+                    @await Component.InvokeAsync("PriceTimeDemo")
+
+                </div>
+            </div> @*tab__c3*@
+        </div>
+    </section>
+
+    <section class="landing-privilege">     
 
         @*<div class="container">
                 <div class="privilege-wrap">
@@ -471,6 +295,9 @@
 
     <section class="landing-form">
         @await Component.InvokeAsync("OrderForm")
+    </section>
+    <section class="footer">
+        @Html.Partial("_FooterPartialView")
     </section>
 </main>
 

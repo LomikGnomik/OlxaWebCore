@@ -1,19 +1,25 @@
 ﻿@{
+    Layout = "_LayoutLibrary";
     ViewData["Title"] = "Создание корпоративного сайта";
     ViewBag.PortfolioExample = "Примеры корпоративных сайтов";
 }
 
 
 <div class="corporete-wrap">
+    <section class="header">
+        @Html.Partial("_HeaderPartialView")
+    </section>
     <div class="presentation presentation-corporate">
         <div class="isometric-wrapper">
             <div class="floor isometric corporate">
                 <div class="content">
                     <div class="card header">
-                        <div class="button">корзина</div>
+                        <div class="button">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <div class="card"></div>
-                    <div class="card">
+                    <div class="card card-corporate"></div>
+                    <div class="card card-corporate">
                         <div class="form-inner-card-wrapper">
                             <div class="inputs-wrapper">
                                 <div class="input"></div>
@@ -27,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="fab dialogOpener toasted"></div>
+                @*<div class="fab dialogOpener toasted"></div>*@
                 <div class="dialogContainer hidden" id="dialog">
                     <div class="dialog"></div>
                 </div>
@@ -38,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="description description-promo">
+        <div class="description description-corporate">
             <h1>Корпоративный</h1>
             <p>
                 Tincidunt integer eu augue augue nunc elit dolor,
@@ -133,7 +139,7 @@
                 </div>
             </div>*@ @*plus-corporate flex*@
             @*</div>*@
-            <div class="container">
+            
                 @*--------------табы*@
                 <section class="tabs-all" role="tab">
                     @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
@@ -149,17 +155,24 @@
                     <div class="tabs_content">
                         @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
                         <div id="tab__c2">
-                            @await Component.InvokeAsync("PriceTimeDemo")
+                            <div class="tab-inner-content">
+                                @await Component.InvokeAsync("PriceTimeDemo")
+                            </div>
                             @Html.Partial("_StepsCreatePartialView")
                         </div> @*tab__c2*@
                         <div id="tab__c3">
-                            @await Component.InvokeAsync("PriceTimeDemo")
+                            <div class="tab-inner-content">
+                                @await Component.InvokeAsync("PriceTimeDemo")
+                            </div>
                         </div> @*tab__c3*@
                     </div>
                 </section>
-            </div>
+           
 
 
             @await Component.InvokeAsync("ExamplesSites", new { category = "Копоративный" })
             @await Component.InvokeAsync("OrderForm")
+    <section class="footer">
+        @Html.Partial("_FooterPartialView")
+    </section>
         </div>

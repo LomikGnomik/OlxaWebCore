@@ -233,38 +233,46 @@ header {
 main {
   flex: 1 0 auto;
 }
-.header {
-  height: 9em;
-  width: 100%;
+/*шапка с хедером,при прокрутке скрывается*/
+/*.header {
+    height: 9em;
+    width: 100%;
+
+
+
+
+
+    .toolbar {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 1em;
+
+
+
+        a {
+            text-decoration: none;
+            margin-left: 1em;
+        }
+    }
 }
-.header .toolbar {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 1em;
-}
-.header .toolbar a {
-  text-decoration: none;
-  margin-left: 1em;
-}
-.index-navigation {
+
+.navigation {
+    width: 100%;   
+    background: #fff;
+    top: 100px; 
+    position: fixed;
+    z-index: 1000;
+    transition: all 20ms linear;
+    
+}*/
+.navigation-sm {
   width: 100%;
   top: 0;
   position: fixed;
   background: #fff;
   z-index: 1000;
   transition: all 20ms linear;
-}
-.navigation {
-  width: 100%;
-  background: #fff;
-  top: 100px;
-  /*высота шапки*/
-  position: fixed;
-  z-index: 1000;
-  transition: all 20ms linear;
-  /*.logo a{
-            display:none;
-        }*/
+  padding-top: 0.5em;
 }
 nav#index-navigation {
   display: flex;
@@ -1272,31 +1280,40 @@ section.tariff .promo-wrapper ul li:last-child {
                 }*/
 }
 /*----------------------------------------------------полоса информации в табах*/
-.wrap-info {
-  background: #000;
-  margin-top: 2em;
+.border-bottom-line {
+  border-bottom: 1px solid #999999;
   width: 100%;
+}
+.wrap-info {
+  width: 25%;
+  border: 1px solid #cccccc;
+  margin-top: 2em;
+  /* border-bottom:1px solid @color-gray;
+    border-left:1px solid @color-gray;
+    border-right:1px solid @color-gray;*/
 }
 .wrap-info .info-inner {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 .wrap-info .info-inner [class*=info-item-] {
+  display: flex;
   margin: 0 1em;
   padding: 1em;
 }
 .wrap-info .info-inner [class*=info-item-] h2 {
   font-weight: 600;
-  font-size: 0.8em;
-  color: #fff;
-  margin-bottom: 1em;
+  font-size: 1em;
+  color: #333333;
+  margin-right: 2em;
 }
 .wrap-info .info-inner [class*=info-item-] p {
-  color: #cccccc;
+  color: #999999;
   font-weight: 500;
 }
 .wrap-info .info-inner [class*=info-item-] p a {
-  color: #cccccc;
+  color: #999999;
   font-size: 1em;
   cursor: pointer;
   text-decoration: underline;
@@ -1307,27 +1324,30 @@ section.tariff .promo-wrapper ul li:last-child {
 .wrap-info .info-inner [class*=info-item-] p span {
   color: #06c438;
 }
+.wrap-info .info-inner .info-button-bay {
+  margin: 0.5em;
+}
 .wrap-info .info-inner .info-button-bay .bay {
-  display: flex;
-  align-items: center;
-  margin-right: -2px;
-  outline: none;
-  border: 1px solid #b1b1b1;
-  text-align: left;
-  width: 100%;
-  height: 100%;
-  font-size: 1em;
-  color: #ffffff;
-  z-index: 0;
-  border-radius: 0px;
-  border-width: 0;
-  background: #06c438;
-  font-size: 1.375em;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
-  position: relative;
-  vertical-align: top;
-  user-select: none;
+  /*display: flex;
+                align-items: center;
+                margin-right: -2px;
+                outline: none;
+                border: 1px solid #b1b1b1;
+                text-align: left;
+                width: 100%;
+                height: 100%;
+                font-size: 1em;
+                color: #ffffff;
+                z-index: 0;
+                border-radius: 0px;
+                border-width: 0;
+                background: @color-more;
+                font-size: 1.375em;
+                padding-left: 1.25em;
+                padding-right: 1.25em;
+                position: relative;
+                vertical-align: top;
+                user-select: none;*/
   /*height: 100%;
                     margin: 0;
                     margin-right: -2px;                  
@@ -4297,7 +4317,6 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 /*---------------------------------------------------------------------Страница Лендинга*/
 .landing-wrapper section.landing-description {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   /* h1 {
@@ -4331,9 +4350,6 @@ section.develop .step-develop-wrap #tabs-3 {
   width: 80%;
 }
 .landing-wrapper section.landing-privilege {
-  min-height: 100vh;
-  /*line connecting sections*/
-  /*you can lower this to 700 and it will still work great.  Just set it to 900 cause, codepen preview.  */
   /*.privilege-wrap {
             text-align: center;
             margin-top: @size-margin-section;
@@ -4400,107 +4416,6 @@ section.develop .step-develop-wrap #tabs-3 {
                 }
             }
         }*/
-}
-.landing-wrapper section.landing-privilege h2 {
-  text-align: center;
-  width: 100%;
-  background: #333;
-  color: #fff;
-}
-.landing-wrapper section.landing-privilege .hidden {
-  visibility: hidden;
-}
-.landing-wrapper section.landing-privilege .zqWrap {
-  overflow: hidden;
-  margin: 0;
-  opacity: .9999;
-  font-family: sans-serif;
-}
-.landing-wrapper section.landing-privilege .zqUL {
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  list-style: none;
-}
-.landing-wrapper section.landing-privilege .zqLI {
-  position: relative;
-  margin: 0 auto .1em;
-  text-align: center;
-  width: 70%;
-  padding: 2%;
-}
-.landing-wrapper section.landing-privilege .zqLeft {
-  float: left;
-}
-.landing-wrapper section.landing-privilege .zqRight {
-  float: right;
-}
-.landing-wrapper section.landing-privilege .zqLineWrap {
-  z-index: -1;
-  /*it's rotated so, width is sorta like height*/
-  width: 70em;
-  height: 2000%;
-  /*the lower the top: number, the further down it will move.  Well, technically higher but.  Move it from 800% to 790% and it will move down.  */
-  top: -900%;
-  margin: 0;
-  background: #2b2b2b;
-  position: absolute;
-}
-.landing-wrapper section.landing-privilege .zqLeft .zqLineWrap {
-  transform: rotate(-75deg) translate(60%, 0%);
-}
-.landing-wrapper section.landing-privilege .zqRight .zqLineWrap {
-  transform: rotate(75deg) translate(-60%, 0%);
-}
-.landing-wrapper section.landing-privilege .zqLine {
-  opacity: 0;
-  width: 100%;
-  height: 0;
-  background: #1a1a1a;
-  transition: all 1s ease-out;
-}
-.landing-wrapper section.landing-privilege .zqJS {
-  opacity: 1;
-  height: 100%;
-}
-.landing-wrapper section.landing-privilege .zqIcon {
-  z-index: 2;
-  display: inline-block;
-  width: 8em;
-  height: 8em;
-  border-radius: 5%;
-  background: #40bf6a;
-  background-size: cover;
-  margin-bottom: 1em;
-}
-.landing-wrapper section.landing-privilege .zqH {
-  font-size: 3vmax;
-  color: #27ae60;
-}
-.landing-wrapper section.landing-privilege .zqP {
-  font-size: 1.5em;
-  line-height: 1.8;
-  color: #fff;
-}
-@media (min-width: 0px) and (max-width: 900px) {
-  .landing-wrapper section.landing-privilege .zqIcon {
-    z-index: 2;
-    display: block;
-    margin: 1em auto;
-    padding: 0;
-  }
-  .landing-wrapper section.landing-privilege .zqLI {
-    position: relative;
-    width: 98%;
-    margin: 0 auto .1em 0;
-    text-align: center;
-  }
-  .landing-wrapper section.landing-privilege .zqLineWrap {
-    top: -800%;
-  }
-  .landing-wrapper section.landing-privilege .zqH {
-    font-size: 3em;
-  }
 }
 .landing-wrapper section.landing-plus {
   padding: 3em 0;
@@ -4570,7 +4485,7 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 /*----------------------------------------------первый экран видов сайтов с картинками в изометрии*/
 .presentation {
-  margin-top: 6em;
+  margin-top: 12em;
   display: flex;
   justify-content: center;
 }
@@ -4578,10 +4493,16 @@ section.develop .step-develop-wrap #tabs-3 {
   width: 50%;
   max-width: 40em;
 }
+.presentation .description-landing.description {
+  padding-left: 8em;
+}
+.presentation .description-information.description {
+  padding-left: 2em;
+}
 /*------------------------------общие стили*/
 .isometric-wrapper {
   display: block;
-  width: 50%;
+  width: 45%;
   height: 420px;
   /*---------------------Сайт визитка*/
   /*---------------------Лендинг*/
@@ -4594,6 +4515,9 @@ section.develop .step-develop-wrap #tabs-3 {
   width: 50%;
   height: 10px;
   background: #cccccc;
+}
+.isometric-wrapper .description h1 {
+  font-size: 2em;
 }
 .isometric-wrapper .text {
   margin: 5px auto 0;
@@ -4609,7 +4533,7 @@ section.develop .step-develop-wrap #tabs-3 {
   border-bottom: 2px solid #bbbbbb;
   border-left: 2px solid #bbbbbb;
   display: block;
-  width: 320px;
+  width: 20em;
   height: 560px;
   padding: 0;
   position: absolute;
@@ -4634,6 +4558,7 @@ section.develop .step-develop-wrap #tabs-3 {
   animation: hideDelay 1s, drop 2s 1s;
   box-sizing: border-box;
   padding: 14px;
+  cursor: pointer;
 }
 .isometric-wrapper .isometric .appBar:before {
   transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
@@ -4961,7 +4886,22 @@ section.develop .step-develop-wrap #tabs-3 {
   cursor: pointer;
 }
 .isometric-wrapper .visit.floor {
-  left: 40%;
+  left: 30%;
+  width: 30em;
+  height: 30em;
+}
+.isometric-wrapper .visit.floor .visit-menu {
+  width: 29em;
+  margin: 0 2em 1em 1.1em;
+  background: #e5e5e5;
+  border-bottom: 2px solid #999999;
+  border-left: 2px solid #999999;
+  transform: translate3d(0, 0, 10px);
+  margin-left: 0.8em;
+}
+.isometric-wrapper .visit.floor .visit-menu:hover {
+  transform: translate3d(0, 0, 20px);
+  box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .visit {
   height: 25em;
@@ -4972,6 +4912,7 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .isometric-wrapper .visit .img-info-card-wrap .card {
   width: 48%;
+  height: 12em;
 }
 .isometric-wrapper .visit .card img {
   width: 100%;
@@ -4989,17 +4930,28 @@ section.develop .step-develop-wrap #tabs-3 {
   margin-top: 15px;
 }
 .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form {
-  margin-top: 12%;
+  margin-top: 8%;
 }
 .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form .right {
-  margin-left: 60%;
+  margin-left: 70%;
 }
 .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form p {
   display: table-cell;
   padding: 9px;
 }
 .isometric-wrapper .landing {
-  height: 36em;
+  height: 47em;
+  top: 5em;
+}
+.isometric-wrapper .landing .landing-menu {
+  background: #e5e5e5;
+  border-bottom: 2px solid #999999;
+  border-left: 2px solid #999999;
+  transform: translate3d(0, 0, 10px);
+}
+.isometric-wrapper .landing .landing-menu:hover {
+  transform: translate3d(0, 0, 30px);
+  box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .landing .card-inner-block1 {
   display: flex;
@@ -5040,11 +4992,11 @@ section.develop .step-develop-wrap #tabs-3 {
 }
 .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
   margin: 0 auto;
-  margin-top: 40%;
+  margin-top: 65%;
 }
 .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 p {
-  padding: 5px;
-  padding-left: 20px;
+  display: table-cell;
+  text-align: center;
 }
 .isometric-wrapper .landing .card-inner-block2 {
   width: 100%;
@@ -5055,18 +5007,54 @@ section.develop .step-develop-wrap #tabs-3 {
 .isometric-wrapper .landing .card-inner-block2 .column-right {
   width: 50%;
 }
+.isometric-wrapper .landing .button.right {
+  margin-left: 10em;
+  margin-top: 6em;
+}
+.isometric-wrapper .landing .button.right p {
+  display: table-cell;
+  text-align: center;
+}
 .isometric-wrapper .corporate.floor {
-  left: 40%;
-  top: 12em;
+  left: 35%;
+  top: 9em;
+}
+.isometric-wrapper .corporate .card-corporate.card {
+  height: 13em;
 }
 .isometric-wrapper .corporate .card.header {
   height: 5em;
   margin-bottom: 2em;
   background: #cccccc;
 }
+.isometric-wrapper .corporate .card.header .button {
+  display: table-cell;
+  text-align: center;
+  background: #3c6eaa;
+  border-bottom: 1px solid #2f5d84;
+  border-left: 1px solid #2f5d84;
+  color: #ecf0f1;
+  font-size: 1.5em;
+}
+.isometric-wrapper .corporate .button.right {
+  margin-left: 10.5em;
+  margin-top: 9em;
+}
+.isometric-wrapper .corporate .button.right p {
+  padding: 5% 15%;
+}
 .isometric-wrapper .shop.floor {
-  left: 40%;
-  top: 11em;
+  left: 35%;
+  top: 9em;
+}
+.isometric-wrapper .shop.floor .shop-admin {
+  border-bottom: 2px solid #999999;
+  border-left: 2px solid #999999;
+  transform: translate3d(0, 0, 10px);
+}
+.isometric-wrapper .shop.floor .shop-admin:hover {
+  transform: translate3d(0, 0, 30px);
+  box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .shop {
   width: 25em;
@@ -5140,15 +5128,26 @@ section.develop .step-develop-wrap #tabs-3 {
 .isometric-wrapper .shop .menu-buy {
   display: flex;
   background: #f3f3f3;
-  border-color: #222;
+  background: #e5e5e5;
+  border-bottom: 2px solid #999999;
+  border-left: 2px solid #999999;
+  transform: translate3d(0, 0, 10px);
+}
+.isometric-wrapper .shop .menu-buy:hover {
+  transform: translate3d(0, 0, 30px);
+  box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .shop .menu-buy .buy {
+  display: table-cell;
+  text-align: center;
+  background: #3c6eaa;
+  border-bottom: 2px solid #2f5d84;
+  border-left: 2px solid #2f5d84;
+  color: #ecf0f1;
+  font-size: 1.5em;
   width: 20%;
-  margin-left: 18em;
-  height: 2em;
-  background: #33f;
-  border-bottom: 2px solid #00626e;
-  border-left: 2px solid #00626e;
+  margin-left: 12em;
+  height: 1.5em;
   transform: translate3d(0, 0, 10px);
   box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
   -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
@@ -5316,13 +5315,20 @@ section.develop .step-develop-wrap #tabs-3 {
   margin-left: -100%;
 }
 .isometric-wrapper .information.floor {
-  left: 40%;
-  top: 14em;
+  left: 30%;
+  top: 10em;
 }
-.isometric-wrapper .information .slider .card {
+.isometric-wrapper .information {
+  width: 30em;
+  height: 37em;
+}
+.isometric-wrapper .information .slider.appBar {
   height: 8em;
-  background: pink;
-  transform: translate3d(0, 0, 25px);
+  margin-bottom: 1.5em;
+  background: #cccccc;
+  transform: translate3d(0, 0, 10px);
+  border-bottom: 2px solid #999999;
+  border-left: 2px solid #999999;
 }
 .isometric-wrapper .information .information-inner-wrap {
   display: flex;
@@ -5338,16 +5344,18 @@ section.develop .step-develop-wrap #tabs-3 {
   height: 40%;
   margin-bottom: 1em;
   background: #fff;
+  border-bottom: 2px solid #999999;
+  border-left: 2px solid #999999;
 }
 .isometric-wrapper .information .information-inner-wrap .menu-information-wrap .menu-information.small {
-  height: 27%;
+  height: 30%;
 }
 .isometric-wrapper .information .information-inner-wrap .content {
   width: 55%;
 }
 .isometric-wrapper .information .information-inner-wrap .content .card {
   display: flex;
-  height: 7em;
+  height: 8em;
   padding: 1em;
   margin-bottom: 1em;
   background: blue;
@@ -5860,6 +5868,10 @@ section.develop .step-develop-wrap #tabs-3 {
   }
 }
 /*-------------------------------------------------------------------------------------ТАБЫ*/
+.tab-inner-content {
+  display: flex;
+  flex-direction: column;
+}
 section.tabs-all {
   min-height: 100vh;
   position: relative;
@@ -5868,22 +5880,28 @@ section.tabs-all {
 }
 section.tabs-all .label-wrapper {
   display: flex;
+  justify-content: flex-end;
+  border-bottom: 4px solid #e5e5e5;
 }
 section.tabs-all label {
-  width: 100%;
   color: #333333;
+  background: #fff;
   cursor: pointer;
   display: block;
   line-height: 2.8em;
   font-weight: 600;
-  border: 1px solid #cccccc;
+  font-size: 1.2em;
   top: 0.125em;
   text-align: center;
   padding: 0 1em;
+  min-width: 20em;
 }
 section.tabs-all label:ntf-child(2) {
   border-left: none;
   border-right: none;
+}
+section.tabs-all label:last-child {
+  margin-right: 1em;
 }
 section.tabs-all label:hover {
   color: #06c438;
@@ -5894,10 +5912,13 @@ section.tabs-all input {
 section.tabs-all #tab__1:checked ~ .label-wrapper #tab__l1,
 section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2,
 section.tabs-all #tab__3:checked ~ .label-wrapper #tab__l3 {
-  border: 2px solid #06c438;
-  box-shadow: 0px -5px 24px -4px #000000;
-  top: 0;
+  border-left: 4px solid #e5e5e5;
+  border-right: 4px solid #e5e5e5;
+  border-top: 4px solid #e5e5e5;
+  position: relative;
+  top: 4px;
   z-index: 3;
+  background: #fff;
 }
 section.tabs-all .tabs_content {
   position: relative;

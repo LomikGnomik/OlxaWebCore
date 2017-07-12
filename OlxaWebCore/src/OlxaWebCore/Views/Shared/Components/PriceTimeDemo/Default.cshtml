@@ -1,31 +1,33 @@
 ﻿@model Service
+<div class="container">
+    <div class="wrap-info">
+        <div class="info-inner">
+            <div class="info-item-price">
+                <h2>Цена</h2>
+                <p>@Model.Price</p>
+            </div>
+            <div class="info-item-time">
+                <h2>Срок</h2>
+                <p>@Model.TimeDevelopForClient</p>
+            </div>
 
-<div class="wrap-info">
-    <div class="info-inner">
-        <div class="info-item-price">
-            <h2>Цена</h2>
-            <p>@Model.Price</p>
-        </div>
-        <div class="info-item-time">
-            <h2>Срок</h2>
-            <p>@Model.TimeDevelopForClient</p>
-        </div>
-        
-            <div class="info-item-demo">                
-                    <h2>Демо</h2>                  
-               
+            <div class="info-item-demo">
+                <h2>Демо</h2>
+
                 <p>
-                    <a href="@Model.DemoSite" class="demo">сайт</a> <span>/</span>  
+                    <a href="@Model.DemoSite" class="demo">сайт</a> <span>/</span>
                     <a href="@Model.DemoAdmin" class="demo">админка</a>
                 </p>
-                
-                    
-               
+
+
+
             </div>
 
-            <div class="info-button-bay">
+            @*<div class="info-button-bay">*@
+            <div class="info-button-bay btn btn-ghost-more">
                 <a href="#" class="bay">Закзать</a>
             </div>
-       
+        </div>
     </div>
 </div>
+@*<div class="border-bottom-line"></div>*@
