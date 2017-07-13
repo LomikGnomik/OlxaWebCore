@@ -22,6 +22,25 @@
 //        }
 //    });
 //});
+$(function () {
+    var elem = $('.navigation-sm');
+    var height = 200;
+    $(window).scroll(function () {
+        var scroll = getCurrentScroll();
+        if (scroll >= height) {
+             elem.css('border-bottom', ('1px solid @color-gray-light'));
+            elem.css('box-shadow', ('0 6px 4px -4px rgba(0, 0, 0, .2'));
+        }
+        else {
+            elem.css('box-shadow', ('none'));
+            elem.css('border-bottom', ('none'));
+        }
+    });
+    function getCurrentScroll() {
+        return window.pageYOffset || document.documentElement.scrollTop;
+    }
+});
+
 /*---------------------------------------кнопка меню для мобильных----------------------*/
 $(document).ready(function () {
 
@@ -159,33 +178,71 @@ $(document).ready(function () {
 })
 
 
-/*---------------------интернет магазин эффект*/
-$('.avTile').hover(function () {
-    $('.avFeature').toggleClass('active');
+/*---------------------главная-виды сайтов эффект*/
+//доработать
+//$('.promo-site').click(function () {
+//    $('.avFeature').toggleClass('active');
+//    $('.firewallFeature').removeClass('active');
+//    $('.backupFeature').removeClass('active');
+//    $('.vulnerabilitiesFeature').removeClass('active');
+//    $('.spamfilterFeature').removeClass('active');
+//});
+//$('.landing-site').click(function () {
+//    $('.avFeature').removeClass('active');
+//    $('.firewallFeature').addClass('active');
+//    $('.backupFeature').removeClass('active');
+//    $('.vulnerabilitiesFeature').removeClass('active');
+//    $('.spamfilterFeature').removeClass('active');
+//});
+//$('.corporate-site').click(function () {
+//    $('.avFeature').removeClass('active');
+//    $('.firewallFeature').removeClass('active');
+//    $('.backupFeature').addClass('active');
+//    $('.vulnerabilitiesFeature').removeClass('active');
+//    $('.spamfilterFeature').removeClass('active');
+//});
+//$('.shop-site').click(function () {
+//    $('.avFeature').removeClass('active');
+//    $('.firewallFeature').removeClass('active');
+//    $('.backupFeature').removeClass('active');
+//    $('.vulnerabilitiesFeature').addClass('active');
+//    $('.spamfilterFeature').removeClass('active');
+//    $('.smpFeature').removeClass('active');
+//});
+//$('.information-site').click(function () {
+//    $('.avFeature').removeClass('active');
+//    $('.firewallFeature').removeClass('active');
+//    $('.backupFeature').removeClass('active');
+//    $('.vulnerabilitiesFeature').removeClass('active');
+//    $('.spamfilterFeature').addClass('active');
+//    $('.smpFeature').removeClass('active');
+//});
+//$('.develop-site').click(function () {
+//    $('.avFeature').removeClass('active');
+//    $('.firewallFeature').removeClass('active');
+//    $('.backupFeature').removeClass('active');
+//    $('.vulnerabilitiesFeature').removeClass('active');
+//    $('.spamfilterFeature').removeClass('active');
+//    $('.smpFeature').addClass('active');
+//});
+
+
+
+
+$('.promo-site').hover(function () {
+    $('.promo-site-description').toggleClass('active');
 });
-$('.firewallTile').hover(function () {
-    $('.firewallFeature').toggleClass('active');
+$('.landing-site').hover(function () {
+    $('.landing-site-description').toggleClass('active');
 });
-$('.backupTile').hover(function () {
-    $('.backupFeature').toggleClass('active');
+$('.corporate-site').hover(function () {
+    $('.corporate-site-description').toggleClass('active');
 });
-$('.vulnerabilitiesTile').hover(function () {
-    $('.vulnerabilitiesFeature').toggleClass('active');
+$('.shop-site').hover(function () {
+    $('.shop-site-description').toggleClass('active');
 });
-$('.spamfilterTile').hover(function () {
-    $('.spamfilterFeature').toggleClass('active');
-});
-$('.smpTile').hover(function () {
-    $('.smpFeature').toggleClass('active');
-});
-$('.tuneupTile').hover(function () {
-    $('.tuneupFeature').toggleClass('active');
-});
-$('.idpTile').hover(function () {
-    $('.idpFeature').toggleClass('active');
-});
-$('.parentalTile').hover(function () {
-    $('.parentalFeature').toggleClass('active');
+$('.information').hover(function () {
+    $('.information-site-description').toggleClass('active');
 });
 
 /*------------------------первый экран с видами сайтов картинки в изометрии-------------------*/

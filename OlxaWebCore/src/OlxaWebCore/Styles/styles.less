@@ -904,122 +904,7 @@ section.content {
     //display: flex;
     margin-bottom: 2em;
 
-    .card-wrap {
-        // width: 100%;
-        height: 65vh;
-        overflow: hidden;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .card {
-            position: relative;
-            top: -2em;
-            width: 50em;
-            height: 25em;
-            transition: transform 1s ease-in-out;
-            transform-style: preserve-3d;
-        }
-
-
-        .card .face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            padding: 1.9em;
-            backface-visibility: hidden;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        }
-
-
-        .front {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-            transition: opacity 0s linear 0.5s;
-            background: #303030;
-        }
-
-
-
-        .front .logo {
-            text-transform: uppercase;
-            font: 3em;
-            font-weight: 300;
-            display: inline-block;
-            color: #606060;
-        }
-
-
-        .back {
-            z-index: -1;
-            text-transform: uppercase;
-            font-weight: 400;
-            background: #2f99ff;
-            color: #133d66;
-            line-height: 16px;
-            transform: rotateY(-180deg);
-            transition: opacity 1s linear 0s;
-        }
-
-
-
-
-        .back h2 {
-            font: 700 4em;
-            margin-bottom: 1em;
-            color: #133d66;
-        }
-
-
-        .back h3 {
-            font: 400 3em;
-            margin-bottom: 0.5em;
-            color: #acd6ff;
-        }
-
-
-        .back .info {
-            // position: absolute;
-            bottom: 30px;
-            left: 30px;
-            // letter-spacing: 4px;
-            //vertical-align: bottom;
-        }
-
-
-        .back .property {
-            color: #acd6ff;
-        }
-
-
-        .back .link {
-            text-decoration: none;
-            color: #133d66;
-        }
-        /* Flip effect*/
-        .card-container {
-            perspective: 800px;
-        }
-
-
-        .card-container:hover .card {
-            transform: rotateY(-180deg);
-        }
-
-
-        .card-container:hover .front {
-            opacity: 0;
-        }
-    }
-
-    p {
-        margin-bottom: 1em;
-        line-height: 1.5em;
-        text-align: justify;
-    }
+    
 }
 
 
@@ -1768,8 +1653,8 @@ section.tariff {
 
 .wrap-info {
     width: 25%;
-    border:1px solid @color-gray-light;
-    margin-top:2em;
+    border: 1px solid @color-gray-light;
+    margin-top: 2em;
     //background: #000;
     //margin-top: 2em;
     // border: 1px solid gray;
@@ -1818,9 +1703,20 @@ section.tariff {
             }
         }
 
+        .info-button-bay.btn-ghost-more {
+            color: @color-more;
+
+            &:hover .buy {
+                color: @font-color-reverce;
+            }
+        }
+
         .info-button-bay {
-            margin:0.5em;
-            .bay {
+            margin: 0.5em;
+
+            .buy {
+                color: @color-more;
+                font-weight: 600;
                 /*display: flex;
                 align-items: center;
                 margin-right: -2px;
@@ -1857,9 +1753,9 @@ section.tariff {
                     white-space: nowrap;
                     user-select: none;
                     transition: color 0.3s ease-out, background-color 0.3s ease-out;*/
-                &:hover {
+                /*&:hover {
                     background: @color-more-darken1;
-                }
+                }*/
             }
         }
     }
@@ -2757,6 +2653,10 @@ section.price-solution {
                 margin: 0 auto;
                 margin-bottom: 2em;
             }
+
+            .btn-price-solution:hover {
+                background: @color-base-lighter1;
+            }
         }
 
         .solution-title {
@@ -3378,6 +3278,51 @@ section.price-solution {
     }
 
     section.plus {
+        h2.font {
+            display: inline-block;
+            margin-top: 1em;
+            margin-left: 0.3em;
+            font-size: 3em;
+        }
+
+        a.btn-ghost {
+            display: block;
+            height: 3.5em;
+            line-height: 2.8em;
+            font-size: 2em;
+            font-weight: 900;
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            text-decoration: none;
+            border: 2px solid transparent;
+            padding: 0 1.56em;
+            margin: 0.625em 0.5em;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            white-space: nowrap;
+            user-select: none;
+            transition: color 0.3s ease-out, background-color 0.3s ease-out;
+            background-color: @color-gray-lighter;
+            min-width: 3.75em;
+            background-color: transparent;
+            // border-color: @color-base;
+            color: @color-base;
+            width: 9em;
+            position: relative;
+            bottom: -6em;
+            left: 5.5em;
+
+
+
+            &:hover {
+                text-decoration:underline;
+                //background: @color-base;
+                //color: #fff;
+            }
+        }
+
         .avFeaturesContainer {
             width: 100%;
             overflow-x: hidden;
@@ -3391,8 +3336,9 @@ section.price-solution {
             min-height: 100vh;
             // height: 809px;
             perspective: 1000px;
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avFeatures_Bg.jpg) right top #171717 no-repeat;
+            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avFeatures_Bg.jpg) right top no-repeat;
             background-size: cover;
+            //  background-image: url('');
             //  padding-right: 229px;
             font-family: 'Open Sans', sans-serif;
             font-weight: 300;
@@ -3408,41 +3354,30 @@ section.price-solution {
         }
 
         .screenRap {
-            width: 1519px;
+            width: 1719px;
             height: 623px;
             position: absolute;
-            top: 250px;
-            right: 50px;
+            top: 150px;
+            right: -100px;
             z-index: 3;
             transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
-            -webkit-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
-            -moz-transform: scale(0.34) rotateX(0deg) rotateZ(6deg) rotateY(-5deg) skewX(-8deg) skewY(0deg);
-            /*а {
-                font-size: 2em;
-            }*/
         }
 
-        .font {
-            font-size: 2em;
-        }
 
         .screenRap div {
-            width: 300px;
-            height: 301px;
+            width: 500px;
+            height: 441px;
             transform: scale(1, 1);
-            -webkit-transform: scale(1, 1);
-            -moz-transform: scale(1, 1);
             float: left;
             cursor: pointer;
             margin: 8px;
             //text-indent: -9999px;
             transition: all .2s;
-            -webkit-transition: all .2s;
-            -moz-transition: all .2s;
             position: relative;
             z-index: 1;
             box-shadow: rgba(0, 0, 0, 0.23) 19px 19px 30px;
             left: 0;
+            background: @color-gray-lighter;
         }
 
         .screenRap:hover div {
@@ -3455,52 +3390,67 @@ section.price-solution {
             transform: scale(1.8, 1.8) !important;
         }
 
-        .screenRap .avTile {
-            //  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avTile.jpg) no-repeat;
+        .screenRap .promo-site {           
         }
 
-        .screenRap .firewallTile {
-            //   background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallTile.jpg) no-repeat;
-        }
-
-        .screenRap .backupTile {
-            //   background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupTile.jpg) no-repeat;
-            animation: tileLoadScale .6s 2.2s forwards;
-            -webkit-animation: tileLoadScale .6s 2.2s forwards;
-            -moz-animation: tileLoadScale .6s 2.2s forwards;
-        }
-
-        .screenRap .vulnerabilitiesTile {
-            //   background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerableTile.jpg) no-repeat;
-        }
-
-        .screenRap .spamfilterTile {
-            //   background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterTile.jpg) no-repeat;
-            animation: tileLoadScale .6s 2.7s forwards;
-            -webkit-animation: tileLoadScale .6s 2.7s forwards;
-            -moz-animation: tileLoadScale .6s 2.7s forwards;
-        }
-
-        .screenRap .smpTile {
-            //   background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpTile.jpg) no-repeat;
+        .screenRap .landing-site {
             animation: tileLoadScale .6s 2s forwards;
-            -webkit-animation: tileLoadScale .6s 2s forwards;
-            -moz-animation: tileLoadScale .6s 2s forwards;
         }
 
-        .screenRap .tuneupTile {
-            //   background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupTile.jpg) no-repeat;
+        .screenRap .corporate-site {
+            animation: tileLoadScale .6s 2.2s forwards;
+        }
+
+        .screenRap .shop-site {
+        }
+
+        .screenRap .information-site {
+            animation: tileLoadScale .6s 2.7s forwards;
+        }
+        
+        /*.screenRap .tuneupTile {
         }
 
         .screenRap .idpTile {
-            //   background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpTile.jpg) no-repeat;
         }
 
         .screenRap .parentalTile {
-            //   background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalTile.jpg) no-repeat;
             animation: tileLoadScale .6s 2.4s forwards;
-            -webkit-animation: tileLoadScale .6s 2.4s forwards;
-            -moz-animation: tileLoadScale .6s 2.4s forwards;
+        }*/
+        .promo-site-description h2 {
+            background: url() left center no-repeat;
+        }
+
+        .landing-site-description h2 {
+            background: url() left center no-repeat;
+        }
+
+        .corporate-site-description h2 {
+            background: url() left center no-repeat;
+        }
+
+        .shop-site-description h2 {
+            background: url() left center no-repeat;
+        }
+
+        .information-site-description h2 {
+            background: url() left center no-repeat;
+        }
+
+        .smpFeature h2 {
+            background: url() left center no-repeat;
+        }
+
+        .tuneupFeature h2 {
+            background: url() left center no-repeat;
+        }
+
+        .idpFeature h2 {
+            background: url() left center no-repeat;
+        }
+
+        .parentalFeature h2 {
+            background: url() left center no-repeat;
         }
 
         .feature {
@@ -3508,13 +3458,11 @@ section.price-solution {
             opacity: 0;
             z-index: 3;
             transition: opacity .1s ease;
-            -webkit-transition: opacity .1s ease;
-            -moz-transition: opacity .1s ease;
             width: 30%;
             top: 188px;
             left: 95px;
         }
-
+        
         .feature.active {
             opacity: 1;
         }
@@ -3525,8 +3473,6 @@ section.price-solution {
             margin: 0 0 10px -120px;
             opacity: 0;
             transition: all .2s ease;
-            -webkit-transition: all .2s ease;
-            -moz-transition: all .2s ease;
         }
 
         .feature.active h2 {
@@ -3540,8 +3486,6 @@ section.price-solution {
             width: 0;
             opacity: 0;
             transition: width .3s ease, opacity .7s ease;
-            -webkit-transition: width .3s ease, opacity .7s ease;
-            -moz-transition: width .3s ease, opacity .7s ease;
         }
 
         .feature.active div {
@@ -3564,8 +3508,6 @@ section.price-solution {
             padding: 32px 32px 0 0;
             opacity: 0;
             transition: all .3s ease;
-            -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
         }
 
         .feature.active p {
@@ -3578,44 +3520,9 @@ section.price-solution {
             font-size: 11px;
         }
 
-        .avFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avIcon.png) left center no-repeat;
-        }
-
-        .firewallFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/firewallIcon.png) left center no-repeat;
-        }
-
-        .backupFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/backupIcon.png) left center no-repeat;
-        }
-
-        .vulnerabilitiesFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/vulnerabilitiesIcon.png) left center no-repeat;
-        }
-
-        .spamfilterFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/spamfilterIcon.png) left center no-repeat;
-        }
-
-        .smpFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/smpIcon.png) left center no-repeat;
-        }
-
-        .tuneupFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/tuneupIcon.png) left center no-repeat;
-        }
-
-        .idpFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/idpIcon.png) left center no-repeat;
-        }
-
-        .parentalFeature h2 {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/parentalIcon.png) left center no-repeat;
-        }
 
         .hoverIcon {
-            background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/mouseHoverIcon.png) center top no-repeat;
+            // background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/mouseHoverIcon.png) center top no-repeat;
             color: #fff;
             font-size: 11px;
             text-transform: uppercase;
@@ -3728,6 +3635,15 @@ section.price-solution {
 
                     p {
                         font-size: 0.8em;
+
+                        a {
+                            text-decoration: underline;
+                            color: @color-base;
+
+                            &:hover {
+                                color: @color-base-darken2;
+                            }
+                        }
                     }
                 }
             }
@@ -3939,8 +3855,6 @@ section.price-solution {
     }
 }
 
-
-
 /*----------------------------------------------------------------------Корпоративный сайт*/
 .corporete-wrap {
     margin-top: 7em;
@@ -4038,7 +3952,6 @@ section.price-solution {
         }
     }*/
 }
-
 /*-------------------------------------------------------------------Информационный сайт*/
 section.information-title {
     margin: 2em;
@@ -4581,7 +4494,6 @@ section.information-title {
         height: auto;
     }
 }
-
 /*-----------------------------------------------------------страница О НАС/Контакты*/
 .about-wrap {
     padding-top: 3em;
@@ -4650,195 +4562,227 @@ section.information-title {
     }
 }
 /*----------------------------------------------------------------страница разработки*/
-section.develop {
-    .step-develop-wrap {
+.develop-wrapper {
+    section.description-develop-wrap {
+        padding-top: 8em;
 
-        #tabs {
-            width: 700px;
-            display: flex;
-            position: relative;
+        .description-inner-title {
+            h1 {
+                text-align: center;
+                text-transform: capitalize;
+            }
+
+            small {
+                display: block;
+                text-align: center;
+                font-size: @size-font-extra-small;
+                color: @color-gray-light;
+                text-transform: uppercase;
+                font-weight: bold;
+                line-height: 2;
+                margin-top: 0.312em;
+                letter-spacing: .1em;
+                margin-bottom: 3em;
+            }
+        }
+
+        .description-inner {
+            text-align: center;
+            max-width: 40em;
             margin: 0 auto;
-            margin-top: 50px;
-            height: auto;
-            min-height: 200px;
-            // max-height: 600px;
-            overflow: hidden;
         }
+    }
 
-        ul {
-            position: relative;
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            vertical-align: top;
-            width: 50%;
-        }
+    section.develop {
+        .step-develop-wrap {
 
-        ul li a {
-            position: relative;
-            display: block;
-            width: 100%;
-            text-decoration: none;
-            color: #3b3b3b;
-            border-top: solid 2px #e9e9e9;
-            padding: 20px 5px;
-            z-index: 1;
-            opacity: .5;
-            -webkit-transition: 0.3s ease;
-            -moz-transition: 0.3s ease;
-            -o-transition: 0.3s ease;
-            transition: 0.3s ease;
-        }
+            #tabs {
+                width: 700px;
+                display: flex;
+                position: relative;
+                margin: 0 auto;
+                margin-top: 50px;
+                height: auto;
+                min-height: 200px;
+                // max-height: 600px;
+                overflow: hidden;
+            }
 
-        ul li:focus, a:focus {
-            outline: none;
-        }
+            ul {
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                vertical-align: top;
+                width: 50%;
+            }
 
-        ul li:nth-child(1) a {
-            border-top: none;
-        }
+            ul li a {
+                position: relative;
+                display: block;
+                width: 100%;
+                text-decoration: none;
+                color: #3b3b3b;
+                border-top: solid 2px #e9e9e9;
+                padding: 20px 5px;
+                z-index: 1;
+                opacity: .5;
+                -webkit-transition: 0.3s ease;
+                -moz-transition: 0.3s ease;
+                -o-transition: 0.3s ease;
+                transition: 0.3s ease;
+            }
 
-        ul li a.active {
-            opacity: 1;
-        }
+            ul li:focus, a:focus {
+                outline: none;
+            }
 
-        .para-a {
-            font-weight: bold;
-            margin-top: 10px;
-            padding: 0;
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 1px;
-            border: none;
-            font-family: 'Montserrat';
-            color: #2b2b2b;
-        }
+            ul li:nth-child(1) a {
+                border-top: none;
+            }
 
-        .tag {
-            position: relative;
-            width: 100%;
-        }
+            ul li a.active {
+                opacity: 1;
+            }
 
-        .icon {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: #c7c7c7;
-            border-radius: 100%;
-            vertical-align: middle;
-        }
+            .para-a {
+                font-weight: bold;
+                margin-top: 10px;
+                padding: 0;
+                text-transform: uppercase;
+                font-size: 11px;
+                letter-spacing: 1px;
+                border: none;
+                font-family: 'Montserrat';
+                color: #2b2b2b;
+            }
 
-        .block {
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            vertical-align: middle;
-            border: solid 2px #7b7b7b;
-            border-radius: 5px;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
+            .tag {
+                position: relative;
+                width: 100%;
+            }
 
-        .circle {
-            position: absolute;
-            padding: 2px;
-            border: solid 2px #7b7b7b;
-            border-radius: 100%;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
+            .icon {
+                position: relative;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background: #c7c7c7;
+                border-radius: 100%;
+                vertical-align: middle;
+            }
 
-        .title {
-            display: inline-block;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding: 0 10px;
-            vertical-align: middle;
-            color: #7b7b7b;
-        }
+            .block {
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                vertical-align: middle;
+                border: solid 2px #7b7b7b;
+                border-radius: 5px;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
 
-        .addon {
-            position: relative;
-            width: 80%;
-            top: -25px;
-            margin-left: 70px;
-            letter-spacing: 0;
-            font-size: 13px;
-            color: #9b9b9b;
-            opacity: 0;
-            font-family: 'Open Sans';
-        }
+            .circle {
+                position: absolute;
+                padding: 2px;
+                border: solid 2px #7b7b7b;
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
 
-        .addon.fadein {
-            opacity: 1;
-        }
+            .title {
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 0 10px;
+                vertical-align: middle;
+                color: #7b7b7b;
+            }
 
-        .browser {
-            width: 45%;
-            height: 95%;
-            position: absolute;
-            border-style: solid;
-            border-width: 2px 0 2px 2px;
-            border-color: #7b7b7b transparent #7b7b7b #7b7b7b;
-            right: 0;
-            border-radius: 10px 0 0 10px;
-            overflow: hidden;
-        }
+            .addon {
+                position: relative;
+                width: 80%;
+                top: -25px;
+                margin-left: 70px;
+                letter-spacing: 0;
+                font-size: 13px;
+                color: #9b9b9b;
+                opacity: 0;
+                font-family: 'Open Sans';
+            }
 
-        .top-bar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            line-height: 20px;
-            background: #fff;
-            border-bottom: solid 2px #7b7b7b;
-            z-index: 2;
-        }
+            .addon.fadein {
+                opacity: 1;
+            }
 
-        .dot {
-            position: relative;
-            display: inline-block;
-            padding: 4px;
-            background: #c7c7c7;
-            border-radius: 100%;
-        }
+            .browser {
+                width: 45%;
+                height: 95%;
+                position: absolute;
+                border-style: solid;
+                border-width: 2px 0 2px 2px;
+                border-color: #7b7b7b transparent #7b7b7b #7b7b7b;
+                right: 0;
+                border-radius: 10px 0 0 10px;
+                overflow: hidden;
+            }
 
-        .dot:nth-child(1) {
-            margin-left: 7px;
-        }
+            .top-bar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 20px;
+                line-height: 20px;
+                background: #fff;
+                border-bottom: solid 2px #7b7b7b;
+                z-index: 2;
+            }
 
-        #tabs-1, #tabs-2, #tabs-3 {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-        }
+            .dot {
+                position: relative;
+                display: inline-block;
+                padding: 4px;
+                background: #c7c7c7;
+                border-radius: 100%;
+            }
 
-        #tabs-1 {
-            background: #9b9b9b;
-        }
+            .dot:nth-child(1) {
+                margin-left: 7px;
+            }
 
-        #tabs-2 {
-            background: #c9c9c9;
-        }
+            #tabs-1, #tabs-2, #tabs-3 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+            }
 
-        #tabs-3 {
-            background: #1b1b1b;
+            #tabs-1 {
+                background: #9b9b9b;
+            }
+
+            #tabs-2 {
+                background: #c9c9c9;
+            }
+
+            #tabs-3 {
+                background: #1b1b1b;
+            }
         }
     }
 }
@@ -5069,11 +5013,6 @@ section.develop {
         transition: all 0.5s ease-in-out;
     }
 }
-
-
-
-
-
 /*--------------------------------------------------------------Форма отправки заявки*/
 .form-wrapper {
     width: 100%;
@@ -5276,7 +5215,6 @@ section.develop {
         justify-content: space-between;
     }
 }
-
 /*------------------------------------------------------------------форма внутри модального окна */
 .modal-form {
 
@@ -5406,9 +5344,7 @@ section.develop {
         }
     }
 }
-
 /*---------------------------------------------------------------------Страница Лендинга*/
-
 .landing-wrapper {
     section.landing-description {
         //min-height: 100vh;
@@ -5630,6 +5566,13 @@ section.develop {
     .description {
         width: 50%;
         max-width: 40em;
+        display: table;
+        table-layout: fixed;
+
+        .description-inner {
+            display: table-cell;
+            vertical-align: middle;
+        }
     }
 
     .description-landing.description {
@@ -6696,9 +6639,6 @@ section.develop {
         opacity: 0;
     }
 }
-
-
-
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
     // min-height: 65vh;
@@ -7258,7 +7198,17 @@ section.develop {
 /*-------------------------------------------------------------------------------------ТАБЫ*/
 .tab-inner-content {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+
+    .content-item {
+        width: 65%;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+    }
 }
 
 section.tabs-all {
@@ -7266,13 +7216,14 @@ section.tabs-all {
     min-height: 100vh;
     position: relative;
     width: 100%;
+    margin-top: 2em;
     margin-bottom: 2em;
 
 
 
     .label-wrapper {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         border-bottom: 4px solid @color-gray-lighter;
         //border-bottom: 4px solid @color-gray-lighter;
         //border-top: 1px solid @color-gray;

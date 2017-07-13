@@ -109,12 +109,14 @@
                 @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
                 <div id="tab__c2">
                     <div class="tab-inner-content">
-                        @await Component.InvokeAsync("PriceTimeDemo")
+                        <div class="content-item"></div>
+                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
                     </div>
                 </div> @*tab__c2*@
                 <div id="tab__c3">
                     <div class="tab-inner-content">
-                        @await Component.InvokeAsync("PriceTimeDemo")
+                        <div class="content-item"></div>
+                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
                     </div>
                 </div> @*tab__c3*@
             </div>

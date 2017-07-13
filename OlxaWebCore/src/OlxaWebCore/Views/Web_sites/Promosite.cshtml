@@ -40,13 +40,16 @@
                     </div>
                 </div>
                 <div class="description description-promo">
-                    <h1>Сайт визитка</h1>
-                    <p>
-                        Tincidunt integer eu augue augue nunc elit dolor,
-                        luctus placerat scelerisque euismod, iaculis eu
-                        lacus nunc mi elit, vehicula ut laoreet ac,
-                        aliquam sit amet justo nunc tempor, metus vel.
-                    </p>
+                    <div class="description-inner">
+                        <h1>Сайт визитка</h1>
+                        <p>
+                            Tincidunt integer eu augue augue nunc elit dolor,
+                            luctus placerat scelerisque euismod, iaculis eu
+                            lacus nunc mi elit, vehicula ut laoreet ac,
+                            aliquam sit amet justo nunc tempor, metus vel.
+                        </p>
+                    </div>
+                    
                 </div>
          
         </div>
@@ -134,13 +137,15 @@
             @*<div id="tab__c1"></div>*@ @*tab__c1*@
             <div id="tab__c2">
                 <div class="tab-inner-content">
-                    @await Component.InvokeAsync("PriceTimeDemo")
+                    <div class="content-item"></div>
+                    <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
                 </div>
                
             </div> @*tab__c2*@
             <div id="tab__c3">
                 <div class="tab-inner-content">
-                    @await Component.InvokeAsync("PriceTimeDemo")
+                    <div class="content-item"></div>
+                    <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
                 </div>
             </div> @*tab__c3*@
         </div>
