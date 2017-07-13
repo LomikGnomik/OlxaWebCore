@@ -3,10 +3,7 @@
     ViewData["Title"] = "Создание Landing page";
     ViewBag.PortfolioExample = "Примеры Landing Page";
 }
-@section scripts{
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/js/LandingScripts.js"></script>
-}
+
 <main class="landing-wrapper">
     <section class="header">
         @Html.Partial("_HeaderPartialView")
@@ -34,35 +31,35 @@
                         </div>
                         <div class="card">
                             <!--  <div class="card-inner-block2">
-                        <div class="column-left">
-                          <div class="text"></div>
-                          <div class="text"></div>
-                          <div class="text"></div>
-                          <div class="text"></div>
-                        </div>
-                        <div class="column-right">
-                          <div class="text"></div>
-                          <div class="text"></div>
-                          <div class="text"></div>
-                          <div class="text"></div>
-                        </div>
-                      </div> -->
+                              <div class="column-left">
+                                <div class="text"></div>
+                                <div class="text"></div>
+                                <div class="text"></div>
+                                <div class="text"></div>
+                              </div>
+                              <div class="column-right">
+                                <div class="text"></div>
+                                <div class="text"></div>
+                                <div class="text"></div>
+                                <div class="text"></div>
+                              </div>
+                            </div> -->
                         </div>
                         <div class="card"></div>
-                            <div class="card">
-                                <div class="form-inner-card-wrapper">
-                                    <div class="inputs-wrapper">
-                                        <div class="input"></div>
-                                        <div class="input"></div>
-                                    </div>
-                                    <div class="buttons-form">
-                                        <div class="button right">
-                                            <p>Заказать</p>
-                                        </div>
+                        <div class="card">
+                            <div class="form-inner-card-wrapper">
+                                <div class="inputs-wrapper">
+                                    <div class="input"></div>
+                                    <div class="input"></div>
+                                </div>
+                                <div class="buttons-form">
+                                    <div class="button right">
+                                        <p>Заказать</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div><div class="description description-landing">
                 <h1>landing</h1>
@@ -94,20 +91,21 @@
             @*<div id="tab__c1"></div>*@ @*tab__c1*@
             <div id="tab__c2">
                 <div class="tab-inner-content">
-                    @await Component.InvokeAsync("PriceTimeDemo")
-
+                    <div class="content-item"></div>
+                    <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
                 </div>
             </div> @*tab__c2*@
             <div id="tab__c3">
                 <div class="tab-inner-content">
-                    @await Component.InvokeAsync("PriceTimeDemo")
+                    <div class="content-item"></div>
+                    <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
 
                 </div>
             </div> @*tab__c3*@
         </div>
     </section>
 
-    <section class="landing-privilege">     
+    <section class="landing-privilege">
 
         @*<div class="container">
                 <div class="privilege-wrap">

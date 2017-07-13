@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-    </section>   
+    </section>
     <section class="about section fp-auto-height">
         <div class="about__wrap">
             <div class="title-wrap">
@@ -63,8 +63,9 @@
                             <h3>Продажа готовых сайтов</h3>
                             <p>
                                 Он будет содержать основные модули для ведения бизнесса(форма обратной связи, контакты и т.д.)
-                                Своей низкой ценой и отсутствием временных затрат на создание, идеально подходит для начинающих бизнессменов.
-
+                                Своей низкой ценой и отсутствием временных затрат на создание, идеально подходит для начинающих
+                                бизнессменов.
+                                <a asp-controller="Home" asp-action="Price">Подробнее...</a>
                             </p>
                         </div>
                     </div>
@@ -78,6 +79,7 @@
                                 @*Это золотая середина между готовыми решениями и разработкой сайта.
                                     Так как гораздо дешевле и быстрее разработки, но в тоже время довольно
                                     гибко настраивается под нужды заказчика*@
+                                <a asp-controller="Home" asp-action="Price">Подробнее...</a>
                             </p>
                         </div>
                     </div>
@@ -89,6 +91,7 @@
                                 Долго и дорого относительно остальных вариантов, все модули разрабатываются
                                 @*исходя из нужд бизнесса клиента
                                     Проходит все стадии разработки начиная с написания ТЗ и заканчивая наполнением.*@
+                                <a asp-controller="Home" asp-action="Price">Подробнее...</a>
                             </p>
                         </div>
                     </div>
@@ -97,8 +100,8 @@
         </div>
 
     </section>
-    <section class="plus section">        
-            @Html.Partial("_Index_WebSitesPartialView")        
+    <section class="plus section">
+        @Html.Partial("_Index_WebSitesPartialView")
     </section>
     @*<section class="steps-divelopment section fp-auto-height">
             <section class="tabs-all index-tabs" role="tab">
