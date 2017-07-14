@@ -903,8 +903,6 @@ footer {
 section.content {
     //display: flex;
     margin-bottom: 2em;
-
-    
 }
 
 
@@ -2556,19 +2554,26 @@ section.portfolio {
 
 
 /*---------------------------------страница после заказа order/orderList*/
-.order-wrap {
+.order-wrapper {
     min-height: 100vh;
     // display:flex;
     // vertical-align:middle;
     text-align: center;
     background: url(http://relaxonpro.com/img.jpg) no-repeat;
 
-    .order-title {
-        padding-top: 7em;
-        line-height: 2em;
+    .order-title-wrap {
+        display:table;
+        table-layout:fixed;
+        .order-title {
+            display:table-cell;
+            vertical-align:middle;
+            text-align:center;
+            padding-top: 7em;
+           // line-height: 2em;
 
-        span {
-            color: @color-base;
+            span {
+                color: @color-base;
+            }
         }
     }
 }
@@ -3317,7 +3322,7 @@ section.price-solution {
 
 
             &:hover {
-                text-decoration:underline;
+                text-decoration: underline;
                 //background: @color-base;
                 //color: #fff;
             }
@@ -3390,7 +3395,7 @@ section.price-solution {
             transform: scale(1.8, 1.8) !important;
         }
 
-        .screenRap .promo-site {           
+        .screenRap .promo-site {
         }
 
         .screenRap .landing-site {
@@ -3407,7 +3412,6 @@ section.price-solution {
         .screenRap .information-site {
             animation: tileLoadScale .6s 2.7s forwards;
         }
-        
         /*.screenRap .tuneupTile {
         }
 
@@ -3462,7 +3466,7 @@ section.price-solution {
             top: 188px;
             left: 95px;
         }
-        
+
         .feature.active {
             opacity: 1;
         }
@@ -4497,19 +4501,14 @@ section.information-title {
 /*-----------------------------------------------------------страница О НАС/Контакты*/
 .about-wrap {
     padding-top: 3em;
-    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%,#092756 100%);
-    background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg, #670d10 0%,#092756 100%);
-    background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg, #670d10 0%,#092756 100%);
-    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg, #670d10 0%,#092756 100%);
 
     .about-wrapper {
-        min-height: 40vh;
-
+        // min-height: 100vh;
+        // display:flex;
         .about-title {
             margin: 0 auto;
             padding: 2em 0;
-
+            //   width:50%;
             h2 {
                 padding: 2em;
                 color: #FFFFFF;
@@ -4528,19 +4527,24 @@ section.information-title {
 
 
     .contacts-wrapper {
-        min-height: 60vh;
-
-
+        //min-height: 100vh;
+        padding-top: 5em;
+        //  width:50%;
+        //display:flex;
         .contacts {
+            min-height: 720px;
             display: flex;
-            justify-content: center;
-
+            background: @color-gray-dark;
+            //justify-content: center;
             .map {
                 margin-right: 1em;
+                width: 50%;
+                height: 100%;
             }
 
             .info {
-                margin-left: 1em;
+                width: 50%;
+                height: 100%;
                 line-height: 2em;
 
                 span {
@@ -7818,7 +7822,7 @@ section.tabs-all {
         width: 90%;
     }
     /*--------------------------------меню для мобильных*/
-    .navigation {
+    .navigation-sm{
         nav {
             .menu-trigger {
                 display: block;
@@ -7827,9 +7831,9 @@ section.tabs-all {
         }
     }
 
-    .wrapper .navigation nav .main-menu
-    /*.wrapper .navigation nav .main-menu .main-menu__item,
-    .wrapper .navigation nav .main-menu .main-menu__item .submenu*/ {
+    .wrapper .navigation-sm nav .main-menu
+    /*.wrapper .navigation-sm nav .main-menu .main-menu__item,
+    .wrapper .navigation-sm nav .main-menu .main-menu__item .submenu*/ {
         display: none;
     }
     /*li {
