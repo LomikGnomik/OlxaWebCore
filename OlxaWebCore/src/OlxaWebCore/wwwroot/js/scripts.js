@@ -241,7 +241,7 @@ $('.corporate-site').hover(function () {
 $('.shop-site').hover(function () {
     $('.shop-site-description').toggleClass('active');
 });
-$('.information').hover(function () {
+$('.information-site').hover(function () {
     $('.information-site-description').toggleClass('active');
 });
 
