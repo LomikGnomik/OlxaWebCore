@@ -22,3 +22,14 @@ $(function () {
         headerOnly: false
     });
 });
+/*----------------------------------скрипт автозаполнения------------------------*/
+$(function () {
+    var autocompleteUrl = '@Url.Action("Find")';
+    $("input#categoryService").autocomplete({
+        source: autocompleteUrl,
+        minLength: 2,
+        select: function (event, ui) {
+            alert("Selected " + ui.item.label);
+        }
+    });
+});

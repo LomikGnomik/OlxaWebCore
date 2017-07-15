@@ -13,9 +13,11 @@
     <script src="~/lib/fullpage.js/jquery.fullPage.js"></script>
     <script>
         $(document).ready(function () {
+
             $('#fullpage').fullpage({
                 scrollingSpeed: 2000,
-                fitToSectionDelay: 0
+                fitToSectionDelay: 0,
+                responsiveWidth: 992 //отключение плагина при разрешении меньше 769px
             });
         });
     </script>
@@ -26,25 +28,46 @@
 <div class="index-wrap" id="fullpage">
 
     <section class="heading section">
-        <div class="wrap-title">
-            <a href="#" class="title">ОЛЬХА</a>
+        <div class="title">
+            <svg viewBox="0 0 1280 720">
+                <text text-anchor="middle" x="50%" y="30%">Olxa</text>
+            </svg>
         </div>
-        <div class="wrap-description">
-            <div class="content">
-                <div class="content__container">
-                    <p class="content__container__text">
-                        сайты
-                    </p>
-                    <ul class="content__container__list">
-                        <li class="content__container__list__item">продаём !</li>
-                        <li class="content__container__list__item">делаем !</li>
-                        <li class="content__container__list__item">создаём !</li>
-                        <li class="content__container__list__item">разрабатываем !</li>
-                    </ul>
-
-                </div>
+        <div class="description-wrap">
+            <div class="description">
+                <p class="fade-in three text">
+                    who loves
+                    <span class="rw-words rw-words-1">
+                        <span>tech.</span>
+                        <span>web development.</span>
+                        <span>pop culture.</span>
+                        <span>marketing.</span>
+                        <span>social media.</span>
+                        <span>gifs.</span>
+                    </span>
+                </p>
             </div>
         </div>
+
+        @*<div class="wrap-title">
+                <a href="#" class="title">ОЛЬХА</a>
+            </div>
+            <div class="wrap-description">
+                <div class="content">
+                    <div class="content__container">
+                        <p class="content__container__text">
+                            сайты
+                        </p>
+                        <ul class="content__container__list">
+                            <li class="content__container__list__item">продаём !</li>
+                            <li class="content__container__list__item">делаем !</li>
+                            <li class="content__container__list__item">создаём !</li>
+                            <li class="content__container__list__item">разрабатываем !</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>*@
     </section>
     <section class="about section fp-auto-height">
         <div class="about__wrap">
@@ -97,32 +120,72 @@
         </div>
 
     </section>
-    <section class="plus section">
-        @Html.Partial("_Index_WebSitesPartialView")
-    </section>
-    @*<section class="steps-divelopment section fp-auto-height">
-            <section class="tabs-all index-tabs" role="tab">
-                <input id="tab__1" type="radio" name="tabs" checked="checked" />
-                <input id="tab__2" type="radio" name="tabs" checked="checked" />
-                <input id="tab__3" type="radio" name="tabs" />
+    <section class="index-web-sites section">             
+        <div class="index-web-sites-wrap m-hidden">
+            <div class="title">
+                <h2>Виды сайтов</h2>
+            </div>   
+            @Html.Partial("_Index_WebSitesPartialView")
+        </div>
+        <div class="index-web-sites-wrap m-visible">
+            <div class="title">
+                <h2>Виды сайтов</h2>
+            </div>   
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="img" style="background-image:url(http://www.nastol.com.ua/download.php?img=201606/1366x768/nastol.com.ua-177863.jpg)">
 
-                <div class="label-wrapper">
-                    <label for="tab__1" id="tab__l1">Готовые решения</label>
-                    <label for="tab__2" id="tab__l2">Создание сайта</label>
-                    <label for="tab__3" id="tab__l3">Разработка сайта</label>
-                </div>
-
-                <div class="tabs_content">
-
-                    <div id="tab__c1"> </div>
-
-                    <div id="tab__c2">
-                        @Html.Partial("_StepsCreatePartialView")
                     </div>
-                    <div id="tab__c3">Это про третье</div>
+                    <div class="container-web-sites">
+                        <h2>Сайт визитка</h2>
+                        <div class="desc">Описание много слов</div>
+                        <a class="btn btn-ghost">Подробнее</a>
+                    </div>
                 </div>
-            </section>
-        </section>*@
+                <div class="grid-item">
+                    <div class="img" style="background-image:url(http://www.nastol.com.ua/download.php?img=201606/1366x768/nastol.com.ua-177863.jpg)">
+
+                    </div>
+                    <div class="container-web-sites">
+                        <h2>Лендинг</h2>
+                        <div class="desc">Описание много слов</div>
+                        <a class="btn btn-ghost">Подробнее</a>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img" style="background-image:url(http://www.nastol.com.ua/download.php?img=201606/1366x768/nastol.com.ua-177863.jpg)">
+
+                    </div>
+                    <div class="container-web-sites">
+                        <h2>Корпоративный</h2>
+                        <div class="desc">Описание много слов</div>
+                        <a class="btn btn-ghost">Подробнее</a>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img" style="background-image:url(http://www.nastol.com.ua/download.php?img=201606/1366x768/nastol.com.ua-177863.jpg)">
+
+                    </div>
+                    <div class="container-web-sites">
+                        <h2>Интерент магазин</h2>
+                        <div class="desc">Описание много слов</div>
+                        <a class="btn btn-ghost">Подробнее</a>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="img" style="background-image:url(http://www.nastol.com.ua/download.php?img=201606/1366x768/nastol.com.ua-177863.jpg)">
+
+                    </div>
+                    <div class="container-web-sites">
+                        <h2>Информационный</h2>
+                        <div class="desc">Описание много слов</div>
+                        <a class="btn btn-ghost">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <section class="portfolio-index section">
         <div class="portfolio-index-wrap">
             <h2>Сайты созданные OlxaWeb</h2>
@@ -130,7 +193,13 @@
                 @*<div class="small hidden">
                         @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
                     </div>*@
-                @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
+                <div class="index-portfolio-galery">
+                    @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
+                </div>
+
+                <div class="index-portfolio-galery small hidden">
+                    @Html.Partial("_Index_PortfolioSmallPartialView")
+                </div>
             </div>
         </div>
 
