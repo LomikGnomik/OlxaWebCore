@@ -475,6 +475,7 @@ nav#index-navigation .submenu .submenu__item a:hover {
 section.footer.section {
   height: 10em;
 }
+/*.footer-margin-top{margin-top:20em;}*/
 footer {
   flex: 0 0 auto;
   padding-bottom: 2em;
@@ -1201,7 +1202,8 @@ section.tariff .promo-wrapper ul li:last-child {
   width: 100%;
 }
 .wrap-info {
-  width: 25%;
+  width: 30%;
+  min-width: 20em;
   border: 1px solid #cccccc;
   margin-top: 2em;
   /* border-bottom:1px solid @color-gray;
@@ -1291,6 +1293,32 @@ section.tariff .promo-wrapper ul li:last-child {
   /*&:hover {
                     background: @color-more-darken1;
                 }*/
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .tab-inner-content aside .wrap-info {
+    min-width: 15em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .tab-inner-content aside .wrap-info {
+    min-width: 6em;
+  }
+  .wrap-info .info-inner [class*=info-item-] {
+    flex-direction: column;
+    margin: 0;
+    padding: 0.5em;
+  }
+  .wrap-info .info-inner [class*=info-item-] h2 {
+    font-size: 0.8em;
+  }
+  .wrap-info .info-inner [class*=info-item-] p {
+    font-size: 0.8em;
+  }
+  .wrap-info .info-inner .info-button-bay.btn-ghost-more {
+    margin: 0;
+    line-height: 2.5em;
+    font-size: 0.8em;
+  }
 }
 .shop-description {
   margin-top: 3em;
@@ -4530,7 +4558,7 @@ section.information-title figcaption p {
 .presentation {
   margin-top: 12em;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .presentation .description {
   width: 50%;
@@ -5461,6 +5489,117 @@ section.information-title figcaption p {
     opacity: 0;
   }
 }
+@media (min-width: 3840px) {
+  .presentation .description {
+    margin-right: 30.5%;
+  }
+}
+@media (min-width: 2560px) {
+  .presentation .description {
+    margin-right: 20.5%;
+    margin-top: 5em;
+  }
+}
+@media (min-width: 1920px) {
+  .isometric-wrapper .visit.floor {
+    left: 25%;
+  }
+  .presentation .description {
+    margin-right: 10.5%;
+    margin-top: 5em;
+  }
+}
+@media (min-width: 1680px) {
+  .presentation .description {
+    width: 26em;
+    margin-right: 18%;
+    margin-top: 2em;
+  }
+}
+@media (min-width: 1200px) {
+  .presentation .description {
+    width: 26em;
+    margin-right: 4em;
+    margin-top: 2em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .isometric-wrapper .visit.floor {
+    left: 20%;
+    width: 20em;
+    height: 20em;
+  }
+  .isometric-wrapper .visit.floor .visit-menu {
+    width: 19em;
+  }
+  .isometric-wrapper .visit .img-info-card-wrap .card,
+  form-inner-card-wrapper {
+    height: 7em;
+  }
+  .isometric-wrapper .visit .form-inner-card-wrapper .inputs-wrapper .input {
+    width: 70%;
+    height: 15px;
+  }
+  .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form {
+    margin-top: 0;
+  }
+  .presentation .description {
+    margin-right: 4.1em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .presentation {
+    flex-direction: column;
+    min-height: 60vh;
+  }
+  .presentation .description {
+    margin: 0 auto;
+    margin-top: -28em;
+  }
+  .isometric-wrapper .visit.floor {
+    left: 45%;
+    top: 18em;
+  }
+}
+@media (max-width: 767px) {
+  .presentation {
+    flex-direction: column;
+    min-height: 60vh;
+  }
+  .presentation .description {
+    margin: 0 auto;
+    margin-top: -28em;
+  }
+  .isometric-wrapper .visit.floor {
+    left: 45%;
+    top: 18em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .isometric-wrapper .visit.floor {
+    left: 38%;
+    top: 20em;
+    width: 15em;
+    height: 15em;
+  }
+  .isometric-wrapper .visit.floor .visit-menu {
+    width: 14em;
+  }
+  .isometric-wrapper .visit .img-info-card-wrap .card,
+  form-inner-card-wrapper {
+    height: 4.5em;
+  }
+  .isometric-wrapper .visit .form-inner-card-wrapper .inputs-wrapper .input {
+    width: 60%;
+    height: 10px;
+    margin-top: 5px;
+  }
+  .isometric-wrapper .isometric .button {
+    width: 55px;
+    font-size: 0;
+    height: 20px;
+  }
+}
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
   border-bottom: 1px solid #06c438;
@@ -5922,7 +6061,7 @@ section.information-title figcaption p {
   justify-content: space-between;
 }
 .tab-inner-content .content-item {
-  width: 65%;
+  width: 70%;
 }
 .tab-inner-content aside {
   display: flex;
@@ -5933,6 +6072,7 @@ section.tabs-all {
   min-height: 100vh;
   position: relative;
   width: 100%;
+  max-width: 240em;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -5958,8 +6098,8 @@ section.tabs-all label:ntf-child(2) {
   border-left: none;
   border-right: none;
 }
-section.tabs-all label:last-child {
-  margin-right: 1em;
+section.tabs-all label:first-child {
+  margin-left: 1em;
 }
 section.tabs-all label:hover {
   color: #06c438;
@@ -5978,6 +6118,9 @@ section.tabs-all #tab__3:checked ~ .label-wrapper #tab__l3 {
   z-index: 3;
   background: #fff;
 }
+section.tabs-all .tabs-all #tab__2:checked ~ .label-wrapper #tab__l2 {
+  margin-left: 2em;
+}
 section.tabs-all .tabs_content {
   position: relative;
   z-index: 2;
@@ -5995,6 +6138,17 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   position: static;
   left: 0;
   opacity: 1;
+}
+@media (min-width: 3840px) {
+  section.tabs-all section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2 {
+    margin-left: 46em;
+  }
+}
+@media (max-width: 767px) {
+  section.tabs-all .label-wrapper label {
+    min-width: 5em;
+    font-size: 0.8em;
+  }
 }
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
 #toTop {
@@ -6872,4 +7026,11 @@ table.table-admin .edit::after {
 }
 .btn-service-delete .btn-close:focus {
   outline: none;
+}
+/*---------виджет автозаполнения*/
+li.ui-menu-item {
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #cccccc;
+  border-top: none;
 }

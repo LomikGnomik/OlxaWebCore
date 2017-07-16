@@ -731,7 +731,7 @@ nav#index-navigation {
 section.footer.section {
     height: 10em;
 }
-
+/*.footer-margin-top{margin-top:20em;}*/
 footer {
     flex: 0 0 auto;
     padding-bottom: 2em;
@@ -1649,7 +1649,8 @@ section.tariff {
 }
 
 .wrap-info {
-    width: 25%;
+    width: 30%;
+    min-width: 20em;
     border: 1px solid @color-gray-light;
     margin-top: 2em;
     //background: #000;
@@ -1755,6 +1756,38 @@ section.tariff {
                 }*/
             }
         }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .tab-inner-content aside .wrap-info {
+        min-width: 15em;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .tab-inner-content aside .wrap-info {
+        min-width: 6em;
+    }
+
+    .wrap-info .info-inner [class*=info-item-] {
+        flex-direction: column;
+        margin: 0;
+        padding: 0.5em;
+    }
+
+    .wrap-info .info-inner [class*=info-item-] h2 {
+        font-size: 0.8em;
+    }
+
+    .wrap-info .info-inner [class*=info-item-] p {
+        font-size: 0.8em;
+    }
+
+    .wrap-info .info-inner .info-button-bay.btn-ghost-more {
+        margin: 0;
+        line-height: 2.5em;
+        font-size: 0.8em;
     }
 }
 
@@ -3420,7 +3453,7 @@ section.price-solution {
     section.about {
         width: 100%;
         min-height: 100vh;
-       // background-image: linear-gradient(#8b9da9, #fff6e4,#ffffff);
+        // background-image: linear-gradient(#8b9da9, #fff6e4,#ffffff);
         //box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
         .about__wrap {
             width: 100%;
@@ -3857,16 +3890,16 @@ section.price-solution {
     .index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
         top: 70px;
         right: -200px;
-        transform:scale(0.34) rotateX(0deg) rotateZ(5.5deg) rotateY(-5deg) skewX(-8deg) skewY(-1deg);
-
+        transform: scale(0.34) rotateX(0deg) rotateZ(5.5deg) rotateY(-5deg) skewX(-8deg) skewY(-1deg);
     }
 }
 
 @media (max-width: 1680px) {
-    .index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap{
+    .index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
         top: 30px;
-    right: -280px;
+        right: -280px;
     }
+
     .index-wrap section.heading .title svg {
         // font: 15em;
         //margin-top: 7%;
@@ -5793,7 +5826,7 @@ section.information-title {
 .presentation {
     margin-top: 12em;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     //height: 35em;
     .description {
         width: 50%;
@@ -6871,6 +6904,138 @@ section.information-title {
         opacity: 0;
     }
 }
+
+@media (min-width: 3840px) {
+    .presentation .description {
+        margin-right: 30.5%;
+    }
+}
+
+@media (min-width: 2560px) {
+    .presentation .description {
+        margin-right: 20.5%;
+        margin-top: 5em;
+    }
+}
+
+@media (min-width: 1920px) {
+    .isometric-wrapper .visit.floor {
+        left: 25%;
+    }
+
+    .presentation .description {
+        margin-right: 10.5%;
+        margin-top: 5em;
+    }
+}
+
+@media (min-width: 1680px) {
+    .presentation .description {
+        width: 26em;
+        margin-right: 18%;
+        margin-top: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .presentation .description {
+        width: 26em;
+        margin-right: 4em;
+        margin-top: 2em;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .isometric-wrapper .visit.floor {
+        left: 20%;
+        width: 20em;
+        height: 20em;
+    }
+
+    .isometric-wrapper .visit.floor .visit-menu {
+        width: 19em;
+    }
+
+    .isometric-wrapper .visit .img-info-card-wrap .card, form-inner-card-wrapper {
+        height: 7em;
+    }
+
+    .isometric-wrapper .visit .form-inner-card-wrapper .inputs-wrapper .input {
+        width: 70%;
+        height: 15px;
+    }
+
+    .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form {
+        margin-top: 0;
+    }
+
+    .presentation .description {
+        margin-right: 4.1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .presentation {
+        flex-direction: column;
+        min-height: 60vh;
+    }
+
+    .presentation .description {
+        margin: 0 auto;
+        margin-top: -28em;
+    }
+
+    .isometric-wrapper .visit.floor {
+        left: 45%;
+        top: 18em;
+    }
+}
+
+@media (max-width: 767px) {
+    .presentation {
+        flex-direction: column;
+        min-height: 60vh;
+    }
+
+    .presentation .description {
+        margin: 0 auto;
+        margin-top: -28em;
+    }
+
+    .isometric-wrapper .visit.floor {
+        left: 45%;
+        top: 18em;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .isometric-wrapper .visit.floor {
+        left: 38%;
+        top: 20em;
+        width: 15em;
+        height: 15em;
+    }
+
+    .isometric-wrapper .visit.floor .visit-menu {
+        width: 14em;
+    }
+
+    .isometric-wrapper .visit .img-info-card-wrap .card, form-inner-card-wrapper {
+        height: 4.5em;
+    }
+
+    .isometric-wrapper .visit .form-inner-card-wrapper .inputs-wrapper .input {
+        width: 60%;
+        height: 10px;
+        margin-top: 5px;
+    }
+
+    .isometric-wrapper .isometric .button {
+        width: 55px;
+        font-size: 0;
+        height: 20px;
+    }
+}
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
     // min-height: 65vh;
@@ -7433,7 +7598,7 @@ section.information-title {
     justify-content: space-between;
 
     .content-item {
-        width: 65%;
+        width: 70%;
     }
 
     aside {
@@ -7448,6 +7613,7 @@ section.tabs-all {
     min-height: 100vh;
     position: relative;
     width: 100%;
+    max-width: 240em;
     margin-top: 2em;
     margin-bottom: 2em;
 
@@ -7483,8 +7649,8 @@ section.tabs-all {
             border-right: none;
         }
 
-        &:last-child {
-            margin-right: 1em;
+        &:first-child {
+            margin-left: 1em;
         }
 
         &:hover {
@@ -7510,6 +7676,9 @@ section.tabs-all {
         background: #fff;
     }
 
+    .tabs-all #tab__2:checked ~ .label-wrapper #tab__l2 {
+        margin-left: 2em;
+    }
 
 
     .tabs_content {
@@ -7539,6 +7708,19 @@ section.tabs-all {
         left: 0;
         opacity: 1;
         //background:@color-gray-light;
+    }
+}
+
+@media (min-width:3840px) {
+    section.tabs-all section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2 {
+        margin-left: 46em;
+    }
+}
+
+@media (max-width: 767px) {
+    section.tabs-all .label-wrapper label {
+        min-width: 5em;
+        font-size: 0.8em;
     }
 }
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
@@ -8631,4 +8813,11 @@ header.header-admin {
             outline: none;
         }
     }
+}
+/*---------виджет автозаполнения*/
+li.ui-menu-item {
+    font-size: 12px;
+    background:#fff;
+    border:1px solid @color-gray-light;
+    border-top:none;
 }
