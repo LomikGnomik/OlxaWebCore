@@ -6,7 +6,6 @@
 /// <reference path="js/scripts.js" />
 /// <reference path="js/site.js" />
 /// <reference path="lib/bootstrap/dist/js/bootstrap.js" />
-/// <reference path="lib/ckeditor/ckeditor.js" />
 /// <reference path="lib/desandro-matches-selector/matches-selector.js" />
 /// <reference path="lib/ev-emitter/ev-emitter.js" />
 /// <reference path="lib/fizzy-ui-utils/utils.js" />
