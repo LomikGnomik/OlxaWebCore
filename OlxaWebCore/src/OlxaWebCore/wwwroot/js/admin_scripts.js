@@ -24,12 +24,9 @@ $(function () {
 });
 /*----------------------------------скрипт автозаполнения------------------------*/
 $(function () {
-    var autocompleteUrl = '@Url.Action("Find")';
+    var autocompleteUrl = 'Find'; //'@Url.Action("Find")';
     $("input#categoryService").autocomplete({
         source: autocompleteUrl,
-        minLength: 2,
-        select: function (event, ui) {
-            alert("Selected " + ui.item.label);
-        }
+        minLength: 1,  
     });
 });

@@ -73,5 +73,19 @@ namespace OlxaWebCore.Controllers
             }
             return RedirectToAction("AllServiceAdmin");
         }
+        // Ajax автозаполнение списка категорий в админке
+        public ActionResult Find(string term)
+        {
+           IEnumerable <String> service = repository.FindCategory();
+            var projection = from serv in service
+                             select new
+                             {
+                                // id = serv.ServiceID,
+                                 label = serv,
+                                 value = serv
+                             };
+            return Json(projection.ToList());
+              //  ,JsonRequestBehavior.AllowGet);
+        }
     }
 }

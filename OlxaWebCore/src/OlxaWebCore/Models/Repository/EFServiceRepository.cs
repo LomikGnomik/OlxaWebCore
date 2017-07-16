@@ -59,5 +59,16 @@ namespace OlxaWebCore.Models.Repository
             return dbEntry;
         }
 
+
+        public IEnumerable<String> FindCategory()
+        {
+            IEnumerable<String> category = context.Services
+              //  .Where(t => t.Category.StartsWith(term))
+                .Select(x => x.Category)
+                .Distinct()
+                .OrderBy(x => x);
+
+            return category ;
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace OlxaWebCore.Models.Interfaces
 
         void SaveService(Service service);
         Service DeleteService(int serviceID);
+        IEnumerable<String> FindCategory();
     }
 }
