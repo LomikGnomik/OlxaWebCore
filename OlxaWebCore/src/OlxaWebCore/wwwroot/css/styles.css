@@ -5406,6 +5406,7 @@ section.information-title figcaption p {
   transform: translate3d(0, 0, 10px);
   border-bottom: 2px solid #999999;
   border-left: 2px solid #999999;
+  box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .information .information-inner-wrap {
   display: flex;
@@ -5490,17 +5491,40 @@ section.information-title figcaption p {
   }
 }
 @media (min-width: 3840px) {
+  /*визитка*/
   .presentation .description {
     margin-right: 30.5%;
   }
+  /*лендинг*/
+  /*Корпоративный*/
+  /*Интернет магазин*/
+  /*Информационный*/
+  .isometric-wrapper .information .information-inner-wrap .content {
+    width: 65%;
+  }
+  .isometric-wrapper .information.floor {
+    left: 35%;
+  }
 }
-@media (min-width: 2560px) {
+@media (min-width: 2560px) and (max-width: 3839px) {
+  /*визитка*/
   .presentation .description {
     margin-right: 20.5%;
     margin-top: 5em;
   }
+  /*лендинг*/
+  .presentation .description-landing.description {
+    margin-right: 0;
+  }
+  /*Корпоративный*/
+  /*Интернет магазин*/
+  /*Информационный*/
+  .isometric-wrapper .information .information-inner-wrap .content {
+    width: 65%;
+  }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1920px) and (max-width: 2559px) {
+  /*визитка*/
   .isometric-wrapper .visit.floor {
     left: 25%;
   }
@@ -5508,22 +5532,91 @@ section.information-title figcaption p {
     margin-right: 10.5%;
     margin-top: 5em;
   }
+  /*лендинг*/
+  .presentation .description-landing.description {
+    margin-right: 0;
+  }
+  /*Корпоративный*/
+  /*Интернет магазин*/
+  .isometric-wrapper .shop .shop-admin {
+    margin-left: 0.7em;
+    width: 23em;
+    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+  }
+  .isometric-wrapper .shop.isometric .appBar {
+    margin-left: 0.7em;
+    width: 23em;
+    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+  }
+  /*Информационный*/
+  .isometric-wrapper .information .information-inner-wrap .content {
+    width: 65%;
+  }
 }
-@media (min-width: 1680px) {
+@media (min-width: 1680px) and (max-width: 1919px) {
+  /*визитка*/
   .presentation .description {
     width: 26em;
     margin-right: 18%;
     margin-top: 2em;
   }
+  /*лендинг*/
+  .presentation .description-landing.description {
+    margin-right: 0;
+    width: 50%;
+  }
+  /*Корпоративный*/
+  /*Интернет магазин*/
+  .isometric-wrapper .shop .shop-admin {
+    margin-left: 0.7em;
+    width: 23em;
+    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+  }
+  .isometric-wrapper .shop.isometric .appBar {
+    margin-left: 0.7em;
+    width: 23em;
+    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+  }
+  /*Информационный*/
+  .isometric-wrapper .information .information-inner-wrap .content {
+    width: 65%;
+  }
+  .presentation .description-information.description {
+    width: 30em;
+    margin-right: 13em;
+  }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1679px) {
+  /*визитка*/
   .presentation .description {
     width: 26em;
     margin-right: 4em;
     margin-top: 2em;
   }
+  /*лендинг*/
+  .presentation .description-landing.description {
+    margin-right: -13em;
+  }
+  .landing-wrapper section.landing-description p {
+    width: 23em;
+  }
+  .isometric-wrapper .landing {
+    left: 28em;
+  }
+  /*Корпоративный*/
+  /*Интернет магазин*/
+  /*Информационный*/
+  .isometric-wrapper .information .information-inner-wrap .content {
+    width: 65%;
+  }
+  .isometric-wrapper .information.floor {
+    left: 27%;
+    top: 10em;
+    width: 25em;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  /*визитка*/
   .isometric-wrapper .visit.floor {
     left: 20%;
     width: 20em;
@@ -5544,41 +5637,147 @@ section.information-title figcaption p {
     margin-top: 0;
   }
   .presentation .description {
-    margin-right: 4.1em;
+    margin-right: 0;
+  }
+  .isometric-wrapper .isometric .content .card {
+    height: 115px;
+  }
+  /*лендинг*/
+  .isometric-wrapper .landing {
+    height: 39em;
+    top: 10em;
+    left: 22em;
+  }
+  .isometric-wrapper .isometric.landing .content .card {
+    height: 130px;
+  }
+  .isometric-wrapper .landing .button.right,
+  .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
+    margin-top: 4.5em;
+  }
+  .presentation .description-landing.description {
+    padding-left: 0;
+  }
+  .landing-wrapper section.landing-description p {
+    width: 24em;
+  }
+  /*Корпоративный*/
+  .isometric-wrapper .corporate .card-corporate.card {
+    height: 13em;
+  }
+  /*Интернет магазин*/
+  .shop-wrap .presentation .description {
+    margin-right: -6em;
+  }
+  .isometric-wrapper .shop .shop-admin {
+    margin-left: 0.7em;
+    width: 24em;
+    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+  }
+  .isometric-wrapper .shop.isometric .appBar {
+    margin-left: 0.7em;
+    width: 24em;
+    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+  }
+  .isometric-wrapper .isometric.shop .content .card {
+    height: 165px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  /*визитка*/
   .presentation {
     flex-direction: column;
-    min-height: 60vh;
   }
   .presentation .description {
     margin: 0 auto;
-    margin-top: -28em;
+    order: 0;
+    width: 90%;
+    max-width: 90%;
+  }
+  .isometric-wrapper {
+    order: 1;
+    display: none;
   }
   .isometric-wrapper .visit.floor {
     left: 45%;
     top: 18em;
   }
+  /*лендинг*/
+  .isometric-wrapper .landing.isometric {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-50deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
+  .isometric-wrapper .landing {
+    top: 10em;
+    left: 18em;
+    height: 30em;
+  }
+  .isometric-wrapper .isometric.landing .content .card {
+    height: 95px;
+  }
+  .isometric-wrapper .landing.floor {
+    width: 17em;
+  }
+  .isometric-wrapper .landing .button.right,
+  .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
+    margin-top: 2.5em;
+  }
+  .landing-wrapper section.landing-description p {
+    width: 100%;
+  }
+  /*Корпоративный*/
+  /*Интернет магазин*/
 }
 @media (max-width: 767px) {
+  /*визитка*/
   .presentation {
     flex-direction: column;
-    min-height: 60vh;
   }
   .presentation .description {
     margin: 0 auto;
-    margin-top: -28em;
+    width: 90%;
+    max-width: 35em;
+  }
+  .isometric-wrapper {
+    order: 1;
+    display: none;
   }
   .isometric-wrapper .visit.floor {
     left: 45%;
     top: 18em;
   }
+  /*лендинг*/
+  .presentation .description-landing.description {
+    padding-left: 0;
+  }
+  .isometric-wrapper .landing.isometric {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-50deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
+  .isometric-wrapper .landing {
+    top: 22em;
+    left: 26em;
+    height: 40em;
+  }
+  .isometric-wrapper .isometric.landing .content .card {
+    height: 95px;
+  }
+  .isometric-wrapper .landing.floor {
+    width: 17em;
+  }
+  .isometric-wrapper .landing .button.right,
+  .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
+    margin-top: 2.5em;
+  }
+  .landing-wrapper section.landing-description p {
+    width: 100%;
+  }
+  /*Корпоративный*/
+  /*Интернет магазин*/
 }
 @media screen and (max-width: 640px) {
+  /*визитка*/
   .isometric-wrapper .visit.floor {
     left: 38%;
-    top: 20em;
+    top: 25em;
     width: 15em;
     height: 15em;
   }
@@ -5599,6 +5798,27 @@ section.information-title figcaption p {
     font-size: 0;
     height: 20px;
   }
+  .isometric-wrapper {
+    order: 1;
+    display: none;
+  }
+  .isometric-wrapper .isometric .content .card {
+    height: 80px;
+  }
+  /*лендинг*/
+  .isometric-wrapper .landing.floor {
+    width: 13em;
+  }
+  .isometric-wrapper .landing.isometric {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-70deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
+  .isometric-wrapper .landing {
+    height: 26em;
+    top: 18em;
+    left: 20em;
+  }
+  /*Корпоративный*/
+  /*Интернет магазин*/
 }
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
@@ -7033,4 +7253,5 @@ li.ui-menu-item {
   background: #fff;
   border: 1px solid #cccccc;
   border-top: none;
+  max-width: 20em;
 }
