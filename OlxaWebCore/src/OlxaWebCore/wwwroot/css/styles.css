@@ -2704,13 +2704,11 @@ section.price-solution .solution-item-question .btn {
 .index-wrap section.portfolio-index .galery-wrap .index-portfolio-galery a:link,
 .index-wrap section.portfolio-index .galery-wrap .index-portfolio-galery a:visited {
   color: #333333;
-  border-bottom: 1px solid #333333;
   transition: .3s;
   text-decoration: none;
 }
 .index-wrap section.portfolio-index .galery-wrap .index-portfolio-galery a:hover {
   color: #333333;
-  border-bottom: 1px solid #333333;
   text-decoration: none;
 }
 .index-wrap section.portfolio-index .galery-wrap .index-portfolio-galery img {
@@ -2910,17 +2908,14 @@ section.price-solution .solution-item-question .btn {
   display: inline-block;
   text-decoration: none;
   padding: 7px 14px;
-  background: #000;
+  background: #06c438;
   color: #fff;
   text-transform: uppercase;
-  -webkit-box-shadow: 0 0 1px #000;
-  -moz-box-shadow: 0 0 1px #000;
-  box-shadow: 0 0 1px #000;
+  box-shadow: 0 0 1px #06c438;
 }
 .index-wrap section.portfolio-index .galery-wrap .hidden.index-portfolio-galery .portfolio-galery-wrap .view a.info:hover {
-  -webkit-box-shadow: 0 0 5px #000;
-  -moz-box-shadow: 0 0 5px #000;
-  box-shadow: 0 0 5px #000;
+  background: #04931e;
+  box-shadow: 0 0 5px #04931e;
 }
 .index-wrap section.portfolio-index .galery-wrap .hidden.index-portfolio-galery .portfolio-galery-wrap .view-second img {
   width: 100%;
@@ -5682,6 +5677,15 @@ section.information-title figcaption p {
   .isometric-wrapper .isometric.shop .content .card {
     height: 165px;
   }
+  /*Информационный*/
+  .isometric-wrapper .information .information-inner-wrap .content {
+    width: 65%;
+  }
+  .isometric-wrapper .information.floor {
+    left: 33%;
+    top: 12em;
+    width: 25em;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /*визитка*/
@@ -5772,6 +5776,11 @@ section.information-title figcaption p {
   }
   /*Корпоративный*/
   /*Интернет магазин*/
+  /*Информационный*/
+  section.information-title {
+    margin: 0;
+    padding: 0;
+  }
 }
 @media screen and (max-width: 640px) {
   /*визитка*/
@@ -5819,6 +5828,11 @@ section.information-title figcaption p {
   }
   /*Корпоративный*/
   /*Интернет магазин*/
+  /*Информационный*/
+  section.information-title {
+    margin: 0;
+    padding: 0;
+  }
 }
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
@@ -6828,8 +6842,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   flex-direction: column;
 }
 .wrapper-admin .admin-header,
-.wrapper-admin nav,
-.wrapper-admin article {
+.wrapper-admin nav {
   padding: 1rem;
 }
 .wrapper-admin i.logo {
@@ -6848,6 +6861,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  background: #333333;
 }
 .wrapper-admin .admin-header-wrap .header-admin h1 {
   padding-left: 1.5em;
@@ -6859,7 +6873,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
 }
 .wrapper-admin main {
   display: flex;
-  flex: 1 1 auto;
+  flex: auto;
 }
 .wrapper-admin main nav,
 .wrapper-admin main article {
@@ -6886,6 +6900,45 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
 }
 .wrapper-admin main article {
   flex: 20 1 auto;
+}
+.wrapper-admin main .admin-content .content-navigation {
+  display: flex;
+  width: 100%;
+  background: #e5e5e5;
+  margin-bottom: 2em;
+}
+.wrapper-admin main .admin-content .admin-button-group {
+  margin-left: auto;
+}
+.wrapper-admin main .admin-content .admin-button-group .btn-add,
+.wrapper-admin main .admin-content .admin-button-group .dtn-del,
+.wrapper-admin main .admin-content .admin-button-group .btn-see,
+.wrapper-admin main .admin-content .admin-button-group btn-back {
+  border-radius: 8px;
+}
+.wrapper-admin main .admin-content .admin-button-group .btn-back.btn {
+  background: #06c438;
+}
+.wrapper-admin main .admin-content .admin-button-group .btn-back.btn:hover {
+  background: #04931e;
+}
+.wrapper-admin main .admin-content .admin-button-group .btn-add.btn {
+  background: #0d9706;
+}
+.wrapper-admin main .admin-content .admin-button-group .btn-add.btn:hover {
+  background: #116604;
+}
+.wrapper-admin main .admin-content .admin-button-group .dtn-del.btn {
+  background: #FD0006;
+}
+.wrapper-admin main .admin-content .admin-button-group .dtn-del.btn:hover {
+  background: #ca0016;
+}
+.wrapper-admin main .admin-content .admin-button-group .btn-see.btn {
+  background: #3c6eaa;
+}
+.wrapper-admin main .admin-content .admin-button-group .btn-see.btn:hover {
+  background: #2f5d84;
 }
 /*-------------------------------стили таблиц*/
 table.table-admin {

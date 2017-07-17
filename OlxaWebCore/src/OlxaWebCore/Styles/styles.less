@@ -72,11 +72,15 @@
 
 @color-success-lighter2: lighten(@color-success, 45%);
 
+@color-success-darken1: darken(spin(@color-success, -5), 10%);
+
 /*-------------------------*/
 
 @color-bad-lighter1: lighten(@color-bad, 10%);
 
 @color-bad-lighter2: lighten(@color-bad, 45%);
+
+@color-bad-darken1: darken(spin(@color-bad, -5), 10%);
 
 @font-color-reverce: #ecf0f1;
 
@@ -3553,14 +3557,14 @@ section.price-solution {
 
                 a:link, a:visited {
                     color: @color-gray-dark;
-                    border-bottom: 1px solid @color-gray-dark;
+                    // border-bottom: 1px solid @color-gray-dark;
                     transition: .3s;
                     text-decoration: none;
                 }
 
                 a:hover {
                     color: @color-gray-dark;
-                    border-bottom: 1px solid @color-gray-dark;
+                    //border-bottom: 1px solid @color-gray-dark;
                     text-decoration: none;
                 }
 
@@ -3795,18 +3799,15 @@ section.price-solution {
                         display: inline-block;
                         text-decoration: none;
                         padding: 7px 14px;
-                        background: #000;
+                        background: @color-more;
                         color: #fff;
                         text-transform: uppercase;
-                        -webkit-box-shadow: 0 0 1px #000;
-                        -moz-box-shadow: 0 0 1px #000;
-                        box-shadow: 0 0 1px #000;
+                        box-shadow: 0 0 1px @color-more;
                     }
 
                     .view a.info:hover {
-                        -webkit-box-shadow: 0 0 5px #000;
-                        -moz-box-shadow: 0 0 5px #000;
-                        box-shadow: 0 0 5px #000;
+                        background: @color-more-darken1;
+                        box-shadow: 0 0 5px @color-more-darken1;
                     }
 
                     .view-second img {
@@ -7242,9 +7243,9 @@ section.information-title {
     /*Корпоративный*/
     /*Интернет магазин*/
     /*Информационный*/
-    section.information-title{
-        margin:0;
-        padding:0;
+    section.information-title {
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -7303,9 +7304,9 @@ section.information-title {
     /*Корпоративный*/
     /*Интернет магазин*/
     /*Информационный*/
-    section.information-title{
-        margin:0;
-        padding:0;
+    section.information-title {
+        margin: 0;
+        padding: 0;
     }
 }
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
@@ -8577,7 +8578,7 @@ section.tabs-all {
     display: flex;
     flex-direction: column;
 
-    .admin-header, nav, article {
+    .admin-header, nav {
         padding: 1rem;
     }
 
@@ -8598,6 +8599,7 @@ section.tabs-all {
             display: flex;
             justify-content: space-between;
             width: 80%;
+            background: @color-gray-dark;
 
             h1 {
                 padding-left: 1.5em;
@@ -8613,7 +8615,7 @@ section.tabs-all {
 
     main {
         display: flex;
-        flex: 1 1 auto;
+        flex: auto;
 
         nav, article {
             overflow-y: auto;
@@ -8645,6 +8647,52 @@ section.tabs-all {
 
         article {
             flex: 20 1 auto;
+        }
+
+        .admin-content {
+            .content-navigation {
+                display: flex;
+                width: 100%;
+                background: @color-gray-lighter;
+                margin-bottom:2em;
+            }
+
+            .admin-button-group {
+                margin-left: auto;
+
+                .btn-add, .dtn-del, .btn-see, btn-back {
+                    border-radius: 8px;
+                }
+                .btn-back.btn{
+                    background:@color-more;
+                    &:hover {
+                        background: @color-more-darken1;
+                    }
+                }
+                .btn-add.btn {
+                    background: @color-success;
+                    &:hover {
+                        background: @color-success-darken1;
+                    }
+                }
+
+                .dtn-del.btn {
+                    background: @color-bad;
+
+                    &:hover {
+                        background: @color-bad-darken1;
+                    }
+                }
+
+                .btn-see.btn {
+                    background: @color-base;
+
+
+                    &:hover {
+                        background: @color-base-darken1;
+                    }
+                }
+            }
         }
     }
 }

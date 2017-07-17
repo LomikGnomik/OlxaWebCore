@@ -4,7 +4,13 @@
 
     ViewData["Title"] = "  Услуга: " + @Model.Title;
 }
-
+<div class="content-navigation">
+    <div class="admin-button-group">
+        <div class="btn btn-add">Сохранить</div>
+        <div class="btn dtn-del">Удалить</div>
+        <a href="#" class="btn btn-see">Посмотреть</a>
+    </div>
+</div>
 <form asp-action="EditService" class="service-form">
 
     <input type="hidden" asp-for="ServiceID" />
