@@ -989,10 +989,6 @@ section.tariff {
     }
 }
 
-
-
-
-
 /*------------------------------------------------------------------------------------------------блог*/
 
 .blog {
@@ -1378,9 +1374,6 @@ section.tariff {
         }
     }*/
 }
-
-
-
 .pagination {
     padding-top: 1em;
     border-top: 1px solid @color-gray-light;
@@ -1405,8 +1398,6 @@ section.tariff {
         }
     }
 }
-
-
 
 /*------------------------------------------------------отдельная страница поста в блоге*/
 
@@ -2754,6 +2745,60 @@ section.price-solution {
         }
     }
 }
+@media (min-width: 1200px) {
+    .solution-item-wrap {
+        width: 33.333%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .solution-item-wrap {
+        width: 33.333%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .solution-item-wrap {
+        width: 50%;
+    }
+}
+
+@media (min-width:641px) and (max-width: 767px) {
+    .solution-item-wrap {
+        margin: 0 auto;
+        width: 90%;
+
+        &:first-child {
+            margin-top: 6em;
+        }
+    }
+}
+
+@media (min-width:323px) and (max-width:640px) {
+    .solution-item-wrap {
+        margin: 0 auto;
+        width: 90%;
+
+        &:first-child {
+            margin-top: 6em;
+        }
+    }
+}
+
+@media screen and (max-width:322px) {
+    .solution-item-wrap {
+        margin: 0 auto;
+        width: 90%;
+
+        &:first-child {
+            margin-top: 6em;
+        }
+    }
+
+    section.price-solution .solution-row ul li {
+        padding: 0.5em 0;
+    }
+}
 
 
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
@@ -2821,7 +2866,7 @@ section.price-solution {
                 // z-index: 1;
                 // min-width: 25em;
                 display: table-cell;
-                font-size: 2em;
+                font-size: 1.5em;
 
 
                 .text {
@@ -2843,7 +2888,7 @@ section.price-solution {
                 }
 
                 .rw-words {
-                    font-family: 'Abril Fatface', serif;
+                   // font-family: 'Abril Fatface', serif;
                     display: inline;
                     min-width: 600px;
                     min-height: 29px;
@@ -2854,6 +2899,7 @@ section.price-solution {
                 }
 
                 .rw-words-1 span {
+                   // text-transform:uppercase;
                     margin-left: 10px;
                     text-align: left;
                     color: @color-more;
@@ -3479,8 +3525,8 @@ section.price-solution {
             }
 
             .headline {
-                font-size: 32px;
-                margin-top: 32px;
+                font-size: 22px;
+                margin-top: 26px;
                 font-family: 'futura-reg';
                 line-height: 1.2;
                 text-align: center;
@@ -4608,12 +4654,16 @@ section.information-title {
     }
 }
 /*---------------------------------------------------------------------Страница услуги service */
+.all-service-wrap .catalog .accordion{
+        width:95%;
+        margin:0 auto;
+    }
 .all-service-wrap {
     margin-top: 3em;
 
     section.catalog {
         min-height: 100vh;
-        padding-top: 2em;
+        padding-top: 6em;
 
         table.service {
             background: white;
@@ -4658,6 +4708,24 @@ section.information-title {
         }
     }
 }
+
+@media (min-width: 1200px){
+   /*.all-service-wrap .catalog .accordion{
+        width:95%;
+    }*/
+}
+@media (min-width: 992px) and (max-width: 1199px){}
+@media (min-width: 768px) and (max-width: 991px){}
+@media (max-width: 767px){}
+@media screen and (max-width:640px){
+    .all-service-wrap section.catalog table.service td{
+        padding:0;
+        max-width:8em;
+        word-wrap: break-word;
+    }
+}
+
+
 /*-------------------------------------------модальное окно с примером сайта/изображением*/
 .modal-window-service {
     /* Базовые стили слоя затемнения и модального окна  */
@@ -4790,24 +4858,29 @@ section.information-title {
 
     .contacts-wrapper {
         //min-height: 100vh;
-        padding-top: 5em;
+        // padding-top: 5em;
         //  width:50%;
         //display:flex;
         .contacts {
-            min-height: 720px;
+            min-height: 95vh;
             display: flex;
             background: @color-gray-dark;
             //justify-content: center;
             .map {
                 margin-right: 1em;
                 width: 50%;
-                height: 100%;
+                min-height: 100%;
             }
 
             .info {
                 width: 50%;
                 height: 100%;
                 line-height: 2em;
+
+                .info-inner {
+                    margin-top: 40%;
+                    padding-left: 3em;
+                }
 
                 span {
                     display: inline-block;
@@ -6990,6 +7063,9 @@ section.information-title {
     }
     /*Корпоративный*/
     /*Интернет магазин*/
+    .presentation .description-shop.description{
+       margin-right:17em;
+    }
     .isometric-wrapper .shop .shop-admin {
         margin-left: 0.7em;
         width: 23em;
@@ -7010,6 +7086,10 @@ section.information-title {
         width: 30em;
         margin-right: 13em;
     }
+}
+
+@media (min-width: 1200px) and (max-width: 1679px){
+
 }
 
 @media (min-width: 1200px) and (max-width: 1679px) {
@@ -7033,6 +7113,12 @@ section.information-title {
     }
     /*Корпоративный*/
     /*Интернет магазин*/
+    .presentation .description.description-shop p{
+        width:22em;
+    }
+    .presentation .description.description-shop{
+      //  margin-right:-2em;
+    }
     /*Информационный*/
     .isometric-wrapper .information .information-inner-wrap .content {
         width: 65%;
@@ -7105,9 +7191,11 @@ section.information-title {
     }
     /*Интернет магазин*/
     .shop-wrap .presentation .description {
-        margin-right: -6em;
+       // margin-right: -6em;
     }
-
+     .presentation .description.description-shop p{
+        width:22em;
+    }
     .isometric-wrapper .shop .shop-admin {
         margin-left: 0.7em;
         width: 24em;
@@ -7869,6 +7957,7 @@ section.information-title {
 .tab-inner-content {
     display: flex;
     justify-content: space-between;
+   
 
     .content-item {
         width: 70%;
@@ -7877,7 +7966,8 @@ section.information-title {
     aside {
         display: flex;
         flex-direction: column;
-        width: 35%;
+         margin-right: 1em;
+      //width: 35%;
     }
 }
 
@@ -7915,7 +8005,7 @@ section.tabs-all {
         top: 0.125em;
         text-align: center;
         padding: 0 1em;
-        min-width: 20em;
+        //min-width: 20em;
 
         &:ntf-child(2) {
             border-left: none;
@@ -7924,6 +8014,9 @@ section.tabs-all {
 
         &:first-child {
             margin-left: 1em;
+        }
+        &:last-child {
+            margin-right: 1em;
         }
 
         &:hover {
@@ -7988,14 +8081,28 @@ section.tabs-all {
     section.tabs-all section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2 {
         margin-left: 46em;
     }
+    section.tabs-all label:first-child{
+        margin-left: 47em;
+    }
 }
-
+/*@media (min-width: 2560px) and (max-width: 3839px){}
+@media (min-width: 1920px) and (max-width: 2559px){}
+@media (min-width: 1680px) and (max-width: 1919px){}*/
+@media (min-width: 1200px) and (max-width: 1679px){
+    section.tabs-all .label-wrapper label{
+            min-width: 12em;
+    }
+}
+/*@media (min-width: 992px) and (max-width: 1199px){}
+@media (min-width: 768px) and (max-width: 991px){}*/
 @media (max-width: 767px) {
     section.tabs-all .label-wrapper label {
         min-width: 5em;
         font-size: 0.8em;
+        width:100%;
     }
 }
+@media screen and (max-width:640px){}
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
 #toTop {
     width: 1.5em;
@@ -8074,10 +8181,7 @@ section.tabs-all {
     .post__item {
         width: 33.333%;
     }
-    /*--------------------------------------------------цены*/
-    .solution-item-wrap {
-        width: 33.333%;
-    }
+
     /*-----------------------------------------------chekout*/
     .form-wrap {
         .row;
@@ -8177,10 +8281,7 @@ section.tabs-all {
     .post__item {
         width: 33.333%;
     }
-    /*------------------------------------------------------цены*/
-    .solution-item-wrap {
-        width: 33.333%;
-    }
+
     /*---------------------------------------------------chekout*/
     .form-wrap {
         .row;
@@ -8261,10 +8362,7 @@ section.tabs-all {
     .post__item {
         width: 33.333%;
     }
-    /*--------------------------------------------------------цены*/
-    .solution-item-wrap {
-        width: 50%;
-    }
+
     /*------------------------------------------------------chekout*/
     .form-wrap {
         .row;
@@ -8342,7 +8440,7 @@ section.tabs-all {
     }
     /*менюшка*/
     .wrapper .navigation-sm {
-        top: 5px;
+        //top: 5px;
     }
 
     nav {
@@ -8405,10 +8503,7 @@ section.tabs-all {
     .post__item {
         width: 48%;
     }
-    /*---------------------------------------------------------цены*/
-    .solution-item-wrap {
-        flex-basis: 46%;
-    }
+
     /*-------------------------------------------------------chekout*/
     input.inputs-long {
         width: 73%;
@@ -8458,10 +8553,7 @@ section.tabs-all {
     .post__item {
         width: 90%;
     }
-    /*-------------------------------------------------------цены*/
-    .solution-item-wrap {
-        flex-basis: 46%;
-    }
+
     /*----------------------------------------------------chekout*/
     input.inputs-long {
         width: 73.5%;
@@ -8535,9 +8627,7 @@ section.tabs-all {
         width: 90%;
     }
     /*-----------------------------------------------------------цены*/
-    .solution-item-wrap {
-        flex-basis: 90%;
-    }
+
     /*--------------------------------------------------------chekout*/
     input.inputs-long {
         width: 22em;
@@ -8654,7 +8744,7 @@ section.tabs-all {
                 display: flex;
                 width: 100%;
                 background: @color-gray-lighter;
-                margin-bottom:2em;
+                margin-bottom: 2em;
             }
 
             .admin-button-group {
@@ -8663,14 +8753,18 @@ section.tabs-all {
                 .btn-add, .dtn-del, .btn-see, btn-back {
                     border-radius: 8px;
                 }
-                .btn-back.btn{
-                    background:@color-more;
+
+                .btn-back.btn {
+                    background: @color-more;
+
                     &:hover {
                         background: @color-more-darken1;
                     }
                 }
+
                 .btn-add.btn {
                     background: @color-success;
+
                     &:hover {
                         background: @color-success-darken1;
                     }

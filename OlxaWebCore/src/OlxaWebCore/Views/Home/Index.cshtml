@@ -36,14 +36,17 @@
         <div class="description-wrap">
             <div class="description">
                 <p class="fade-in three text">
-                    who loves
+                    если нужен сайт...
                     <span class="rw-words rw-words-1">
-                        <span>tech.</span>
-                        <span>web development.</span>
-                        <span>pop culture.</span>
-                        <span>marketing.</span>
-                        <span>social media.</span>
-                        <span>gifs.</span>
+                        <span>разработка</span>
+                        <span>продажа</span>
+                        <span>создание</span>
+                        <span>разработка</span>
+                        <span>продажа</span>
+                        <span>создание</span>
+                        @*  <span>продвижение</span>
+                            <span>аренда</span>*@
+                        @*<span></span>*@
                     </span>
                 </p>
             </div>
@@ -72,19 +75,19 @@
     <section class="about section fp-auto-height">
         <div class="about__wrap">
             <div class="title-wrap">
-                <h2>Мы делаем сайты</h2>
-                <div class="headline">Направления OlxaWeb</div>
+                <h2>Наши предложения</h2>
+                <div class="headline">Индивидуальный подход к каждому клиенту</div>
             </div>
 
             <div class="container">
                 <div class="about__row">
                     <div class="about__col">
                         <div class="about__col__item">
-                            <h3>Продажа готовых сайтов</h3>
+                            <h3>Продажа</h3>
                             <p>
-                                Он будет содержать основные модули для ведения бизнесса(форма обратной связи, контакты и т.д.)
-                                Своей низкой ценой и отсутствием временных затрат на создание, идеально подходит для начинающих
-                                бизнессменов.
+                                Готовый сайт, содержащий все необходимые модули для ведения бизнеса
+                                (форма обратной связи, контакты и т.д.), идеальный вариант для
+                                быстрого старта.
                                 <a asp-controller="Home" asp-action="Price">Подробнее...</a>
                             </p>
                         </div>
@@ -94,11 +97,8 @@
 
                             <h3>Создание</h3>
                             <p>
-                                Сайт делается с использованием системы управления контентом(CMS).
-                                Дизайн и модули которой настраиваются исходя из Ваших нужд.
-                                @*Это золотая середина между готовыми решениями и разработкой сайта.
-                                    Так как гораздо дешевле и быстрее разработки, но в тоже время довольно
-                                    гибко настраивается под нужды заказчика*@
+                                Сайт собирается из модулей и настраивается под нужды клиента,
+                                оптимальное соотношение функциональности и стоимости
                                 <a asp-controller="Home" asp-action="Price">Подробнее...</a>
                             </p>
                         </div>
@@ -107,10 +107,8 @@
                         <div class="about__col__item">
                             <h3>Разработка</h3>
                             <p>
-                                В этом случае сайт делается на фреймворке ASP.NET CORE.
-                                Долго и дорого относительно остальных вариантов, все модули разрабатываются
-                                @*исходя из нужд бизнесса клиента
-                                    Проходит все стадии разработки начиная с написания ТЗ и заканчивая наполнением.*@
+                                Сайт делается на фреймворке ASP.NET CORE с нуля исходя
+                                из требований заказчика, проходя по всем этапам разработки
                                 <a asp-controller="Home" asp-action="Price">Подробнее...</a>
                             </p>
                         </div>
@@ -120,17 +118,17 @@
         </div>
 
     </section>
-    <section class="index-web-sites section">             
+    <section class="index-web-sites section">
         <div class="index-web-sites-wrap m-hidden">
             <div class="title">
                 <h2>Виды сайтов</h2>
-            </div>   
+            </div>
             @Html.Partial("_Index_WebSitesPartialView")
         </div>
         <div class="index-web-sites-wrap m-visible">
             <div class="title">
                 <h2>Виды сайтов</h2>
-            </div>   
+            </div>
             <div class="grid">
                 <div class="grid-item">
                     <div class="img" style="background-image:url(http://www.nastol.com.ua/download.php?img=201606/1366x768/nastol.com.ua-177863.jpg)">
