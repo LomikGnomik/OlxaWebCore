@@ -70,11 +70,20 @@
         <div class="description description-shop">
             <h1>Интернет магазин</h1>
             <p>
-                Tincidunt integer eu augue augue nunc elit dolor,
-                luctus placerat scelerisque euismod, iaculis eu
-                lacus nunc mi elit, vehicula ut laoreet ac,
-                aliquam sit amet justo nunc tempor, metus vel.
+                Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
+                быстро их обрабатывать. Гибкая структура позволяет легко расширить ассортимент
+                продукции и добавлять новые способы оплаты и доставки.
             </p>
+            <p>Интернет магазин уже содержит:</p>
+            <ul>
+                <li>Каталог продукции</li>
+                <li>Акции</li>                
+                <li>Рекомендуемые товары</li>
+                <li>Корзину</li>
+                <li>Онлайн-платежи</li>
+                <li>Расчет стоимости доставки</li>
+            </ul>
+            <p>и др.</p>
         </div>
     </div>
 
@@ -100,70 +109,70 @@
             </section>
 
         </div>*@
-   
 
-        <section class="tabs-all shop-tabs" role="tab">
-            <input id="tab__1" type="radio" name="tabs" checked="checked" />
-            <input id="tab__2" type="radio" name="tabs" checked="checked" />
-            <input id="tab__3" type="radio" name="tabs" />
 
-            <div class="label-wrapper">
-                <label for="tab__1" id="tab__l1">Готовые решения</label>
-                <label for="tab__2" id="tab__l2">Создание сайта</label>
-                <label for="tab__3" id="tab__l3">Разработка сайта</label>
-            </div>
+    <section class="tabs-all shop-tabs" role="tab">
+        <input id="tab__1" type="radio" name="tabs" checked="checked" />
+        <input id="tab__2" type="radio" name="tabs" checked="checked" />
+        <input id="tab__3" type="radio" name="tabs" />
 
-            <div class="tabs_content">
+        <div class="label-wrapper">
+            <label for="tab__1" id="tab__l1">Готовые решения</label>
+            <label for="tab__2" id="tab__l2">Создание сайта</label>
+            <label for="tab__3" id="tab__l3">Разработка сайта</label>
+        </div>
 
-                <div id="tab__c1">
-                    <div class="tab-inner-content">
-                        <div class="content-item"></div>
-                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
+        <div class="tabs_content">
+
+            <div id="tab__c1">
+                <div class="tab-inner-content">
+                    <div class="content-item"></div>
+                    <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
+                </div>
+                <div class="shop-description">
+                    <div class="contains">
+                        <h3>В стоимость входит</h3>
+                        <ul>
+                            <li>Любой из 5 шаблонов на выбор</li>
+                            <li>Установка CMS на хостинге</li>
+                            <li>Настройка магазина</li>
+                            <li>Хостинг и доменое имя на 1год</li>
+                            <li>Почтовый ящик с Вашим доменом</li>
+
+                        </ul>
                     </div>
-                    <div class="shop-description">
-                        <div class="contains">
-                            <h3>В стоимость входит</h3>
-                            <ul>
-                                <li>Любой из 5 шаблонов на выбор</li>
-                                <li>Установка CMS на хостинге</li>
-                                <li>Настройка магазина</li>
-                                <li>Хостинг и доменое имя на 1год</li>
-                                <li>Почтовый ящик с Вашим доменом</li>
-
-                            </ul>
-                        </div>
-                        <div class="extra">
-                            <h3>Дополнительные услуги</h3>
-                            <ul>
-                                <li>Базовое SEO</li>
-                                <li>Доработка</li>
-                                <li>И еще это</li>
-                                <li>И вот</li>
-                            </ul>
-                        </div>
+                    <div class="extra">
+                        <h3>Дополнительные услуги</h3>
+                        <ul>
+                            <li>Базовое SEO</li>
+                            <li>Доработка</li>
+                            <li>И еще это</li>
+                            <li>И вот</li>
+                        </ul>
                     </div>
-                </div> @*tab__c1*@
+                </div>
+            </div> @*tab__c1*@
 
-                <div id="tab__c2">
-                    <div class="tab-inner-content">
-                        <div class="content-item"></div>
-                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
+            <div id="tab__c2">
+                <div class="tab-inner-content">
+                    <div class="content-item"></div>
+                    <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
 
-                    </div>
-                    @Html.Partial("_StepsCreatePartialView")
-                </div> @*tab__c2*@
-                <div id="tab__c3">
-                    <div class="tab-inner-content">
-                        <div class="content-item"></div>
-                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
+                </div>
+                @Html.Partial("_StepsCreatePartialView")
+            </div> @*tab__c2*@
+            <div id="tab__c3">
+                <div class="tab-inner-content">
+                    <div class="content-item"></div>
+                    <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
 
-                    </div>
-                </div> @*tab__c3*@
-            </div>
-        </section>
+                </div>
+            </div> @*tab__c3*@
+        </div>
+    </section>
 
 
-   
+
 
     @await Component.InvokeAsync("ExamplesSites", new { category = "Интернет-магазин" })
     @await Component.InvokeAsync("OrderForm")
