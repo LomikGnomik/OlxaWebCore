@@ -10,105 +10,85 @@
     <section class="header">
         @Html.Partial("_HeaderPartialView")
     </section>
-    <div class="presentation presentation-shop">
-        <div class="isometric-wrapper">
-            <div class="floor isometric shop">
-                <div class="shop-admin" id="adminOpenen">
-                    <p class="md-light md-24">Админка</p>
-                </div>
-                <div class="appBar menu-buy">
-                    <div class="buy" id="drawerOpener">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <section class="shop-description-wrap">
+        <div class="presentation presentation-shop">
+            <div class="isometric-wrapper">
+                <div class="floor isometric shop">
+                    <div class="shop-admin" id="adminOpenen">
+                        <p class="md-light md-24">Админка</p>
                     </div>
-                </div>
-                <div class="content">
-                    <div class="card">  </div>
-                    <div class="card-shop-wrapper">
-                        <div class="card"></div>
-                        <div class="card"></div>
-                        <div class="card"></div>
+                    <div class="appBar menu-buy">
+                        <div class="buy" id="drawerOpener">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </div>
                     </div>
-                    <div class="card-shop-wrapper">
-                        <div class="card"></div>
-                        <div class="card"></div>
-                        <div class="card"></div>
-                    </div>
-                </div>
-                @*<div class="fab dialogOpener toasted"></div>*@
-                <div class="dialogContainer hidden" id="dialog">
-                    <div class="dialog"></div>
-                </div>
-                <div class="drawerContainer hidden" id="drawer">
-                    <div class="drawer">
-                        <div class="header"></div>
-                    </div>
-                </div>
-                <div class="adminContainer hidden" id="admin">
-                    <div class="admin">
-                        <div class="card-admin-wrap">
-                            <div class="card">
-                                <img src="http://anub.ru/uploads/07.2008/121751263099_2.jpg" alt="">
-                            </div>
-                            <div class="card">
-                                <img src="http://sartus.eu/images/gallery/b6f4f00a07935aef3a4c166432544a6f.png" alt="">
-                            </div>
+                    <div class="content">
+                        <div class="card">  </div>
+                        <div class="card-shop-wrapper">
+                            <div class="card"></div>
+                            <div class="card"></div>
                             <div class="card"></div>
                         </div>
-                        <div class="card-admin-wrap">
-                            <div class="card">
-                                <img src="http://anub.ru/uploads/07.2008/121751263099_2.jpg" alt="">
-                            </div>
-                            <div class="card">
-                                <img src="http://sartus.eu/images/gallery/b6f4f00a07935aef3a4c166432544a6f.png" alt="">
-                            </div>
+                        <div class="card-shop-wrapper">
                             <div class="card"></div>
+                            <div class="card"></div>
+                            <div class="card"></div>
+                        </div>
+                    </div>
+                    @*<div class="fab dialogOpener toasted"></div>*@
+                    <div class="dialogContainer hidden" id="dialog">
+                        <div class="dialog"></div>
+                    </div>
+                    <div class="drawerContainer hidden" id="drawer">
+                        <div class="drawer">
+                            <div class="header"></div>
+                        </div>
+                    </div>
+                    <div class="adminContainer hidden" id="admin">
+                        <div class="admin">
+                            <div class="card-admin-wrap">
+                                <div class="card">
+                                    <img src="http://anub.ru/uploads/07.2008/121751263099_2.jpg" alt="">
+                                </div>
+                                <div class="card">
+                                    <img src="http://sartus.eu/images/gallery/b6f4f00a07935aef3a4c166432544a6f.png" alt="">
+                                </div>
+                                <div class="card"></div>
+                            </div>
+                            <div class="card-admin-wrap">
+                                <div class="card">
+                                    <img src="http://anub.ru/uploads/07.2008/121751263099_2.jpg" alt="">
+                                </div>
+                                <div class="card">
+                                    <img src="http://sartus.eu/images/gallery/b6f4f00a07935aef3a4c166432544a6f.png" alt="">
+                                </div>
+                                <div class="card"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="description description-shop">
-            <h1>Интернет магазин</h1>
-            <p>
-                Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
-                быстро их обрабатывать. Гибкая структура позволяет легко расширить ассортимент
-                продукции и добавлять новые способы оплаты и доставки.
-            </p>
-            <p>Интернет магазин уже содержит:</p>
-            <ul>
-                <li>Каталог продукции</li>
-                <li>Акции</li>                
-                <li>Рекомендуемые товары</li>
-                <li>Корзину</li>
-                <li>Онлайн-платежи</li>
-                <li>Расчет стоимости доставки</li>
-            </ul>
-            <p>и др.</p>
-        </div>
-    </div>
-
-
-    @*<div class="wrapper-shop">
-        <section class="info-shop">
-            <div class="shop-preview">
-                <img src="~/images/shop/post01.jpg" alt="интернет магазин" />
-            </div>
-            <div class="shop-idea">
-                <h2>Интернет магазин</h2>
+            <div class="description description-shop">
+                <h1>Интернет магазин</h1>
                 <p>
-                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                    Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
+                    быстро их обрабатывать. Гибкая структура позволяет легко расширить ассортимент
+                    продукции и добавлять новые способы оплаты и доставки.
                 </p>
-                @*<div class="shop-demo">
-                        <a href="http://nopcommerce.olxaweb.ru" class="btn">Демо сайта</a>
-                        <a href="http://nopcommerce.olxaweb.ru/admin" class="btn">Демо админки</a>
-                    </div>
-                    <div class="shop-order">
-                        <a class="btn btn-long btn-ghost-more" href="#form">Заказать</a>
-                    </div>*@
-    @*</div>
-            </section>
-
-        </div>*@
+                <p>Интернет магазин уже содержит:</p>
+                <ul>
+                    <li>Каталог продукции</li>
+                    <li>Акции</li>
+                    <li>Рекомендуемые товары</li>
+                    <li>Корзину</li>
+                    <li>Онлайн-платежи</li>
+                    <li>Расчет стоимости доставки</li>
+                </ul>
+                <p>и др.</p>
+                <a href="#order-form" class="btn btn-ghost-more btn-long">Закзать</a>
+            </div>
+        </div>
+    </section>
 
 
     <section class="tabs-all shop-tabs" role="tab">

@@ -9,144 +9,63 @@
     <section class="header">
         @Html.Partial("_HeaderPartialView")
     </section>
-    <div class="presentation presentation-corporate">
-        <div class="isometric-wrapper">
-            <div class="floor isometric corporate">
-                <div class="content">
-                    <div class="card header">
-                        <div class="button">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="card card-corporate"></div>
-                    <div class="card card-corporate">
-                        <div class="form-inner-card-wrapper">
-                            <div class="inputs-wrapper">
-                                <div class="input"></div>
-                                <div class="input"></div>
+    <section class="corporatre-description">
+        <div class="presentation presentation-corporate">
+            <div class="isometric-wrapper">
+                <div class="floor isometric corporate">
+                    <div class="content">
+                        <div class="card header">
+                            <div class="button">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             </div>
-                            <div class="buttons-form">
-                                <div class="button right">
-                                    <p>Заказать</p>
+                        </div>
+                        <div class="card card-corporate"></div>
+                        <div class="card card-corporate">
+                            <div class="form-inner-card-wrapper">
+                                <div class="inputs-wrapper">
+                                    <div class="input"></div>
+                                    <div class="input"></div>
+                                </div>
+                                <div class="buttons-form">
+                                    <div class="button right">
+                                        <p>Заказать</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                @*<div class="fab dialogOpener toasted"></div>*@
-                <div class="dialogContainer hidden" id="dialog">
-                    <div class="dialog"></div>
-                </div>
-                <div class="drawerContainer hidden" id="drawer">
-                    <div class="drawer">
-                        <div class="header"></div>
+                    @*<div class="fab dialogOpener toasted"></div>*@
+                    <div class="dialogContainer hidden" id="dialog">
+                        <div class="dialog"></div>
+                    </div>
+                    <div class="drawerContainer hidden" id="drawer">
+                        <div class="drawer">
+                            <div class="header"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="description description-corporate">
-            <h1>Корпоративный</h1>
-            <p>
-                Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
-                более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
-            </p>
-            <p>Наиболее используемые модули:</p>
-            <ul>
-                <li>Личный кабинет</li>
-                <li>Каталог продукции</li>
-                <li>Новости</li>
-                <li>Форму обратной связи</li>
-                <li>Калькулятор</li>
-            </ul>
-            <p>и др.</p>
-        </div>
-    </div>
-    @*<div class="corporete-title">
-            <div class="letter">
-                <p>Creating a messy stack of papers using the magic of CSS transforms and generated content.</p>
-
-                <p>Параграф</p> <p>Pen [CSS Stacked Paper Effect].</p>
-                <h3>[Надо брать]</h3>
-            </div>
-            <div class="corporete-description">
-                <h2>Корпоративный сайт</h2>
-                <p class="title-p">
-                    Tincidunt integer eu augue augue nunc elit dolor,
-                    luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
-                    vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+            <div class="description description-corporate">
+                <h1>Корпоративный</h1>
+                <p>
+                    Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
+                    более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
                 </p>
+                <p>Наиболее используемые модули:</p>
+                <ul>
+                    <li>Личный кабинет</li>
+                    <li>Каталог продукции</li>
+                    <li>Новости</li>
+                    <li>Форму обратной связи</li>
+                    <li>Калькулятор</li>
+                </ul>
+                <p>и др.</p>
+                <a href="#order-form" class="btn btn-ghost-more btn-long">Закзать</a>
             </div>
-        </div>*@
-    @*<div class="plus-corporate-wrap">
-        <div class="plus-corporate flex">
-            <div class="plus-corporate-item medium-half large-third">
-                <div class="item-wrap">
+        </div>
+    </section>
 
-                </div>
-            </div>
-
-            <div class="plus-corporate-item medium-half large-third">
-                <div class="item-wrap">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                    <p>
-                        Tincidunt integer eu augue augue nunc elit dolor,
-                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
-                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="plus-corporate-item medium-half large-third">
-                <div class="item-wrap">
-                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
-                    <p>
-                        Tincidunt integer eu augue augue nunc elit dolor,
-                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
-                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="plus-corporate-item medium-half large-third">
-                <div class="item-wrap">
-                    <i class="fa fa-building-o" aria-hidden="true"></i>
-                    <p>
-                        Tincidunt integer eu augue augue nunc elit dolor,
-                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
-                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="plus-corporate-item medium-half large-third">
-                <div class="item-wrap">
-                    <i class="fa fa-cubes" aria-hidden="true"></i>
-                    <p>
-                        Tincidunt integer eu augue augue nunc elit dolor,
-                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
-                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="plus-corporate-item medium-half large-third">
-                <div class="item-wrap">
-                    <i class="fa fa-address-card-o" aria-hidden="true"></i>
-                    <p>
-                        Tincidunt integer eu augue augue nunc elit dolor,
-                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
-                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-                    </p>
-                </div>
-
-            </div>
-        </div>*@ @*plus-corporate flex*@
-        @*</div>*@
-
+   
         @*--------------табы*@
         <section class="tabs-all" role="tab">
             @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@

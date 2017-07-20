@@ -4617,6 +4617,7 @@ section.information-title figcaption p {
   justify-content: space-between;
 }
 .presentation .description {
+  position: absolute;
   width: 50%;
   max-width: 40em;
   display: table;
@@ -4625,12 +4626,6 @@ section.information-title figcaption p {
 .presentation .description .description-inner {
   display: table-cell;
   vertical-align: middle;
-}
-.presentation .description-landing.description {
-  padding-left: 8em;
-}
-.presentation .description-information.description {
-  padding-left: 2em;
 }
 /*------------------------------общие стили*/
 .isometric-wrapper {
@@ -5549,7 +5544,8 @@ section.information-title figcaption p {
 @media (min-width: 3840px) {
   /*визитка*/
   .presentation .description {
-    margin-right: 30.5%;
+    left: 53%;
+    width: 28em;
   }
   /*лендинг*/
   /*Корпоративный*/
@@ -5565,8 +5561,8 @@ section.information-title figcaption p {
 @media (min-width: 2560px) and (max-width: 3839px) {
   /*визитка*/
   .presentation .description {
-    margin-right: 20.5%;
-    margin-top: 5em;
+    width: 28em;
+    left: 54.5%;
   }
   /*лендинг*/
   .presentation .description-landing.description {
@@ -5585,8 +5581,8 @@ section.information-title figcaption p {
     left: 25%;
   }
   .presentation .description {
-    margin-right: 10.5%;
-    margin-top: 5em;
+    width: 28em;
+    left: 56%;
   }
   /*лендинг*/
   .presentation .description-landing.description {
@@ -5612,9 +5608,8 @@ section.information-title figcaption p {
 @media (min-width: 1680px) and (max-width: 1919px) {
   /*визитка*/
   .presentation .description {
-    width: 26em;
-    margin-right: 18%;
-    margin-top: 2em;
+    left: 57%;
+    width: 28em;
   }
   /*лендинг*/
   .presentation .description-landing.description {
@@ -5648,9 +5643,8 @@ section.information-title figcaption p {
 @media (min-width: 1200px) and (max-width: 1679px) {
   /*визитка*/
   .presentation .description {
-    width: 26em;
-    margin-right: 4em;
-    margin-top: 2em;
+    left: 59.5%;
+    width: 29em;
   }
   /*лендинг*/
   .presentation .description-landing.description {
@@ -5699,7 +5693,8 @@ section.information-title figcaption p {
     margin-top: 0;
   }
   .presentation .description {
-    margin-right: 0;
+    left: 51%;
+    width: 29em;
   }
   .isometric-wrapper .isometric .content .card {
     height: 115px;
@@ -5760,6 +5755,7 @@ section.information-title figcaption p {
     flex-direction: column;
   }
   .presentation .description {
+    position: relative;
     margin: 0 auto;
     order: 0;
     width: 90%;
@@ -5804,6 +5800,7 @@ section.information-title figcaption p {
     flex-direction: column;
   }
   .presentation .description {
+    position: relative;
     margin: 0 auto;
     width: 90%;
     max-width: 35em;
@@ -5851,6 +5848,9 @@ section.information-title figcaption p {
 }
 @media screen and (max-width: 640px) {
   /*визитка*/
+  .presentation .description {
+    position: relative;
+  }
   .isometric-wrapper .visit.floor {
     left: 38%;
     top: 25em;

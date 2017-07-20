@@ -1374,6 +1374,7 @@ section.tariff {
         }
     }*/
 }
+
 .pagination {
     padding-top: 1em;
     border-top: 1px solid @color-gray-light;
@@ -2745,6 +2746,7 @@ section.price-solution {
         }
     }
 }
+
 @media (min-width: 1200px) {
     .solution-item-wrap {
         width: 33.333%;
@@ -2888,7 +2890,7 @@ section.price-solution {
                 }
 
                 .rw-words {
-                   // font-family: 'Abril Fatface', serif;
+                    // font-family: 'Abril Fatface', serif;
                     display: inline;
                     min-width: 600px;
                     min-height: 29px;
@@ -2899,7 +2901,7 @@ section.price-solution {
                 }
 
                 .rw-words-1 span {
-                   // text-transform:uppercase;
+                    // text-transform:uppercase;
                     margin-left: 10px;
                     text-align: left;
                     color: @color-more;
@@ -4654,10 +4656,11 @@ section.information-title {
     }
 }
 /*---------------------------------------------------------------------Страница услуги service */
-.all-service-wrap .catalog .accordion{
-        width:95%;
-        margin:0 auto;
-    }
+.all-service-wrap .catalog .accordion {
+    width: 95%;
+    margin: 0 auto;
+}
+
 .all-service-wrap {
     margin-top: 3em;
 
@@ -4709,18 +4712,25 @@ section.information-title {
     }
 }
 
-@media (min-width: 1200px){
-   /*.all-service-wrap .catalog .accordion{
+@media (min-width: 1200px) {
+    /*.all-service-wrap .catalog .accordion{
         width:95%;
     }*/
 }
-@media (min-width: 992px) and (max-width: 1199px){}
-@media (min-width: 768px) and (max-width: 991px){}
-@media (max-width: 767px){}
-@media screen and (max-width:640px){
-    .all-service-wrap section.catalog table.service td{
-        padding:0;
-        max-width:8em;
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media screen and (max-width:640px) {
+    .all-service-wrap section.catalog table.service td {
+        padding: 0;
+        max-width: 8em;
         word-wrap: break-word;
     }
 }
@@ -5903,6 +5913,7 @@ section.information-title {
     justify-content: space-between;
     //height: 35em;
     .description {
+        position: absolute;
         width: 50%;
         max-width: 40em;
         display: table;
@@ -5915,11 +5926,11 @@ section.information-title {
     }
 
     .description-landing.description {
-        padding-left: 8em;
+       // padding-left: 8em;
     }
 
     .description-information.description {
-        padding-left: 2em;
+      //  padding-left: 2em;
     }
 }
 /*------------------------------общие стили*/
@@ -6983,7 +6994,8 @@ section.information-title {
 @media (min-width: 3840px) {
     /*визитка*/
     .presentation .description {
-        margin-right: 30.5%;
+        left: 53%;
+        width: 28em;
     }
     /*лендинг*/
     /*Корпоративный*/
@@ -7001,8 +7013,9 @@ section.information-title {
 @media (min-width: 2560px) and (max-width: 3839px) {
     /*визитка*/
     .presentation .description {
-        margin-right: 20.5%;
-        margin-top: 5em;
+        width: 28em;
+        left: 54.5%;
+        // margin-top: 5em;
     }
     /*лендинг*/
     .presentation .description-landing.description {
@@ -7016,15 +7029,16 @@ section.information-title {
     }
 }
 
-@media (min-width: 1920px) and (max-width: 2559px) {
+@media (min-width: 1920px) and (max-width: 2559px){
     /*визитка*/
     .isometric-wrapper .visit.floor {
         left: 25%;
     }
 
     .presentation .description {
-        margin-right: 10.5%;
-        margin-top: 5em;
+        width: 28em;
+        left: 56%;
+        // margin-top: 5em;
     }
     /*лендинг*/
     .presentation .description-landing.description {
@@ -7052,9 +7066,8 @@ section.information-title {
 @media (min-width: 1680px) and (max-width: 1919px) {
     /*визитка*/
     .presentation .description {
-        width: 26em;
-        margin-right: 18%;
-        margin-top: 2em;
+        left: 57%;
+        width: 28em;
     }
     /*лендинг*/
     .presentation .description-landing.description {
@@ -7063,9 +7076,10 @@ section.information-title {
     }
     /*Корпоративный*/
     /*Интернет магазин*/
-    .presentation .description-shop.description{
-       margin-right:17em;
+    .presentation .description-shop.description {
+        margin-right: 17em;
     }
+
     .isometric-wrapper .shop .shop-admin {
         margin-left: 0.7em;
         width: 23em;
@@ -7088,16 +7102,13 @@ section.information-title {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1679px){
-
-}
-
 @media (min-width: 1200px) and (max-width: 1679px) {
     /*визитка*/
     .presentation .description {
-        width: 26em;
-        margin-right: 4em;
-        margin-top: 2em;
+        left: 59.5%;
+        width: 29em;
+        // margin-right: 4em;
+        // margin-top: 2em;
     }
     /*лендинг*/
     .presentation .description-landing.description {
@@ -7113,11 +7124,12 @@ section.information-title {
     }
     /*Корпоративный*/
     /*Интернет магазин*/
-    .presentation .description.description-shop p{
-        width:22em;
+    .presentation .description.description-shop p {
+        width: 22em;
     }
-    .presentation .description.description-shop{
-      //  margin-right:-2em;
+
+    .presentation .description.description-shop {
+        //  margin-right:-2em;
     }
     /*Информационный*/
     .isometric-wrapper .information .information-inner-wrap .content {
@@ -7157,7 +7169,8 @@ section.information-title {
     }
 
     .presentation .description {
-        margin-right: 0;
+            left: 51%;
+                width: 29em;
     }
 
     .isometric-wrapper .isometric .content .card {
@@ -7191,11 +7204,13 @@ section.information-title {
     }
     /*Интернет магазин*/
     .shop-wrap .presentation .description {
-       // margin-right: -6em;
+        // margin-right: -6em;
     }
-     .presentation .description.description-shop p{
-        width:22em;
+
+    .presentation .description.description-shop p {
+        width: 22em;
     }
+
     .isometric-wrapper .shop .shop-admin {
         margin-left: 0.7em;
         width: 24em;
@@ -7231,6 +7246,7 @@ section.information-title {
     }
 
     .presentation .description {
+        position:relative;
         margin: 0 auto;
         order: 0;
         width: 90%;
@@ -7284,6 +7300,7 @@ section.information-title {
     }
 
     .presentation .description {
+        position:relative;
         margin: 0 auto;
         width: 90%;
         max-width: 35em;
@@ -7339,6 +7356,9 @@ section.information-title {
 
 @media screen and (max-width:640px) {
     /*визитка*/
+    .presentation .description{
+        position:relative;
+    }
     .isometric-wrapper .visit.floor {
         left: 38%;
         top: 25em;
@@ -7957,7 +7977,7 @@ section.information-title {
 .tab-inner-content {
     display: flex;
     justify-content: space-between;
-   
+
 
     .content-item {
         width: 70%;
@@ -7966,8 +7986,8 @@ section.information-title {
     aside {
         display: flex;
         flex-direction: column;
-         margin-right: 1em;
-      //width: 35%;
+        margin-right: 1em;
+        //width: 35%;
     }
 }
 
@@ -8006,7 +8026,6 @@ section.tabs-all {
         text-align: center;
         padding: 0 1em;
         //min-width: 20em;
-
         &:ntf-child(2) {
             border-left: none;
             border-right: none;
@@ -8015,6 +8034,7 @@ section.tabs-all {
         &:first-child {
             margin-left: 1em;
         }
+
         &:last-child {
             margin-right: 1em;
         }
@@ -8081,16 +8101,17 @@ section.tabs-all {
     section.tabs-all section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2 {
         margin-left: 46em;
     }
-    section.tabs-all label:first-child{
+
+    section.tabs-all label:first-child {
         margin-left: 47em;
     }
 }
 /*@media (min-width: 2560px) and (max-width: 3839px){}
 @media (min-width: 1920px) and (max-width: 2559px){}
 @media (min-width: 1680px) and (max-width: 1919px){}*/
-@media (min-width: 1200px) and (max-width: 1679px){
-    section.tabs-all .label-wrapper label{
-            min-width: 12em;
+@media (min-width: 1200px) and (max-width: 1679px) {
+    section.tabs-all .label-wrapper label {
+        min-width: 12em;
     }
 }
 /*@media (min-width: 992px) and (max-width: 1199px){}
@@ -8099,10 +8120,12 @@ section.tabs-all {
     section.tabs-all .label-wrapper label {
         min-width: 5em;
         font-size: 0.8em;
-        width:100%;
+        width: 100%;
     }
 }
-@media screen and (max-width:640px){}
+
+@media screen and (max-width:640px) {
+}
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
 #toTop {
     width: 1.5em;
