@@ -4458,7 +4458,6 @@ section.information-title figcaption p {
 .landing-wrapper section.landing-description p {
   display: inline-block;
   font-weight: normal;
-  font-size: 1.25em;
 }
 .landing-wrapper section.landing-description .description-wrap {
   margin-top: 6.5em;
@@ -4622,16 +4621,29 @@ section.information-title figcaption p {
   display: table;
   table-layout: fixed;
 }
-.presentation .description .description-inner {
-  /*display: flex;
-            flex-direction: column;
-            justify-content: space-around;*/
+.presentation .description .description-inner-text-group {
+  display: flex;
+  flex-direction: column;
 }
-.presentation .description .description-inner .description-inner-text-group h1 {
+.presentation .description .description-inner-text-group h1 {
   line-height: 2em;
 }
-.presentation .description .description-inner .description-inner-text-group p {
+.presentation .description .description-inner-text-group p {
   line-height: 1.5em;
+}
+.presentation .description .description-inner-text-group p.ul-title {
+  margin-left: auto;
+  font-weight: 600;
+  line-height: 2em;
+}
+.presentation .description .description-inner-text-group ul {
+  margin-left: auto;
+  line-height: 1.2em;
+}
+.presentation .description .description-inner-text-group ul li::before {
+  content: "\2714";
+  color: #0d9706;
+  margin-right: 1em;
 }
 /*------------------------------общие стили*/
 .isometric-wrapper {
@@ -5651,7 +5663,7 @@ section.information-title figcaption p {
   }
   /*Интернет магазин*/
   .isometric-wrapper .shop.floor {
-    top: 5em;
+    top: 6em;
   }
   .isometric-wrapper .shop .shop-admin {
     margin-left: 0.7em;
@@ -5693,7 +5705,6 @@ section.information-title figcaption p {
   }
   .presentation .description-landing.description {
     margin-right: 0;
-    width: 50%;
     top: 12%;
   }
   /*Корпоративный*/

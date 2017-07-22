@@ -46,7 +46,7 @@
                         К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
                         например: кулинарный, образовательный, развлекательный
                     </p>
-                    <p>Наиболее используемые модули:</p>
+                    <p class="ul-title">Наиболее используемые модули:</p>
                     <ul>
                         <li>Регистрация пользователей</li>
                         <li>Авторизация через социальные сети</li>
@@ -54,52 +54,9 @@
                         <li>Комментарии</li>
                         <li>Голосования и опросы</li>
                     </ul>
-                    <p>и др.</p>
                 </div>
-            </div>
-        </div>
-        @* <div class="component">
-                <ul class="align">
-
-                    <li>
-                        <figure class='book'>
-
-                            <ul class='hardcover_front'>
-                                <li>
-                                    <img src="" alt="" width="100%" max-height="100%">
-
-                                </li>
-                                <li></li>
-                            </ul>
-
-                            <ul class='page'>
-                                <li></li>
-                                <li>
-                                    <a class="learn" href="#">Узнать больше</a>
-                                </li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-
-                            <ul class='hardcover_back'>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                            <ul class='book_spine'>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                            <figcaption>
-                                <h1>Название книги</h1>
-                                <span>Автор</span>
-                                <p>From mobile browsers to netbooks and tablets, users are visiting your sites from an increasing array of devices and browsers. </p>
-                            </figcaption>
-                        </figure>
-
-                    </li>
-                </ul>
-            </div>*@
+            </div>        </div>
+       
     </section>
     <section class="information-tab">
 
@@ -118,14 +75,14 @@
                 @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
                 <div id="tab__c2">
                     <div class="tab-inner-content">
-                        <div class="content-item"></div>
-                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
+                        <div class="content-item">тут содержимое</div>
+                        <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                     </div>
                 </div> @*tab__c2*@
                 <div id="tab__c3">
                     <div class="tab-inner-content">
-                        <div class="content-item"></div>
-                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
+                        <div class="content-item">тут содержимое</div>
+                        <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                     </div>
                 </div> @*tab__c3*@
             </div>
