@@ -52,7 +52,7 @@
                         Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
                         более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
                     </p>
-                    <p>Наиболее используемые модули:</p>
+                    <p   class="ul-title">Наиболее используемые модули:</p>
                     <ul>
                         <li>Личный кабинет</li>
                         <li>Каталог продукции</li>
@@ -60,7 +60,6 @@
                         <li>Форму обратной связи</li>
                         <li>Калькулятор</li>
                     </ul>
-                    <p>и др.</p>
                 </div>
             </div>
 
@@ -84,15 +83,15 @@
                 @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
                 <div id="tab__c2">
                     <div class="tab-inner-content">
-                        <div class="content-item"></div>
-                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
+                        <div class="content-item">тут содержимое</div>
+                        <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                     </div>
                     @Html.Partial("_StepsCreatePartialView")
                 </div> @*tab__c2*@
                 <div id="tab__c3">
                     <div class="tab-inner-content">
-                        <div class="content-item"></div>
-                        <aside>@await Component.InvokeAsync("PriceTimeDemo")</aside>
+                        <div class="content-item">тут содержимое</div>
+                        <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                     </div>
                 </div> @*tab__c3*@
             </div>

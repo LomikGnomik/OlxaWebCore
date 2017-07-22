@@ -5711,7 +5711,6 @@ section.information-title {
             display: inline-block;
             //  width: 35em;
             font-weight: normal;
-            font-size: @size-font-big;
         }
 
         .description-wrap {
@@ -5918,24 +5917,36 @@ section.information-title {
         max-width: 40em;
         display: table;
         table-layout: fixed;
-      //  min-height: 26.5em;
-
-        .description-inner {
-            // height: 26.5em;
-            /*display: flex;
+        //  min-height: 26.5em;
+        .description-inner-text-group {
+            display: flex;
             flex-direction: column;
-            justify-content: space-around;*/
-            .description-inner-text-group {
-                h1 {
-                    line-height: 2em;
-                }
 
-                p {
-                    line-height: 1.5em;
+            h1 {
+                line-height: 2em;
+            }
+
+            p {
+                line-height: 1.5em;
+            }
+
+            p.ul-title {
+                margin-left: auto;
+                font-weight: 600;
+                line-height: 2em;
+            }
+
+            ul {
+                margin-left: auto;
+                    line-height: 1.2em;
+
+                li::before {
+                    content: "\2714";
+                    color: @color-success;
+                    margin-right: 1em;
                 }
             }
         }
-
 
         .description-landing.description {
             // padding-left: 8em;
@@ -6554,7 +6565,6 @@ section.information-title {
         top: 9em;
     }
 
-
     .corporate {
         .card-corporate.card {
             height: 13em;
@@ -7122,9 +7132,10 @@ section.information-title {
         left: 30%;
     }
     /*Интернет магазин*/
-    .isometric-wrapper .shop.floor{
-        top:5em;
+    .isometric-wrapper .shop.floor {
+        top: 6em;
     }
+
     .isometric-wrapper .shop .shop-admin {
         margin-left: 0.7em;
         width: 96%;
@@ -7171,14 +7182,13 @@ section.information-title {
     }
 
     .presentation .description-landing.description {
-        margin-right: 0;
-        width: 50%;
+        margin-right: 0;       
         top: 12%;
     }
     /*Корпоративный*/
     .isometric-wrapper .corporate.floor {
         left: 30%;
-        top:6em;
+        top: 6em;
     }
 
     .presentation .description.description-corporate {
@@ -7191,7 +7201,7 @@ section.information-title {
 
     .isometric-wrapper .shop.floor {
         left: 30%;
-        top:5em;
+        top: 5em;
     }
 
     .isometric-wrapper .shop .shop-admin {
@@ -7251,7 +7261,7 @@ section.information-title {
     /*Корпоративный*/
     .isometric-wrapper .corporate.floor {
         left: 26%;
-        top:7em;
+        top: 7em;
     }
 
     .presentation .description.description-corporate {
@@ -7260,7 +7270,7 @@ section.information-title {
     /*Интернет магазин*/
     .isometric-wrapper .shop.floor {
         left: 29%;
-        top:7em;
+        top: 7em;
     }
 
     .isometric-wrapper .shop {
@@ -7272,9 +7282,10 @@ section.information-title {
     }
 
     /*Информационный*/
-    .presentation.presentation-information .isometric-wrapper{
-        height:16em;
+    .presentation.presentation-information .isometric-wrapper {
+        height: 16em;
     }
+
     .isometric-wrapper .information .information-inner-wrap .content {
         width: 65%;
     }
@@ -7437,8 +7448,9 @@ section.information-title {
     .description.description-information {
         top: 20%;
     }
-    .presentation.presentation-information .isometric-wrapper{
-        height:16em;
+
+    .presentation.presentation-information .isometric-wrapper {
+        height: 16em;
     }
 }
 
@@ -7511,9 +7523,9 @@ section.information-title {
     /*Интернет магазин*/
     /*Информационный*/
     .presentation .description-information.description {
-        margin-top: 2em;        
+        margin-top: 2em;
     }
-   /*.presentation .description.description-information{
+    /*.presentation .description.description-information{
         min-height:15em;
     }*/
 }
@@ -7588,7 +7600,7 @@ section.information-title {
     }
     /*Корпоративный*/
     .presentation-corporate.presentation {
-       // margin-top: -3em;
+        // margin-top: -3em;
     }
     /*Интернет магазин*/
     /*Информационный*/
@@ -8258,7 +8270,7 @@ section.information-title {
 
 
     .content-item {
-        width: 70%;
+      //  width: 70%;
     }
 
     aside {
