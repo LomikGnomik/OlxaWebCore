@@ -4457,7 +4457,6 @@ section.information-title figcaption p {
 }
 .landing-wrapper section.landing-description p {
   display: inline-block;
-  width: 35em;
   font-weight: normal;
   font-size: 1.25em;
 }
@@ -4624,14 +4623,21 @@ section.information-title figcaption p {
   table-layout: fixed;
 }
 .presentation .description .description-inner {
-  display: table-cell;
-  vertical-align: middle;
+  /*display: flex;
+            flex-direction: column;
+            justify-content: space-around;*/
+}
+.presentation .description .description-inner .description-inner-text-group h1 {
+  line-height: 2em;
+}
+.presentation .description .description-inner .description-inner-text-group p {
+  line-height: 1.5em;
 }
 /*------------------------------общие стили*/
 .isometric-wrapper {
   display: block;
   width: 45%;
-  height: 420px;
+  height: 22em;
   /*---------------------Сайт визитка*/
   /*---------------------Лендинг*/
   /*---------------------Корпоративный*/
@@ -5255,11 +5261,14 @@ section.information-title figcaption p {
 }
 .isometric-wrapper .shop .menu-buy {
   display: flex;
+  width: 97%;
+  margin-left: 0.6em;
   background: #f3f3f3;
   background: #e5e5e5;
   border-bottom: 2px solid #999999;
   border-left: 2px solid #999999;
   transform: translate3d(0, 0, 10px);
+  box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .shop .menu-buy:hover {
   transform: translate3d(0, 0, 30px);
@@ -5275,7 +5284,7 @@ section.information-title figcaption p {
   font-size: 1.5em;
   width: 20%;
   margin-left: 12em;
-  height: 1.5em;
+  height: 1.3em;
   transform: translate3d(0, 0, 10px);
   box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
   -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
@@ -5328,8 +5337,9 @@ section.information-title figcaption p {
   margin-left: 35%;
 }
 .isometric-wrapper .shop .shop-admin {
-  width: 100%;
+  width: 97%;
   height: 2em;
+  margin-left: 0.6em;
   margin-bottom: 1em;
   cursor: pointer;
   border-radius: 0;
@@ -5337,7 +5347,7 @@ section.information-title figcaption p {
   border-bottom: 2px solid #00626e;
   border-left: 2px solid #00626e;
   transform: translate3d(0, 0, 30px);
-  box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
   -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
   -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
   transition: transform 0.5s, box-shadow 0.5s;
@@ -5444,7 +5454,7 @@ section.information-title figcaption p {
 }
 .isometric-wrapper .information.floor {
   left: 30%;
-  top: 10em;
+  top: 6em;
 }
 .isometric-wrapper .information {
   width: 30em;
@@ -5457,6 +5467,9 @@ section.information-title figcaption p {
   transform: translate3d(0, 0, 10px);
   border-bottom: 2px solid #999999;
   border-left: 2px solid #999999;
+  box-shadow: -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
+}
+.isometric-wrapper .information .isometric-wrapper .isometric .appBar {
   box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .information .information-inner-wrap {
@@ -5487,7 +5500,7 @@ section.information-title figcaption p {
   height: 8em;
   padding: 1em;
   margin-bottom: 1em;
-  background: blue;
+  background: #d3cfcf;
 }
 /*isometric-wrapper*/
 @-webkit-keyframes drop {
@@ -5542,13 +5555,29 @@ section.information-title figcaption p {
   }
 }
 @media (min-width: 3840px) {
+  .description-inner-text-group p {
+    text-align: justify;
+  }
   /*визитка*/
   .presentation .description {
     left: 53%;
     width: 28em;
+    top: 19%;
   }
   /*лендинг*/
+  .presentation .description.description-landing {
+    top: 12%;
+  }
+  .isometric-wrapper .landing.floor {
+    left: 42%;
+  }
   /*Корпоративный*/
+  .presentation .description.description-corporate {
+    top: 15%;
+  }
+  .isometric-wrapper .corporate.floor {
+    left: 40%;
+  }
   /*Интернет магазин*/
   /*Информационный*/
   .isometric-wrapper .information .information-inner-wrap .content {
@@ -5557,20 +5586,40 @@ section.information-title figcaption p {
   .isometric-wrapper .information.floor {
     left: 35%;
   }
+  .description.description-information {
+    top: 15%;
+  }
 }
 @media (min-width: 2560px) and (max-width: 3839px) {
+  .description-inner-text-group p {
+    text-align: justify;
+  }
   /*визитка*/
   .presentation .description {
-    width: 28em;
+    width: 29em;
     left: 54.5%;
+    top: 30%;
   }
   /*лендинг*/
   .presentation .description-landing.description {
     margin-right: 0;
+    top: 12%;
+  }
+  .isometric-wrapper .landing {
+    left: 38%;
   }
   /*Корпоративный*/
+  .presentation .description.description-corporate {
+    top: 15%;
+  }
   /*Интернет магазин*/
+  .presentation .description-shop.description {
+    top: 15%;
+  }
   /*Информационный*/
+  .description.description-information {
+    top: 15%;
+  }
   .isometric-wrapper .information .information-inner-wrap .content {
     width: 65%;
   }
@@ -5583,52 +5632,94 @@ section.information-title figcaption p {
   .presentation .description {
     width: 28em;
     left: 56%;
+    top: 25%;
   }
   /*лендинг*/
   .presentation .description-landing.description {
     margin-right: 0;
+    top: 12%;
+  }
+  .isometric-wrapper .landing {
+    left: 35%;
   }
   /*Корпоративный*/
+  .presentation .description.description-corporate {
+    top: 15%;
+  }
+  .isometric-wrapper .corporate.floor {
+    left: 30%;
+  }
   /*Интернет магазин*/
+  .isometric-wrapper .shop.floor {
+    top: 5em;
+  }
   .isometric-wrapper .shop .shop-admin {
     margin-left: 0.7em;
-    width: 23em;
+    width: 96%;
     box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
   }
   .isometric-wrapper .shop.isometric .appBar {
     margin-left: 0.7em;
-    width: 23em;
+    width: 96%;
     box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
   }
+  .presentation .description-shop.description {
+    top: 15%;
+  }
   /*Информационный*/
+  .isometric-wrapper .information.floor {
+    top: 9em;
+  }
+  .description.description-information {
+    top: 20%;
+  }
   .isometric-wrapper .information .information-inner-wrap .content {
     width: 65%;
   }
 }
 @media (min-width: 1680px) and (max-width: 1919px) {
   /*визитка*/
+  .isometric-wrapper .visit.floor {
+    left: 20%;
+  }
   .presentation .description {
     left: 57%;
-    width: 28em;
+    width: 29em;
+    top: 20%;
   }
   /*лендинг*/
+  .isometric-wrapper .landing {
+    left: 30%;
+  }
   .presentation .description-landing.description {
     margin-right: 0;
     width: 50%;
+    top: 12%;
   }
   /*Корпоративный*/
+  .isometric-wrapper .corporate.floor {
+    left: 30%;
+    top: 6em;
+  }
+  .presentation .description.description-corporate {
+    top: 25%;
+  }
   /*Интернет магазин*/
   .presentation .description-shop.description {
-    margin-right: 17em;
+    top: 25%;
+  }
+  .isometric-wrapper .shop.floor {
+    left: 30%;
+    top: 5em;
   }
   .isometric-wrapper .shop .shop-admin {
     margin-left: 0.7em;
-    width: 23em;
+    width: 96%;
     box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
   }
   .isometric-wrapper .shop.isometric .appBar {
     margin-left: 0.7em;
-    width: 23em;
+    width: 96%;
     box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
   }
   /*Информационный*/
@@ -5638,43 +5729,77 @@ section.information-title figcaption p {
   .presentation .description-information.description {
     width: 30em;
     margin-right: 13em;
+    top: 20%;
   }
 }
 @media (min-width: 1200px) and (max-width: 1679px) {
+  .description-inner-text-group p {
+    text-align: justify;
+  }
   /*визитка*/
+  .isometric-wrapper .visit.floor {
+    left: 22%;
+  }
   .presentation .description {
     left: 59.5%;
     width: 29em;
+    top: 30%;
   }
   /*лендинг*/
+  .isometric-wrapper .landing.isometric {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-40deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
   .presentation .description-landing.description {
-    margin-right: -13em;
+    top: 15%;
   }
   .landing-wrapper section.landing-description p {
     width: 23em;
   }
   .isometric-wrapper .landing {
-    left: 28em;
+    left: 33%;
   }
   /*Корпоративный*/
+  .isometric-wrapper .corporate.floor {
+    left: 26%;
+    top: 7em;
+  }
+  .presentation .description.description-corporate {
+    top: 20%;
+  }
   /*Интернет магазин*/
-  .presentation .description.description-shop p {
-    width: 22em;
+  .isometric-wrapper .shop.floor {
+    left: 29%;
+    top: 7em;
+  }
+  .isometric-wrapper .shop {
+    height: 39em;
+  }
+  .presentation .description-shop.description {
+    top: 15%;
   }
   /*Информационный*/
+  .presentation.presentation-information .isometric-wrapper {
+    height: 16em;
+  }
   .isometric-wrapper .information .information-inner-wrap .content {
     width: 65%;
   }
   .isometric-wrapper .information.floor {
-    left: 27%;
-    top: 10em;
+    left: 28%;
+    top: 7em;
     width: 25em;
+  }
+  .description.description-information {
+    top: 20%;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   /*визитка*/
+  .presentation.presentation-promo .isometric-wrapper {
+    height: 15em;
+  }
   .isometric-wrapper .visit.floor {
-    left: 20%;
+    left: 18%;
     width: 20em;
     height: 20em;
   }
@@ -5695,64 +5820,117 @@ section.information-title figcaption p {
   .presentation .description {
     left: 51%;
     width: 29em;
+    top: 25%;
   }
   .isometric-wrapper .isometric .content .card {
     height: 115px;
   }
   /*лендинг*/
+  .isometric-wrapper .landing.isometric {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-30deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
   .isometric-wrapper .landing {
-    height: 39em;
+    height: 35em;
+    width: 15em;
     top: 10em;
-    left: 22em;
+    left: 30%;
   }
   .isometric-wrapper .isometric.landing .content .card {
-    height: 130px;
+    height: 115px;
   }
   .isometric-wrapper .landing .button.right,
   .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
-    margin-top: 4.5em;
+    margin-top: 4em;
+  }
+  .isometric-wrapper .landing .button.right {
+    margin-left: 5em;
   }
   .presentation .description-landing.description {
     padding-left: 0;
+    top: 15%;
   }
   .landing-wrapper section.landing-description p {
     width: 24em;
   }
   /*Корпоративный*/
+  .presentation .description.description-corporate {
+    top: 25%;
+  }
+  .isometric-wrapper .corporate.floor {
+    left: 23%;
+    width: 18em;
+    height: 30em;
+  }
+  .isometric-wrapper .corporate.isometric {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-35deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
   .isometric-wrapper .corporate .card-corporate.card {
-    height: 13em;
+    height: 9.5em;
+  }
+  .isometric-wrapper .corporate .card.header .button {
+    display: block;
+    margin-top: 1em;
+    margin-left: 3em;
+  }
+  .isometric-wrapper .corporate .button.right {
+    margin-left: 9em;
+    margin-top: 6em;
   }
   /*Интернет магазин*/
-  .presentation .description.description-shop p {
+  .presentation .description-shop.description {
+    top: 15%;
+  }
+  .isometric-wrapper .shop.floor {
+    left: 22%;
+    top: 7em;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-30deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
+  .isometric-wrapper .shop {
     width: 22em;
+    height: 32em;
   }
   .isometric-wrapper .shop .shop-admin {
     margin-left: 0.7em;
-    width: 24em;
     box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
   }
   .isometric-wrapper .shop.isometric .appBar {
     margin-left: 0.7em;
-    width: 24em;
     box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
   }
+  .isometric-wrapper .shop .menu-buy .buy {
+    margin-left: 10em;
+  }
   .isometric-wrapper .isometric.shop .content .card {
-    height: 165px;
+    height: 120px;
   }
   /*Информационный*/
   .isometric-wrapper .information .information-inner-wrap .content {
     width: 65%;
   }
   .isometric-wrapper .information.floor {
-    left: 33%;
-    top: 12em;
-    width: 25em;
+    left: 22%;
+    top: 6em;
+    width: 20em;
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-22deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
+  .description.description-information {
+    top: 20%;
+  }
+  .presentation.presentation-information .isometric-wrapper {
+    height: 16em;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /*визитка*/
+  .presentation .description .description-inner {
+    justify-content: center;
+  }
+  .presentation .description .description-inner .description-inner-text-group {
+    margin-bottom: 1.5em;
+  }
   .presentation {
     flex-direction: column;
+    margin-top: 3em;
   }
   .presentation .description {
     position: relative;
@@ -5760,6 +5938,8 @@ section.information-title figcaption p {
     order: 0;
     width: 90%;
     max-width: 90%;
+    margin-top: 8em;
+    min-height: 10em;
   }
   .isometric-wrapper {
     order: 1;
@@ -5790,9 +5970,20 @@ section.information-title figcaption p {
   }
   .landing-wrapper section.landing-description p {
     width: 100%;
+    text-align: justify;
   }
   /*Корпоративный*/
+  .presentation-corporate.presentation {
+    margin-top: -8em;
+  }
   /*Интернет магазин*/
+  /*Информационный*/
+  .presentation .description-information.description {
+    margin-top: 2em;
+  }
+  /*.presentation .description.description-information{
+        min-height:15em;
+    }*/
 }
 @media (max-width: 767px) {
   /*визитка*/
@@ -5804,6 +5995,13 @@ section.information-title figcaption p {
     margin: 0 auto;
     width: 90%;
     max-width: 35em;
+  }
+  .presentation .description .description-inner-text-group h1,
+  .presentation .description .description-inner-text-group p {
+    text-align: center;
+  }
+  .presentation .description .description-inner .description-inner-text-group {
+    margin-bottom: 1.5em;
   }
   .isometric-wrapper {
     order: 1;
@@ -5837,10 +6035,14 @@ section.information-title figcaption p {
   }
   .landing-wrapper section.landing-description p {
     width: 100%;
+    line-height: 1.5em;
   }
   /*Корпоративный*/
   /*Интернет магазин*/
   /*Информационный*/
+  .presentation.presentation-information {
+    margin-top: 10em;
+  }
   section.information-title {
     margin: 0;
     padding: 0;
@@ -5850,6 +6052,15 @@ section.information-title figcaption p {
   /*визитка*/
   .presentation .description {
     position: relative;
+    min-height: 5em;
+    margin-top: -3em;
+  }
+  .presentation .description .description-inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .presentation .description .description-inner .description-inner-text-group {
+    margin-bottom: 1.5em;
   }
   .isometric-wrapper .visit.floor {
     left: 38%;
@@ -5882,6 +6093,10 @@ section.information-title figcaption p {
     height: 80px;
   }
   /*лендинг*/
+  .presentation .description .description-inner-text-group h1,
+  .presentation .description .description-inner-text-group p {
+    text-align: center;
+  }
   .isometric-wrapper .landing.floor {
     width: 13em;
   }
@@ -5894,8 +6109,17 @@ section.information-title figcaption p {
     left: 20em;
   }
   /*Корпоративный*/
+  .presentation-corporate.presentation .description {
+    margin-top: 2em;
+  }
   /*Интернет магазин*/
+  .presentation.presentation-shop {
+    margin-top: 9em;
+  }
   /*Информационный*/
+  .presentation.presentation-information {
+    margin-top: 10em;
+  }
   section.information-title {
     margin: 0;
     padding: 0;
