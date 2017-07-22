@@ -6596,9 +6596,6 @@ section.information-title figcaption p {
   display: flex;
   justify-content: space-between;
 }
-.tab-inner-content .content-item {
-  width: 70%;
-}
 .tab-inner-content aside {
   display: flex;
   flex-direction: column;
