@@ -11,6 +11,6 @@ gulp.task("less", function () {
       .pipe(gulp.dest('wwwroot/css'));
 });
 gulp.task('watch', function () {
-    gulp.watch('Styles/*.less', ['less']);
+    gulp.watch('Styles/**/*.less', ['less']);
 
 })
