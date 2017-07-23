@@ -1206,9 +1206,6 @@ section.tariff .promo-wrapper ul li:last-child {
   min-width: 20em;
   border: 1px solid #cccccc;
   margin-top: 2em;
-  /* border-bottom:1px solid @color-gray;
-    border-left:1px solid @color-gray;
-    border-right:1px solid @color-gray;*/
 }
 .wrap-info .info-inner {
   display: flex;
@@ -1254,45 +1251,6 @@ section.tariff .promo-wrapper ul li:last-child {
 .wrap-info .info-inner .info-button-bay .buy {
   color: #06c438;
   font-weight: 600;
-  /*display: flex;
-                align-items: center;
-                margin-right: -2px;
-                outline: none;
-                border: 1px solid #b1b1b1;
-                text-align: left;
-                width: 100%;
-                height: 100%;
-                font-size: 1em;
-                color: #ffffff;
-                z-index: 0;
-                border-radius: 0px;
-                border-width: 0;
-                background: @color-more;
-                font-size: 1.375em;
-                padding-left: 1.25em;
-                padding-right: 1.25em;
-                position: relative;
-                vertical-align: top;
-                user-select: none;*/
-  /*height: 100%;
-                    margin: 0;
-                    margin-right: -2px;                  
-                    margin-bottom:-2px;                   
-                    background: @color-more;
-                    display: inline-block;
-                    color: @font-color-reverce;
-                    text-align: center;
-                    line-height: 4.5em;
-                    vertical-align: central;
-                    padding: 0 1.56em;
-                    touch-action: manipulation;
-                    cursor: pointer;
-                    white-space: nowrap;
-                    user-select: none;
-                    transition: color 0.3s ease-out, background-color 0.3s ease-out;*/
-  /*&:hover {
-                    background: @color-more-darken1;
-                }*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .tab-inner-content aside .wrap-info {
@@ -1300,6 +1258,35 @@ section.tariff .promo-wrapper ul li:last-child {
   }
 }
 @media screen and (max-width: 640px) {
+  /*.wrap-info{
+        min-width:100%;
+        max-width:100%;
+    }
+    .tab-inner-content {
+        flex-direction: column;
+    }
+    .tab-inner-content .content-item{
+        order:1;
+    }
+    .wrap-info .info-inner{
+        flex-direction:row;
+        text-align:center;
+    }
+    .wrap-info .info-inner [class*=info-item-]{
+flex-direction: column;
+    }
+    .wrap-info .info-inner [class*=info-item-] h2{
+        margin-right:0;
+    }
+    .wrap-info .info-inner .info-button-bay.btn-ghost-more{
+        margin-top: 1em;
+    line-height: 1.9em;
+    font-size: 0.7em;
+    height: 2em;
+    }*/
+  .wrap-info {
+    min-width: 10em;
+  }
   .tab-inner-content aside .wrap-info {
     min-width: 6em;
   }
@@ -5749,12 +5736,13 @@ section.information-title figcaption p {
   }
   /*визитка*/
   .isometric-wrapper .visit.floor {
+    top: 15%;
     left: 22%;
   }
   .presentation .description {
     left: 59.5%;
     width: 29em;
-    top: 30%;
+    top: 20%;
   }
   /*лендинг*/
   .isometric-wrapper .landing.isometric {
@@ -6595,6 +6583,8 @@ section.information-title figcaption p {
 .tab-inner-content {
   display: flex;
   justify-content: space-between;
+  max-width: 130em;
+  margin: 0 auto;
 }
 .tab-inner-content aside {
   display: flex;
