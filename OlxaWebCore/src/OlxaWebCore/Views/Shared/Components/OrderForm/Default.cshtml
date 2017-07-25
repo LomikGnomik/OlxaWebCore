@@ -1,7 +1,17 @@
 ﻿@model Order
 
 <div id="order-form" class="form-wrapper">
-    <div class="container-form">
+    <script id="bx24_form_inline" data-skip-moving="true">
+        (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                if(w[b]['forms']) return;
+                s=d.createElement('script');r=1*new Date();s.async=1;s.src=u+'?'+r;
+                h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://olxaweb.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+
+        b24form({"id":"8","lang":"ru","sec":"0unjid","type":"inline"});
+    </script> 
+    @*<div class="container-form">
         <div class="h2">Оставить заявку</div>
         <div class="small">
             Пишите нам на почту <a href="mailto:info@olxaweb.ru" class="mail">info@olxaweb.ru</a> или заполните форму ниже:
@@ -12,11 +22,9 @@
                 Скачать бриф на разработку сайта <br /> и заполнить самостоятельно
             </p>
         </div>
-        @*<form method="post" asp-action="NewOrder" asp-controller="Order" role="form" >*@
         @using (Html.BeginForm("NewOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             <input type="text" name="name" placeholder="Ваше имя" />
-            @*<input type="text" name="tel" placeholder="Телефон" />*@
             <input type="email" name="email" placeholder="Email" />
             <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
             <div class="info">
@@ -32,15 +40,9 @@
                         <span class="js-fileName">Прикрепить</span>
                     </label>
                 </div>
-                @*<div class="file-upload">
-                    <label for="custom-file-upload" class="append">
-                                    <span class="append-file-name js-value">Прикрепить</span>
-                                    <input type="file" name="attachment-file" value="1" id="custom-file-upload" />
-                                </label>
-                                </div>*@
                 <button type="submit" id="continue" class="btn btn-ghost-more btn-long">Отправить!</button>
             </div>
-            @*</form>*@
+            
             <div class="confidentiality">
                 <input type="checkbox" checked name="agreed-check" id="agree" />
                 <label for="agree">Я согласен с условиями политики конфиденциальности </label>
@@ -48,5 +50,5 @@
             </div>
         }
 
-    </div>
+    </div>*@
 </div>
