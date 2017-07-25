@@ -6124,6 +6124,21 @@ section.information-title figcaption p {
     padding: 0;
   }
 }
+/*--------------------------------------второй экран видов сайто,табы и списки внутри*/
+.service-sites-wrap {
+  display: flex;
+}
+.service-sites-wrap h4 {
+  margin-bottom: 1em;
+}
+.service-sites-wrap .base-service {
+  margin: 1em;
+  padding: 1em;
+}
+.service-sites-wrap .more-service {
+  margin: 1em;
+  padding: 1em;
+}
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
   border-bottom: 1px solid #06c438;
