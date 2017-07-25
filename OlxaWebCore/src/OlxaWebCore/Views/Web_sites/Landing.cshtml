@@ -66,9 +66,9 @@
                 <div class="description-inner-text-group">
                     <h1>landing</h1>
                     <p>
-                        Как правило это одна интернет страница, созданная для конкретного товара или услуги
-                        побуждающая к действию целевую аудиторию (покупка или подписка). Состоит из блоков,
-                        каждый из которых выполняет конкретную задачу.
+                        Как правило это одна интернет страница, созданная для конкретного товара или
+                        услуги побуждающая к действию целевую аудиторию (покупка или подписка).
+                        Состоит из блоков, каждый из которых выполняет конкретную задачу.
                     </p>
                     <p class="ul-title">Наиболее используемые модули:</p>
                     <ul>
@@ -85,29 +85,128 @@
     </section>
 
     <section class="tabs-all" role="tab">
-        @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
+        <input id="tab__1" type="radio" name="tabs" checked="checked" />
         <input id="tab__2" type="radio" name="tabs" checked="checked" />
         <input id="tab__3" type="radio" name="tabs" />
 
         <div class="label-wrapper">
-            @*<label for="tab__1" id="tab__l1">Готовые решения</label>*@
+            <label for="tab__1" id="tab__l1">Готовые решения</label>
             <label for="tab__2" id="tab__l2">Создание сайта</label>
             <label for="tab__3" id="tab__l3">Разработка сайта</label>
         </div>
 
         <div class="tabs_content">
-            @*<div id="tab__c1"></div>*@ @*tab__c1*@
-            <div id="tab__c2">
+            <div id="tab__c1">
                 <div class="tab-inner-content">
-                    <div class="content-item">тут содержимое</div>
+                    <div class="content-item">
+                        <div class="service-sites-wrap">
+                            <div class="base-service">
+                                <h4>Базовая функциональность</h4>
+                                <ul>
+                                    <li>Домен на 1 год</li>
+                                    <li>Хостинг на 1 год</li>
+                                    <li>Форма обратной связи</li>
+                                    <li>Обратный звонок</li>
+                                    <li>Админка</li>
+                                    <li>
+                                        Дизайн
+                                        <span>Выбор из стандартного набора блоков</span>
+                                    </li>
+                                    <li>
+                                        Количество блоков
+                                        <span>До 5-ти блоков</span>
+                                    </li>
+                                    <li>Базовая SEO оптимизация</li>
+                                </ul>
+                            </div>
+
+                            <div class="more-service">
+                                <h4>Возможные настройки</h4>
+                                <ul>
+                                    <li>Калькулятор</li>
+                                    <li>Галерея</li>
+                                    <li>Блок новостей</li>
+                                    <li>Блок отзывов</li>
+                                    <li>Блог</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
                     <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                 </div>
+            </div> @*tab__c1*@
+            <div id="tab__c2">
+                <div class="tab-inner-content">
+                    <div class="content-item">
+                        <div class="service-sites-wrap">
+                            <div class="base-service">
+                                <h4>Базовая функциональность</h4>
+                                <ul>
+                                    <li>Домен на 1 год</li>
+                                    <li>Хостинг на 1 год</li>
+                                    <li>Форма обратной связи</li>
+                                    <li>Обратный звонок</li>
+                                    <li>Админка</li>
+                                    <li>
+                                        Дизайн
+                                        <span>Адаптируется под заказчика в рамках стандартной сетки</span>
+                                    </li>                                    
+                                    <li>Базовая SEO оптимизация</li>
+                                </ul>
+                            </div>
+
+                            <div class="more-service">
+                                <h4>Возможные настройки</h4>
+                                <ul>
+                                    <li>Калькулятор</li>
+                                    <li>Галерея</li>
+                                    <li>Блок новостей</li>
+                                    <li>Блок отзывов</li>
+                                    <li>Блог</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                </div>
+
             </div> @*tab__c2*@
             <div id="tab__c3">
                 <div class="tab-inner-content">
-                    <div class="content-item">тут содержимое</div>
-                    <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                    <div class="content-item">
+                        <div class="service-sites-wrap">
+                            <div class="base-service">
+                                <h4>Базовая функциональность</h4>
+                                <ul>
+                                    <li>Домен на 1 год</li>
+                                    <li>Хостинг на 1 год</li>
+                                    <li>Форма обратной связи</li>
+                                    <li>Обратный звонок</li>
+                                    <li>Админка</li>
+                                    <li>
+                                        Дизайн
+                                        <span>Адаптируется под заказчика в рамках стандартной сетки или разрабатывается с нуля</span>
+                                    </li>                                    
+                                    <li>Базовая SEO оптимизация</li>
+                                </ul>
+                            </div>
 
+                            <div class="more-service">
+                                <h4>Возможные настройки</h4>
+                                <ul>
+                                    <li>Калькулятор</li>
+                                    <li>Галерея</li>
+                                    <li>Блок новостей</li>
+                                    <li>Блок отзывов</li>
+                                    <li>Блог</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                 </div>
             </div> @*tab__c3*@
         </div>
