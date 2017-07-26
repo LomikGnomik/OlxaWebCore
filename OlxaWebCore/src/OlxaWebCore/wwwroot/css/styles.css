@@ -4216,6 +4216,143 @@ section.information-title figcaption p {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
+  /* .info {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            display: inline-block;
+            // float: left !important;
+        }
+
+        .confidentiality {
+            display: flex;
+        }
+    }
+    a.link-more {
+        color: @color-more;
+        text-decoration: underline;
+
+        &:hover {
+            color: @color-more-lighter1;
+        }
+    }
+    form {
+        // width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            width: 100%;
+        }
+
+        input[type="checkbox"] {
+            width: 1em;
+        }
+
+
+        input[type="text"], [type="email"], textarea {
+            background: #000 !important;
+            .border;
+            color: #fff;
+        }
+    }
+    .append > input[type="file"] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        border: 0;
+    }
+    .append {
+        display: inline-block;
+        height: 3em;
+        line-height: 2.8em;
+        font-size: 1em;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        padding: 0 1.56em;
+        margin: 0.625em 0;
+        margin-right: 4em;
+        white-space: nowrap;
+        user-select: none;
+        transition: color 0.3s ease-out, background-color 0.3s ease-out;
+        min-width: 3.75em;
+        position: relative;
+        background: @color-gray-dark;
+        width: 100%;
+        color: #fff;
+        cursor: pointer;
+        box-shadow: 0 1px 3px darken(@color-gray-dark,10);
+
+
+
+        .input-file {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+
+
+        .js-labelFile {
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 10px;
+            cursor: pointer;
+
+
+
+            .icon:before {
+                //font-awesome
+                content: "\f093";
+            }
+
+
+
+            &.has-file {
+
+                .icon:before {
+                    //font-awesome
+                    content: "\f00c";
+                    color: @color-more;
+                }
+            }
+        }
+
+
+
+        .append-file-name {
+            width: 100%;
+        }
+    }
+    .btn-form-group {
+        //.row
+        justify-content: space-between;
+    }*/
+  /*.crm-webform-body{
+        padding:0;
+    }
+    .crm-webform-form-container i, 
+    .crm-webform-form-container i:after, 
+    .crm-webform-form-container i:before{
+        display:none;
+    }
+    .crm-webform-input{
+        max-width:100%;
+    }*/
 }
 .form-wrapper .container-form {
   max-width: 40em;
@@ -4231,7 +4368,7 @@ section.information-title figcaption p {
   font-size: 16px;
 }
 .form-wrapper .brief-wrap {
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
   margin-bottom: 1.5em;
   width: 100%;
@@ -4249,102 +4386,75 @@ section.information-title figcaption p {
 .form-wrapper p {
   margin-top: 0.8em;
 }
-.form-wrapper .info {
-  display: flex;
-  justify-content: space-between;
+.form-wrapper .crm-webform-iframe,
+.form-wrapper .flexible-middle-width .content-wrap,
+.form-wrapper .page-theme-transparent .content {
+  background: #000;
 }
-.form-wrapper .info .left {
-  display: inline-block;
-}
-.form-wrapper .info .confidentiality {
-  display: flex;
-}
-.form-wrapper a.link-more {
-  color: #06c438;
-  text-decoration: underline;
-}
-.form-wrapper a.link-more:hover {
-  color: #08f546;
-}
-.form-wrapper form {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-.form-wrapper form input {
-  width: 100%;
-}
-.form-wrapper form input[type="checkbox"] {
-  width: 1em;
-}
-.form-wrapper form input[type="text"],
-.form-wrapper form [type="email"],
-.form-wrapper form textarea {
-  background: #000 !important;
-  border: 1px solid #cccccc;
-  color: #fff;
-}
-.form-wrapper .append > input[type="file"] {
-  position: absolute;
-  width: 0;
-  height: 0;
+.form-wrapper .crm-webform-header-container {
+  background: #000;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  border: 0;
 }
-.form-wrapper .append {
-  display: inline-block;
-  height: 3em;
-  line-height: 2.8em;
-  font-size: 1em;
-  font-weight: 600;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  padding: 0 1.56em;
-  margin: 0.625em 0;
-  margin-right: 4em;
-  white-space: nowrap;
-  user-select: none;
-  transition: color 0.3s ease-out, background-color 0.3s ease-out;
-  min-width: 3.75em;
-  position: relative;
-  background: #333333;
-  width: 100%;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 1px 3px #191919;
+.form-wrapper .crm-webform-header {
+  color: #f8f6f2;
 }
-.form-wrapper .append .input-file {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
+.form-wrapper .crm-webform-label {
+  display: none;
 }
-.form-wrapper .append .js-labelFile {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding: 0 10px;
-  cursor: pointer;
+.form-wrapper #field_LEAD_UF_CRM_1500904689 {
+  color: #ccc;
 }
-.form-wrapper .append .js-labelFile .icon:before {
-  content: "\f093";
+.form-wrapper .crm-webform-label-content {
+  background: none;
 }
-.form-wrapper .append .js-labelFile.has-file .icon:before {
-  content: "\f00c";
+.form-wrapper .crm-webform-input:hover,
+.form-wrapper .crm-webform-input:focus,
+.form-wrapper .crm-webform-select:hover select,
+.form-wrapper .crm-webform-select:focus select,
+.form-wrapper .crm-webform-textarea:hover textarea,
+.form-wrapper .crm-webform-textarea:focus textarea,
+.form-wrapper .crm-webform-checkbox-container:hover i,
+.form-wrapper .crm-webform-checkbox-container:focus i {
+  border-color: #06c438;
+}
+.form-wrapper .crm-webform-active mark {
+  border-color: #06c438;
+}
+.form-wrapper label.crm-webform-input-label:focus i {
   color: #06c438;
 }
-.form-wrapper .append .append-file-name {
+.form-wrapper .crm-webform-file-upload input[type=file]:hover,
+.form-wrapper .crm-webform-file-upload input[type=file]:focus,
+.form-wrapper .crm-webform-file-upload input[type=file]:active {
+  border-color: #06c438;
+}
+.form-wrapper .crm-webform-file-upload .crm-webform-file-button {
+  background: #0d9706;
+  color: #f8f6f2;
+}
+.form-wrapper .crm-webform-file-upload .crm-webform-file-button:hover {
+  background: #06c438;
+}
+.form-wrapper .crm-webform-file-text-field {
+  background: transparent;
+}
+.form-wrapper .crm-webform-input + i:after {
+  color: #06c438;
+  background: #000000;
+}
+.form-wrapper button.crm-webform-submit-button {
+  border: 2px solid #06c438;
+  background: none;
+  color: #06c438;
   width: 100%;
 }
-.form-wrapper .btn-form-group {
-  justify-content: space-between;
+.form-wrapper button.crm-webform-submit-button:hover {
+  background: #06c438;
+  color: #fff;
+}
+.form-wrapper button.crm-webform-submit-button:active {
+  background: #0d9706;
+  color: #fff;
 }
 /*------------------------------------------------------------------форма внутри модального окна */
 .modal-form .information {
