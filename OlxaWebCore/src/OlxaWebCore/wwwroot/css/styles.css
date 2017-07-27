@@ -646,16 +646,8 @@ section.tariff .promo-wrapper ul li:last-child {
 }
 /*------------------------------------------------------------------------------------------------блог*/
 .blog {
-  margin-top: 5em;
+  margin-top: 8em;
   display: flex;
-  /*i {
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 0.687em;
-        color: @color-base;
-        margin-top: -0.312em;
-        margin-right: 0.05em;
-    }*/
   /*.sidebar {
         position: relative;        
         .widget-sidebar {
@@ -980,6 +972,8 @@ section.tariff .promo-wrapper ul li:last-child {
 .blog .post .post__item .post-body .meta {
   display: flex;
   justify-content: space-between;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .blog .post .post__item .post-body .meta .category,
 .blog .post .post__item .post-body .meta .date {
@@ -999,9 +993,9 @@ section.tariff .promo-wrapper ul li:last-child {
 .blog .post .post__item .post-body .read-more {
   text-align: right;
   color: #3c6eaa;
-  text-decoration: dotted;
+  text-decoration: underline;
   position: relative;
-  bottom: -5.5em;
+  bottom: -4em;
 }
 .blog .post .post__item .post-body .read-more:hover {
   color: #2f5d84;
@@ -1027,6 +1021,32 @@ section.tariff .promo-wrapper ul li:last-child {
   cursor: default;
   color: #fff;
   background: #3c6eaa;
+}
+@media (min-width: 1200px) and (max-width: 1679px) {
+  .post__item {
+    width: 33.333%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .post__item {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .post__item {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .post__item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .post__item {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 /*------------------------------------------------------отдельная страница поста в блоге*/
 .post-inner-body {
@@ -1971,6 +1991,603 @@ section.portfolio .grid.isotope-grid:after {
 }
 .order-wrapper .order-title-wrap .order-title span {
   color: #3c6eaa;
+}
+.order-wrapper .order-effect .header {
+  position: relative;
+  width: 500px;
+  height: 240px;
+}
+.order-wrapper .order-effect .section {
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  max-width: 32em;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  color: #fff;
+}
+.order-wrapper .order-effect .paper {
+  position: absolute;
+  top: 55px;
+  left: 125px;
+  width: 60px;
+  height: 65px;
+  background: #fff;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.order-wrapper .order-effect .paper-2 {
+  position: absolute;
+  top: 95px;
+  left: 75px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.order-wrapper .order-effect .table {
+  position: absolute;
+  top: 195px;
+  width: 500px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50px;
+}
+.order-wrapper .order-effect .link {
+  color: #fff;
+}
+.order-wrapper .order-effect .fa {
+  font-size: 2em;
+  text-align: center;
+  transition: .7s;
+}
+.order-wrapper .order-effect .fa:hover {
+  animation: rotate 1.5s 1;
+}
+.order-wrapper .order-effect .fa-codepen {
+  top: -25px;
+  left: 15px;
+  color: #ABD9B5;
+}
+.order-wrapper .order-effect .fa-behance {
+  top: -123px;
+  left: 101px;
+  color: #F8B899;
+}
+.order-wrapper .order-effect .fa-twitter {
+  top: -12px;
+  left: 46px;
+  color: #ABD9B5;
+}
+.order-wrapper .order-effect .fa-github {
+  top: 3px;
+  left: 47px;
+  color: #F8B899;
+}
+.order-wrapper .order-effect .precisaser {
+  width: 10px border-left 10px solid #ffc2a5;
+  border-right: 10px solid #8adc9c;
+  border-bottom: 10px solid #F8B899;
+  border-top: 10px solid #ABD9B5;
+  top: 10px;
+  left: 15px;
+  transition: 1s;
+}
+.order-wrapper .order-effect .precisaser:hover {
+  border-radius: 100%;
+  transform: rotate(270deg);
+}
+.order-wrapper .order-effect .bowl {
+  position: absolute;
+  top: -25px;
+  left: 400px;
+  width: 50px;
+  height: 25px;
+  background: #fff;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.order-wrapper .order-effect .bowl::after {
+  position: absolute;
+  left: 2px;
+  width: 50px;
+  height: 25px;
+  background: #fff;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  content: "";
+}
+.order-wrapper .order-effect .bowl-2 {
+  position: absolute;
+  top: -25px;
+  left: 50px;
+  width: 50px;
+  height: 25px;
+  background: #fff;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.order-wrapper .order-effect .leaf-1 {
+  position: absolute;
+  top: -14px;
+  left: 35px;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background: primary-color;
+  animation: fly 2s infinite alternate ease-in-out;
+  transform: rotate(30deg);
+}
+.order-wrapper .order-effect .leaf-2 {
+  position: absolute;
+  top: -14px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: #ABD9B5;
+  animation: fly 2s infinite alternate ease-in-out;
+  transform: rotate(-40deg);
+}
+.order-wrapper .order-effect .leaf-3 {
+  position: absolute;
+  top: -18px;
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background: #ABD9B5;
+  animation: fly 2s infinite alternate ease-in-out;
+  transform: rotate(20deg);
+}
+.order-wrapper .order-effect .leaf-4 {
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: #ABD9B5;
+  animation: fly 3s infinite alternate ease-in-out;
+  transform: rotate(30deg);
+}
+.order-wrapper .order-effect .leaf-5 {
+  position: absolute;
+  top: -23px;
+  left: 25px;
+  width: 20px;
+  height: 20px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: #ABD9B5;
+  animation: fly 2s infinite alternate ease-in-out;
+  transform: rotate(70deg);
+}
+.order-wrapper .order-effect .caneta-1 {
+  position: absolute;
+  top: -20px;
+  left: 25px;
+  width: 3px;
+  height: 20px;
+  background: #F8B899;
+}
+.order-wrapper .order-effect .caneta-2 {
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  width: 5px;
+  height: 25px;
+  background: #ABD9B5;
+}
+.order-wrapper .order-effect .notebook {
+  position: absolute;
+  top: -80px;
+  left: 200px;
+  width: 120px;
+  height: 75px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #fff;
+}
+.order-wrapper .order-effect .notebook::after {
+  position: absolute;
+  top: 70px;
+  left: -10px;
+  width: 140px;
+  height: 10px;
+  background: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  content: "";
+}
+.order-wrapper .order-effect .apple::before {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  width: 3px;
+  height: 15px;
+  background: #eee;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  content: "";
+}
+.order-wrapper .order-effect .apple::after {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: #eee;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 15px;
+  content: "";
+}
+.order-wrapper .order-effect .book-1 {
+  position: absolute;
+  top: -24px;
+  left: 35px;
+  width: 70px;
+  height: 12px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 2px solid #ABD9B5;
+  border-right: 0;
+  background: #fff;
+}
+.order-wrapper .order-effect .book-2 {
+  position: absolute;
+  top: -15px;
+  left: 105px;
+  width: 70px;
+  height: 3px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #F8B899;
+}
+.order-wrapper .order-effect .book-3 {
+  position: absolute;
+  top: -13px;
+  left: 115px;
+  width: 70px;
+  height: 3px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #F8B899;
+}
+.order-wrapper .order-effect .coffee {
+  position: absolute;
+  top: -58px;
+  left: 50px;
+  width: 50px;
+  height: 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #fff;
+}
+.order-wrapper .order-effect .coffee::after {
+  position: absolute;
+  top: 3px;
+  left: -15px;
+  width: 22px;
+  height: 18px;
+  border-bottom-right-radius: 30px;
+  border: 4px solid #fff;
+  border-top: 0;
+  box-sizing: border-box;
+  transform: rotate(-270deg);
+  content: "";
+}
+.order-wrapper .order-effect .smoke {
+  position: absolute;
+  top: -35px;
+  left: 25px;
+  width: 5px;
+  height: 17px;
+  background: #fff;
+  border-radius: 10px;
+  opacity: .1;
+  animation: flyy 1.5s infinite alternate ease-in-out;
+}
+.order-wrapper .order-effect .smoke::after {
+  position: absolute;
+  top: -7px;
+  left: 5px;
+  width: 5px;
+  height: 15px;
+  background: #fff;
+  border-radius: 10px;
+  opacity: .9;
+  content: "";
+}
+.order-wrapper .order-effect .me {
+  position: absolute;
+  top: 50px;
+  left: 215px;
+}
+.order-wrapper .order-effect .me-body {
+  position: absolute;
+  top: 50px;
+  width: 100px;
+  height: 65px;
+  border-radius: 50%;
+  background: #F8B899;
+  animation: own 1.2s infinite linear;
+}
+.order-wrapper .order-effect .me-head {
+  position: absolute;
+  top: -17px;
+  left: 25px;
+  width: 45px;
+  height: 65px;
+  animation: own 1.2s infinite linear;
+  z-index: 1;
+}
+.order-wrapper .order-effect .face {
+  position: absolute;
+  width: 45px;
+  height: 65px;
+  border-radius: 25px;
+  background: #fff;
+}
+.order-wrapper .order-effect .hair {
+  position: absolute;
+  left: -10px;
+  width: 60px;
+  height: 65px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: #333;
+}
+.order-wrapper .order-effect .hair-front {
+  position: absolute;
+  top: -2px;
+  width: 55px;
+  height: 43px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: #333;
+}
+.order-wrapper .order-effect .eye-1 {
+  position: absolute;
+  top: 40px;
+  left: 12px;
+  width: 3px;
+  height: 3px;
+  background: #333;
+  border-radius: 10px;
+  animation: blink 1s infinite alternate ease-in-out;
+}
+.order-wrapper .order-effect .eye-1::before {
+  positiona: bsolute;
+  top: -5px;
+  left: -3px;
+  width: 5px;
+  height: 2px;
+  background: #333;
+  border-radius: 10px;
+  content: "";
+  animation: down 3s infinite;
+}
+.order-wrapper .order-effect .eye-2 {
+  position: absolute;
+  top: 40px;
+  left: 32px;
+  width: 3px;
+  height: 3px;
+  background: #333;
+  border-radius: 10px;
+  animation: blink 1s infinite alternate ease-in-out;
+}
+.order-wrapper .order-effect .mouth {
+  position: absolute;
+  top: 55px;
+  left: 19px;
+  width: 10px;
+  height: 3px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border: 2px solid secundary-color;
+  border-top: 0;
+  box-sizing: border-box;
+  animation: smile 5s infinite;
+}
+.order-wrapper .order-effect .box {
+  position: absolute;
+  top: -70px;
+  left: 270px;
+  width: 40px;
+  height: 60px;
+  background: #fff;
+  border-radius: 10px;
+}
+.order-wrapper .order-effect .circle {
+  position: absolute;
+  top: 32px;
+  left: 7px;
+  width: 26px;
+  height: 26px;
+  background: #eee;
+  border-radius: 50%;
+}
+.order-wrapper .order-effect .circle::before {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 12px;
+  height: 13px;
+  background: #eee;
+  border: solid 3px #fff;
+  border-radius: 10px;
+  content: "";
+  animation: beat .5s infinite;
+}
+.order-wrapper .order-effect .circle-2 {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+}
+.order-wrapper .order-effect .circle-2::before {
+  width: 10px;
+  height: 10px;
+}
+@keyframes own {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes down {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes smile {
+  0% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  75% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes blink {
+  0% {
+    background-color: #000;
+  }
+  25% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #000;
+  }
+  75% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+@keyframes flyy {
+  50% {
+    transform: translateY(15px);
+  }
+}
+@keyframes fly {
+  50% {
+    transform: rotate(1deg);
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(1.5);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  75% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@media screen and (max-width: 515px) {
+  .order-wrapper .order-effect .header {
+    transform: scale(0.9);
+  }
+  .order-wrapper .order-effect .section {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 460px) {
+  .order-wrapper .order-effect .header {
+    transform: scale(0.8);
+  }
+  .order-wrapper .order-effect .section {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 420px) {
+  .order-wrapper .order-effect .header {
+    transform: scale(0.7);
+  }
+  .order-wrapper .order-effect .section {
+    transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 400px) {
+  .order-wrapper .order-effect .header {
+    transform: scale(0.6);
+  }
+  .order-wrapper .order-effect .section {
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 360px) {
+  .order-wrapper .order-effect .header {
+    transform: scale(0.5);
+  }
+  .order-wrapper .order-effect .section {
+    left: 50px;
+    max-width: 26em;
+    transform: scale(1.5);
+  }
+}
+@media screen and (max-width: 320px) {
+  .order-wrapper .order-effect .section {
+    left: 40px;
+    max-width: 26em;
+    transform: scale(1.5);
+  }
+}
+@keyframes rotate {
+  50% {
+    transform: rotate(-20deg);
+  }
 }
 /*------------------------------------------------------------------------------Страница ЦЕНЫ*/
 section.price-solution {
@@ -4342,17 +4959,6 @@ section.information-title figcaption p {
         //.row
         justify-content: space-between;
     }*/
-  /*.crm-webform-body{
-        padding:0;
-    }
-    .crm-webform-form-container i, 
-    .crm-webform-form-container i:after, 
-    .crm-webform-form-container i:before{
-        display:none;
-    }
-    .crm-webform-input{
-        max-width:100%;
-    }*/
 }
 .form-wrapper .container-form {
   max-width: 40em;
@@ -4385,6 +4991,16 @@ section.information-title figcaption p {
 }
 .form-wrapper p {
   margin-top: 0.8em;
+}
+.form-wrapper .crm-webform-body {
+  padding: 0;
+}
+.form-wrapper .crm-webform-input {
+  max-width: 100%;
+}
+.form-wrapper .crm-webform-error .crm-webform-input + .crm-webform-tooltip-bottom-right,
+.form-wrapper .crm-webform-error .crm-webform-textarea textarea + .crm-webform-tooltip-bottom-right {
+  top: -18px;
 }
 .form-wrapper .crm-webform-iframe,
 .form-wrapper .flexible-middle-width .content-wrap,
@@ -6869,13 +7485,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     display: flex;
     justify-content: space-between;
   }
-  /*-------------------------------------------------Блог*/
-  /*.post__item {
-        width: 48.5%;
-    }*/
-  .post__item {
-    width: 33.333%;
-  }
   /*-----------------------------------------------chekout*/
   .form-wrap {
     display: flex;
@@ -6943,11 +7552,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     display: flex;
     justify-content: space-between;
   }
-  /*-------------------------------------------------Блог*/
-  /*.post__item {width: 48.5%;}*/
-  .post__item {
-    width: 33.333%;
-  }
   /*---------------------------------------------------chekout*/
   .form-wrap {
     display: flex;
@@ -7001,11 +7605,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .comment {
     display: flex;
     justify-content: space-between;
-  }
-  /*-------------------------------------------------Блог*/
-  /*.post__item {width: 100%;}*/
-  .post__item {
-    width: 33.333%;
   }
   /*------------------------------------------------------chekout*/
   .form-wrap {
@@ -7110,11 +7709,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .file_upload > button {
     width: 100%;
   }
-  /*-------------------------------------------------Блог*/
-  /*.post__item {width: 100%;}*/
-  .post__item {
-    width: 48%;
-  }
   /*-------------------------------------------------------chekout*/
   input.inputs-long {
     width: 73%;
@@ -7150,11 +7744,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     a {
         border-bottom: 1px solid white;
     }*/
-  /*-------------------------------------------------Блог*/
-  /*.post__item {width: 100%;}*/
-  .post__item {
-    width: 90%;
-  }
   /*----------------------------------------------------chekout*/
   input.inputs-long {
     width: 73.5%;
@@ -7205,11 +7794,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .file_upload > button {
     width: 100%;
   }
-  /*---------------------------------------------------------Блог*/
-  /*.post__item {width: 100%;}*/
-  .post__item {
-    width: 90%;
-  }
   /*-----------------------------------------------------------цены*/
   /*--------------------------------------------------------chekout*/
   input.inputs-long {
@@ -7237,6 +7821,309 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     width: 110%;
   }
 }
+/*-----------------------------------------------------------------страница ошибки 404*/
+.error {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  height: 100%;
+  user-select: none;
+  font-size: medium;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60px;
+  right: 0;
+  animation: noise-3 1s linear infinite;
+  overflow: default;
+}
+.error body:after {
+  content: 'error 404';
+  font-family: OCR-A;
+  font-size: 100px;
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 35%;
+  opacity: 0;
+  color: white;
+  animation: noise-1 0.2s linear infinite;
+}
+.error body:before {
+  content: 'error 404';
+  font-family: OCR-A;
+  font-size: 100px;
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 35%;
+  opacity: 0;
+  color: white;
+  animation: noise-2 0.2s linear infinite;
+}
+.error .info {
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 280px;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  animation: noise-3 1s linear infinite;
+}
+.error .info:before {
+  content: 'file not found';
+  font-family: OCR-A;
+  font-size: 100px;
+  text-align: center;
+  width: 800px;
+  margin: auto;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 40px;
+  right: 100px;
+  opacity: 0;
+  color: white;
+  animation: noise-2 0.2s linear infinite;
+}
+.error .info:after {
+  content: 'file not found';
+  font-family: OCR-A;
+  font-size: 100px;
+  text-align: center;
+  width: 800px;
+  margin: auto;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 40px;
+  right: 0;
+  opacity: 0;
+  color: white;
+  animation: noise-1 0.2s linear infinite;
+}
+@-webkit-keyframes noise-1 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .5;
+    left: -6px;
+  }
+  80% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .6;
+    left: 2px;
+  }
+}
+@keyframes noise-1 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .5;
+    left: -6px;
+  }
+  80% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .6;
+    left: 2px;
+  }
+}
+@-webkit-keyframes noise-2 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .5;
+    left: 6px;
+  }
+  80% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .6;
+    left: -2px;
+  }
+}
+@keyframes noise-2 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .5;
+    left: 6px;
+  }
+  80% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .6;
+    left: -2px;
+  }
+}
+@-webkit-keyframes noise {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    transform: scaleY(1.7);
+  }
+  43% {
+    opacity: 1;
+    transform: scaleX(1.5);
+  }
+}
+@keyframes noise {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    transform: scaleY(1.7);
+  }
+  43% {
+    opacity: 1;
+    transform: scaleX(1.5);
+  }
+}
+@-webkit-keyframes noise-3 {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    transform: scaleY(4);
+  }
+  43% {
+    opacity: 1;
+    transform: scaleX(10) rotate(60deg);
+  }
+}
+@keyframes noise-3 {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    transform: scaleY(4);
+  }
+  43% {
+    opacity: 1;
+    transform: scaleX(10) rotate(60deg);
+  }
+}
+.error .wrap {
+  top: 30%;
+  left: 25%;
+  height: 200px;
+  margin-top: -100px;
+  position: absolute;
+}
+.error code {
+  color: white;
+}
+.error span.blue {
+  color: #48beef;
+}
+.error span.comment {
+  color: #7f8c8d;
+}
+.error span.orange {
+  color: #f39c12;
+}
+.error span.green {
+  color: #33cc33;
+}
+.error .viewFull {
+  font-family: OCR-A;
+  color: orange;
+  text-decoration: ;
+}
+@font-face {
+  font-family: OCR-A;
+}
+@media only screen and (min-height: 500px) {
+  .viewFull {
+    display: none;
+  }
+}
 /*------------------------------------------------АДМИНКА--------------------------------------*/
 /*------------------------------------------Layout Admin*/
 .wrapper-admin {
@@ -7244,6 +8131,9 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.wrapper-admin textarea {
+  height: 200px;
 }
 .wrapper-admin .admin-header,
 .wrapper-admin nav {

@@ -18,8 +18,8 @@
         <th width="5%">ID</th>
         <th>Название</th>
         <th>Категория</th>
-        <th width="5%"></th>
-        <th width="5%"></th>
+        <th>Цена</th>
+        <th>Видно?</th>
     </tr>
     @foreach (var site in @Model)
     {
@@ -28,12 +28,15 @@
             <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID">@site.Title</a></td>
             <td>@site.Category</td>
             <td><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-portfolioID="@site.PortfolioID"class="edit"></a></td>
-            <td>
+            @*<td>
                 <form method="post" asp-action="DeletePortfolio">                    
                     <input type="hidden" name="portfolioID" value="@site.PortfolioID" />
                     <button type="submit" href="#del" class="btn-del" title="Удалить">X</button>
                 </form>
-            </td>
+            </td>*@
+            @*<td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>
+            <td class="@(service.Published == true ? "post-published" : "post-no-published")"><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-serviceID="@Portfolios.portfolioID"></a></td>*@
+
         </tr>
     }
 </table>
