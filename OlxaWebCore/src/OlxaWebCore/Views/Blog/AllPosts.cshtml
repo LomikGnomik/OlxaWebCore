@@ -1,23 +1,31 @@
 ﻿@model  BlogListViewModel
 
-@{Layout = "_LayoutBlogRightSidebar"; 
- 
- 
-      ViewData["Title"] = "";
+@{Layout = "_LayoutBlogRightSidebar";
+
+
+    ViewData["Title"] = "";
 
 }
-
-        <div class="post flex">
+<div class="blog-wrapper">
+    <section class="posts-wrap">
+        <div class="posts "> @*post flex*@
             @foreach (var p in Model.Posts)
 
             {
                 @Html.Partial("_PostItem_PartialViews", p)
             }
-                       
-        </div>  
+
+        </div>
+    </section>
+    <aside class="category-wrap">
+
+    </aside>
+</div>
 
 
-@*@section Pagination{
+
+
+@section Pagination{
     <section class="pagination">
         <div page-model=@Model.PagingInfo page-action="AllPosts"
              page-classes-enabled="true"
@@ -28,6 +36,5 @@
              class="nav-links">
         </div>
     </section>
-}*@                
-        
-      
+}
+

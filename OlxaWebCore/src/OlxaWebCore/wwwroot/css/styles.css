@@ -648,6 +648,139 @@ section.tariff .promo-wrapper ul li:last-child {
 .blog {
   margin-top: 8em;
   display: flex;
+  /*  .post {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+
+        .post__item {
+            &:nth-child(odd) {
+                background: @color-gray-light;
+            }
+
+            &:nth-child(even) {
+                background: @color-gray-lighter;
+            }
+
+            .post-body {
+                padding: 1em;
+                flex-direction: column;
+                text-align: left;
+                min-height: 20em;
+                max-height: 20em;
+
+                .meta {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+
+                    .category, .date {
+                        display: inline-block;
+                        text-transform: uppercase;
+                        font-size: @size-font-extra-small -1;
+                        color: @color-gray;
+                    }
+                }
+
+
+
+                .title {
+                    margin: 0.5em auto;
+                }
+
+                .short-description {
+                    display: inline-block;
+                    text-overflow: ellipsis;
+                    margin: 0.5em auto;
+                }
+
+                .read-more {
+                    text-align: right;
+                    color: @color-base;
+                    text-decoration: underline;
+                    position: relative;
+                    bottom: -4em;
+
+                    &:hover {
+                        color: @color-base-darken1;
+                    }
+
+                    &:active {
+                        color: @color-base-darken2;
+                    }
+
+                    &:visited {
+                        color: @color-base-lighter1;
+                    }
+                }
+            }*/
+  /*&:ntf-child(odd) {
+                margin-right: 1em;
+            }*/
+  /*.post_img {
+                display: block;
+                padding-bottom: 0;
+                border: none;
+            }*/
+  /*.post-body {
+                text-align: center;
+                padding: 1.06em 1.5em 2.25em 1.5em;
+
+
+
+                .post-meta {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 0.562em;
+                    border-bottom: 1px solid @color-gray-light;
+                    width: 100%;
+                    margin-bottom: 1.5em;
+
+
+
+                    span {
+                        color: @color-gray-light;
+                        margin-right: 0.31em;
+                        margin-bottom: 0.37em;
+                    }
+
+
+
+                    a {
+                        display: inline-block;
+                        font-size: @size-font-small;
+                        font-weight: normal;
+                        border-bottom: 1px dashed @color-base;
+                    }
+
+
+
+                    .post-comments {
+                        border-bottom: none;
+                    }
+                }
+
+
+
+                .post-title {
+                    display: block;
+                    color: @color-gray-dark;
+                    padding-bottom: 0;
+                    padding-top: 0.312em;
+                    margin-bottom: 4.5em;
+                }
+
+
+
+                .read-more {
+                    color: @color-base;
+                    text-decoration: dotted;
+                }
+            }*/
+  /*  }*/
+  /* }*/
   /*.sidebar {
         position: relative;        
         .widget-sidebar {
@@ -884,127 +1017,76 @@ section.tariff .promo-wrapper ul li:last-child {
         }
     }*/
 }
-.blog .post {
+.blog-wrapper {
+  display: flex;
+  width: 100%;
+}
+.blog-wrapper .posts-wrap {
+  width: 100%;
+}
+.blog-wrapper .posts-wrap .posts {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  /*с сайдбаром 75%*/
-  position: relative;
+  justify-content: flex-start;
 }
-.blog .post .post__item {
-  /*&:ntf-child(odd) {
-                margin-right: 1em;
-            }*/
-  /*.post_img {
-                display: block;
-                padding-bottom: 0;
-                border: none;
-            }*/
-  /*.post-body {
-                text-align: center;
-                padding: 1.06em 1.5em 2.25em 1.5em;
-
-
-
-                .post-meta {
-                    display: flex;
-                    justify-content: space-between;
-                    padding-bottom: 0.562em;
-                    border-bottom: 1px solid @color-gray-light;
-                    width: 100%;
-                    margin-bottom: 1.5em;
-
-
-
-                    span {
-                        color: @color-gray-light;
-                        margin-right: 0.31em;
-                        margin-bottom: 0.37em;
-                    }
-
-
-
-                    a {
-                        display: inline-block;
-                        font-size: @size-font-small;
-                        font-weight: normal;
-                        border-bottom: 1px dashed @color-base;
-                    }
-
-
-
-                    .post-comments {
-                        border-bottom: none;
-                    }
-                }
-
-
-
-                .post-title {
-                    display: block;
-                    color: @color-gray-dark;
-                    padding-bottom: 0;
-                    padding-top: 0.312em;
-                    margin-bottom: 4.5em;
-                }
-
-
-
-                .read-more {
-                    color: @color-base;
-                    text-decoration: dotted;
-                }
-            }*/
+.blog-wrapper .posts-wrap .post-item-wrap {
+  width: 50%;
 }
-.blog .post .post__item:nth-child(odd) {
-  background: #cccccc;
+.blog-wrapper .posts-wrap .post-item-wrap .post-item {
+  margin-right: 1em;
 }
-.blog .post .post__item:nth-child(even) {
-  background: #e5e5e5;
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post_img {
+  display: block;
+  padding-bottom: 0;
+  border: none;
 }
-.blog .post .post__item .post-body {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body {
   padding: 1em;
   flex-direction: column;
   text-align: left;
   min-height: 20em;
   max-height: 20em;
 }
-.blog .post .post__item .post-body .meta {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .meta {
   display: flex;
   justify-content: space-between;
   padding-top: 1em;
   padding-bottom: 1em;
 }
-.blog .post .post__item .post-body .meta .category,
-.blog .post .post__item .post-body .meta .date {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .meta .category,
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .meta .date {
   display: inline-block;
   text-transform: uppercase;
   font-size: 16px -5 -1;
   color: #999999;
 }
-.blog .post .post__item .post-body .title {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .title {
   margin: 0.5em auto;
 }
-.blog .post .post__item .post-body .short-description {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .short-description {
   display: inline-block;
   text-overflow: ellipsis;
   margin: 0.5em auto;
 }
-.blog .post .post__item .post-body .read-more {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .read-more {
   text-align: right;
   color: #3c6eaa;
   text-decoration: underline;
   position: relative;
   bottom: -4em;
 }
-.blog .post .post__item .post-body .read-more:hover {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .read-more:hover {
   color: #2f5d84;
 }
-.blog .post .post__item .post-body .read-more:active {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .read-more:active {
   color: #21475f;
 }
-.blog .post .post__item .post-body .read-more:visited {
+.blog-wrapper .posts-wrap .post-item-wrap .post-item .post-body .read-more:visited {
   color: #5688c3;
+}
+.blog-wrapper .category-wrap {
+  margin-left: auto;
+  width: 20em;
 }
 .pagination {
   padding-top: 1em;
