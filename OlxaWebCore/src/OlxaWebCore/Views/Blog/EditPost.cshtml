@@ -1,7 +1,7 @@
 @model OlxaWebCore.Models.DataModels.Post
 
 @{
-    ViewData["Title"] = "Редактирование поста: "+Model.Title;
+    ViewData["Title"] = "Редактирование поста: " + Model.Title;
     Layout = "_LayoutAdmin";
 }
 
@@ -16,19 +16,21 @@
     @*<textarea id="editor1" name="editor1">&lt;p&gt;Initial value.&lt;/p&gt;</textarea>*@
 
     @*<script type="text/javascript">
-	CKEDITOR.replace( 'editor1' );
-    </script>*@
+        CKEDITOR.replace( 'editor1' );
+        </script>*@
 
     <script>
 
         var roxyFileman = '/lib/fileman/index.html';
-$(function(){
-   CKEDITOR.replace( 'editor1',{filebrowserBrowseUrl:roxyFileman,
-                                filebrowserImageBrowseUrl:roxyFileman+'?type=image',
-                                removeDialogTabs: 'link:upload;image:upload'});
-});
+        $(function () {
+            CKEDITOR.replace('editor1', {
+                filebrowserBrowseUrl: roxyFileman,
+                filebrowserImageBrowseUrl: roxyFileman + '?type=image',
+                removeDialogTabs: 'link:upload;image:upload'
+            });
+        });
     </script>
-   
+
 
 
     <input type="hidden" asp-for="PostID" />
@@ -56,9 +58,20 @@ $(function(){
             <label asp-for="Meta"></label>
             <input type="text" asp-for="Meta">
 
+            <div class="img-preview">
+                <span>preview</span>
+                <div class="containers">
+                    <div class="image-wrapper">
+                        <img class="image" src="~/Files/Blog/Image/@Model.Picture" alt="preview" />
+                    </div>
+                </div>
+                <div class="btn file-upload">
+                    <input type="file" name="preview" class="file-input">Выбирите файл
+                </div>
+            </div>
         </div>
     </div>
-       
+
     <div class="post-description">
         <label asp-for="Description"></label>
         <textarea asp-for="Description"></textarea>
@@ -66,15 +79,15 @@ $(function(){
         @*<input type="text" asp-for="Description">*@
     </div>
 
-    
-    
+
+
 
     <label asp-for="Published"></label>
     <input type="checkbox" asp-for="Published">
 
- 
+
     <div class="form-group">
-            <input type="submit" value="Save" class="btn btn-default" />        
+        <input type="submit" value="Save" class="btn btn-default" />
     </div>
 </form>
 
@@ -91,7 +104,7 @@ $(function(){
 
 
 @*@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@
 
 

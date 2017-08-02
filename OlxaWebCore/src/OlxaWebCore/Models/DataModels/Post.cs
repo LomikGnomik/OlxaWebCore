@@ -55,8 +55,8 @@ namespace OlxaWebCore.Models.DataModels
         public virtual int Counter //счётчик просмотров
         { get; set; }
 
-        [Display(Name = "Изображение")]
-        public virtual string Picture
+        [Display(Name = "Изображение")]
+        public virtual string Picture //превью поста в блоге
         { get; set; }
         [Display(Name = "Вес Сортировки")]
         public virtual int SortingWeight { get; set; }
