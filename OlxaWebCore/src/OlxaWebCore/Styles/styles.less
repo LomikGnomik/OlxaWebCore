@@ -994,11 +994,10 @@ section.tariff {
 .blog {
     margin-top: 8em;
     display: flex;
-
-    .post {
+    /*  .post {
         display: flex;
         flex-wrap: wrap;
-        width: 100%; /*с сайдбаром 75%*/
+        width: 100%;
         position: relative;
 
         .post__item {
@@ -1062,16 +1061,16 @@ section.tariff {
                         color: @color-base-lighter1;
                     }
                 }
-            }
-            /*&:ntf-child(odd) {
+            }*/
+    /*&:ntf-child(odd) {
                 margin-right: 1em;
             }*/
-            /*.post_img {
+    /*.post_img {
                 display: block;
                 padding-bottom: 0;
                 border: none;
             }*/
-            /*.post-body {
+    /*.post-body {
                 text-align: center;
                 padding: 1.06em 1.5em 2.25em 1.5em;
 
@@ -1126,8 +1125,8 @@ section.tariff {
                     text-decoration: dotted;
                 }
             }*/
-        }
-    }
+    /*  }*/
+    /* }*/
     /*.sidebar {
         position: relative;        
         .widget-sidebar {
@@ -1363,6 +1362,94 @@ section.tariff {
             }
         }
     }*/
+}
+
+.blog-wrapper {
+    display: flex;
+    width: 100%;
+
+    .posts-wrap {
+        width: 100%;        
+
+        .posts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .post-item-wrap {
+            width: 50%;
+
+            .post-item {
+                margin-right: 1em;
+
+                .post_img {
+                    display: block;
+                    padding-bottom: 0;
+                    border: none;
+                }
+
+                .post-body {
+                    padding: 1em;
+                    flex-direction: column;
+                    text-align: left;
+                    min-height: 20em;
+                    max-height: 20em;
+
+                    .meta {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-top: 1em;
+                        padding-bottom: 1em;
+
+                        .category, .date {
+                            display: inline-block;
+                            text-transform: uppercase;
+                            font-size: @size-font-extra-small -1;
+                            color: @color-gray;
+                        }
+                    }
+
+
+
+                    .title {
+                        margin: 0.5em auto;
+                    }
+
+                    .short-description {
+                        display: inline-block;
+                        text-overflow: ellipsis;
+                        margin: 0.5em auto;
+                    }
+
+                    .read-more {
+                        text-align: right;
+                        color: @color-base;
+                        text-decoration: underline;
+                        position: relative;
+                        bottom: -4em;
+
+                        &:hover {
+                            color: @color-base-darken1;
+                        }
+
+                        &:active {
+                            color: @color-base-darken2;
+                        }
+
+                        &:visited {
+                            color: @color-base-lighter1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .category-wrap {
+        margin-left: auto; //прижимаем к правому краю
+        width: 20em;
+    }
 }
 
 .pagination {

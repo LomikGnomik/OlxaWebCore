@@ -1,55 +1,64 @@
 ﻿
 @model Post
 
+
+
+<div class="post-item-wrap">
+    <div class="post-item">
+        <a class="post__img" asp-action="Post" asp-controller="Blog" asp-route-postID=@Model.PostID></a>
+        <div class="post-body">
+            <div class="post-meta">
+                <div class="meta-panel">
+                    <div class="admin-blog">
+                        <a href="" class="public"><i class="fa fa-plus-square-o" aria-hidden="true" title="Опубликовать"></i></a>
+                        <a href="" class="disabled"><i class="fa fa-minus-square-o" aria-hidden="true" title="Снять с публикации"></i></a>
+                        <a asp-action="EditPost" asp-controller="Blog" asp-route-PostID="@Model.PostID" class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true" title="Редактировать"></i></a>
+
+                        <div>В категории: @Model.Category</div>
+                    </div>
+                    <span>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <a href="#" class="post-comments">9</a>
+                    </span>
+                </div>
+                <div class="data">
+                    <span>
+                        @Model.PostedOn.Day.@Model.PostedOn.Month.@Model.PostedOn.Year
+                    </span>
+                </div>
+            </div>  <!--post-meta-->
+            <a asp-action="Post" asp-controller="Blog" asp-route-Id="" class="post-title">
+                <h3>@Model.Title</h3>
+            </a>
+            <p>
+                @Html.Raw(@Model.ShortDescription)
+            </p>
+            <a asp-action="Post" asp-controller="Blog" asp-route-postID="@Model.PostID" class="read-more">Читать далее...</a>
+        </div>
+    </div>
+</div>
+
+
+@*<article class="post__item">*@
+
+@*</article>*@
+
+
+
 @*<article class="post__item">
-    <a class="post__img" asp-action="Post" asp-controller="Blog" asp-route-postID=@Model.PostID></a>
-    <div class="post-body">
-        <div class="post-meta">
-            <div class="meta-panel">
-                <div class="admin-blog">*@
-@*<a href="" class="public"><i class="fa fa-plus-square-o" aria-hidden="true" title="Опубликовать"></i></a>
-    <a href="" class="disabled"><i class="fa fa-minus-square-o" aria-hidden="true" title="Снять с публикации"></i></a>
-    <a href="" class="edit"><i class="fa fa-pencil-square-o" aria-hidden="true" title="Редактировать"></i></a>*@
-
-@* <div>В категории: @Model.Category</div>
-    </div>
-    @*<span>
-        <i class="fa fa-comment-o" aria-hidden="true"></i>
-        <a href="#" class="post-comments">9</a>
-    </span>*@
-@*  </div>
-             <div class="data">
-                 <span>
-                  @Model.PostedOn.Day.@Model.PostedOn.Month.@Model.PostedOn.Year
-                 </span>
-             </div>
-         </div>  <!--post-meta-->
-         <a asp-action="Post" asp-controller="Blog" asp-route-Id="" class="post-title">
-             <h3>@Model.Title</h3>
-         </a>
-         <p>
-            @Html.Raw(@Model.ShortDescription)
-         </p>
-         <a asp-action ="Post" asp-controller="Blog" asp-route-postID="@Model.PostID" class="read-more">Читать далее...</a>
-
-    @*<br><a asp-action="EditPost" asp-controller="Blog" asp-route-PostID="@Model.PostID" class="btn-danger">редактировать</a>*@
-
-@*</div>
+        <div class="post-body">
+            <div class="meta">
+                <div class="category">
+                    @Model.Category
+                </div>
+                <div class="date">
+                    <span>
+                      @Model.PostedOn.ToString("D")
+                    </span>
+                </div>
+            </div>
+            <div class="title"><a asp-controller="Blog" asp-action="Post" asp-route-postID="@Model.PostID"><h3>@Model.Title</h3></a></div>
+            <div class="short-description">@Model.ShortDescription</div>
+            <div class="read-more"><a asp-action="Post" asp-controller="Blog" asp-route-postID="@Model.PostID" class="read-more">Читать далее...</a></div>
+        </div>
     </article>*@
-<article class="post__item">
-    <div class="post-body">
-        <div class="meta">
-            <div class="category">
-                @Model.Category
-            </div>
-            <div class="date">
-                <span>
-                  @Model.PostedOn.ToString("D")
-                </span>
-            </div>
-        </div>       
-        <div class="title"><a asp-controller="Blog" asp-action="Post" asp-route-postID="@Model.PostID"><h3>@Model.Title</h3></a></div>
-        <div class="short-description">@Model.ShortDescription</div>
-        <div class="read-more"><a asp-action="Post" asp-controller="Blog" asp-route-postID="@Model.PostID" class="read-more">Читать далее...</a></div>
-    </div>
-</article>
