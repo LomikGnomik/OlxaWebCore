@@ -1363,9 +1363,10 @@ section.tariff {
 }
 
 @media screen and (max-width:640px) {
-    .blog{
-            margin-top: 8em;
+    .blog {
+        margin-top: 8em;
     }
+
     .blog-wrapper .posts-wrap {
         width: 95%;
         margin: 0 auto;
@@ -1373,7 +1374,7 @@ section.tariff {
 
     .blog-wrapper .posts-wrap .posts .post-item-wrap {
         width: 100%;
-    }    
+    }
 
     .blog-wrapper .category-wrap {
         display: none;
@@ -3291,7 +3292,7 @@ section.portfolio {
 /*------------------------------------------------------------------------------Страница ЦЕНЫ*/
 
 section.price-solution {
-    margin-top: 4em;
+    margin-top: 8em;
     margin-bottom: 3em;
 
     .flex {
@@ -3318,7 +3319,7 @@ section.price-solution {
 
         .solution-item-wrap {
             text-align: center;
-            padding: 2em 1.2em;
+            padding: 0.5em 1.2em;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -3330,7 +3331,7 @@ section.price-solution {
                 padding-top: 10px;
                 border: 2px solid @color-more;
                 margin: 0 auto 30px auto;
-                height: 30em;
+                height: 25em;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -3796,7 +3797,7 @@ section.price-solution {
                 min-height: 100vh;
                 // height: 809px;
                 perspective: 1000px;
-                background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avFeatures_Bg.jpg) right top no-repeat;
+                background-image: url('../images/web-sites-background.jpg');
                 background-size: cover;
                 //  background-image: url('');
                 //  padding-right: 229px;
@@ -5524,26 +5525,158 @@ section.information-title {
 /*-----------------------------------------------------------страница О НАС/Контакты*/
 .about-wrap {
     padding-top: 3em;
+    text-align: center;
 
-    .about-wrapper {
+    .about-wrapper {   
         // min-height: 100vh;
         // display:flex;
-        .about-title {
-            margin: 0 auto;
-            padding: 2em 0;
-            //   width:50%;
-            h2 {
-                padding: 2em;
-                color: #FFFFFF;
-                font-size: 3em;
-                letter-spacing: 0.02em;
-                text-align: center;
-                //font-size: 2em;
-            }
+        .about-company-wrap {
+            .about-company {
+                margin: 0 auto;
+                padding: 2em 0;
+                //   width:50%;
+                h2 {
+                    padding: 2em;
+                    color: @color-gray-dark;
+                    font-size: 2.5em;
+                    letter-spacing: 0.02em;
+                    text-align: center;
+                    //font-size: 2em;
+                }
 
-            p {
-                text-align: center;
-                color: @font-color-reverce;
+                p {
+                    text-align: center;
+                    color: @color-gray;
+                    width: 60%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .about-team-wrap {
+
+            .about-team {
+                padding-bottom: 4em;
+
+                h2 {
+                    padding: 1em 2em 2em;
+                    color: @color-gray-dark;
+                    font-size: 2.5em;
+                    letter-spacing: 0.02em;
+                }
+
+                .team-row {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    overflow: hidden;
+                }
+
+                .team-inner-wrap {
+                    width: 20%;
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                    opacity: 1;
+                    -webkit-transition: -webkit-transform 0.85s cubic-bezier(0.680, -0.550, 0.265, 1.550) 0s, opacity 0.85s cubic-bezier(0.680, -0.550, 0.265, 1.550) 0s;
+                    transition: transform 0.85s cubic-bezier(0.680, -0.550, 0.265, 1.550) 0s, opacity 0.85s cubic-bezier(0.680, -0.550, 0.265, 1.550) 0s;
+                    padding-left: 0.9em;
+                    padding-right: 0.9em;
+
+                    .team-inner {
+                        width: 100%;
+                        max-width: 20em;
+                        margin: 0 auto 3em auto;
+                        cursor: default;
+
+                        .team-image {
+                            position: relative;
+                            overflow: hidden;
+                            margin-bottom: 1.5em;
+
+                            .social-bar {
+                                position: absolute;
+                                z-index: 5;
+                                width: 100%;
+                                left: 0;
+                                bottom: 24px;
+                                text-align: center;
+                                opacity: 0;
+                                transform: translateY(30px);
+                                transition: all 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+                                a {
+                                    display: inline-block;
+                                    height: 36px;
+                                    width: 36px;
+                                    font-size: 16px;
+                                    line-height: 36px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    letter-spacing: 0;
+                                    margin-right: 2px;
+                                    margin-bottom: 6px;
+                                    border: none;
+                                    transition: all 0.3s;
+                                }
+
+                                .vk {
+                                    color: #0092c8;
+                                    background-color: rgba(23, 120, 156, 0.10);
+
+                                    &:hover {
+                                        color: white;
+                                        background-color: #0092c8;
+                                    }
+                                }
+
+                                .skype {
+                                    color: #00aff0;
+                                    background-color: rgba(0,175,240,0.1);
+
+                                    &:hover {
+                                        color: white;
+                                        background-color: #00aff0;
+                                    }
+                                }
+                            }
+
+                            &:hover > img {
+                                border-radius: 0;
+                                opacity: 0.2;
+                            }
+
+                            &:hover .social-bar {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        .team-image > img {
+                            border-radius: 50%;
+                            opacity: 1;
+                            -webkit-transition: all 0.34s;
+                            transition: all 0.35s;
+                        }
+
+                        .team-name {
+                            font-size: 1.5em;
+                            font-weight: 600;
+                            margin-bottom: 0.8em;
+                        }
+
+                        .team-position {
+                            display: block;
+                            color: @color-base;
+                            margin-bottom: 1em;
+                        }
+
+                        p {
+                            font-size: 1.1em;
+                            color: @color-gray-light;
+                        }
+                    }
+                }
             }
         }
     }
@@ -8475,6 +8608,10 @@ section.information-title {
 .service-sites-wrap {
     display: flex;
 
+    ul.list li:before {
+        content: "- ";
+    }
+
     h4 {
         margin-bottom: 1em;
     }
@@ -8720,6 +8857,10 @@ section.information-title {
         // position: relative;
         width: 100%;
         margin-bottom: 3em;
+
+        label:first-child {
+            margin: 0;
+        }
 
         .label-wrap {
             display: flex;
