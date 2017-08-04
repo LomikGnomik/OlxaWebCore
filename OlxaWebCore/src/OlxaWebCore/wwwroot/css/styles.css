@@ -2501,7 +2501,7 @@ section.portfolio .grid.isotope-grid:after {
 }
 /*------------------------------------------------------------------------------Страница ЦЕНЫ*/
 section.price-solution {
-  margin-top: 4em;
+  margin-top: 8em;
   margin-bottom: 3em;
 }
 section.price-solution .flex {
@@ -2514,7 +2514,7 @@ section.price-solution .solution-row i {
 }
 section.price-solution .solution-row .solution-item-wrap {
   text-align: center;
-  padding: 2em 1.2em;
+  padding: 0.5em 1.2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2526,7 +2526,7 @@ section.price-solution .solution-row .solution-item-wrap .solution-item {
   padding-top: 10px;
   border: 2px solid #06c438;
   margin: 0 auto 30px auto;
-  height: 30em;
+  height: 25em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2888,7 +2888,7 @@ section.price-solution .solution-item-question .btn {
   width: 100%;
   min-height: 100vh;
   perspective: 1000px;
-  background: url(http://bullguard.com/marketingfiles/ext/umbracoLanding/demo/images/featureslist/avFeatures_Bg.jpg) right top no-repeat;
+  background-image: url('../images/web-sites-background.jpg');
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -4276,21 +4276,129 @@ section.information-title figcaption p {
 /*-----------------------------------------------------------страница О НАС/Контакты*/
 .about-wrap {
   padding-top: 3em;
+  text-align: center;
 }
-.about-wrap .about-wrapper .about-title {
+.about-wrap .about-wrapper .about-company-wrap .about-company {
   margin: 0 auto;
   padding: 2em 0;
 }
-.about-wrap .about-wrapper .about-title h2 {
+.about-wrap .about-wrapper .about-company-wrap .about-company h2 {
   padding: 2em;
-  color: #FFFFFF;
-  font-size: 3em;
+  color: #333333;
+  font-size: 2.5em;
   letter-spacing: 0.02em;
   text-align: center;
 }
-.about-wrap .about-wrapper .about-title p {
+.about-wrap .about-wrapper .about-company-wrap .about-company p {
   text-align: center;
-  color: #ecf0f1;
+  color: #999999;
+  width: 60%;
+  margin: 0 auto;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team {
+  padding-bottom: 4em;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team h2 {
+  padding: 1em 2em 2em;
+  color: #333333;
+  font-size: 2.5em;
+  letter-spacing: 0.02em;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap {
+  width: 20%;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s, opacity 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+  transition: transform 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s, opacity 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner {
+  width: 100%;
+  max-width: 20em;
+  margin: 0 auto 3em auto;
+  cursor: default;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image .social-bar {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  left: 0;
+  bottom: 24px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image .social-bar a {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  margin-right: 2px;
+  margin-bottom: 6px;
+  border: none;
+  transition: all 0.3s;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image .social-bar .vk {
+  color: #0092c8;
+  background-color: rgba(23, 120, 156, 0.1);
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image .social-bar .vk:hover {
+  color: white;
+  background-color: #0092c8;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image .social-bar .skype {
+  color: #00aff0;
+  background-color: rgba(0, 175, 240, 0.1);
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image .social-bar .skype:hover {
+  color: white;
+  background-color: #00aff0;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image:hover > img {
+  border-radius: 0;
+  opacity: 0.2;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image:hover .social-bar {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-image > img {
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transition: all 0.34s;
+  transition: all 0.35s;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-name {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner .team-position {
+  display: block;
+  color: #3c6eaa;
+  margin-bottom: 1em;
+}
+.about-wrap .about-wrapper .about-team-wrap .about-team .team-inner-wrap .team-inner p {
+  font-size: 1.1em;
+  color: #cccccc;
 }
 .about-wrap .contacts-wrapper .contacts {
   min-height: 95vh;
@@ -6764,6 +6872,9 @@ section.information-title figcaption p {
 .service-sites-wrap {
   display: flex;
 }
+.service-sites-wrap ul.list li:before {
+  content: "- ";
+}
 .service-sites-wrap h4 {
   margin-bottom: 1em;
 }
@@ -6947,6 +7058,9 @@ section.information-title figcaption p {
   /*z-index активных*/
   /*спрятанный контент при не выбраном элемента*/
   /*контент при выбраном элемента*/
+}
+.steps-wrap .tabs label:first-child {
+  margin: 0;
 }
 .steps-wrap .tabs .label-wrap {
   display: flex;
