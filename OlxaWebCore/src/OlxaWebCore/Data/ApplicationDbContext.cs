@@ -21,7 +21,7 @@ namespace OlxaWebCore.Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Service> Services { get; set; }
-
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

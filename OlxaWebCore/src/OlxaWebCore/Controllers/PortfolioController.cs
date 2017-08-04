@@ -61,38 +61,33 @@ namespace OlxaWebCore.Controllers
         public ViewResult PreviousNextSite(int SiteId, bool next)
         {
             int[] allSites = repository.Portfolios
-                .Where(p=>p.Published==true)
-                .Select(d=>d.PortfolioID).ToArray();
+                .Where(p => p.Published == true)
+                .Select(d => d.PortfolioID).ToArray();
 
             int index = Array.IndexOf(allSites, SiteId);
-
-
 
             if (index == 0)
             {
                 index = allSites.Count();
             }
-              else if(index==allSites.Count())
+            else if (index == allSites.Count())
             {
                 index = 0;
-            }  
+            }
 
+            Portfolio site = new Portfolio();
 
-            Portfolio site=new Portfolio(); 
-
-            if (next == true )
+            if (next == true)
             {
-int nextId =allSites[index+1];
-site= repository.Portfolios.FirstOrDefault(p => p.PortfolioID == nextId);
+                int nextId = allSites[index + 1];
+                site = repository.Portfolios.FirstOrDefault(p => p.PortfolioID == nextId);
             }
             else
             {
-int previousId = allSites[index - 1];
-site= repository.Portfolios.FirstOrDefault(p => p.PortfolioID == previousId);
+                int previousId = allSites[index - 1];
+                site = repository.Portfolios.FirstOrDefault(p => p.PortfolioID == previousId);
             }
-            
-
-            return View("WebSite",site);
+            return View("WebSite", site);
         }
 
         //ADMIN
@@ -119,7 +114,7 @@ site= repository.Portfolios.FirstOrDefault(p => p.PortfolioID == previousId);
                 // Название картинки
                 portfolio.Image = portfolio.PortfolioID.ToString() + ".jpg";
 
-                SaveFile(desktop, "/Files/Portfolio/Image/Desktop/"+portfolio.Image);
+                SaveFile(desktop, "/Files/Portfolio/Image/Desktop/" + portfolio.Image);
                 SaveFile(tablet, "/Files/Portfolio/Image/Tablet/" + portfolio.Image);
                 SaveFile(mobile, "/Files/Portfolio/Image/Mobile/" + portfolio.Image);
                 SaveFile(preview, "/Files/Portfolio/Image/Preview/" + portfolio.Image);
@@ -134,7 +129,7 @@ site= repository.Portfolios.FirstOrDefault(p => p.PortfolioID == previousId);
             }
         }
 
-        public async void SaveFile(IFormFile file , string path)
+        public async void SaveFile(IFormFile file, string path)
         {
             string road = _appEnvironment.WebRootPath + path;
             if (file != null)
