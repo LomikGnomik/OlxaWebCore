@@ -12,7 +12,7 @@ namespace OlxaWebCore.Controllers
     public class BlogController : Controller
     {
         private IBlogRepository repository;
-        public int PageSize = 10;
+        public int PageSize = 2;
 
         public BlogController(IBlogRepository repo)
         {
