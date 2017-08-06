@@ -179,6 +179,15 @@ button[type="submit"]:disabled {
 .btn-primary:focus {
   background: #2f5d84;
 }
+.btn-bad {
+  background: #FD0006;
+  color: #fff;
+}
+.btn-bad:hover,
+.btn-bad:active,
+.btn-bad:focus {
+  background: #ca0016;
+}
 .btn-icon-right {
   padding-right: 1.31em;
 }
@@ -2639,6 +2648,10 @@ section.price-solution .solution-item-question .btn {
   }
 }
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
+.index-wrap section.heading {
+  min-height: 100vh;
+  position: relative;
+}
 .index-wrap section.heading .title {
   height: 50%;
   margin-top: -5em;
@@ -8625,4 +8638,55 @@ li.ui-menu-item {
   border: 1px solid #cccccc;
   border-top: none;
   max-width: 20em;
+}
+/*---------------------------------------------Готовые решения*/
+/*----------------------Добавление*/
+.edit-product .priduct-group-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0.5em;
+}
+.edit-product .priduct-group-meta [class*="product-inner"] {
+  margin: 0 1%;
+  flex: 1 1 30%;
+}
+.edit-product .priduct-group-meta [class*="product-inner"] input,
+.edit-product .priduct-group-meta [class*="product-inner"] select {
+  margin-right: 1em;
+}
+.edit-product .product-description-wrap {
+  display: flex;
+  margin: 0.5em;
+}
+.edit-product .product-description-wrap .product-description,
+.edit-product .product-description-wrap .product-short-description {
+  width: 50%;
+  margin: 0 1%;
+}
+.edit-product .product-published {
+  margin: 0.5em;
+}
+.edit-product .product-sort {
+  display: flex;
+  margin: 0.5em;
+  width: 20em;
+}
+.edit-product .product-sort label {
+  width: 100%;
+  line-height: 3em;
+  margin-left: 1em;
+}
+.btn-control-product {
+  display: flex;
+  align-items: baseline;
+}
+.btn-control-product a {
+  margin-right: 3em;
+  color: #3c6eaa;
+  border-bottom: 1px dashed #3c6eaa;
+}
+.btn-control-product a:hover {
+  color: #5688c3;
+  border-bottom-color: #5688c3;
 }

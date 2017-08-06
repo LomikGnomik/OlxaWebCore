@@ -1,1 +1,42 @@
 ﻿@model IEnumerable<Product>
+
+@{
+    Layout = "_LayoutAdmin";
+
+    ViewData["Title"] = "Готовые решения";
+}
+@section ControlPanel{
+    <div class="btn">
+        <a asp-controller="Product" asp-action="CreateProduct">Добавить решение</a>
+    </div>
+}
+
+<h3>Список всех готовых ренешений</h3>
+<table class="table-admin">
+    <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Категория</th>
+        <th>Цена</th>
+        <th>Время разработки</th>
+        <th>Демо</th>
+        <th>Описание</th>
+        <th>Позиция</th>
+        <th>Видно?</th>
+    </tr>
+    @foreach (var product in @Model)
+    {
+        <tr>
+            <td>@product.ProductID</td>
+            <td><a asp-controller="Product" asp-action="EditProduct" asp-route-postID="@product.ProductID">@product.Name</a></td>
+            <td>@product.Category</td>
+            <td>@product.Price</td>
+            <td>@product.TimeDevelop</td>
+            <td>@product.DemoLink</td>
+            <td>@product.ShortDescription</td>
+            <td>@product.SortingWeight</td>
+            <td>@product.Published</td>
+        </tr>
+
+    }
+</table>
