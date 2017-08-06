@@ -17,7 +17,7 @@
             <div class="gutter-sizer"></div>
             @foreach (var site in @Model.Portfolios)
             {
-                <div class="gallery__item medium-half large-third grid-item view @site.Category">
+                <div class="gallery__item grid-item view @site.Category">
                     <a asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID" class="gallery__item-link">
                         <div class="thumbnail">
                             <img src="~/Files/Portfolio/Image/Preview/@site.Image" />

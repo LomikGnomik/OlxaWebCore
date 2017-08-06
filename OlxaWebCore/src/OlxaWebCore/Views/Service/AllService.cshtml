@@ -26,9 +26,10 @@
                                                 <td>@service.Title</td>
                                                 <td>@service.Price</td>
                                                 <td align="right">
-                                                    <a href="#@service.ServiceID" class="btn btn-ghost">
-                                                        Подробнее
-                                                    </a>
+                                                    @*<a href="#@service.ServiceID" class="btn btn-ghost">
+                                                            Подробнее
+                                                        </a>*@
+                                                    <label class="popup_link btn btn-ghost" for="@service.ServiceID">Подробнее</label>
                                                 </td>
                                                 @*<td class="add">+</td>*@
                                             </tr>
@@ -51,13 +52,21 @@
 @*модальное окно*@
 @foreach (var serviceModal in Model)
 {
-    <section class="modal-window-service">
-        <a href="#" class="overlay_det" id="@serviceModal.ServiceID"></a>
+    <input class="modal_check" id="@serviceModal.ServiceID" type="checkbox" hidden>
+    <div class="modal">
+        <div class="modal_hold">
+            <label class="modal_close" for="@serviceModal.ServiceID"></label>
+            @serviceModal.Description
+        </div>
+
+        <label class="modal_overlay" for="@serviceModal.ServiceID"></label>
+    </div>
+    @*<a href="#" class="overlay_det" id="@serviceModal.ServiceID"></a>
         <div class="popup_det">
            @serviceModal.Description
-            <a class="close_det" title="Закрыть" href="#close_det"></a>
-        </div>
-    </section>
+            <a class="close_det" title="Закрыть" href=""></a>
+        </div>*@
+
 }
 
 
