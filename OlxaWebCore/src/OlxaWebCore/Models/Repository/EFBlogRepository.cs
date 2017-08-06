@@ -36,7 +36,8 @@ namespace OlxaWebCore.Models.Repository
                     dbEntry.ShortDescription = post.ShortDescription;
                     dbEntry.Description = post.Description;
                     dbEntry.Meta = post.Meta;
-                  //  dbEntry.UrlSlug = post.UrlSlug;
+                    //  dbEntry.UrlSlug = post.UrlSlug;
+                    dbEntry.Picture = post.Picture;
                     dbEntry.Published = post.Published;
                     dbEntry.PostedOn = post.PostedOn;
                   //  dbEntry.Modified = post.Modified;

@@ -17,7 +17,7 @@
                 <span>в</span>
                 <span>
                     <i class="fa fa-cogs" aria-hidden="true"></i>
-                    <a href="#">Категорию</a>
+                    <a class="category-blog" asp-controller="Blog" asp-action="AllPosts" asp-route-category="@Model.Category">@Model.Category</a>
                 </span>
                 <span>
                     <i class="fa fa-comment-o" aria-hidden="true"></i>

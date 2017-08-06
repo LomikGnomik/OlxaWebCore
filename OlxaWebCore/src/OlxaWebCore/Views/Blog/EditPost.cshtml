@@ -62,12 +62,14 @@
                 <span>preview</span>
                 <div class="containers">
                     <div class="image-wrapper">
-                        <img class="image" src="~/Files/Blog/Image/@Model.Picture" alt="preview" />
+                        <img class="image" src="@Model.Picture" alt="preview" />
                     </div>
                 </div>
-                <div class="btn file-upload">
+
+                <input type="text" asp-for="Picture">
+                @*<div class="btn file-upload">
                     <input type="file" name="preview" class="file-input">Âûבטנטעו פאיכ
-                </div>
+                </div>*@
             </div>
         </div>
     </div>
@@ -78,8 +80,6 @@
 
         @*<input type="text" asp-for="Description">*@
     </div>
-
-
 
 
     <label asp-for="Published"></label>
