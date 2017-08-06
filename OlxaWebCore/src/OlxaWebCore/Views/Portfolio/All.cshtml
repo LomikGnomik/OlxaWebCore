@@ -9,37 +9,37 @@
         <small>Сайты созданные для наших клинетов</small>
 
         @await Component.InvokeAsync("PortfolioNavigationMenu")
-       
-            <!-- Portfolio Grid -->
-            <div class="grid isotope-grid filter-grid">
 
-                <div class="grid-sizer"></div>
-                <div class="gutter-sizer"></div>
-                @foreach (var site in @Model.Portfolios)
-                {
-                    <div class="gallery__item medium-half large-third grid-item view @site.Category">
-                        <a asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID" class="gallery__item-link">
-                            <div class="thumbnail">
-<img src="~/Files/Portfolio/Image/Preview/@site.Image" />
-                                <h3 class="gallery__title">@site.Title</h3>
-                            </div>
-                        </a>
-                    </div>
-                }                
-            </div>
-            
+        <!-- Portfolio Grid -->
+        <div class="grid isotope-grid filter-grid">
 
+            <div class="grid-sizer"></div>
+            <div class="gutter-sizer"></div>
+            @foreach (var site in @Model.Portfolios)
+            {
+                <div class="gallery__item grid-item view @site.Category">
+                    <a asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID" class="gallery__item-link">
+                        <div class="thumbnail">
+                            <img src="~/Files/Portfolio/Image/Preview/@site.Image" />
+                            <h3 class="gallery__title">@site.Title</h3>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
 
 
-            <!-- Load More Button -->
-            @*<div class="text-center padding-top">
-                    <a href="#" class="btn btn-default btn-ghost waves-effect">Load More</a>
-                </div>*@
 
 
-</section> <!--portfolio-->
+        <!-- Load More Button -->
+        @*<div class="text-center padding-top">
+                <a href="#" class="btn btn-default btn-ghost waves-effect">Load More</a>
+            </div>*@
+
+
+    </section> <!--portfolio-->
 </div> <!--container-->
 
 
 
-  @await Component.InvokeAsync("OrderForm")
+@await Component.InvokeAsync("OrderForm")

@@ -35,7 +35,7 @@
             <td>@product.DemoLink</td>
             <td>@product.ShortDescription</td>
             <td>@product.SortingWeight</td>
-            <td>@product.Published</td>
+            <td class="@(product.Published == true ? "post-published" : "post-no-published")"></td>
         </tr>
 
     }
