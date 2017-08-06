@@ -12,7 +12,6 @@
                 <ul>
                     @foreach (string category in @ViewBag.CategoryService)
             {
-
                         <li>
                             <input type="checkbox">
                             <i></i>
@@ -27,14 +26,12 @@
                                                 <td>@service.Title</td>
                                                 <td>@service.Price</td>
                                                 <td align="right">
-                                                    <a href="#modal" class="btn btn-ghost">
+                                                    <a href="#@service.ServiceID" class="btn btn-ghost">
                                                         Подробнее
                                                     </a>
                                                 </td>
                                                 @*<td class="add">+</td>*@
-
                                             </tr>
-
                                         }
                                     }
                                 </table>
@@ -52,13 +49,17 @@
     </section>
 </div>
 @*модальное окно*@
-<section class="modal-window-service">
-    <a href="#" class="overlay_det" id="modal"></a>
-    <div class="popup_det">
-        cjlth;bvjt
-        <a class="close_det" title="Закрыть" href="#close_det"></a>
-    </div>
-</section>
+@foreach (var serviceModal in Model)
+{
+    <section class="modal-window-service">
+        <a href="#" class="overlay_det" id="@serviceModal.ServiceID"></a>
+        <div class="popup_det">
+           @serviceModal.Description
+            <a class="close_det" title="Закрыть" href="#close_det"></a>
+        </div>
+    </section>
+}
+
 
 
 
