@@ -326,6 +326,13 @@ button[type="submit"]:disabled {
         background: @color-base-darken1;
     }
 }
+.btn-bad{
+    background:@color-bad;
+    color:#fff;
+     &:hover, &:active, &:focus {
+        background: @color-bad-darken1;
+    }
+}
 
 
 
@@ -3490,7 +3497,9 @@ section.price-solution {
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
 .index-wrap {
     section.heading {
-        // min-height:100vh;
+        min-height: 100vh;
+        position: relative;
+
         .title {
             height: 50%;
             margin-top: -5em;
@@ -5527,7 +5536,7 @@ section.information-title {
     padding-top: 3em;
     text-align: center;
 
-    .about-wrapper {   
+    .about-wrapper {
         // min-height: 100vh;
         // display:flex;
         .about-company-wrap {
@@ -10793,4 +10802,62 @@ li.ui-menu-item {
     border: 1px solid @color-gray-light;
     border-top: none;
     max-width: 20em;
+}
+/*---------------------------------------------Готовые решения*/
+/*----------------------Добавление*/
+.edit-product {
+    .priduct-group-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0.5em;
+
+        [class*="product-inner"] {
+            //max-width:18em;
+            margin: 0 1%;
+            flex: 1 1 30%;
+
+            input, select {
+                margin-right: 1em;
+            }
+        }
+    }
+
+    .product-description-wrap {
+        display: flex;
+        margin: 0.5em;
+        // margin: 0 1%;
+        .product-description, .product-short-description {
+            width: 50%;
+            margin: 0 1%;
+        }
+    }
+
+    .product-published {
+        margin: 0.5em;
+    }
+
+    .product-sort {
+        display:flex;
+        margin: 0.5em;
+        width:20em;
+        label{
+            width:100%;
+            line-height:3em;
+            margin-left:1em;
+        }        
+    }
+}
+.btn-control-product{
+    display:flex;
+    align-items:baseline;
+    a{
+        margin-right:3em;
+        color:@color-base;
+        border-bottom:1px dashed @color-base;
+        &:hover{
+            color:@color-base-lighter1;
+            border-bottom-color:@color-base-lighter1;
+        }
+    }
 }
