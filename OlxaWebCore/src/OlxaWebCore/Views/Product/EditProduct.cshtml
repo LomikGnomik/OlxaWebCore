@@ -2,14 +2,14 @@
 
 @{
     Layout = "_LayoutAdmin";
-   // ViewData["Title"] = " Редактирование продукта: " + @Model.Name;
+    ViewData["Title"] = " Редактирование продукта: " + @Model.Name;
 }
 
-@*<h2>@Model.Name</h2>*@
+<h2>@Model.Name</h2>
 
 <form asp-action="EditProduct" class="edit-product">
 
-        <input type="hidden" asp-for="ProductID" />
+    <input type="hidden" asp-for="ProductID" />
 
     <div class="priduct-group-meta">
         <div class="product-inner-name">
@@ -27,7 +27,7 @@
         <div class="product-inner-category">
             <label asp-for="Category"></label>
             <select name="Category" required>
-                @*<option value="@Model.Category">@Model.Category</option>*@
+                <option value="@Model.Category">@Model.Category</option>
                 <option value="Интернет-магазин">Интернет-магазин</option>
                 <option value="Визитка">Визитка</option>
                 <option value="Landing">Landing</option>
@@ -42,7 +42,17 @@
         </div>
         <div class="product-inner-preview">
             <label asp-for="Preview"></label>
-            <input type="text" asp-for="Preview" />
+                <input type="text" asp-for="Preview" />
+            @*<a href="#modal" class="btn btn-ghost">
+                Подробнее
+            </a>
+            <section class="modal-window-service">
+                <a href="#" class="overlay_det" id="modal"></a>
+                <div class="popup_det">                    
+                    <a href="~/lib/rich-filemanager/index.html">gg</a>
+                    <a class="close_det" title="Закрыть" href="#close_det"></a>
+                </div>
+            </section>*@
         </div>
     </div>
     <div class="product-description-wrap">
@@ -78,7 +88,7 @@
 
     <form asp-action="DeletePortfolio" class="btn-portfolio-delete">
         <input type="hidden" asp-for="ProductID" />
-        <input type="submit" value="Удалить" class="btn btn-bad"/>
+        <input type="submit" value="Удалить" class="btn btn-bad" />
     </form>
 
 </div>

@@ -34,8 +34,8 @@
                     <button type="submit" href="#del" class="btn-del" title="Удалить">X</button>
                 </form>
             </td>*@
-            @*<td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>
-            <td class="@(service.Published == true ? "post-published" : "post-no-published")"><a asp-controller="Portfolio" asp-action="EditPortfolio" asp-route-serviceID="@Portfolios.portfolioID"></a></td>*@
+            @*<td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>*@
+            <td class="@(site.Published== true ? "post-published" : "post-no-published")"></td>
 
         </tr>
     }
