@@ -1,7 +1,43 @@
 ﻿@model IEnumerable<Product>
 
- 
-@foreach (var site in Model)
-{
-    Html.Partial("_ProductItemPartialView", site);
-}
+<div class="product-inner-tabs" id="inner-tabs">
+    @foreach (var site in Model)
+    {
+
+        <div class="product-item @site.Category">
+
+            <div class="product">
+                <figure>
+                    <img src="~/images/blog/post01.jpg" alt="Product Image" class="product-image">
+                </figure>
+
+                <div class="product-description">
+
+                    <div class="info">
+                        <h1>@site.Name</h1>
+                    </div>
+
+                    <div class="price">
+                        @site.Price
+                    </div>
+                </div>
+
+                <div class="product-sidebar">
+                    <a href="#" class="buy" title="Купить">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="info" title="Подробнее" asp-controller="Product" asp-action="Product" asp-route-productID="@site.ProductID">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="#" class="demo" title="Демо">
+                        <i class="fa fa-object-group" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    }
+</div>

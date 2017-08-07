@@ -2717,6 +2717,7 @@ section.portfolio {
             figure {
                 margin: 0;
                 line-height: 0;
+                max-height: 15em;
             }
 
             .product {
@@ -2970,20 +2971,24 @@ section.portfolio {
             padding-left: 1.5em;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;            
-
+            // justify-content: space-between;
             h2 {
                 font-size: 1.2em;
                 color: @color-gray-dark;
+                margin-bottom: 2em;
             }
 
             p {
                 color: @color-gray;
+                margin-bottom: 2em;
             }
 
             .product-item-info {
                 display: flex;
-                vertical-align:baseline;
+                align-items: baseline;
+                border-bottom: 1px solid @color-gray-light;
+                margin-bottom: 2em;
+                padding-bottom: 1em;
 
                 .time, .price {
                     margin-right: 1em;
@@ -3002,9 +3007,13 @@ section.portfolio {
             }
 
             .product-item-link {
+                display: flex;
+                align-items: baseline;
+
                 a {
                     color: @color-base;
                     border-bottom: 1px solid @color-base;
+                    margin-right: 1em;
 
                     &:hover {
                         color: @color-base-lighter1;
@@ -3015,7 +3024,116 @@ section.portfolio {
         }
     }
 }
+/*-------------------------------------------------------------готовые решения/сайты внутри табов*/
+#inner-tabs.product-inner-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
 
+    .product-item {
+        margin-bottom: 2em;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h1 {
+        font-weight: 300;
+        color: #31353d;
+        margin: 0;
+    }
+
+    figure {
+        margin: 0;
+        line-height: 0;
+        max-height: 15em;
+    }
+
+    .product {
+        background: #fff;
+        max-width: 320px;
+        position: relative;
+        z-index: 15;
+        margin-right: 4em; //50px ширина скрытого сайдбара
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+
+        .product-sidebar a {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .product .product-description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 15;
+        background: #fff;
+    }
+
+    .product .product-description .info {
+        padding: 15px;
+        color: #aaa;
+        font-size: 0.85em;
+    }
+
+    .product .product-description .price {
+        padding-right: 15px;
+        text-align: right;
+        color: #9bb6aa;
+        font-size: 2em;
+        position: relative;
+        background: #fff;
+
+        &:after {
+            content: "\20BD";
+            font-weight: 300;
+        }
+    }
+
+    .product .product-sidebar {
+        height: 100%;
+        background: #31353d;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        transition: right 0.3s ease;
+        border-radius: 0 2px 2px 0;
+    }
+
+    .product .product-sidebar a {
+        border: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        color: #fff;
+        padding: 0.9em;
+        font-size: 0.8em;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .product .product-sidebar a i {
+        font-size: 1.5em;
+        line-height: 1.4em;
+    }
+
+    .product .product-sidebar a:hover {
+        //width: 130px;
+        background-color: #9bb6aa;
+        position: relative;
+        background-position: 15px center;
+        border-color: #9bb6aa;
+    }
+
+    .product:hover .product-sidebar {
+        right: -50px;
+    }
+}
 /*---------------------------------страница после заказа order/orderList*/
 .order-wrapper {
     min-height: 100vh;
@@ -5869,13 +5987,12 @@ section.information-title {
 /* Modal PopUp */
 
 label.popup_link {
-    color: red;
     cursor: pointer;
     display: inline-block;
 }
 
 label.popup_link:hover {
-    color: blue;
+    // color: blue;
 }
 
 .modal_check {
@@ -5901,13 +6018,16 @@ label.popup_link:hover {
 }
 
 .modal .modal_overlay {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.36);
     opacity: 0.6;
 }
 
 .modal .modal_hold {
-    width: 500px;
-    margin: 100px auto 20px;
+    min-width: 31.25em;
+    max-width:45em;
+    //margin: 0 auto;
+    //top: 35%;
+    margin: 150px auto 20px;
     padding: 40px;
     border-radius: 5px;
     background: #fff;
@@ -5917,9 +6037,6 @@ label.popup_link:hover {
     text-align: center;
     position: relative;
     z-index: 1001;
-    -webkit-transform: translate(0, -100%);
-    -ms-transform: translate(0, -100%);
-    -o-transform: translate(0, -100%);
     transform: translate(0, -100%);
     -webkit-transition: -webkit-transform 0.4s ease-out;
     -moz-transition: -moz-transform 0.4s ease-out;
@@ -5935,9 +6052,6 @@ label.popup_link:hover {
 }
 
 .modal_check:checked + .modal .modal_hold {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
     transform: translate(0, 0);
 }
 
@@ -5947,33 +6061,25 @@ label.popup_link:hover {
 }
 
 .modal .modal_close {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #f00;
+    border: 2px solid #ccc;
+    background-color: rgba(61, 61, 61, 0.8);
+    box-shadow: 0px 0px 10px #000;
+    width: 22px;
+    height: 22px;
+    text-align: center;
     border-radius: 50%;
     position: absolute;
     top: 5px;
     right: 5px;
     cursor: pointer;
     display: block;
-    -moz-transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .modal .modal_close:hover {
-    width: 50px;
-    height: 50px;
-    -webkit-transform: rotate(315deg);
-    -moz-transform: rotate(315deg);
-    -o-transform: rotate(315deg);
-    -ms-transform: rotate(315deg);
+    width: 30px;
+    height: 30px;
     transform: rotate(315deg);
 }
 
@@ -5981,7 +6087,7 @@ label.popup_link:hover {
 .modal .modal_close:after {
     content: '';
     display: block;
-    background: #f00;
+    background: #fff;
     position: absolute;
 }
 
@@ -5990,10 +6096,6 @@ label.popup_link:hover {
     top: 50%;
     left: 5px;
     right: 5px;
-    -webkit-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
 
@@ -6002,10 +6104,6 @@ label.popup_link:hover {
     top: 5px;
     bottom: 5px;
     left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
 }
 
@@ -6018,7 +6116,6 @@ label.popup_link:hover {
     height: auto;
 }
 
-/* End Modal PopUp */
 
 /*.overlay_det {
     top: 0;

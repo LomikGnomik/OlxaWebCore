@@ -1,6 +1,6 @@
 ﻿@model Product
 @{
-// ViewData["Title"] = Model.Name;
+    ViewData["Title"] = Model.Name;
 }
 
 <div class="product-item-wrapper">
@@ -12,27 +12,27 @@
             </div>
             <div class="product-item-description">
                 <h2>
-                    Сайт ветеринарной клиники
+                    @Model.Name
                 </h2>
                 <p>
-                    Tincidunt integer eu augue augue nunc elit dolor,
-                    luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
-                    vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                    @Model.Description
                 </p>
                 <div class="product-item-info">
                     <div class="time">
                         <h3>Срок</h3>
-                        <span>3 дня</span>
+                        <span>@Model.TimeDevelop</span>
                     </div>
                     <div class="price">
                         <h3>Цена</h3>
-                        <span>15 000</span>
+                        <span>@Model.Price</span>
                     </div>
-                    <div class="btn btn-ghost-more">Купить</div>
                 </div>
                 <div class="product-item-link">
+                    <div class="btn btn-ghost-more">
+                        Купить
+                    </div>
                     <div class="demo">
-                        <a href="#">Демо</a>
+                        <a href="@Model.DemoLink">Демо</a>
                     </div>
                 </div>
             </div>

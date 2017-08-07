@@ -37,7 +37,7 @@ namespace OlxaWebCore.Models.Repository
                     dbEntry.DemoLink = product.DemoLink;
                     dbEntry.Preview = product.Preview;
                     dbEntry.ShortDescription = product.ShortDescription;
-                    dbEntry.TimeDevelop = product.ShortDescription;
+                    dbEntry.TimeDevelop = product.TimeDevelop;
                 //  dbEntry.Image = (product.ProductID).ToString() + ".jpg";
                     dbEntry.Price = product.Price;
                     dbEntry.Published = product.Published;
