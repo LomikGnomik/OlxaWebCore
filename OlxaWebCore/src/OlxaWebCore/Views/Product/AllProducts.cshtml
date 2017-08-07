@@ -31,176 +31,56 @@
                 <div class="grid-sizer"></div>
                 <div class="gutter-sizer"></div>
 
-                <div class="product-item grid-item view vis">
 
-                    <div class="product">
-                        <figure>
-                            <img src="~/images/blog/post01.jpg" alt="Product Image" class="product-image">
-                        </figure>
+                @foreach (var site in Model.Products)
+                {
+                 //   Html.Partial("_ProductItemPartialView",site);        //находится в папке shared. Частичное представление работает, но не отображается
 
-                        <div class="product-description">
+                    <div class="product-item grid-item view vis">
 
-                            <div class="info">
-                                <h1>LOREM IPSUM</h1>
+                        <div class="product">
+                            <figure>
+                                <img src="~/images/blog/post01.jpg" alt="Product Image" class="product-image">
+                            </figure>
+
+                            <div class="product-description">
+
+                                <div class="info">
+                                    <h1>LOREM IPSUM</h1>
+                                </div>
+
+                                <div class="price">
+                              @site.Price
+                                </div>
                             </div>
 
-                            <div class="price">
-                                12 000
+                            <div class="product-sidebar">
+                                <button class="buy">
+                                    <span>Купить</span>
+                                </button>
+
+                                <button class="info">
+                                    <span>Инфо</span>
+                                </button>
+
+                                <button class="demo">
+                                    <span>Демо</span>
+                                </button>
+
+                                @*<button class="colors">
+                                        <span>
+                                            <a href="" class="color black"></a>
+                                            <a href="" class="color white"></a>
+                                            <a href="" class="color red"></a>
+                                        </span>
+                                    </button>*@
                             </div>
-                        </div>
-
-                        <div class="product-sidebar">
-                            <button class="buy">
-                                <span>Купить</span>
-                            </button>
-
-                            <button class="info">
-                                <span>Инфо</span>
-                            </button>
-
-                            <button class="demo">
-                                <span>Демо</span>
-                            </button>
-
-                            @*<button class="colors">
-                                    <span>
-                                        <a href="" class="color black"></a>
-                                        <a href="" class="color white"></a>
-                                        <a href="" class="color red"></a>
-                                    </span>
-                                </button>*@
                         </div>
                     </div>
-                </div>
-                <div class="product-item grid-item view vis">
-
-                    <div class="product">
-                        <figure>
-                            <img src="~/images/blog/post01.jpg" alt="Product Image" class="product-image">
-                        </figure>
-
-                        <div class="product-description">
-
-                            <div class="info">
-                                <h1>LOREM IPSUM</h1>
-                            </div>
-
-                            <div class="price">
-                                12 000
-                            </div>
-                        </div>
-
-                        <div class="product-sidebar">
-                            <button class="buy">
-                                <span>Купить</span>
-                            </button>
-
-                            <button class="info">
-                                <span>Инфо</span>
-                            </button>
-
-                            <button class="demo">
-                                <span>Демо</span>
-                            </button>
-
-                            @*<button class="colors">
-                        <span>
-                            <a href="" class="color black"></a>
-                            <a href="" class="color white"></a>
-                            <a href="" class="color red"></a>
-                        </span>
-                    </button>*@
-                        </div>
-                    </div>
-                </div>
-                <div class="product-item grid-item view lend">
-
-                    <div class="product">
-                        <figure>
-                            <img src="~/images/blog/post01.jpg" alt="Product Image" class="product-image">
-                        </figure>
-
-                        <div class="product-description">
-
-                            <div class="info">
-                                <h1>LOREM IPSUM</h1>
-                            </div>
-
-                            <div class="price">
-                                12 000
-                            </div>
-                        </div>
-
-                        <div class="product-sidebar">
-                            <button class="buy">
-                                <span>Купить</span>
-                            </button>
-
-                            <button class="info">
-                                <span>Инфо</span>
-                            </button>
-
-                            <button class="demo">
-                                <span>Демо</span>
-                            </button>
-
-                            @*<button class="colors">
-                        <span>
-                            <a href="" class="color black"></a>
-                            <a href="" class="color white"></a>
-                            <a href="" class="color red"></a>
-                        </span>
-                    </button>*@
-                        </div>
-                    </div>
-                </div>
-                <div class="product-item grid-item view lend">
-
-                    <div class="product">
-                        <figure>
-                            <img src="~/images/blog/post01.jpg" alt="Product Image" class="product-image">
-                        </figure>
-
-                        <div class="product-description">
-
-                            <div class="info">
-                                <h1>LOREM IPSUM</h1>
-                            </div>
-
-                            <div class="price">
-                                12 000
-                            </div>
-                        </div>
-
-                        <div class="product-sidebar">
-                            <button class="buy">
-                                <span>Купить</span>
-                            </button>
-
-                            <button class="info">
-                                <span>Инфо</span>
-                            </button>
-
-                            <button class="demo">
-                                <span>Демо</span>
-                            </button>
-
-                            @*<button class="colors">
-                        <span>
-                            <a href="" class="color black"></a>
-                            <a href="" class="color white"></a>
-                            <a href="" class="color red"></a>
-                        </span>
-                    </button>*@
-                        </div>
-                    </div>
-                </div>
-
+                }
             </div>
         </div>
-
     </div>
-
 </div>
 
 
