@@ -12,7 +12,7 @@ namespace OlxaWebCore.Controllers
     public class ProductController : Controller
     {
         private IProductRepository repository;
-        public int PageSize = 2;
+        public int PageSize = 200;
 
 
         public ProductController(IProductRepository repo)
