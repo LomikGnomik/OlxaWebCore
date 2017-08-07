@@ -13,7 +13,7 @@
         <div class="product-content">
             <div class="product-filter-wrap">
                 <h3>
-                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
                     Категории
                 </h3>
                 <div class="filter">
@@ -34,7 +34,7 @@
 
                 @foreach (var site in Model.Products)
                 {
-                 //   Html.Partial("_ProductItemPartialView",site);        //находится в папке shared. Частичное представление работает, но не отображается
+                     // Html.Partial("_ProductItemPartialView");        //находится в папке shared. Частичное представление работает, но не отображается
 
                     <div class="product-item grid-item view vis">
 
@@ -46,34 +46,26 @@
                             <div class="product-description">
 
                                 <div class="info">
-                                    <h1>LOREM IPSUM</h1>
+                                    <h1>@site.Name</h1>
                                 </div>
 
                                 <div class="price">
-                              @site.Price
+                                    @site.Price
                                 </div>
                             </div>
 
                             <div class="product-sidebar">
-                                <button class="buy">
-                                    <span>Купить</span>
-                                </button>
+                                <a href="#" class="buy" title="Купить">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
 
-                                <button class="info">
-                                    <span>Инфо</span>
-                                </button>
+                                <a class="info" title="Подробнее" asp-controller="Product" asp-action="Product">
+                                    <i class="fa fa-info" aria-hidden="true"></i>
+                                </a>
 
-                                <button class="demo">
-                                    <span>Демо</span>
-                                </button>
-
-                                @*<button class="colors">
-                                        <span>
-                                            <a href="" class="color black"></a>
-                                            <a href="" class="color white"></a>
-                                            <a href="" class="color red"></a>
-                                        </span>
-                                    </button>*@
+                                <a href="#" class="demo" title="Демо">
+                                    <i class="fa fa-object-group" aria-hidden="true"></i>
+                                </a>                                
                             </div>
                         </div>
                     </div>
@@ -82,5 +74,4 @@
         </div>
     </div>
 </div>
-
 
