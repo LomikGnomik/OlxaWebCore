@@ -19,11 +19,11 @@
                 <div class="filter">
                     <ul class="nav-filters">
                         <li class="active"><a href="#" data-filter="*">Все</a></li>
-                        <li><a href="#" data-filter=".vis">Визитка</a></li>
-                        <li><a href="#" data-filter=".lend">Лендинг</a></li>
-                        <li><a href="#" data-filter=".corp">Корпоративный</a></li>
-                        <li><a href="#" data-filter=".shop">Интернет-магазин</a></li>
-                        <li><a href="#" data-filter=".inform">Информационный</a></li>
+                        <li><a href="#" data-filter=".Визитка">Визитка</a></li>
+                        <li><a href="#" data-filter=".Landing">Landing</a></li>
+                        <li><a href="#" data-filter=".Корпоративный">Корпоративный</a></li>
+                        <li><a href="#" data-filter=".Интернет-магазин">Интернет-магазин</a></li>
+                        <li><a href="#" data-filter=".Информационный">Информационный</a></li>
                     </ul>
                 </div>
             </div>
@@ -34,9 +34,7 @@
 
                 @foreach (var site in Model.Products)
                 {
-                     // Html.Partial("_ProductItemPartialView");        //находится в папке shared. Частичное представление работает, но не отображается
-
-                    <div class="product-item grid-item view vis">
+                    <div class="product-item grid-item view @site.Category">
 
                         <div class="product">
                             <figure>
@@ -59,13 +57,13 @@
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </a>
 
-                                <a class="info" title="Подробнее" asp-controller="Product" asp-action="Product">
+                                <a class="info" title="Подробнее" asp-controller="Product" asp-action="Product" asp-route-productID="@site.ProductID">
                                     <i class="fa fa-info" aria-hidden="true"></i>
                                 </a>
 
                                 <a href="#" class="demo" title="Демо">
                                     <i class="fa fa-object-group" aria-hidden="true"></i>
-                                </a>                                
+                                </a>
                             </div>
                         </div>
                     </div>

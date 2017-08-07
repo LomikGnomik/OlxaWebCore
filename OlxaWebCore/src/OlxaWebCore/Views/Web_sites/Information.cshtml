@@ -55,8 +55,9 @@
                         <li>Голосования и опросы</li>
                     </ul>
                 </div>
-            </div>        </div>
-       
+            </div>
+        </div>
+
     </section>
     <section class="information-tab">
 
@@ -72,17 +73,28 @@
             </div>
 
             <div class="tabs_content">
-                @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
+                <div id="tab__c1">
+                    <div class="tab-inner-content">
+                        <div class="container">
+                            <div class="content-item">тут содержимое</div>
+                            <div>@await Component.InvokeAsync("ProductCategory", new { category = "Информационный" })</div>
+                        </div>
+                    </div>
+                </div> @*tab__c1*@
                 <div id="tab__c2">
                     <div class="tab-inner-content">
-                        <div class="content-item">тут содержимое</div>
-                        <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                        <div class="container">
+                            <div class="content-item">тут содержимое</div>
+                            <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                        </div>
                     </div>
                 </div> @*tab__c2*@
                 <div id="tab__c3">
                     <div class="tab-inner-content">
-                        <div class="content-item">тут содержимое</div>
-                        <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                        <div class="container">
+                            <div class="content-item">тут содержимое</div>
+                            <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                        </div>
                     </div>
                 </div> @*tab__c3*@
             </div>

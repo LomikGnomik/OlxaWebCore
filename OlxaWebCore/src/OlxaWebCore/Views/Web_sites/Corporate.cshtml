@@ -52,7 +52,7 @@
                         Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
                         более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
                     </p>
-                    <p   class="ul-title">Наиболее используемые модули:</p>
+                    <p class="ul-title">Наиболее используемые модули:</p>
                     <ul>
                         <li>Личный кабинет</li>
                         <li>Каталог продукции</li>
@@ -66,42 +66,53 @@
         </div>
     </section>
 
-   
-        @*--------------табы*@
-        <section class="tabs-all" role="tab">
-            @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
-            <input id="tab__2" type="radio" name="tabs" checked="checked" />
-            <input id="tab__3" type="radio" name="tabs" />
 
-            <div class="label-wrapper">
-                @*<label for="tab__1" id="tab__l1">Готовые решения</label>*@
-                <label for="tab__2" id="tab__l2">Создание сайта</label>
-                <label for="tab__3" id="tab__l3">Разработка сайта</label>
-            </div>
+    @*--------------табы*@
+    <section class="tabs-all" role="tab">
+        @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
+        <input id="tab__2" type="radio" name="tabs" checked="checked" />
+        <input id="tab__3" type="radio" name="tabs" />
 
-            <div class="tabs_content">
-                @*<div id="tab__c1">Это первое</div>*@ @*tab__c1*@
-                <div id="tab__c2">
-                    <div class="tab-inner-content">
+        <div class="label-wrapper">
+            @*<label for="tab__1" id="tab__l1">Готовые решения</label>*@
+            <label for="tab__2" id="tab__l2">Создание сайта</label>
+            <label for="tab__3" id="tab__l3">Разработка сайта</label>
+        </div>
+
+        <div class="tabs_content">
+            <div id="tab__c1">
+                <div class="tab-inner-content">
+                    <div class="container">
+                        <div class="content-item">тут содержимое</div>
+                        <div>@await Component.InvokeAsync("ProductCategory", new { category = "Корпоративный" })</div>
+                    </div>
+                </div>
+            </div> @*tab__c1*@
+            <div id="tab__c2">
+                <div class="tab-inner-content">
+                    <div class="container">
                         <div class="content-item">тут содержимое</div>
                         <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                     </div>
-                    @Html.Partial("_StepsCreatePartialView")
-                </div> @*tab__c2*@
-                <div id="tab__c3">
-                    <div class="tab-inner-content">
+                </div>
+                @Html.Partial("_StepsCreatePartialView")
+            </div> @*tab__c2*@
+            <div id="tab__c3">
+                <div class="tab-inner-content">
+                    <div class="container">
                         <div class="content-item">тут содержимое</div>
                         <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
-                    </div>
-                </div> @*tab__c3*@
-            </div>
-        </section>
+                    </div>                    
+                </div>
+            </div> @*tab__c3*@
+        </div>
+    </section>
 
 
 
-        @await Component.InvokeAsync("ExamplesSites", new { category = "Копоративный" })
-        @await Component.InvokeAsync("OrderForm")
-        <section class="footer">
-            @Html.Partial("_FooterPartialView")
-        </section>
-    </div>
+    @await Component.InvokeAsync("ExamplesSites", new { category = "Копоративный" })
+    @await Component.InvokeAsync("OrderForm")
+    <section class="footer">
+        @Html.Partial("_FooterPartialView")
+    </section>
+</div>
