@@ -16,18 +16,18 @@
                     <ul>
 
                         @*<li><a href="#">Помощь</a></li>*@
-
-                        <li><a>Как мы работаем</a></li>
-                        <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
-                        <li><a asp-controller="Service" asp-action="AllService">Услуги и цены</a></li>
-                        <li><a asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
+                        <li><a  href="~/Home/About#contacts">Контакты</a></li>
                         <li><a asp-controller="Portfolio" asp-action="All">Портфолио</a></li>
+                        <li><a asp-controller="Service" asp-action="AllService">Услуги и цены</a></li>
+                        <li><a href="~/Home/About#work">Как мы работаем</a></li>
+                        <li><a asp-controller="Blog" asp-action="AllPosts">Наш Блог</a></li>
+
                         @*<li><a asp-action="Register" asp-controller="Account">Зарегистрируйся</a>                                </li>
-                            <li><a asp-action="Login" asp-controller="Account">Вход</a></li>*@
+            <li><a asp-action="Login" asp-controller="Account">Вход</a></li>*@
                     </ul>
                 </div>
                 <div class="info-item">
-                    <h3>Создание сайтов</h3>
+                    <h3>Типы сайтов</h3>
                     <ul>
                         <li><a asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
                         <li><a asp-controller="Web_sites" asp-action="Landing">Landing Page</a></li>
@@ -37,16 +37,18 @@
                     </ul>
                 </div>
                 <div class="info-item">
-                    <h3>Эксклюзивные сайты</h3>
+                    <h3>Наши предложения</h3>
                     <ul>
                         @*<li><a asp-area="" asp-controller="Blog" asp-action="AllPosts">Блог</a></li>
-            <li><a href="#">Помощь</a></li>
-            <li><a href="#">Связь с нами</a></li>
-            <li><a href="#">Оплата</a></li>*@
-                        <li><a asp-controller="Web_sites" asp-action="Develop">Разработка сайта</a></li>
+                            <li><a href="#">Помощь</a></li>
+                            <li><a href="#">Связь с нами</a></li>
+                            <li><a href="#">Оплата</a></li>*@
                         <li><a asp-controller="Product" asp-action="AllProducts">Готовые решения</a></li>
+                        <li><a asp-controller="Web_sites" asp-action="Creation">Создание сайта</a></li>
+                        <li><a asp-controller="Web_sites" asp-action="Develop">Разработка сайта</a></li>
+
                     </ul>
-                    <h3>Мы в соцсетях</h3>
+                    @*<h3>Мы в соцсетях</h3>*@
                     <div class="info-social">
                         <a href="#" class="fb">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -56,6 +58,9 @@
                         </a>
                         <a href="#" class="skype">
                             <i class="fa fa-skype" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="telegram">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
                         </a>
                     </div>
 

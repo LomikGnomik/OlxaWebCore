@@ -1,168 +1,270 @@
 ﻿@{
     ViewData["Title"] = "Стоимость сайта";
 }
+<div class="species-site-wrap">
+    <h1>Сайты</h1>
+    <small>Каталог сайтов которые мы делаем</small>
+    <div class="container">
+        <div class="species-site">
+            <div id="faq-links">
 
-<div class="container">
-    <section class="price-solution">
-        <div class="solution-row flex">
-            <div class="solution-item-wrap">
-                <div class="solution-item">
-                    @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
-                    <div class="solution-title-wrap">
-                        <a asp-controller="Web_sites" asp-action="Promosite" class="solution-title">
-                            <h2>Сайт визиткa</h2>
-                        </a>
-                        <p>
-                            Содержит всю необходимую информацию о вас или вашей фирме,
-                            как правило состоит из одной или нескольких <br />страниц.
+                <div id="visit" class="faq-selected">Визитка</div>
+                <div id="landung">Landing</div>
+                <div id="corporate">Корпоративный</div>
+                <div id="shop">Интернет магазин</div>
+                <div id="information">Информационный</div>
+            </div>
+
+            <div id="faq-wrapper" class="about-visit ">
+
+                <div class="faq-group">
+                    <div class="slide-left">
+                        <div>Визитка</div>
+                        <p class="faq-description">
+                            111 Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
                         </p>
-
                     </div>
-                    <ul>
-                        @*<li>
-                            Купить готовый: <strong>5000</strong>
-                        </li>*@
+
+                    <hr>
+                </div><!--faq-group-->
+                <div class="slide-left">
+                    <div class="faq">
+                        <ul class="faq-accordion">
+                            <li>
+                                <a href="#">
+                                    Готовые решения
+                                    
+                                </a>
+
+                                <ul class="faq-content">
+                                    <li>
+                                        <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet k.</p></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--Bacon ipsum-->
+
+                            <li>
+                                <a href="#">Создание</a>
+                                <ul class="faq-content">
+                                    <li>
+                                        <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--Beer ipsum-->
+
+                            <li>
+                                <a href="#">Разработка</a>
+                                <ul class="faq-content">
+                                    <li>
+                                        <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--Carey ipsum-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-landung faq-hide">
+
+                <div class="faq-group">
+                    <div class="slide-left">
+                        <div>Landing</div>
+                        <p class="faq-description">
+                            2222 Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        </p>
+                    </div>
+
+                    <hr>
+                </div>
+
+                <div class="slide-left">
+                    <ul class="faq-accordion">
+
                         <li>
-                            Создание: <strong>5000</strong>
+                            <a href="#">Готовые решения</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
+                                </li>
+                            </ul>
                         </li>
+                        <!--Bacon ipsum-->
+
                         <li>
-                            Разработка: <strong>5000</strong>
+                            <a href="#">Создание</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
+                                </li>
+                            </ul>
                         </li>
+                        <!--Beer ipsum-->
+
+                        <li>
+                            <a href="#">Разработка</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--Carey ipsum-->
                     </ul>
-                    <a asp-controller="Web_sites" asp-action="Promosite" class="btn btn-price-solution">Подробнее</a>
-                </div>
-            </div>
-            <div class="solution-item-wrap">
-                <div class="solution-item">
-                    @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
-                    <div class="solution-title-wrap">
-                        <a asp-controller="Web_sites" asp-action="Landing" class="solution-title">
-                            <h2>Лендинг</h2>
-                        </a>
-                        <p>
-                            Как правило это одна интернет страница, созданная для конкретного товара или
-                            услуги побуждающая к действию целевую аудиторию
-                        </p>
 
+                </div><!--lide-left -->
+            </div>
+
+            <div class="about-corporate faq-hide">
+
+                <div class="faq-group">
+                    <div class="slide-left">
+                        <div>Корпоративный</div>
+                        <p class="faq-description">
+                            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        </p>
                     </div>
-                    <ul>
-                        @*<li>
-                            Купить готовый: <strong>5000</strong>
-                        </li>*@
+
+                    <hr>
+                </div>
+                <div class="slide-left">
+                    <ul class="faq-accordion">
+
                         <li>
-                            Создание: <strong>5000</strong>
+                            <a href="#">Готовые решения</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
+                                </li>
+                            </ul>
                         </li>
+                        <!--Bacon ipsum-->
+
                         <li>
-                            Разработка: <strong>5000</strong>
+                            <a href="#">Создание</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
+                                </li>
+                            </ul>
                         </li>
+                        <!--Beer ipsum-->
+
+                        <li>
+                            <a href="#">Разработка</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--Carey ipsum-->
                     </ul>
-                    <a asp-controller="Web_sites" asp-action="Landing" class="btn btn-price-solution">Подробнее</a>
-                </div>
+                </div><!--slide-left-->
             </div>
-            <div class="solution-item-wrap">
-                <div class="solution-item">
-                    @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
-                    <div class="solution-title-wrap">
-                        <a asp-controller="Web_sites" asp-action="Corporate" class="solution-title">
-                            <h2>Корпоративный</h2>
-                        </a>
-                        <p>
-                            Содержит исчерпывающую информацию о вашей фирме, имеет каталог продукции/услуг,
-                            галерею, раздел деловой информации.
-                        </p>
 
+            <div class="about-shop faq-hide">
+
+                <div class="faq-group">
+                    <div class="slide-left">
+                        <div>Интернет магазин</div>
+                        <p class="faq-description">
+                            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        </p>
                     </div>
-                    <ul>
-                        @*<li>
-                            Купить готовый: <strong>5000</strong>
-                        </li>*@
+
+                    <hr>
+                </div>
+                <div class="slide-left">
+                    <ul class="faq-accordion">
+
                         <li>
-                            Создание: <strong>5000</strong>
+                            <a href="#">Готовые решения</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
+                                </li>
+                            </ul>
                         </li>
+                        <!--Bacon ipsum-->
+
                         <li>
-                            Разработка: <strong>5000</strong>
+                            <a href="#">Создание</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
+                                </li>
+                            </ul>
                         </li>
+                        <!--Beer ipsum-->
+
+                        <li>
+                            <a href="#">Разработка</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
+                                </li>
+                            </ul>
+                        </li>
+
                     </ul>
-                    <a asp-controller="Web_sites" asp-action="Corporate" class="btn btn-price-solution">Подробнее</a>
-                </div>
+                </div><!--slide-left-->
             </div>
-            <div class="solution-item-wrap">
-                <div class="solution-item">
-                    @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
-                    <div class="solution-title-wrap">
-                        <a asp-controller="Web_sites" asp-action="Shop" class="solution-title">
-                            <h2>Интернет магазин</h2>
-                        </a>
-                        <p>
-                            Торгует товарами в Интернете. Позволяет пользователям сформировать заказ на
-                            покупку, выбрать способ оплаты и доставки заказа.<br />
-                            @*Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
-                            быстро их обрабатывать.*@
-                        </p>
 
+            <div class="about-information faq-hide">
+
+                <div class="faq-group">
+                    <div class="slide-left">
+                        <div>Информационный</div>
+                        <p class="faq-description">
+                            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                        </p>
                     </div>
-                    <ul>
-                        @*<li>
-                            Купить готовый: <strong>5000</strong>
-                        </li>*@
+
+                    <hr>
+                </div>
+                <div class="slide-left">
+                    <ul class="faq-accordion">
+
                         <li>
-                            Создание: <strong>5000</strong>
+                            <a href="#">Готовые решения</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
+                                </li>
+                            </ul>
                         </li>
+                        <!--Bacon ipsum-->
+
                         <li>
-                            Разработка: <strong>5000</strong>
+                            <a href="#">Создание</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
+                                </li>
+                            </ul>
                         </li>
+                        <!--Beer ipsum-->
+
+                        <li>
+                            <a href="#">Разработка</a>
+                            <ul class="faq-content">
+                                <li>
+                                    <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--Carey ipsum-->
                     </ul>
-                    <a asp-controller="Web_sites" asp-action="Shop" class="btn btn-price-solution">Подробнее</a>
-                </div>
-            </div>
-            <div class="solution-item-wrap">
-                <div class="solution-item">
-                    @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
-                    <div class="solution-title-wrap">
-                        <a asp-controller="Web_sites" asp-action="Information" class="solution-title">
-                            <h2>Информационный</h2>
-                        </a>
-                        <p>
-                            К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
-                            например: образовательный, развлекательный
-                        </p>
-
-                    </div>
-                    <ul>
-                        @*<li>
-                            Купить готовый: <strong>5000</strong>
-                        </li>*@
-                        <li>
-                            Создание: <strong>5000</strong>
-                        </li>
-                        <li>
-                            Разработка: <strong>5000</strong>
-                        </li>
-                    </ul>
-                    <a asp-controller="Web_sites" asp-action="Information" class="btn btn-price-solution">Подробнее</a>
-                </div>
-            </div>
-            <div class="solution-item-wrap">
-                <div class="solution-item">
-                    @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
-                    <div class="solution-title-wrap">
-                        <a asp-controller="Web_sites" asp-action="Promosite" class="solution-title">
-                            <h2> Не знаете что выбрать?</h2>
-                        </a>
-                        <p>
-                            Вы можете так же подобрать для себя уже готовый сайт из нашего каталога                           
-                        </p>
-                        <p>
-                            Настройка занимает 3 дня, после чего вы можете
-                        </p>
-                    </div>
-                    <a asp-controller="Web_sites" asp-action="Promosite" class="btn btn-price-solution">Каталог</a>
-                </div>
+                </div><!--slide-left-->
             </div>
 
 
-        </div> @*solution-row flex*@
-    </section>
-</div> <!--container-->
- 
-@await Component.InvokeAsync("OrderForm")
+
+
+        </div>
+    </div><!--container-->
+</div>
