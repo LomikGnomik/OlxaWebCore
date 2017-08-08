@@ -28,7 +28,7 @@ $(function () {
     $(window).scroll(function () {
         var scroll = getCurrentScroll();
         if (scroll >= height) {
-             elem.css('border-bottom', ('1px solid @color-gray-light'));
+            elem.css('border-bottom', ('1px solid @color-gray-light'));
             elem.css('box-shadow', ('0 6px 4px -4px rgba(0, 0, 0, .2'));
         }
         else {
@@ -290,3 +290,73 @@ admin.on('click', function () {
 //        window.location.hash = target;
 //    });
 //});
+
+
+/*----------------------------------страница цены эффект для аккордиона--------------------------------------*/
+
+var accordWithPage = function () {
+    var faqDiv = $('#faq-links div');
+        $(function () {
+        faqDiv.on("click", function () {
+            var hideSec = 'faq-hide';
+            var $this = $(this),
+            $id = $this.attr('id'),
+            $class = '.' + $('.about-' + $id).attr('class').replace(hideSec, '');
+
+            $('#faq-wrapper').addClass(hideSec);
+            $('.about-' + $id).removeClass(hideSec);
+            $('div[class*=about]').not($class).addClass(hideSec);
+        });
+    });
+
+    $(function () {
+        var select = 'faq-selected';
+        faqDiv.click(function () {
+
+            if ($(this).hasClass(select)) {
+                $(this).removeClass(select);
+            } else {
+                $('#faq-links .faq-selected').removeClass(select);
+                $(this).addClass(select);
+            }
+        }); //faq link selected
+    });
+
+
+
+    //Accordion
+
+    $(function () {
+
+        var expand = 'expanded';
+        var content = $('.faq-content');
+        //FAQ Accordion
+        $('.faq-accordion > li > a').click(function (e) {
+            e.preventDefault();
+            if ($(this).hasClass(expand)) {
+                $(this).removeClass(expand);
+                //          $('.faq-accordion > li > a > div').not(this).css('opacity', '1');//returns li back to normal state
+                $(this).parent().children('ul').stop(true, true).slideUp();
+            } else {
+                //            $('.faq-accordion > li > a > div').not(this).css('opacity', '0.5');//dims inactive li
+                $('.faq-accordion > li > a.expanded').removeClass(expand);
+                $(this).addClass(expand);
+                content.filter(":visible").slideUp();
+                $(this).parent().children('ul').stop(true, true).slideDown();
+            }
+        }); //accordion function
+
+        content.hide();
+
+    });
+
+}
+
+accordWithPage();
+
+/*$(function () {
+   $("#faq-links div").click(function () {
+    $('.slide-left').fadeOut( "slow", "linear" );
+     $('.slide-left').fadeIn( "slow", "linear" );
+    }); //faq link fade in and out
+  }); //document ready*/

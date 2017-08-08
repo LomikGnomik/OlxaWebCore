@@ -62,12 +62,12 @@
     <section class="information-tab">
 
         <section class="tabs-all" role="tab">
-            @*<input id="tab__1" type="radio" name="tabs" checked="checked" />*@
+            <input id="tab__1" type="radio" name="tabs" checked="checked" />
             <input id="tab__2" type="radio" name="tabs" checked="checked" />
             <input id="tab__3" type="radio" name="tabs" />
 
             <div class="label-wrapper">
-                @*<label for="tab__1" id="tab__l1">Готовые решения</label>*@
+                <label for="tab__1" id="tab__l1">Готовые решения</label>
                 <label for="tab__2" id="tab__l2">Создание сайта</label>
                 <label for="tab__3" id="tab__l3">Разработка сайта</label>
             </div>
@@ -75,26 +75,84 @@
             <div class="tabs_content">
                 <div id="tab__c1">
                     <div class="tab-inner-content">
+                        <div class="title-description-wrap">
+                            <div class="container">
+                                <div class="title-description">
+                                    <div class="content-item">
+                                        <p>
+                                            длинный текст,что б абасрацца прям был длинный линный линный линный линный
+                                            линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
+                                            линныйлинный линный линныйлинныйлинный
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="container">
-                            <div class="content-item">тут содержимое</div>
                             <div>@await Component.InvokeAsync("ProductCategory", new { category = "Информационный" })</div>
                         </div>
+                        <div class="container">
+                            <div class="service-sites-wrap">
+                                <div class="base-service"></div>
+                                <div class="more-service"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="steps-create-wrapper">
+                        @Html.Partial("_StepsTemplatePartialView")
                     </div>
                 </div> @*tab__c1*@
                 <div id="tab__c2">
                     <div class="tab-inner-content">
-                        <div class="container">
-                            <div class="content-item">тут содержимое</div>
-                            <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                        <div class="title-description-wrap">
+                            <div class="container">
+                                <div class="title-description">
+                                    <div class="content-item">
+                                        <p>
+                                            длинный текст,что б абасрацца прям был длинный линный линный линный линный
+                                            линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
+                                            линныйлинный линный линныйлинныйлинный
+                                        </p>
+
+                                    </div>
+                                    <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="container">
+                            <div class="service-sites-wrap">
+                                <div class="base-service"></div>
+                                <div class="more-service"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="steps-create-wrapper">
+                        @Html.Partial("_StepsCreatePartialView")
                     </div>
                 </div> @*tab__c2*@
                 <div id="tab__c3">
                     <div class="tab-inner-content">
                         <div class="container">
-                            <div class="content-item">тут содержимое</div>
-                            <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                            <div class="title-description">
+                                <div class="content-item">
+                                    <p>
+                                        длинный текст,что б абасрацца прям был длинный линный линный линный линный
+                                        линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
+                                        линныйлинный линный линныйлинныйлинный
+                                    </p>
+                                </div>
+                                <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                            </div>
                         </div>
+                        <div class="container">
+                            <div class="service-sites-wrap">
+                                <div class="base-service"></div>
+                                <div class="more-service"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="steps-create-wrapper">
+                        @Html.Partial("_StepsDevelopPartialView")
                     </div>
                 </div> @*tab__c3*@
             </div>
