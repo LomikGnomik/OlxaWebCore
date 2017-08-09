@@ -11,6 +11,9 @@ using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using System.Net.Http;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace OlxaWebCore.Controllers
 {
@@ -147,6 +150,41 @@ namespace OlxaWebCore.Controllers
                 //  TempData["message"] = $"{deletedPost.Title} was deleted";
             }
             return RedirectToAction("OrderList");
+        }
+
+        public IActionResult NewLeadBitrix24()
+        {
+            const string url = @"https://olxaweb.bitrix24.ru/rest/6/t1lsewyxqoggp2qs/crm.lead.add.json";
+            var data = new
+            {
+                fields = new
+                {
+                    TITLE = "NEW LEAD"
+                },
+                @params = new
+                {
+                    REGISTER_SONET_EVENT = "Y"
+                }
+            };
+            var contentText = JsonConvert.SerializeObject(data);
+            var content = new StringContent(contentText, Encoding.UTF8, "application/json");
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(url);
+            byte[] cred = Encoding.UTF8.GetBytes("manager@olxaweb.ru:olxaweb");
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(cred));
+            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+          
+            HttpResponseMessage messge = client.PostAsync(url, content).Result;
+            string description;
+            if (messge.IsSuccessStatusCode)
+            {
+                string result = messge.Content.ReadAsStringAsync().Result;
+                description = result;
+            }
+
+            return View("NewOrder");
         }
     }
 }
