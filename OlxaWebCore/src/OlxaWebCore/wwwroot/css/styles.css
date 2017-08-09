@@ -321,16 +321,16 @@ nav#index-navigation .main-menu .main-menu__item a.active {
 }
 nav#index-navigation .main-menu .main-menu__item a.active::after {
   /*position: absolute;
-                            display: block;
-                            content: "";
-                            width: 0;
-                            height: 0;
-                            border-left: 6px solid transparent;
-                            border-right: 6px solid transparent;
-                            border-top: 6px solid @color-base;
-                            left: 50%;
-                            bottom: -6px;
-                            margin-left: -6px;*/
+                    display: block;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid @color-base;
+                    left: 50%;
+                    bottom: -6px;
+                    margin-left: -6px;*/
 }
 nav#index-navigation .main-menu .main-menu__item a.link {
   /*text-decoration: none;
@@ -378,17 +378,28 @@ nav#index-navigation .submenu {
   opacity: 0;
   z-index: -1;
 }
-nav#index-navigation .submenu ul {
+nav#index-navigation .submenu .info-item-header {
+  width: 100%;
+  padding: 0 1em;
+}
+nav#index-navigation .submenu .info-item-header h3 {
+  font-size: 0.8em;
+  color: #cccccc;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #cccccc;
+}
+nav#index-navigation .submenu .info-item-header ul {
   width: 100%;
   padding: 0 1.125em;
 }
-nav#index-navigation .submenu .submenu__item {
+nav#index-navigation .submenu .info-item-header .submenu__item {
   position: relative;
   text-align: center;
   flex: auto;
   transition: all 0.3s;
 }
-nav#index-navigation .submenu .submenu__item a {
+nav#index-navigation .submenu .info-item-header .submenu__item a {
   min-width: 85%;
   padding: 0 11px;
   white-space: nowrap;
@@ -405,7 +416,7 @@ nav#index-navigation .submenu .submenu__item a {
   font-weight: 500;
   border: 2px solid #06c438;
 }
-nav#index-navigation .submenu .submenu__item a:hover {
+nav#index-navigation .submenu .info-item-header .submenu__item a:hover {
   background: #06c438;
   color: #ecf0f1;
 }
@@ -618,53 +629,6 @@ footer .bottom-footer .footer-info .info-social .telegram:hover {
 /*---------------------------------промо--------------promo-site-----------сайт визитка*/
 section.content {
   margin-bottom: 2em;
-}
-section.tariff {
-  margin-top: 4em;
-}
-section.tariff h2 {
-  text-align: center;
-  margin: 1.25em;
-}
-section.tariff .tariff-wrap {
-  display: flex;
-  justify-content: space-between;
-}
-section.tariff .promo-wrapper {
-  width: 100%;
-  text-align: center;
-  padding-top: 0.6em;
-  border: 2px solid #06c438;
-  margin: 0 auto 1.88em;
-}
-section.tariff .promo-wrapper [class*="header-promo"] {
-  padding: 0 0.9em;
-}
-section.tariff .promo-wrapper [class*="header-promo"] .promo-icon {
-  width: 4.25em;
-  margin: 0 auto 0.6em;
-}
-section.tariff .promo-wrapper [class*="header-promo"] h3 {
-  font-size: 1.25em;
-  font-weight: 600;
-  margin-bottom: 1.5em;
-}
-section.tariff .promo-wrapper [class*="header-promo"] p {
-  color: #999999;
-  margin-bottom: 1.5em;
-}
-section.tariff .promo-wrapper ul {
-  margin: 0;
-  padding: 0;
-}
-section.tariff .promo-wrapper ul li {
-  display: block;
-  color: #999999;
-  padding: 0.625em 0.93em;
-  border-top: 1px solid #cccccc;
-}
-section.tariff .promo-wrapper ul li:last-child {
-  border-bottom: 1px solid #cccccc;
 }
 /*------------------------------------------------------------------------------------------------блог*/
 .blog {
@@ -1289,7 +1253,7 @@ flex-direction: column;
 }
 /*-------------------------------------------------------------------------------Портфолио*/
 section.portfolio {
-  margin-top: 4.5em;
+  margin-top: 10em;
   /*@media (min-width: 768px) and (max-width: 991px) {
         .grid.isotope-grid .grid-sizer,
         .grid.isotope-grid.grid-item {
@@ -1907,7 +1871,7 @@ section.portfolio .grid.isotope-grid:after {
 }
 /*---------------------------------------------------------------------------Готовые решения/сайты*/
 .products-wrapper {
-  margin-top: 6em;
+  margin-top: 10em;
   /*.grid.isotope-grid {
         overflow: hidden;
     }
@@ -3240,7 +3204,7 @@ section.portfolio .grid.isotope-grid:after {
 }
 /*------------------------------------------------------------------------------Страница Создания*/
 section.price-solution {
-  margin-top: 8em;
+  margin-top: 10em;
   margin-bottom: 3em;
 }
 section.price-solution .flex {
@@ -4756,7 +4720,11 @@ section.information-title figcaption p {
   margin: 0 auto;
 }
 .all-service-wrap {
-  margin-top: 3em;
+  margin-top: 9em;
+}
+.all-service-wrap h2 {
+  text-align: center;
+  text-transform: capitalize;
 }
 .all-service-wrap section.catalog {
   min-height: 100vh;
@@ -4776,14 +4744,18 @@ section.information-title figcaption p {
   transition: .3s linear;
   max-width: 2em;
   line-height: 1.5em;
+  padding-bottom: 1em;
 }
 .all-service-wrap section.catalog table.service td a {
   margin-right: 0;
   height: 2em;
   line-height: 1.9em;
 }
+.all-service-wrap section.catalog table.service tr {
+  padding: 1em 0;
+}
 .all-service-wrap section.catalog table.service tr:hover td {
-  background: #dae5f2;
+  color: #3c6eaa;
 }
 .all-service-wrap section.catalog table.service td.add {
   color: #cccccc;
@@ -4815,6 +4787,12 @@ section.information-title figcaption p {
 label.popup_link {
   cursor: pointer;
   display: inline-block;
+  color: #3c6eaa;
+  border-bottom: 1px dashed #3c6eaa;
+}
+label.popup_link:hover {
+  color: #2f5d84;
+  border-bottom-color: #2f5d84;
 }
 .modal_check {
   position: absolute;
@@ -5175,7 +5153,7 @@ label.popup_link {
 }
 /*----------------------------------------------------------------страница разработки*/
 .develop-wrapper section.description-develop-wrap {
-  padding-top: 8em;
+  padding-top: 10em;
 }
 .develop-wrapper section.description-develop-wrap .description-inner-title h1 {
   text-align: center;
@@ -5387,21 +5365,37 @@ label.popup_link {
   text-transform: uppercase;
   text-align: center;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 600;
   letter-spacing: 1px;
   display: block;
   margin: 0;
   padding: 0.6em 0.2em;
   cursor: pointer;
-  color: #ecf0f1;
-  background: #3c6eaa;
-  border-top: 1px solid #dae5f2;
-  border-bottom: 1px solid #2f5d84;
+  color: #999999;
+  background: #fff;
+  border-bottom: 1px solid #999999;
+}
+.accordion h2.title_block:after {
+  /*стрелочка*/
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #999999;
+  border-width: 10px;
+  margin-left: -10px;
+  margin-top: 2.4em;
+  z-index: 2;
 }
 .accordion .content {
+  padding-top: 1em;
   position: relative;
   overflow: hidden;
   max-height: 80em;
+  background: #fff;
   opacity: 1;
   transform: translate(0, 0);
 }
@@ -7524,22 +7518,134 @@ label.popup_link {
   margin-right: 2em;
   line-height: 1.5em;
 }
-.service-sites-wrap {
-  display: flex;
-}
-.service-sites-wrap ul.list li:before {
+.service-sites-wrap .service-sites ul.list li:before {
   content: "- ";
 }
-.service-sites-wrap h4 {
+.service-sites-wrap .service-sites h4 {
   margin-bottom: 1em;
 }
-.service-sites-wrap .base-service {
+.service-sites-wrap .service-sites .base-service {
   margin: 1em;
   padding: 1em;
 }
-.service-sites-wrap .more-service {
+.service-sites-wrap .service-sites .more-service {
   margin: 1em;
   padding: 1em;
+}
+.service-sites-accordion {
+  width: 100%;
+  min-height: 0;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 2em;
+  padding: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  /*указатель */
+  /*ul li i:before, ul li i:after {
+        content: "";
+        position: absolute;
+        background-color: @color-gray-dark;
+        width: 0.1875em;
+        height: 0.5625em;
+    }
+
+    ul li i:before {
+        transform: translate(-2px, 0) rotate(45deg);
+    }
+
+    ul li i:after {
+        transform: translate(2px, 0) rotate(-45deg);
+    }*/
+  /* Когда у флажка установлен checked блок с содержанием скрыт*/
+  /* переход между двумя состояниями указателя */
+}
+.service-sites-accordion h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  padding: 0.6em 0.2em;
+  cursor: pointer;
+  color: #333333;
+  background-color: #ffffff;
+  /*background: @color-gray-light;
+        border-top: 1px solid @color-gray-lighter;*/
+  border-bottom: 1px solid #999999;
+}
+.service-sites-accordion h2.title_block:after {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #999999;
+  border-width: 10px;
+  margin-left: -10px;
+  margin-top: 2.4em;
+}
+.service-sites-accordion .service-sites-content {
+  padding-top: 1em;
+  position: relative;
+  overflow: hidden;
+  max-height: 80em;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.service-sites-accordion .service-sites-content p {
+  color: rgba(48, 69, 92, 0.8);
+  font-size: 0.5em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  padding: 0 1.2em;
+}
+.service-sites-accordion ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-sites-accordion ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.service-sites-accordion ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 1em;
+  right: 1.5em;
+}
+.service-sites-accordion ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.service-sites-accordion ul li input[type=checkbox]:checked ~ div.service-sites-content {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.service-sites-accordion ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.service-sites-accordion ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+.service-sites-accordion div.service-sites-content,
+.service-sites-accordion ul li i:before,
+.service-sites-accordion ul li i:after {
+  transition: all 0.5s ease-in-out;
 }
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
@@ -8717,7 +8823,7 @@ section.tabs-all label:last-child {
 section.tabs-all label:hover {
   color: #06c438;
 }
-section.tabs-all input {
+section.tabs-all input[type=radio] {
   display: none;
 }
 section.tabs-all #tab__1:checked ~ .label-wrapper #tab__l1,
@@ -8808,10 +8914,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .bottom-footer .footer-info .info-item {
     width: 25%;
   }
-  .tariff-wrap {
-    display: flex;
-    flex-direction: row;
-  }
   /*тарифы в промосайтах*/
   .promo-wrapper {
     max-width: 22em;
@@ -8877,10 +8979,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .bottom-footer .footer-info .info-item {
     width: 25%;
   }
-  .tariff-wrap {
-    display: flex;
-    flex-direction: row;
-  }
   .promo-wrapper {
     max-width: 18em;
   }
@@ -8937,10 +9035,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   /*колонки в футере*/
   .bottom-footer .footer-info .info-item {
     width: 50%;
-  }
-  .tariff-wrap {
-    display: flex;
-    flex-direction: row;
   }
   .promo-wrapper {
     max-width: 13em;
@@ -9038,10 +9132,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .bottom-footer .footer-info .info-item {
     width: 50%;
   }
-  .tariff-wrap {
-    display: flex;
-    flex-direction: column;
-  }
   .information {
     display: flex;
     flex-direction: column;
@@ -9122,10 +9212,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   }
   .container {
     width: 100%;
-  }
-  .tariff-wrap {
-    display: flex;
-    flex-direction: column;
   }
   .information {
     display: flex;

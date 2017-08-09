@@ -5,13 +5,15 @@
 }
 
 
+
 <div class="all-service-wrap">
+    <h2>Услуги предоставляемые OlxaWeb</h2>
     <section class="catalog">
         <div class="container">
             <div class="accordion">
                 <ul>
                     @foreach (string category in @ViewBag.CategoryService)
-            {
+                    {
                         <li>
                             <input type="checkbox">
                             <i></i>
@@ -29,7 +31,7 @@
                                                     @*<a href="#@service.ServiceID" class="btn btn-ghost">
                                                             Подробнее
                                                         </a>*@
-                                                    <label class="popup_link btn btn-ghost" for="@service.ServiceID">Подробнее</label>
+                                                    <label class="popup_link" for="@service.ServiceID">Подробнее</label>
                                                 </td>
                                                 @*<td class="add">+</td>*@
                                             </tr>
@@ -56,7 +58,7 @@
     <div class="modal">
         <div class="modal_hold">
             <label class="modal_close" for="@serviceModal.ServiceID"></label>
-           @Html.Raw(serviceModal.Description) 
+            @Html.Raw(serviceModal.Description)
         </div>
 
         <label class="modal_overlay" for="@serviceModal.ServiceID"></label>

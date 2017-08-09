@@ -519,19 +519,19 @@ nav#index-navigation {
             a.active {
                 background-color: @color-more;
                 color: @font-color-reverce;
-                // color: @font-color-reverce;
+
                 &::after { //стрелочка для активного пункта
                     /*position: absolute;
-                            display: block;
-                            content: "";
-                            width: 0;
-                            height: 0;
-                            border-left: 6px solid transparent;
-                            border-right: 6px solid transparent;
-                            border-top: 6px solid @color-base;
-                            left: 50%;
-                            bottom: -6px;
-                            margin-left: -6px;*/
+                    display: block;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid @color-base;
+                    left: 50%;
+                    bottom: -6px;
+                    margin-left: -6px;*/
                 }
             }
 
@@ -591,42 +591,54 @@ nav#index-navigation {
         opacity: 0;
         z-index: -1;
 
-        ul {
-            width: 100%;
-            padding: 0 1.125em;
-        }
-
-        .submenu__item {
-            position: relative;
-            text-align: center;
-            flex: auto;
-            transition: all 0.3s;
-
-
-
-            a {
-                //width: auto;
-                min-width: 85%;
-                padding: 0 11px;
-                white-space: nowrap;
-                text-align: center;
-                box-shadow: none;
-                display: inline-block;
-                color: @size-font-base;
-                text-decoration: none;
-                text-align: left;
-                padding-left: 0.5em;
+        .info-item-header {
+            width:100%;
+            padding:0 1em;
+            h3 {
                 font-size: @size-font-small;
-                margin-top: 0.3em;
-                margin-bottom: 0.3em;
-                font-weight: 500;
-                .border-more;
+                color: @color-gray-light;
+                margin-bottom: 1em;
+                padding-bottom: 1em;
+                border-bottom: 1px solid @color-gray-light;
+            }
+
+            ul {
+                width: 100%;
+                padding: 0 1.125em;
+            }
+
+            .submenu__item {
+                position: relative;
+                text-align: center;
+                flex: auto;
+                transition: all 0.3s;
 
 
 
-                &:hover {
-                    background: @color-more;
-                    color: @font-color-reverce;
+                a {
+                    //width: auto;
+                    min-width: 85%;
+                    padding: 0 11px;
+                    white-space: nowrap;
+                    text-align: center;
+                    box-shadow: none;
+                    display: inline-block;
+                    color: @size-font-base;
+                    text-decoration: none;
+                    text-align: left;
+                    padding-left: 0.5em;
+                    font-size: @size-font-small;
+                    margin-top: 0.3em;
+                    margin-bottom: 0.3em;
+                    font-weight: 500;
+                    .border-more;
+
+
+
+                    &:hover {
+                        background: @color-more;
+                        color: @font-color-reverce;
+                    }
                 }
             }
         }
@@ -938,83 +950,7 @@ section.content {
 
 
 
-section.tariff {
-    margin-top: @size-margin-section;
 
-
-
-    h2 {
-        text-align: center;
-        margin: @size-font-big;
-    }
-
-
-
-    .tariff-wrap {
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-
-    .promo-wrapper {
-        width: 100%;
-        text-align: center;
-        padding-top: 0.6em;
-        .border-more;
-        margin: 0 auto 1.88em;
-
-
-
-        [class*="header-promo"] {
-            padding: 0 0.9em;
-
-
-
-            .promo-icon {
-                width: 4.25em;
-                margin: 0 auto 0.6em;
-            }
-
-
-
-            h3 {
-                font-size: @size-font-big;
-                font-weight: 600;
-                margin-bottom: 1.5em;
-            }
-
-
-
-            p {
-                color: @color-gray;
-                margin-bottom: 1.5em;
-            }
-        }
-
-
-
-        ul {
-            margin: 0;
-            padding: 0;
-
-
-
-            li {
-                display: block;
-                color: @color-gray;
-                padding: 0.625em 0.93em;
-                border-top: 1px solid @color-gray-light;
-
-
-
-                &:last-child {
-                    border-bottom: 1px solid @color-gray-light;
-                }
-            }
-        }
-    }
-}
 
 /*------------------------------------------------------------------------------------------------блог*/
 
@@ -1832,7 +1768,7 @@ flex-direction: column;
 /*-------------------------------------------------------------------------------Портфолио*/
 
 section.portfolio {
-    margin-top: 4.5em;
+    margin-top: 10em;
 
     h2 {
         text-align: center;
@@ -2583,7 +2519,7 @@ section.portfolio {
 
 /*---------------------------------------------------------------------------Готовые решения/сайты*/
 .products-wrapper {
-    margin-top: 6em;
+    margin-top: 10em;
 
     h2 {
         text-align: center;
@@ -4140,7 +4076,7 @@ section.portfolio {
 /*------------------------------------------------------------------------------Страница Создания*/
 
 section.price-solution {
-    margin-top: 8em;
+    margin-top: 10em;
     margin-bottom: 3em;
 
     .flex {
@@ -6052,7 +5988,12 @@ section.information-title {
 }
 
 .all-service-wrap {
-    margin-top: 3em;
+    margin-top: 9em;
+
+    h2 {
+        text-align: center;
+        text-transform: capitalize;
+    }
 
     section.catalog {
         min-height: 100vh;
@@ -6072,6 +6013,7 @@ section.information-title {
                 transition: .3s linear;
                 max-width: 2em;
                 line-height: 1.5em;
+                padding-bottom: 1em;
 
                 a {
                     margin-right: 0;
@@ -6080,8 +6022,13 @@ section.information-title {
                 }
             }
 
+            tr {
+                padding: 1em 0;
+            }
+
             tr:hover td {
-                background: @color-base-lighter2;
+                //background: @color-base-lighter2;
+                color: @color-base;
             }
 
             td.add {
@@ -6132,6 +6079,13 @@ section.information-title {
 label.popup_link {
     cursor: pointer;
     display: inline-block;
+    color: @color-base;
+    border-bottom: 1px dashed @color-base;
+
+    &:hover {
+        color: @color-base-darken1;
+        border-bottom-color: @color-base-darken1;
+    }
 }
 
 label.popup_link:hover {
@@ -6564,7 +6518,7 @@ label.popup_link:hover {
 /*----------------------------------------------------------------страница разработки*/
 .develop-wrapper {
     section.description-develop-wrap {
-        padding-top: 8em;
+        padding-top: 10em;
 
         .description-inner-title {
             h1 {
@@ -6802,23 +6756,41 @@ label.popup_link:hover {
         text-transform: uppercase;
         text-align: center;
         font-size: 1em;
-        font-weight: 300;
+        font-weight: 600;
         letter-spacing: 1px;
         display: block;
         margin: 0;
         padding: 0.6em 0.2em;
         cursor: pointer;
-        color: @font-color-reverce;
-        background: @color-base;
-        border-top: 1px solid @color-base-lighter2;
-        border-bottom: 1px solid @color-base-darken1;
+        color: @color-gray;
+        background: #fff;
+        // background: @color-base;
+        // border-top: 1px solid @color-base-lighter2;
+        border-bottom: 1px solid @color-gray;
         //box-sizing: border-box;
+    }
+
+    h2.title_block:after { /*стрелочка*/
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-top-color: @color-gray;
+        border-width: 10px;
+        margin-left: -10px;
+        margin-top: 2.4em;
+        z-index: 2;
     }
     /*блоки с содержанием */
     .content {
+        padding-top: 1em;
         position: relative;
         overflow: hidden;
         max-height: 80em;
+        background: #fff;
         opacity: 1;
         transform: translate(0, 0);
 
@@ -9359,26 +9331,152 @@ label.popup_link:hover {
 }
 
 .service-sites-wrap { //списки
-    display: flex;
+    .service-sites {
+        ul.list li:before {
+            content: "- ";
+        }
 
-    ul.list li:before {
-        content: "- ";
-    }
+        h4 {
+            margin-bottom: 1em;
+        }
 
-    h4 {
-        margin-bottom: 1em;
-    }
+        .base-service {
+            margin: 1em;
+            padding: 1em;
+        }
 
-    .base-service {
-        margin: 1em;
-        padding: 1em;
-    }
-
-    .more-service {
-        margin: 1em;
-        padding: 1em;
+        .more-service {
+            margin: 1em;
+            padding: 1em;
+        }
     }
 }
+
+.service-sites-accordion {
+    width: 100%;
+    min-height: 0;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 0;
+    //background-color: #fefffa;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: 1px;
+        display: block;
+        margin: 0;
+        padding: 0.6em 0.2em;
+        cursor: pointer;
+        color: @color-gray-dark;
+        background-color: #ffffff;
+        /*background: @color-gray-light;
+        border-top: 1px solid @color-gray-lighter;*/
+        border-bottom: 1px solid @color-gray;
+    }
+
+    h2.title_block:after {
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-top-color: @color-gray;
+        border-width: 10px;
+        margin-left: -10px;
+        margin-top: 2.4em;
+    }
+
+    .service-sites-content {
+        padding-top: 1em;
+        position: relative;
+        overflow: hidden;
+        max-height: 80em;
+        opacity: 1;
+        transform: translate(0, 0);
+
+        p {
+            color: rgba(48, 69, 92, 0.8);
+            font-size: @size-small;
+            line-height: 1.2em;
+            letter-spacing: 1px;
+            padding: 0 1.2em;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    ul li i {
+        position: absolute;
+        transform: translate(-6px, 0);
+        margin-top: 1em;
+        right: 1.5em;
+    }
+    /*указатель */
+    /*ul li i:before, ul li i:after {
+        content: "";
+        position: absolute;
+        background-color: @color-gray-dark;
+        width: 0.1875em;
+        height: 0.5625em;
+    }
+
+    ul li i:before {
+        transform: translate(-2px, 0) rotate(45deg);
+    }
+
+    ul li i:after {
+        transform: translate(2px, 0) rotate(-45deg);
+    }*/
+    ul li input[type=checkbox] {
+        position: absolute;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+    }
+    /* Когда у флажка установлен checked блок с содержанием скрыт*/
+    ul li input[type=checkbox]:checked ~ div.service-sites-content {
+        margin-top: 0;
+        max-height: 0;
+        opacity: 0;
+        transform: translate(0, 50%);
+    }
+
+    ul li input[type=checkbox]:checked ~ i:before {
+        transform: translate(2px, 0) rotate(45deg);
+    }
+
+    ul li input[type=checkbox]:checked ~ i:after {
+        transform: translate(-2px, 0) rotate(-45deg);
+    }
+    /* переход между двумя состояниями указателя */
+    div.service-sites-content, ul li i:before, ul li i:after {
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
 
 @media (min-width: 3840px) {
 }
@@ -9406,7 +9504,6 @@ label.popup_link:hover {
 
 @media screen and (max-width:640px) {
 }
-
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
     // min-height: 65vh;
@@ -9985,7 +10082,6 @@ label.popup_link:hover {
         margin-top: 21em;
     }
 }
-
 /*------------------------------этапы разработки СОЗДАНИЕ/шаги/step*/
 .steps-create-wrap {
     margin-top: 2em;
@@ -10130,7 +10226,7 @@ label.popup_link:hover {
             height: 3em;
             background-color: @color-bad;
             margin-left: -0.125em;
-           //  margin-top: 1em;
+            //  margin-top: 1em;
             transition: all .4s ease-in-out;
         }
 
@@ -10148,7 +10244,7 @@ label.popup_link:hover {
             height: 3em;
             background-color: @color-bad;
             margin-left: -0.125em;
-           //  margin-top: 9em;
+            //  margin-top: 9em;
             transition: all .4s ease-in-out;
         }
 
@@ -10157,7 +10253,7 @@ label.popup_link:hover {
             height: 3em;
             background-color: @color-bad;
             margin-left: -0.125em;
-          //  margin-top: 13em;
+            //  margin-top: 13em;
             transition: all .4s ease-in-out;
         }
 
@@ -10166,7 +10262,7 @@ label.popup_link:hover {
             height: 3em;
             background-color: @color-bad;
             margin-left: -0.125em;
-           //  margin-top: 17em;
+            //  margin-top: 17em;
             transition: all .4s ease-in-out;
         }
 
@@ -10175,12 +10271,10 @@ label.popup_link:hover {
             height: 3em;
             background-color: @color-bad;
             margin-left: -0.125em;
-         //   margin-top: 21.3em;
+            //   margin-top: 21.3em;
             transition: all .4s ease-in-out;
         }
     }
-
-   
 }
 
 @media (min-width: 1200px) {
@@ -10236,7 +10330,7 @@ label.popup_link:hover {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-   #tab-cr-1:checked ~ #border-cr #line-cr {
+    #tab-cr-1:checked ~ #border-cr #line-cr {
         margin-top: 1em;
     }
 
@@ -10334,7 +10428,6 @@ label.popup_link:hover {
         margin-top: 33.5em;
     }
 }
-
 /*------------------------------этапы разработки РАЗРАБОТКА/шаги/step*/
 .steps-develop-wrap {
     margin-top: 2em;
@@ -10468,8 +10561,9 @@ label.popup_link:hover {
             width: 90%;
             overflow: hidden;
         }
-        #tab-dl-l6{
-            margin-right:1em;
+
+        #tab-dl-l6 {
+            margin-right: 1em;
         }
 
 
@@ -10596,19 +10690,22 @@ label.popup_link:hover {
     #tab-dl-6:checked ~ #border-dl #line-dl {
         margin-top: 21em;
     }
+
     #tab-dl-7:checked ~ #border-dl #line-dl {
         margin-top: 25em;
     }
+
     #tab-dl-8:checked ~ #border-dl #line-dl {
         margin-top: 29em;
     }
+
     #tab-dl-9:checked ~ #border-dl #line-dl {
         margin-top: 33em;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-     #tab-dl-1:checked ~ #border-dl #line-dl {
+    #tab-dl-1:checked ~ #border-dl #line-dl {
         margin-top: 0.8em;
     }
 
@@ -10631,22 +10728,26 @@ label.popup_link:hover {
     #tab-dl-6:checked ~ #border-dl #line-dl {
         margin-top: 21em;
     }
+
     #tab-dl-7:checked ~ #border-dl #line-dl {
         margin-top: 25em;
     }
+
     #tab-dl-8:checked ~ #border-dl #line-dl {
         margin-top: 29em;
     }
+
     #tab-dl-9:checked ~ #border-dl #line-dl {
         margin-top: 33em;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .steps-develop-wrap .tabs-develop .label-develop-wrap{
-        width:35%;
+    .steps-develop-wrap .tabs-develop .label-develop-wrap {
+        width: 35%;
     }
-     #tab-dl-1:checked ~ #border-dl #line-dl {
+
+    #tab-dl-1:checked ~ #border-dl #line-dl {
         margin-top: 0.8em;
     }
 
@@ -10669,12 +10770,15 @@ label.popup_link:hover {
     #tab-dl-6:checked ~ #border-dl #line-dl {
         margin-top: 21em;
     }
+
     #tab-dl-7:checked ~ #border-dl #line-dl {
         margin-top: 25em;
     }
+
     #tab-dl-8:checked ~ #border-dl #line-dl {
         margin-top: 29em;
     }
+
     #tab-dl-9:checked ~ #border-dl #line-dl {
         margin-top: 33em;
     }
@@ -10753,7 +10857,6 @@ label.popup_link:hover {
         margin-top: 33.5em;
     }
 }
-
 /*-------------------------------------------------------------------------------------ТАБЫ*/
 .tab-inner-content {
     /*display: flex;
@@ -10823,7 +10926,7 @@ section.tabs-all {
         }
     }
 
-    input {
+    input[type=radio] {
         display: none;
     }
 
@@ -10946,10 +11049,6 @@ section.tabs-all {
     .bottom-footer .footer-info .info-item {
         width: 25%;
     }
-
-    .tariff-wrap {
-        .row
-    }
     /*тарифы в промосайтах*/
     .promo-wrapper {
         max-width: 22em;
@@ -10976,8 +11075,6 @@ section.tabs-all {
         display: flex;
         justify-content: space-between;
     }
-
-
     /*-----------------------------------------------chekout*/
     .form-wrap {
         .row;
@@ -11037,10 +11134,6 @@ section.tabs-all {
         width: 25%;
     }
 
-    .tariff-wrap {
-        .row
-    }
-
 
 
     .promo-wrapper {
@@ -11072,8 +11165,6 @@ section.tabs-all {
         display: flex;
         justify-content: space-between;
     }
-
-
     /*---------------------------------------------------chekout*/
     .form-wrap {
         .row;
@@ -11127,12 +11218,6 @@ section.tabs-all {
         width: 50%;
     }
 
-    .tariff-wrap {
-        .row
-    }
-
-
-
     .promo-wrapper {
         max-width: 13em;
     }
@@ -11149,8 +11234,6 @@ section.tabs-all {
         display: flex;
         justify-content: space-between;
     }
-
-
     /*------------------------------------------------------chekout*/
     .form-wrap {
         .row;
@@ -11267,10 +11350,6 @@ section.tabs-all {
         width: 50%;
     }
 
-    .tariff-wrap {
-        .column
-    }
-
     .information {
         .column;
     }
@@ -11286,8 +11365,6 @@ section.tabs-all {
     .file_upload > button {
         width: 100%;
     }
-
-
     /*-------------------------------------------------------chekout*/
     input.inputs-long {
         width: 73%;
@@ -11332,7 +11409,6 @@ section.tabs-all {
     a {
         border-bottom: 1px solid white;
     }*/
-
     /*----------------------------------------------------chekout*/
     input.inputs-long {
         width: 73.5%;
@@ -11373,19 +11449,9 @@ section.tabs-all {
         width: 100%;
     }
 
-
-
-    .tariff-wrap {
-        .column
-    }
-
-
-
     .information {
         .column;
     }
-
-
 
     .comment {
         display: block;
@@ -11400,7 +11466,6 @@ section.tabs-all {
     .file_upload > button {
         width: 100%;
     }
-
     /*-----------------------------------------------------------цены*/
     /*--------------------------------------------------------chekout*/
     input.inputs-long {
@@ -11435,9 +11500,6 @@ section.tabs-all {
     }
 }
 /*-----------------------------------------------------------------страница ошибки 404*/
-
-
-
 .error {
     background-color: black;
     color: white;
