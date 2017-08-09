@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Post>
+
+<section class="best">
+    <h3>
+        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+        Читаемое
+    </h3>
+
+    @foreach (var bestpost in Model)
+    {
+        <div class="item">
+            <div class="view"><a asp-controller="Blog" asp-action="Post" asp-route-postID="@bestpost.PostID"><img src="@bestpost.Picture" alt="@bestpost.Title" /></a></div>
+            <div class="info">
+                <h4><a asp-controller="Blog" asp-action="Post" asp-route-postID="@bestpost.PostID">Статья про то как мы грибы собирали</a></h4>
+            </div>
+        </div>
+    }
+    
+
+
+</section>

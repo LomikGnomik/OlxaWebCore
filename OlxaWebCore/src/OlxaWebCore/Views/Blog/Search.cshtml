@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Post>
+
+@{Layout = "_LayoutBlogRightSidebar";
+
+
+    ViewData["Title"] = "Поиск в блоге Olxaweb";
+
+}
+
+  Поиск
+@foreach (var p in Model)
+
+{
+    @Html.Partial("_PostItem_PartialViews", p)
+}

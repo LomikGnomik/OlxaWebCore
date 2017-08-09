@@ -19,7 +19,9 @@ namespace OlxaWebCore.Controllers
 
         public IActionResult AllService()
         {
-         IEnumerable<Service> serviceUser =  repository.Services.Where(s => s.Published == true);
+         IEnumerable<Service> serviceUser =  repository.Services
+                .Where(s => s.Published == true)
+                .OrderByDescending(x=>x.SortingWeight);
 
             ViewBag.CategoryService = serviceUser
                 .Select(x => x.Category)

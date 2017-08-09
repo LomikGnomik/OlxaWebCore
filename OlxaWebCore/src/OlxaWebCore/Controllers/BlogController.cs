@@ -53,6 +53,43 @@ namespace OlxaWebCore.Controllers
             return View(post);
         }
 
+        public ViewResult Search(string search)
+        {
+            IEnumerable<Post> postedpost = repository.Posts
+                .Where(p => p.Published == true);
+
+
+            IEnumerable<Post> searchPost =postedpost.Where(s => s.Description == search || s.Title == search);
+            
+            //   .Where(p => p.Published == true & (p.Title.ToLower().Contains(Sanitizer.GetSafeHtmlFragment(search.ToLower()))))
+            return View(searchPost);
+        }
+
+
+        //public ActionResult Search(string search, int page = 1)
+        //{
+        //    BlogViewModels viewModel = new BlogViewModels
+        //    {
+        //        Posts = repository.Posts
+        //         .Where(p => p.Published == true & (p.Title.ToLower().Contains(Sanitizer.GetSafeHtmlFragment(search.ToLower())))) //p.Description.Contains(search) ||( p.Title.ToLower().Contains(search.ToLower())) 
+        //         .OrderBy(p => p.PostedOn)
+        //         .Skip((page - 1) * PageSize)
+        //         .Take(PageSize),
+
+        //        PagingInfo = new PagingInfo
+        //        {
+        //            CurrentPage = page,
+        //            ItemsPerPage = PageSize,
+        //            TotalItems = repository.Posts.Where(p => p.Published == true & (p.Title.ToLower().Contains(Sanitizer.GetSafeHtmlFragment(search.ToLower())))).Count()
+        //        },
+        //        SearchString = search
+        //    };
+        //    return View("Index", viewModel);
+
+        //}
+
+
+
         //ADMIN
 
         public ViewResult AllPostsAdmin()
