@@ -258,37 +258,80 @@
                             <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="service-sites-wrap">
-                            <div class="base-service">
-                                <h4>Базовая функциональность</h4>
-                                <ul class="list">
-                                    <li>Домен на 1 год</li>
-                                    <li>Хостинг на 1 год</li>
-                                    <li>Форма обратной связи</li>
-                                    <li>Обратный звонок</li>
-                                    <li>Админка</li>
+                    <div class="service-sites-wrap">
+                        <div class="container">                            
+                            <div class="service-sites-accordion">
+                                <ul>
                                     <li>
-                                        Дизайн(настройка)
-                                        <span>
-                                            Адаптируется под заказчика в рамках стандартной сетки
-                                            или разрабатывается с нуля
-                                        </span>
+                                        <input type="checkbox">
+                                        <i></i>
+                                        <h2 class="title_block">Базовая функциональность</h2>
+                                        <div class="service-sites-content">
+                                            <ul class="list">
+                                                <li>Домен на 1 год</li>
+                                                <li>Хостинг на 1 год</li>
+                                                <li>Форма обратной связи</li>
+                                                <li>Обратный звонок</li>
+                                                <li>Админка</li>
+                                                <li>
+                                                    Дизайн(настройка)
+                                                    <span>
+                                                        Адаптируется под заказчика в рамках стандартной сетки
+                                                        или разрабатывается с нуля
+                                                    </span>
+                                                </li>
+                                                <li>Базовая SEO оптимизация</li>
+                                            </ul>
+                                        </div>
                                     </li>
-                                    <li>Базовая SEO оптимизация</li>
+                                    <li>
+                                        <input type="checkbox">
+                                        <i></i>
+                                        <h2 class="title_block">Возможные настройки</h2>
+                                        <div class="service-sites-content">
+                                            <ul class="list">
+                                                <li>Калькулятор</li>
+                                                <li>Галерея</li>
+                                                <li>Блок новостей</li>
+                                                <li>Блок отзывов</li>
+                                                <li>Блог</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
                                 </ul>
                             </div>
-                            <div class="more-service">
-                                <h4>Возможные настройки</h4>
-                                <ul class="list">
-                                    <li>Калькулятор</li>
-                                    <li>Галерея</li>
-                                    <li>Блок новостей</li>
-                                    <li>Блок отзывов</li>
-                                    <li>Блог</li>
-                                </ul>
-                            </div>
-                        </div>
+                            @*<div class="service-sites">
+                                    <div class="base-service">
+                                        <h4>Базовая функциональность</h4>
+                                        <ul class="list">
+                                            <li>Домен на 1 год</li>
+                                            <li>Хостинг на 1 год</li>
+                                            <li>Форма обратной связи</li>
+                                            <li>Обратный звонок</li>
+                                            <li>Админка</li>
+                                            <li>
+                                                Дизайн(настройка)
+                                                <span>
+                                                    Адаптируется под заказчика в рамках стандартной сетки
+                                                    или разрабатывается с нуля
+                                                </span>
+                                            </li>
+                                            <li>Базовая SEO оптимизация</li>
+                                        </ul>
+                                    </div>
+                                    <div class="more-service">
+                                        <h4>Возможные настройки</h4>
+                                        <ul class="list">
+                                            <li>Калькулятор</li>
+                                            <li>Галерея</li>
+                                            <li>Блок новостей</li>
+                                            <li>Блок отзывов</li>
+                                            <li>Блог</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>*@
                     </div>
                 </div>
                 <div class="steps-create-wrapper">
@@ -297,130 +340,8 @@
             </div> @*tab__c3*@
         </div>
     </section>
-
-
-
-
-    @*<section class="tariff">
-            <h2>
-                Сайт визитка это ваше лицо и лучше бы вы купили у нас визитку подорже
-            </h2>
-            <div class="tariff-wrap">
-                <div class="promo-wrapper">
-                    <div class="promo-economy">
-                        <div class="header-promo-economy">
-                            <div class="promo-icon">
-                                <img src="img/promo-site/economy.png" alt="economy" />
-                            </div>
-                            <h3>Тариф Эконом</h3>
-                            <p>Доступный, стабильный, надежный!</p>
-                            <a href="#" class="btn btn-icon-right btn-primary">
-                                3 000 р
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div> <!--header-->
-                        <ul>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>3</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>8</strong>
-                            </li>
-                        </ul>
-                    </div> <!--promo-economy-->
-                </div> <!--promo-wrapper-->
-                <div class="promo-wrapper">
-                    <div class="promo-standart">
-                        <div class="header-promo-standart">
-                            <div class="promo-icon">
-                                <img src="img/promo-site/standart.png" alt="standart" />
-                            </div>
-                            <h3>Тариф Стандарт</h3>
-                            <p>Лучшее предложение!</p>
-                            <a href="#" class="btn btn-icon-right btn-more">
-                                7 000 p
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div> <!--header-->
-                        <ul>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>3</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>8</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                        </ul>
-                    </div> <!--promo-standart-->
-                </div> <!--promo-wrapper-->
-                <div class="promo-wrapper">
-                    <div class="promo-max">
-                        <div class="header-promo-max">
-                            <div class="promo-icon">
-                                <img src="img/promo-site/max.png" alt="max" />
-                            </div>
-                            <h3>Тариф Максимум</h3>
-                            <p>Для самых продвинутых</p>
-                            <a href="#" class="btn btn-icon-right btn-primary">
-                                13 000 р
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div> <!--header-->
-                        <ul>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>3</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>8</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                            <li>
-                                Описание
-                                <strong>2</strong>
-                            </li>
-                        </ul>
-                    </div> <!--promo-max-->
-                </div> <!--promo-wrapper-->
-            </div>
-        </section>*@
-  
-
+    
+    
     @await Component.InvokeAsync("ExamplesSites", new { category = "Визитка" })
     @await Component.InvokeAsync("OrderForm")
 

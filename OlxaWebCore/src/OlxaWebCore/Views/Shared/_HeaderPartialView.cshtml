@@ -20,23 +20,36 @@
                 <li class="main-menu__item"><a asp-area="" asp-controller="Portfolio" asp-action="All" class="link">Портфолио</a></li>
                 <li class="main-menu__item">
                     <a asp-area="" asp-controller="Home" asp-action="Price" class="link">Сайты</a>
-                    <div class="submenu">                       
-                        <ul>
-                            <li class="submenu__item"><a asp-controller="Product" asp-action="AllProducts">Готовые решения</a></li>
-                            <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Creation">Создание сайта</a></li>
-                            <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Develop">Разработка сайта</a></li>
-                        </ul>
-                        <ul>
-                            <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
-                            <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Landing">Лендинг</a></li>
-                            <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
-                            <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
-                            <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
-                        </ul>
+                    <div class="submenu">
+                        <div class="info-item-header">
+                            <h3>
+                                <span><i class="fa fa-diamond" aria-hidden="true"></i></span>
+                                Наши предложения
+                            </h3>
+                            <ul>
+                                <li class="submenu__item"><a asp-controller="Product" asp-action="AllProducts">Готовые решения</a></li>
+                                <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Creation">Создание сайта</a></li>
+                                <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Develop">Разработка сайта</a></li>
+                            </ul>
+                        </div>
+                        <div class="info-item-header">
+                            <h3>
+                                <span><i class="fa fa-object-group" aria-hidden="true"></i></span>
+                                Типы сайтов
+                            </h3>
+                            <ul>
+                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
+                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Landing">Лендинг</a></li>
+                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
+                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
+                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
+                            </ul>
+                        </div>
+                        
                     </div>
                     @*<div class="content">
-                            <img src="~/images/landing/post_prev_01.jpg" alt="" />
-                        </div>*@
+                    <img src="~/images/landing/post_prev_01.jpg" alt="" />
+                </div>*@
                 </li>
                 <li class="main-menu__item"><a asp-controller="Service" asp-action="AllService" class="link">Услуги / Цены</a></li>
                 <li class="main-menu__item">
