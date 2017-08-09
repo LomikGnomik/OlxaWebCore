@@ -16,32 +16,7 @@
             }
 
         </div>
-    </section>
-    <aside class="category-wrap">
-        <div class="sidebar">
-            <section class="blog-search-wrap">
-                <form asp-controller="Blog" asp-action="Search" method="post" class="blog-search">
-                    <input type="search" name="search" placeholder="Поиск" />
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </section>
-
-            @await Component.InvokeAsync("BlogNavigationMenu")
-
-            @await Component.InvokeAsync("BlogMaxReviewPost")
-            <section class="featured-tags">
-                <h3>
-                    <i class="fa fa-tags" aria-hidden="true"></i>
-                    Рекомендуемые теги
-                </h3>
-                <a href="#">ASP</a>
-                <a href="#">Разработка</a>
-                <a href="#">Дизайн</a>
-                <a href="#">Верстка</a>
-            </section>
-
-        </div>
-    </aside>
+    </section>    
 </div>
 
 
