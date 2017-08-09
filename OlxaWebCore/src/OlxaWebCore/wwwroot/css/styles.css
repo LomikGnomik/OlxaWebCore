@@ -782,21 +782,21 @@ section.tariff .promo-wrapper ul li:last-child {
   color: #5688c3;
   border-bottom-color: #5688c3;
 }
-.blog-wrapper .category-wrap {
+.category-wrap {
   margin-left: auto;
   width: 20em;
 }
-.blog-wrapper .category-wrap .sidebar {
+.category-wrap .sidebar {
   position: relative;
 }
-.blog-wrapper .category-wrap .sidebar .widget-sidebar {
+.category-wrap .sidebar .widget-sidebar {
   padding: 1.125em 1.5em 1.5em 1.5em;
   margin-bottom: 1.5em;
   border: 1px solid #999999;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
-.blog-wrapper .category-wrap .sidebar h3 {
+.category-wrap .sidebar h3 {
   font-size: 0.8em;
   color: #999999;
   margin-bottom: 1.2em;
@@ -804,15 +804,15 @@ section.tariff .promo-wrapper ul li:last-child {
   border-bottom: 1px solid #999999;
   margin-top: 2em;
 }
-.blog-wrapper .category-wrap .sidebar .blog-search-wrap {
+.category-wrap .sidebar .blog-search-wrap {
   margin-bottom: 1.5em;
 }
-.blog-wrapper .category-wrap .sidebar .blog-search-wrap form.blog-search {
+.category-wrap .sidebar .blog-search-wrap form.blog-search {
   position: relative;
   display: block;
   width: 100%;
 }
-.blog-wrapper .category-wrap .sidebar .blog-search-wrap form.blog-search input {
+.category-wrap .sidebar .blog-search-wrap form.blog-search input {
   display: block;
   width: 100%;
   line-height: 1.5;
@@ -825,10 +825,10 @@ section.tariff .promo-wrapper ul li:last-child {
   transition: all 0.3s;
   border: none;
 }
-.blog-wrapper .category-wrap .sidebar .blog-search-wrap form.blog-search input:focus {
+.category-wrap .sidebar .blog-search-wrap form.blog-search input:focus {
   outline: none;
 }
-.blog-wrapper .category-wrap .sidebar .blog-search-wrap form.blog-search button[type=submit] {
+.category-wrap .sidebar .blog-search-wrap form.blog-search button[type=submit] {
   position: absolute;
   top: 50%;
   left: 1.5em;
@@ -839,17 +839,17 @@ section.tariff .promo-wrapper ul li:last-child {
   padding: 0;
   margin-top: -0.5em;
 }
-.blog-wrapper .category-wrap .sidebar .categories ul {
+.category-wrap .sidebar .categories ul {
   font-size: 0.8em;
   list-style: none;
   padding: 0;
   margin: 0;
   line-height: 1.8;
 }
-.blog-wrapper .category-wrap .sidebar .categories ul li {
+.category-wrap .sidebar .categories ul li {
   padding-bottom: 16px -5;
 }
-.blog-wrapper .category-wrap .sidebar .categories ul li a {
+.category-wrap .sidebar .categories ul li a {
   position: relative;
   display: block;
   color: #333333;
@@ -858,7 +858,7 @@ section.tariff .promo-wrapper ul li:last-child {
   transition: all 0.3s;
   margin: 1em 0em;
 }
-.blog-wrapper .category-wrap .sidebar .categories ul li a span {
+.category-wrap .sidebar .categories ul li a span {
   display: block;
   position: absolute;
   right: 0.625em;
@@ -866,37 +866,37 @@ section.tariff .promo-wrapper ul li:last-child {
   color: #999999;
   transition: color 0.3s;
 }
-.blog-wrapper .category-wrap .sidebar .categories ul li :hover {
+.category-wrap .sidebar .categories ul li :hover {
   background: #06c438;
   color: #ecf0f1;
 }
-.blog-wrapper .category-wrap .sidebar .categories ul li :hover > span {
+.category-wrap .sidebar .categories ul li :hover > span {
   color: #ecf0f1;
 }
-.blog-wrapper .category-wrap .sidebar .best .item {
+.category-wrap .sidebar .best .item {
   display: table;
   width: 100%;
   margin-bottom: 1.5em;
 }
-.blog-wrapper .category-wrap .sidebar .best .view {
+.category-wrap .sidebar .best .view {
   width: 3.75em;
   height: 3.75em;
   display: table-cell;
   vertical-align: top;
 }
-.blog-wrapper .category-wrap .sidebar .best .info {
+.category-wrap .sidebar .best .info {
   padding-left: 0.75em;
   display: table-cell;
   vertical-align: top;
 }
-.blog-wrapper .category-wrap .sidebar .best h4 {
+.category-wrap .sidebar .best h4 {
   font-size: 0.8em;
   margin-bottom: 0;
 }
-.blog-wrapper .category-wrap .sidebar .best h4 a {
+.category-wrap .sidebar .best h4 a {
   line-height: 1.7;
 }
-.blog-wrapper .category-wrap .sidebar .featured-tags a {
+.category-wrap .sidebar .featured-tags a {
   position: relative;
   display: inline-block;
   font-size: 0.8em !important;
@@ -911,7 +911,7 @@ section.tariff .promo-wrapper ul li:last-child {
   white-space: nowrap;
   transition: background-color 0.3s;
 }
-.blog-wrapper .category-wrap .sidebar .featured-tags a:before {
+.category-wrap .sidebar .featured-tags a:before {
   position: absolute;
   display: block;
   content: "";
@@ -5366,107 +5366,6 @@ label.popup_link {
 .develop-wrapper section.develop .step-develop-wrap #tabs-3 {
   background: #1b1b1b;
 }
-/*------------------------------------------------------------------------Шаги/Этапы/Step*/
-/*.steps-wrap {
-
-    label {
-        color: #666;
-        font-size: 18px;
-        cursor: pointer;
-        padding: 0.8em 1em 0.8em 0;
-
-        &:hover {
-            color: @color-more;
-
-            &:before {
-                background: lighten(@color-more,46%);
-            }
-        }
-
-        &:before {
-            font-family: 'Impact';
-            text-align: center;
-            content: counter(li);
-            .border-more;
-            // border-radius: 40px;
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            font-size: 24px;
-            margin: 0 0.5em 0 0;
-            background: white;
-            color: @color-more;
-        }
-    }
-
-    .css-accordion {
-        list-style-type: none;
-        counter-reset: li;
-        padding: 20px;
-        width: 100% ;
-        .accordion-item {
-            counter-increment: li;
-            padding: 0;
-            margin: 0;
-
-            .item-content-container {
-                border-left: 2px solid @color-more;
-                padding: 6px 0;
-                margin: -2px 0 -2px 21px;
-
-                .item-content {
-                    background: #eee;
-                    padding: 0 1em;
-                    overflow: hidden;
-                    margin: 0 0 0 36px;
-                    border-radius: 2px;
-                    box-shadow: inset 0 2px 8px rgba(0,0,0,0.5), 0 1px 2px rgba(255,255,255,0.9);
-
-                    p {
-                        margin: 0.5em 0;
-                        font-size: 14px;
-                        text-shadow: 0 1px 1px rgba(255,255,255,0.9);
-                    }
-                }
-            }
-
-            input[type=radio] {
-                display: none;
-
-                ~ .item-content-container {
-                    overflow: hidden;
-
-                    .item-content {
-                        height: 0;
-                        transition: all 0.3s linear;
-                    }
-                }
-
-                &:checked {
-                    ~ .item-content-container {
-                        height: auto;
-                        overflow: visible;
-
-                        .item-content {
-                            height: 200px;
-                            overflow-y: auto;
-                            transition: all 0.5s linear;
-                        }
-                    }
-
-                    + label {
-                        color: @color-more;
-
-                        &:before {
-                            background: lighten(@color-more,46%);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}*/
 /*------------------------------------------------------------------------------Аккордион*/
 .accordion {
   width: 100%;
@@ -7791,19 +7690,19 @@ label.popup_link {
     width: 100%;
   }
 }
-/*------------------------------этапы разработки/шаги/step*/
-.steps-wrap {
+/*------------------------------этапы разработки ГОТОВЫЕ РЕШЕНИЯ/шаги/step*/
+.steps-template-wrap {
   margin-top: 2em;
   padding: 2em;
   min-height: 100vh;
   align-items: center;
 }
-.steps-wrap h2 {
+.steps-template-wrap h2 {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2em;
 }
-.steps-wrap .tabs {
+.steps-template-wrap .tabs-template {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -7815,20 +7714,361 @@ label.popup_link {
   /*спрятанный контент при не выбраном элемента*/
   /*контент при выбраном элемента*/
 }
-.steps-wrap .tabs label:first-child {
+.steps-template-wrap .tabs-template label:first-child {
   margin: 0;
 }
-.steps-wrap .tabs .label-wrap {
+.steps-template-wrap .tabs-template .label-template-wrap {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 30%;
   align-items: flex-start;
   justify-content: center;
 }
-.steps-wrap .tabs .label-wrap p {
+.steps-template-wrap .tabs-template .label-template-wrap p {
   position: relative;
 }
-.steps-wrap .tabs label {
+.steps-template-wrap .tabs-template label {
+  display: block;
+  color: #999999;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  line-height: 2em;
+  font-weight: 500;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  border: none;
+  text-align: left;
+}
+.steps-template-wrap .tabs-template label:hover {
+  color: tomato;
+  transition: all 0.2s ease-out;
+}
+.steps-template-wrap .tabs-template input {
+  display: none;
+}
+.steps-template-wrap .tabs-template #tab-tmp-1 ~ .label-template-wrap #tab-tmp-l1,
+.steps-template-wrap .tabs-template #tab-tmp-2 ~ .label-template-wrap #tab-tmp-l2,
+.steps-template-wrap .tabs-template #tab-tmp-3 ~ .label-template-wrap #tab-tmp-l3,
+.steps-template-wrap .tabs-template #tab-tmp-4 ~ .label-template-wrap #tab-tmp-l4,
+.steps-template-wrap .tabs-template #tab-tmp-5 ~ .label-template-wrap #tab-tmp-l5 {
+  top: 0;
+  z-index: 3;
+}
+.steps-template-wrap .tabs-template #tab-tmp-1:checked ~ .label-template-wrap #tab-tmp-l1,
+.steps-template-wrap .tabs-template #tab-tmp-2:checked ~ .label-template-wrap #tab-tmp-l2,
+.steps-template-wrap .tabs-template #tab-tmp-3:checked ~ .label-template-wrap #tab-tmp-l3,
+.steps-template-wrap .tabs-template #tab-tmp-4:checked ~ .label-template-wrap #tab-tmp-l4,
+.steps-template-wrap .tabs-template #tab-tmp-5:checked ~ .label-template-wrap #tab-tmp-l5 {
+  color: tomato;
+  top: 0;
+  z-index: 3;
+}
+.steps-template-wrap .tabs-template .tabs-cont-template {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-height: 30em;
+}
+.steps-template-wrap .tabs-template #tab-tmp-1 ~ .tabs-cont-template #tab-tmp-c1,
+.steps-template-wrap .tabs-template #tab-tmp-2 ~ .tabs-cont-template #tab-tmp-c2,
+.steps-template-wrap .tabs-template #tab-tmp-3 ~ .tabs-cont-template #tab-tmp-c3,
+.steps-template-wrap .tabs-template #tab-tmp-4 ~ .tabs-cont-template #tab-tmp-c4,
+.steps-template-wrap .tabs-template #tab-tmp-5 ~ .tabs-cont-template #tab-tmp-c5 {
+  position: absolute;
+  transition: all 0.6s ease-in-out;
+  margin-top: -20em;
+  opacity: 0;
+  width: 90%;
+  overflow: hidden;
+}
+.steps-template-wrap .tabs-template #tab-tmp-1:checked ~ .tabs-cont-template #tab-tmp-c1,
+.steps-template-wrap .tabs-template #tab-tmp-2:checked ~ .tabs-cont-template #tab-tmp-c2,
+.steps-template-wrap .tabs-template #tab-tmp-3:checked ~ .tabs-cont-template #tab-tmp-c3,
+.steps-template-wrap .tabs-template #tab-tmp-4:checked ~ .tabs-cont-template #tab-tmp-c4,
+.steps-template-wrap .tabs-template #tab-tmp-5:checked ~ .tabs-cont-template #tab-tmp-c5 {
+  margin-top: 0;
+  position: relative;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+  width: 90%;
+  overflow: hidden;
+}
+.steps-template-wrap .tabs-template #border-tmp {
+  height: 28em;
+  width: 1px;
+  background-color: #cccccc;
+}
+.steps-template-wrap .tabs-template #border-tmp #line-tmp {
+  width: 5px;
+  height: 54px;
+  background-color: #FD0006;
+  margin-left: -2px;
+  margin-top: 35px;
+  transition: all 0.4s ease-in-out;
+}
+.steps-template-wrap .tabs-template #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-template-wrap .tabs-template #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-template-wrap .tabs-template #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-template-wrap .tabs-template #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-template-wrap .tabs-template #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+/*@media (min-width: 3840px){
+     #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+       // margin-top: 0.9em;
+    }
+
+    #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+        margin-top: 7.5em;
+    }
+
+    #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+        margin-top: 12.5em;
+    }
+
+    #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+        margin-top: 17.5em;
+    }
+
+    #tab-tmp-5:checked ~ #border #line {
+        margin-top: 22.5em; 
+
+    }    
+}
+@media (min-width: 2560px) and (max-width: 3839px){
+    #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+       // margin-top: 0.9em;
+    }
+
+    #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+        margin-top: 7.5em;
+    }
+
+    #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+        margin-top: 12.5em;
+    }
+
+    #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+        margin-top: 17.5em;
+    }
+
+    #tab-tmp-5:checked ~ #border #line {
+        margin-top: 22.5em; 
+
+    }    
+}
+@media (min-width: 1920px) and (max-width: 2559px){
+      #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+       // margin-top: 0.9em;
+    }
+
+    #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+        margin-top: 7.5em;
+    }
+
+    #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+        margin-top: 12.5em;
+    }
+
+    #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+        margin-top: 17.5em;
+    }
+
+    #tab-tmp-5:checked ~ #border #line {
+        margin-top: 22.5em; 
+
+    }    
+}
+@media (min-width: 1680px) and (max-width: 1919px){
+      #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+       // margin-top: 0.9em;
+    }
+
+    #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+        margin-top: 7.5em;
+    }
+
+    #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+        margin-top: 12.5em;
+    }
+
+    #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+        margin-top: 17.5em;
+    }
+
+    #tab-tmp-5:checked ~ #border #line {
+        margin-top: 22.5em; 
+
+    }    
+}*/
+@media (min-width: 1200px) {
+  #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+    margin-top: 7.5em;
+  }
+  #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+    margin-top: 12.5em;
+  }
+  #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+    margin-top: 17.5em;
+  }
+  #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+    margin-top: 22.5em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+    margin-top: 2em;
+  }
+  #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+    margin-top: 7.5em;
+  }
+  #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+    margin-top: 12.5em;
+  }
+  #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+    margin-top: 17.5em;
+  }
+  #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+    margin-top: 22.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+    margin-top: 1.2em;
+  }
+  #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+    margin-top: 7.5em;
+  }
+  label#tab-tmp-l2 {
+    margin-right: 1em;
+  }
+  #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+    margin-top: 13.8em;
+  }
+  #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+    margin-top: 18.8em;
+  }
+  #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+    margin-top: 23.8em;
+  }
+}
+@media (max-width: 767px) {
+  .steps-wrap .tabs .label-wrap {
+    width: 60%;
+    padding-right: 2em;
+  }
+  .steps-wrap .tabs .tabs_cont {
+    width: 90%;
+    padding-left: 1.5em;
+  }
+  .steps-wrap .tabs #border {
+    height: 36em;
+  }
+  #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+    margin-top: 0.6em;
+  }
+  #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+    margin-top: 5em;
+  }
+  #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+    margin-top: 9em;
+  }
+  #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+    margin-top: 13em;
+  }
+  #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+    margin-top: 20em;
+  }
+}
+@media screen and (max-width: 640px) {
+  #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+    margin-top: 0em;
+  }
+  #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+    margin-top: 5em;
+  }
+  #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+    margin-top: 10em;
+  }
+  #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+    margin-top: 14em;
+  }
+  #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+    margin-top: 21em;
+  }
+}
+/*------------------------------этапы разработки СОЗДАНИЕ/шаги/step*/
+.steps-create-wrap {
+  margin-top: 2em;
+  padding: 2em;
+  min-height: 100vh;
+  align-items: center;
+}
+.steps-create-wrap h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.steps-create-wrap .tabs-create {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3em;
+  /*z-index не отмеченных*/
+  /*z-index активных*/
+  /*спрятанный контент при не выбраном элементe*/
+  /*контент при выбраном элемента*/
+}
+.steps-create-wrap .tabs-create label:first-child {
+  margin: 0;
+}
+.steps-create-wrap .tabs-create .label-create-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: flex-start;
+  justify-content: center;
+}
+.steps-create-wrap .tabs-create .label-create-wrap p {
+  position: relative;
+}
+.steps-create-wrap .tabs-create label {
   display: block;
   color: #999999;
   padding-top: 0.6em;
@@ -7842,41 +8082,35 @@ label.popup_link {
   border: none;
   text-align: left;
 }
-.steps-wrap .tabs label:hover {
+.steps-create-wrap .tabs-create label:hover {
   color: tomato;
   transition: all 0.2s ease-out;
 }
-.steps-wrap .tabs input {
+.steps-create-wrap .tabs-create input {
   display: none;
 }
-.steps-wrap .tabs #tab_1 ~ .label-wrap #tab_l1,
-.steps-wrap .tabs #tab_2 ~ .label-wrap #tab_l2,
-.steps-wrap .tabs #tab_3 ~ .label-wrap #tab_l3,
-.steps-wrap .tabs #tab_4 ~ .label-wrap #tab_l4,
-.steps-wrap .tabs #tab_5 ~ .label-wrap #tab_l5,
-.steps-wrap .tabs #tab_6 ~ .label-wrap #tab_l6,
-.steps-wrap .tabs #tab_7 ~ .label-wrap #tab_l7,
-.steps-wrap .tabs #tab_8 ~ .label-wrap #tab_l8,
-.steps-wrap .tabs #tab_9 ~ .label-wrap #tab_l9 {
+.steps-create-wrap .tabs-create #tab-cr-1 ~ .label-create-wrap #tab-cr-l1,
+.steps-create-wrap .tabs-create #tab-cr-2 ~ .label-create-wrap #tab-cr-l2,
+.steps-create-wrap .tabs-create #tab-cr-3 ~ .label-create-wrap #tab-cr-l3,
+.steps-create-wrap .tabs-create #tab-cr-4 ~ .label-create-wrap #tab-cr-l4,
+.steps-create-wrap .tabs-create #tab-cr-5 ~ .label-create-wrap #tab-cr-l5,
+.steps-create-wrap .tabs-create #tab-cr-6 ~ .label-create-wrap #tab-cr-l6 {
   top: 0;
   z-index: 3;
 }
-.steps-wrap .tabs #tab_1:checked ~ .label-wrap #tab_l1,
-.steps-wrap .tabs #tab_2:checked ~ .label-wrap #tab_l2,
-.steps-wrap .tabs #tab_3:checked ~ .label-wrap #tab_l3,
-.steps-wrap .tabs #tab_4:checked ~ .label-wrap #tab_l4,
-.steps-wrap .tabs #tab_5:checked ~ .label-wrap #tab_l5,
-.steps-wrap .tabs #tab_6:checked ~ .label-wrap #tab_l6,
-.steps-wrap .tabs #tab_7:checked ~ .label-wrap #tab_l7,
-.steps-wrap .tabs #tab_8:checked ~ .label-wrap #tab_l8,
-.steps-wrap .tabs #tab_9:checked ~ .label-wrap #tab_l9 {
+.steps-create-wrap .tabs-create #tab-cr-1:checked ~ .label-create-wrap #tab-cr-l1,
+.steps-create-wrap .tabs-create #tab-cr-2:checked ~ .label-create-wrap #tab-cr-l2,
+.steps-create-wrap .tabs-create #tab-cr-3:checked ~ .label-create-wrap #tab-cr-l3,
+.steps-create-wrap .tabs-create #tab-cr-4:checked ~ .label-create-wrap #tab-cr-l4,
+.steps-create-wrap .tabs-create #tab-cr-5:checked ~ .label-create-wrap #tab-cr-l5,
+.steps-create-wrap .tabs-create #tab-cr-6:checked ~ .label-create-wrap #tab-cr-l6 {
   color: tomato;
   top: 0;
   z-index: 3;
 }
-.steps-wrap .tabs .tabs_cont {
+.steps-create-wrap .tabs-create .tabs-cont-create {
   position: relative;
-  width: 90%;
+  width: 70%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -7884,15 +8118,12 @@ label.popup_link {
   z-index: 2;
   max-height: 30em;
 }
-.steps-wrap .tabs #tab_1 ~ .tabs_cont #tab_c1,
-.steps-wrap .tabs #tab_2 ~ .tabs_cont #tab_c2,
-.steps-wrap .tabs #tab_3 ~ .tabs_cont #tab_c3,
-.steps-wrap .tabs #tab_4 ~ .tabs_cont #tab_c4,
-.steps-wrap .tabs #tab_5 ~ .tabs_cont #tab_c5,
-.steps-wrap .tabs #tab_6 ~ .tabs_cont #tab_c6,
-.steps-wrap .tabs #tab_7 ~ .tabs_cont #tab_c7,
-.steps-wrap .tabs #tab_8 ~ .tabs_cont #tab_c8,
-.steps-wrap .tabs #tab_9 ~ .tabs_cont #tab_c9 {
+.steps-create-wrap .tabs-create #tab-cr-1 ~ .tabs-cont-create #tab-cr-c1,
+.steps-create-wrap .tabs-create #tab-cr-2 ~ .tabs-cont-create #tab-cr-c2,
+.steps-create-wrap .tabs-create #tab-cr-3 ~ .tabs-cont-create #tab-cr-c3,
+.steps-create-wrap .tabs-create #tab-cr-4 ~ .tabs-cont-create #tab-cr-c4,
+.steps-create-wrap .tabs-create #tab-cr-5 ~ .tabs-cont-create #tab-cr-c5,
+.steps-create-wrap .tabs-create #tab-cr-6 ~ .tabs-cont-create #tab-cr-c6 {
   position: absolute;
   transition: all 0.6s ease-in-out;
   margin-top: -20em;
@@ -7900,15 +8131,12 @@ label.popup_link {
   width: 90%;
   overflow: hidden;
 }
-.steps-wrap .tabs #tab_1:checked ~ .tabs_cont #tab_c1,
-.steps-wrap .tabs #tab_2:checked ~ .tabs_cont #tab_c2,
-.steps-wrap .tabs #tab_3:checked ~ .tabs_cont #tab_c3,
-.steps-wrap .tabs #tab_4:checked ~ .tabs_cont #tab_c4,
-.steps-wrap .tabs #tab_5:checked ~ .tabs_cont #tab_c5,
-.steps-wrap .tabs #tab_6:checked ~ .tabs_cont #tab_c6,
-.steps-wrap .tabs #tab_7:checked ~ .tabs_cont #tab_c7,
-.steps-wrap .tabs #tab_8:checked ~ .tabs_cont #tab_c8,
-.steps-wrap .tabs #tab_9:checked ~ .tabs_cont #tab_c9 {
+.steps-create-wrap .tabs-create #tab-cr-1:checked ~ .tabs-cont-create #tab-cr-c1,
+.steps-create-wrap .tabs-create #tab-cr-2:checked ~ .tabs-cont-create #tab-cr-c2,
+.steps-create-wrap .tabs-create #tab-cr-3:checked ~ .tabs-cont-create #tab-cr-c3,
+.steps-create-wrap .tabs-create #tab-cr-4:checked ~ .tabs-cont-create #tab-cr-c4,
+.steps-create-wrap .tabs-create #tab-cr-5:checked ~ .tabs-cont-create #tab-cr-c5,
+.steps-create-wrap .tabs-create #tab-cr-6:checked ~ .tabs-cont-create #tab-cr-c6 {
   margin-top: 0;
   position: relative;
   opacity: 1;
@@ -7916,12 +8144,12 @@ label.popup_link {
   width: 90%;
   overflow: hidden;
 }
-.steps-wrap .tabs #border {
-  height: 32em;
+.steps-create-wrap .tabs-create #border-cr {
+  height: 25em;
   width: 1px;
   background-color: #cccccc;
 }
-.steps-wrap .tabs #border #line {
+.steps-create-wrap .tabs-create #border-cr #line-cr {
   width: 5px;
   height: 54px;
   background-color: #FD0006;
@@ -7929,63 +8157,42 @@ label.popup_link {
   margin-top: 35px;
   transition: all 0.4s ease-in-out;
 }
-.steps-wrap .tabs #tab_1:checked ~ #border #line {
+.steps-create-wrap .tabs-create #tab-cr-1:checked ~ #border-cr #line-cr {
   width: 0.3em;
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
   transition: all 0.4s ease-in-out;
 }
-.steps-wrap .tabs #tab_2:checked ~ #border #line {
+.steps-create-wrap .tabs-create #tab-cr-2:checked ~ #border-cr #line-cr {
   width: 0.3em;
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
   transition: all 0.4s ease-in-out;
 }
-.steps-wrap .tabs #tab_3:checked ~ #border #line {
+.steps-create-wrap .tabs-create #tab-cr-3:checked ~ #border-cr #line-cr {
   width: 0.3em;
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
   transition: all 0.4s ease-in-out;
 }
-.steps-wrap .tabs #tab_4:checked ~ #border #line {
+.steps-create-wrap .tabs-create #tab-cr-4:checked ~ #border-cr #line-cr {
   width: 0.3em;
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
   transition: all 0.4s ease-in-out;
 }
-.steps-wrap .tabs #tab_5:checked ~ #border #line {
+.steps-create-wrap .tabs-create #tab-cr-5:checked ~ #border-cr #line-cr {
   width: 0.3em;
   height: 3em;
   background-color: #FD0006;
   margin-left: -0.125em;
   transition: all 0.4s ease-in-out;
 }
-.steps-wrap .tabs #tab_6:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  transition: all 0.4s ease-in-out;
-}
-.steps-wrap .tabs #tab_7:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  transition: all 0.4s ease-in-out;
-}
-.steps-wrap .tabs #tab_8:checked ~ #border #line {
-  width: 0.3em;
-  height: 3em;
-  background-color: #FD0006;
-  margin-left: -0.125em;
-  transition: all 0.4s ease-in-out;
-}
-.steps-wrap .tabs #tab_9:checked ~ #border #line {
+.steps-create-wrap .tabs-create #tab-cr-6:checked ~ #border-cr #line-cr {
   width: 0.3em;
   height: 3em;
   background-color: #FD0006;
@@ -7993,11 +8200,82 @@ label.popup_link {
   transition: all 0.4s ease-in-out;
 }
 @media (min-width: 1200px) {
-  #tab_1:checked ~ #border #line {
-    margin-top: 0.9em;
+  #tab-cr-1:checked ~ #border-cr #line-cr {
+    margin-top: 1em;
+  }
+  #tab-cr-2:checked ~ #border-cr #line-cr {
+    margin-top: 5em;
+  }
+  #tab-cr-3:checked ~ #border-cr #line-cr {
+    margin-top: 9em;
+  }
+  #tab-cr-4:checked ~ #border-cr #line-cr {
+    margin-top: 13em;
+  }
+  #tab-cr-5:checked ~ #border-cr #line-cr {
+    margin-top: 17em;
+  }
+  #tab-cr-6:checked ~ #border-cr #line-cr {
+    margin-top: 21em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #tab-cr-1:checked ~ #border-cr #line-cr {
+    margin-top: 1em;
+  }
+  #tab-cr-2:checked ~ #border-cr #line-cr {
+    margin-top: 5em;
+  }
+  #tab-cr-3:checked ~ #border-cr #line-cr {
+    margin-top: 9em;
+  }
+  #tab-cr-4:checked ~ #border-cr #line-cr {
+    margin-top: 13em;
+  }
+  #tab-cr-5:checked ~ #border-cr #line-cr {
+    margin-top: 17em;
+  }
+  #tab-cr-6:checked ~ #border-cr #line-cr {
+    margin-top: 21em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #tab-cr-1:checked ~ #border-cr #line-cr {
+    margin-top: 1em;
+  }
+  #tab-cr-2:checked ~ #border-cr #line-cr {
+    margin-top: 5em;
+  }
+  #tab-cr-3:checked ~ #border-cr #line-cr {
+    margin-top: 9em;
+  }
+  #tab-cr-4:checked ~ #border-cr #line-cr {
+    margin-top: 13em;
+  }
+  #tab-cr-5:checked ~ #border-cr #line-cr {
+    margin-top: 17em;
+  }
+  #tab-cr-6:checked ~ #border-cr #line-cr {
+    margin-top: 21em;
+  }
+}
+@media (max-width: 767px) {
+  .steps-wrap .tabs .label-wrap {
+    width: 60%;
+    padding-right: 2em;
+  }
+  .steps-wrap .tabs .tabs_cont {
+    width: 90%;
+    padding-left: 1.5em;
+  }
+  .steps-wrap .tabs #border {
+    height: 36em;
+  }
+  .steps-wrap .tabs #tab_1:checked ~ #border #line {
+    margin-top: 0.6em;
   }
   #tab_2:checked ~ #border #line {
-    margin-top: 4.68em;
+    margin-top: 5em;
   }
   #tab_3:checked ~ #border #line {
     margin-top: 9em;
@@ -8006,63 +8284,330 @@ label.popup_link {
     margin-top: 13em;
   }
   #tab_5:checked ~ #border #line {
-    margin-top: 18.5em;
+    margin-top: 20em;
   }
   #tab_6:checked ~ #border #line {
-    margin-top: 24em;
+    margin-top: 28.5em;
   }
   #tab_7:checked ~ #border #line {
-    margin-top: 28em;
+    margin-top: 32.5em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .steps-wrap .tabs #tab_1:checked ~ #border #line {
+    margin-top: 0em;
+  }
+  #tab_2:checked ~ #border #line {
+    margin-top: 5em;
+  }
+  #tab_3:checked ~ #border #line {
+    margin-top: 10em;
+  }
+  #tab_4:checked ~ #border #line {
+    margin-top: 14em;
+  }
+  #tab_5:checked ~ #border #line {
+    margin-top: 21em;
+  }
+  #tab_6:checked ~ #border #line {
+    margin-top: 29.5em;
+  }
+  #tab_7:checked ~ #border #line {
+    margin-top: 33.5em;
+  }
+}
+/*------------------------------этапы разработки РАЗРАБОТКА/шаги/step*/
+.steps-develop-wrap {
+  margin-top: 2em;
+  padding: 2em;
+  min-height: 100vh;
+  align-items: center;
+}
+.steps-develop-wrap h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.steps-develop-wrap .tabs-develop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3em;
+  /*z-index не отмеченных*/
+  /*z-index активных*/
+  /*спрятанный контент при не выбраном элемента*/
+  /*контент при выбраном элемента*/
+}
+.steps-develop-wrap .tabs-develop label:first-child {
+  margin: 0;
+}
+.steps-develop-wrap .tabs-develop .label-develop-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: flex-start;
+  justify-content: center;
+}
+.steps-develop-wrap .tabs-develop .label-develop-wrap p {
+  position: relative;
+}
+.steps-develop-wrap .tabs-develop label {
+  display: block;
+  color: #999999;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  display: flex;
+  line-height: 2em;
+  font-weight: 500;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  border: none;
+  text-align: left;
+}
+.steps-develop-wrap .tabs-develop label:hover {
+  color: tomato;
+  transition: all 0.2s ease-out;
+}
+.steps-develop-wrap .tabs-develop input {
+  display: none;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-1 ~ .label-develop-wrap #tab-dl-l1,
+.steps-develop-wrap .tabs-develop #tab-dl-2 ~ .label-develop-wrap #tab-dl-l2,
+.steps-develop-wrap .tabs-develop #tab-dl-3 ~ .label-develop-wrap #tab-dl-l3,
+.steps-develop-wrap .tabs-develop #tab-dl-4 ~ .label-develop-wrap #tab-dl-l4,
+.steps-develop-wrap .tabs-develop #tab-dl-5 ~ .label-develop-wrap #tab-dl-l5,
+.steps-develop-wrap .tabs-develop #tab-dl-6 ~ .label-develop-wrap #tab-dl-l6,
+.steps-develop-wrap .tabs-develop #tab-dl-7 ~ .label-develop-wrap #tab-dl-l7,
+.steps-develop-wrap .tabs-develop #tab-dl-8 ~ .label-develop-wrap #tab-dl-l8,
+.steps-develop-wrap .tabs-develop #tab-dl-9 ~ .label-develop-wrap #tab-dl-l9 {
+  top: 0;
+  z-index: 3;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-1:checked ~ .label-develop-wrap #tab-dl-l1,
+.steps-develop-wrap .tabs-develop #tab-dl-2:checked ~ .label-develop-wrap #tab-dl-l2,
+.steps-develop-wrap .tabs-develop #tab-dl-3:checked ~ .label-develop-wrap #tab-dl-l3,
+.steps-develop-wrap .tabs-develop #tab-dl-4:checked ~ .label-develop-wrap #tab-dl-l4,
+.steps-develop-wrap .tabs-develop #tab-dl-5:checked ~ .label-develop-wrap #tab-dl-l5,
+.steps-develop-wrap .tabs-develop #tab-dl-6:checked ~ .label-develop-wrap #tab-dl-l6,
+.steps-develop-wrap .tabs-develop #tab-dl-7:checked ~ .label-develop-wrap #tab-dl-l7,
+.steps-develop-wrap .tabs-develop #tab-dl-8:checked ~ .label-develop-wrap #tab-dl-l8,
+.steps-develop-wrap .tabs-develop #tab-dl-9:checked ~ .label-develop-wrap #tab-dl-l9 {
+  color: tomato;
+  top: 0;
+  z-index: 3;
+}
+.steps-develop-wrap .tabs-develop .tabs-develop-cont {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-height: 30em;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-1 ~ .tabs-develop-cont #tab-dl-c1,
+.steps-develop-wrap .tabs-develop #tab-dl-2 ~ .tabs-develop-cont #tab-dl-c2,
+.steps-develop-wrap .tabs-develop #tab-dl-3 ~ .tabs-develop-cont #tab-dl-c3,
+.steps-develop-wrap .tabs-develop #tab-dl-4 ~ .tabs-develop-cont #tab-dl-c4,
+.steps-develop-wrap .tabs-develop #tab-dl-5 ~ .tabs-develop-cont #tab-dl-c5,
+.steps-develop-wrap .tabs-develop #tab-dl-6 ~ .tabs-develop-cont #tab-dl-c6,
+.steps-develop-wrap .tabs-develop #tab-dl-7 ~ .tabs-develop-cont #tab-dl-c7,
+.steps-develop-wrap .tabs-develop #tab-dl-8 ~ .tabs-develop-cont #tab-dl-c8,
+.steps-develop-wrap .tabs-develop #tab-dl-9 ~ .tabs-develop-cont #tab-dl-c9 {
+  position: absolute;
+  transition: all 0.6s ease-in-out;
+  margin-top: -20em;
+  opacity: 0;
+  width: 90%;
+  overflow: hidden;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-1:checked ~ .tabs-develop-cont #tab-dl-c1,
+.steps-develop-wrap .tabs-develop #tab-dl-2:checked ~ .tabs-develop-cont #tab-dl-c2,
+.steps-develop-wrap .tabs-develop #tab-dl-3:checked ~ .tabs-develop-cont #tab-dl-c3,
+.steps-develop-wrap .tabs-develop #tab-dl-4:checked ~ .tabs-develop-cont #tab-dl-c4,
+.steps-develop-wrap .tabs-develop #tab-dl-5:checked ~ .tabs-develop-cont #tab-dl-c5,
+.steps-develop-wrap .tabs-develop #tab-dl-6:checked ~ .tabs-develop-cont #tab-dl-c6,
+.steps-develop-wrap .tabs-develop #tab-dl-7:checked ~ .tabs-develop-cont #tab-dl-c7,
+.steps-develop-wrap .tabs-develop #tab-dl-8:checked ~ .tabs-develop-cont #tab-dl-c8,
+.steps-develop-wrap .tabs-develop #tab-dl-9:checked ~ .tabs-develop-cont #tab-dl-c9 {
+  margin-top: 0;
+  position: relative;
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+  width: 90%;
+  overflow: hidden;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-l6 {
+  margin-right: 1em;
+}
+.steps-develop-wrap .tabs-develop #border-dl {
+  height: 37em;
+  width: 1px;
+  background-color: #cccccc;
+}
+.steps-develop-wrap .tabs-develop #border-dl #line-dl {
+  width: 5px;
+  height: 54px;
+  background-color: #FD0006;
+  margin-left: -2px;
+  margin-top: 35px;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-1:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-2:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-3:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-4:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-5:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-6:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-7:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-8:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+.steps-develop-wrap .tabs-develop #tab-dl-9:checked ~ #border-dl #line-dl {
+  width: 0.3em;
+  height: 3em;
+  background-color: #FD0006;
+  margin-left: -0.125em;
+  transition: all 0.4s ease-in-out;
+}
+@media (min-width: 1200px) {
+  #tab-dl-1:checked ~ #border-dl #line-dl {
+    margin-top: 0.8em;
+  }
+  #tab-dl-2:checked ~ #border-dl #line-dl {
+    margin-top: 5em;
+  }
+  #tab-dl-3:checked ~ #border-dl #line-dl {
+    margin-top: 9em;
+  }
+  #tab-dl-4:checked ~ #border-dl #line-dl {
+    margin-top: 12.7em;
+  }
+  #tab-dl-5:checked ~ #border-dl #line-dl {
+    margin-top: 17em;
+  }
+  #tab-dl-6:checked ~ #border-dl #line-dl {
+    margin-top: 21em;
+  }
+  #tab-dl-7:checked ~ #border-dl #line-dl {
+    margin-top: 25em;
+  }
+  #tab-dl-8:checked ~ #border-dl #line-dl {
+    margin-top: 29em;
+  }
+  #tab-dl-9:checked ~ #border-dl #line-dl {
+    margin-top: 33em;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .steps-wrap .tabs #tab_1:checked ~ #border #line {
-    margin-top: 0.3em;
+  #tab-dl-1:checked ~ #border-dl #line-dl {
+    margin-top: 0.8em;
   }
-  #tab_2:checked ~ #border #line {
-    margin-top: 4.08em;
+  #tab-dl-2:checked ~ #border-dl #line-dl {
+    margin-top: 5em;
   }
-  #tab_3:checked ~ #border #line {
-    margin-top: 9.05em;
+  #tab-dl-3:checked ~ #border-dl #line-dl {
+    margin-top: 9em;
   }
-  #tab_4:checked ~ #border #line {
-    margin-top: 13em;
+  #tab-dl-4:checked ~ #border-dl #line-dl {
+    margin-top: 12.7em;
   }
-  #tab_5:checked ~ #border #line {
-    margin-top: 18.5em;
+  #tab-dl-5:checked ~ #border-dl #line-dl {
+    margin-top: 17em;
   }
-  #tab_6:checked ~ #border #line {
+  #tab-dl-6:checked ~ #border-dl #line-dl {
+    margin-top: 21em;
+  }
+  #tab-dl-7:checked ~ #border-dl #line-dl {
     margin-top: 25em;
   }
-  #tab_7:checked ~ #border #line {
+  #tab-dl-8:checked ~ #border-dl #line-dl {
     margin-top: 29em;
+  }
+  #tab-dl-9:checked ~ #border-dl #line-dl {
+    margin-top: 33em;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .steps-wrap .tabs .label-wrap {
-    width: 40%;
-    padding-left: 1em;
+  .steps-develop-wrap .tabs-develop .label-develop-wrap {
+    width: 35%;
   }
-  .steps-wrap .tabs #tab_1:checked ~ #border #line {
-    margin-top: 0;
+  #tab-dl-1:checked ~ #border-dl #line-dl {
+    margin-top: 0.8em;
   }
-  #tab_2:checked ~ #border #line {
-    margin-top: 4em;
+  #tab-dl-2:checked ~ #border-dl #line-dl {
+    margin-top: 5em;
   }
-  #tab_3:checked ~ #border #line {
-    margin-top: 8em;
+  #tab-dl-3:checked ~ #border-dl #line-dl {
+    margin-top: 9em;
   }
-  #tab_4:checked ~ #border #line {
-    margin-top: 12em;
+  #tab-dl-4:checked ~ #border-dl #line-dl {
+    margin-top: 12.7em;
   }
-  #tab_5:checked ~ #border #line {
+  #tab-dl-5:checked ~ #border-dl #line-dl {
     margin-top: 17em;
   }
-  #tab_6:checked ~ #border #line {
+  #tab-dl-6:checked ~ #border-dl #line-dl {
+    margin-top: 21em;
+  }
+  #tab-dl-7:checked ~ #border-dl #line-dl {
     margin-top: 25em;
   }
-  #tab_7:checked ~ #border #line {
+  #tab-dl-8:checked ~ #border-dl #line-dl {
     margin-top: 29em;
+  }
+  #tab-dl-9:checked ~ #border-dl #line-dl {
+    margin-top: 33em;
   }
 }
 @media (max-width: 767px) {
