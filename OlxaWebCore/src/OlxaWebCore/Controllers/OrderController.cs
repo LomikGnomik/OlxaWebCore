@@ -171,7 +171,7 @@ namespace OlxaWebCore.Controllers
 
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(url);
-            byte[] cred = Encoding.UTF8.GetBytes("manager@olxaweb.ru:olxaweb");
+            byte[] cred = Encoding.UTF8.GetBytes("email:password");
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(cred));
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 

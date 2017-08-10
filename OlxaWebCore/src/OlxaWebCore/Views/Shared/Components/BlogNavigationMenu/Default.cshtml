@@ -19,7 +19,9 @@
                    asp-route-page=1 >
 
                     @category
-                <span>10</span>
+
+                <span>@ViewBag.pcsInCategory[category]</span>
+
                 </a>
             </li>
         }

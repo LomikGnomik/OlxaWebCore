@@ -25,6 +25,14 @@ namespace OlxaWebCore.Components
                 .Distinct()
                 .OrderBy(x => x);
 
+            Dictionary<string, int> pcsInCategory = new Dictionary<string, int>();
+            foreach (var cate in Category)
+            {
+                int pcs = repository.Posts.Count(x => x.Category == cate & x.Published == true);
+                pcsInCategory.Add(cate, pcs);
+            }
+            ViewBag.pcsInCategory = pcsInCategory;
+
             return View(Category);
         }
     }
