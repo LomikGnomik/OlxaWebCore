@@ -53,5 +53,17 @@ namespace OlxaWebCore.Controllers
             var filepath = Path.Combine("~/Files/Document", "Brief_Olxa.docx");
             return File(filepath, "text/plain", "Brief_Olxa.docx");
         }
+        public IActionResult FormTemplate()
+        {
+            return View();
+        }
+        public IActionResult FormCreate()
+        {
+            return View();
+        }
+        public IActionResult FormDevelop()
+        {
+            return View();
+        }
     }
 }

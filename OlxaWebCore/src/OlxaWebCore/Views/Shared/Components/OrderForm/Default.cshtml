@@ -6,24 +6,8 @@
         <div class="h2">Оставить заявку</div>
         <div class="small">
             Пишите нам на почту <a href="mailto:info@olxaweb.ru" class="mail">info@olxaweb.ru</a> или заполните форму ниже:
-        </div>
-        <div class="brief-wrap">
-            <a asp-controller="Home" asp-action="DownloadBrief" class="btn btn-more save-brief"><i class="fa fa-file-text"></i> скачать бриф</a>
-            <p>
-                Скачать бриф на разработку сайта <br /> и заполнить самостоятельно
-            </p>
-        </div>
-        <script id="bx24_form_inline" data-skip-moving="true">
-        (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
-                (w[b].forms=w[b].forms||[]).push(arguments[0])};
-                if(w[b]['forms']) return;
-                s=d.createElement('script');r=1*new Date();s.async=1;s.src=u+'?'+r;
-                h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://olxaweb.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
-
-        b24form({"id":"8","lang":"ru","sec":"0unjid","type":"inline"});
-        </script>
-    @*    @using (Html.BeginForm("NewOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        </div>    
+        @using (Html.BeginForm("NewOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         <input type="text" name="name" placeholder="Ваше имя" />
         <input type="email" name="email" placeholder="Email" />
@@ -41,15 +25,15 @@
                     <span class="js-fileName">Прикрепить</span>
                 </label>
             </div>
-            <button type="submit" id="continue" class="btn btn-ghost-more btn-long">Отправить!</button>
+            <button type="submit"  class="continue btn btn-ghost-more btn-long">Отправить!</button>
         </div>
 
         <div class="confidentiality">
-            <input type="checkbox" checked name="agreed-check" id="agree" />
+            <input type="checkbox" checked name="agreed-check" id="agree" class="agree" />
             <label for="agree">Я согласен с условиями политики конфиденциальности </label>
             <a href="#" class="link-more">Подробнее</a>
         </div>
-    }*@
+    }
 
     </div>
 </div>

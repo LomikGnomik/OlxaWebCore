@@ -149,13 +149,13 @@ if ($('.filter-grid').length > 0) {
 
 /*-------------------этапы/шаги разработки/страница разработки-----------------------*/
 $(function () {
-    $("#tabs").tabs({
+    $("#develop-tabs").tabs({
         show: { effect: "blind", direction: "right", duration: 300 }
     });
-    $("#accordion").accordion();
+    $("#develop-accordion").accordion();
 
-    var btn = $('#accordion li a');
-    var wrapper = $('#accordion li');
+    var btn = $('#develop-accordion li a');
+    var wrapper = $('#develop-accordion li');
 
     $(btn).on('click', function () {
         $(btn).removeClass('active');
@@ -166,12 +166,11 @@ $(function () {
     });
 });
 
-
 /*-----------------согласие на обработку информации----------------------------*/
 $(document).ready(function () {
-    $('#continue').prop('disabled', false);
-    $('#agree').change(function () {
-        $('#continue').prop('disabled', function (i, val) {
+    $('.continue').prop('disabled', false);
+    $('.agree').change(function () {
+        $('.continue').prop('disabled', function (i, val) {
             return !val;
         })
     });
@@ -360,3 +359,5 @@ accordWithPage();
      $('.slide-left').fadeIn( "slow", "linear" );
     }); //faq link fade in and out
   }); //document ready*/
+
+

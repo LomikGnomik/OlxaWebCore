@@ -134,13 +134,8 @@
                 @*<div class="small hidden">
                         @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
                     </div>*@
-                <div class="index-portfolio-galery">
+                
                     @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
-                </div>
-
-                <div class="index-portfolio-galery small hidden">
-                    @Html.Partial("_Index_PortfolioSmallPartialView")
-                </div>
             </div>
         </div>
 
