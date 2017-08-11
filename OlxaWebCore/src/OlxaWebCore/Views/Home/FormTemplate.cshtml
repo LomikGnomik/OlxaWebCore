@@ -1,0 +1,136 @@
+﻿@{
+    ViewData["Title"] = "Форма заявки на покупку сайта";
+}
+@section scripts{
+
+    <script src="~/js/FormScript.js"></script>
+
+}
+<div action class="form-template-wrapper">
+    <div class="container">
+        <div class="fr-tmp-wrap">
+            <div class="fr-tmp-image">
+                <img src="~/images/blog/post01.jpg" alt="Название сайта" />
+            </div>
+            <div class="fr-tmp-title">
+                <h2>Название сайта</h2>
+                <a href="#">Демо</a>
+            </div>
+        </div>
+        <form class="form form-tamplate">
+            <div class="form-tmp-wrap">
+                <article class="form-tmp">
+                    <div class="info-wrap">
+                        <div class="name">
+                            <p class="field required">
+                                <label class="label required" for="name">Ваше имя</label>
+                                <input class="text-input" id="name" name="name" required tabindex="1" type="text">
+                            </p>
+                        </div>
+                        <div class="contacts">
+                            <p class="field required half">
+                                <label class="label" for="email">E-mail</label>
+                                <input class="text-input" id="email" name="email" required tabindex="2" type="email">
+                            </p>
+                            <p class="field half">
+                                <label class="label" for="fone">Телефон</label>
+                                <input class="text-input" id="fone" name="fone" tabindex="3" type="tel">
+                            </p>
+                        </div>
+                    </div>
+                    <p class="field">
+                        <label class="label" for="about">Комментарий</label>
+                        <textarea class="textarea" id="about" name="about" tabindex="12"></textarea>
+                    </p>
+                    <p class="field half">
+                        <button type="submit" class="continue button">Отправить!</button>
+                    </p>
+                    <div class="confidentiality field checkboxes half">
+                        <input type="checkbox" checked name="agreed-check" class="agree checkbox-input" id="agree-tmp" />
+                        <label for="agree-tmp" class="checkbox-label">
+                            <span>
+                                Нажимая кнопку «Отправить!», я даю свое согласие на обработку моих
+                                персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей,
+                                определенных в Согласии на обработку персональных данных
+                            </span>
+                            <a href="#" class="link-more">Подробнее</a>
+                        </label>
+                    </div>
+                </article>
+                <aside class="form-tmp-sidebar">
+                    <div class="tmp-sidebar">
+                        <div class="tmp-order-list">
+                            <ul>
+                                <li>
+                                    <h3>Сайт</h3>
+                                    <span>15 000</span>
+                                </li>
+                                <li>
+                                    <h3>СЕО</h3>
+                                    <span>5 000</span>
+                                </li>
+                                <li>
+                                    <h3>Наполнение</h3>
+                                    <span>5 000</span>
+                                </li>
+                                <li class="total">
+                                    <h3>Итого:</h3>
+                                    <span>20 000</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tmp-order-btn">
+                            <p class="field half">
+                                <button type="submit" class="continue button">Отправить!</button>
+                            </p>
+                            <div class="confidentiality field checkboxes half">
+                                <input type="checkbox" checked name="agreed-check" class="agree checkbox-input" id="agree-tmp-sm" />
+                                <label for="agree-tmp-sm" class="checkbox-label">
+                                    <span>
+                                        Нажимая кнопку «Отправить!», я даю свое согласие на обработку моих
+                                        персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей,
+                                        определенных в Согласии на обработку персональных данных
+                                    </span>
+                                    <a href="#" class="link-more">Подробнее</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="accordion-tmp">
+                <ul class="accordion-list">
+                    <li>
+                        <input type="checkbox">
+                        <i></i>
+                        <h2 class="title_block">Дополнительные услуги</h2>
+                        <div class="tmp-service-content">
+                            <ul class="field checkboxes half">
+                                <li class="checkbox">
+                                    <input class="checkbox-input" id="choice-1" name="choice-1" tabindex="10" type="checkbox" value="1">
+                                    <label class="checkbox-label" for="choice-1">Услуга 1</label>
+                                </li>
+                                <li class="checkbox">
+                                    <input class="checkbox-input" id="choice-2" name="choice-2" tabindex="11" type="checkbox" value="2">
+                                    <label class="checkbox-label" for="choice-2">Услуга 2</label>
+                                </li>
+                                <li class="checkbox">
+                                    <input class="checkbox-input" id="choice-3" name="choice-3" tabindex="12" type="checkbox" value="3">
+                                    <label class="checkbox-label" for="choice-3">Услуга 3</label>
+                                </li>
+                                <li class="checkbox">
+                                    <input class="checkbox-input" id="choice-4" name="choice-3" tabindex="13" type="checkbox" value="4">
+                                    <label class="checkbox-label" for="choice-4">Услуга 4</label>
+                                </li>
+                                <li class="checkbox">
+                                    <input class="checkbox-input" id="choice-5" name="choice-5" tabindex="13" type="checkbox" value="4">
+                                    <label class="checkbox-label" for="choice-5">Услуга 5</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>

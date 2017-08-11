@@ -10,8 +10,12 @@
                 {
                     <div class="portfolio">
                         <img src="~/Files/Portfolio/Image/Preview/@site.Image" alt="@site.Title"><br>
-                        <span class="txt">@site.Title</span>
-                        <div class="ombra"></div>
+                        <span class="txt">
+                            @site.Title
+                            <a class="txt-link" asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID">Подробнее</a>
+                        </span>
+
+                        @*<div class="ombra"></div>*@
                     </div>
                 }
             </div>

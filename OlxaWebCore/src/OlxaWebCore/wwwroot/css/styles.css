@@ -121,6 +121,7 @@ input[type=search]:focus {
 }
 textarea {
   resize: vertical;
+  height: 4em;
 }
 /*-----------------------------------------------кнопки*/
 .btn {
@@ -161,7 +162,7 @@ textarea {
 }
 button[type="submit"]:disabled {
   background: #999999;
-  color: #3c6eaa;
+  color: #333333;
   border: 2px solid #cccccc;
   cursor: default;
   opacity: 0.3;
@@ -3966,7 +3967,17 @@ section.price-solution .solution-item-question .btn {
   padding-top: 20px;
   padding-left: 2%;
   height: 4em;
-  background: #f7f7f7;
+  margin-right: 2em;
+}
+.index-wrap section.portfolio-index .galery-wrap .index-portfolio-galery .txt-link {
+  display: inline-block;
+  color: #3c6eaa;
+  border-bottom: 1px dashed #3c6eaa;
+  margin-left: 2em;
+}
+.index-wrap section.portfolio-index .galery-wrap .index-portfolio-galery .txt-link:hover {
+  color: #2f5d84;
+  border-bottom-color: #2f5d84;
 }
 .index-wrap section.portfolio-index .galery-wrap .index-portfolio-galery #loading {
   width: 100%;
@@ -5176,7 +5187,7 @@ label.popup_link:hover {
   max-width: 40em;
   margin: 0 auto;
 }
-.develop-wrapper section.develop .step-develop-wrap #tabs {
+.develop-wrapper section.develop .step-develop-wrap #develop-tabs {
   width: 700px;
   display: flex;
   position: relative;
@@ -5195,6 +5206,11 @@ label.popup_link:hover {
   vertical-align: top;
   width: 50%;
 }
+.develop-wrapper section.develop .step-develop-wrap ul li {
+  max-width: 100%;
+  min-width: 100%;
+  background: #fff;
+}
 .develop-wrapper section.develop .step-develop-wrap ul li a {
   position: relative;
   display: block;
@@ -5205,10 +5221,9 @@ label.popup_link:hover {
   padding: 20px 5px;
   z-index: 1;
   opacity: .5;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  background: #fff;
+  border: 1px solid transparent;
 }
 .develop-wrapper section.develop .step-develop-wrap ul li:focus,
 .develop-wrapper section.develop .step-develop-wrap a:focus {
@@ -5343,6 +5358,779 @@ label.popup_link:hover {
 }
 .develop-wrapper section.develop .step-develop-wrap #tabs-3 {
   background: #1b1b1b;
+}
+/*------------------------------------------------------------------------------------------Формы заявки*/
+form.form .name {
+  padding-bottom: 1.5em;
+  background: transparent;
+}
+form.form .contacts {
+  display: flex;
+  background: transparent;
+  justify-content: space-between;
+}
+form.form .contacts .field {
+  width: 45%;
+}
+form.form .confidentiality {
+  margin-bottom: 1em;
+}
+form.form .confidentiality span {
+  font-size: 0.7em;
+}
+form.form .confidentiality .link-more {
+  color: #3c6eaa;
+  border-bottom: 1px dashed #3c6eaa;
+  font-size: 0.7em;
+  display: inline-block;
+}
+form.form .confidentiality .link-more:hover {
+  color: #2f5d84;
+  border-bottom-color: #2f5d84;
+}
+form.form .text-input,
+form.form .textarea,
+form.form .select,
+form.form .customSelect,
+form.form .label,
+form.form .message,
+form.form .button {
+  appearance: none;
+  outline: none;
+  line-height: normal;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+form.form .text-input,
+form.form .textarea,
+form.form .select,
+form.form .customSelect {
+  font: inherit;
+  line-height: normal;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding-left: 0;
+  border-bottom-color: #ecf0f1;
+  background: transparent;
+  outline: none;
+  color: white;
+}
+form.form .text-input:placeholder,
+form.form .textarea:placeholder,
+form.form .select:placeholder,
+form.form .customSelect:placeholder {
+  color: #3c6eaa;
+}
+form.form .text-input:-webkit-autofill,
+form.form .textarea:-webkit-autofill,
+form.form .select:-webkit-autofill,
+form.form .customSelect:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #14103B inset;
+  -webkit-text-fill-color: white;
+  border-top-color: #14103B;
+  border-left-color: #14103B;
+  border-right-color: #14103B;
+}
+form.form .required.text-input,
+form.form .required.textarea,
+form.form .required.select,
+form.form .required.customSelect,
+form.form [required].text-input,
+form.form [required].textarea,
+form.form [required].select,
+form.form [required].customSelect {
+  border-bottom-color: #ecf0f1;
+}
+form.form .error.text-input,
+form.form .error.textarea,
+form.form .error.select,
+form.form .error.customSelect,
+form.form .error .form .text-input,
+form.form .error .text-input,
+form.form .error .form .textarea,
+form.form .error .textarea,
+form.form .error .form .select,
+form.form .error .select,
+form.form .error .customSelect {
+  border-color: transparent transparent #FD0006 transparent;
+}
+form.form .text-input:active,
+form.form .textarea:active,
+form.form .select:active,
+form.form .customSelect:active,
+form.form .customSelect.customSelectFocus,
+form.form .text-input:focus,
+form.form .textarea:focus,
+form.form .select:focus,
+form.form .customSelect:focus {
+  border-color: transparent transparent #06c438 transparent;
+}
+form.form .label,
+form.form .message {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  padding-left: 0;
+}
+form.form .label {
+  top: 0;
+  left: 0;
+  color: #ecf0f1;
+}
+form.form .active .form .label,
+form.form .active .label {
+  font-size: 0.75em;
+  padding: 0;
+}
+form.form .focus .form .label,
+form.form .focus .label {
+  color: #5688c3;
+}
+form.form .focus:not(.active) .form .label,
+form.form .focus:not(.active) .label {
+  transition: font 0.2s ease;
+}
+form.form .message {
+  bottom: 0;
+  right: 0;
+  color: #FD0006;
+  font-size: 0.75em;
+  padding: 0;
+  display: none;
+}
+form.form .error .form .message,
+form.form .error .message {
+  display: block;
+}
+form.form .checkbox-input,
+form.form .option-input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+form.form .checkbox-input + label,
+form.form .option-input + label {
+  display: inline-block;
+  cursor: pointer;
+  color: #3c6eaa;
+  user-select: none;
+  padding-left: 2em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+form.form .checkbox-input + label:before,
+form.form .option-input + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid;
+  width: 1em;
+  height: 1em;
+  transition: box-shadow 0.2s ease-in;
+}
+form.form .checkbox-input + label:after,
+form.form .option-input + label:after {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0.25em;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+  width: 0.5em;
+  height: 0.25em;
+  transform: rotate(-45deg);
+}
+form.form .checkbox-input:focus + label,
+form.form .option-input:focus + label,
+form.form .checkbox-input:active + label,
+form.form .option-input:active + label {
+  color: #5688c3;
+}
+form.form .checkbox-input:checked + label,
+form.form .option-input:checked + label {
+  color: white;
+}
+form.form .checkbox-input:checked + label:before,
+form.form .option-input:checked + label:before {
+  box-shadow: inset 0px 0px 0px 0.5em #3c6eaa;
+  color: #3c6eaa;
+}
+form.form .checkbox-input:checked + label:after,
+form.form .option-input:checked + label:after {
+  color: #3c6eaa;
+}
+form.form .checkbox-input:checked:focus + label:before,
+form.form .option-input:checked:focus + label:before,
+form.form .checkbox-input:checked:active + label:before,
+form.form .option-input:checked:active + label:before {
+  box-shadow: inset 0px 0px 0px 0.5em #5688c3;
+  color: #5688c3;
+}
+form.form .option-input + label:before {
+  border-radius: 50%;
+}
+form.form .option-input + label:after {
+  top: 1px;
+  left: 1px;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: 3px solid #14103B;
+  border-radius: 50%;
+  transform: none;
+}
+form.form .button {
+  font: inherit;
+  font-size: 1em;
+  line-height: normal;
+  cursor: pointer;
+  background: transparent;
+  color: #3c6eaa;
+  border: 1px solid #3c6eaa;
+  text-align: center;
+  height: 3.5em;
+  width: 100%;
+}
+form.form .button:hover,
+form.form .button:focus,
+form.form .button:active {
+  color: white;
+  border-color: white;
+}
+form.form .button:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+form.form button[type="submit"]:disabled {
+  cursor: default;
+  border-color: #999999;
+  color: #999999;
+}
+form.form .form {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+form.form .field {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  padding-bottom: 1.5em;
+}
+@media screen and (min-width: 40em) {
+  form.form .form .field.half {
+    width: calc(48%);
+  }
+}
+form.form .field.last {
+  margin-left: auto;
+}
+form.form .textarea {
+  max-width: 100%;
+  border-right-color: #ecf0f1;
+}
+form.form .textarea:active,
+form.form .textarea:focus {
+  border-color: transparent #06c438 #06c438 transparent;
+}
+form.form .select {
+  text-indent: 0.01px;
+  text-overflow: "" !important;
+}
+form.form .select::-ms-expand {
+  display: none;
+}
+form.form .checkboxes,
+form.form .options {
+  padding: 0;
+  list-style-type: none;
+}
+form.form .checkbox,
+form.form .option {
+  position: relative;
+}
+form.form .checkbox + *,
+form.form .option + * {
+  margin-top: 0.5em;
+}
+form.form .customSelect:after {
+  content: "";
+  pointer-events: none;
+  width: 1em;
+  height: 1em;
+  border-style: solid;
+  border-color: #3c6eaa;
+  border-width: 0 1px 1px 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -1em;
+  right: 0;
+  transform-origin: 0 0;
+  transform: rotate(45deg);
+}
+form.form .customSelect.customSelectFocus:after {
+  border-color: #5688c3;
+}
+/*---------------Форма заявки на шаблонный/готовый сайт*/
+.form-template-wrapper {
+  width: 100%;
+  background: #000;
+  color: #ecf0f1;
+  padding-top: 8em;
+}
+.form-template-wrapper .fr-tmp-wrap .fr-tmp-image {
+  width: 100%;
+  max-height: 15em;
+  overflow: hidden;
+  padding: 1.5em 0;
+}
+.form-template-wrapper .fr-tmp-wrap .fr-tmp-image img {
+  width: 100%;
+}
+.form-template-wrapper .fr-tmp-wrap .fr-tmp-title {
+  text-align: center;
+  padding: 1.5em 0;
+}
+.form-template-wrapper .fr-tmp-wrap .fr-tmp-title h2 {
+  padding-bottom: 1em;
+}
+.form-template-wrapper .fr-tmp-wrap .fr-tmp-title a {
+  color: #3c6eaa;
+  border-bottom: 1px dashed #3c6eaa;
+}
+.form-template-wrapper .fr-tmp-wrap .fr-tmp-title a:hover {
+  color: #5688c3;
+  border-bottom-color: #5688c3;
+}
+.form-template-wrapper .form.form-tamplate {
+  width: 100%;
+  padding: 2em 0;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap article.form-tmp {
+  width: 100%;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar {
+  margin-left: 2em;
+  width: 100%;
+  max-width: 20em;
+  background: transparent;
+  color: #ecf0f1;
+  border-left: 1px solid #ecf0f1;
+  border-bottom: 1px solid #ecf0f1;
+  padding: 1.5em;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar .tmp-sidebar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar .tmp-sidebar .tmp-order-list {
+  height: 100%;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar .tmp-sidebar .tmp-order-list ul {
+  height: 100%;
+  padding: 1em 0 3em 0;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar .tmp-sidebar .tmp-order-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar .tmp-sidebar .tmp-order-list li h3 {
+  color: #3c6eaa;
+  margin-right: 1em;
+  font-size: 1em;
+  font-weight: 600;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar .tmp-sidebar .tmp-order-list li span:after {
+  content: "\20BD";
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar .tmp-sidebar .tmp-order-list .total {
+  border-top: 1px solid #3c6eaa;
+  padding-top: 0.5em;
+  margin-top: 1em;
+  font-weight: 900;
+}
+.form-template-wrapper .form.form-tamplate .form-tmp-wrap aside.form-tmp-sidebar .tmp-sidebar .tmp-order-list .total h3 {
+  font-weight: 900;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp {
+  width: 100%;
+  min-height: 0;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  /*стрелочка
+            h2.title_block:after {
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-top-color: @color-gray;
+                border-width: 10px;
+                margin-left: -10px;
+                margin-top: 2.4em;
+                z-index: 2;
+            }*/
+  /*блоки с содержанием */
+  /*указатель переключения состояния аккордеона */
+  /*указатель */
+  /* Добавляем элемент трансформации указателя при переключении */
+  /* Когда у флажка установлен checked блок с содержанием скрыт*/
+  /* переход между двумя состояниями указателя */
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  padding: 0.6em 0.2em;
+  cursor: pointer;
+  color: #3c6eaa;
+  background: transparent;
+  border-bottom: 1px solid #3c6eaa;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp .tmp-service-content {
+  position: relative;
+  overflow: hidden;
+  max-height: 80em;
+  background: #000;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp .tmp-service-content .checkboxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.5em 0;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp .tmp-service-content .checkboxes li.checkbox {
+  width: 25%;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp .tmp-service-content p {
+  color: #e5e5e5;
+  font-size: 0.5em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  padding: 0 1.2em;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /*ожидание начала анимации*/
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list :nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list :nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list :nth-of-type(3) {
+  animation-delay: 1s;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 1em;
+  /* расположим указатель на панели заголовка справа */
+  right: 1.5em;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li i:before,
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li i:after {
+  content: "";
+  position: absolute;
+  background: #3c6eaa;
+  width: 0.1875em;
+  height: 0.5625em;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li input[type=checkbox]:checked ~ div.tmp-service-content {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+.form-template-wrapper .form.form-tamplate .accordion-tmp div.content,
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li i:before,
+.form-template-wrapper .form.form-tamplate .accordion-tmp ul.accordion-list li i:after {
+  transition: all 0.5s ease-in-out;
+}
+/*---------------Форма заявки на создание сайта*/
+.form-create-wrapper {
+  width: 100%;
+  background: #000;
+  color: #ecf0f1;
+  padding-top: 8em;
+}
+.form-create-wrapper .fr-cr-wrap .fr-cr-image {
+  width: 100%;
+  max-height: 15em;
+  overflow: hidden;
+  padding: 1.5em 0;
+}
+.form-create-wrapper .fr-cr-wrap .fr-cr-image img {
+  width: 100%;
+}
+.form-create-wrapper .fr-cr-wrap .fr-cr-title {
+  text-align: center;
+  padding: 1.5em 0;
+}
+.form-create-wrapper .fr-cr-wrap .fr-cr-title h2 {
+  padding: 1em;
+}
+.form-create-wrapper .fr-cr-wrap .fr-cr-title a {
+  color: #3c6eaa;
+  border-bottom: 1px dashed #3c6eaa;
+}
+.form-create-wrapper .fr-cr-wrap .fr-cr-title a:hover {
+  color: #5688c3;
+  border-bottom-color: #5688c3;
+}
+.form-create-wrapper .form.form-create {
+  width: 100%;
+  padding: 2em 0;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap article.form-cr {
+  width: 100%;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar {
+  margin-left: 2em;
+  width: 100%;
+  max-width: 20em;
+  background: transparent;
+  color: #ecf0f1;
+  border-left: 1px solid #ecf0f1;
+  border-bottom: 1px solid #ecf0f1;
+  padding: 1.5em;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar .cr-sidebar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar .cr-sidebar .cr-order-list {
+  height: 100%;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar .cr-sidebar .cr-order-list ul {
+  height: 100%;
+  padding: 1em 0 3em 0;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar .cr-sidebar .cr-order-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar .cr-sidebar .cr-order-list li h3 {
+  color: #3c6eaa;
+  margin-right: 1em;
+  font-size: 1em;
+  font-weight: 600;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar .cr-sidebar .cr-order-list li span:after {
+  content: "\20BD";
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar .cr-sidebar .cr-order-list .total {
+  border-top: 1px solid #3c6eaa;
+  padding-top: 0.5em;
+  margin-top: 1em;
+  font-weight: 900;
+}
+.form-create-wrapper .form.form-create .form-cr-wrap aside.form-cr-sidebar .cr-sidebar .cr-order-list .total h3 {
+  font-weight: 900;
+}
+.form-create-wrapper .form.form-create .accordion-cr {
+  width: 100%;
+  min-height: 0;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  /*стрелочка
+            h2.title_block:after {
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-top-color: @color-gray;
+                border-width: 10px;
+                margin-left: -10px;
+                margin-top: 2.4em;
+                z-index: 2;
+            }*/
+  /*блоки с содержанием */
+  /*указатель переключения состояния аккордеона */
+  /*указатель */
+  /* Добавляем элемент трансформации указателя при переключении */
+  /* Когда у флажка установлен checked блок с содержанием скрыт*/
+  /* переход между двумя состояниями указателя */
+}
+.form-create-wrapper .form.form-create .accordion-cr h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  padding: 0.6em 0.2em;
+  cursor: pointer;
+  color: #3c6eaa;
+  background: transparent;
+  border-bottom: 1px solid #3c6eaa;
+}
+.form-create-wrapper .form.form-create .accordion-cr .cr-service-content {
+  position: relative;
+  overflow: hidden;
+  max-height: 80em;
+  background: #000;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.form-create-wrapper .form.form-create .accordion-cr .cr-service-content .checkboxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.5em 0;
+}
+.form-create-wrapper .form.form-create .accordion-cr .cr-service-content .checkboxes li.checkbox {
+  width: 25%;
+}
+.form-create-wrapper .form.form-create .accordion-cr .cr-service-content p {
+  color: #e5e5e5;
+  font-size: 0.5em;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  padding: 0 1.2em;
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /*ожидание начала анимации*/
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list :nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list :nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list :nth-of-type(3) {
+  animation-delay: 1s;
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 1em;
+  /* расположим указатель на панели заголовка справа */
+  right: 1.5em;
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li i:before,
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li i:after {
+  content: "";
+  position: absolute;
+  background: #3c6eaa;
+  width: 0.1875em;
+  height: 0.5625em;
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li input[type=checkbox]:checked ~ div.cr-service-content {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+.form-create-wrapper .form.form-create .accordion-cr div.content,
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li i:before,
+.form-create-wrapper .form.form-create .accordion-cr ul.accordion-list li i:after {
+  transition: all 0.5s ease-in-out;
 }
 /*------------------------------------------------------------------------------Аккордион*/
 .accordion {
@@ -5485,131 +6273,104 @@ label.popup_link:hover {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  /* .info {
-        display: flex;
-        justify-content: space-between;
-
-        .left {
-            display: inline-block;
-            // float: left !important;
-        }
-
-        .confidentiality {
-            display: flex;
-        }
-    }
-    a.link-more {
-        color: @color-more;
-        text-decoration: underline;
-
-        &:hover {
-            color: @color-more-lighter1;
-        }
-    }
-    form {
-        // width: 80%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-
-        input {
-            width: 100%;
-        }
-
-        input[type="checkbox"] {
-            width: 1em;
-        }
-
-
-        input[type="text"], [type="email"], textarea {
-            background: #000 !important;
-            .border;
-            color: #fff;
-        }
-    }
-    .append > input[type="file"] {
-        position: absolute;
-        width: 0;
-        height: 0;
+  /*.crm-webform-body {
         padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        border: 0;
     }
-    .append {
-        display: inline-block;
-        height: 3em;
-        line-height: 2.8em;
-        font-size: 1em;
-        font-weight: 600;
-        color: #fff;
-        text-align: center;
-        vertical-align: middle;
-        text-decoration: none;
-        padding: 0 1.56em;
-        margin: 0.625em 0;
-        margin-right: 4em;
-        white-space: nowrap;
-        user-select: none;
-        transition: color 0.3s ease-out, background-color 0.3s ease-out;
-        min-width: 3.75em;
-        position: relative;
-        background: @color-gray-dark;
+
+    .crm-webform-input {
+        max-width: 100%;
+    }
+
+    .crm-webform-error .crm-webform-input + .crm-webform-tooltip-bottom-right,
+    .crm-webform-error .crm-webform-textarea textarea + .crm-webform-tooltip-bottom-right {
+        top: -18px;
+    }
+
+    .crm-webform-iframe,
+    .flexible-middle-width .content-wrap,
+    .page-theme-transparent .content {
+        background: #000;
+    }
+
+    .crm-webform-header-container {
+        background: #000;
+        padding: 0;
+    }
+
+    .crm-webform-header {
+        color: #f8f6f2;
+    }
+
+    .crm-webform-label {
+        display: none;
+    }
+
+    #field_LEAD_UF_CRM_1500904689 {
+        color: #ccc;
+    }
+
+    .crm-webform-label-content {
+        background: none;
+    }
+
+    .crm-webform-input:hover,
+    .crm-webform-input:focus,
+    .crm-webform-select:hover select,
+    .crm-webform-select:focus select,
+    .crm-webform-textarea:hover textarea,
+    .crm-webform-textarea:focus textarea,
+    .crm-webform-checkbox-container:hover i,
+    .crm-webform-checkbox-container:focus i {
+        border-color: #06c438;
+    }
+
+    .crm-webform-active mark {
+        border-color: #06c438;
+    }
+
+    label.crm-webform-input-label:focus i {
+        color: #06c438;
+    }
+
+    .crm-webform-file-upload input[type=file]:hover,
+    .crm-webform-file-upload input[type=file]:focus,
+    .crm-webform-file-upload input[type=file]:active {
+        border-color: #06c438;
+    }
+
+    .crm-webform-file-upload .crm-webform-file-button {
+        background: #0d9706;
+        color: #f8f6f2;
+    }
+
+    .crm-webform-file-upload .crm-webform-file-button:hover {
+        background: #06c438;
+    }
+
+    .crm-webform-file-text-field {
+        background: transparent;
+    }
+
+    .crm-webform-input + i:after {
+        color: #06c438;
+        background: #000000;
+    }
+
+    button.crm-webform-submit-button {
+        border: 2px solid #06c438;
+        background: none;
+        color: #06c438;
         width: 100%;
-        color: #fff;
-        cursor: pointer;
-        box-shadow: 0 1px 3px darken(@color-gray-dark,10);
-
-
-
-        .input-file {
-            width: 0.1px;
-            height: 0.1px;
-            opacity: 0;
-            overflow: hidden;
-            position: absolute;
-            z-index: -1;
-        }
-
-
-
-        .js-labelFile {
-            display: inline-block;
-            width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            padding: 0 10px;
-            cursor: pointer;
-
-
-
-            .icon:before {
-                //font-awesome
-                content: "\f093";
-            }
-
-
-
-            &.has-file {
-
-                .icon:before {
-                    //font-awesome
-                    content: "\f00c";
-                    color: @color-more;
-                }
-            }
-        }
-
-
-
-        .append-file-name {
-            width: 100%;
-        }
     }
-    .btn-form-group {
-        //.row
-        justify-content: space-between;
+
+    button.crm-webform-submit-button:hover {
+        background: #06c438;
+        color: #fff;
+    }
+
+    button.crm-webform-submit-button:active {
+        background: #0d9706;
+        color: #fff;
     }*/
 }
 .form-wrapper .container-form {
@@ -5644,85 +6405,102 @@ label.popup_link:hover {
 .form-wrapper p {
   margin-top: 0.8em;
 }
-.form-wrapper .crm-webform-body {
-  padding: 0;
+.form-wrapper .info {
+  display: flex;
+  justify-content: space-between;
 }
-.form-wrapper .crm-webform-input {
-  max-width: 100%;
+.form-wrapper .info .left {
+  display: inline-block;
 }
-.form-wrapper .crm-webform-error .crm-webform-input + .crm-webform-tooltip-bottom-right,
-.form-wrapper .crm-webform-error .crm-webform-textarea textarea + .crm-webform-tooltip-bottom-right {
-  top: -18px;
+.form-wrapper .info .confidentiality {
+  display: flex;
 }
-.form-wrapper .crm-webform-iframe,
-.form-wrapper .flexible-middle-width .content-wrap,
-.form-wrapper .page-theme-transparent .content {
-  background: #000;
-}
-.form-wrapper .crm-webform-header-container {
-  background: #000;
-  padding: 0;
-}
-.form-wrapper .crm-webform-header {
-  color: #f8f6f2;
-}
-.form-wrapper .crm-webform-label {
-  display: none;
-}
-.form-wrapper #field_LEAD_UF_CRM_1500904689 {
-  color: #ccc;
-}
-.form-wrapper .crm-webform-label-content {
-  background: none;
-}
-.form-wrapper .crm-webform-input:hover,
-.form-wrapper .crm-webform-input:focus,
-.form-wrapper .crm-webform-select:hover select,
-.form-wrapper .crm-webform-select:focus select,
-.form-wrapper .crm-webform-textarea:hover textarea,
-.form-wrapper .crm-webform-textarea:focus textarea,
-.form-wrapper .crm-webform-checkbox-container:hover i,
-.form-wrapper .crm-webform-checkbox-container:focus i {
-  border-color: #06c438;
-}
-.form-wrapper .crm-webform-active mark {
-  border-color: #06c438;
-}
-.form-wrapper label.crm-webform-input-label:focus i {
+.form-wrapper a.link-more {
   color: #06c438;
+  text-decoration: underline;
 }
-.form-wrapper .crm-webform-file-upload input[type=file]:hover,
-.form-wrapper .crm-webform-file-upload input[type=file]:focus,
-.form-wrapper .crm-webform-file-upload input[type=file]:active {
-  border-color: #06c438;
+.form-wrapper a.link-more:hover {
+  color: #08f546;
 }
-.form-wrapper .crm-webform-file-upload .crm-webform-file-button {
-  background: #0d9706;
-  color: #f8f6f2;
+.form-wrapper form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
-.form-wrapper .crm-webform-file-upload .crm-webform-file-button:hover {
-  background: #06c438;
-}
-.form-wrapper .crm-webform-file-text-field {
-  background: transparent;
-}
-.form-wrapper .crm-webform-input + i:after {
-  color: #06c438;
-  background: #000000;
-}
-.form-wrapper button.crm-webform-submit-button {
-  border: 2px solid #06c438;
-  background: none;
-  color: #06c438;
+.form-wrapper form input {
   width: 100%;
 }
-.form-wrapper button.crm-webform-submit-button:hover {
-  background: #06c438;
+.form-wrapper form input[type="checkbox"] {
+  width: 1em;
+}
+.form-wrapper form input[type="text"],
+.form-wrapper form [type="email"],
+.form-wrapper form textarea {
+  background: #000 !important;
+  border: 1px solid #cccccc;
   color: #fff;
 }
-.form-wrapper button.crm-webform-submit-button:active {
-  background: #0d9706;
+.form-wrapper .append > input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+}
+.form-wrapper .append {
+  display: inline-block;
+  height: 3em;
+  line-height: 2.8em;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  padding: 0 1.56em;
+  margin: 0.625em 0;
+  margin-right: 4em;
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  min-width: 3.75em;
+  position: relative;
+  background: #333333;
+  width: 100%;
   color: #fff;
+  cursor: pointer;
+  box-shadow: 0 1px 3px #191919;
+}
+.form-wrapper .append .input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.form-wrapper .append .js-labelFile {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.form-wrapper .append .js-labelFile .icon:before {
+  content: "\f093";
+}
+.form-wrapper .append .js-labelFile.has-file .icon:before {
+  content: "\f00c";
+  color: #06c438;
+}
+.form-wrapper .append .append-file-name {
+  width: 100%;
+}
+.form-wrapper .btn-form-group {
+  justify-content: space-between;
 }
 /*------------------------------------------------------------------форма внутри модального окна */
 .modal-form .information {
