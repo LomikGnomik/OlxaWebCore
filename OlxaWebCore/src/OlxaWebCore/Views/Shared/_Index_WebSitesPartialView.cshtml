@@ -1,83 +1,97 @@
 ﻿@*
     Блок с веб сайтами
 *@
+<div class="index-web-sites">
+    <div class="title">
+        <h2>Виды Сайтов</h2>
+    </div>
+    <div class="index-web-sites-container">
+        <div class="web-sites-wrap">
+            <div class="web-sites-nav">
+                <div class="promo-site">
+                    <h2 href="#" class="font">
+                        Сайт визитка
+                    </h2>
+                    <a class="button" asp-controller="Web_sites" asp-action="Promosite">
+                        Подробнее
+                    </a>
+                </div>
+                <div class="landing-site">
+                    <h2 href="#" class="font">Лендинг</h2>
+                    <a class="button" asp-controller="Web_sites" asp-action="Landing">
+                        Подробнее
+                    </a>
+                </div>
+                <div class="corporate-site">
+                    <h2 href="#" class="font">Корпоративный</h2>
+                    <a class="button" asp-controller="Web_sites" asp-action="Corporate">
+                        Подробнее
+                    </a>
+                </div>
+                <div class="shop-site">
+                    <h2 href="#" class="font">Интернет магазин</h2>
+                    <a class="button" asp-controller="Web_sites" asp-action="Shop">
+                        Подробнее
+                    </a>
+                </div>
+                <div class="information-site">
+                    <h2 href="#" class="font">Информационный</h2>
+                    <a class="button" asp-controller="Web_sites" asp-action="Information">
+                        Подробнее
+                    </a>
+                </div>
 
-<div class="avFeaturesContainer">
-    <div class="avFeaturesRapper">
-        <!-- floating app modules -->
-        <div class="screenRap">
-            <div class="promo-site">
-                <h2 href="#" class="font">
-                    Сайт визитка
-                </h2>
-                <a class="btn btn-ghost" asp-controller="Web_sites" asp-action="Promosite">
-                    Подробнее
-                </a>
             </div>
-            <div class="landing-site">
-                <h2 href="#" class="font">Лендинг</h2>
-                <a class="btn btn-ghost" asp-controller="Web_sites" asp-action="Landing">
-                    Подробнее
-                </a>
-            </div>
-            <div class="corporate-site">
-                <h2 href="#" class="font">Корпоративный</h2>
-                <a class="btn btn-ghost" asp-controller="Web_sites" asp-action="Corporate">
-                    Подробнее
-                </a>
-            </div>
-            <div class="shop-site">
-                <h2 href="#" class="font">Интернет магазин</h2>
-                <a class="btn btn-ghost" asp-controller="Web_sites" asp-action="Shop">
-                    Подробнее
-                </a>
-            </div>
-            <div class="information-site">
-                <h2 href="#" class="font">Информационный</h2>
-                <a class="btn btn-ghost" asp-controller="Web_sites" asp-action="Information">
-                    Подробнее
-                </a>
-            </div>
-            @*<div class="develop-site"><a href="#" class="font">Разработка</a></div>*@
-            @*<div class="tuneupTile font">tun-up tile</div>
-                <div class="idpTile font">identity protection tile</div>
-                <div class="parentalTile font">parental controls tile</div>*@
-        </div>
-        <div class="feature promo-site-description">
-            <h2>Antivirus</h2>
-            <div><span></span></div>
-            <p>
-                Effectively catches all viruses. Our Antivirus includes Behavioural Detection, which spots new viruses because of the actions they take on your computer and stops them before they can do damage. Together with Signature-based Detection, which identifies
-                the 'signatures' of known malware, you gain a multi-layered defence system for your PC that's virtually impenetrable.
-                <br />
-                <br />Top detection rates of viruses and malware have been proven by independent labs.
-            </p>
-        </div>
-        <div class="feature landing-site-description">
-            <h2>Firewall</h2>
-            <div><span></span></div>
-            <p>Protect your computer from unwanted hackers and identity thieves with this first line of defense.The firewall protects you against network attacks and prevents cyber crooks from entering your system.</p>
-        </div>
-        <div class="feature corporate-site-description">
-            <h2>Backup</h2>
-            <div><span></span></div>
-            <p>
-                We’ve included 5GB of FREE online storage so you can keep your important data, photos, music and more safe. You can choose what you want to back up and how often, or just set the feature to auto backup. You can even back up content directly from
-                folders with one click. And here’s more: your back-up data is easily accessible whenever you want to view it or restore it to another computer or even your smart phone.
-            </p>
-        </div>
-        <div class="feature shop-site-description">
-            <h2>Vulnerabilities</h2>
-            <div><span></span></div>
-            <p>Checks your computer for out-dated software that hackers and viruses can exploit to gain access to your system, damage it or steal personal information. Once this software is flagged up it can then be removed.</p>
-        </div>
-        <div class="feature information-site-description">
-            <h2>Spamfilter</h2>
-            <div><span></span></div>
-            <p>Spamfilter. No spam. No scam. BullGuard Spamfilter keeps out junk mail and email scams, like phishing attempts, virus spreading and foreign language spam. You can also customize filters to block emails you don’t want to receive.</p>
-        </div>
 
-        <!-- //parental feature content -->
-        @*<p class="hoverIcon">Mouse over on tiles to see details</p>*@
+            <div class="web-sites-feature promo-site-description">
+                <h2>Сайт визитка</h2>
+                <div><span></span></div>
+                <p>
+                    Содержит всю необходимую информацию о вас или вашей фирме,
+                    как правило состоит из одной или нескольких страниц.
+                    Имеет форму обратной связи и схему проезда, но при необходимости базовый функционал
+                    можно расширить, например, добавить калькулятор, галерею, новости и пр. 
+                </p>
+            </div>
+
+            <div class="web-sites-feature landing-site-description">
+                <h2>Лендинг</h2>
+                <div><span></span></div>
+                <p>
+                    Как правило это одна интернет страница, созданная для конкретного товара или
+                    услуги побуждающая к действию целевую аудиторию (покупка или подписка).
+                    Состоит из блоков, каждый из которых выполняет конкретную задачу.
+                </p>
+            </div>
+
+            <div class="web-sites-feature corp-site-description">
+                <h2>Корпоративный</h2>
+                <div><span></span></div>
+                <p>
+                    Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
+                    более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
+                </p>
+            </div>
+
+            <div class="web-sites-feature shop-site-description">
+                <h2>Интернет магазин</h2>
+                <div><span></span></div>
+                <p>
+                    Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
+                    быстро их обрабатывать. Гибкая структура позволяет легко расширить ассортимент
+                    продукции и добавлять новые способы оплаты и доставки.
+                </p>
+            </div>
+
+            <div class="web-sites-feature inform-site-description">
+                <h2>Информационный</h2>
+                <div><span></span></div>
+                <p>
+                    К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
+                    например: кулинарный, образовательный, развлекательный
+                </p>
+            </div>
+
+        </div>
     </div>
 </div>

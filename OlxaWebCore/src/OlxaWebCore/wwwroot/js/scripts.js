@@ -225,9 +225,6 @@ $(document).ready(function () {
 //    $('.smpFeature').addClass('active');
 //});
 
-
-
-
 $('.promo-site').hover(function () {
     $('.promo-site-description').toggleClass('active');
 });
@@ -235,13 +232,13 @@ $('.landing-site').hover(function () {
     $('.landing-site-description').toggleClass('active');
 });
 $('.corporate-site').hover(function () {
-    $('.corporate-site-description').toggleClass('active');
+    $('.corp-site-description').toggleClass('active');
 });
 $('.shop-site').hover(function () {
     $('.shop-site-description').toggleClass('active');
 });
 $('.information-site').hover(function () {
-    $('.information-site-description').toggleClass('active');
+    $('.inform-site-description').toggleClass('active');
 });
 
 /*------------------------первый экран с видами сайтов картинки в изометрии-------------------*/
