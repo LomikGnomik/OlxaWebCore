@@ -1,39 +1,43 @@
 ﻿@model Order
 
 <div id="order-form" class="form-wrapper">
-    
+
     <div class="container-form">
         <div class="h2">Оставить заявку</div>
         <div class="small">
             Пишите нам на почту <a href="mailto:info@olxaweb.ru" class="mail">info@olxaweb.ru</a> или заполните форму ниже:
-        </div>    
+        </div>
         @using (Html.BeginForm("NewOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-        <input type="text" name="name" placeholder="Ваше имя" />
-        <input type="email" name="email" placeholder="Email" />
-        <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
-        <div class="info">
-            <p class="left">
-                Если у вас есть готовый бриф или ТЗ можете приложить их к письму
-            </p>
-        </div>
-        <div class="btn-form-group">
-            <div class="append">
-                <input type="file" name="file" id="file" class="input-file">
-                <label for="file" class="js-labelFile">
-                    <i class="icon fa fa-check"></i>
-                    <span class="js-fileName">Прикрепить</span>
-                </label>
-            </div>
-            <button type="submit"  class="continue btn btn-ghost-more btn-long">Отправить!</button>
-        </div>
+        {
 
-        <div class="confidentiality">
-            <input type="checkbox" checked name="agreed-check" id="agree" class="agree" />
-            <label for="agree">Я согласен с условиями политики конфиденциальности </label>
-            <a href="#" class="link-more">Подробнее</a>
-        </div>
-    }
+            <input type="text" name="name" placeholder="Ваше имя" />
+            <input type="email" name="email" placeholder="Email" />
+            <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
+            <div class="info">
+                <p class="left">
+                    Если у вас есть готовый бриф или ТЗ можете приложить их к письму
+                </p>
+            </div>
+            <div class="btn-form-group">
+                <div class="append">
+                    <input type="file" name="file" id="file" class="input-file">
+                    <label for="file" class="js-labelFile">
+                        <i class="icon fa fa-check"></i>
+                        <span class="js-fileName">Прикрепить</span>
+                    </label>
+                </div>
+                <button type="submit" class="continue btn btn-ghost-more btn-long">Отправить!</button>
+            </div>
+
+            <div class="confidentiality">
+                <input type="checkbox" checked name="agreed-check" id="agree" class="agree" />
+                <label for="agree">
+                    Заполняя данную форму вы принимаете условия Соглашения об использовании сайта,
+                    в том числе в части обработки и использования персональных данных.
+                </label>
+                <a href="#" class="link-more">Подробнее</a>
+            </div>
+        }
 
     </div>
 </div>
