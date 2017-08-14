@@ -6502,12 +6502,12 @@ form.form .customSelect.customSelectFocus:after {
 }
 .form-wrapper .container-form {
   max-width: 40em;
-  margin: 0 auto;
+  margin: 5em auto;
 }
 .form-wrapper .small {
   display: inline-block;
   font-size: 0.8em;
-  margin-bottom: 1.5em;
+  margin-bottom: 4em;
 }
 .form-wrapper .small .mail {
   color: #06c438;
@@ -8570,9 +8570,8 @@ form.form .customSelect.customSelectFocus:after {
 .example-sites-content h2.title-section {
   text-align: center;
   padding: 1em;
-  margin-bottom: 1em;
-  color: #ecf0f1;
-  border-top: 1px solid #06c438;
+  color: #333333;
+  border-bottom: 1px solid #06c438;
 }
 .example-sites-content .example-wrapper {
   display: flex;
