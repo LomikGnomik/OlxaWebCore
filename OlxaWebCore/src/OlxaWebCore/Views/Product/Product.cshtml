@@ -1,6 +1,7 @@
 ﻿@model Product
 @{
-    ViewData["Title"] = Model.Name;
+    ViewData["Title"] = Model.Category + " всего: " + Model.Price +" рублей " + ". Веб студия OlxaWeb";
+    ViewData["Description"] = "Купить готовый сайт. " + Model.Category + ", в стоимость входит: система управления сайтом, дизайн сайта, базовое наполнение, SEO оптимизация.";
 }
 
 <div class="product-item-wrapper">
@@ -11,9 +12,9 @@
                 <img src="~/images/blog/post01.jpg" alt="картинка" />
             </div>
             <div class="product-item-description">
-                <h2>
+                <h1>
                     @Model.Name
-                </h2>
+                </h1>
                 <p>
                     @Model.Description
                 </p>

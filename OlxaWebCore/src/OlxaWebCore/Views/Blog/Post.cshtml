@@ -1,8 +1,9 @@
 ﻿@model Post
 
-@{Layout = "_LayoutBlogRightSidebar"; 
-    
-        ViewData["Title"] = Model.Title;
+@{
+    Layout = "_LayoutBlogRightSidebar";
+    ViewData["Title"] = Model.Title + " - OlxaWeb";
+    ViewData["Description"] = Model.ShortDescription;
 }
 
 <div class="post">

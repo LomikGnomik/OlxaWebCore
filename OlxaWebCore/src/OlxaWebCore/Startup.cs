@@ -76,7 +76,7 @@ namespace OlxaWebCore
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/errors/404.html"); // по умолчанию было /Home/Error
             }
             //обработка ошибок http
             app.UseStatusCodePagesWithReExecute("/errors/{0}.html"); 

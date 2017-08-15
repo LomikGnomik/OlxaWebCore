@@ -24,13 +24,6 @@ namespace OlxaWebCore.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View();
@@ -39,11 +32,7 @@ namespace OlxaWebCore.Controllers
         public IActionResult Price()
         {
             return View();
-        }
-        public IActionResult Step()
-        {
-            return View();
-        }
+        }       
         public IActionResult PriceList()
         {
             return View();

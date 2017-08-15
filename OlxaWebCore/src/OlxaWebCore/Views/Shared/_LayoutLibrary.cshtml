@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - OlxaWebCore</title>
+    <meta name="description" content="@ViewData["Description"]" />
+    <meta name="robots" content="@(ViewData["Robots"]==null?"all":ViewData["Robots"])" />
+    <title>@ViewData["Title"]</title>
+    
     <environment names="Development">
         <link rel="stylesheet" href="~/css/styles.css" />
         <link href="~/lib/jqueri-ui/themes/base/jquery-ui.css" rel="stylesheet" />
@@ -15,7 +18,7 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />*@
         @*<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />*@
         <link href="~/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="~/css/styles.min.css"  asp-append-version="true"/>
+        <link rel="stylesheet" href="~/css/styles.css"  asp-append-version="true"/>
     </environment>
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
 </head>

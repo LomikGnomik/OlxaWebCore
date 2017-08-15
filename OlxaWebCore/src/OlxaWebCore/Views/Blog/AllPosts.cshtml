@@ -1,12 +1,13 @@
 ﻿@model  BlogListViewModel
 
-@{Layout = "_LayoutBlogRightSidebar";
-
-
-    ViewData["Title"] = "Блог Olxaweb";
-
+@{
+    Layout = "_LayoutBlogRightSidebar";
+    ViewData["Title"] = "Статьи о веб-разработке от Olxaweb";
+    ViewData["Description"] = "Статьи о выборе будущего сайта, его создании или разработке и продвижении в сети интернет";
 }
+<h1>@(Model.CurrentCategory==null?"Блог OlxaWeb":"Категория: "+ @Model.CurrentCategory)</h1>
 <div class="blog-wrapper">
+    
     <section class="posts-wrap">
         <div class="posts "> @*post flex*@
             @foreach (var p in Model.Posts)

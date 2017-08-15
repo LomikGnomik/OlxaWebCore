@@ -1,6 +1,7 @@
 ﻿@model Portfolio
 @{
-    ViewData["Title"] = Model.Title +"-создан в OlxaWeb";
+    ViewData["Title"] = Model.Category + " " + Model.Title +" - создан в OlxaWeb";
+    ViewData["Description"] = Model.Category + " " + Model.Title + " был создан в веб-студии OlxaWeb. Читайте подробности по ссылке";
 }
 
 <div class="container">
@@ -8,7 +9,7 @@
         <section class="heading">
             <a asp-controller="Portfolio" asp-action="PreviousNextSite" asp-route-siteId="@Model.PortfolioID" asp-route-next="false"><i class="fa fa-angle-double-left" aria-hidden="true"title="предыдущий"></i></a>
             <div class="portfolio-inner-name">
-                <div class="h2">@Model.Title</div>
+                <h1>@Model.Title</h1>
                 <a href="@Model.Link">@Model.Link</a>
             </div>
             <a asp-controller="Portfolio" asp-action="PreviousNextSite" asp-route-siteId="@Model.PortfolioID" asp-route-next="false"><i class="fa fa-angle-double-right" aria-hidden="true"title="следующий"></i></a>

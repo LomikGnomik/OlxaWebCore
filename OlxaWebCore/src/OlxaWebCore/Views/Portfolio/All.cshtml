@@ -1,11 +1,12 @@
 ﻿@model PortfolioListViewModel
 @{
     ViewData["Title"] = "Сайты сделанные в OlxaWeb";
+    ViewData["Description"] = "Портфолио сайтов сделанных в OlxaWeb: интернет-магазины, корпоративные, сайты-визитки, Landing Page";
 }
 
 <div class="container">
     <section class="portfolio">
-        <h2>Сайты разработанные в OlxaWeb</h2>
+        <h1>Сайты разработанные в OlxaWeb</h1>
         <small>Сайты созданные для наших клинетов</small>
 
         @await Component.InvokeAsync("PortfolioNavigationMenu")
