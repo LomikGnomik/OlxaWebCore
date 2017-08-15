@@ -1,8 +1,9 @@
 ﻿@{
-    ViewData["Title"] = "Error";
+    Layout = "_LayoutLibrary";
+    ViewData["Title"] = "Страница не найдена";
 }
 
-<h1 class="text-danger">Error.</h1>
+@*<h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
 <h3>Development Mode</h3>
@@ -11,4 +12,43 @@
 </p>
 <p>
     <strong>Development environment should not be enabled in deployed applications</strong>, as it can result in sensitive information from exceptions being displayed to end users. For local debugging, development environment can be enabled by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>, and restarting the application.
-</p>
+</p>*@
+<a href="~/Views/Home/Index.cshtml" class="viewFull" target="_parent">На главную страницу</a>
+<div class="error">
+
+    <div class="wrap">
+        <div class="404">
+            <pre><code>
+            <span class="green">&lt;!</span><span>DOCTYPE html</span><span class="green">&gt;</span>
+<span class="orange">&lt;html&gt;</span>
+            <span class="orange">&lt;style&gt;</span>
+   * {
+            <span class="green">everything</span>:<span class="blue">awesome</span>;
+}
+            <span class="orange">&lt;/style&gt;</span>
+            <span class="orange">&lt;body&gt;</span> 
+              ERROR 404!
+				FILE NOT FOUND!
+            <span class="comment">&lt;!--The file you are looking for, 
+					is not where you think it is.--&gt;
+		</span>
+            <span class="orange"></span> 
+			  
+
+
+        </div>
+        <br />
+        <span class="info">
+            <br />
+
+            <span class="orange">&nbsp;&lt;/body&gt;</span>
+
+            <br />
+            <span class="orange">&lt;/html&gt;</span>
+            </code></pre>
+    </div>
+</div>
+
+
+</span>
+

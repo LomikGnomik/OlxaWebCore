@@ -35,6 +35,21 @@
   justify-content: center;
   align-items: center;
 }
+#header-error {
+  background: #000;
+  color: #fff;
+}
+nav#index-navigation .main-menu .main-menu__item.item-menu-error a.link {
+  background: #000;
+  color: #fff;
+  border-bottom-color: #000;
+  border-top-color: #000;
+  cursor: pointer;
+}
+nav#index-navigation .main-menu .main-menu__item.item-menu-error a.link:hover {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+}
 html,
 body {
   height: 100%;
@@ -10084,6 +10099,7 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .navigation-sm nav .menu-trigger {
     display: block;
     padding: 8% 20%;
+    color: #06c438;
     /*.fa {
                     display: inherit;
                     text-align: left;
@@ -10176,307 +10192,123 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   }
 }
 /*-----------------------------------------------------------------страница ошибки 404*/
-.error {
-  background-color: black;
-  color: white;
-  overflow: hidden;
-  height: 100%;
-  user-select: none;
-  font-size: medium;
-  text-align: center;
+.error-content-wrap {
+  padding-top: 5em;
+  background: black;
+  min-height: 100vh;
+}
+.error-content-wrap .error-content {
   width: 100%;
-  height: 120px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -60px;
-  right: 0;
-  animation: noise-3 1s linear infinite;
-  overflow: default;
+  /*@-webkit-keyframes rotator {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+        }
+
+        @keyframes rotator {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+        }
+
+       
+
+        @-webkit-keyframes colors {
+            0% {
+                stroke: #4285F4;
+            }
+
+            25% {
+                stroke: #DE3E35;
+            }
+
+            50% {
+                stroke: #F7C223;
+            }
+
+            75% {
+                stroke: #1B9A59;
+            }
+
+            100% {
+                stroke: #4285F4;
+            }
+        }
+
+        @keyframes colors {
+            0% {
+                stroke: #4285F4;
+            }
+
+            25% {
+                stroke: #DE3E35;
+            }
+
+            50% {
+                stroke: #F7C223;
+            }
+
+            75% {
+                stroke: #1B9A59;
+            }
+
+            100% {
+                stroke: #4285F4;
+            }
+        }
+
+        @-webkit-keyframes dash {
+            0% {
+                stroke-dashoffset: 187;
+            }
+
+            50% {
+                stroke-dashoffset: 46.75;
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+
+            100% {
+                stroke-dashoffset: 187;
+                -webkit-transform: rotate(450deg);
+                transform: rotate(450deg);
+            }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dashoffset: 187;
+            }
+
+            50% {
+                stroke-dashoffset: 46.75;
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+
+            100% {
+                stroke-dashoffset: 187;
+                -webkit-transform: rotate(450deg);
+                transform: rotate(450deg);
+            }
+        }*/
 }
-.error body:after {
-  content: 'error 404';
-  font-family: OCR-A;
-  font-size: 100px;
-  text-align: center;
-  width: 550px;
-  margin: auto;
-  position: absolute;
-  top: 25%;
-  bottom: 0;
-  left: 0;
-  right: 35%;
-  opacity: 0;
-  color: white;
-  animation: noise-1 0.2s linear infinite;
-}
-.error body:before {
-  content: 'error 404';
-  font-family: OCR-A;
-  font-size: 100px;
-  text-align: center;
-  width: 550px;
-  margin: auto;
-  position: absolute;
-  top: 25%;
-  bottom: 0;
-  left: 0;
-  right: 35%;
-  opacity: 0;
-  color: white;
-  animation: noise-2 0.2s linear infinite;
-}
-.error .info {
-  text-align: center;
-  width: 200px;
-  height: 60px;
-  margin: auto;
-  position: absolute;
-  top: 280px;
-  bottom: 0;
-  left: 20px;
-  right: 0;
-  animation: noise-3 1s linear infinite;
-}
-.error .info:before {
-  content: 'file not found';
-  font-family: OCR-A;
-  font-size: 100px;
-  text-align: center;
-  width: 800px;
-  margin: auto;
-  position: absolute;
-  top: 20px;
-  bottom: 0;
-  left: 40px;
-  right: 100px;
-  opacity: 0;
-  color: white;
-  animation: noise-2 0.2s linear infinite;
-}
-.error .info:after {
-  content: 'file not found';
-  font-family: OCR-A;
-  font-size: 100px;
-  text-align: center;
-  width: 800px;
-  margin: auto;
-  position: absolute;
-  top: 20px;
-  bottom: 0;
-  left: 40px;
-  right: 0;
-  opacity: 0;
-  color: white;
-  animation: noise-1 0.2s linear infinite;
-}
-@-webkit-keyframes noise-1 {
-  0%,
-  20%,
-  40%,
-  60%,
-  70%,
-  90% {
-    opacity: 0;
-  }
-  10% {
-    opacity: .1;
-  }
-  50% {
-    opacity: .5;
-    left: -6px;
-  }
-  80% {
-    opacity: .3;
-  }
-  100% {
-    opacity: .6;
-    left: 2px;
-  }
-}
-@keyframes noise-1 {
-  0%,
-  20%,
-  40%,
-  60%,
-  70%,
-  90% {
-    opacity: 0;
-  }
-  10% {
-    opacity: .1;
-  }
-  50% {
-    opacity: .5;
-    left: -6px;
-  }
-  80% {
-    opacity: .3;
-  }
-  100% {
-    opacity: .6;
-    left: 2px;
-  }
-}
-@-webkit-keyframes noise-2 {
-  0%,
-  20%,
-  40%,
-  60%,
-  70%,
-  90% {
-    opacity: 0;
-  }
-  10% {
-    opacity: .1;
-  }
-  50% {
-    opacity: .5;
-    left: 6px;
-  }
-  80% {
-    opacity: .3;
-  }
-  100% {
-    opacity: .6;
-    left: -2px;
-  }
-}
-@keyframes noise-2 {
-  0%,
-  20%,
-  40%,
-  60%,
-  70%,
-  90% {
-    opacity: 0;
-  }
-  10% {
-    opacity: .1;
-  }
-  50% {
-    opacity: .5;
-    left: 6px;
-  }
-  80% {
-    opacity: .3;
-  }
-  100% {
-    opacity: .6;
-    left: -2px;
-  }
-}
-@-webkit-keyframes noise {
-  0%,
-  3%,
-  5%,
-  42%,
-  44%,
-  100% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-  4.3% {
-    opacity: 1;
-    transform: scaleY(1.7);
-  }
-  43% {
-    opacity: 1;
-    transform: scaleX(1.5);
-  }
-}
-@keyframes noise {
-  0%,
-  3%,
-  5%,
-  42%,
-  44%,
-  100% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-  4.3% {
-    opacity: 1;
-    transform: scaleY(1.7);
-  }
-  43% {
-    opacity: 1;
-    transform: scaleX(1.5);
-  }
-}
-@-webkit-keyframes noise-3 {
-  0%,
-  3%,
-  5%,
-  42%,
-  44%,
-  100% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-  4.3% {
-    opacity: 1;
-    transform: scaleY(4);
-  }
-  43% {
-    opacity: 1;
-    transform: scaleX(10) rotate(60deg);
-  }
-}
-@keyframes noise-3 {
-  0%,
-  3%,
-  5%,
-  42%,
-  44%,
-  100% {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-  4.3% {
-    opacity: 1;
-    transform: scaleY(4);
-  }
-  43% {
-    opacity: 1;
-    transform: scaleX(10) rotate(60deg);
-  }
-}
-.error .wrap {
-  top: 30%;
-  left: 25%;
-  height: 200px;
-  margin-top: -100px;
-  position: absolute;
-}
-.error code {
-  color: white;
-}
-.error span.blue {
-  color: #48beef;
-}
-.error span.comment {
-  color: #7f8c8d;
-}
-.error span.orange {
-  color: #f39c12;
-}
-.error span.green {
-  color: #33cc33;
-}
-.error .viewFull {
-  font-family: OCR-A;
-  color: orange;
-  text-decoration: ;
-}
-@font-face {
-  font-family: OCR-A;
-}
-@media only screen and (min-height: 500px) {
-  .viewFull {
-    display: none;
-  }
+.error-content-wrap .error-content .subtext {
+  color: #888;
+  font-size: 1.2em;
+  margin-top: 2em;
 }
 /*------------------------------------------------АДМИНКА--------------------------------------*/
 /*------------------------------------------Layout Admin*/

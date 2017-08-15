@@ -14,14 +14,14 @@ $('.file-input').change(function () {
 });
 
 /*-------------------------------------скрипт для таблицы---------------------*/
-$(function () {
-    $("table").colResizable();
-    $("#service-table").colResizable({
-        liveDrag: true,
-        postbackSafe: true,
-        headerOnly: false
-    });
-});
+//$(function () {
+//    $("table").colResizable();
+//    $("#service-table").colResizable({
+//        liveDrag: true,
+//        postbackSafe: true,
+//        headerOnly: false
+//    });
+//});
 /*----------------------------------скрипт автозаполнения------------------------*/
 $(function () {
     var autocompleteUrl = 'Find'; //'@Url.Action("Find")';

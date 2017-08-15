@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewData["Title"]</title>
     <environment names="Development">
-        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
         <script src="~/lib/tinymce/tinymce.js"></script>
         <script src="~/lib/jquery/dist/jquery.js"></script>
 
@@ -13,11 +12,12 @@
     </environment>
 
     <environment names="Staging,Production">
-        <!--подключить минимизированные стили,перед запуском-->
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />*@
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/tinymce/tinymce.min.js"></script>
+        <link href="~/css/styles.min.css" rel="stylesheet" asp-append-version="true" />
     </environment>
 </head>
 <body>
@@ -59,15 +59,17 @@
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
-        <script src="~/lib/colResizable-1.6.min.js"></script> @*библиотека таблиц*@
         <script src="~/js/admin_scripts.js" asp-append-version="true"></script>
     </environment>
+
     <environment names="Staging,Production">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery">
         </script>
-        <script src="~/js/admin_scripts.js" asp-append-version="true"></script>
+        <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
+        <script src="~/js/scripts.min.js"asp-append-version="true"></script>
+        @*<script src="~/js/admin_scripts.js" asp-append-version="true"></script>*@
     </environment>
 
     <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>

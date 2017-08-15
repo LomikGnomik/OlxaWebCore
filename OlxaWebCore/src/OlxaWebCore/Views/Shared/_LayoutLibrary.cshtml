@@ -6,56 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OlxaWebCore</title>
     <environment names="Development">
-        @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
         <link rel="stylesheet" href="~/css/styles.css" />
         <link href="~/lib/jqueri-ui/themes/base/jquery-ui.css" rel="stylesheet" />
     </environment>
 
-    <environment names="Staging,Production">
-        <!--подключить минимизированные стили,перед запуском-->
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    <environment names="Staging,Production">        
+        @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"             
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />*@
+        @*<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />*@
+        <link href="~/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/styles.min.css"  asp-append-version="true"/>
     </environment>
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
 </head>
 <body>
     <div>
         @RenderBody()
-    </div>   
+    </div>
     <div id="toTop">
         <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
     </div>
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
-
+        <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
         @*основной файл скриптов*@
         <script src="~/js/scripts.js" asp-append-version="true"></script>
-
-
-
         @*CDN.нет файла на сервере -фильтр в портфолио*@
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-        @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+
     </environment>
     <environment names="Staging,Production">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery">
         </script>
-
-        @*<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
-                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-            </script>*@
-
+        <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
+        
+        @*CDN.нет файла на сервере -фильтр в портфолио*@
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        @*основной файл скриптов*@
         <script src="~/js/scripts.js" asp-append-version="true"></script>
+        @*<script src="~/js/scripts.min.js" asp-append-version="true"></script>*@
+        
     </environment>
 
-    @RenderSection("scripts", required: false)
-    <script src="https://use.fontawesome.com/cb108ea3bb.js"></script>
+@RenderSection("scripts", required: false)
+   
+   
 
     @*@await Html.PartialAsync("_LoginPartial")>*@
 

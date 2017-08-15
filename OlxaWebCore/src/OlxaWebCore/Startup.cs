@@ -78,6 +78,8 @@ namespace OlxaWebCore
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            //обработка ошибок http
+            app.UseStatusCodePagesWithReExecute("/errors/{0}.html"); 
 
             app.UseStaticFiles();
 
