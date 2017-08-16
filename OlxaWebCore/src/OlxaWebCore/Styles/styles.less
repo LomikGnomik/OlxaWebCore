@@ -8418,160 +8418,11 @@ form.form {
             }
         }
     }
+       
 
-    section.landing-privilege {
-        /*.privilege-wrap {
-            text-align: center;
-            margin-top: @size-margin-section;
+   
 
-
-
-            .privilege-row {
-                justify-content: space-between;
-
-
-
-                .privilege-inner-wrap {
-                    position: relative;
-                    z-index: 1;
-                    min-height: 15.6em;
-                    display: block;
-                    width: 100%;
-                    max-width: 23.75em;
-                    margin: 2em auto 1.5em auto;
-                    cursor: default;
-
-
-
-                    &:hover {
-                        z-index: 5;
-                    }
-
-
-
-                    .privilege-inner {
-                        position: absolute;
-                        width: 100%;
-                        max-height: 15.625em;
-                        background: #fff;
-                        top: 0;
-                        left: 0;
-                        border: 2px solid transparent;
-                        overflow: hidden;
-                        transition: all 0.4s ease;
-
-
-
-                        &:hover {
-                            border-color: #1bdb68;
-                            max-height: 37.5em;
-                        }
-
-                        .column;
-                        text-align: center;
-                        padding: 1.5em;
-
-
-
-                        img {
-                            display: inline-block;
-                        }
-                    }
-
-
-
-                    h3 {
-                        margin: 1em;
-                    }
-                }
-            }
-        }*/
-    }
-
-    section.landing-plus {
-        padding: 3em 0;
-        min-height: 100vh;
-
-        h2 {
-            text-align: center;
-        }
-
-        .plus-wrap {
-            // text-align: center;
-            //padding: 2em;
-            .plus-row {
-                //  .row;
-                flex-wrap: wrap;
-
-                .plus-inner {
-                    .column;
-                    text-align: center;
-                    padding-top: 15%;
-
-
-                    .plus-img {
-                        margin: 2em;
-
-                        img {
-                            display: inline-block;
-                        }
-                    }
-
-                    .plus-title {
-
-
-
-                        h3 {
-                            margin: 1em;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    section.landing-price-table {
-        min-height: 100vh;
-        text-align: center;
-
-        h2 {
-            margin-bottom: 1.5em;
-        }
-
-        table {
-            margin-top: 1em;
-            width: 100%;
-            border-collapse: collapse;
-
-            tr {
-                border-bottom: 1px solid @color-gray-lighter;
-
-                &:not(:first-child):hover {
-                    border-bottom: 1px solid @color-more;
-                    box-shadow: 0 6px 4px -4px @color-more;
-                }
-                /*&:hover td {
-                    background: @color-more-lighter2;
-                }
-
-                &:hover th {
-                    background: @color-more-lighter2;
-                }*/
-                th {
-                    border-bottom: 1px solid @color-more;
-                    padding: 0.6em 0.5em;
-                }
-
-                td {
-                    max-height: 3em;
-                    color: @color-base;
-                    text-align: center;
-                    padding: 0.65em 0.5em;
-                    transition: .3s linear;
-                }
-            }
-        }
-    }
+  
 
     section.landing-steps {
     }
@@ -10585,9 +10436,10 @@ form.form {
 @media screen and (max-width:640px) {
 }
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
-.example-sites-content {
+.example-sites-content { 
     // min-height: 65vh;
     border-bottom: 1px solid @color-more;
+    width: 100%;
 
     h2.title-section {
         text-align: center;
@@ -12690,6 +12542,7 @@ section.tabs-all {
         }
 
         .admin-content {
+            padding:1em;
             .content-navigation {
                 display: flex;
                 width: 100%;

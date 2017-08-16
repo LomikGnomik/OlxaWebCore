@@ -15,7 +15,9 @@
                             <img src="~/Files/Portfolio/Image/Preview/@site.Image" alt="@site.Title"><br>
                             <span class="txt">
                                 @site.Title
-                                <a class="txt-link" asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID">Подробнее</a>
+                                <a class="txt-link" asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID">
+                                    Подробнее
+                                </a>
                             </span>
 
                             @*<div class="ombra"></div>*@
@@ -25,29 +27,25 @@
             </div>
         </div>
     </div>
-        <div class="index-portfolio-galery small hidden">
-            @*Портфолио для меленьких экранов*@
-            <div class="portfolio-galery-wrap">
-                <div class="portfolio-galery-row">
-                    @foreach (var site in Model)
-                    {
-                        <div class="view view-second">
-                            <img src="~/Files/Portfolio/Image/Preview/@site.Image" alt="@site.Title">
-                            <div class="mask"></div>
-                            <div class="content">
-                                <h2>Hover Style #2</h2>
-                                <p>Some description</p>
-                                <a class="info" asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID">Read More</a>
-                            </div>
+    <div class="index-portfolio-galery small hidden">
+        @*Портфолио для меленьких экранов*@
+        <div class="portfolio-galery-wrap">
+            <div class="portfolio-galery-row">
+                @foreach (var site in Model)
+                {
+                    <div class="view view-second">
+                        <img src="~/Files/Portfolio/Image/Preview/@site.Image" alt="@site.Title">
+                        <div class="mask"></div>
+                        <div class="content">
+                            <h2>Hover Style #2</h2>
+                            <p>Some description</p>
+                            <a class="info" asp-controller="Portfolio" asp-action="WebSite" asp-route-PortfolioID="@site.PortfolioID">Read More</a>
                         </div>
-                    }
-                </div>
+                    </div>
+                }
             </div>
-
-
-
         </div>
-
+    </div>
 }
 else
 {

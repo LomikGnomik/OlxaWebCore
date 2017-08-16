@@ -1,7 +1,9 @@
 ﻿
 @{
     Layout = "_LayoutLibrary";
-    ViewData["Title"] = "Создание информационного сайта";
+    ViewData["Title"] = "Создание информационного сайта - OlxaWeb";
+    ViewData["Description"] = "Предлагаем услуги по созданию и разработке информационного сайта с индивидуальным дизайном под ключ, так же выможете купить уже готовый сайт. В стоимость создания входит адаптивный дизайн, настройка CMS, базовое наполнение, SEO оптимизация.";
+
     ViewBag.PortfolioExample = "Примеры информационных сайтов";
 }
 <div class="information-wrapper">
@@ -46,14 +48,14 @@
                         К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
                         например: кулинарный, образовательный, развлекательный
                     </p>
-                    <p class="ul-title">Наиболее используемые модули:</p>
+                    @*<p class="ul-title">Наиболее используемые модули:</p>
                     <ul>
                         <li>Регистрация пользователей</li>
                         <li>Авторизация через социальные сети</li>
                         <li>Статьи и публикации</li>
                         <li>Комментарии</li>
                         <li>Голосования и опросы</li>
-                    </ul>
+                    </ul>*@
                 </div>
             </div>
         </div>
@@ -62,9 +64,9 @@
     <section class="information-tab">
 
         <section class="tabs-all" role="tab">
-            <input id="tab__1" type="radio" name="tabs" checked="checked" />
+            <input id="tab__1" type="radio" name="tabs"/>
             <input id="tab__2" type="radio" name="tabs" checked="checked" />
-            <input id="tab__3" type="radio" name="tabs" checked="checked"/>
+            <input id="tab__3" type="radio" name="tabs"/>
 
             <div class="label-wrapper">
                 <label for="tab__1" id="tab__l1">Готовые решения</label>

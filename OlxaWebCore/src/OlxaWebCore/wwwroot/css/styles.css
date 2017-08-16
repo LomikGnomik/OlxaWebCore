@@ -6778,136 +6778,6 @@ form.form .customSelect.customSelectFocus:after {
 .landing-wrapper section.landing-description .description-wrap .description-title .description-title-wrap p {
   width: 80%;
 }
-.landing-wrapper section.landing-privilege {
-  /*.privilege-wrap {
-            text-align: center;
-            margin-top: @size-margin-section;
-
-
-
-            .privilege-row {
-                justify-content: space-between;
-
-
-
-                .privilege-inner-wrap {
-                    position: relative;
-                    z-index: 1;
-                    min-height: 15.6em;
-                    display: block;
-                    width: 100%;
-                    max-width: 23.75em;
-                    margin: 2em auto 1.5em auto;
-                    cursor: default;
-
-
-
-                    &:hover {
-                        z-index: 5;
-                    }
-
-
-
-                    .privilege-inner {
-                        position: absolute;
-                        width: 100%;
-                        max-height: 15.625em;
-                        background: #fff;
-                        top: 0;
-                        left: 0;
-                        border: 2px solid transparent;
-                        overflow: hidden;
-                        transition: all 0.4s ease;
-
-
-
-                        &:hover {
-                            border-color: #1bdb68;
-                            max-height: 37.5em;
-                        }
-
-                        .column;
-                        text-align: center;
-                        padding: 1.5em;
-
-
-
-                        img {
-                            display: inline-block;
-                        }
-                    }
-
-
-
-                    h3 {
-                        margin: 1em;
-                    }
-                }
-            }
-        }*/
-}
-.landing-wrapper section.landing-plus {
-  padding: 3em 0;
-  min-height: 100vh;
-}
-.landing-wrapper section.landing-plus h2 {
-  text-align: center;
-}
-.landing-wrapper section.landing-plus .plus-wrap .plus-row {
-  flex-wrap: wrap;
-}
-.landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding-top: 15%;
-}
-.landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner .plus-img {
-  margin: 2em;
-}
-.landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner .plus-img img {
-  display: inline-block;
-}
-.landing-wrapper section.landing-plus .plus-wrap .plus-row .plus-inner .plus-title h3 {
-  margin: 1em;
-}
-.landing-wrapper section.landing-price-table {
-  min-height: 100vh;
-  text-align: center;
-}
-.landing-wrapper section.landing-price-table h2 {
-  margin-bottom: 1.5em;
-}
-.landing-wrapper section.landing-price-table table {
-  margin-top: 1em;
-  width: 100%;
-  border-collapse: collapse;
-}
-.landing-wrapper section.landing-price-table table tr {
-  border-bottom: 1px solid #e5e5e5;
-  /*&:hover td {
-                    background: @color-more-lighter2;
-                }
-
-                &:hover th {
-                    background: @color-more-lighter2;
-                }*/
-}
-.landing-wrapper section.landing-price-table table tr:not(:first-child):hover {
-  border-bottom: 1px solid #06c438;
-  box-shadow: 0 6px 4px -4px #06c438;
-}
-.landing-wrapper section.landing-price-table table tr th {
-  border-bottom: 1px solid #06c438;
-  padding: 0.6em 0.5em;
-}
-.landing-wrapper section.landing-price-table table tr td {
-  max-height: 3em;
-  color: #3c6eaa;
-  text-align: center;
-  padding: 0.65em 0.5em;
-  transition: .3s linear;
-}
 .landing-wrapper section.landing-example .example-wrap {
   display: flex;
   align-items: center;
@@ -8589,6 +8459,7 @@ form.form .customSelect.customSelectFocus:after {
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
   border-bottom: 1px solid #06c438;
+  width: 100%;
 }
 .example-sites-content h2.title-section {
   text-align: center;
@@ -10283,6 +10154,9 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
 }
 .wrapper-admin main article {
   flex: 20 1 auto;
+}
+.wrapper-admin main .admin-content {
+  padding: 1em;
 }
 .wrapper-admin main .admin-content .content-navigation {
   display: flex;
