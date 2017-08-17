@@ -17,11 +17,12 @@
 
     <table class="table-admin">
         <tr>
-            <th width="5%">ID</th>
+            <th>ID</th>
             <th>Название</th>
             <th>Описание</th>
             <th>Категория</th>
             <th>Цена</th>
+            <th>Позиция</th>
             <th>Видно?</th>
         </tr>
         @foreach (var service in @Model)
@@ -29,10 +30,16 @@
             <tr>
                 <td>@service.ServiceID</td>
                 <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Title</a></td>
-                <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Description</a></td>
+                <td>
+                    <a class="description-window" href="#">
+                        &#9786;
+                        <div class="overlay"><p>@service.Description</p></div>
+                    </a>
+                </td>
+                @*<td class="amin-descriptions"><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Description</a></td>*@
                 <td>@service.Category</td>
                 <td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>
-                @*<td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Published</a></td>*@
+                <td>@service.SortingWeight</td>
                 <td class="@(service.Published == true ? "post-published" : "post-no-published")"><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID"></a></td>
             </tr>
         }

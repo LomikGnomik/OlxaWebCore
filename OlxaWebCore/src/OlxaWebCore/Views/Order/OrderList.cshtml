@@ -29,7 +29,7 @@
                     <td><a asp-controller="Order" asp-action="Order" asp-route-orderId="@order.OrderID">@order.DateOrder.ToString("D")<br />@order.DateOrder.ToString("T")</a></td>
                     <td><a asp-controller="Order" asp-action="Order" asp-route-orderId="@order.OrderID">@order.Name</a></td>
                     <td>@order.Email</td>
-                    <td style="text-align:justify; vertical-align:text-top;overflow-y:scroll;">@order.Comment</td>
+                    <td class="admin-descriptions">@order.Comment</td>
                     <td><a class="client-file"href="#"> @order.File</a></td>
                     <td>@order.Note</td>
                     <td><input type="checkbox" disabled asp-for="@order.AddCRM"></td>

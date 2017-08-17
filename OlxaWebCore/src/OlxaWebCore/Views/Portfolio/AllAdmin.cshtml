@@ -20,6 +20,7 @@
         <th>Название</th>
         <th>Категория</th>
         <th>Цена</th>
+        <th>Позиция</th>
         <th>Видно?</th>
     </tr>
     @foreach (var site in @Model)
@@ -36,6 +37,7 @@
                 </form>
             </td>*@
             @*<td><a asp-controller="Service" asp-action="EditService" asp-route-serviceID="@service.ServiceID">@service.Price</a></td>*@
+            <td>@site.SortingWeight</td>
             <td class="@(site.Published== true ? "post-published" : "post-no-published")"></td>
 
         </tr>
