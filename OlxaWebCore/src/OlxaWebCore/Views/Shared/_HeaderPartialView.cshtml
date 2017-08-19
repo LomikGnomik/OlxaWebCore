@@ -18,9 +18,11 @@
             </div>
             @*<a href="#" class="menu-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>*@
             <ul class="main-menu">
-                <li class="main-menu__item"><a asp-area="" asp-controller="Portfolio" asp-action="All" class="link">Портфолио</a></li>
-                <li class="main-menu__item">
-                    <a asp-area="" asp-controller="Home" asp-action="Price" class="link">Сайты</a>
+                <li class="main-menu__item @(ViewBag.SelectedMenu == "PortfolioAll" ? "Active":"")">
+                <a asp-controller="Portfolio" asp-action="All" class="link">Портфолио</a>
+                </li>
+                <li class="main-menu__item @(ViewBag.SelectedMenu == "HomePrice" ? "Active":"")">
+                    <a asp-controller="Home" asp-action="Price" class="link">Сайты</a>
                     <div class="submenu">
                         @*<div class="info-item-header">
                                 <h3>
@@ -39,11 +41,11 @@
                                     Типы сайтов
                                 </h3>*@
                             <ul>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Landing">Landing Page</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
-                                <li class="submenu__item"><a asp-area="" asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
+                                <li class="submenu__item @(ViewBag.SelectedMenu == "Web_sites" ? "Active":"")"><a  asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
+                                <li class="submenu__item @(ViewBag.SelectedMenu == "Web_sites" ? "Active":"")"><a  asp-controller="Web_sites" asp-action="Landing">Landing Page</a></li>
+                                <li class="submenu__item @(ViewBag.SelectedMenu == "Web_sites" ? "Active":"")"><a  asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
+                                <li class="submenu__item @(ViewBag.SelectedMenu == "Web_sites" ? "Active":"")"><a  asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
+                                <li class="submenu__item @(ViewBag.SelectedMenu == "Web_sites" ? "active":"")"><a  asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
                             </ul>
                         </div>
 
@@ -52,9 +54,11 @@
                             <img src="~/images/landing/post_prev_01.jpg" alt="" />
                         </div>*@
                 </li>
-                <li class="main-menu__item"><a asp-controller="Service" asp-action="AllService" class="link">Услуги / Цены</a></li>
-                <li class="main-menu__item">
-                    <a asp-area="" asp-controller="Home" asp-action="About" class="link">О нас</a>
+                <li class="main-menu__item @(ViewBag.SelectedMenu == "ServiceAllService" ? "active":"")">
+                <a asp-controller="Service" asp-action="AllService" class="link">Услуги / Цены</a>
+                </li>
+                <li class="main-menu__item@(ViewBag.SelectedMenu == "HomeAbout" ? "active":"")">
+                    <a  asp-controller="Home" asp-action="About" class="link">О нас</a>
                 </li>
             </ul>
         </nav>
