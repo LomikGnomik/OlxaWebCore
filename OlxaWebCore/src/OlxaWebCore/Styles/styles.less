@@ -484,7 +484,7 @@ main {
     background: #fff;
     z-index: 1000;
     transition: all 20ms linear;
-    //padding-top: 0.5em;
+    padding-top: 0.5em;
 }
 
 
@@ -511,8 +511,6 @@ nav#index-navigation {
             padding: 3px 0;
         }
 
-
-
         .main-menu__item {
             position: relative;
             text-align: center;
@@ -528,20 +526,22 @@ nav#index-navigation {
                 z-index: 1;
                 // display: block;
                 width: 15em;
+
+                a.active {
+                    background: @color-more;
+                    color: @font-color-reverce;
+                }
             }
 
             a {
                 color: @color-gray-dark;
             }
-
-
-
-            a.active {
-                background-color: @color-more;
-                color: @font-color-reverce;
+            /*a.active {
+                color: @color-base;
+                font-weight: 700;
 
                 &::after { //стрелочка для активного пункта
-                    /*position: absolute;
+                   position: absolute;
                     display: block;
                     content: "";
                     width: 0;
@@ -551,12 +551,9 @@ nav#index-navigation {
                     border-top: 6px solid @color-base;
                     left: 50%;
                     bottom: -6px;
-                    margin-left: -6px;*/
+                    margin-left: -6px;
                 }
-            }
-
-
-
+            }*/
             a.link {
                 /*text-decoration: none;
                         line-height: 2;
@@ -585,8 +582,15 @@ nav#index-navigation {
             }
 
             a.link.active:focus {
-                background-color: @color-base;
-                color: @color-gray-dark;
+                /*background-color: @color-base;
+                color: @color-gray-dark;*/
+            }
+
+            a.link.active {
+                color: @color-base;
+                border-top: 2px solid @color-base;
+                border-bottom: 2px solid @color-base;
+                padding: 3px 0;
             }
         }
     }
@@ -4377,11 +4381,12 @@ section.price-solution {
     section.heading {
         min-height: 100vh;
         //  position: relative;
-        .fp-section.fp-table, .fp-slide.fp-table{
-            display:block;
+        .fp-section.fp-table, .fp-slide.fp-table {
+            display: block;
         }
+
         .fp-tableCell {
-           // margin-top: 20em;
+            // margin-top: 20em;
             display: block;
         }
 
@@ -5451,13 +5456,14 @@ section.price-solution {
 }
 
 @-moz-document url-prefix() //только для fire-fox {
-    .index-wrap section.heading {
-        display: block;
-    }
+.index-wrap section.heading {
+    display: block;
+}
 
-    .index-wrap section.heading .title svg {
-        margin-top: 0.8em;
-    }
+.index-wrap section.heading .title svg {
+    margin-top: 0.8em;
+}
+
 }
 /*@keyframes LoadScale {
     0% {
@@ -5484,7 +5490,7 @@ section.price-solution {
 @media (max-width: 1920px) {
     .index-wrap section.heading .title {
         height: 45%;
-       // margin-top: -2em;
+        // margin-top: -2em;
     }
     /*.index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
         top: 70px;
