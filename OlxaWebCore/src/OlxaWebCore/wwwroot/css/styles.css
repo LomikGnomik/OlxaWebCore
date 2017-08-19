@@ -324,23 +324,12 @@ nav#index-navigation .main-menu .main-menu__item {
   text-align: center;
   flex: auto;
   transition: all 0.3s;
-}
-nav#index-navigation .main-menu .main-menu__item:hover > .submenu {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s;
-  z-index: 1;
-  width: 15em;
-}
-nav#index-navigation .main-menu .main-menu__item a {
-  color: #333333;
-}
-nav#index-navigation .main-menu .main-menu__item a.active {
-  background-color: #06c438;
-  color: #ecf0f1;
-}
-nav#index-navigation .main-menu .main-menu__item a.active::after {
-  /*position: absolute;
+  /*a.active {
+                color: @color-base;
+                font-weight: 700;
+
+                &::after { //стрелочка для активного пункта
+                   position: absolute;
                     display: block;
                     content: "";
                     width: 0;
@@ -350,7 +339,23 @@ nav#index-navigation .main-menu .main-menu__item a.active::after {
                     border-top: 6px solid @color-base;
                     left: 50%;
                     bottom: -6px;
-                    margin-left: -6px;*/
+                    margin-left: -6px;
+                }
+            }*/
+}
+nav#index-navigation .main-menu .main-menu__item:hover > .submenu {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+  z-index: 1;
+  width: 15em;
+}
+nav#index-navigation .main-menu .main-menu__item:hover > .submenu a.active {
+  background: #06c438;
+  color: #ecf0f1;
+}
+nav#index-navigation .main-menu .main-menu__item a {
+  color: #333333;
 }
 nav#index-navigation .main-menu .main-menu__item a.link {
   /*text-decoration: none;
@@ -378,8 +383,14 @@ nav#index-navigation .main-menu .main-menu__item a.link:hover {
   padding: 3px 0;
 }
 nav#index-navigation .main-menu .main-menu__item a.link.active:focus {
-  background-color: #3c6eaa;
-  color: #333333;
+  /*background-color: @color-base;
+                color: @color-gray-dark;*/
+}
+nav#index-navigation .main-menu .main-menu__item a.link.active {
+  color: #3c6eaa;
+  border-top: 2px solid #3c6eaa;
+  border-bottom: 2px solid #3c6eaa;
+  padding: 3px 0;
 }
 nav#index-navigation .submenu {
   display: flex;
@@ -3619,19 +3630,23 @@ section.price-solution .solution-item-question .btn {
 }
 .index-wrap section.heading {
   min-height: 100vh;
-  position: relative;
+}
+.index-wrap section.heading .fp-section.fp-table,
+.index-wrap section.heading .fp-slide.fp-table {
+  display: block;
+}
+.index-wrap section.heading .fp-tableCell {
+  display: block;
 }
 .index-wrap section.heading .title {
-  height: 50%;
-  margin-top: -5em;
+  height: 40%;
+  margin-top: 15em;
 }
 .index-wrap section.heading .title svg {
-  position: absolute;
   font: 15em Ubuntu;
   letter-spacing: 0.15em;
   width: 100%;
   height: 100%;
-  margin-top: 7%;
 }
 .index-wrap section.heading .title svg text {
   fill: #111;
@@ -3660,13 +3675,7 @@ section.price-solution .solution-item-question .btn {
     stroke-width: 0;
   }
 }
-.index-wrap section.heading .description-wrap {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-}
 .index-wrap section.heading .description-wrap .description {
-  display: table-cell;
   font-size: 1.5em;
 }
 .index-wrap section.heading .description-wrap .description .text {
@@ -3674,13 +3683,13 @@ section.price-solution .solution-item-question .btn {
   margin: auto;
   background: #fff;
   padding: 1em;
-  position: relative;
-  padding-left: 40%;
+  text-align: center;
   z-index: 1;
 }
 .index-wrap section.heading .description-wrap .description h1.text {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 300;
+  margin-top: 2.5em;
 }
 .index-wrap section.heading .description-wrap .description .welcome p {
   font-size: 2vw;
@@ -3689,13 +3698,13 @@ section.price-solution .solution-item-question .btn {
   z-index: 999;
 }
 .index-wrap section.heading .description-wrap .description .rw-words {
-  display: inline;
-  min-width: 600px;
-  min-height: 29px;
-  text-align: left;
-  vertical-align: baseline;
-  animation: inherit;
-  padding-bottom: 23px;
+  /*display: inline;
+                    min-width: 600px;
+                    min-height: 29px;
+                    text-align: left;
+                    vertical-align: baseline;
+                    animation: inherit;
+                    padding-bottom: 23px;*/
 }
 .index-wrap section.heading .description-wrap .description .rw-words-1 span {
   margin-left: 10px;
@@ -4321,6 +4330,14 @@ section.price-solution .solution-item-question .btn {
   align-items: center;
   justify-content: center;
 }
+@-moz-document url-prefix() //только для fire-fox {
+  .index-wrap section.heading {
+    display: block;
+  }
+  .index-wrap section.heading .title svg {
+    margin-top: 0.8em;
+  }
+}
 /*@keyframes LoadScale {
     0% {
     }
@@ -4336,24 +4353,27 @@ section.price-solution .solution-item-question .btn {
 }*/
 /*----медиа главной*/
 @media (max-width: 2560px) {
-  .index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
-    top: 250px;
-    right: 50px;
-    transform: scale(0.34) rotateX(0deg) rotateZ(4deg) rotateY(-5deg) skewX(-8deg) skewY(0.5deg);
-  }
+  /*.index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
+        top: 250px;
+        right: 50px;
+        transform: scale(0.34) rotateX(0deg) rotateZ(4deg) rotateY(-5deg) skewX(-8deg) skewY(0.5deg);
+    }*/
 }
 @media (max-width: 1920px) {
-  .index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
-    top: 70px;
-    right: -200px;
-    transform: scale(0.34) rotateX(0deg) rotateZ(5.5deg) rotateY(-5deg) skewX(-8deg) skewY(-1deg);
+  .index-wrap section.heading .title {
+    height: 45%;
   }
+  /*.index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
+        top: 70px;
+        right: -200px;
+        transform: scale(0.34) rotateX(0deg) rotateZ(5.5deg) rotateY(-5deg) skewX(-8deg) skewY(-1deg);
+    }*/
 }
 @media (max-width: 1680px) {
-  .index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
-    top: 30px;
-    right: -280px;
-  }
+  /*.index-wrap section.index-web-sites .m-hidden.index-web-sites-wrap .screenRap {
+        top: 30px;
+        right: -280px;
+    }*/
   /*.m-hidden.index-web-sites-wrap {
         display: none;
     }
@@ -4381,9 +4401,16 @@ section.price-solution .solution-item-question .btn {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .index-wrap section.heading .description-wrap .description .text {
-    padding-left: 35%;
+  .index-wrap section.heading .description-wrap .description h1.text {
+    font-size: 0.7em;
+    margin-top: 1.5em;
   }
+  .index-wrap section.heading .title svg {
+    font-size: 20em;
+  }
+  /*.index-wrap section.heading .description-wrap .description .text {
+        padding-left: 35%;
+    }*/
   /*.m-hidden.index-web-sites-wrap {
         display: none;
     }
@@ -4407,18 +4434,25 @@ section.price-solution .solution-item-question .btn {
   section.portfolio-index .galery-wrap #all {
     left: -5em;
   }
-  .index-wrap section.portfolio-index .portfolio-index-wrap h2 {
-    margin-top: 5em;
-    margin-bottom: -3em;
-  }
+  /*.index-wrap section.portfolio-index .portfolio-index-wrap h2 {
+        margin-top: 5em;
+        margin-bottom: -3em;
+    }*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .index-wrap section.heading .title svg {
+    font-size: 20em;
+  }
+  .index-wrap section.heading .description-wrap .description h1.text {
+    font-size: 0.7em;
+    margin-top: 1.5em;
+  }
   .rw-sentence {
     font-size: 18px;
   }
-  .index-wrap section.heading .description-wrap .description .text {
-    padding-left: 35%;
-  }
+  /*.index-wrap section.heading .description-wrap .description .text {
+        padding-left: 35%;
+    }*/
   /*.m-hidden.index-web-sites-wrap {
         display: none;
     }
@@ -4448,12 +4482,17 @@ section.price-solution .solution-item-question .btn {
   }
 }
 @media (max-width: 767px) {
-  .index-wrap section.heading .description-wrap .description {
-    font-size: 1.5em;
+  .index-wrap section.heading .description-wrap .description h1.text {
+    font-size: 0.7em;
+    margin-top: 1.5em;
   }
-  .index-wrap section.heading .description-wrap .description .text {
-    padding-left: 32%;
-  }
+  /*.index-wrap section.heading .description-wrap .description {
+        font-size: 1.5em;
+    }
+
+    .index-wrap section.heading .description-wrap .description .text {
+        padding-left: 32%;
+    }*/
   /* .m-hidden.index-web-sites-wrap {
         display: none;
     }
@@ -4469,13 +4508,19 @@ section.price-solution .solution-item-question .btn {
   }
 }
 @media screen and (max-width: 640px) {
-  .index-wrap section.heading .title {
-    margin-top: -15em;
-    margin-bottom: 5em;
+  .index-wrap section.heading .description-wrap .description h1.text {
+    font-size: 0.7em;
+    margin-top: 1.5em;
   }
-  .index-wrap section.heading .description-wrap .description {
-    font-size: 1.2em;
-  }
+  /*.index-wrap section.heading .title {
+        margin-top: -15em;
+        margin-bottom: 5em;
+    }
+
+
+    .index-wrap section.heading .description-wrap .description {
+        font-size: 1.2em;
+    }*/
   /*.m-hidden.index-web-sites-wrap {
         display: none;
     }
@@ -4501,6 +4546,14 @@ section.price-solution .solution-item-question .btn {
   }
 }
 @media screen and (max-width: 320px) {
+  .index-wrap section.heading .title svg {
+    font-size: 1.5em;
+  }
+  .index-wrap section.heading .description-wrap .description h1.text {
+    font-size: 0.7em;
+    margin-top: 1.5em;
+    margin-left: -1.5em;
+  }
   .rw-sentence {
     font-size: 9px;
   }
