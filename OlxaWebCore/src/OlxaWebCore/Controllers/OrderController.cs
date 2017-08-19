@@ -152,14 +152,14 @@ namespace OlxaWebCore.Controllers
             return RedirectToAction("OrderList");
         }
 
-        public IActionResult NewLeadBitrix24()
+        public IActionResult NewLeadBitrix24(Order order, IFormFile file)
         {
             const string url = @"https://olxaweb.bitrix24.ru/rest/6/t1lsewyxqoggp2qs/crm.lead.add.json";
             var data = new
             {
                 fields = new
                 {
-                    TITLE = "NEW LEAD"
+                    TITLE = order.Name
                 },
                 @params = new
                 {

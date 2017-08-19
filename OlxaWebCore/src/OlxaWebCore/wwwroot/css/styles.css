@@ -5397,7 +5397,7 @@ label.popup_link:hover {
   margin: 0 auto;
 }
 .develop-wrapper section.develop .step-develop-wrap #develop-tabs {
-  width: 700px;
+  width: 75em;
   display: flex;
   position: relative;
   margin: 0 auto;
@@ -5552,7 +5552,13 @@ label.popup_link:hover {
 }
 .develop-wrapper section.develop .step-develop-wrap #tabs-1,
 .develop-wrapper section.develop .step-develop-wrap #tabs-2,
-.develop-wrapper section.develop .step-develop-wrap #tabs-3 {
+.develop-wrapper section.develop .step-develop-wrap #tabs-3,
+.develop-wrapper section.develop .step-develop-wrap #tabs-4,
+.develop-wrapper section.develop .step-develop-wrap #tabs-5,
+.develop-wrapper section.develop .step-develop-wrap #tabs-6,
+.develop-wrapper section.develop .step-develop-wrap #tabs-7,
+.develop-wrapper section.develop .step-develop-wrap #tabs-8,
+.develop-wrapper section.develop .step-develop-wrap #tabs-9 {
   position: absolute;
   top: 0;
   right: 0;
@@ -5567,6 +5573,24 @@ label.popup_link:hover {
 }
 .develop-wrapper section.develop .step-develop-wrap #tabs-3 {
   background: #1b1b1b;
+}
+.develop-wrapper section.develop .step-develop-wrap #tabs-4 {
+  background: #00aff0;
+}
+.develop-wrapper section.develop .step-develop-wrap #tabs-5 {
+  background: #3c6eaa;
+}
+.develop-wrapper section.develop .step-develop-wrap #tabs-6 {
+  background: #00BCD4;
+}
+.develop-wrapper section.develop .step-develop-wrap #tabs-7 {
+  background: #d9004a;
+}
+.develop-wrapper section.develop .step-develop-wrap #tabs-8 {
+  background: #00626e;
+}
+.develop-wrapper section.develop .step-develop-wrap #tabs-9 {
+  background: #06c438;
 }
 /*------------------------------------------------------------------------------------------Формы заявки*/
 form.form .name {
