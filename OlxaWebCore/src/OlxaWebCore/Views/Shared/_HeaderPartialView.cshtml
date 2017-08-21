@@ -19,7 +19,7 @@
             @*<a href="#" class="menu-trigger"><i class="fa fa-list" aria-hidden="true"></i></a>*@
             <ul class="main-menu">
                 <li class="main-menu__item">
-                <a asp-controller="Portfolio" asp-action="All" class="link @(ViewBag.SelectedMenu == "PortfolioAll" ? "active":"")">Портфолио</a>
+                    <a asp-controller="Portfolio" asp-action="All" class="link @(ViewBag.SelectedMenu == "PortfolioAll" ? "active":"")">Портфолио</a>
                 </li>
                 <li class="main-menu__item">
                     <a asp-controller="Home" asp-action="Price" class="link @(ViewBag.SelectedMenu == "HomePrice" ? "active":"")">Сайты</a>
@@ -41,11 +41,11 @@
                                     Типы сайтов
                                 </h3>*@
                             <ul>
-                                <li class="submenu__item"><a  asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
-                                <li class="submenu__item"><a  asp-controller="Web_sites" asp-action="Landing">Landing Page</a></li>
-                                <li class="submenu__item"><a  asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
-                                <li class="submenu__item"><a  asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
-                                <li class="submenu__item"><a  asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
+                                <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Promosite">Сайт-визитка</a></li>
+                                <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Landing">Landing Page</a></li>
+                                <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Corporate">Корпоративный</a></li>
+                                <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Shop">Интернет магазин</a></li>
+                                <li class="submenu__item"><a asp-controller="Web_sites" asp-action="Information">Информационный</a></li>
                             </ul>
                         </div>
 
@@ -55,10 +55,10 @@
                         </div>*@
                 </li>
                 <li class="main-menu__item">
-                <a asp-controller="Service" asp-action="AllService" class="link @(ViewBag.SelectedMenu == "ServiceAllService" ? "active":"")">Услуги / Цены</a>
+                    <a asp-controller="Service" asp-action="AllService" class="link @(ViewBag.SelectedMenu == "ServiceAllService" ? "active":"")">Услуги / Цены</a>
                 </li>
                 <li class="main-menu__item">
-                    <a  asp-controller="Home" asp-action="About" class="link @(ViewBag.SelectedMenu == "HomeAbout" ? "active":"")">О нас</a>
+                    <a asp-controller="Home" asp-action="About" class="link @(ViewBag.SelectedMenu == "HomeAbout" ? "active":"")">О нас</a>
                 </li>
             </ul>
         </nav>
