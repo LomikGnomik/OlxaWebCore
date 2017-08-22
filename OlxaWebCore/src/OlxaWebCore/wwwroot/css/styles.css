@@ -5446,9 +5446,16 @@ section.information-title figcaption p {
     padding: 0;
     max-width: 8em;
     word-wrap: break-word;
+    padding: 0.5em;
   }
-  .popup_link {
+  /*td label.popup_link{
+        display:none;
+    }*/
+  td.window-open {
     display: none;
+  }
+  td.service-price {
+    text-align: end;
   }
 }
 /*-------------------------------------------модальное окно с примером сайта/изображением*/
