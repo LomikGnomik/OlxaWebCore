@@ -6,7 +6,98 @@
         <h2>Виды Сайтов</h2>
     </div>
     <div class="index-web-sites-container">
-        <div class="web-sites-wrap">
+        <div class="container">
+            <section class="tabs-sites">
+                <input id="tab-sites-1" type="radio" name="tab-sites" checked="checked" />
+                <input id="tab-sites-2" type="radio" name="tab-sites" />
+                <input id="tab-sites-3" type="radio" name="tab-sites" />
+                <input id="tab-sites-4" type="radio" name="tab-sites" />
+                <input id="tab-sites-5" type="radio" name="tab-sites" />
+
+                <div class="tabs-sites-label">
+                    <label for="tab-sites-1" id="tab-sites-lab-1">
+                        <span href="#" class="font">
+                            Сайт визитка
+                        </span>
+                        <a class="button" asp-controller="Web_sites" asp-action="Promosite">
+                            Подробнее
+                        </a>
+                    </label>
+                    <label for="tab-sites-2" id="tab-sites-lab-2">
+                        <span href="#" class="font">Лендинг</span>
+                        <a class="button" asp-controller="Web_sites" asp-action="Landing">
+                            Подробнее
+                        </a>
+                    </label>
+                    <label for="tab-sites-3" id="tab-sites-lab-3">
+                        <span href="#" class="font">Корпоративный</span>
+                        <a class="button" asp-controller="Web_sites" asp-action="Corporate">
+                            Подробнее
+                        </a>
+                    </label>
+                    <label for="tab-sites-4" id="tab-sites-lab-4">
+                        <span href="#" class="font">Интернет магазин</span>
+                        <a class="button" asp-controller="Web_sites" asp-action="Shop">
+                            Подробнее
+                        </a>
+                    </label>
+                    <label for="tab-sites-5" id="tab-sites-lab-5">
+                        <span href="#" class="font">Информационный</span>
+                        <a class="button" asp-controller="Web_sites" asp-action="Information">
+                            Подробнее
+                        </a>
+                    </label>
+
+                </div>
+                <div class="tabs-sites-cont">
+                    <div id="tab-sites-c1">
+                        <h2>Сайт визитка</h2>
+                        <div><span></span></div>
+                        <p>
+                            Содержит всю необходимую информацию о вас или вашей фирме,
+                            как правило состоит из одной или нескольких страниц.
+                            Имеет форму обратной связи и схему проезда, но при необходимости базовый функционал
+                            можно расширить, например, добавить калькулятор, галерею, новости и пр.
+                        </p>
+                    </div>
+                    <div id="tab-sites-c2">
+                        <h2>Лендинг</h2>
+                        <div><span></span></div>
+                        <p>
+                            Как правило это одна интернет страница, созданная для конкретного товара или
+                            услуги побуждающая к действию целевую аудиторию (покупка или подписка).
+                            Состоит из блоков, каждый из которых выполняет конкретную задачу.
+                        </p>
+                    </div>
+                    <div id="tab-sites-c3">
+                        <h2>Корпоративный</h2>
+                        <div><span></span></div>
+                        <p>
+                            Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
+                            более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
+                        </p>
+                    </div>
+                    <div id="tab-sites-c4">
+                        <h2>Интернет магазин</h2>
+                        <div><span></span></div>
+                        <p>
+                            Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
+                            быстро их обрабатывать. Гибкая структура позволяет расширить ассортимент
+                            продукции и добавлять новые способы оплаты и доставки.
+                        </p>
+                    </div>
+                    <div id="tab-sites-c5">
+                        <h2>Информационный</h2>
+                        <div><span></span></div>
+                        <p>
+                            К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
+                            например: кулинарный, образовательный, развлекательный
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        @*<div class="web-sites-wrap">
             <div class="web-sites-nav">
                 <div class="promo-site">
                     <h2 href="#" class="font">
@@ -92,6 +183,6 @@
                 </p>
             </div>
 
-        </div>
+        </div>*@
     </div>
 </div>

@@ -788,10 +788,12 @@ nav#index-navigation {
 section.footer.section {
     height: 10em;
 }
-.footer-index{
+
+.footer-index {
     padding-top: 8em;
     padding-bottom: 2em;
 }
+
 footer {
     flex: 0 0 auto;
     padding-bottom: 2em;
@@ -951,26 +953,34 @@ footer {
         }
     }
 }
-@media (min-width: 1200px) {}
-@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
-    .footer-index{
-            padding-top: 12em;
+    .footer-index {
+        padding-top: 12em;
     }
 }
+
 @media (max-width: 767px) {
-     .footer-index{
-            padding-top: 12em;
+    .footer-index {
+        padding-top: 12em;
     }
 }
-@media screen and (max-width:640px){
-     .footer-index{
-            padding-top: 20em;
+
+@media screen and (max-width:640px) {
+    .footer-index {
+        padding-top: 20em;
     }
 }
-@media screen and (max-width:320px){
-     .footer-index{
-            padding-top: 22em;
+
+@media screen and (max-width:320px) {
+    .footer-index {
+        padding-top: 22em;
     }
 }
 /*@media screen and (min-width: 861px) {
@@ -4752,10 +4762,13 @@ section.price-solution {
     /*виды сайтов на главной*/
     .index-web-sites-wrap {
         .index-web-sites {
-            height: 100vh;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             .title {
-                padding-top: 6%;
+                // padding-top: 6%;
                 text-align: center;
                 // color: @color-base-lighter1;
                 text-transform: uppercase;
@@ -4769,7 +4782,159 @@ section.price-solution {
                 width: 100%;
                 height: 100%;
 
-                .web-sites-wrap {
+                .container {
+                    min-height: 100%;
+                }
+
+                .tabs-sites {
+                    position: relative;
+                    margin: 0 auto;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100%;
+                }
+
+                .tabs-sites-label {
+                    order: 1;
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                    width: 100%;
+                    height: 20em;
+                    margin-top: 4em;
+                    padding: 8em 0;
+                    justify-content: center;
+
+                    label {
+                        display: block;
+                        width: 10em;
+                        height: 10em;
+                        margin: 1em 2.2em;
+                        cursor: pointer;
+                        z-index: 1;
+                        box-shadow: rgba(0, 0, 0, 0.23) 19px 19px 30px;
+                        left: 0;
+                        background: rgb(229, 229, 229);
+                        animation: LoadScale .6s 2.7s forwards;
+
+                        span.font {
+                            display:block;
+                            font-size: 1em;
+                            text-align: center;
+                            margin-top: 1em;
+                        }
+
+                        a.button {
+                            display: block;
+                            font-size: 1em;
+                            background-color: transparent;
+                            color: @color-base;
+                            position: relative;
+                            bottom: -5em;
+                            width: 5.5em;
+                            margin: 0 auto;
+                            border-bottom: 1px solid @color-base;
+
+                            &:hover {
+                                color: @color-base-lighter1;
+                            }
+                        }
+                    }
+                }
+
+                .tabs-sites input {
+                    position: absolute;
+                    left: -9999px;
+                }
+
+                #tab-sites-1:checked ~ .tabs-sites-label #tab-sites-lab-1,
+                #tab-sites-2:checked ~ .tabs-sites-label #tab-sites-lab-2,
+                #tab-sites-3:checked ~ .tabs-sites-label #tab-sites-lab-3,
+                #tab-sites-4:checked ~ .tabs-sites-label #tab-sites-lab-4,
+                #tab-sites-5:checked ~ .tabs-sites-label #tab-sites-lab-5 {
+                    z-index: 2;
+                    left: -70px !important;
+                    transform: scale(1.8, 1.8) !important;
+                }
+
+                .tabs-sites-cont {
+                    //order:-1;
+                    background: #fff;
+                    position: relative;
+                    z-index: 2;
+                    height: 230px;
+                    padding:6em 1em;
+                }
+
+                .tabs-sites-cont > div {
+                    order: 0;
+                    position: absolute;
+                    opacity: 0;
+                    z-index: 3;
+                    transition: opacity .1s ease;
+                    // width: 50%;
+                    top: 2em;
+                    text-align: justify;
+
+                    h2 {
+                        font-size: 2em;
+                        padding: 12px 0 10px 72px;
+                        margin: 0 0 10px -120px;
+                        opacity: 0;
+                        transition: all .3s ease;
+                    }
+
+                    div {
+                        width: 0;
+                        opacity: 0;
+                        transition: width .4s ease, opacity .7s ease;
+                    }
+
+                    span {
+                        width: 100%;
+                        border-top: #333333 solid 1px;
+                        height: 1px;
+                        display: block;
+                        opacity: .6;
+                    }
+
+                    p {
+                        font-size: 1em;
+                        color: #333333;
+                        line-height: 1.8;
+                        padding: 32px 32px 0 0;
+                        opacity: 0;
+                        transition: all .5s ease;
+                    }
+                }
+
+                #tab-sites-1:checked ~ .tabs-sites-cont #tab-sites-c1,
+                #tab-sites-2:checked ~ .tabs-sites-cont #tab-sites-c2,
+                #tab-sites-3:checked ~ .tabs-sites-cont #tab-sites-c3,
+                #tab-sites-4:checked ~ .tabs-sites-cont #tab-sites-c4,
+                #tab-sites-5:checked ~ .tabs-sites-cont #tab-sites-c5 {
+                    position: static;
+                    left: 0;
+                    opacity: 1;
+
+                    h2 {
+                        opacity: 1;
+                        margin: 0 0 10px -72px;
+                        color: #333333;
+                        font-weight: 400;
+                    }
+
+                    div {
+                        width: 100%;
+                        opacity: 1;
+                    }
+
+                    p {
+                        opacity: 1;
+                    }
+                }
+                /*.web-sites-wrap {
                     display: flex;
                     flex-direction: column;
                     height: 100%;
@@ -4777,7 +4942,6 @@ section.price-solution {
                     justify-content: flex-end;
 
                     .web-sites-nav {
-                        //order:1;
                         display: flex;
                         flex-wrap: wrap;
                         margin-bottom: 20%;
@@ -4789,7 +4953,6 @@ section.price-solution {
                             cursor: pointer;
                             z-index: 1;
                             box-shadow: rgba(0, 0, 0, 0.23) 19px 19px 30px;
-                            // left: 0;
                             background: rgb(229, 229, 229);
                             animation: LoadScale .6s 2.7s forwards;
 
@@ -4826,10 +4989,6 @@ section.price-solution {
                         }
 
                         h2.font {
-                            /*display: inline-block;
-                            margin-top: 1em;
-                            margin-left: 0.3em;
-                            font-size: 1em;*/
                             font-size: 1em;
                             text-align: center;
                             margin-top: 1em;
@@ -4842,7 +5001,6 @@ section.price-solution {
                             color: #3c6eaa;
                             position: relative;
                             bottom: -5em;
-                            //  right: -4em;
                             width: 5.5em;
                             margin: 0 auto;
                             border-bottom: 1px solid #3c6eaa;
@@ -4932,7 +5090,7 @@ section.price-solution {
                     .information-site {
                         animation: LoadScale .6s 2.7s forwards;
                     }
-                }
+                }*/
             }
         }
     }
@@ -5606,7 +5764,8 @@ section.price-solution {
     section.about .about__row .about__col {
         width: 33.333%;
     }
-     section.portfolio-index {
+
+    section.portfolio-index {
         .galery-wrap {
             .hidden {
                 display: none;
@@ -5631,7 +5790,8 @@ section.price-solution {
     section.about .about__row .about__col {
         width: 33.333%;
     }
-     section.portfolio-index {
+
+    section.portfolio-index {
         .galery-wrap {
             .hidden {
                 display: none;
@@ -5656,7 +5816,8 @@ section.price-solution {
     section.about .about__row .about__col {
         width: 33.333%;
     }
-     section.portfolio-index {
+
+    section.portfolio-index {
         .galery-wrap {
             .hidden {
                 display: none;
@@ -5947,6 +6108,7 @@ section.price-solution {
     .index-wrap section.about .title-wrap .headline {
         font-size: 1em;
     }
+
     .index-wrap section.index-web-sites-wrap .title h2 {
         font-size: 1.2em;
     }
