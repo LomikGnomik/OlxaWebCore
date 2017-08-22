@@ -3453,7 +3453,7 @@ section.price-solution h1 {
 section.price-solution .description-solution {
   margin: 0 auto;
   width: 60%;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 section.price-solution .description-solution p {
   text-align: center;
@@ -3480,7 +3480,7 @@ section.price-solution .solution-row .solution-item-wrap .solution-item {
   padding-top: 10px;
   border: 2px solid #06c438;
   margin: 0 auto 30px auto;
-  height: 20em;
+  height: 23em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3492,6 +3492,7 @@ section.price-solution .solution-row .solution-item-wrap .solution-item:hover {
 section.price-solution .solution-row .solution-item-wrap .solution-title-wrap {
   padding: 0 0.8em;
   height: 10em;
+  padding-bottom: 1em;
 }
 section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .solution-title h2 {
   color: #3c6eaa;
@@ -3501,6 +3502,10 @@ section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .s
 }
 section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .solution-title i {
   color: #3c6eaa;
+}
+section.price-solution .solution-row .solution-item-wrap .solution-title-wrap li p strong::after {
+  content: "\20BD";
+  padding-right: 0.5em;
 }
 section.price-solution .solution-row .solution-item-wrap .btn-price-solution {
   background: #3c6eaa;
@@ -3524,20 +3529,34 @@ section.price-solution .solution-row .solution-price {
   margin: 1em 0;
   font-weight: 600;
 }
-section.price-solution .solution-row ul {
+section.price-solution .solution-row table {
   padding: 0;
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
 }
-section.price-solution .solution-row ul li {
+section.price-solution .solution-row table tr {
   display: block;
   color: gray;
   padding: 10px 15px;
   border-top: 1px solid #d9d9d9;
 }
-section.price-solution .solution-row ul li strong {
+section.price-solution .solution-row table tr td {
+  width: 100%;
+}
+section.price-solution .solution-row table tr td.solution-meta {
+  width: 50%;
+  padding-left: 6em;
+}
+section.price-solution .solution-row table tr strong {
   color: #000;
   font-weight: bold;
   float: right;
   margin-right: 4em;
+}
+section.price-solution .solution-row table tr td.price strong::after {
+  content: "\20BD";
+  padding-left: 0.5em;
 }
 section.price-solution .solution-item-question .solution-title {
   font-size: 1.5em;
@@ -3556,10 +3575,22 @@ section.price-solution .solution-item-question .btn {
   .solution-item-wrap {
     width: 33.333%;
   }
+  section.price-solution .solution-row table tr td.solution-meta {
+    padding-left: 3em;
+  }
+  section.price-solution .solution-row table tr strong {
+    margin-right: 0;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .solution-item-wrap {
     width: 50%;
+  }
+  section.price-solution .solution-row table tr td.solution-meta {
+    padding-left: 4em;
+  }
+  section.price-solution .solution-row table tr strong {
+    margin-right: 0;
   }
 }
 @media (min-width: 641px) and (max-width: 767px) {
@@ -3568,28 +3599,58 @@ section.price-solution .solution-item-question .btn {
     width: 90%;
   }
   .solution-item-wrap:first-child {
-    margin-top: 6em;
+    margin-top: 2em;
   }
 }
 @media (min-width: 323px) and (max-width: 640px) {
+  section.price-solution {
+    margin-top: 7em;
+  }
   .solution-item-wrap {
     margin: 0 auto;
     width: 90%;
   }
   .solution-item-wrap:first-child {
-    margin-top: 6em;
+    margin-top: 2em;
+  }
+  section.price-solution .solution-row table tr td.solution-meta {
+    padding-left: 4em;
+  }
+  section.price-solution .solution-row table tr strong {
+    margin-right: 0;
+  }
+  section.price-solution .description-solution {
+    width: 90%;
+  }
+  section.price-solution .solution-row .solution-item-wrap {
+    padding: 0;
   }
 }
 @media screen and (max-width: 322px) {
+  section.price-solution {
+    margin-top: 7em;
+  }
   .solution-item-wrap {
     margin: 0 auto;
     width: 90%;
   }
   .solution-item-wrap:first-child {
-    margin-top: 6em;
+    margin-top: 2em;
   }
   section.price-solution .solution-row ul li {
     padding: 0.5em 0;
+  }
+  section.price-solution .solution-row table tr td.solution-meta {
+    padding-left: 2em;
+  }
+  section.price-solution .solution-row table tr strong {
+    margin-right: 0;
+  }
+  section.price-solution .description-solution {
+    width: 90%;
+  }
+  section.price-solution .solution-row .solution-item-wrap {
+    padding: 0;
   }
 }
 /*-----------------------------------------------------------------------Главная Home/Index--домашняя страница*/
