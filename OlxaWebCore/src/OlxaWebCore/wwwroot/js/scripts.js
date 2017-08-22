@@ -225,21 +225,21 @@ $(document).ready(function () {
 //    $('.smpFeature').addClass('active');
 //});
 
-$('.promo-site').hover(function () {
-    $('.promo-site-description').toggleClass('active');
-});
-$('.landing-site').hover(function () {
-    $('.landing-site-description').toggleClass('active');
-});
-$('.corporate-site').hover(function () {
-    $('.corp-site-description').toggleClass('active');
-});
-$('.shop-site').hover(function () {
-    $('.shop-site-description').toggleClass('active');
-});
-$('.information-site').hover(function () {
-    $('.inform-site-description').toggleClass('active');
-});
+//$('.promo-site').hover(function () {
+//    $('.promo-site-description').toggleClass('active');
+//});
+//$('.landing-site').hover(function () {
+//    $('.landing-site-description').toggleClass('active');
+//});
+//$('.corporate-site').hover(function () {
+//    $('.corp-site-description').toggleClass('active');
+//});
+//$('.shop-site').hover(function () {
+//    $('.shop-site-description').toggleClass('active');
+//});
+//$('.information-site').hover(function () {
+//    $('.inform-site-description').toggleClass('active');
+//});
 
 /*------------------------первый экран с видами сайтов картинки в изометрии-------------------*/
 var dialogOpener = $('.dialogOpener');

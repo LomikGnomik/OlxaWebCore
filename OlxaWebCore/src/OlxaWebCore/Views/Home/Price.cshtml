@@ -4,10 +4,13 @@
     ViewBag.SelectedMenu = "HomePrice";
 }
 <div class="species-site-wrap">
-    @*<h1>Сайты</h1>
-    <small>Каталог сайтов которые мы делаем</small>*@
+    <div class="species-site-title">
+        <h1>Сайты</h1>
+        <small>Информация о сайтах, которые мы делаем</small>
+    </div>
+
     <div class="container">
-        <div class="species-site">
+        <div class="species-site species-site-deck">
             <div id="faq-links">
 
                 <div id="visit" class="faq-selected">Визитка</div>
@@ -52,7 +55,7 @@
                                     </div>
                                 </div>
                                 <a href="#" class="link-more">Подробнее</a>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="slide-left-inner-wrap">
                             <div class="slide-left-inner">
@@ -72,7 +75,7 @@
                                     </div>
                                 </div>
                                 <a href="#" class="link-more">Подробнее</a>
-                            </div> 
+                            </div>
                         </div>
                         <div class="slide-left-inner-wrap">
                             <div class="slide-left-inner">
@@ -92,45 +95,9 @@
                                     </div>
                                 </div>
                                 <a href="#" class="link-more">Подробнее</a>
-                            </div> 
+                            </div>
                         </div>
                     </div>
-
-
-                    @*<div class="faq">
-                            <ul class="faq-accordion">
-                                <li>
-                                    <i></i>
-                                    <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                                    <a href="#">Готовые решения</a>
-
-                                    <ul class="faq-content">
-                                        <li>
-                                            <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet k.</p></div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                                    <a href="#">Создание</a>
-                                    <ul class="faq-content">
-                                        <li>
-                                            <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                                    <a href="#">Разработка</a>
-                                    <ul class="faq-content">
-                                        <li>
-                                            <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </div>*@
                 </div>
             </div>
 
@@ -150,42 +117,68 @@
                 </div>
 
                 <div class="slide-left">
-                    <ul class="faq-accordion">
-
-                        <li>
-                            <a href="#">Готовые решения</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                        <li>
-                            <a href="#">Создание</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                        <li>
-                            <a href="#">Разработка</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
-
+                    <div class="slides-row">
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Готовые сайты</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Создание</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Разработка</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -203,38 +196,68 @@
                     <hr>
                 </div>
                 <div class="slide-left">
-                    <ul class="faq-accordion">
-
-                        <li>
-                            <a href="#">Готовые решения</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#">Создание</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#">Разработка</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="slides-row">
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Готовые сайты</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Создание</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Разработка</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -253,38 +276,68 @@
                     <hr>
                 </div>
                 <div class="slide-left">
-                    <ul class="faq-accordion">
-
-                        <li>
-                            <a href="#">Готовые решения</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#">Создание</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#">Разработка</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="slides-row">
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Готовые сайты</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Создание</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Разработка</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -302,41 +355,68 @@
                     <hr>
                 </div>
                 <div class="slide-left">
-                    <ul class="faq-accordion">
-
-                        <li>
-                            <a href="#">Готовые решения</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                        <li>
-                            <a href="#">Создание</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                        <li>
-                            <a href="#">Разработка</a>
-                            <a href="#"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                            <ul class="faq-content">
-                                <li>
-                                    <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
-                                </li>
-                            </ul>
-                        </li>
-
-                    </ul>
+                    <div class="slides-row">
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Готовые сайты</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Создание</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="slide-left-inner-wrap">
+                            <div class="slide-left-inner">
+                                <h2>Разработка</h2>
+                                <p>
+                                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
+                                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam.
+                                </p>
+                                <div class="price-time-wrap">
+                                    <div class="price">
+                                        <p>Цена</p>
+                                        <span>15 000</span>
+                                    </div>
+                                    <div class="time">
+                                        <p>Срок</p>
+                                        <span>7 раб/дн.</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="link-more">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -344,5 +424,195 @@
 
 
         </div>
+
+        @*аккордион для мобильных*@
+        <div class="species-site-mob">            
+            <div class="accordion">
+                <ul>
+                    <li>
+                        <input type="checkbox">
+                        <i></i>
+                        <h2 class="title_block">Сайт визитка</h2>
+                        <div class="content">
+                            <div class="list-wrap">
+                                <div class="list-item">
+                                    <h3>Готовые решения</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Создание сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Разработка сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="title_block">Лендинг</h2>
+                        <div class="content">
+                            <div class="list-wrap">
+                                <div class="list-item">
+                                    <h3>Готовые решения</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Создание сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Разработка сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="title_block">Корпоративный</h2>
+                        <div class="content">
+                            <div class="list-wrap">
+                                <div class="list-item">
+                                    <h3>Готовые решения</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Создание сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Разработка сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="title_block">Интернет-магазин</h2>
+                        <div class="content">
+                            <div class="list-wrap">
+                                <div class="list-item">
+                                    <h3>Готовые решения</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Создание сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Разработка сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2 class="title_block">Информационный</h2>
+                        <div class="content">
+                            <div class="list-wrap">
+                                <div class="list-item">
+                                    <h3>Готовые решения</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Создание сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                                <div class="list-item">
+                                    <h3>Разработка сайта</h3>
+                                    <p>
+                                        Tincidunt integer eu augue augue nunc elit dolor,
+                                        luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                                        vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+
     </div><!--container-->
 </div>
