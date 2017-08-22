@@ -3125,7 +3125,26 @@ section.portfolio .grid.isotope-grid:after {
 /*-----------------------------------------------------------------------------Страница Цены*/
 .species-site-wrap {
   min-height: 100vh;
-  padding-top: 15em;
+}
+.species-site-wrap .species-site-title h1 {
+  margin-top: 5em;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+.species-site-wrap .species-site-title small {
+  display: block;
+  text-align: center;
+  font-size: 16px -5;
+  color: #cccccc;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 2;
+  margin-top: 0.312em;
+  letter-spacing: .1em;
+  margin-bottom: 3em;
+}
+.species-site-wrap .species-site-deck {
   /*.faq-accordion > li > a:before {
         content: 'Q.';
         padding-right: 0.313em;
@@ -3153,65 +3172,48 @@ section.portfolio .grid.isotope-grid:after {
         margin-right: .5em;
     }*/
 }
-.species-site-wrap h1 {
-  margin-top: 5em;
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 1.5em;
-}
-.species-site-wrap small {
-  display: block;
-  text-align: center;
-  font-size: 16px -5;
-  color: #cccccc;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 2;
-  margin-top: 0.312em;
-  letter-spacing: .1em;
-  margin-bottom: 3em;
-}
-.species-site-wrap .species-site {
+.species-site-wrap .species-site-deck.species-site {
   display: flex;
   width: 100%;
   margin: 0 auto;
+  margin-top: 15em;
   overflow: hidden;
 }
-.species-site-wrap a {
+.species-site-wrap .species-site-deck a {
   text-decoration: none;
 }
-.species-site-wrap #faq-links {
-  padding: 3em 1.25em;
+.species-site-wrap .species-site-deck #faq-links {
   padding-right: 3em;
+  padding-top: 3em;
   width: 18em;
   height: 27.5em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.species-site-wrap #faq-links div {
+.species-site-wrap .species-site-deck #faq-links div {
   color: #aeaeaf;
   cursor: pointer;
   font-weight: 700;
   text-transform: capitalize;
   font-size: 1.3em;
 }
-.species-site-wrap [class*="about-"] {
+.species-site-wrap .species-site-deck [class*="about-"] {
   margin-top: 3em;
   width: 100%;
 }
-.species-site-wrap .faq-group {
+.species-site-wrap .species-site-deck .faq-group {
   padding: 0 20px 0 20px;
   position: relative;
 }
-.species-site-wrap .faq-group h2 {
+.species-site-wrap .species-site-deck .faq-group h2 {
   font-size: 1.2em;
 }
-.species-site-wrap .faq-group div {
+.species-site-wrap .species-site-deck .faq-group div {
   font-weight: 700;
   text-align: center;
 }
-.species-site-wrap .faq-group hr {
+.species-site-wrap .species-site-deck .faq-group hr {
   border: 0;
   border-top: 1px solid #606060;
   clear: both;
@@ -3220,7 +3222,7 @@ section.portfolio .grid.isotope-grid:after {
   box-sizing: content-box;
   height: 0;
 }
-.species-site-wrap .faq-group:after {
+.species-site-wrap .species-site-deck .faq-group:after {
   left: 50%;
   border: solid transparent;
   content: " ";
@@ -3232,59 +3234,59 @@ section.portfolio .grid.isotope-grid:after {
   border-width: 15px;
   margin-left: -15px;
 }
-.species-site-wrap p.faq-description {
+.species-site-wrap .species-site-deck p.faq-description {
   margin: 0 auto;
   padding-bottom: 1em;
   padding-top: 1em;
   font-weight: normal;
 }
-.species-site-wrap .faq-accordion > li {
+.species-site-wrap .species-site-deck .faq-accordion > li {
   border-top: 1px solid rgba(198, 198, 198, 0.4);
   color: #666;
   padding: 0.2em 0;
 }
-.species-site-wrap .faq-accordion li a {
+.species-site-wrap .species-site-deck .faq-accordion li a {
   color: #666;
   font-weight: 700;
 }
-.species-site-wrap .faq-accordion > li:last-child {
+.species-site-wrap .species-site-deck .faq-accordion > li:last-child {
   border-bottom: 1px solid rgba(198, 198, 198, 0.4);
 }
-.species-site-wrap .faq-accordion a + .fa {
+.species-site-wrap .species-site-deck .faq-accordion a + .fa {
   float: right;
   margin-right: 2.3em;
   transform: rotate(360deg);
   transition: all .5s ease;
 }
-.species-site-wrap .faq-accordion a.expanded + .fa {
+.species-site-wrap .species-site-deck .faq-accordion a.expanded + .fa {
   transform: rotate(180deg);
 }
-.species-site-wrap .faq-accordion > li > a.expanded {
+.species-site-wrap .species-site-deck .faq-accordion > li > a.expanded {
   color: #3c6eaa;
   opacity: 1 !important;
 }
-.species-site-wrap .faq-content {
+.species-site-wrap .species-site-deck .faq-content {
   background-color: #ececec;
   margin: 20px 0 -20px;
 }
-.species-site-wrap .faq-content p {
+.species-site-wrap .species-site-deck .faq-content p {
   margin: 0 1.2em;
   padding: 1.250em 0;
 }
-.species-site-wrap .faq-content p:first-letter {
+.species-site-wrap .species-site-deck .faq-content p:first-letter {
   color: #06c438;
   font-weight: 700;
   text-transform: uppercase;
 }
-.species-site-wrap .faq-hide {
+.species-site-wrap .species-site-deck .faq-hide {
   display: none;
 }
-.species-site-wrap .faq-selected {
+.species-site-wrap .species-site-deck .faq-selected {
   color: #3c6eaa !important;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-.species-site-wrap .slide-left {
+.species-site-wrap .species-site-deck .slide-left {
   animation-name: slide-left;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -3307,50 +3309,49 @@ section.portfolio .grid.isotope-grid:after {
             align-items: baseline;
         }*/
 }
-.species-site-wrap .slide-left .slides-row {
+.species-site-wrap .species-site-deck .slide-left .slides-row {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap {
   width: 18em;
   padding: 1em;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1em;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner h2 {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner h2 {
   margin-bottom: 1.5em;
   text-align: center;
   font-size: 1em;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner p {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner p {
   margin-bottom: 1.5em;
   text-align: center;
   font-size: 0.8em;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap {
   margin-bottom: 1.5em;
   text-align: center;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap .price,
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap .time {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap .price,
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap .time {
   display: flex;
   justify-content: center;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap p {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap p {
   font-weight: 700;
   color: #3c6eaa;
   margin-right: 1em;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap span {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner .price-time-wrap span {
   font-weight: 300;
 }
-.species-site-wrap .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner a.link-more {
+.species-site-wrap .species-site-deck .slide-left .slides-row .slide-left-inner-wrap .slide-left-inner a.link-more {
   margin-bottom: 1em;
   margin: 0 auto;
   padding-bottom: 0.3em;
@@ -3440,6 +3441,47 @@ section.portfolio .grid.isotope-grid:after {
     transform: translateX(0%);
   }
 }
+@media (min-width: 1200px) {
+  .species-site-title {
+    display: none;
+  }
+  .species-site-mob {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .species-site-wrap .species-site.species-site-deck {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .species-site-wrap .species-site.species-site-deck {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .species-site-wrap .species-site.species-site-deck {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .species-site-wrap .species-site.species-site-deck {
+    display: none;
+  }
+  .species-site-mob {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 320px) {
+  .species-site-wrap .species-site.species-site-deck {
+    display: none;
+  }
+  .species-site-mob {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 /*------------------------------------------------------------------------------Страница Создания*/
 section.price-solution {
   margin-top: 10em;
@@ -3494,6 +3536,10 @@ section.price-solution .solution-row .solution-item-wrap .solution-title-wrap {
   height: 10em;
   padding-bottom: 1em;
 }
+section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .solution-title {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
 section.price-solution .solution-row .solution-item-wrap .solution-title-wrap .solution-title h2 {
   color: #3c6eaa;
 }
@@ -3507,15 +3553,18 @@ section.price-solution .solution-row .solution-item-wrap .solution-title-wrap li
   content: "\20BD";
   padding-right: 0.5em;
 }
-section.price-solution .solution-row .solution-item-wrap .btn-price-solution {
-  background: #3c6eaa;
-  color: #fff;
-  width: 10em;
+section.price-solution .solution-row .solution-item-wrap .link-price-solution {
+  display: block;
+  color: #3c6eaa;
+  border-bottom: 1px solid color-base;
+  padding-bottom: 0.2em;
   margin: 0 auto;
+  margin-top: 2em;
   margin-bottom: 2em;
 }
-section.price-solution .solution-row .solution-item-wrap .btn-price-solution:hover {
-  background: #5688c3;
+section.price-solution .solution-row .solution-item-wrap .link-price-solution:hover {
+  color: #21475f;
+  border-bottom-color: #21475f;
 }
 section.price-solution .solution-row .solution-title {
   display: block;
@@ -3538,8 +3587,7 @@ section.price-solution .solution-row table {
 section.price-solution .solution-row table tr {
   display: block;
   color: gray;
-  padding: 10px 15px;
-  border-top: 1px solid #d9d9d9;
+  padding: 4px 15px;
 }
 section.price-solution .solution-row table tr td {
   width: 100%;
