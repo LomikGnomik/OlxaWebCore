@@ -1370,6 +1370,7 @@ section.portfolio small {
 section.portfolio .filter {
   margin-top: 2em;
   margin-bottom: 1.5em;
+  padding-bottom: 2em;
   text-align: center;
 }
 section.portfolio .nav-filters {
@@ -1603,12 +1604,31 @@ section.portfolio .grid.isotope-grid:after {
     float: none;
     margin: 0 auto;
     width: 90%;
-    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  section.portfolio {
+    margin-top: 10em;
+  }
+}
+@media (max-width: 767px) {
+  section.portfolio {
+    margin-top: 12em;
+  }
+}
+@media screen and (max-width: 640px) {
+  section.portfolio {
+    margin-top: 10em;
+  }
+}
+@media (max-width: 320px) {
+  section.portfolio {
+    margin-top: 8em;
   }
 }
 /*----------------------------------------------------------------отдельная страница портфолио*/
 .portfolio-inner-wrap {
-  margin-top: 5em;
+  margin-top: 12em;
 }
 .portfolio-inner-wrap img {
   width: 100%;
@@ -1651,6 +1671,7 @@ section.portfolio .grid.isotope-grid:after {
 .portfolio-inner-wrap section.description {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .portfolio-inner-wrap section.description .small-description,
 .portfolio-inner-wrap section.description .review {
@@ -1814,11 +1835,16 @@ section.portfolio .grid.isotope-grid:after {
   margin-left: -6px;
 }
 .portfolio-inner-wrap .description-more {
-  margin: 8em auto 2em;
+  margin: 0 auto 5em;
+}
+.portfolio-inner-wrap .description-more h3 {
+  padding-bottom: 1.5em;
 }
 @media screen and (min-width: 1200px) {
   .portfolio-inner-wrap section {
-    margin: 0 auto;
+    margin: 0 auto 5em;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .label-wrap-devices {
     position: absolute;
@@ -1840,6 +1866,10 @@ section.portfolio .grid.isotope-grid:after {
 @media (min-width: 992px) and (max-width: 1199px) {
   .portfolio-inner-wrap section {
     margin: 2em auto 0;
+  }
+  .portfolio-inner-wrap section.description {
+    padding-top: 2em;
+    padding-bottom: 3em;
   }
   .label-wrap-devices {
     display: inherit;
@@ -1867,8 +1897,24 @@ section.portfolio .grid.isotope-grid:after {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .portfolio-inner-wrap {
+    margin-top: 8em;
+  }
+  .portfolio-inner-wrap section.description {
+    padding-top: 0;
+    padding-bottom: 3em;
+  }
+  .portfolio-inner-wrap .description-more {
+    margin: 9em auto 5em;
+  }
+  .portfolio-inner-wrap section.heading {
+    padding-bottom: 3em;
+  }
   .portfolio-inner-wrap section {
     margin: 2em auto 0;
+  }
+  .portfolio-inner-wrap section.device {
+    min-height: auto;
   }
   .label-wrap-devices {
     /*position: relative;
@@ -1918,13 +1964,26 @@ section.portfolio .grid.isotope-grid:after {
 }
 @media screen and (max-width: 767px) {
   .portfolio-inner-wrap {
-    margin-top: 7em;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 12em;
+  }
+  .portfolio-inner-wrap section.description {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+  .portfolio-inner-wrap .description-more {
+    margin: 2em auto 5em;
+  }
+  .portfolio-inner-wrap section.device {
+    min-height: auto;
   }
   .label-wrap-devices {
     display: none;
   }
   .desktop {
     stroke-opacity: 0;
+    display: none;
   }
   .portfolio-inner-wrap section.device .tabs .devieces-outer-wrap-monitor,
   .portfolio-inner-wrap section.device .tabs .devices-inner-wrap-monitor {
@@ -1957,6 +2016,17 @@ section.portfolio .grid.isotope-grid:after {
   .portfolio-inner-wrap section.device .tabs .iphone-sm-circle,
   .portfolio-inner-wrap section.device .tabs .iphone-b-circle {
     stroke-opacity: 0;
+  }
+}
+@media (max-width: 320px) {
+  .portfolio-inner-wrap {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 8em;
+  }
+  .portfolio-inner-wrap section.heading .portfolio-inner-name {
+    padding: 0;
+    margin: 0;
   }
 }
 /*---------------------------------------------------------------------------Готовые решения/сайты*/
@@ -5376,6 +5446,9 @@ section.information-title figcaption p {
     padding: 0;
     max-width: 8em;
     word-wrap: break-word;
+  }
+  .popup_link {
+    display: none;
   }
 }
 /*-------------------------------------------модальное окно с примером сайта/изображением*/
