@@ -3054,6 +3054,115 @@ section.portfolio {
     }
 }
 
+@media (min-width: 1220px) {
+}
+
+@media (min-width: 992px) and (max-width: 1219px) {
+    .products-wrapper .product-content {
+        display: block;
+    }
+
+    .products-wrapper .product-content .product-filter-wrap {
+        width: 100%;
+    }
+
+    ul.nav-filters {
+        display: flex;
+        justify-content: center;
+    }
+
+    .products-wrapper .product-content .products-catalog-wrap {
+        width: 100%;
+    }
+
+    .products-wrapper .grid.isotope-grid .grid-sizer, .products-wrapper .grid.isotope-grid .grid-item {
+        width: 26.66%;
+        margin-right: 4em;
+    }
+
+    .products-wrapper .product-content .product-filter-wrap h3 {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .products-wrapper .product-content {
+        display: block;
+    }
+
+    .products-wrapper .product-content .product-filter-wrap {
+        width: 100%;
+    }
+
+    ul.nav-filters {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .products-wrapper .product-content .product-filter-wrap .nav-filters > li {
+        margin-bottom: 0;
+    }
+
+    .products-wrapper .product-content .products-catalog-wrap {
+        width: 100%;
+    }
+
+    .products-wrapper .grid.isotope-grid .grid-sizer, .products-wrapper .grid.isotope-grid .grid-item {
+        width: 40%;
+        margin-right: 4em;
+    }
+
+    .products-wrapper .product-content .product-filter-wrap h3 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 767px) {
+    .products-wrapper .product-content {
+        display: block;
+    }
+
+    .products-wrapper .product-content .product-filter-wrap {
+        width: 100%;
+    }
+
+    ul.nav-filters {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .products-wrapper .product-content .product-filter-wrap .nav-filters > li {
+        margin-bottom: 0;
+    }
+
+    .products-wrapper .product-content .products-catalog-wrap {
+        width: 100%;
+    }
+
+    .products-wrapper .grid.isotope-grid .grid-sizer, .products-wrapper .grid.isotope-grid .grid-item {
+        width: 40%;
+        margin-right: 3.5em;
+    }
+
+    .products-wrapper .product-content .product-filter-wrap h3 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width:640px) {
+    .products-wrapper .grid.isotope-grid .grid-sizer, .products-wrapper .grid.isotope-grid .grid-item {
+        width: 100%;
+        // margin-right: 3em;
+    }
+
+    .products-wrapper .product-content .products-catalog-wrap .product {
+        margin: 0 auto;
+    }
+}
+
+
 @media screen and (max-width: 480px) {
     #content {
         margin-top: 60px;
@@ -3072,11 +3181,27 @@ section.portfolio {
     .product:hover .product-sidebar {
         bottom: -50px;
     }
+     .products-wrapper .product-content .products-catalog-wrap .product{
+        width: 90%;
+    }
+    .product-filter-wrap h3 i.fa{
+        margin-left:2em;
+    }
 }
 
 @media screen and (max-width: 360px) {
     .product .product-sidebar {
         bottom: -50px;
+    }
+
+    ul.nav-filters {
+        justify-content: center;
+    }
+    .products-wrapper .product-content .products-catalog-wrap .product{
+        width: 90%;
+    }
+    .product-filter-wrap h3 i.fa{
+        margin-left:2em;
     }
 }
 /*------------------------------------------------------------------Готовые решения/сайты отдельная страница*/
