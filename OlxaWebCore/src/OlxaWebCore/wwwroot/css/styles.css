@@ -6066,6 +6066,11 @@ label.popup_link:hover {
 .modal .modal_hold {
   min-width: 31.25em;
   max-width: 45em;
+  max-height: 25em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
   margin: 150px auto 20px;
   padding: 40px;
   border-radius: 5px;
@@ -6081,6 +6086,9 @@ label.popup_link:hover {
   -moz-transition: -moz-transform 0.4s ease-out;
   -o-transition: -o-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
+}
+.modal .modal_hold::-webkit-scrollbar {
+  width: 0;
 }
 .modal_check:checked + .modal,
 .modal_check:checked + .modal .modal_overlay {
