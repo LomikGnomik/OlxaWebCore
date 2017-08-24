@@ -1390,7 +1390,39 @@ section.content {
 @media (min-width: 1200px) {
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media /*(min-width: 992px) and*/ (max-width: 1199px) {
+    .blog {
+        flex-direction: column;
+        margin-top:0;
+
+        .blog-wrapper {
+            order: 1;
+        }
+
+        .category-wrap {
+            order: 0;
+            width: 100%;
+            margin-bottom: 2em;
+
+            .sidebar {
+                .categories {
+                    border:none;
+                    ul{
+                        display:flex;
+                        justify-content:center;
+                        flex-wrap:wrap;
+                        li a{
+                            margin:0;
+                        }
+                    }
+                }
+
+                .best {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1401,13 +1433,12 @@ section.content {
 }
 
 @media (max-width: 767px) {
+    .container .blog-title{
+        margin-top:12em
+    }
     .blog-wrapper .posts-wrap .posts .post-item-wrap {
         width: 100%;
-    }
-
-    .blog {
-        margin-top: 12em;
-    }
+    }    
 
     .blog-wrapper .category-wrap {
         display: none;
@@ -1418,9 +1449,9 @@ section.content {
     }
 }
 
-@media screen and (max-width:640px) {
-    .blog {
-        margin-top: 8em;
+@media screen and (max-width:640px) {    
+    .container .blog-title{
+        margin-top:8em
     }
 
     .blog-wrapper .posts-wrap {
@@ -3054,8 +3085,7 @@ section.portfolio {
     }
 }
 
-@media (min-width: 1220px) {
-}
+
 
 @media (min-width: 992px) and (max-width: 1219px) {
     .products-wrapper .product-content {
@@ -3181,11 +3211,13 @@ section.portfolio {
     .product:hover .product-sidebar {
         bottom: -50px;
     }
-     .products-wrapper .product-content .products-catalog-wrap .product{
+
+    .products-wrapper .product-content .products-catalog-wrap .product {
         width: 90%;
     }
-    .product-filter-wrap h3 i.fa{
-        margin-left:2em;
+
+    .product-filter-wrap h3 i.fa {
+        margin-left: 2em;
     }
 }
 
@@ -3197,11 +3229,13 @@ section.portfolio {
     ul.nav-filters {
         justify-content: center;
     }
-    .products-wrapper .product-content .products-catalog-wrap .product{
+
+    .products-wrapper .product-content .products-catalog-wrap .product {
         width: 90%;
     }
-    .product-filter-wrap h3 i.fa{
-        margin-left:2em;
+
+    .product-filter-wrap h3 i.fa {
+        margin-left: 2em;
     }
 }
 /*------------------------------------------------------------------Готовые решения/сайты отдельная страница*/
