@@ -58,7 +58,11 @@
                             как правило состоит из одной или нескольких страниц.
                             Имеет форму обратной связи и схему проезда, но при необходимости базовый функционал
                             можно расширить, например, добавить калькулятор, галерею, новости и пр.
+                            <a class="hid" asp-controller="Web_sites" asp-action="Promosite">
+                                Подробнее
+                            </a>
                         </p>
+
                     </div>
                     <div id="tab-sites-c2">
                         <h2>Лендинг</h2>
@@ -67,7 +71,11 @@
                             Как правило это одна интернет страница, созданная для конкретного товара или
                             услуги побуждающая к действию целевую аудиторию (покупка или подписка).
                             Состоит из блоков, каждый из которых выполняет конкретную задачу.
+                            <a class="hid" asp-controller="Web_sites" asp-action="Landing">
+                                Подробнее
+                            </a>
                         </p>
+
                     </div>
                     <div id="tab-sites-c3">
                         <h2>Корпоративный</h2>
@@ -75,7 +83,11 @@
                         <p>
                             Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
                             более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
+                            <a class="hid" asp-controller="Web_sites" asp-action="Corporate">
+                                Подробнее
+                            </a>
                         </p>
+
                     </div>
                     <div id="tab-sites-c4">
                         <h2>Интернет магазин</h2>
@@ -84,7 +96,11 @@
                             Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
                             быстро их обрабатывать. Гибкая структура позволяет расширить ассортимент
                             продукции и добавлять новые способы оплаты и доставки.
+                            <a class="hid" asp-controller="Web_sites" asp-action="Shop">
+                                Подробнее
+                            </a>
                         </p>
+
                     </div>
                     <div id="tab-sites-c5">
                         <h2>Информационный</h2>
@@ -92,97 +108,101 @@
                         <p>
                             К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
                             например: кулинарный, образовательный, развлекательный
+                            <a class="hid" asp-controller="Web_sites" asp-action="Information">
+                                Подробнее
+                            </a>
                         </p>
+
                     </div>
                 </div>
             </section>
         </div>
         @*<div class="web-sites-wrap">
-            <div class="web-sites-nav">
-                <div class="promo-site">
-                    <h2 href="#" class="font">
-                        Сайт визитка
-                    </h2>
-                    <a class="button" asp-controller="Web_sites" asp-action="Promosite">
-                        Подробнее
-                    </a>
+                <div class="web-sites-nav">
+                    <div class="promo-site">
+                        <h2 href="#" class="font">
+                            Сайт визитка
+                        </h2>
+                        <a class="button" asp-controller="Web_sites" asp-action="Promosite">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="landing-site">
+                        <h2 href="#" class="font">Лендинг</h2>
+                        <a class="button" asp-controller="Web_sites" asp-action="Landing">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="corporate-site">
+                        <h2 href="#" class="font">Корпоративный</h2>
+                        <a class="button" asp-controller="Web_sites" asp-action="Corporate">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="shop-site">
+                        <h2 href="#" class="font">Интернет магазин</h2>
+                        <a class="button" asp-controller="Web_sites" asp-action="Shop">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="information-site">
+                        <h2 href="#" class="font">Информационный</h2>
+                        <a class="button" asp-controller="Web_sites" asp-action="Information">
+                            Подробнее
+                        </a>
+                    </div>
+
                 </div>
-                <div class="landing-site">
-                    <h2 href="#" class="font">Лендинг</h2>
-                    <a class="button" asp-controller="Web_sites" asp-action="Landing">
-                        Подробнее
-                    </a>
-                </div>
-                <div class="corporate-site">
-                    <h2 href="#" class="font">Корпоративный</h2>
-                    <a class="button" asp-controller="Web_sites" asp-action="Corporate">
-                        Подробнее
-                    </a>
-                </div>
-                <div class="shop-site">
-                    <h2 href="#" class="font">Интернет магазин</h2>
-                    <a class="button" asp-controller="Web_sites" asp-action="Shop">
-                        Подробнее
-                    </a>
-                </div>
-                <div class="information-site">
-                    <h2 href="#" class="font">Информационный</h2>
-                    <a class="button" asp-controller="Web_sites" asp-action="Information">
-                        Подробнее
-                    </a>
+
+                <div class="web-sites-feature promo-site-description active">
+                    <h2>Сайт визитка</h2>
+                    <div><span></span></div>
+                    <p>
+                        Содержит всю необходимую информацию о вас или вашей фирме,
+                        как правило состоит из одной или нескольких страниц.
+                        Имеет форму обратной связи и схему проезда, но при необходимости базовый функционал
+                        можно расширить, например, добавить калькулятор, галерею, новости и пр.
+                    </p>
                 </div>
 
-            </div>
+                <div class="web-sites-feature landing-site-description">
+                    <h2>Лендинг</h2>
+                    <div><span></span></div>
+                    <p>
+                        Как правило это одна интернет страница, созданная для конкретного товара или
+                        услуги побуждающая к действию целевую аудиторию (покупка или подписка).
+                        Состоит из блоков, каждый из которых выполняет конкретную задачу.
+                    </p>
+                </div>
 
-            <div class="web-sites-feature promo-site-description active">
-                <h2>Сайт визитка</h2>
-                <div><span></span></div>
-                <p>
-                    Содержит всю необходимую информацию о вас или вашей фирме,
-                    как правило состоит из одной или нескольких страниц.
-                    Имеет форму обратной связи и схему проезда, но при необходимости базовый функционал
-                    можно расширить, например, добавить калькулятор, галерею, новости и пр. 
-                </p>
-            </div>
+                <div class="web-sites-feature corp-site-description">
+                    <h2>Корпоративный</h2>
+                    <div><span></span></div>
+                    <p>
+                        Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
+                        более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
+                    </p>
+                </div>
 
-            <div class="web-sites-feature landing-site-description">
-                <h2>Лендинг</h2>
-                <div><span></span></div>
-                <p>
-                    Как правило это одна интернет страница, созданная для конкретного товара или
-                    услуги побуждающая к действию целевую аудиторию (покупка или подписка).
-                    Состоит из блоков, каждый из которых выполняет конкретную задачу.
-                </p>
-            </div>
+                <div class="web-sites-feature shop-site-description">
+                    <h2>Интернет магазин</h2>
+                    <div><span></span></div>
+                    <p>
+                        Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
+                        быстро их обрабатывать. Гибкая структура позволяет расширить ассортимент
+                        продукции и добавлять новые способы оплаты и доставки.
+                    </p>
+                </div>
 
-            <div class="web-sites-feature corp-site-description">
-                <h2>Корпоративный</h2>
-                <div><span></span></div>
-                <p>
-                    Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
-                    более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
-                </p>
-            </div>
+                <div class="web-sites-feature inform-site-description">
+                    <h2>Информационный</h2>
+                    <div><span></span></div>
+                    <p>
+                        К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
+                        например: кулинарный, образовательный, развлекательный
+                    </p>
+                </div>
 
-            <div class="web-sites-feature shop-site-description">
-                <h2>Интернет магазин</h2>
-                <div><span></span></div>
-                <p>
-                    Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
-                    быстро их обрабатывать. Гибкая структура позволяет расширить ассортимент
-                    продукции и добавлять новые способы оплаты и доставки.
-                </p>
-            </div>
-
-            <div class="web-sites-feature inform-site-description">
-                <h2>Информационный</h2>
-                <div><span></span></div>
-                <p>
-                    К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
-                    например: кулинарный, образовательный, развлекательный
-                </p>
-            </div>
-
-        </div>*@
+            </div>*@
     </div>
 </div>

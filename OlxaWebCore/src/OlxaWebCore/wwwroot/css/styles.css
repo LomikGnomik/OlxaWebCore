@@ -4575,163 +4575,6 @@ section.price-solution .solution-item-question .btn {
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container {
   width: 100%;
   height: 100%;
-  /*.web-sites-wrap {
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                    align-items: center;
-                    justify-content: flex-end;
-
-                    .web-sites-nav {
-                        display: flex;
-                        flex-wrap: wrap;
-                        margin-bottom: 20%;
-
-                        div {
-                            width: 10em;
-                            height: 10em;
-                            margin: 1em;
-                            cursor: pointer;
-                            z-index: 1;
-                            box-shadow: rgba(0, 0, 0, 0.23) 19px 19px 30px;
-                            background: rgb(229, 229, 229);
-                            animation: LoadScale .6s 2.7s forwards;
-
-                            &:hover {
-                                z-index: 2;
-                                left: -70px !important;
-                                transform: scale(1.8, 1.8) !important;
-                            }
-
-                            .promo-site {
-                                width: 100%;
-                                height: 100%;
-                            }
-
-                            .landing-site {
-                                width: 100%;
-                                height: 100%;
-                            }
-
-                            .corporate-site {
-                                width: 100%;
-                                height: 100%;
-                            }
-
-                            .shop-site {
-                                width: 100%;
-                                height: 100%;
-                            }
-
-                            .information-site {
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-
-                        h2.font {
-                            font-size: 1em;
-                            text-align: center;
-                            margin-top: 1em;
-                        }
-
-                        a.button {
-                            display: block;
-                            font-size: 1em;
-                            background-color: transparent;
-                            color: #3c6eaa;
-                            position: relative;
-                            bottom: -5em;
-                            width: 5.5em;
-                            margin: 0 auto;
-                            border-bottom: 1px solid #3c6eaa;
-
-                            &:hover {
-                                color: #3c6ebb;
-                            }
-                        }
-                    }
-
-                    .web-sites-feature {
-                        order: 0;
-                        position: absolute;
-                        opacity: 0;
-                        z-index: 3;
-                        transition: opacity .1s ease;
-                        width: 50%;
-                        top: 15em;
-                        text-align: justify;
-
-                        h2 {
-                            font-size: 2em;
-                            padding: 12px 0 10px 72px;
-                            margin: 0 0 10px -120px;
-                            opacity: 0;
-                            transition: all .2s ease;
-                        }
-
-                        div {
-                            width: 0;
-                            opacity: 0;
-                            transition: width .3s ease, opacity .7s ease;
-                        }
-
-                        span {
-                            width: 100%;
-                            border-top: #333333 solid 1px;
-                            height: 1px;
-                            display: block;
-                            opacity: .4;
-                        }
-
-                        p {
-                            font-size: 1em;
-                            color: #333333;
-                            line-height: 1.8;
-                            padding: 32px 32px 0 0;
-                            opacity: 0;
-                            transition: all .3s ease;
-                        }
-                    }
-
-                    .web-sites-feature.active {
-                        opacity: 1;
-
-                        h2 {
-                            opacity: 1;
-                            margin: 0 0 10px -72px;
-                            color: #333333;
-                            font-weight: 400;
-                        }
-
-                        div {
-                            width: 100%;
-                            opacity: 1;
-                        }
-
-                        p {
-                            opacity: 1;
-                        }
-                    }
-
-                    .promo-site {
-                    }
-
-                    .landing-site {
-                        animation: LoadScale .6s 2s forwards;
-                    }
-
-                    .corporate-site {
-                        animation: LoadScale .6s 2.2s forwards;
-                    }
-
-                    .shop-site {
-                    }
-
-                    .information-site {
-                        animation: LoadScale .6s 2.7s forwards;
-                    }
-                }*/
 }
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .container {
   min-height: 100%;
@@ -4762,7 +4605,7 @@ section.price-solution .solution-item-question .btn {
   margin: 1em 2.2em;
   cursor: pointer;
   z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0.23) 19px 19px 30px;
+  box-shadow: 0px 1px 35px -8px rgba(0, 0, 0, 0.42);
   left: 0;
   background: #e5e5e5;
   animation: LoadScale .6s 2.7s forwards;
@@ -4772,6 +4615,7 @@ section.price-solution .solution-item-question .btn {
   font-size: 1em;
   text-align: center;
   margin-top: 1em;
+  cursor: pointer;
 }
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label label a.button {
   display: block;
@@ -4798,10 +4642,10 @@ section.price-solution .solution-item-question .btn {
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-5:checked ~ .tabs-sites-label #tab-sites-lab-5 {
   z-index: 2;
   left: -70px !important;
-  transform: scale(1.8, 1.8) !important;
+  transform: scale(1.8, 1.8);
+  box-shadow: 0px 21px 53px -8px #000000;
 }
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont {
-  background: #fff;
   position: relative;
   z-index: 2;
   height: 230px;
@@ -4810,18 +4654,17 @@ section.price-solution .solution-item-question .btn {
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont > div {
   order: 0;
   position: absolute;
+  top: 130px;
   opacity: 0;
   z-index: 3;
   transition: opacity .1s ease;
-  top: 2em;
   text-align: justify;
 }
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont > div h2 {
   font-size: 2em;
   padding: 12px 0 10px 72px;
-  margin: 0 0 10px -120px;
   opacity: 0;
-  transition: all .3s ease;
+  transition: all .6s ease;
 }
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont > div div {
   width: 0;
@@ -4842,6 +4685,9 @@ section.price-solution .solution-item-question .btn {
   padding: 32px 32px 0 0;
   opacity: 0;
   transition: all .5s ease;
+}
+.index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont > div .hid {
+  visibility: hidden;
 }
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-1:checked ~ .tabs-sites-cont #tab-sites-c1,
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-2:checked ~ .tabs-sites-cont #tab-sites-c2,
@@ -4876,13 +4722,6 @@ section.price-solution .solution-item-question .btn {
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-4:checked ~ .tabs-sites-cont #tab-sites-c4 p,
 .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-5:checked ~ .tabs-sites-cont #tab-sites-c5 p {
   opacity: 1;
-}
-@keyframes LoadScale {
-  50% {
-    transform: scale(1.4, 1.4);
-    left: -50px;
-    z-index: 2;
-  }
 }
 .index-wrap section.about {
   width: 100%;
@@ -4936,12 +4775,6 @@ section.price-solution .solution-item-question .btn {
 }
 .index-wrap section.about .about__row .about__col .about__col__item p a:hover {
   color: #21475f;
-}
-.index-wrap section.steps-divelopment {
-  /*min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;*/
 }
 .index-wrap .index-tabs {
   margin-top: 6em;
@@ -5252,19 +5085,6 @@ section.price-solution .solution-item-question .btn {
     margin-top: 0.8em;
   }
 }
-/*@keyframes LoadScale {
-    0% {
-    }
-
-    50% {
-        transform: scale(1.4, 1.4);
-        left: -50px;
-        z-index: 2;
-    }
-     
-    100% {
-    }
-}*/
 /*----медиа главной*/
 @media (max-width: 2560px) {
   .index-wrap section.heading .description-wrap {
@@ -5317,6 +5137,35 @@ section.price-solution .solution-item-question .btn {
     left: -9em;
   }
 }
+@media (width: 1366px) {
+  .index-wrap .index-web-sites-wrap .index-web-sites .title {
+    margin-bottom: 0;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont {
+    padding: 1em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label {
+    padding: 1em 0;
+  }
+  /*портфолио*/
+  .index-wrap section.portfolio-index .portfolio-index-wrap h2 {
+    margin-top: 3em;
+    padding-bottom: 1em;
+  }
+}
+@media (min-width: 1200px) {
+  /*виды сайтов*/
+  .index-wrap .index-web-sites-wrap .index-web-sites .title {
+    padding-top: 6em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont {
+    padding: 2em 1em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label {
+    margin-top: 0;
+    padding: 4em 0;
+  }
+}
 @media (min-width: 1200px) and (max-width: 1679px) {
   .index-wrap section.heading .title svg {
     font-size: 20em;
@@ -5365,6 +5214,21 @@ section.price-solution .solution-item-question .btn {
   section.about .about__row .about__col {
     width: 33.3333%;
   }
+  /*виды сайтов*/
+  .index-wrap .index-web-sites-wrap .index-web-sites .title {
+    padding-top: 4em;
+    margin-bottom: 0;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont {
+    padding: 2em 1em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label {
+    padding: 3em 0;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label label {
+    margin: 1em 0.45em;
+  }
+  /*портфолиол*/
   section.portfolio-index .galery-wrap .hidden {
     display: none;
   }
@@ -5410,6 +5274,47 @@ section.price-solution .solution-item-question .btn {
   section.about .about__row .about__col {
     width: 50%;
   }
+  /*виды сайтов*/
+  .index-wrap .index-web-sites-wrap .index-web-sites .title {
+    margin-bottom: 2em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label {
+    order: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label label {
+    height: auto;
+    margin: 0;
+    margin: 0.2em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label label span.font {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-1:checked ~ .tabs-sites-label #tab-sites-lab-1,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-2:checked ~ .tabs-sites-label #tab-sites-lab-2,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-3:checked ~ .tabs-sites-label #tab-sites-lab-3,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-4:checked ~ .tabs-sites-label #tab-sites-lab-4,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-5:checked ~ .tabs-sites-label #tab-sites-lab-5 {
+    transform: scale(1, 1);
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label label a.button {
+    display: none;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont > div .hid {
+    visibility: visible;
+    font-size: 1em;
+    background-color: transparent;
+    color: #3c6eaa;
+    border-bottom: 1px solid #3c6eaa;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont {
+    padding: 0 1em;
+  }
+  /*портфолио*/
   section.portfolio-index .big {
     display: none;
   }
@@ -5443,6 +5348,47 @@ section.price-solution .solution-item-question .btn {
   }
   .hidden {
     display: block;
+  }
+  /*виды сайтов*/
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label {
+    order: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label label {
+    height: auto;
+    margin: 0;
+    margin: 0.2em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label label span.font {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-1:checked ~ .tabs-sites-label #tab-sites-lab-1,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-2:checked ~ .tabs-sites-label #tab-sites-lab-2,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-3:checked ~ .tabs-sites-label #tab-sites-lab-3,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-4:checked ~ .tabs-sites-label #tab-sites-lab-4,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-5:checked ~ .tabs-sites-label #tab-sites-lab-5 {
+    transform: scale(1, 1);
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-label label a.button {
+    display: none;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont > div .hid {
+    visibility: visible;
+    font-size: 1em;
+    background-color: transparent;
+    color: #3c6eaa;
+    border-bottom: 1px solid #3c6eaa;
+  }
+  /*портфолио*/
+  section.portfolio-index .galery-wrap .hidden {
+    display: block;
+  }
+  .index-wrap section.portfolio-index .portfolio-index-wrap h2 {
+    font-size: 1.5em;
   }
 }
 @media screen and (max-width: 640px) {
@@ -5488,8 +5434,25 @@ section.price-solution .solution-item-question .btn {
   section.about .about__row .about__col {
     width: 90%;
   }
+  /*портфолио*/
   section.portfolio-index .galery-wrap #allcontent {
     max-width: 600px;
+  }
+  section.portfolio-index .big {
+    display: none;
+  }
+  section.portfolio-index .hidden {
+    display: block;
+  }
+  section.portfolio-index .index-wrap section.portfolio-index .galery-wrap .hidden.index-portfolio-galery .portfolio-galery-wrap .view {
+    width: 100%;
+  }
+  section.portfolio-index .index-wrap section.portfolio-index .portfolio-index-wrap h2 {
+    margin-top: 8em;
+    margin-bottom: -2em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont {
+    padding: 2em 1em;
   }
   .index-wrap section.portfolio-index .portfolio-index-wrap h2 {
     padding-bottom: 1.5em;
@@ -5528,6 +5491,26 @@ section.price-solution .solution-item-question .btn {
     .index-wrap section.index-web-sites .m-visible {
         display: block;
     }*/
+  /*Виды сайтов*/
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont {
+    padding: 0 1em;
+    padding-bottom: 3em;
+    min-height: 30em;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container .tabs-sites-cont > div h2 {
+    padding: 0;
+  }
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-1:checked ~ .tabs-sites-cont #tab-sites-c1 h2,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-2:checked ~ .tabs-sites-cont #tab-sites-c2 h2,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-3:checked ~ .tabs-sites-cont #tab-sites-c3 h2,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-4:checked ~ .tabs-sites-cont #tab-sites-c4 h2,
+  .index-wrap .index-web-sites-wrap .index-web-sites .index-web-sites-container #tab-sites-5:checked ~ .tabs-sites-cont #tab-sites-c5 h2 {
+    margin: 0 0 10px 2px;
+  }
+  /*портфолио*/
+  .index-wrap section.portfolio-index .portfolio-index-wrap h2 {
+    font-size: 1.2em;
+  }
 }
 /*----------------------------------------------------------------------Корпоративный сайт*/
 .corporete-wrap {
@@ -6066,7 +6049,7 @@ label.popup_link:hover {
 .modal .modal_hold {
   min-width: 31.25em;
   max-width: 45em;
-  max-height: 25em;
+  max-height: 35em;
   overflow-y: scroll;
   overflow-x: hidden;
   overflow: -moz-scrollbars-none;
