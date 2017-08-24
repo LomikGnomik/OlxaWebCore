@@ -7400,6 +7400,7 @@ label.popup_link:hover {
                 text-align: center;
                 text-transform: capitalize;
                 font-size: 1.5em;
+                padding-bottom: 1.5em;
             }
 
             small {
@@ -7423,7 +7424,7 @@ label.popup_link:hover {
         }
     }
 
-    section.develop {
+    section.develop-desk {
         .step-develop-wrap {
 
             #develop-tabs {
@@ -7570,7 +7571,7 @@ label.popup_link:hover {
                 border-style: solid;
                 border-width: 2px 0 2px 2px;
                 border-color: #7b7b7b transparent #7b7b7b #7b7b7b;
-                right: 0;
+                right: 2em;
                 border-radius: 10px 0 0 10px;
                 overflow: hidden;
             }
@@ -7646,7 +7647,73 @@ label.popup_link:hover {
             }
         }
     }
+
+    section.develop-mob {
+        padding-top: 2em;
+
+        .content {
+            width: 90%;
+            margin-left: 2em;
+        }
+    }
 }
+
+@media (min-width: 1233px) {
+    section.develop-mob {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1232px) {
+    section.develop-desk {
+        display: none;
+    }
+
+    section.develop-mob {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.develop-desk {
+        display: none;
+    }
+
+    section.develop-mob {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    section.develop-desk {
+        display: none;
+    }
+
+    section.develop-mob {
+        display: block;
+    }
+}
+
+@media (max-width:640px) {
+    section.develop-desk {
+        display: none;
+    }
+
+    section.develop-mob {
+        display: block;
+    }
+}
+
+@media (max-width:320px) {
+    section.develop-desk {
+        display: none;
+    }
+
+    section.develop-mob {
+        display: block;
+    }
+}
+
 /*------------------------------------------------------------------------------------------Формы заявки*/
 @bg-form: #000;
 
