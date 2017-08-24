@@ -3025,7 +3025,7 @@ section.portfolio .grid.isotope-grid:after {
   width: 45px;
   height: 65px;
   border-radius: 25px;
-  background: #fff;
+  background: #f1ebda;
 }
 .order-wrapper .order-effect .hair {
   position: absolute;
@@ -3115,7 +3115,7 @@ section.portfolio .grid.isotope-grid:after {
   left: 340px;
   width: 40px;
   height: 60px;
-  background: #9bb6aa;
+  background: #e4dddd;
   border-radius: 10px;
 }
 .order-wrapper .order-effect .circle {
@@ -3368,7 +3368,7 @@ section.portfolio .grid.isotope-grid:after {
     background-color: #000;
   }
   100% {
-    background-color: #fff;
+    background-color: #f1ebda;
   }
 }
 @-webkit-keyframes blink {
@@ -3385,7 +3385,7 @@ section.portfolio .grid.isotope-grid:after {
     background-color: #000;
   }
   100% {
-    background-color: #fff;
+    background-color: #f1ebda;
   }
 }
 @-o-keyframes blink {
@@ -3402,7 +3402,7 @@ section.portfolio .grid.isotope-grid:after {
     background-color: #000;
   }
   100% {
-    background-color: #fff;
+    background-color: #f1ebda;
   }
 }
 @keyframes blink {
@@ -3419,7 +3419,7 @@ section.portfolio .grid.isotope-grid:after {
     background-color: #000;
   }
   100% {
-    background-color: #fff;
+    background-color: #f1ebda;
   }
 }
 @-moz-keyframes blinkk {
@@ -10043,71 +10043,118 @@ form.form .customSelect.customSelectFocus:after {
     margin-top: 22.5em;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  #tab-tmp-1:checked ~ #border-tmp #line-tmp {
-    margin-top: 1.2em;
+@media (max-width: 991px) {
+  .steps-template-wrap .tabs-template .label-template-wrap {
+    display: none;
   }
-  #tab-tmp-2:checked ~ #border-tmp #line-tmp {
-    margin-top: 7.5em;
+  .steps-template-wrap .tabs-template #border-tmp {
+    display: none;
   }
-  label#tab-tmp-l2 {
-    margin-right: 1em;
+  .steps-template-wrap .tabs-template .tabs-cont-template {
+    max-height: 100%;
+    width: 100%;
+    flex-direction: column;
   }
-  #tab-tmp-3:checked ~ #border-tmp #line-tmp {
-    margin-top: 13.8em;
+  .steps-template-wrap .tabs-template .tabs-cont-template h2 {
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 1em;
+    margin-top: 1em;
   }
-  #tab-tmp-4:checked ~ #border-tmp #line-tmp {
-    margin-top: 18.8em;
-  }
-  #tab-tmp-5:checked ~ #border-tmp #line-tmp {
-    margin-top: 23.8em;
+  .steps-template-wrap .tabs-template #tab-tmp-1 ~ .tabs-cont-template #tab-tmp-c1,
+  .steps-template-wrap .tabs-template #tab-tmp-2 ~ .tabs-cont-template #tab-tmp-c2,
+  .steps-template-wrap .tabs-template #tab-tmp-3 ~ .tabs-cont-template #tab-tmp-c3,
+  .steps-template-wrap .tabs-template #tab-tmp-4 ~ .tabs-cont-template #tab-tmp-c4,
+  .steps-template-wrap .tabs-template #tab-tmp-5 ~ .tabs-cont-template #tab-tmp-c5 {
+    opacity: 1;
+    position: relative;
+    margin-top: 0;
   }
 }
+/*@media (min-width: 768px) and (max-width: 991px) {
+
+    #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+        margin-top: 1.2em;
+    }
+
+    #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+        margin-top: 7.5em;
+    }
+
+    label#tab-tmp-l2 {
+        margin-right: 1em;
+    }
+
+    #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+        margin-top: 13.8em;
+    }
+
+    #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+        margin-top: 18.8em;
+    }
+
+    #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+        margin-top: 23.8em;
+    }
+}
+
 @media (max-width: 767px) {
-  .steps-wrap .tabs .label-wrap {
-    width: 60%;
-    padding-right: 2em;
-  }
-  .steps-wrap .tabs .tabs_cont {
-    width: 90%;
-    padding-left: 1.5em;
-  }
-  .steps-wrap .tabs #border {
-    height: 36em;
-  }
-  #tab-tmp-1:checked ~ #border-tmp #line-tmp {
-    margin-top: 0.6em;
-  }
-  #tab-tmp-2:checked ~ #border-tmp #line-tmp {
-    margin-top: 5em;
-  }
-  #tab-tmp-3:checked ~ #border-tmp #line-tmp {
-    margin-top: 9em;
-  }
-  #tab-tmp-4:checked ~ #border-tmp #line-tmp {
-    margin-top: 13em;
-  }
-  #tab-tmp-5:checked ~ #border-tmp #line-tmp {
-    margin-top: 20em;
-  }
+    .steps-wrap .tabs .label-wrap {
+        width: 60%;
+        padding-right: 2em;
+    }
+
+    .steps-wrap .tabs .tabs_cont {
+        width: 90%;
+        padding-left: 1.5em;
+    }
+
+    .steps-wrap .tabs #border {
+        height: 36em;
+    }
+
+    #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+        margin-top: 0.6em;
+    }
+
+    #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+        margin-top: 5em;
+    }
+
+    #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+        margin-top: 9em;
+    }
+
+    #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+        margin-top: 13em;
+    }
+
+    #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+        margin-top: 20em;
+    }
 }
-@media screen and (max-width: 640px) {
-  #tab-tmp-1:checked ~ #border-tmp #line-tmp {
-    margin-top: 0em;
-  }
-  #tab-tmp-2:checked ~ #border-tmp #line-tmp {
-    margin-top: 5em;
-  }
-  #tab-tmp-3:checked ~ #border-tmp #line-tmp {
-    margin-top: 10em;
-  }
-  #tab-tmp-4:checked ~ #border-tmp #line-tmp {
-    margin-top: 14em;
-  }
-  #tab-tmp-5:checked ~ #border-tmp #line-tmp {
-    margin-top: 21em;
-  }
-}
+
+@media screen and (max-width:640px) {
+    #tab-tmp-1:checked ~ #border-tmp #line-tmp {
+        margin-top: 0em;
+    }
+
+    #tab-tmp-2:checked ~ #border-tmp #line-tmp {
+        margin-top: 5em;
+    }
+
+    #tab-tmp-3:checked ~ #border-tmp #line-tmp {
+        margin-top: 10em;
+    }
+
+    #tab-tmp-4:checked ~ #border-tmp #line-tmp {
+        margin-top: 14em;
+    }
+
+    #tab-tmp-5:checked ~ #border-tmp #line-tmp {
+        margin-top: 21em;
+    }
+}*/
 /*------------------------------этапы разработки СОЗДАНИЕ/шаги/step*/
 .steps-create-wrap {
   margin-top: 2em;
@@ -10315,83 +10362,108 @@ form.form .customSelect.customSelectFocus:after {
     margin-top: 21em;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  #tab-cr-1:checked ~ #border-cr #line-cr {
+@media (max-width: 991px) {
+  .steps-create-wrap .tabs-create .label-create-wrap {
+    display: none;
+  }
+  .steps-create-wrap .tabs-create #border-cr {
+    display: none;
+  }
+  .steps-create-wrap .tabs-create .tabs-cont-create {
+    max-height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .steps-create-wrap .tabs-create .tabs-cont-create h2 {
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 1em;
     margin-top: 1em;
   }
-  #tab-cr-2:checked ~ #border-cr #line-cr {
-    margin-top: 5em;
-  }
-  #tab-cr-3:checked ~ #border-cr #line-cr {
-    margin-top: 9em;
-  }
-  #tab-cr-4:checked ~ #border-cr #line-cr {
-    margin-top: 13em;
-  }
-  #tab-cr-5:checked ~ #border-cr #line-cr {
-    margin-top: 17em;
-  }
-  #tab-cr-6:checked ~ #border-cr #line-cr {
-    margin-top: 21em;
+  .steps-create-wrap .tabs-create #tab-cr-1 ~ .tabs-cont-create #tab-cr-c1,
+  .steps-create-wrap .tabs-create #tab-cr-2 ~ .tabs-cont-create #tab-cr-c2,
+  .steps-create-wrap .tabs-create #tab-cr-3 ~ .tabs-cont-create #tab-cr-c3,
+  .steps-create-wrap .tabs-create #tab-cr-4 ~ .tabs-cont-create #tab-cr-c4,
+  .steps-create-wrap .tabs-create #tab-cr-5 ~ .tabs-cont-create #tab-cr-c5,
+  .steps-create-wrap .tabs-create #tab-cr-6 ~ .tabs-cont-create #tab-cr-c6 {
+    opacity: 1;
+    position: relative;
+    margin-top: 0;
   }
 }
-@media (max-width: 767px) {
-  .steps-wrap .tabs .label-wrap {
-    width: 60%;
-    padding-right: 2em;
-  }
-  .steps-wrap .tabs .tabs_cont {
-    width: 90%;
-    padding-left: 1.5em;
-  }
-  .steps-wrap .tabs #border {
-    height: 36em;
-  }
-  .steps-wrap .tabs #tab_1:checked ~ #border #line {
-    margin-top: 0.6em;
-  }
-  #tab_2:checked ~ #border #line {
-    margin-top: 5em;
-  }
-  #tab_3:checked ~ #border #line {
-    margin-top: 9em;
-  }
-  #tab_4:checked ~ #border #line {
-    margin-top: 13em;
-  }
-  #tab_5:checked ~ #border #line {
-    margin-top: 20em;
-  }
-  #tab_6:checked ~ #border #line {
-    margin-top: 28.5em;
-  }
-  #tab_7:checked ~ #border #line {
-    margin-top: 32.5em;
-  }
+/*@media (max-width: 767px) {
+    .steps-wrap .tabs .label-wrap {
+        width: 60%;
+        padding-right: 2em;
+    }
+
+    .steps-wrap .tabs .tabs_cont {
+        width: 90%;
+        padding-left: 1.5em;
+    }
+
+    .steps-wrap .tabs #border {
+        height: 36em;
+    }
+
+    .steps-wrap .tabs #tab_1:checked ~ #border #line {
+        margin-top: 0.6em;
+    }
+
+    #tab_2:checked ~ #border #line {
+        margin-top: 5em;
+    }
+
+    #tab_3:checked ~ #border #line {
+        margin-top: 9em;
+    }
+
+    #tab_4:checked ~ #border #line {
+        margin-top: 13em;
+    }
+
+    #tab_5:checked ~ #border #line {
+        margin-top: 20em;
+    }
+
+    #tab_6:checked ~ #border #line {
+        margin-top: 28.5em;
+    }
+
+    #tab_7:checked ~ #border #line {
+        margin-top: 32.5em;
+    }
 }
-@media screen and (max-width: 640px) {
-  .steps-wrap .tabs #tab_1:checked ~ #border #line {
-    margin-top: 0em;
-  }
-  #tab_2:checked ~ #border #line {
-    margin-top: 5em;
-  }
-  #tab_3:checked ~ #border #line {
-    margin-top: 10em;
-  }
-  #tab_4:checked ~ #border #line {
-    margin-top: 14em;
-  }
-  #tab_5:checked ~ #border #line {
-    margin-top: 21em;
-  }
-  #tab_6:checked ~ #border #line {
-    margin-top: 29.5em;
-  }
-  #tab_7:checked ~ #border #line {
-    margin-top: 33.5em;
-  }
-}
+
+@media screen and (max-width:640px) {
+    .steps-wrap .tabs #tab_1:checked ~ #border #line {
+        margin-top: 0em;
+    }
+
+    #tab_2:checked ~ #border #line {
+        margin-top: 5em;
+    }
+
+    #tab_3:checked ~ #border #line {
+        margin-top: 10em;
+    }
+
+    #tab_4:checked ~ #border #line {
+        margin-top: 14em;
+    }
+
+    #tab_5:checked ~ #border #line {
+        margin-top: 21em;
+    }
+
+    #tab_6:checked ~ #border #line {
+        margin-top: 29.5em;
+    }
+
+    #tab_7:checked ~ #border #line {
+        margin-top: 33.5em;
+    }
+}*/
 /*------------------------------этапы разработки РАЗРАБОТКА/шаги/step*/
 .steps-develop-wrap {
   margin-top: 2em;

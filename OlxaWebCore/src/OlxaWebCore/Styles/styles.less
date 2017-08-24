@@ -3668,7 +3668,7 @@ section.portfolio {
                 background: #abd9b5;
             }
         }
-        
+
         .notebook {
             position: absolute;
             top: -80px;
@@ -3844,7 +3844,7 @@ section.portfolio {
             width: 45px;
             height: 65px;
             border-radius: 25px;
-            background: #fff;
+            background: rgb(241, 235, 218);
         }
 
         .hair {
@@ -3943,7 +3943,7 @@ section.portfolio {
             left: 340px;
             width: 40px;
             height: 60px;
-            background: #9bb6aa;
+            background: #e4dddd;
             border-radius: 10px;
         }
 
@@ -4267,7 +4267,7 @@ section.portfolio {
     }
 
     100% {
-        background-color: #fff;
+        background-color: rgb(241, 235, 218);
     }
 }
 
@@ -4289,7 +4289,7 @@ section.portfolio {
     }
 
     100% {
-        background-color: #fff;
+        background-color: rgb(241, 235, 218);
     }
 }
 
@@ -4311,7 +4311,7 @@ section.portfolio {
     }
 
     100% {
-        background-color: #fff;
+        background-color: rgb(241, 235, 218);
     }
 }
 
@@ -4333,7 +4333,7 @@ section.portfolio {
     }
 
     100% {
-        background-color: #fff;
+        background-color: rgb(241, 235, 218);
     }
 }
 
@@ -4424,8 +4424,11 @@ section.portfolio {
         border-bottom: 230px solid #fff;
     }
 }
+
 @keyframes flyy {
-  50% {transform: translateY(15px)}
+    50% {
+        transform: translateY(15px);
+    }
 }
 
 @-moz-keyframes fly {
@@ -12323,7 +12326,40 @@ form.form {
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
+    .steps-template-wrap .tabs-template .label-template-wrap {
+        display: none;
+    }
+
+    .steps-template-wrap .tabs-template #border-tmp {
+        display: none;
+    }
+
+    .steps-template-wrap .tabs-template .tabs-cont-template {
+        max-height: 100%;
+        width: 100%;
+        flex-direction: column;
+
+        h2 {
+            font-size: 1em;
+            text-align: left;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+    }
+
+    .steps-template-wrap .tabs-template #tab-tmp-1 ~ .tabs-cont-template #tab-tmp-c1, 
+    .steps-template-wrap .tabs-template #tab-tmp-2 ~ .tabs-cont-template #tab-tmp-c2, 
+    .steps-template-wrap .tabs-template #tab-tmp-3 ~ .tabs-cont-template #tab-tmp-c3, 
+    .steps-template-wrap .tabs-template #tab-tmp-4 ~ .tabs-cont-template #tab-tmp-c4, 
+    .steps-template-wrap .tabs-template #tab-tmp-5 ~ .tabs-cont-template #tab-tmp-c5 {
+        opacity: 1;
+        position: relative;
+        margin-top: 0;
+    }
+}
+
+/*@media (min-width: 768px) and (max-width: 991px) {
 
     #tab-tmp-1:checked ~ #border-tmp #line-tmp {
         margin-top: 1.2em;
@@ -12406,7 +12442,7 @@ form.form {
     #tab-tmp-5:checked ~ #border-tmp #line-tmp {
         margin-top: 21em;
     }
-}
+}*/
 /*------------------------------этапы разработки СОЗДАНИЕ/шаги/step*/
 .steps-create-wrap {
     margin-top: 2em;
@@ -12654,33 +12690,41 @@ form.form {
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    #tab-cr-1:checked ~ #border-cr #line-cr {
-        margin-top: 1em;
+@media (max-width: 991px) {
+    .steps-create-wrap .tabs-create .label-create-wrap {
+        display: none;
     }
 
-    #tab-cr-2:checked ~ #border-cr #line-cr {
-        margin-top: 5em;
+    .steps-create-wrap .tabs-create #border-cr {
+        display: none;
     }
 
-    #tab-cr-3:checked ~ #border-cr #line-cr {
-        margin-top: 9em;
+    .steps-create-wrap .tabs-create .tabs-cont-create {
+        max-height: 100%;
+        width: 100%;
+        flex-direction: column;
+
+        h2 {
+            font-size: 1em;
+            text-align: left;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
     }
 
-    #tab-cr-4:checked ~ #border-cr #line-cr {
-        margin-top: 13em;
-    }
-
-    #tab-cr-5:checked ~ #border-cr #line-cr {
-        margin-top: 17em;
-    }
-
-    #tab-cr-6:checked ~ #border-cr #line-cr {
-        margin-top: 21em;
+    .steps-create-wrap .tabs-create #tab-cr-1 ~ .tabs-cont-create #tab-cr-c1,
+    .steps-create-wrap .tabs-create #tab-cr-2 ~ .tabs-cont-create #tab-cr-c2,
+    .steps-create-wrap .tabs-create #tab-cr-3 ~ .tabs-cont-create #tab-cr-c3,
+    .steps-create-wrap .tabs-create #tab-cr-4 ~ .tabs-cont-create #tab-cr-c4,
+    .steps-create-wrap .tabs-create #tab-cr-5 ~ .tabs-cont-create #tab-cr-c5,
+    .steps-create-wrap .tabs-create #tab-cr-6 ~ .tabs-cont-create #tab-cr-c6 {
+        opacity: 1;
+        position: relative;
+        margin-top: 0;
     }
 }
 
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
     .steps-wrap .tabs .label-wrap {
         width: 60%;
         padding-right: 2em;
@@ -12752,7 +12796,7 @@ form.form {
     #tab_7:checked ~ #border #line {
         margin-top: 33.5em;
     }
-}
+}*/
 /*------------------------------этапы разработки РАЗРАБОТКА/шаги/step*/
 .steps-develop-wrap {
     margin-top: 2em;
