@@ -2638,108 +2638,160 @@ section.portfolio .grid.isotope-grid:after {
 }
 /*---------------------------------страница после заказа order/orderList*/
 .order-wrapper {
-  min-height: 100vh;
   text-align: center;
-  background: url(http://relaxonpro.com/img.jpg) no-repeat;
 }
 .order-wrapper .order-title-wrap {
-  display: table;
-  table-layout: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
 }
 .order-wrapper .order-title-wrap .order-title {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  padding-top: 7em;
+  padding-top: 15em;
 }
 .order-wrapper .order-title-wrap .order-title span {
   color: #3c6eaa;
 }
-.order-wrapper .order-effect .header {
+.order-wrapper .order-effect {
+  /*.apple {
+            position: absolute;
+            top: 30px;
+            left: 45px;
+            width: 30px;
+            height: 25px;
+            background: #eee;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .apple::before {
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            width: 3px;
+            height: 15px;
+            background: #eee;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            content: "";
+        }
+
+        .apple::after {
+            position: absolute;
+            top: -10px;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            background: #eee;
+            border-bottom-left-radius: 12px;
+            border-top-right-radius: 15px;
+            content: "";
+        }*/
+}
+.order-wrapper .order-effect .background {
   position: relative;
+  margin: 20px;
   width: 500px;
-  height: 240px;
-}
-.order-wrapper .order-effect .section {
-  position: absolute;
+  height: 260px;
   text-align: center;
-  top: 5px;
-  max-width: 32em;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
-  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
 }
-.order-wrapper .order-effect .paper {
+.order-wrapper .order-effect .frame {
   position: absolute;
-  top: 55px;
-  left: 125px;
-  width: 60px;
+  top: 40px;
+  left: 140px;
+  width: 55px;
   height: 65px;
-  background: #fff;
+  background: #def5e3;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.order-wrapper .order-effect .frame .cat {
+  position: absolute;
+  top: 1.5em;
+  left: 0.7em;
+  width: 28px;
+  height: 30px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
 }
-.order-wrapper .order-effect .paper-2 {
+.order-wrapper .order-effect .frame .cat .head {
+  position: absolute;
+  /*top: 70%;
+                    left: 30%;*/
+  width: 113%;
+  height: 70%;
+  background: #FBD794;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.order-wrapper .order-effect .frame .cat .ear-1 {
+  position: absolute;
+  top: -7px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 7px solid #FBD794;
+}
+.order-wrapper .order-effect .frame .cat .ear-2 {
+  position: absolute;
+  top: -7px;
+  left: 22px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 7px solid #FBD794;
+}
+.order-wrapper .order-effect .frame .cat .eye-1 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 3px;
+  height: 3px;
+  background: #000;
+  border-radius: 10px;
+}
+.order-wrapper .order-effect .frame .cat .eye-2 {
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  width: 3px;
+  height: 3px;
+  background: #000;
+  border-radius: 10px;
+}
+.order-wrapper .order-effect .frame .cat .nose {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 4px;
+  height: 3px;
+  background: #FDB5CC;
+  border-radius: 10px;
+}
+.order-wrapper .order-effect .frame-2 {
   position: absolute;
   top: 95px;
   left: 75px;
   width: 40px;
   height: 40px;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.1);
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
 }
 .order-wrapper .order-effect .table {
   position: absolute;
-  top: 195px;
+  top: 235px;
+  left: 25px;
   width: 500px;
-  height: 8px;
-  background: #fff;
-  border-radius: 50px;
-}
-.order-wrapper .order-effect .link {
-  color: #fff;
-}
-.order-wrapper .order-effect .fa {
-  font-size: 2em;
-  text-align: center;
-  transition: .7s;
-}
-.order-wrapper .order-effect .fa:hover {
-  animation: rotate 1.5s 1;
-}
-.order-wrapper .order-effect .fa-codepen {
-  top: -25px;
-  left: 15px;
-  color: #ABD9B5;
-}
-.order-wrapper .order-effect .fa-behance {
-  top: -123px;
-  left: 101px;
-  color: #F8B899;
-}
-.order-wrapper .order-effect .fa-twitter {
-  top: -12px;
-  left: 46px;
-  color: #ABD9B5;
-}
-.order-wrapper .order-effect .fa-github {
-  top: 3px;
-  left: 47px;
-  color: #F8B899;
-}
-.order-wrapper .order-effect .precisaser {
-  width: 10px border-left 10px solid #ffc2a5;
-  border-right: 10px solid #8adc9c;
-  border-bottom: 10px solid #F8B899;
-  border-top: 10px solid #ABD9B5;
-  top: 10px;
-  left: 15px;
-  transition: 1s;
-}
-.order-wrapper .order-effect .precisaser:hover {
-  border-radius: 100%;
-  transform: rotate(270deg);
+  height: 10px;
+  background: #9d8e5c;
 }
 .order-wrapper .order-effect .bowl {
   position: absolute;
@@ -2747,7 +2799,7 @@ section.portfolio .grid.isotope-grid:after {
   left: 400px;
   width: 50px;
   height: 25px;
-  background: #fff;
+  background: #fef2d8;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
 }
@@ -2756,22 +2808,12 @@ section.portfolio .grid.isotope-grid:after {
   left: 2px;
   width: 50px;
   height: 25px;
-  background: #fff;
+  background: #fef2d8;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
   content: "";
 }
-.order-wrapper .order-effect .bowl-2 {
-  position: absolute;
-  top: -25px;
-  left: 50px;
-  width: 50px;
-  height: 25px;
-  background: #fff;
-  border-bottom-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-.order-wrapper .order-effect .leaf-1 {
+.order-wrapper .order-effect .bowl .leaf-1 {
   position: absolute;
   top: -14px;
   left: 35px;
@@ -2779,11 +2821,11 @@ section.portfolio .grid.isotope-grid:after {
   height: 20px;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
-  background: primary-color;
+  background: #abd9b5;
   animation: fly 2s infinite alternate ease-in-out;
   transform: rotate(30deg);
 }
-.order-wrapper .order-effect .leaf-2 {
+.order-wrapper .order-effect .bowl .leaf-2 {
   position: absolute;
   top: -14px;
   left: 15px;
@@ -2791,11 +2833,11 @@ section.portfolio .grid.isotope-grid:after {
   height: 20px;
   border-bottom-left-radius: 30px;
   border-top-right-radius: 30px;
-  background: #ABD9B5;
+  background: #abd9b5;
   animation: fly 2s infinite alternate ease-in-out;
   transform: rotate(-40deg);
 }
-.order-wrapper .order-effect .leaf-3 {
+.order-wrapper .order-effect .bowl .leaf-3 {
   position: absolute;
   top: -18px;
   left: 30px;
@@ -2803,11 +2845,11 @@ section.portfolio .grid.isotope-grid:after {
   height: 20px;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
-  background: #ABD9B5;
+  background: #abd9b5;
   animation: fly 2s infinite alternate ease-in-out;
   transform: rotate(20deg);
 }
-.order-wrapper .order-effect .leaf-4 {
+.order-wrapper .order-effect .bowl .leaf-4 {
   position: absolute;
   top: -18px;
   left: 20px;
@@ -2815,11 +2857,11 @@ section.portfolio .grid.isotope-grid:after {
   height: 20px;
   border-bottom-left-radius: 30px;
   border-top-right-radius: 30px;
-  background: #ABD9B5;
+  background: #abd9b5;
   animation: fly 3s infinite alternate ease-in-out;
   transform: rotate(30deg);
 }
-.order-wrapper .order-effect .leaf-5 {
+.order-wrapper .order-effect .bowl .leaf-5 {
   position: absolute;
   top: -23px;
   left: 25px;
@@ -2827,25 +2869,35 @@ section.portfolio .grid.isotope-grid:after {
   height: 20px;
   border-bottom-left-radius: 30px;
   border-top-right-radius: 30px;
-  background: #ABD9B5;
+  background: #abd9b5;
   animation: fly 2s infinite alternate ease-in-out;
   transform: rotate(70deg);
 }
-.order-wrapper .order-effect .caneta-1 {
+.order-wrapper .order-effect .bowl-2 {
+  position: absolute;
+  top: -25px;
+  left: 50px;
+  width: 50px;
+  height: 25px;
+  background: #dad8fe;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+.order-wrapper .order-effect .bowl-2 .caneta-1 {
   position: absolute;
   top: -20px;
   left: 25px;
   width: 3px;
   height: 20px;
-  background: #F8B899;
+  background: #f8b899;
 }
-.order-wrapper .order-effect .caneta-2 {
+.order-wrapper .order-effect .bowl-2 .caneta-2 {
   position: absolute;
   top: -25px;
   left: 30px;
   width: 5px;
   height: 25px;
-  background: #ABD9B5;
+  background: #abd9b5;
 }
 .order-wrapper .order-effect .notebook {
   position: absolute;
@@ -2855,7 +2907,7 @@ section.portfolio .grid.isotope-grid:after {
   height: 75px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background: #fff;
+  background: #ccc;
 }
 .order-wrapper .order-effect .notebook::after {
   position: absolute;
@@ -2863,76 +2915,52 @@ section.portfolio .grid.isotope-grid:after {
   left: -10px;
   width: 140px;
   height: 10px;
-  background: #fff;
+  background: #ccc;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   content: "";
 }
-.order-wrapper .order-effect .apple::before {
-  position: absolute;
-  top: -10px;
-  left: 15px;
-  width: 3px;
-  height: 15px;
-  background: #eee;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  content: "";
-}
-.order-wrapper .order-effect .apple::after {
-  position: absolute;
-  top: -10px;
-  left: 5px;
-  width: 10px;
-  height: 10px;
-  background: #eee;
-  border-bottom-left-radius: 12px;
-  border-top-right-radius: 15px;
-  content: "";
-}
 .order-wrapper .order-effect .book-1 {
   position: absolute;
-  top: -24px;
-  left: 35px;
+  top: -10px;
+  left: 105px;
   width: 70px;
-  height: 12px;
+  height: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border: 2px solid #ABD9B5;
+  border: 2px solid #abd9b5;
   border-right: 0;
-  background: #fff;
+  background: #f8f5ec;
 }
 .order-wrapper .order-effect .book-2 {
   position: absolute;
-  top: -15px;
+  top: -13px;
   left: 105px;
   width: 70px;
   height: 3px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: #F8B899;
+  background: #f8b899;
 }
 .order-wrapper .order-effect .book-3 {
   position: absolute;
-  top: -13px;
+  top: -16.5px;
   left: 115px;
   width: 70px;
   height: 3px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: #F8B899;
+  background: #00aff0;
 }
 .order-wrapper .order-effect .coffee {
   position: absolute;
-  top: -58px;
-  left: 50px;
+  top: -46px;
+  left: 120px;
   width: 50px;
   height: 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  background: #fff;
+  background: #bdd7ea;
 }
 .order-wrapper .order-effect .coffee::after {
   position: absolute;
@@ -2941,7 +2969,7 @@ section.portfolio .grid.isotope-grid:after {
   width: 22px;
   height: 18px;
   border-bottom-right-radius: 30px;
-  border: 4px solid #fff;
+  border: 4px solid #bdd7ea;
   border-top: 0;
   box-sizing: border-box;
   transform: rotate(-270deg);
@@ -2949,14 +2977,14 @@ section.portfolio .grid.isotope-grid:after {
 }
 .order-wrapper .order-effect .smoke {
   position: absolute;
-  top: -35px;
-  left: 25px;
+  top: -32px;
+  left: 20px;
   width: 5px;
   height: 17px;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  opacity: .1;
-  animation: flyy 1.5s infinite alternate ease-in-out;
+  opacity: 0.9;
+  animation: flyy 3s infinite alternate ease-in-out;
 }
 .order-wrapper .order-effect .smoke::after {
   position: absolute;
@@ -2964,15 +2992,15 @@ section.portfolio .grid.isotope-grid:after {
   left: 5px;
   width: 5px;
   height: 15px;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  opacity: .9;
+  opacity: 0.9;
   content: "";
 }
 .order-wrapper .order-effect .me {
   position: absolute;
-  top: 50px;
-  left: 215px;
+  top: 90px;
+  left: 235px;
 }
 .order-wrapper .order-effect .me-body {
   position: absolute;
@@ -2980,7 +3008,7 @@ section.portfolio .grid.isotope-grid:after {
   width: 100px;
   height: 65px;
   border-radius: 50%;
-  background: #F8B899;
+  background: #f8b899;
   animation: own 1.2s infinite linear;
 }
 .order-wrapper .order-effect .me-head {
@@ -3003,49 +3031,48 @@ section.portfolio .grid.isotope-grid:after {
   position: absolute;
   left: -10px;
   width: 60px;
-  height: 65px;
+  height: 67px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  background: #333;
+  background: #795548;
 }
 .order-wrapper .order-effect .hair-front {
   position: absolute;
-  top: -2px;
   width: 55px;
-  height: 43px;
+  height: 40px;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  background: #333;
+  background: #795548;
 }
-.order-wrapper .order-effect .eye-1 {
+.order-wrapper .order-effect .eyee-1 {
   position: absolute;
   top: 40px;
   left: 12px;
   width: 3px;
   height: 3px;
-  background: #333;
+  background: #000;
   border-radius: 10px;
   animation: blink 1s infinite alternate ease-in-out;
 }
-.order-wrapper .order-effect .eye-1::before {
-  positiona: bsolute;
+.order-wrapper .order-effect .eyee-1::before {
+  position: absolute;
   top: -5px;
   left: -3px;
   width: 5px;
   height: 2px;
-  background: #333;
+  background: #555;
   border-radius: 10px;
   content: "";
   animation: down 3s infinite;
 }
-.order-wrapper .order-effect .eye-2 {
+.order-wrapper .order-effect .eyee-2 {
   position: absolute;
   top: 40px;
   left: 32px;
   width: 3px;
   height: 3px;
-  background: #333;
+  background: #000;
   border-radius: 10px;
   animation: blink 1s infinite alternate ease-in-out;
 }
@@ -3054,21 +3081,41 @@ section.portfolio .grid.isotope-grid:after {
   top: 55px;
   left: 19px;
   width: 10px;
-  height: 3px;
+  height: 4px;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
-  border: 2px solid secundary-color;
+  border: 3px solid #ff0000;
   border-top: 0;
   box-sizing: border-box;
   animation: smile 5s infinite;
 }
+.order-wrapper .order-effect .flower {
+  position: absolute;
+  top: 75px;
+  left: 155px;
+  width: 10px;
+  height: 20px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background: #f8b899;
+}
+.order-wrapper .order-effect .flower::before {
+  position: absolute;
+  left: -10px;
+  width: 10px;
+  height: 20px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background: #f8b899;
+  content: "";
+}
 .order-wrapper .order-effect .box {
   position: absolute;
-  top: -70px;
-  left: 270px;
+  top: -60px;
+  left: 340px;
   width: 40px;
   height: 60px;
-  background: #fff;
+  background: #9bb6aa;
   border-radius: 10px;
 }
 .order-wrapper .order-effect .circle {
@@ -3082,15 +3129,15 @@ section.portfolio .grid.isotope-grid:after {
 }
 .order-wrapper .order-effect .circle::before {
   position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 12px;
-  height: 13px;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
   background: #eee;
   border: solid 3px #fff;
   border-radius: 10px;
   content: "";
-  animation: beat .5s infinite;
+  animation: beat 0.5s infinite;
 }
 .order-wrapper .order-effect .circle-2 {
   position: absolute;
@@ -3100,8 +3147,59 @@ section.portfolio .grid.isotope-grid:after {
   height: 24px;
 }
 .order-wrapper .order-effect .circle-2::before {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
+}
+@-moz-keyframes own {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes own {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes own {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 @keyframes own {
   0% {
@@ -3118,6 +3216,57 @@ section.portfolio .grid.isotope-grid:after {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@-moz-keyframes down {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-o-keyframes down {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 @keyframes down {
@@ -3137,6 +3286,57 @@ section.portfolio .grid.isotope-grid:after {
     transform: translateY(0px);
   }
 }
+@-moz-keyframes smile {
+  0% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  75% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes smile {
+  0% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  75% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@-o-keyframes smile {
+  0% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  75% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 @keyframes smile {
   0% {
     transform: scaleX(1);
@@ -3152,6 +3352,57 @@ section.portfolio .grid.isotope-grid:after {
   }
   100% {
     transform: scaleX(1);
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    background-color: #000;
+  }
+  25% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #000;
+  }
+  75% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    background-color: #000;
+  }
+  25% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #000;
+  }
+  75% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+@-o-keyframes blink {
+  0% {
+    background-color: #000;
+  }
+  25% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #000;
+  }
+  75% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #fff;
   }
 }
 @keyframes blink {
@@ -3171,9 +3422,92 @@ section.portfolio .grid.isotope-grid:after {
     background-color: #fff;
   }
 }
+@-moz-keyframes blinkk {
+  0% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  25% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  50% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  75% {
+    border-bottom: 230px solid #fff;
+  }
+  100% {
+    border-bottom: 230px solid #fff;
+  }
+}
+@-webkit-keyframes blinkk {
+  0% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  25% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  50% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  75% {
+    border-bottom: 230px solid #fff;
+  }
+  100% {
+    border-bottom: 230px solid #fff;
+  }
+}
+@-o-keyframes blinkk {
+  0% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  25% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  50% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  75% {
+    border-bottom: 230px solid #fff;
+  }
+  100% {
+    border-bottom: 230px solid #fff;
+  }
+}
+@keyframes blinkk {
+  0% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  25% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  50% {
+    border-bottom: 230px solid #fef2d8;
+  }
+  75% {
+    border-bottom: 230px solid #fff;
+  }
+  100% {
+    border-bottom: 230px solid #fff;
+  }
+}
 @keyframes flyy {
   50% {
     transform: translateY(15px);
+  }
+}
+@-moz-keyframes fly {
+  50% {
+    transform: rotate(1deg);
+  }
+}
+@-webkit-keyframes fly {
+  50% {
+    transform: rotate(1deg);
+  }
+}
+@-o-keyframes fly {
+  50% {
+    transform: rotate(1deg);
   }
 }
 @keyframes fly {
@@ -3181,75 +3515,72 @@ section.portfolio .grid.isotope-grid:after {
     transform: rotate(1deg);
   }
 }
-@keyframes beat {
+@-moz-keyframes beat {
   0% {
-    transform: scaleX(1);
+    transform: scaleX(0.9);
   }
   25% {
-    transform: scaleX(1.5);
+    transform: scaleX(1.2);
   }
   50% {
-    transform: scaleY(1);
+    transform: scaleY(0.9);
   }
   75% {
-    transform: scaleX(1.5);
+    transform: scaleX(1.2);
   }
   100% {
-    transform: scaleY(1);
+    transform: scaleY(0.9);
   }
 }
-@media screen and (max-width: 515px) {
-  .order-wrapper .order-effect .header {
-    transform: scale(0.9);
+@-webkit-keyframes beat {
+  0% {
+    transform: scaleX(0.9);
   }
-  .order-wrapper .order-effect .section {
-    transform: scale(1);
+  25% {
+    transform: scaleX(1.2);
   }
-}
-@media screen and (max-width: 460px) {
-  .order-wrapper .order-effect .header {
-    transform: scale(0.8);
-  }
-  .order-wrapper .order-effect .section {
-    transform: scale(1);
-  }
-}
-@media screen and (max-width: 420px) {
-  .order-wrapper .order-effect .header {
-    transform: scale(0.7);
-  }
-  .order-wrapper .order-effect .section {
-    transform: scale(1.1);
-  }
-}
-@media screen and (max-width: 400px) {
-  .order-wrapper .order-effect .header {
-    transform: scale(0.6);
-  }
-  .order-wrapper .order-effect .section {
-    transform: scale(1.2);
-  }
-}
-@media screen and (max-width: 360px) {
-  .order-wrapper .order-effect .header {
-    transform: scale(0.5);
-  }
-  .order-wrapper .order-effect .section {
-    left: 50px;
-    max-width: 26em;
-    transform: scale(1.5);
-  }
-}
-@media screen and (max-width: 320px) {
-  .order-wrapper .order-effect .section {
-    left: 40px;
-    max-width: 26em;
-    transform: scale(1.5);
-  }
-}
-@keyframes rotate {
   50% {
-    transform: rotate(-20deg);
+    transform: scaleY(0.9);
+  }
+  75% {
+    transform: scaleX(1.2);
+  }
+  100% {
+    transform: scaleY(0.9);
+  }
+}
+@-o-keyframes beat {
+  0% {
+    transform: scaleX(0.9);
+  }
+  25% {
+    transform: scaleX(1.2);
+  }
+  50% {
+    transform: scaleY(0.9);
+  }
+  75% {
+    transform: scaleX(1.2);
+  }
+  100% {
+    transform: scaleY(0.9);
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scaleX(0.9);
+  }
+  25% {
+    transform: scaleX(1.2);
+  }
+  50% {
+    transform: scaleY(0.9);
+  }
+  75% {
+    transform: scaleX(1.2);
+  }
+  100% {
+    transform: scaleY(0.9);
   }
 }
 /*-----------------------------------------------------------------------------Страница Цены*/
