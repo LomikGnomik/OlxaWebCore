@@ -453,6 +453,85 @@ nav#index-navigation .submenu .info-item-header .submenu__item a:hover {
   background: #06c438;
   color: #ecf0f1;
 }
+/*медиа меню*/
+@media (max-width: 767px) {
+  nav {
+    display: table-cell;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  nav .logo {
+    margin: 0 2em;
+  }
+  nav .main-menu {
+    padding-left: 0;
+  }
+  nav .main-menu__item {
+    width: 100%;
+    padding: 0.8em 0;
+  }
+  nav .main-menu__item .submenu {
+    margin: 0 auto;
+  }
+  nav .main-menu .main-menu__item .submenu {
+    position: static;
+    display: none;
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  /*--------------------------------меню для мобильных*/
+  .navigation-sm nav .menu-trigger {
+    display: block;
+    padding: 4.5% 20%;
+    color: #06c438;
+    /*.fa {
+                    display: inherit;
+                    text-align: left;
+                    margin-left: -2em;
+                    margin-top: 1em;
+                }*/
+  }
+  nav#index-navigation .main-menu {
+    display: none;
+  }
+  nav#index-navigation .main-menu .main-menu__item {
+    text-align: left;
+  }
+}
+/*выпадающее меню*/
+@media (max-width: 640px) {
+  nav#index-navigation .main-menu .main-menu__item > .submenu {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    position: relative;
+    margin-left: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  nav#index-navigation .submenu .info-item-header {
+    width: auto;
+  }
+  nav#index-navigation .submenu .info-item-header ul {
+    list-style: disc;
+    margin-left: 3em;
+    color: #999999;
+  }
+  nav#index-navigation .submenu .info-item-header .submenu__item a {
+    border: none;
+    color: #999999;
+  }
+  nav#index-navigation .submenu .info-item-header .submenu__item a:hover,
+  nav#index-navigation .submenu .info-item-header .submenu__item a:active {
+    color: #06c438;
+    background: transparent;
+  }
+  nav#index-navigation .main-menu .main-menu__item:hover > .submenu {
+    width: auto;
+  }
+}
 .inner {
   display: flex;
   justify-content: space-between;
@@ -7783,6 +7862,7 @@ form.form .customSelect.customSelectFocus:after {
     }*/
 }
 .form-wrapper .container-form {
+  width: 95%;
   max-width: 40em;
   margin: 5em auto;
 }
@@ -11173,7 +11253,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .container {
     width: 45em;
   }
-  /*менюшка*/
   /*колонки в футере*/
   .bottom-footer .footer-info .info-item {
     width: 50%;
@@ -11245,31 +11324,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .container {
     width: 90%;
   }
-  /*менюшка*/
-  nav {
-    display: table-cell;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  nav .logo {
-    margin: 0 2em;
-  }
-  nav .main-menu {
-    padding-left: 0;
-  }
-  nav .main-menu__item {
-    width: 100%;
-    padding: 0.8em 0;
-  }
-  nav .main-menu__item .submenu {
-    margin: 0 auto;
-  }
-  nav .main-menu .main-menu__item .submenu {
-    position: static;
-    display: none;
-    width: 100%;
-  }
   /*колонки в футере*/
   .bottom-footer .footer-info .info-item {
     width: 50%;
@@ -11295,7 +11349,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   .details {
     width: 117%;
   }
-  /*-------------------------------------------Страница Лендинга*/
   /*----------------------------------------------------форма заявки*/
   .btn-form-group {
     display: flex;
@@ -11306,21 +11359,6 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
   /*колонки в футере*/
   .bottom-footer .footer-info .info-item {
     width: 90%;
-  }
-  /*--------------------------------меню для мобильных*/
-  .navigation-sm nav .menu-trigger {
-    display: block;
-    padding: 8% 20%;
-    color: #06c438;
-    /*.fa {
-                    display: inherit;
-                    text-align: left;
-                    margin-left: -2em;
-                    margin-top: 1em;
-                }*/
-  }
-  nav#index-navigation .main-menu {
-    display: none;
   }
   /*li {
         display: block;

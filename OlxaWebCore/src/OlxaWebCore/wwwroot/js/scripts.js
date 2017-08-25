@@ -80,39 +80,39 @@ $(function () {
 
 /*--------------------модальное окно инпут с загрузкой файлов--------------------------*/
 
-$(function () {
-    var wrapper = $(".file_upload"),
-        inp = wrapper.find("input"),
-        btn = wrapper.find("button"),
-        lbl = wrapper.find("div");
+//$(function () {
+//    var wrapper = $(".file_upload"),
+//        inp = wrapper.find("input"),
+//        btn = wrapper.find("button"),
+//        lbl = wrapper.find("div");
 
-    btn.add(lbl).click(function () {
-        inp.click();
-    });
+//    btn.add(lbl).click(function () {
+//        inp.click();
+//    });
 
-    var file_api = (window.File && window.FileReader && window.FileList && window.Blob) ? true : false;
+//    var file_api = (window.File && window.FileReader && window.FileList && window.Blob) ? true : false;
 
-    inp.change(function () {
+//    inp.change(function () {
 
-        var file_name;
-        if (file_api && inp[0].files[0])
-            file_name = inp[0].files[0].name;
-        else
-            file_name = inp.val().replace("C:\\fakepath\\", '');
-        if (!file_name.length)
-            return;
+//        var file_name;
+//        if (file_api && inp[0].files[0])
+//            file_name = inp[0].files[0].name;
+//        else
+//            file_name = inp.val().replace("C:\\fakepath\\", '');
+//        if (!file_name.length)
+//            return;
 
-        if (lbl.is(":visible")) {
-            lbl.text(file_name);
-            btn.text("Выбрать");
-        } else
-            btn.text(file_name);
-    }).change();
+//        if (lbl.is(":visible")) {
+//            lbl.text(file_name);
+//            btn.text("Выбрать");
+//        } else
+//            btn.text(file_name);
+//    }).change();
 
-});
-$(window).resize(function () {
-    $(".file_upload input").triggerHandler("change");
-});
+//});
+//$(window).resize(function () {
+//    $(".file_upload input").triggerHandler("change");
+//});
 
 /*--------------------Загрузка файлов для формы----------------*/
 (function () {
@@ -175,71 +175,6 @@ $(document).ready(function () {
         })
     });
 })
-
-
-/*---------------------главная-виды сайтов эффект*/
-//доработать
-//$('.promo-site').click(function () {
-//    $('.avFeature').toggleClass('active');
-//    $('.firewallFeature').removeClass('active');
-//    $('.backupFeature').removeClass('active');
-//    $('.vulnerabilitiesFeature').removeClass('active');
-//    $('.spamfilterFeature').removeClass('active');
-//});
-//$('.landing-site').click(function () {
-//    $('.avFeature').removeClass('active');
-//    $('.firewallFeature').addClass('active');
-//    $('.backupFeature').removeClass('active');
-//    $('.vulnerabilitiesFeature').removeClass('active');
-//    $('.spamfilterFeature').removeClass('active');
-//});
-//$('.corporate-site').click(function () {
-//    $('.avFeature').removeClass('active');
-//    $('.firewallFeature').removeClass('active');
-//    $('.backupFeature').addClass('active');
-//    $('.vulnerabilitiesFeature').removeClass('active');
-//    $('.spamfilterFeature').removeClass('active');
-//});
-//$('.shop-site').click(function () {
-//    $('.avFeature').removeClass('active');
-//    $('.firewallFeature').removeClass('active');
-//    $('.backupFeature').removeClass('active');
-//    $('.vulnerabilitiesFeature').addClass('active');
-//    $('.spamfilterFeature').removeClass('active');
-//    $('.smpFeature').removeClass('active');
-//});
-//$('.information-site').click(function () {
-//    $('.avFeature').removeClass('active');
-//    $('.firewallFeature').removeClass('active');
-//    $('.backupFeature').removeClass('active');
-//    $('.vulnerabilitiesFeature').removeClass('active');
-//    $('.spamfilterFeature').addClass('active');
-//    $('.smpFeature').removeClass('active');
-//});
-//$('.develop-site').click(function () {
-//    $('.avFeature').removeClass('active');
-//    $('.firewallFeature').removeClass('active');
-//    $('.backupFeature').removeClass('active');
-//    $('.vulnerabilitiesFeature').removeClass('active');
-//    $('.spamfilterFeature').removeClass('active');
-//    $('.smpFeature').addClass('active');
-//});
-
-//$('.promo-site').hover(function () {
-//    $('.promo-site-description').toggleClass('active');
-//});
-//$('.landing-site').hover(function () {
-//    $('.landing-site-description').toggleClass('active');
-//});
-//$('.corporate-site').hover(function () {
-//    $('.corp-site-description').toggleClass('active');
-//});
-//$('.shop-site').hover(function () {
-//    $('.shop-site-description').toggleClass('active');
-//});
-//$('.information-site').hover(function () {
-//    $('.inform-site-description').toggleClass('active');
-//});
 
 /*------------------------первый экран с видами сайтов картинки в изометрии-------------------*/
 var dialogOpener = $('.dialogOpener');
