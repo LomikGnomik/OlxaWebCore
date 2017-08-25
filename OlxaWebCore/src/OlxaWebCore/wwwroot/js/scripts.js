@@ -54,6 +54,7 @@ $(document).ready(function () {
     });
 });
 /*--------------------------------прокрутка наверх--------------------------------------*/
+
 $(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
