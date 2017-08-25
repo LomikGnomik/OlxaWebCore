@@ -749,6 +749,11 @@ nav#index-navigation {
         margin-left: 0;
         box-shadow: none;
         padding: 0;
+
+        a.active {
+            background: transparent;
+            color: @color-more;
+        }
     }
 
     nav#index-navigation .submenu .info-item-header {
@@ -11949,6 +11954,11 @@ form.form {
             letter-spacing: 1px;
             padding: 0 1.2em;
         }
+        .list-wrap{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+        }
     }
 
     ul {
@@ -12042,6 +12052,23 @@ form.form {
 }
 
 @media screen and (max-width:640px) {
+}
+
+@media (max-width:320px) {
+    .title-description {
+        display: block;
+    }
+
+    .title-description .content-item {
+        margin: 0 auto;
+        width: 95%;
+        text-align: justify;
+    }
+
+    .wrap-info {
+        min-width: 90%;
+        margin: 1em auto;
+    }
 }
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
@@ -13589,6 +13616,27 @@ section.tabs-all {
 }
 
 @media screen and (max-width:640px) {
+    section.tabs-all .label-wrapper {
+        flex-wrap: wrap;
+        border: none;
+    }
+
+    section.tabs-all .label-wrapper label {
+        width: auto;
+        border: 1px solid @color-gray;
+    }
+
+    section.tabs-all #tab__1:checked ~ .label-wrapper #tab__l1,
+    section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2,
+    section.tabs-all #tab__3:checked ~ .label-wrapper #tab__l3 {
+        border: 0;
+        border: 1px solid @color-more;
+        position: inherit;
+    }
+
+    .title-description .content-item p {
+        font-size: 1em;
+    }
 }
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
 #toTop {

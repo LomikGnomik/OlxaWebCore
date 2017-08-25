@@ -511,6 +511,10 @@ nav#index-navigation .submenu .info-item-header .submenu__item a:hover {
     box-shadow: none;
     padding: 0;
   }
+  nav#index-navigation .main-menu .main-menu__item > .submenu a.active {
+    background: transparent;
+    color: #06c438;
+  }
   nav#index-navigation .submenu .info-item-header {
     width: auto;
   }
@@ -9751,6 +9755,11 @@ form.form .customSelect.customSelectFocus:after {
   letter-spacing: 1px;
   padding: 0 1.2em;
 }
+.service-sites-accordion .service-sites-content .list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .service-sites-accordion ul {
   list-style: none;
   padding: 0;
@@ -9792,6 +9801,20 @@ form.form .customSelect.customSelectFocus:after {
 .service-sites-accordion ul li i:before,
 .service-sites-accordion ul li i:after {
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 320px) {
+  .title-description {
+    display: block;
+  }
+  .title-description .content-item {
+    margin: 0 auto;
+    width: 95%;
+    text-align: justify;
+  }
+  .wrap-info {
+    min-width: 90%;
+    margin: 1em auto;
+  }
 }
 /*---------------------------------------------------------------------примеры сайтов на страницах example*/
 .example-sites-content {
@@ -11099,6 +11122,26 @@ section.tabs-all #tab__3:checked ~ .tabs_content #tab__c3 {
     min-width: 5em;
     font-size: 0.8em;
     width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  section.tabs-all .label-wrapper {
+    flex-wrap: wrap;
+    border: none;
+  }
+  section.tabs-all .label-wrapper label {
+    width: auto;
+    border: 1px solid #999999;
+  }
+  section.tabs-all #tab__1:checked ~ .label-wrapper #tab__l1,
+  section.tabs-all #tab__2:checked ~ .label-wrapper #tab__l2,
+  section.tabs-all #tab__3:checked ~ .label-wrapper #tab__l3 {
+    border: 0;
+    border: 1px solid #06c438;
+    position: inherit;
+  }
+  .title-description .content-item p {
+    font-size: 1em;
   }
 }
 /*--------------------------------------------------------------Полоса прокрутки наверх*/
