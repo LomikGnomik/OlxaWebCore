@@ -7768,14 +7768,15 @@ label.popup_link:hover {
 .about-wrap {
     padding-top: 3em;
     text-align: center;
-
+    // min-height:100vh;
     .about-wrapper {
         // min-height: 100vh;
         // display:flex;
-        .about-company-wrap {
+        /*.about-company-wrap {
             .about-company {
                 margin: 0 auto;
-                padding: 2em 0;
+                padding-top: 6em;
+                padding-bottom: 2em;
                 //   width:50%;
                 h2 {
                     padding: 2em;
@@ -7793,14 +7794,12 @@ label.popup_link:hover {
                     margin: 0 auto;
                 }
             }
-        }
-
-        .how-we-work {
+        }*/
+        /*.how-we-work {
             // min-height: 100vh;
             padding: 3em 0;
-        }
-
-        .about-team-wrap {
+        }*/
+        /*.about-team-wrap {
 
             .about-team {
                 padding-bottom: 4em;
@@ -7925,56 +7924,145 @@ label.popup_link:hover {
                     }
                 }
             }
-        }
+        }*/
     }
 
 
     .contacts-wrapper {
-        //min-height: 100vh;
-        // padding-top: 5em;
-        //  width:50%;
-        //display:flex;
         .contacts {
             min-height: 95vh;
             display: flex;
-            background: @color-gray-dark;
-            //justify-content: center;
-            .map {
+            background: #000000;
+
+            #map {
                 margin-right: 1em;
                 width: 50%;
                 min-height: 100%;
+                padding-top: 1.78em;
             }
 
-            .info {
+            .info-wrap {
                 width: 50%;
                 height: 100%;
                 line-height: 2em;
+                padding: 2em;
 
-                .info-inner {
-                    margin-top: 40%;
-                    padding-left: 3em;
+                .info-inner-about {
                     text-align: left;
+                    padding: 1em 0;
+
+                    .about-company {
+                        padding-top: 2em;
+                        padding-bottom: 2em;
+
+                        h1 {
+                            //  padding: 2em;
+                            color: @color-more;
+                            font-size: 1.2em;
+                            text-transform: uppercase;
+                            letter-spacing: 0.02em;
+                            //font-size: 2em;
+                        }
+
+                        p {
+                            color: @font-color-reverce;
+                            // width: 60%;
+                            margin: 0 auto;
+                        }
+                    }
                 }
 
-                span {
-                    display: inline-block;
-                    width: 7em;
-                    color: @color-base-lighter2;
-                    text-transform: uppercase;
-                    font-weight: 700;
+                .info-inner-contact {
+                    text-align: left;
+                    padding: 1em 0;
+
+                    table {
+                        border-collapse: collapse;
+                        text-align: left;
+
+                        td > a {
+                            padding-left: 1em;
+                        }
+                    }
+
+                    span {
+                        display: inline-block;
+                        // width: 7em;
+                        color: @color-more;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+
+                    a {
+                        display: inline-block;
+                        // width: 7em;
+                        text-decoration: none;
+                        color: @font-color-reverce;
+                    }
                 }
 
-                a {
-                    display: inline-block;
-                    // width: 7em;
-                    text-decoration: none;
-                    color: @color-more-lighter2;
+                .info-inner-media {
+                    padding: 1em 0;
+
+                    ul.social {
+                        padding-left: 0px;
+                        text-align: left;
+                        padding-top: 2em;
+                        display: flex;
+
+                        li {
+                            list-style-type: none;
+                            width: 50px;
+                            height: 50px;
+                            line-height: 3em;
+                            text-align: center;
+                            border-radius: 100%;
+                            border: 1px solid @font-color-reverce;
+                            margin-right: 1em;
+                            cursor: pointer;
+                            transition: ease .3s;
+
+                            a i {
+                                color: @font-color-reverce;
+                            }
+
+                            &:hover {
+                                border-color: @color-more;
+                            }
+
+                            &:hover i {
+                                color: @color-more;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
 
+@media (max-width: 991px) {
+    .contacts-wrapper .contacts {
+        flex-direction: column;
+    }
+
+    .about-wrap .contacts-wrapper .contacts .info-wrap {
+        order: 0;
+        width: 100%;
+    }
+
+    .about-wrap .contacts-wrapper .contacts #map {
+        order: 1;
+        width: 100%;
+        max-height:20em;
+        padding:0;
+    }
+}
+@media (min-width: 630px) and (max-width: 780px){
+    .about-wrap .contacts-wrapper .contacts .info-wrap .info-inner-about{
+        padding-top:4em;
+    }
+}
 /*----------------------------------------------------------------страница разработки*/
 .develop-wrapper {
     section.description-develop-wrap {
