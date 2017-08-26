@@ -13,84 +13,86 @@
         @Html.Partial("_HeaderPartialView")
     </section>
     <section class="shop-description-wrap">
-        <div class="presentation presentation-shop">
-            <div class="isometric-wrapper">
-                <div class="floor isometric shop">
-                    <div class="shop-admin" id="adminOpenen">
-                        <p class="md-light md-24">Админка</p>
-                    </div>
-                    <div class="appBar menu-buy">
-                        <div class="buy" id="drawerOpener">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <div class="container">
+            <div class="presentation presentation-shop">
+                <div class="isometric-wrapper">
+                    <div class="floor isometric shop">
+                        <div class="shop-admin" id="adminOpenen">
+                            <p class="md-light md-24"></p>
                         </div>
-                    </div>
-                    <div class="content">
-                        <div class="card">  </div>
-                        <div class="card-shop-wrapper">
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                        </div>
-                        <div class="card-shop-wrapper">
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                        </div>
-                    </div>
-                    @*<div class="fab dialogOpener toasted"></div>*@
-                    <div class="dialogContainer hidden" id="dialog">
-                        <div class="dialog"></div>
-                    </div>
-                    <div class="drawerContainer hidden" id="drawer">
-                        <div class="drawer">
-                            <div class="header"></div>
-                        </div>
-                    </div>
-                    <div class="adminContainer hidden" id="admin">
-                        <div class="admin">
-                            <div class="card-admin-wrap">
-                                <div class="card">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="card">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="card"></div>
+                        <div class="appBar menu-buy">
+                            <div class="buy button-buy" id="drawerOpener">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             </div>
-                            <div class="card-admin-wrap">
-                                <div class="card">
-                                    <img src="" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="card bl-content"></div>
+                            <div class="card-shop-wrapper">
+                                <div class="card card-product"></div>
+                                <div class="card card-product"></div>
+                                <div class="card card-product"></div>
+                            </div>
+                            <div class="card-shop-wrapper">
+                                <div class="card card-product"></div>
+                                <div class="card card-product"></div>
+                                <div class="card card-product"></div>
+                            </div>
+                        </div>
+                        @*<div class="fab dialogOpener toasted"></div>*@
+                        <div class="dialogContainer hidden" id="dialog">
+                            <div class="dialog"></div>
+                        </div>
+                        <div class="drawerContainer hidden" id="drawer">
+                            <div class="drawer">
+                                <div class="header"></div>
+                            </div>
+                        </div>
+                        <div class="adminContainer hidden" id="admin">
+                            <div class="admin">
+                                <div class="card-admin-wrap">
+                                    <div class="card">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card"></div>
                                 </div>
-                                <div class="card">
-                                    <img src="" alt="">
+                                <div class="card-admin-wrap">
+                                    <div class="card">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card"></div>
                                 </div>
-                                <div class="card"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="description description-shop">
-                <div class="description-inner-text-group">
-                    <h1>Интернет магазин</h1>
-                    <p>
-                        Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
-                        быстро их обрабатывать. Гибкая структура позволяет расширить ассортимент
-                        продукции и добавлять новые способы оплаты и доставки.
-                    </p>
-                    @*<p class="ul-title">Интернет магазин уже содержит:</p>
-                        <ul>
-                            <li>Каталог продукции</li>
-                            <li>Акции</li>
-                            <li>Рекомендуемые товары</li>
-                            <li>Корзину</li>
-                            <li>Онлайн-платежи</li>
-                            <li>Расчет стоимости доставки</li>
-                        </ul>*@
+                <div class="description description-shop">
+                    <div class="description-inner-text-group">
+                        <h1>Интернет магазин</h1>
+                        <p>
+                            Позволяет принимать заказы в интернете 24 х 7, а удобная панель администратора легко и
+                            быстро их обрабатывать. Гибкая структура позволяет расширить ассортимент
+                            продукции и добавлять новые способы оплаты и доставки.
+                        </p>
+                        @*<p class="ul-title">Интернет магазин уже содержит:</p>
+                    <ul>
+                        <li>Каталог продукции</li>
+                        <li>Акции</li>
+                        <li>Рекомендуемые товары</li>
+                        <li>Корзину</li>
+                        <li>Онлайн-платежи</li>
+                        <li>Расчет стоимости доставки</li>
+                    </ul>*@
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+        </div>        
     </section>
 
 
@@ -223,7 +225,7 @@
                                     </p>
 
                                 </div>
-                                <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                                <div class="description-price">@await Component.InvokeAsync("PriceTimeDemo")</div>
                             </div>
                         </div>
                     </div>
@@ -320,7 +322,6 @@
                                     линныйлинный линный линныйлинныйлинный
                                 </p>
                             </div>
-                            <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                         </div>
                     </div>
 

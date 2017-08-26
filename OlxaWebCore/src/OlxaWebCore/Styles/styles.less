@@ -3016,7 +3016,7 @@ section.portfolio {
                 padding: 15px;
                 //  text-align: center;
                 color: #aaa;
-                font-size: 0.85em;
+                font-size: 1.2em;
                 // width: 70%;
             }
 
@@ -3473,7 +3473,7 @@ section.portfolio {
     .product .product-description .info {
         padding: 15px;
         color: #aaa;
-        font-size: 0.85em;
+        font-size: 1.2em;
     }
 
     .product .product-description .price {
@@ -3529,6 +3529,17 @@ section.portfolio {
 
     .product:hover .product-sidebar {
         right: -50px;
+    }
+}
+
+@media (max-width: 640px) {
+    #inner-tabs.product-inner-tabs .product-item{
+        margin: 0 auto;
+        margin-bottom:2em;
+    }
+    #inner-tabs.product-inner-tabs .product {
+        margin: 0 auto;
+        width: 90%;
     }
 }
 /*---------------------------------страница после заказа order/orderList*/
@@ -10051,17 +10062,29 @@ form.form {
 }
 /*----------------------------------------------первый экран видов сайтов с картинками в изометрии*/
 .presentation {
-    margin-top: 12em;
-    display: flex;
-    justify-content: space-between;
+    margin: 12em auto 0;
+    width: 100%;
+    min-height: 20em;
+    display: table;
+    table-layout: fixed;
+    // display: flex;
+    // justify-content: space-between;
     //height: 35em;
+    &.presentation-information {
+        margin: 8em auto 0;
+    }
+
+    .description-landing.description {
+        vertical-align: top;
+    }
+
     .description {
-        position: absolute;
         width: 50%;
         max-width: 40em;
-        display: table;
-        table-layout: fixed;
-        //  min-height: 26.5em;
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 10em;
+
         .description-inner-text-group {
             display: flex;
             flex-direction: column;
@@ -10106,10 +10129,16 @@ form.form {
     }
 }
 /*------------------------------общие стили*/
+.isometric-wrapper .isometric.information .content {
+    padding: 0 8px;
+}
+
 .isometric-wrapper {
     display: block;
-    width: 45%;
+    //width: 45%;
     height: 22em;
+    position: relative;
+    right: -10em;
 
     .title {
         margin: 0 auto;
@@ -10150,16 +10179,15 @@ form.form {
         transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg) translate(-14%, -34%) scale3d(1, 1, 1);
         transform-style: preserve-3d;
 
-
         .appBar {
             width: 100%;
             height: 56px;
             border-radius: 0;
-            background: #00BCD4;
-            border-bottom: 2px solid #00626e;
-            border-left: 2px solid #00626e;
+            background: @color-gray-light;
+            border-bottom: 2px solid @color-gray;
+            border-left: 2px solid @color-gray;
             transform: translate3d(0, 0, 24px);
-            box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
             -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
             -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
             transition: transform 0.5s, box-shadow 0.5s;
@@ -10171,7 +10199,7 @@ form.form {
 
             &:before {
                 transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-                content: "4dp";
+                content: "Меню";
                 display: block;
                 position: absolute;
                 right: 100%;
@@ -10202,8 +10230,19 @@ form.form {
                 content: "4dp";
                 opacity: 0.8;
             }
-        }
 
+            &.slider::before {
+                content: "Шапка сайта";
+            }
+
+            &.menu-information::before {
+                content: "Основное меню";
+            }
+
+            &.menu-information.small::before {
+                content: "Фиксированный контент";
+            }
+        }
 
         .fab {
             width: 56px;
@@ -10259,8 +10298,6 @@ form.form {
             }
         }
 
-
-
         .button {
             width: 100px;
             height: 36px;
@@ -10281,7 +10318,7 @@ form.form {
             // left: 8px;
             &:before {
                 transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-                content: "2dp";
+                content: "Отправить!";
                 display: block;
                 position: absolute;
                 right: 100%;
@@ -10312,6 +10349,10 @@ form.form {
                 content: "8dp";
                 opacity: 0.8;
             }
+        }
+
+        .button-buy.button:before {
+            content: "Корзина";
         }
 
         .dialogContainer {
@@ -10455,13 +10496,14 @@ form.form {
             margin-left: -100%;
         }
 
+
         .content {
             padding: 8px;
             transform-style: preserve-3d;
 
             .card {
                 width: 100%;
-                height: 160px;
+                height: 190px;
                 border-radius: 2px;
                 background: #FAFAFA;
                 border-bottom: 2px solid #c7c7c7;
@@ -10481,7 +10523,7 @@ form.form {
 
                 &:before {
                     transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-                    content: "2dp";
+                    // content: "2dp";
                     display: block;
                     position: absolute;
                     right: 100%;
@@ -10512,6 +10554,24 @@ form.form {
                     content: "8dp";
                     opacity: 0.8;
                 }
+            }
+
+            .card-product.card::before {
+                content: "Карточка товара";
+                width: 100%;
+            }
+
+            .card-form.card::before {
+                content: "Форма обратной связи";
+            }
+
+            .bl-content.card::before {
+                content: "Блок контента";
+            }
+
+            .bl-content.card-corp::before {
+                width: 100%;
+                left: 110%;
             }
         }
 
@@ -10550,18 +10610,19 @@ form.form {
     }
     /*---------------------Сайт визитка*/
     .visit.floor {
-        left: 30%;
+        //  left: 30%;
         width: 30em;
         height: 30em;
 
         .visit-menu {
-            width: 29em;
-            margin: 0 2em 1em 1.1em;
+            // width: 29em;
+            //  margin: 0 2em 1em 1.1em;
+            width: 97%;
+            margin: 0.5em auto;
             background: @color-gray-lighter;
             border-bottom: 2px solid @color-gray;
             border-left: 2px solid @color-gray;
             transform: translate3d(0, 0, 10px);
-            margin-left: 0.8em;
 
             &:hover {
                 transform: translate3d(0, 0, 20px);
@@ -10607,6 +10668,7 @@ form.form {
 
                 .right {
                     margin-left: 74%;
+                    margin-top: 8em;
                 }
 
                 p {
@@ -10618,8 +10680,13 @@ form.form {
     }
     /*---------------------Лендинг*/
     .landing {
-        height: 47em;
-        top: 5em;
+        height: 50em;
+        top: -7em;
+        left: 10em;
+
+        .content .lend.card {
+            height: 175px;
+        }
 
         .landing-menu {
             background: @color-gray-lighter;
@@ -10699,7 +10766,7 @@ form.form {
 
         .button.right {
             margin-left: 10em;
-            margin-top: 6em;
+            margin-top: 7.5em;
 
             p {
                 display: table-cell;
@@ -10709,8 +10776,8 @@ form.form {
     }
     /*---------------------Корпоративный*/
     .corporate.floor {
-        left: 35%;
-        top: 9em;
+        left: 6em;
+        top: -4em;
     }
 
     .corporate {
@@ -10720,7 +10787,7 @@ form.form {
 
         .card.header {
             height: 5em;
-            margin-bottom: 2em;
+            margin-bottom: 1.5em;
             background: @color-gray-light;
 
             .button {
@@ -10729,10 +10796,12 @@ form.form {
                 background: @color-base;
                 border-bottom: 1px solid @color-base-darken1;
                 border-left: 1px solid @color-base-darken1;
-                color: @font-color-reverce;
-                font-size: 1.5em;
                 // margin-left: 10.5em;
                 // margin-top: 2em;
+                i {
+                    color: @font-color-reverce;
+                    font-size: 1.5em;
+                }
             }
         }
 
@@ -10748,9 +10817,13 @@ form.form {
         }
     }
     /*---------------------Интернет магазин*/
+    .presentation .description.description-shop {
+        vertical-align: top;
+    }
+
     .shop.floor {
-        left: 35%;
-        top: 9em;
+        // left: 45em;
+        top: -5.5em;
 
         .shop-admin {
             border-bottom: 2px solid @color-gray;
@@ -10765,8 +10838,8 @@ form.form {
     }
 
     .shop {
-        width: 25em;
-        height: 40em;
+        width: 30em;
+        height: 44.5em;
 
         .menu-buy {
             display: flex;
@@ -10790,11 +10863,10 @@ form.form {
                 background: @color-base;
                 border-bottom: 2px solid @color-base-darken1;
                 border-left: 2px solid @color-base-darken1;
-                color: @font-color-reverce;
-                font-size: 1.5em;
                 width: 20%;
-                margin-left: 12em;
-                height: 1.3em;
+                margin-left: 20em;
+                margin-top: -0.9em;
+                height: 2em;
                 transform: translate3d(0, 0, 10px);
                 box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
                 -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
@@ -10804,9 +10876,14 @@ form.form {
                 animation: hideDelay 1s, drop 2s 1s;
                 box-sizing: border-box;
 
+                i {
+                    color: @font-color-reverce;
+                    font-size: 1.5em;
+                }
+
                 &:before {
                     transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-                    content: "4dp";
+                    content: "Корзина";
                     display: block;
                     position: absolute;
                     right: 100%;
@@ -10942,7 +11019,7 @@ form.form {
             // padding: 14px;
             &:before {
                 transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-                content: "4dp";
+                content: "Админка";
                 display: block;
                 position: absolute;
                 right: 100%;
@@ -11054,23 +11131,25 @@ form.form {
         }
     }
     /*---------------------Информационный*/
-    .information.floor {
-        left: 30%;
-        top: 6em;
+    .presentation .presentation-information {
+        margin: 5em auto 0;
+
+        .description-information {
+            vertical-align: top;
+        }
     }
 
     .information {
         width: 30em;
         height: 37em;
+        top: -4em;
 
         .slider.appBar {
             height: 8em;
             margin-bottom: 1.5em;
-            background: @color-gray-light;
-            transform: translate3d(0, 0, 10px);
+            background: @color-gray-lighter;
             border-bottom: 2px solid @color-gray;
             border-left: 2px solid @color-gray;
-            box-shadow: -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
         }
 
         .isometric-wrapper .isometric .appBar {
@@ -11091,9 +11170,9 @@ form.form {
                 .menu-information {
                     height: 40%;
                     margin-bottom: 1em;
-                    background: #fff;
-                    border-bottom: 2px solid @color-gray;
-                    border-left: 2px solid @color-gray;
+                    background: @color-gray-lighter;
+                    border-bottom: 2px solid @color-gray-light;
+                    border-left: 2px solid @color-gray-light;
                 }
 
                 .menu-information.small {
@@ -11102,14 +11181,14 @@ form.form {
             }
 
             .content {
-                width: 55%;
+                width: 65%;
 
                 .card {
                     display: flex;
                     height: 8em;
                     padding: 1em;
                     margin-bottom: 1em;
-                    background: #d3cfcf;
+                    background: #fff;
                 }
             }
         }
@@ -11174,198 +11253,21 @@ form.form {
     .description-inner-text-group p {
         text-align: justify;
     }
-    /*визитка*/
-    .presentation .description {
-        left: 53%;
-        width: 28em;
-        top: 19%;
-    }
-    /*лендинг*/
-    .presentation .description.description-landing {
-        top: 12%;
-    }
-
-    .isometric-wrapper .landing.floor {
-        left: 42%;
-    }
-
-    /*Корпоративный*/
-    .presentation .description.description-corporate {
-        top: 15%;
-    }
-
-    .isometric-wrapper .corporate.floor {
-        left: 40%;
-    }
-    /*Интернет магазин*/
-    /*Информационный*/
-    .isometric-wrapper .information .information-inner-wrap .content {
-        width: 65%;
-    }
-
-    .isometric-wrapper .information.floor {
-        left: 35%;
-    }
-
-    .description.description-information {
-        top: 15%;
-    }
 }
 
 @media (min-width: 2560px) and (max-width: 3839px) {
     .description-inner-text-group p {
         text-align: justify;
     }
-    /*визитка*/
-    .presentation .description {
-        width: 29em;
-        left: 54.5%;
-        top: 30%;
-        // margin-top: 5em;
-    }
-    /*лендинг*/
-    .presentation .description-landing.description {
-        margin-right: 0;
-        top: 12%;
-    }
-
-    .isometric-wrapper .landing {
-        left: 38%;
-    }
-    /*Корпоративный*/
-    .presentation .description.description-corporate {
-        top: 15%;
-    }
-    /*Интернет магазин*/
-    .presentation .description-shop.description {
-        top: 15%;
-    }
-    /*Информационный*/
-    .description.description-information {
-        top: 15%;
-    }
-
-    .isometric-wrapper .information .information-inner-wrap .content {
-        width: 65%;
-    }
 }
 
 @media (min-width: 1920px) and (max-width: 2559px) {
-    /*визитка*/
-    .isometric-wrapper .visit.floor {
-        left: 25%;
-    }
-
-    .presentation .description {
-        width: 28em;
-        left: 56%;
-        top: 25%;
-        // margin-top: 5em;
-    }
-    /*лендинг*/
-    .presentation .description-landing.description {
-        margin-right: 0;
-        top: 12%;
-    }
-
-    .isometric-wrapper .landing {
-        left: 35%;
-    }
-    /*Корпоративный*/
-    .presentation .description.description-corporate {
-        top: 15%;
-    }
-
-    .isometric-wrapper .corporate.floor {
-        left: 30%;
-    }
-    /*Интернет магазин*/
-    .isometric-wrapper .shop.floor {
-        top: 6em;
-    }
-
-    .isometric-wrapper .shop .shop-admin {
-        margin-left: 0.7em;
-        width: 96%;
-        box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .isometric-wrapper .shop.isometric .appBar {
-        margin-left: 0.7em;
-        width: 96%;
-        box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .presentation .description-shop.description {
-        top: 15%;
-    }
-    /*Информационный*/
-    .isometric-wrapper .information.floor {
-        top: 9em;
-    }
-
-    .description.description-information {
-        top: 20%;
-    }
-
-    .isometric-wrapper .information .information-inner-wrap .content {
-        width: 65%;
-    }
 }
 
 @media (min-width: 1680px) and (max-width: 1919px) {
-    /*визитка*/
-    .isometric-wrapper .visit.floor {
-        left: 20%;
-    }
-
-    .presentation .description {
-        left: 57%;
-        width: 29em;
-        top: 20%;
-    }
-    /*лендинг*/
-    .isometric-wrapper .landing {
-        left: 30%;
-    }
-
-    .presentation .description-landing.description {
-        margin-right: 0;
-        top: 12%;
-    }
-    /*Корпоративный*/
-    .isometric-wrapper .corporate.floor {
-        left: 30%;
-        top: 6em;
-    }
-
-    .presentation .description.description-corporate {
-        top: 25%;
-    }
-    /*Интернет магазин*/
-    .presentation .description-shop.description {
-        top: 25%;
-    }
-
-    .isometric-wrapper .shop.floor {
-        left: 30%;
-        top: 5em;
-    }
-
-    .isometric-wrapper .shop .shop-admin {
-        margin-left: 0.7em;
-        width: 96%;
-        box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .isometric-wrapper .shop.isometric .appBar {
-        margin-left: 0.7em;
-        width: 96%;
-        box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-    }
 
     /*Информационный*/
-    .isometric-wrapper .information .information-inner-wrap .content {
+    /*.isometric-wrapper .information .information-inner-wrap .content {
         width: 65%;
     }
 
@@ -11373,7 +11275,7 @@ form.form {
         width: 30em;
         margin-right: 13em;
         top: 20%;
-    }
+    }*/
 }
 
 @media (min-width: 1200px) and (max-width: 1679px) {
@@ -11381,229 +11283,65 @@ form.form {
         text-align: justify;
     }
     /*визитка*/
-    .isometric-wrapper .visit.floor {
-        top: 15%;
-        left: 22%;
-    }
-
-    .presentation .description {
-        left: 59.5%;
-        width: 29em;
-        top: 20%;
+    .presentation-promo .isometric-wrapper {
+        right: -16em;
     }
     /*лендинг*/
-    .isometric-wrapper .landing.isometric {
-        transform: rotateX(60deg) rotateY(0deg) rotateZ(-40deg) translate(-14%, -34%) scale3d(1, 1, 1);
-    }
-
-    .presentation .description-landing.description {
-        top: 15%;
-    }
-
-    .landing-wrapper section.landing-description p {
-        width: 23em;
-    }
-
     .isometric-wrapper .landing {
-        left: 33%;
+        left: 20em;
     }
+
     /*Корпоративный*/
     .isometric-wrapper .corporate.floor {
-        left: 26%;
-        top: 7em;
-    }
-
-    .presentation .description.description-corporate {
-        top: 20%;
+        left: 10em;
     }
     /*Интернет магазин*/
     .isometric-wrapper .shop.floor {
         left: 29%;
-        top: 7em;
+    }
+
+    .isometric-wrapper .isometric.shop .content .card {
+        height: 160px;
     }
 
     .isometric-wrapper .shop {
         height: 39em;
     }
 
-    .presentation .description-shop.description {
-        top: 15%;
+    .presentation.presentation-shop .description {
+        vertical-align: top;
+        padding-top: 0.6em;
     }
+
 
     /*Информационный*/
-    .presentation.presentation-information .isometric-wrapper {
-        height: 16em;
-    }
-
-    .isometric-wrapper .information .information-inner-wrap .content {
-        width: 65%;
-    }
 
     .isometric-wrapper .information.floor {
-        left: 28%;
-        top: 7em;
+        left: 8em;
         width: 25em;
     }
 
     .description.description-information {
-        top: 20%;
+        padding-left: 8em;
+        padding-right: 0.5em;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    /*визитка*/
-    .presentation.presentation-promo .isometric-wrapper {
-        height: 15em;
-    }
-
-    .isometric-wrapper .visit.floor {
-        left: 18%;
-        width: 20em;
-        height: 20em;
-    }
-
-    .isometric-wrapper .visit.floor .visit-menu {
-        width: 19em;
-    }
-
-    .isometric-wrapper .visit .img-info-card-wrap .card, form-inner-card-wrapper {
-        height: 7em;
-    }
-
-    .isometric-wrapper .visit .form-inner-card-wrapper .inputs-wrapper .input {
-        width: 70%;
-        height: 15px;
-    }
-
-    .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form {
-        margin-top: 0;
+    .presentation {
+        flex-direction: column;
+        margin-top: 10em;
+        min-height: 10em;
     }
 
     .presentation .description {
-        left: 51%;
-        width: 29em;
-        top: 25%;
-    }
-
-    .isometric-wrapper .isometric .content .card {
-        height: 115px;
-    }
-    /*лендинг*/
-    .isometric-wrapper .landing.isometric {
-        transform: rotateX(60deg) rotateY(0deg) rotateZ(-30deg) translate(-14%, -34%) scale3d(1, 1, 1);
-    }
-
-    .isometric-wrapper .landing {
-        height: 35em;
-        width: 15em;
-        top: 10em;
-        left: 30%;
-    }
-
-    .isometric-wrapper .isometric.landing .content .card {
-        height: 115px;
-    }
-
-    .isometric-wrapper .landing .button.right, .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
-        margin-top: 4em;
-    }
-
-    .isometric-wrapper .landing .button.right {
-        margin-left: 5em;
-    }
-
-    .presentation .description-landing.description {
+        position: relative;
+        margin: 0 auto;
+        order: 0;
+        width: 90%;
+        max-width: 90%;
         padding-left: 0;
-        top: 15%;
     }
-
-    .landing-wrapper section.landing-description p {
-        width: 24em;
-    }
-    /*Корпоративный*/
-    .presentation .description.description-corporate {
-        top: 25%;
-    }
-
-    .isometric-wrapper .corporate.floor {
-        left: 23%;
-        width: 18em;
-        height: 30em;
-    }
-
-    .isometric-wrapper .corporate.isometric {
-        transform: rotateX(60deg) rotateY(0deg) rotateZ(-35deg) translate(-14%, -34%) scale3d(1, 1, 1);
-    }
-
-    .isometric-wrapper .corporate .card-corporate.card {
-        height: 9.5em;
-    }
-
-    .isometric-wrapper .corporate .card.header .button {
-        display: block;
-        margin-top: 1em;
-        margin-left: 3em;
-    }
-
-    .isometric-wrapper .corporate .button.right {
-        margin-left: 9em;
-        margin-top: 6em;
-    }
-    /*Интернет магазин*/
-    .presentation .description-shop.description {
-        top: 15%;
-    }
-
-    .isometric-wrapper .shop.floor {
-        left: 22%;
-        top: 7em;
-        transform: rotateX(60deg) rotateY(0deg) rotateZ(-30deg) translate(-14%, -34%) scale3d(1, 1, 1);
-    }
-
-    .isometric-wrapper .shop {
-        width: 22em;
-        height: 32em;
-    }
-
-    .isometric-wrapper .shop .shop-admin {
-        margin-left: 0.7em;
-        box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .isometric-wrapper .shop.isometric .appBar {
-        margin-left: 0.7em;
-        box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .isometric-wrapper .shop .menu-buy .buy {
-        margin-left: 10em;
-    }
-
-    .isometric-wrapper .isometric.shop .content .card {
-        height: 120px;
-    }
-    /*Информационный*/
-    .isometric-wrapper .information .information-inner-wrap .content {
-        width: 65%;
-    }
-
-    .isometric-wrapper .information.floor {
-        left: 22%;
-        top: 6em;
-        width: 20em;
-        transform: rotateX(60deg) rotateY(0deg) rotateZ(-22deg) translate(-14%, -34%) scale3d(1, 1, 1);
-    }
-
-    .description.description-information {
-        top: 20%;
-    }
-
-    .presentation.presentation-information .isometric-wrapper {
-        height: 16em;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
     /*визитка*/
     .presentation .description .description-inner {
         justify-content: center;
@@ -11613,21 +11351,7 @@ form.form {
         margin-bottom: 1.5em;
     }
 
-    .presentation {
-        flex-direction: column;
-        margin-top: 3em;
-        //  min-height: 60vh;
-    }
 
-    .presentation .description {
-        position: relative;
-        margin: 0 auto;
-        order: 0;
-        width: 90%;
-        max-width: 90%;
-        margin-top: 8em;
-        min-height: 10em;
-    }
 
     .isometric-wrapper {
         order: 1;
@@ -11665,25 +11389,77 @@ form.form {
         width: 100%;
         text-align: justify;
     }
-    /*Корпоративный*/
-    .presentation-corporate.presentation {
-        margin-top: -8em;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .presentation {
+        flex-direction: column;
+        margin-top: 10em;
+        min-height: 10em;
     }
-    /*Интернет магазин*/
-    /*Информационный*/
-    .presentation .description-information.description {
-        margin-top: 2em;
+
+    .presentation .description {
+        position: relative;
+        margin: 0 auto;
+        order: 0;
+        width: 90%;
+        max-width: 90%;
+        padding-left: 0;
     }
-    /*.presentation .description.description-information{
-        min-height:15em;
-    }*/
+    /*визитка*/
+    .presentation .description .description-inner {
+        justify-content: center;
+    }
+
+    .presentation .description .description-inner .description-inner-text-group {
+        margin-bottom: 1.5em;
+    }
+
+
+
+    .isometric-wrapper {
+        order: 1;
+        display: none;
+    }
+
+    .isometric-wrapper .visit.floor {
+        left: 45%;
+        top: 18em;
+    }
+    /*лендинг*/
+    .isometric-wrapper .landing.isometric {
+        transform: rotateX(60deg) rotateY(0deg) rotateZ(-50deg) translate(-14%, -34%) scale3d(1, 1, 1);
+    }
+
+    .isometric-wrapper .landing {
+        top: 10em;
+        left: 18em;
+        height: 30em;
+    }
+
+    .isometric-wrapper .isometric.landing .content .card {
+        height: 95px;
+    }
+
+    .isometric-wrapper .landing.floor {
+        width: 17em;
+    }
+
+    .isometric-wrapper .landing .button.right, .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
+        margin-top: 2.5em;
+    }
+
+    .landing-wrapper section.landing-description p {
+        width: 100%;
+        text-align: justify;
+    }
 }
 
 @media (max-width: 767px) {
-    /*визитка*/
     .presentation {
         flex-direction: column;
-        // margin-top: 6em;
+        min-height: 10em;
+        margin-top: 12em;
     }
 
     .presentation .description {
@@ -11691,9 +11467,10 @@ form.form {
         margin: 0 auto;
         width: 90%;
         max-width: 35em;
-        //  margin-top: 6em;
-        // text-align: justify;
+        padding-left: 0;
     }
+    /*визитка*/
+
 
     .presentation .description .description-inner-text-group h1,
     .presentation .description .description-inner-text-group p {
@@ -11748,13 +11525,16 @@ form.form {
         line-height: 1.5em;
     }
     /*Корпоративный*/
-    .presentation-corporate.presentation {
-        // margin-top: -3em;
+    .presentation.presentation-corporate {
+        margin-top: 12em;
     }
     /*Интернет магазин*/
+    .presentation.presentation-shop {
+        margin-top: 12em;
+    }
     /*Информационный*/
     .presentation.presentation-information {
-        margin-top: 10em;
+        margin-top: 12em;
     }
 
     section.information-title {
@@ -11764,12 +11544,20 @@ form.form {
 }
 
 @media screen and (max-width:640px) {
-    /*визитка*/
+    .presentation {
+        flex-direction: column;
+        min-height: 10em;
+        margin-top: 7em;
+    }
+
     .presentation .description {
         position: relative;
-        min-height: 5em;
-        margin-top: -3em;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 35em;
+        padding-left: 0;
     }
+    /*визитка*/
 
     .presentation .description .description-inner {
         justify-content: center;
@@ -11844,11 +11632,11 @@ form.form {
     }
     /*Интернет магазин*/
     .presentation.presentation-shop {
-        margin-top: 9em;
+        margin-top: 7em;
     }
     /*Информационный*/
     .presentation.presentation-information {
-        margin-top: 10em;
+        margin-top: 7em;
     }
 
     section.information-title {
@@ -11954,10 +11742,11 @@ form.form {
             letter-spacing: 1px;
             padding: 0 1.2em;
         }
-        .list-wrap{
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:space-between;
+
+        .list-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
     }
 
@@ -12026,32 +11815,29 @@ form.form {
 }
 
 
-
-@media (min-width: 3840px) {
-}
-
-@media (min-width: 2560px) and (max-width: 3839px) {
-}
-
-@media (min-width: 1920px) and (max-width: 2559px) {
-}
-
-@media (min-width: 1680px) and (max-width: 1919px) {
-}
-
-@media (min-width: 1200px) and (max-width: 1679px) {
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-}
-
 @media (max-width: 767px) {
+    .title-description {
+        flex-direction: column;
+
+        .content-item p {
+            margin-right: 0;
+        }
+
+        .description-price .wrap-info {
+            width: 90%;
+            margin-top: 1em;
+        }
+    }
 }
 
 @media screen and (max-width:640px) {
+    .title-description {
+        flex-direction: column;
+
+        .content-item p {
+            margin-right: 0;
+        }
+    }
 }
 
 @media (max-width:320px) {

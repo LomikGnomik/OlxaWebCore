@@ -17,22 +17,22 @@ namespace OlxaWebCore.Controllers
             ViewBag.selectedTab = selectedTab;
             return View();
         }
-        public IActionResult Landing(string selectedTab)
+        public IActionResult Landing(string selectedTab = "create")
         {
             ViewBag.selectedTab = selectedTab;
             return View();
         }
-        public IActionResult Corporate(string selectedTab)
+        public IActionResult Corporate(string selectedTab = "create")
         {
             ViewBag.selectedTab = selectedTab;
             return View();
         }
-        public IActionResult Shop(string selectedTab)
+        public IActionResult Shop(string selectedTab = "create")
         {
             ViewBag.selectedTab = selectedTab;
             return View();
         }
-        public IActionResult Information(string selectedTab)
+        public IActionResult Information(string selectedTab = "create")
         {
             ViewBag.selectedTab = selectedTab;
             return View();

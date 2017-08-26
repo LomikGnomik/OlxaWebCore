@@ -12,49 +12,50 @@
         @Html.Partial("_HeaderPartialView")
     </section>
     <section class="corporatre-description">
-        <div class="presentation presentation-corporate">
-            <div class="isometric-wrapper">
-                <div class="floor isometric corporate">
-                    <div class="content">
-                        <div class="card header">
-                            <div class="button" id="drawerOpener">
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="card card-corporate"></div>
-                        <div class="card card-corporate">
-                            <div class="form-inner-card-wrapper">
-                                <div class="inputs-wrapper">
-                                    <div class="input"></div>
-                                    <div class="input"></div>
+        <div class="container">
+            <div class="presentation presentation-corporate">
+                <div class="isometric-wrapper">
+                    <div class="floor isometric corporate">
+                        <div class="content">
+                            <div class="card header">
+                                <div class="button button-buy" id="drawerOpener">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </div>
-                                <div class="buttons-form">
-                                    <div class="button right">
-                                        @*<p>Заказать</p>*@
+                            </div>
+                            <div class="card card-corporate bl-content"></div>
+                            <div class="card card-corporate card-form">
+                                <div class="form-inner-card-wrapper">
+                                    <div class="inputs-wrapper">
+                                        <div class="input"></div>
+                                        <div class="input"></div>
+                                    </div>
+                                    <div class="buttons-form">
+                                        <div class="button right">
+                                            @*<p>Заказать</p>*@
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    @*<div class="fab dialogOpener toasted"></div>*@
-                    <div class="dialogContainer hidden" id="dialog">
-                        <div class="dialog"></div>
-                    </div>
-                    <div class="drawerContainer hidden" id="drawer">
-                        <div class="drawer">
-                            <div class="header"></div>
+                        @*<div class="fab dialogOpener toasted"></div>*@
+                        <div class="dialogContainer hidden" id="dialog">
+                            <div class="dialog"></div>
+                        </div>
+                        <div class="drawerContainer hidden" id="drawer">
+                            <div class="drawer">
+                                <div class="header"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="description description-corporate">
-                <div class="description-inner-text-group">
-                    <h1>Корпоративный</h1>
-                    <p>
-                        Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
-                        более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
-                    </p>
-                    @*<p class="ul-title">Наиболее используемые модули:</p>
+                <div class="description description-corporate">
+                    <div class="description-inner-text-group">
+                        <h1>Корпоративный</h1>
+                        <p>
+                            Содержит исчерпывающую информацию о вашей фирме, в отличии от сайта визитки имеет
+                            более сложную структуру за счет каталога продукции/услуг, галереи, деловой информации.
+                        </p>
+                        @*<p class="ul-title">Наиболее используемые модули:</p>
                     <ul>
                         <li>Личный кабинет</li>
                         <li>Каталог продукции</li>
@@ -62,10 +63,11 @@
                         <li>Форму обратной связи</li>
                         <li>Калькулятор</li>
                     </ul>*@
+                    </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
+        </div>        
     </section>
 
 
@@ -164,7 +166,7 @@
                                     </p>
 
                                 </div>
-                                <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                                <div class="description-price">@await Component.InvokeAsync("PriceTimeDemo")</div>
                             </div>
                         </div>
                     </div>
@@ -230,7 +232,6 @@
                                     линныйлинный линный линныйлинныйлинный
                                 </p>
                             </div>
-                            <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                         </div>
                     </div>
                                  

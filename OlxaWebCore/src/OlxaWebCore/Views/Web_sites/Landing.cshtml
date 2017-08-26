@@ -11,78 +11,79 @@
         @Html.Partial("_HeaderPartialView")
     </section>
     <section class="landing-description">
-        <div class="presentation presentation-landing">
-
-            <div class="isometric-wrapper">
-                <div class="floor isometric landing">
-                    <div class="appBar">
-                        <i class="material-icons md-light md-24" id="drawerOpener">Меню</i>
-                    </div>
-                    <div class="content">
-                        <div class="card">
-                            <div class="card-inner-block1">
-                                <div class="image">
-                                </div>
-                                <div class="info-wrap">
-
-                                    <div class="button batton-landing1">
-                                        @*<p>заказать</p>*@
+        <div class="container">
+            <div class="presentation presentation-landing">
+                <div class="isometric-wrapper">
+                    <div class="floor isometric landing">
+                        <div class="appBar">
+                            <i class="material-icons md-light md-24" id="drawerOpener"></i>
+                        </div>
+                        <div class="content">
+                            <div class="card lend bl-content">
+                                @*<div class="card-inner-block1">
+                                    <div class="image">
                                     </div>
-                                </div>
+                                    <div class="info-wrap">
+
+                                        <div class="button batton-landing1">
+                                            
+                                        </div>
+                                    </div>
+                                </div>*@
                             </div>
-                        </div>
-                        <div class="card">
-                            <!--  <div class="card-inner-block2">
-                              <div class="column-left">
-                                <div class="text"></div>
-                                <div class="text"></div>
-                                <div class="text"></div>
-                                <div class="text"></div>
-                              </div>
-                              <div class="column-right">
-                                <div class="text"></div>
-                                <div class="text"></div>
-                                <div class="text"></div>
-                                <div class="text"></div>
-                              </div>
-                            </div> -->
-                        </div>
-                        <div class="card"></div>
-                        <div class="card">
-                            <div class="form-inner-card-wrapper">
-                                <div class="inputs-wrapper">
-                                    <div class="input"></div>
-                                    <div class="input"></div>
-                                </div>
-                                <div class="buttons-form">
-                                    <div class="button right">
-                                        @*<p>Заказать</p>*@
+                            <div class="card lend bl-content">
+                                <!--  <div class="card-inner-block2">
+                                  <div class="column-left">
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                  </div>
+                                  <div class="column-right">
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                    <div class="text"></div>
+                                  </div>
+                                </div> -->
+                            </div>
+                            <div class="card lend bl-content"></div>
+                            <div class="card lend card-form">
+                                <div class="form-inner-card-wrapper">
+                                    <div class="inputs-wrapper">
+                                        <div class="input"></div>
+                                        <div class="input"></div>
+                                    </div>
+                                    <div class="buttons-form">
+                                        <div class="button right">
+                                            @*<p>Заказать</p>*@
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="description description-landing">
-                <div class="description-inner-text-group">
-                    <h1>Landing Page</h1>
-                    <p>
-                        Как правило это одна интернет страница, созданная для конкретного товара или
-                        услуги побуждающая к действию целевую аудиторию (покупка или подписка).
-                        Состоит из блоков, каждый из которых выполняет конкретную задачу.
-                    </p>
-                    @*<p class="ul-title">Наиболее используемые модули:</p>
-                    <ul>
-                        <li>Описание</li>
-                        <li>Галерея</li>
-                        <li>Тарифы</li>
-                        <li>Частые вопросы</li>
-                        <li>Форма заказа/подписки</li>
-                    </ul>*@
+                <div class="description description-landing">
+                    <div class="description-inner-text-group">
+                        <h1>Landing Page</h1>
+                        <p>
+                            Как правило это одна интернет страница, созданная для конкретного товара или
+                            услуги побуждающая к действию целевую аудиторию (покупка или подписка).
+                            Состоит из блоков, каждый из которых выполняет конкретную задачу.
+                        </p>
+                        @*<p class="ul-title">Наиболее используемые модули:</p>
+                            <ul>
+                                <li>Описание</li>
+                                <li>Галерея</li>
+                                <li>Тарифы</li>
+                                <li>Частые вопросы</li>
+                                <li>Форма заказа/подписки</li>
+                            </ul>*@
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
@@ -160,7 +161,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
                 <div class="steps-create-wrapper">
                     @Html.Partial("_StepsTemplatePartialView")
@@ -179,7 +180,7 @@
                                     </p>
 
                                 </div>
-                                <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                                <div class="description-price">@await Component.InvokeAsync("PriceTimeDemo")</div>
                             </div>
                         </div>
                     </div>
@@ -227,9 +228,9 @@
 
                         </div>
                     </div>
-                    
-                       
-                    
+
+
+
                 </div>
                 <div class="steps-create-wrapper">
                     @Html.Partial("_StepsCreatePartialView")
@@ -246,9 +247,8 @@
                                     линныйлинный линный линныйлинныйлинный
                                 </p>
                             </div>
-                            <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="steps-create-wrapper">
                     @Html.Partial("_StepsDevelopPartialView")
@@ -257,7 +257,7 @@
         </div>
     </section>
 
-    
+
 
     <section class="landing-example">
         <div class="example-wrap">
