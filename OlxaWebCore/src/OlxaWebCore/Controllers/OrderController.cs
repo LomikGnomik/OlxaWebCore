@@ -154,6 +154,11 @@ namespace OlxaWebCore.Controllers
 
         public IActionResult NewLeadBitrix24(Order order, IFormFile file)
         {
+
+
+
+            repository.SaveOrder(order);
+
             const string url = @"https://olxaweb.bitrix24.ru/rest/6/t1lsewyxqoggp2qs/crm.lead.add.json";
             var data = new
             {

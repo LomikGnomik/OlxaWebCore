@@ -12,24 +12,29 @@ namespace OlxaWebCore.Controllers
     {
      
 
-        public IActionResult Promosite()
+        public IActionResult Promosite(string selectedTab="create")
         {
+            ViewBag.selectedTab = selectedTab;
             return View();
         }
-        public IActionResult Landing()
+        public IActionResult Landing(string selectedTab)
         {
+            ViewBag.selectedTab = selectedTab;
             return View();
         }
-        public IActionResult Corporate()
+        public IActionResult Corporate(string selectedTab)
         {
+            ViewBag.selectedTab = selectedTab;
             return View();
         }
-        public IActionResult Shop()
+        public IActionResult Shop(string selectedTab)
         {
+            ViewBag.selectedTab = selectedTab;
             return View();
         }
-        public IActionResult Information()
+        public IActionResult Information(string selectedTab)
         {
+            ViewBag.selectedTab = selectedTab;
             return View();
         }
         public IActionResult Develop()

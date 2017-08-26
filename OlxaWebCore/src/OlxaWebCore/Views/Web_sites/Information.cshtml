@@ -64,9 +64,9 @@
     <section class="information-tab">
 
         <section class="tabs-all" role="tab">
-            <input id="tab__1" type="radio" name="tabs"/>
-            <input id="tab__2" type="radio" name="tabs" checked="checked" />
-            <input id="tab__3" type="radio" name="tabs"/>
+            <input id="tab__1" type="radio" name="tabs" @(ViewBag.selectedTab == "template" ? "checked='checked'" : "") />
+            <input id="tab__2" type="radio" name="tabs" @(ViewBag.selectedTab == "create" ? "checked='checked'" : "") />
+            <input id="tab__3" type="radio" name="tabs" @(ViewBag.selectedTab == "dev" ? "checked='checked'" : "") />
 
             <div class="label-wrapper">
                 <label for="tab__1" id="tab__l1">Готовые решения</label>
