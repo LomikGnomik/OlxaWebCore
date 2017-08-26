@@ -12,49 +12,50 @@
         @Html.Partial("_HeaderPartialView")
     </section>
     <section class="content">
-
-        <div class="presentation presentation-promo">
-            <div class="isometric-wrapper">
-                <div class="floor isometric visit">
-                    <div class="appBar visit-menu">
-                        <i class="material-icons md-light md-24" id="drawerOpener"></i>
-                    </div>
-                    <div class="content">
-                        <div class="img-info-card-wrap">
-                            <div class="card"></div>
-                            <div class="card"></div>
+        <div class="container">
+            <div class="presentation presentation-promo">
+                <div class="isometric-wrapper">
+                    <div class="floor isometric visit">
+                        <div class="appBar visit-menu">
+                            <i class="material-icons md-light md-24" id="drawerOpener"></i>
                         </div>
-                        <div class="card">
-                            <div class="form-inner-card-wrapper">
-                                @*<div class="inputs-wrapper">
+                        <div class="content">
+                            <div class="img-info-card-wrap">
+                                <div class="card card-product"></div>
+                                <div class="card card-product"></div>
+                            </div>
+                            <div class="card card-form">
+                                <div class="form-inner-card-wrapper">
+                                    @*<div class="inputs-wrapper">
                                     <div class="input"></div>
                                     <div class="input"></div>
                                 </div>*@
-                                <div class="buttons-form">
-                                    <div class="button right">
-                                        @*<p>отправить</p>*@
+                                    <div class="buttons-form">
+                                        <div class="button right">
+                                            @*<p>отправить</p>*@
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
-            <div class="description description-promo">
-                <div class="description-inner">
-                    <div class="description-inner-text-group">
-                        <h1>Сайт визитка</h1>
-                        <p>
-                            Содержит всю необходимую информацию о вас или вашей фирме,
-                            как правило состоит из одной или нескольких страниц.
-                            Имеет форму обратной связи и схему проезда, но при необходимости базовый функционал
-                            можно расширить, например, добавить калькулятор, галерею, новости и пр.
-                        </p>
+                <div class="description description-promo">
+                    <div class="description-inner">
+                        <div class="description-inner-text-group">
+                            <h1>Сайт визитка</h1>
+                            <p>
+                                Содержит всю необходимую информацию о вас или вашей фирме,
+                                как правило состоит из одной или нескольких страниц.
+                                Имеет форму обратной связи и схему проезда, но при необходимости базовый функционал
+                                можно расширить, например, добавить калькулятор, галерею, новости и пр.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>      
+        </div>        
     </section>
 
 
@@ -87,7 +88,7 @@
                     </div>
                     <div class="container">
                         <div>@await Component.InvokeAsync("ProductCategory", new { category = "Визитка" })</div>
-                    </div>                   
+                    </div>
                     <div class="service-sites-wrap">
                         <div class="container">
                             <div class="service-sites-accordion">
@@ -131,10 +132,10 @@
 
                                 </ul>
                             </div>
-                            
+
                         </div>
                     </div>
-                   
+
                 </div>
                 <div class="steps-create-wrapper">
                     @Html.Partial("_StepsTemplatePartialView")
@@ -154,7 +155,7 @@
                                     </p>
 
                                 </div>
-                                <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                                <div class="description-price">@await Component.InvokeAsync("PriceTimeDemo")</div>
                             </div>
                         </div>
                     </div>
@@ -196,10 +197,10 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>                            
+                            </div>
                         </div>
-                    </div>                        
-                    
+                    </div>
+
                 </div>
                 <div class="steps-create-wrapper">
                     @Html.Partial("_StepsCreatePartialView")
@@ -216,18 +217,19 @@
                                     линныйлинный линный линныйлинныйлинный
                                 </p>
                             </div>
-                            <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                            
                         </div>
                     </div>
-                    
-                <div class="steps-create-wrapper">
-                    @Html.Partial("_StepsDevelopPartialView")
-                </div>
-            </div> @*tab__c3*@
+
+                    <div class="steps-create-wrapper">
+                        @Html.Partial("_StepsDevelopPartialView")
+                    </div>
+                </div> @*tab__c3*@
+            </div>
         </div>
     </section>
-    
-    
+
+
     @await Component.InvokeAsync("ExamplesSites", new { category = "Визитка" })
     @await Component.InvokeAsync("OrderForm")
 

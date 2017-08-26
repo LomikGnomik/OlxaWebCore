@@ -12,43 +12,42 @@
     </section>
 
     <section class="information-title">
-        <div class="presentation presentation-information">
-            <div class="isometric-wrapper">
-                <div class="floor isometric information">
-                    <div class="slider appBar">
-                        <div class="card"></div>
-                    </div>
-                    <div class="information-inner-wrap">
-                        <div class="menu-information-wrap">
-                            <div class="menu-information appBar"></div>
-                            <div class="menu-information appBar small"></div>
+        <div class="container">
+            <div class="presentation presentation-information">
+                <div class="isometric-wrapper">
+                    <div class="floor isometric information">
+                        <div class="slider appBar"></div>
+                        <div class="information-inner-wrap">
+                            <div class="menu-information-wrap">
+                                <div class="menu-information appBar"></div>
+                                <div class="menu-information appBar small"></div>
+                            </div>
+                            <div class="content">
+                                <div class="card bl-content card-corp"></div>
+                                <div class="card bl-content card-corp"></div>
+                                <div class="card bl-content card-corp"></div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                        </div>
-                    </div>
 
-                    @*<div class="fab dialogOpener toasted"></div>*@
-                    <div class="dialogContainer hidden" id="dialog">
-                        <div class="dialog"></div>
-                    </div>
-                    <div class="drawerContainer hidden" id="drawer">
-                        <div class="drawer">
-                            <div class="header"></div>
+                        @*<div class="fab dialogOpener toasted"></div>*@
+                        <div class="dialogContainer hidden" id="dialog">
+                            <div class="dialog"></div>
+                        </div>
+                        <div class="drawerContainer hidden" id="drawer">
+                            <div class="drawer">
+                                <div class="header"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="description description-information">
-                <div class="description-inner-text-group">
-                    <h1>Информационный</h1>
-                    <p>
-                        К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
-                        например: кулинарный, образовательный, развлекательный
-                    </p>
-                    @*<p class="ul-title">Наиболее используемые модули:</p>
+                <div class="description description-information">
+                    <div class="description-inner-text-group">
+                        <h1>Информационный</h1>
+                        <p>
+                            К этому виду можно отнести сайты, содержащие информацию по той или иной теме,
+                            например: кулинарный, образовательный, развлекательный
+                        </p>
+                        @*<p class="ul-title">Наиболее используемые модули:</p>
                     <ul>
                         <li>Регистрация пользователей</li>
                         <li>Авторизация через социальные сети</li>
@@ -56,9 +55,11 @@
                         <li>Комментарии</li>
                         <li>Голосования и опросы</li>
                     </ul>*@
+                    </div>
                 </div>
             </div>
         </div>
+        
 
     </section>
     <section class="information-tab">
@@ -157,7 +158,7 @@
                                         </p>
 
                                     </div>
-                                    <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
+                                    <div class="description-price">@await Component.InvokeAsync("PriceTimeDemo")</div>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +224,6 @@
                                         линныйлинный линный линныйлинныйлинный
                                     </p>
                                 </div>
-                                <div>@await Component.InvokeAsync("PriceTimeDemo")</div>
                             </div>
                         </div>                        
                     </div>

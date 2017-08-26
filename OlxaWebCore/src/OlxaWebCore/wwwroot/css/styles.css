@@ -2346,7 +2346,7 @@ section.portfolio .grid.isotope-grid:after {
 .products-wrapper .product-content .products-catalog-wrap .product .product-description .info {
   padding: 15px;
   color: #aaa;
-  font-size: 0.85em;
+  font-size: 1.2em;
 }
 .products-wrapper .product-content .products-catalog-wrap .product .product-description .price {
   padding-right: 15px;
@@ -2670,7 +2670,7 @@ section.portfolio .grid.isotope-grid:after {
 #inner-tabs.product-inner-tabs .product .product-description .info {
   padding: 15px;
   color: #aaa;
-  font-size: 0.85em;
+  font-size: 1.2em;
 }
 #inner-tabs.product-inner-tabs .product .product-description .price {
   padding-right: 15px;
@@ -2718,6 +2718,16 @@ section.portfolio .grid.isotope-grid:after {
 }
 #inner-tabs.product-inner-tabs .product:hover .product-sidebar {
   right: -50px;
+}
+@media (max-width: 640px) {
+  #inner-tabs.product-inner-tabs .product-item {
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+  #inner-tabs.product-inner-tabs .product {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 /*---------------------------------страница после заказа order/orderList*/
 .order-wrapper {
@@ -8123,16 +8133,24 @@ form.form .customSelect.customSelectFocus:after {
 }
 /*----------------------------------------------первый экран видов сайтов с картинками в изометрии*/
 .presentation {
-  margin-top: 12em;
-  display: flex;
-  justify-content: space-between;
-}
-.presentation .description {
-  position: absolute;
-  width: 50%;
-  max-width: 40em;
+  margin: 12em auto 0;
+  width: 100%;
+  min-height: 20em;
   display: table;
   table-layout: fixed;
+}
+.presentation.presentation-information {
+  margin: 8em auto 0;
+}
+.presentation .description-landing.description {
+  vertical-align: top;
+}
+.presentation .description {
+  width: 50%;
+  max-width: 40em;
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 10em;
 }
 .presentation .description .description-inner-text-group {
   display: flex;
@@ -8163,10 +8181,14 @@ form.form .customSelect.customSelectFocus:after {
   margin-right: 1em;
 }
 /*------------------------------общие стили*/
+.isometric-wrapper .isometric.information .content {
+  padding: 0 8px;
+}
 .isometric-wrapper {
   display: block;
-  width: 45%;
   height: 22em;
+  position: relative;
+  right: -10em;
   /*---------------------Сайт визитка*/
   /*---------------------Лендинг*/
   /*---------------------Корпоративный*/
@@ -8209,11 +8231,11 @@ form.form .customSelect.customSelectFocus:after {
   width: 100%;
   height: 56px;
   border-radius: 0;
-  background: #00BCD4;
-  border-bottom: 2px solid #00626e;
-  border-left: 2px solid #00626e;
+  background: #cccccc;
+  border-bottom: 2px solid #999999;
+  border-left: 2px solid #999999;
   transform: translate3d(0, 0, 24px);
-  box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
   -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
   -moz-transition: -moz-transform 0.5s, box-shadow 0.5s;
   transition: transform 0.5s, box-shadow 0.5s;
@@ -8225,7 +8247,7 @@ form.form .customSelect.customSelectFocus:after {
 }
 .isometric-wrapper .isometric .appBar:before {
   transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-  content: "4dp";
+  content: "Меню";
   display: block;
   position: absolute;
   right: 100%;
@@ -8251,6 +8273,15 @@ form.form .customSelect.customSelectFocus:after {
 .isometric-wrapper .isometric .appBar:active:before {
   content: "4dp";
   opacity: 0.8;
+}
+.isometric-wrapper .isometric .appBar.slider::before {
+  content: "Шапка сайта";
+}
+.isometric-wrapper .isometric .appBar.menu-information::before {
+  content: "Основное меню";
+}
+.isometric-wrapper .isometric .appBar.menu-information.small::before {
+  content: "Фиксированный контент";
 }
 .isometric-wrapper .isometric .fab {
   width: 56px;
@@ -8318,7 +8349,7 @@ form.form .customSelect.customSelectFocus:after {
 }
 .isometric-wrapper .isometric .button:before {
   transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-  content: "2dp";
+  content: "Отправить!";
   display: block;
   position: absolute;
   right: 100%;
@@ -8344,6 +8375,9 @@ form.form .customSelect.customSelectFocus:after {
 .isometric-wrapper .isometric .button:active:before {
   content: "8dp";
   opacity: 0.8;
+}
+.isometric-wrapper .isometric .button-buy.button:before {
+  content: "Корзина";
 }
 .isometric-wrapper .isometric .dialogContainer {
   transform-style: preserve-3d;
@@ -8476,7 +8510,7 @@ form.form .customSelect.customSelectFocus:after {
 }
 .isometric-wrapper .isometric .content .card {
   width: 100%;
-  height: 160px;
+  height: 190px;
   border-radius: 2px;
   background: #FAFAFA;
   border-bottom: 2px solid #c7c7c7;
@@ -8496,7 +8530,6 @@ form.form .customSelect.customSelectFocus:after {
 }
 .isometric-wrapper .isometric .content .card:before {
   transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-  content: "2dp";
   display: block;
   position: absolute;
   right: 100%;
@@ -8522,6 +8555,20 @@ form.form .customSelect.customSelectFocus:after {
 .isometric-wrapper .isometric .content .card:active:before {
   content: "8dp";
   opacity: 0.8;
+}
+.isometric-wrapper .isometric .content .card-product.card::before {
+  content: "Карточка товара";
+  width: 100%;
+}
+.isometric-wrapper .isometric .content .card-form.card::before {
+  content: "Форма обратной связи";
+}
+.isometric-wrapper .isometric .content .bl-content.card::before {
+  content: "Блок контента";
+}
+.isometric-wrapper .isometric .content .bl-content.card-corp::before {
+  width: 100%;
+  left: 110%;
 }
 .isometric-wrapper .isometric .hidden {
   opacity: 0;
@@ -8549,18 +8596,16 @@ form.form .customSelect.customSelectFocus:after {
   cursor: pointer;
 }
 .isometric-wrapper .visit.floor {
-  left: 30%;
   width: 30em;
   height: 30em;
 }
 .isometric-wrapper .visit.floor .visit-menu {
-  width: 29em;
-  margin: 0 2em 1em 1.1em;
+  width: 97%;
+  margin: 0.5em auto;
   background: #e5e5e5;
   border-bottom: 2px solid #999999;
   border-left: 2px solid #999999;
   transform: translate3d(0, 0, 10px);
-  margin-left: 0.8em;
 }
 .isometric-wrapper .visit.floor .visit-menu:hover {
   transform: translate3d(0, 0, 20px);
@@ -8597,14 +8642,19 @@ form.form .customSelect.customSelectFocus:after {
 }
 .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form .right {
   margin-left: 74%;
+  margin-top: 8em;
 }
 .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form p {
   display: table-cell;
   padding: 9px;
 }
 .isometric-wrapper .landing {
-  height: 47em;
-  top: 5em;
+  height: 50em;
+  top: -7em;
+  left: 10em;
+}
+.isometric-wrapper .landing .content .lend.card {
+  height: 175px;
 }
 .isometric-wrapper .landing .landing-menu {
   background: #e5e5e5;
@@ -8672,22 +8722,22 @@ form.form .customSelect.customSelectFocus:after {
 }
 .isometric-wrapper .landing .button.right {
   margin-left: 10em;
-  margin-top: 6em;
+  margin-top: 7.5em;
 }
 .isometric-wrapper .landing .button.right p {
   display: table-cell;
   text-align: center;
 }
 .isometric-wrapper .corporate.floor {
-  left: 35%;
-  top: 9em;
+  left: 6em;
+  top: -4em;
 }
 .isometric-wrapper .corporate .card-corporate.card {
   height: 13em;
 }
 .isometric-wrapper .corporate .card.header {
   height: 5em;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   background: #cccccc;
 }
 .isometric-wrapper .corporate .card.header .button {
@@ -8696,6 +8746,8 @@ form.form .customSelect.customSelectFocus:after {
   background: #3c6eaa;
   border-bottom: 1px solid #2f5d84;
   border-left: 1px solid #2f5d84;
+}
+.isometric-wrapper .corporate .card.header .button i {
   color: #ecf0f1;
   font-size: 1.5em;
 }
@@ -8706,9 +8758,11 @@ form.form .customSelect.customSelectFocus:after {
 .isometric-wrapper .corporate .button.right p {
   padding: 5% 15%;
 }
+.isometric-wrapper .presentation .description.description-shop {
+  vertical-align: top;
+}
 .isometric-wrapper .shop.floor {
-  left: 35%;
-  top: 9em;
+  top: -5.5em;
 }
 .isometric-wrapper .shop.floor .shop-admin {
   border-bottom: 2px solid #999999;
@@ -8720,8 +8774,8 @@ form.form .customSelect.customSelectFocus:after {
   box-shadow: -36px 45px 15px rgba(0, 0, 0, 0.1), -36px 39px 15px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .shop {
-  width: 25em;
-  height: 40em;
+  width: 30em;
+  height: 44.5em;
   /* .flex-row {
             display: flex;
             justify-content: space-between;
@@ -8809,11 +8863,10 @@ form.form .customSelect.customSelectFocus:after {
   background: #3c6eaa;
   border-bottom: 2px solid #2f5d84;
   border-left: 2px solid #2f5d84;
-  color: #ecf0f1;
-  font-size: 1.5em;
   width: 20%;
-  margin-left: 12em;
-  height: 1.3em;
+  margin-left: 20em;
+  margin-top: -0.9em;
+  height: 2em;
   transform: translate3d(0, 0, 10px);
   box-shadow: -28.8px 36px 12px rgba(0, 0, 0, 0.1), -28.8px 31.2px 12px rgba(0, 0, 0, 0.1);
   -webkit-transition: -webkit-transform 0.5s, box-shadow 0.5s;
@@ -8823,9 +8876,13 @@ form.form .customSelect.customSelectFocus:after {
   animation: hideDelay 1s, drop 2s 1s;
   box-sizing: border-box;
 }
+.isometric-wrapper .shop .menu-buy .buy i {
+  color: #ecf0f1;
+  font-size: 1.5em;
+}
 .isometric-wrapper .shop .menu-buy .buy:before {
   transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-  content: "4dp";
+  content: "Корзина";
   display: block;
   position: absolute;
   right: 100%;
@@ -8886,7 +8943,7 @@ form.form .customSelect.customSelectFocus:after {
 }
 .isometric-wrapper .shop .shop-admin:before {
   transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-  content: "4dp";
+  content: "Админка";
   display: block;
   position: absolute;
   right: 100%;
@@ -8981,22 +9038,23 @@ form.form .customSelect.customSelectFocus:after {
 .isometric-wrapper .shop .adminContainer.hidden {
   margin-left: -100%;
 }
-.isometric-wrapper .information.floor {
-  left: 30%;
-  top: 6em;
+.isometric-wrapper .presentation .presentation-information {
+  margin: 5em auto 0;
+}
+.isometric-wrapper .presentation .presentation-information .description-information {
+  vertical-align: top;
 }
 .isometric-wrapper .information {
   width: 30em;
   height: 37em;
+  top: -4em;
 }
 .isometric-wrapper .information .slider.appBar {
   height: 8em;
   margin-bottom: 1.5em;
-  background: #cccccc;
-  transform: translate3d(0, 0, 10px);
+  background: #e5e5e5;
   border-bottom: 2px solid #999999;
   border-left: 2px solid #999999;
-  box-shadow: -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
 }
 .isometric-wrapper .information .isometric-wrapper .isometric .appBar {
   box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
@@ -9014,22 +9072,22 @@ form.form .customSelect.customSelectFocus:after {
 .isometric-wrapper .information .information-inner-wrap .menu-information-wrap .menu-information {
   height: 40%;
   margin-bottom: 1em;
-  background: #fff;
-  border-bottom: 2px solid #999999;
-  border-left: 2px solid #999999;
+  background: #e5e5e5;
+  border-bottom: 2px solid #cccccc;
+  border-left: 2px solid #cccccc;
 }
 .isometric-wrapper .information .information-inner-wrap .menu-information-wrap .menu-information.small {
   height: 30%;
 }
 .isometric-wrapper .information .information-inner-wrap .content {
-  width: 55%;
+  width: 65%;
 }
 .isometric-wrapper .information .information-inner-wrap .content .card {
   display: flex;
   height: 8em;
   padding: 1em;
   margin-bottom: 1em;
-  background: #d3cfcf;
+  background: #fff;
 }
 /*isometric-wrapper*/
 @-webkit-keyframes drop {
@@ -9087,379 +9145,69 @@ form.form .customSelect.customSelectFocus:after {
   .description-inner-text-group p {
     text-align: justify;
   }
-  /*визитка*/
-  .presentation .description {
-    left: 53%;
-    width: 28em;
-    top: 19%;
-  }
-  /*лендинг*/
-  .presentation .description.description-landing {
-    top: 12%;
-  }
-  .isometric-wrapper .landing.floor {
-    left: 42%;
-  }
-  /*Корпоративный*/
-  .presentation .description.description-corporate {
-    top: 15%;
-  }
-  .isometric-wrapper .corporate.floor {
-    left: 40%;
-  }
-  /*Интернет магазин*/
-  /*Информационный*/
-  .isometric-wrapper .information .information-inner-wrap .content {
-    width: 65%;
-  }
-  .isometric-wrapper .information.floor {
-    left: 35%;
-  }
-  .description.description-information {
-    top: 15%;
-  }
 }
 @media (min-width: 2560px) and (max-width: 3839px) {
   .description-inner-text-group p {
     text-align: justify;
   }
-  /*визитка*/
-  .presentation .description {
-    width: 29em;
-    left: 54.5%;
-    top: 30%;
-  }
-  /*лендинг*/
-  .presentation .description-landing.description {
-    margin-right: 0;
-    top: 12%;
-  }
-  .isometric-wrapper .landing {
-    left: 38%;
-  }
-  /*Корпоративный*/
-  .presentation .description.description-corporate {
-    top: 15%;
-  }
-  /*Интернет магазин*/
-  .presentation .description-shop.description {
-    top: 15%;
-  }
-  /*Информационный*/
-  .description.description-information {
-    top: 15%;
-  }
-  .isometric-wrapper .information .information-inner-wrap .content {
-    width: 65%;
-  }
-}
-@media (min-width: 1920px) and (max-width: 2559px) {
-  /*визитка*/
-  .isometric-wrapper .visit.floor {
-    left: 25%;
-  }
-  .presentation .description {
-    width: 28em;
-    left: 56%;
-    top: 25%;
-  }
-  /*лендинг*/
-  .presentation .description-landing.description {
-    margin-right: 0;
-    top: 12%;
-  }
-  .isometric-wrapper .landing {
-    left: 35%;
-  }
-  /*Корпоративный*/
-  .presentation .description.description-corporate {
-    top: 15%;
-  }
-  .isometric-wrapper .corporate.floor {
-    left: 30%;
-  }
-  /*Интернет магазин*/
-  .isometric-wrapper .shop.floor {
-    top: 6em;
-  }
-  .isometric-wrapper .shop .shop-admin {
-    margin-left: 0.7em;
-    width: 96%;
-    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-  }
-  .isometric-wrapper .shop.isometric .appBar {
-    margin-left: 0.7em;
-    width: 96%;
-    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-  }
-  .presentation .description-shop.description {
-    top: 15%;
-  }
-  /*Информационный*/
-  .isometric-wrapper .information.floor {
-    top: 9em;
-  }
-  .description.description-information {
-    top: 20%;
-  }
-  .isometric-wrapper .information .information-inner-wrap .content {
-    width: 65%;
-  }
 }
 @media (min-width: 1680px) and (max-width: 1919px) {
-  /*визитка*/
-  .isometric-wrapper .visit.floor {
-    left: 20%;
-  }
-  .presentation .description {
-    left: 57%;
-    width: 29em;
-    top: 20%;
-  }
-  /*лендинг*/
-  .isometric-wrapper .landing {
-    left: 30%;
-  }
-  .presentation .description-landing.description {
-    margin-right: 0;
-    top: 12%;
-  }
-  /*Корпоративный*/
-  .isometric-wrapper .corporate.floor {
-    left: 30%;
-    top: 6em;
-  }
-  .presentation .description.description-corporate {
-    top: 25%;
-  }
-  /*Интернет магазин*/
-  .presentation .description-shop.description {
-    top: 25%;
-  }
-  .isometric-wrapper .shop.floor {
-    left: 30%;
-    top: 5em;
-  }
-  .isometric-wrapper .shop .shop-admin {
-    margin-left: 0.7em;
-    width: 96%;
-    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-  }
-  .isometric-wrapper .shop.isometric .appBar {
-    margin-left: 0.7em;
-    width: 96%;
-    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-  }
   /*Информационный*/
-  .isometric-wrapper .information .information-inner-wrap .content {
-    width: 65%;
-  }
-  .presentation .description-information.description {
-    width: 30em;
-    margin-right: 13em;
-    top: 20%;
-  }
+  /*.isometric-wrapper .information .information-inner-wrap .content {
+        width: 65%;
+    }
+
+    .presentation .description-information.description {
+        width: 30em;
+        margin-right: 13em;
+        top: 20%;
+    }*/
 }
 @media (min-width: 1200px) and (max-width: 1679px) {
   .description-inner-text-group p {
     text-align: justify;
   }
   /*визитка*/
-  .isometric-wrapper .visit.floor {
-    top: 15%;
-    left: 22%;
-  }
-  .presentation .description {
-    left: 59.5%;
-    width: 29em;
-    top: 20%;
+  .presentation-promo .isometric-wrapper {
+    right: -16em;
   }
   /*лендинг*/
-  .isometric-wrapper .landing.isometric {
-    transform: rotateX(60deg) rotateY(0deg) rotateZ(-40deg) translate(-14%, -34%) scale3d(1, 1, 1);
-  }
-  .presentation .description-landing.description {
-    top: 15%;
-  }
-  .landing-wrapper section.landing-description p {
-    width: 23em;
-  }
   .isometric-wrapper .landing {
-    left: 33%;
+    left: 20em;
   }
   /*Корпоративный*/
   .isometric-wrapper .corporate.floor {
-    left: 26%;
-    top: 7em;
-  }
-  .presentation .description.description-corporate {
-    top: 20%;
+    left: 10em;
   }
   /*Интернет магазин*/
   .isometric-wrapper .shop.floor {
     left: 29%;
-    top: 7em;
+  }
+  .isometric-wrapper .isometric.shop .content .card {
+    height: 160px;
   }
   .isometric-wrapper .shop {
     height: 39em;
   }
-  .presentation .description-shop.description {
-    top: 15%;
+  .presentation.presentation-shop .description {
+    vertical-align: top;
+    padding-top: 0.6em;
   }
   /*Информационный*/
-  .presentation.presentation-information .isometric-wrapper {
-    height: 16em;
-  }
-  .isometric-wrapper .information .information-inner-wrap .content {
-    width: 65%;
-  }
   .isometric-wrapper .information.floor {
-    left: 28%;
-    top: 7em;
+    left: 8em;
     width: 25em;
   }
   .description.description-information {
-    top: 20%;
+    padding-left: 8em;
+    padding-right: 0.5em;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /*визитка*/
-  .presentation.presentation-promo .isometric-wrapper {
-    height: 15em;
-  }
-  .isometric-wrapper .visit.floor {
-    left: 18%;
-    width: 20em;
-    height: 20em;
-  }
-  .isometric-wrapper .visit.floor .visit-menu {
-    width: 19em;
-  }
-  .isometric-wrapper .visit .img-info-card-wrap .card,
-  form-inner-card-wrapper {
-    height: 7em;
-  }
-  .isometric-wrapper .visit .form-inner-card-wrapper .inputs-wrapper .input {
-    width: 70%;
-    height: 15px;
-  }
-  .isometric-wrapper .visit .form-inner-card-wrapper .buttons-form {
-    margin-top: 0;
-  }
-  .presentation .description {
-    left: 51%;
-    width: 29em;
-    top: 25%;
-  }
-  .isometric-wrapper .isometric .content .card {
-    height: 115px;
-  }
-  /*лендинг*/
-  .isometric-wrapper .landing.isometric {
-    transform: rotateX(60deg) rotateY(0deg) rotateZ(-30deg) translate(-14%, -34%) scale3d(1, 1, 1);
-  }
-  .isometric-wrapper .landing {
-    height: 35em;
-    width: 15em;
-    top: 10em;
-    left: 30%;
-  }
-  .isometric-wrapper .isometric.landing .content .card {
-    height: 115px;
-  }
-  .isometric-wrapper .landing .button.right,
-  .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
-    margin-top: 4em;
-  }
-  .isometric-wrapper .landing .button.right {
-    margin-left: 5em;
-  }
-  .presentation .description-landing.description {
-    padding-left: 0;
-    top: 15%;
-  }
-  .landing-wrapper section.landing-description p {
-    width: 24em;
-  }
-  /*Корпоративный*/
-  .presentation .description.description-corporate {
-    top: 25%;
-  }
-  .isometric-wrapper .corporate.floor {
-    left: 23%;
-    width: 18em;
-    height: 30em;
-  }
-  .isometric-wrapper .corporate.isometric {
-    transform: rotateX(60deg) rotateY(0deg) rotateZ(-35deg) translate(-14%, -34%) scale3d(1, 1, 1);
-  }
-  .isometric-wrapper .corporate .card-corporate.card {
-    height: 9.5em;
-  }
-  .isometric-wrapper .corporate .card.header .button {
-    display: block;
-    margin-top: 1em;
-    margin-left: 3em;
-  }
-  .isometric-wrapper .corporate .button.right {
-    margin-left: 9em;
-    margin-top: 6em;
-  }
-  /*Интернет магазин*/
-  .presentation .description-shop.description {
-    top: 15%;
-  }
-  .isometric-wrapper .shop.floor {
-    left: 22%;
-    top: 7em;
-    transform: rotateX(60deg) rotateY(0deg) rotateZ(-30deg) translate(-14%, -34%) scale3d(1, 1, 1);
-  }
-  .isometric-wrapper .shop {
-    width: 22em;
-    height: 32em;
-  }
-  .isometric-wrapper .shop .shop-admin {
-    margin-left: 0.7em;
-    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-  }
-  .isometric-wrapper .shop.isometric .appBar {
-    margin-left: 0.7em;
-    box-shadow: -14.4px 18px 6px rgba(0, 0, 0, 0.1), -14.4px 15.6px 6px rgba(0, 0, 0, 0.1);
-  }
-  .isometric-wrapper .shop .menu-buy .buy {
-    margin-left: 10em;
-  }
-  .isometric-wrapper .isometric.shop .content .card {
-    height: 120px;
-  }
-  /*Информационный*/
-  .isometric-wrapper .information .information-inner-wrap .content {
-    width: 65%;
-  }
-  .isometric-wrapper .information.floor {
-    left: 22%;
-    top: 6em;
-    width: 20em;
-    transform: rotateX(60deg) rotateY(0deg) rotateZ(-22deg) translate(-14%, -34%) scale3d(1, 1, 1);
-  }
-  .description.description-information {
-    top: 20%;
-  }
-  .presentation.presentation-information .isometric-wrapper {
-    height: 16em;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  /*визитка*/
-  .presentation .description .description-inner {
-    justify-content: center;
-  }
-  .presentation .description .description-inner .description-inner-text-group {
-    margin-bottom: 1.5em;
-  }
   .presentation {
     flex-direction: column;
-    margin-top: 3em;
+    margin-top: 10em;
+    min-height: 10em;
   }
   .presentation .description {
     position: relative;
@@ -9467,8 +9215,14 @@ form.form .customSelect.customSelectFocus:after {
     order: 0;
     width: 90%;
     max-width: 90%;
-    margin-top: 8em;
-    min-height: 10em;
+    padding-left: 0;
+  }
+  /*визитка*/
+  .presentation .description .description-inner {
+    justify-content: center;
+  }
+  .presentation .description .description-inner .description-inner-text-group {
+    margin-bottom: 1.5em;
   }
   .isometric-wrapper {
     order: 1;
@@ -9501,30 +9255,74 @@ form.form .customSelect.customSelectFocus:after {
     width: 100%;
     text-align: justify;
   }
-  /*Корпоративный*/
-  .presentation-corporate.presentation {
-    margin-top: -8em;
-  }
-  /*Интернет магазин*/
-  /*Информационный*/
-  .presentation .description-information.description {
-    margin-top: 2em;
-  }
-  /*.presentation .description.description-information{
-        min-height:15em;
-    }*/
 }
-@media (max-width: 767px) {
-  /*визитка*/
+@media (min-width: 768px) and (max-width: 991px) {
   .presentation {
     flex-direction: column;
+    margin-top: 10em;
+    min-height: 10em;
+  }
+  .presentation .description {
+    position: relative;
+    margin: 0 auto;
+    order: 0;
+    width: 90%;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  /*визитка*/
+  .presentation .description .description-inner {
+    justify-content: center;
+  }
+  .presentation .description .description-inner .description-inner-text-group {
+    margin-bottom: 1.5em;
+  }
+  .isometric-wrapper {
+    order: 1;
+    display: none;
+  }
+  .isometric-wrapper .visit.floor {
+    left: 45%;
+    top: 18em;
+  }
+  /*лендинг*/
+  .isometric-wrapper .landing.isometric {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-50deg) translate(-14%, -34%) scale3d(1, 1, 1);
+  }
+  .isometric-wrapper .landing {
+    top: 10em;
+    left: 18em;
+    height: 30em;
+  }
+  .isometric-wrapper .isometric.landing .content .card {
+    height: 95px;
+  }
+  .isometric-wrapper .landing.floor {
+    width: 17em;
+  }
+  .isometric-wrapper .landing .button.right,
+  .isometric-wrapper .landing .card-inner-block1 .info-wrap .batton-landing1 {
+    margin-top: 2.5em;
+  }
+  .landing-wrapper section.landing-description p {
+    width: 100%;
+    text-align: justify;
+  }
+}
+@media (max-width: 767px) {
+  .presentation {
+    flex-direction: column;
+    min-height: 10em;
+    margin-top: 12em;
   }
   .presentation .description {
     position: relative;
     margin: 0 auto;
     width: 90%;
     max-width: 35em;
+    padding-left: 0;
   }
+  /*визитка*/
   .presentation .description .description-inner-text-group h1,
   .presentation .description .description-inner-text-group p {
     text-align: center;
@@ -9567,10 +9365,16 @@ form.form .customSelect.customSelectFocus:after {
     line-height: 1.5em;
   }
   /*Корпоративный*/
+  .presentation.presentation-corporate {
+    margin-top: 12em;
+  }
   /*Интернет магазин*/
+  .presentation.presentation-shop {
+    margin-top: 12em;
+  }
   /*Информационный*/
   .presentation.presentation-information {
-    margin-top: 10em;
+    margin-top: 12em;
   }
   section.information-title {
     margin: 0;
@@ -9578,12 +9382,19 @@ form.form .customSelect.customSelectFocus:after {
   }
 }
 @media screen and (max-width: 640px) {
-  /*визитка*/
+  .presentation {
+    flex-direction: column;
+    min-height: 10em;
+    margin-top: 7em;
+  }
   .presentation .description {
     position: relative;
-    min-height: 5em;
-    margin-top: -3em;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 35em;
+    padding-left: 0;
   }
+  /*визитка*/
   .presentation .description .description-inner {
     justify-content: center;
     text-align: center;
@@ -9643,11 +9454,11 @@ form.form .customSelect.customSelectFocus:after {
   }
   /*Интернет магазин*/
   .presentation.presentation-shop {
-    margin-top: 9em;
+    margin-top: 7em;
   }
   /*Информационный*/
   .presentation.presentation-information {
-    margin-top: 10em;
+    margin-top: 7em;
   }
   section.information-title {
     margin: 0;
@@ -9801,6 +9612,26 @@ form.form .customSelect.customSelectFocus:after {
 .service-sites-accordion ul li i:before,
 .service-sites-accordion ul li i:after {
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 767px) {
+  .title-description {
+    flex-direction: column;
+  }
+  .title-description .content-item p {
+    margin-right: 0;
+  }
+  .title-description .description-price .wrap-info {
+    width: 90%;
+    margin-top: 1em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .title-description {
+    flex-direction: column;
+  }
+  .title-description .content-item p {
+    margin-right: 0;
+  }
 }
 @media (max-width: 320px) {
   .title-description {
