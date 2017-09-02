@@ -9,38 +9,43 @@
         </div>
         @* добавление в заказы в админке и письмо на почту *@
         @*@using (Html.BeginForm("NewOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
-        
-        @using (Html.BeginForm("NewLeadBitrix24", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))
 
-        {
-        <input type = "text" name = "name" placeholder = "Ваше имя" />
-        <input type = "text" id="email" name = "email" placeholder = "Email" />
-        <textarea name = "comment" style = "height:150px" placeholder = "Комментарий" ></textarea >
+        @*@using (Html.BeginForm("NewLeadBitrix24", "Order", FormMethod.Post, new { enctype = "multipart/form-data", name = "contact_form", onsubmit = "return validate_form ();" }))*@
+
+        <form asp-action="NewLeadBitrix24" asp-controller="Order" method="post" enctype="multipart/form-data" class="contact_form">
+
+            <span asp-validation-for="Name"></span>
+            <input type="text" placeholder="Ваше имя" asp-for="Name" />
+
+            <span asp-validation-for="Email"></span>
+            <input type="email" id="email" placeholder="Email" asp-for="Email" />
+
+            <textarea name="comment" style="height:150px" placeholder="Комментарий"></textarea>
             <div class="info">
-            <p class="left">
-                Если у вас есть готовый бриф или ТЗ можете приложить их к письму
-            </p>
-        </div>
-        <div class="btn-form-group">
-            <div class="append">
-                <input type="file" name="file" id="file" class="input-file">
-                <label for="file" class="js-labelFile">
-                    <i class="icon fa fa-check"></i>
-                    <span class="js-fileName">Прикрепить</span>
-                </label>
+                <p class="left">
+                    Если у вас есть готовый бриф или ТЗ можете приложить их к письму
+                </p>
             </div>
-            <button type="submit" class="continue btn btn-ghost-more btn-long">Отправить!</button>
-        </div>
+            <div class="btn-form-group">
+                <div class="append">
+                    <input type="file" name="file" id="file" class="input-file">
+                    <label for="file" class="js-labelFile">
+                        <i class="icon fa fa-check"></i>
+                        <span class="js-fileName">Прикрепить</span>
+                    </label>
+                </div>
+                <button type="submit" id="submit" name="submit" class="continue btn btn-ghost-more btn-long">Отправить!</button>
+            </div>
 
-        <div class="confidentiality">
-            <input type="checkbox" checked name="agreed-check" id="agree" class="agree" />
-            <label for="agree">
-                Заполняя данную форму вы принимаете условия Соглашения об использовании сайта,
-                в том числе в части обработки и использования персональных данных.
-            </label>
-            <a href="#" class="link-more">Подробнее</a>
-        </div>
-        }
+            <div class="confidentiality">
+                <input type="checkbox" checked name="agreed-check" id="agree" class="agree" />
+                <label for="agree">
+                    Заполняя данную форму вы принимаете условия Соглашения об использовании сайта,
+                    в том числе в части обработки и использования персональных данных.
+                </label>
+                <a href="#" class="link-more">Подробнее</a>
+            </div>
+        </form>
 
     </div>
-    </div>
+</div>

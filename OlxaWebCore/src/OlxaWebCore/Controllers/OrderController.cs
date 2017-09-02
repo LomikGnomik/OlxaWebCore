@@ -164,7 +164,11 @@ namespace OlxaWebCore.Controllers
             {
                 fields = new
                 {
-                    TITLE = order.Name
+                    TITLE = order.Name,
+                    NAME = order.Name,
+                    EMAIL = order.Email,
+                    COMMENTS = order.Comment,
+                    Бриф = file
                 },
                 @params = new
                 {
@@ -189,7 +193,7 @@ namespace OlxaWebCore.Controllers
                 description = result;
             }
 
-            return View("NewOrder");
+            return View("NewOrder", order);
         }
     }
 }

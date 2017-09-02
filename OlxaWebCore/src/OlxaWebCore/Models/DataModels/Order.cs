@@ -12,10 +12,13 @@ namespace OlxaWebCore.Models.DataModels
         [BindNever]
         public int OrderID { get; set; }
 
+        [Required(ErrorMessage = "Представьтесь, пожалуйста")]
         [Display(Name = "Имя клиента")]
         public string Name { get; set; }
 
+        
         [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Некорректный адрес")]
+        [Required (ErrorMessage = "Не указан email")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
@@ -26,7 +29,7 @@ namespace OlxaWebCore.Models.DataModels
         public string Comment { get; set; }
 
         [Display(Name = "Заметка")]
-        public string Note { get; set; } //наши заметки о клеенте
+        public string Note { get; set; } //наши заметки о клиенте
 
         [Display(Name = "Файлы")]
         public string File { get; set; }
