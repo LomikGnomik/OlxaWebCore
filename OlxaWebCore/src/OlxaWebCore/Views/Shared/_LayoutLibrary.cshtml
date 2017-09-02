@@ -7,20 +7,19 @@
     <meta name="description" content="@ViewData["Description"]" />
     <meta name="robots" content="@(ViewData["Robots"]==null?"all":ViewData["Robots"])" />
     <title>@ViewData["Title"]</title>
-    
+
     <environment names="Development">
         <link rel="stylesheet" href="~/css/styles.css" />
         <link href="~/lib/jqueri-ui/themes/base/jquery-ui.css" rel="stylesheet" />
     </environment>
 
-    <environment names="Staging,Production">        
-        @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"             
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />*@
+    <environment names="Staging,Production">
+        @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />*@
         @*<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />*@
         <link href="~/lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="~/css/styles.css"  asp-append-version="true"/>
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
-        </script>
+        <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>        
     </environment>
     @*@Html.ApplicationInsightsJavaScript(TelemetryConfiguration)*@
 </head>
@@ -28,7 +27,7 @@
     <div>
         @RenderBody()
     </div>
-    <div id="toTop">
+    <div id="toTop" class="scrollUp">
         <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
     </div>
     <environment names="Development">
@@ -47,18 +46,18 @@
                 asp-fallback-test="window.jQuery">
         </script>
         <script src="~/lib/jqueri-ui/jquery-ui.min.js"></script>
-        
+
         @*CDN.нет файла на сервере -фильтр в портфолио*@
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
         @*основной файл скриптов*@
         <script src="~/js/scripts.js" asp-append-version="true"></script>
         @*<script src="~/js/scripts.min.js" asp-append-version="true"></script>*@
-        
+
     </environment>
 
-@RenderSection("scripts", required: false)
-   
-   
+    @RenderSection("scripts", required: false)
+
+
 
     @*@await Html.PartialAsync("_LoginPartial")>*@
 
@@ -76,6 +75,6 @@
             });
         });
     </script>
-   
+
 </body>
 </html>

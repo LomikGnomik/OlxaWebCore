@@ -54,20 +54,33 @@ $(document).ready(function () {
     });
 });
 /*--------------------------------прокрутка наверх--------------------------------------*/
+var isMobile = {
+    Android: function () { return navigator.userAgent.match(/Android/i) ? true : false; },
+    BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i) ? true : false; },
+    iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false; },
+    Windows: function () { return navigator.userAgent.match(/IEMobile/i) ? true : false; },
+    any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows()); }
+};
 
-$(function () {
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('#toTop').fadeIn();
-        }
-        else {
-            $('#toTop').fadeOut();
-        }
+if (!isMobile.any()) {
+    $(function () {
+        $(window).scroll(function () {
+
+            if ($(this).scrollTop() > 300) {
+                $('#toTop').fadeIn();
+            }
+            else {
+                $('#toTop').fadeOut();
+            }
+        });
+        $('#toTop').click(function () {
+            $('body,html').animate({ scrollTop: 0 }, 600);
+        });
     });
-    $('#toTop').click(function () {
-        $('body,html').animate({ scrollTop: 0 }, 600);
-    });
-});
+}
+
+
+
 
 /*----------------------------------плавная прокрутка к форме заявки-------------------*/
 //$(function () {
@@ -209,26 +222,11 @@ admin.on('click', function () {
     admin.addClass('hidden');
 })
 
-/*--------------------------------плавная прокрутка к форме заявки-----------------------------*/
-//$('a[href^="#"]').bind('click.smoothscroll', function (e) {
-//    e.preventDefault();
-
-//    var target = this.hash,
-//     $target = $(target);
-
-//    $('html, body').stop().animate({
-//        'scrollTop': $target.offset().top
-//    }, 1000, 'swing', function () {
-//        window.location.hash = target;
-//    });
-//});
-
-
 /*----------------------------------страница цены эффект для аккордиона--------------------------------------*/
 
 var accordWithPage = function () {
     var faqDiv = $('#faq-links div');
-        $(function () {
+    $(function () {
         faqDiv.on("click", function () {
             var hideSec = 'faq-hide';
             var $this = $(this),
@@ -294,3 +292,23 @@ accordWithPage();
   }); //document ready*/
 
 
+
+/*валидация email в форме */
+
+$(document).ready(function () {
+    $('#email').blur(function () {
+        if ($(this).val() != '') {
+            var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+            if (pattern.test($(this).val())) {
+                $(this).css({ 'border': '1px solid #569b44' });
+                $('#valid').text('Верно');
+            } else {
+                $(this).css({ 'border': '1px solid #ff0000' });
+                $('#valid').text('Не верно');
+            }
+        } else {
+            $(this).css({ 'border': '1px solid #ff0000' });
+            $('#valid').text('Поле email не должно быть пустым');
+        }
+    });
+});
