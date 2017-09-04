@@ -166,9 +166,20 @@ namespace OlxaWebCore.Controllers
                 {
                     TITLE = order.Name,
                     NAME = order.Name,
-                    EMAIL = order.Email,
+
+
+                    //   LFM[EMAIL][n1][VALUE]
+                      LFM =new
+                      {
+                            EMAIL = new{ n1 = new { VALUE ="gogy@mail.ru" , VALUE_TYPE ="WORK"}}//
+                       },
+                 
+
+
+
                     COMMENTS = order.Comment,
                     Бриф = file
+                    
                 },
                 @params = new
                 {
