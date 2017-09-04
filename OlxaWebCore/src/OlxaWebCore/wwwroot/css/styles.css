@@ -9702,7 +9702,7 @@ input[type="checkbox"].input-validation-error {
 }
 .example-sites-content .example-wrapper .view {
   width: 33.333%;
-  height: 20em;
+  height: 25em;
   float: left;
   overflow: hidden;
   position: relative;
@@ -9777,14 +9777,14 @@ input[type="checkbox"].input-validation-error {
   background-color: rgba(115, 146, 184, 0.7);
   width: 63em;
   padding: 4em;
-  height: 24em;
+  height: 30em;
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
 .example-sites-content .example-wrapper .view-second h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   background: transparent;
-  margin: 6em 40px 0px 40px;
+  margin: 8em 40px 0px 40px;
   transform: translate(200px, -200px);
   transition: all 0.2s ease-in-out;
 }
@@ -9919,6 +9919,9 @@ input[type="checkbox"].input-validation-error {
   justify-content: center;
   z-index: 2;
   max-height: 30em;
+}
+.steps-template-wrap .tabs-template .tabs-cont-template h2 {
+  font-size: 1.2em;
 }
 .steps-template-wrap .tabs-template #tab-tmp-1 ~ .tabs-cont-template #tab-tmp-c1,
 .steps-template-wrap .tabs-template #tab-tmp-2 ~ .tabs-cont-template #tab-tmp-c2,
@@ -10309,6 +10312,9 @@ input[type="checkbox"].input-validation-error {
   z-index: 2;
   max-height: 30em;
 }
+.steps-create-wrap .tabs-create .tabs-cont-create h2 {
+  font-size: 1.2em;
+}
 .steps-create-wrap .tabs-create #tab-cr-1 ~ .tabs-cont-create #tab-cr-c1,
 .steps-create-wrap .tabs-create #tab-cr-2 ~ .tabs-cont-create #tab-cr-c2,
 .steps-create-wrap .tabs-create #tab-cr-3 ~ .tabs-cont-create #tab-cr-c3,
@@ -10624,6 +10630,9 @@ input[type="checkbox"].input-validation-error {
   justify-content: center;
   z-index: 2;
   max-height: 30em;
+}
+.steps-develop-wrap .tabs-develop .tabs-develop-cont h2 {
+  font-size: 1.2em;
 }
 .steps-develop-wrap .tabs-develop #tab-dl-1 ~ .tabs-develop-cont #tab-dl-c1,
 .steps-develop-wrap .tabs-develop #tab-dl-2 ~ .tabs-develop-cont #tab-dl-c2,
