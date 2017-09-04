@@ -2018,6 +2018,7 @@ section.portfolio {
         text-align: center;
         text-transform: capitalize;
         font-size: 1.5em;
+        padding-bottom: 1em;
     }
 
     small {
@@ -2117,7 +2118,7 @@ section.portfolio {
         // height:20em;
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
             transition: all 0.2s ease;
         }
 
@@ -5174,6 +5175,15 @@ section.price-solution {
                 }
             }
 
+            .solution-item.solution-item-info {
+                border: none;
+
+                &:hover {
+                    transition: none;
+                    box-shadow: none;
+                }
+            }
+
             .solution-title-wrap {
                 padding: 0 0.8em;
                 height: 10em;
@@ -5208,11 +5218,11 @@ section.price-solution {
             .link-price-solution {
                 display: block;
                 color: @color-base;
-                border-bottom: 1px solid color-base;
                 padding-bottom: 0.2em;
                 margin: 0 auto;
                 margin-top: 2em;
                 margin-bottom: 2em;
+                border-bottom: 1px dashed;
             }
 
             .link-price-solution:hover {
@@ -6123,7 +6133,8 @@ section.price-solution {
     }
 
     section.portfolio-index {
-        background: linear-gradient(to left, @color-gray-dark 0,@font-color-reverce 50%, @color-gray 100%);
+        //  background: linear-gradient(to left, @color-gray-dark 0,@font-color-reverce 50%, @color-gray 100%);
+        background-image: url('../images/table.jpg');
         //padding: 10%;
         //min-height: 100vh;
         .portfolio-index-wrap {
@@ -6375,7 +6386,7 @@ section.price-solution {
                         display: block;
                         position: relative;
                         width: 100%;
-                        height: 100%;
+                        height: auto;
                     }
 
                     .view h2 {
@@ -7547,7 +7558,7 @@ section.information-title {
 }
 
 .all-service-wrap {
-    margin-top: 9em;
+    margin-top: 13em;
 
     h1 {
         text-align: center;
@@ -10134,6 +10145,7 @@ input[type="checkbox"].input-validation-error {
             p {
                 line-height: 1.5em;
                 font-size: 1.2em;
+                text-align: justify;
             }
 
             p.ul-title {
@@ -10643,11 +10655,16 @@ input[type="checkbox"].input-validation-error {
     #drawerOpener {
         cursor: pointer;
     }
+
+    .isometric.visit .content .card.card-form {
+        height: 15em;
+    }
     /*---------------------Сайт визитка*/
     .visit.floor {
         //  left: 30%;
         width: 30em;
-        height: 30em;
+        height: 37em;
+        top: -4em;
 
         .visit-menu {
             // width: 29em;
@@ -10675,9 +10692,10 @@ input[type="checkbox"].input-validation-error {
 
             .card {
                 width: 48%;
-                height: 12em;
+                height: 16em;
             }
         }
+
 
         .card img {
             width: 100%;
@@ -10703,7 +10721,7 @@ input[type="checkbox"].input-validation-error {
 
                 .right {
                     margin-left: 74%;
-                    margin-top: 8em;
+                    margin-top: 11em;
                 }
 
                 p {
@@ -11054,7 +11072,7 @@ input[type="checkbox"].input-validation-error {
             // padding: 14px;
             &:before {
                 transform: rotateX(-90deg) rotateY(-45deg) rotateZ(0deg) translate3d(0, 0, 40px);
-                content: "Админка";
+                content: "Вход в админку";
                 display: block;
                 position: absolute;
                 right: 100%;

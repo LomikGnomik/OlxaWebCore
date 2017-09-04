@@ -6,16 +6,25 @@
 
 
 <div class="container">
-    <section class="price-solution">
-        <h1>Создание сайтов</h1>
-        <div class="description-solution">
-            <p>
-                Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod,
-                iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
-            </p>
-        </div>
-       
+    <section class="price-solution">     
         <div class="solution-row flex">
+            <div class="solution-item-wrap">
+                <div class="solution-item solution-item-info">
+                    @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
+                    <div class="solution-title-wrap">
+                        <a asp-controller="Web_sites" asp-action="Promosite" class="solution-title">
+                            <h1>Создание сайтов</h1>
+                        </a>
+                        <p>
+                            Вы можете так же подобрать для себя уже готовый сайт из нашего каталога
+                        </p>
+                        <p>
+                            Настройка занимает 3 дня, после чего вы можете
+                        </p>
+                    </div>
+                    @*<a asp-controller="Home" asp-action="Price" class="btn btn-price-solution">Каталог</a>*@
+                </div>
+            </div>
             <div class="solution-item-wrap">
                 <div class="solution-item">
                     @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
@@ -147,23 +156,7 @@
                     <a asp-controller="Web_sites" asp-action="Information" class="link-price-solution">Подробнее</a>
                 </div>
             </div>
-            <div class="solution-item-wrap">
-                <div class="solution-item">
-                    @*<a href="" class="solution-icon"><i class="fa fa-bug"></i></a>*@
-                    <div class="solution-title-wrap">
-                        <a asp-controller="Web_sites" asp-action="Promosite" class="solution-title">
-                            <h2> Не знаете что выбрать?</h2>
-                        </a>
-                        <p>
-                            Вы можете так же подобрать для себя уже готовый сайт из нашего каталога
-                        </p>
-                        <p>
-                            Настройка занимает 3 дня, после чего вы можете
-                        </p>
-                    </div>
-                    <a asp-controller="Web_sites" asp-action="Promosite" class="btn btn-price-solution">Каталог</a>
-                </div>
-            </div>
+            
 
 
         </div> @*solution-row flex*@
