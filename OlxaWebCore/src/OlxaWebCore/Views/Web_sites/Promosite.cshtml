@@ -27,9 +27,9 @@
                             <div class="card card-form">
                                 <div class="form-inner-card-wrapper">
                                     @*<div class="inputs-wrapper">
-                                    <div class="input"></div>
-                                    <div class="input"></div>
-                                </div>*@
+                                            <div class="input"></div>
+                                            <div class="input"></div>
+                                        </div>*@
                                     <div class="buttons-form">
                                         <div class="button right">
                                             @*<p>отправить</p>*@
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </section>
 
 
@@ -72,116 +72,115 @@
 
         <div class="tabs_content">
             <div id="tab__c1">
-                <div class="tab-inner-content">
-                    <div class="title-description-wrap">
-                        <div class="container">
-                            <div class="title-description">
-                                <div class="content-item">
-                                    <p>
-                                        длинный текст,что б абасрацца прям был длинный линный линный линный линный
-                                        линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
-                                        линныйлинный линный линныйлинныйлинный
-                                    </p>
+                @Html.Partial("_PageInDevelopPartialView")
+               @* <div class="tab-inner-content">    
+    <div class="title-description-wrap">
+                 <div class="container">
+                     <div class="title-description">
+                         <div class="content-item">
+                             <p>
+                                 длинный текст,что б абасрацца прям был длинный линный линный линный линный
+                                 линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
+                                 линныйлинный линный линныйлинныйлинный
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="container">
+                 <div>@await Component.InvokeAsync("ProductCategory", new { category = "Визитка" })</div>
+             </div>
+         </div>
+         <div class="steps-create-wrapper">
+             @Html.Partial("_StepsTemplatePartialView")
+         </div>*@
+                </div> @*tab__c1*@
+                <div id="tab__c2">
+                    <div class="tab-inner-content">
+
+                        <div class="title-description-wrap">
+                            <div class="container">
+                                <div class="title-description">
+                                    <div class="content-item">
+                                        <p>
+                                            длинный текст,что б абасрацца прям был длинный линный линный линный линный
+                                            линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
+                                            линныйлинный линный линныйлинныйлинный
+                                        </p>
+
+                                    </div>
+                                    <div class="description-price">@await Component.InvokeAsync("PriceTimeDemo")</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container">
-                        <div>@await Component.InvokeAsync("ProductCategory", new { category = "Визитка" })</div>
-                    </div>
-                  
-
-                </div>
-                <div class="steps-create-wrapper">
-                    @Html.Partial("_StepsTemplatePartialView")
-                </div>
-            </div> @*tab__c1*@
-            <div id="tab__c2">
-                <div class="tab-inner-content">
-
-                    <div class="title-description-wrap">
-                        <div class="container">
-                            <div class="title-description">
-                                <div class="content-item">
-                                    <p>
-                                        длинный текст,что б абасрацца прям был длинный линный линный линный линный
-                                        линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
-                                        линныйлинный линный линныйлинныйлинный
-                                    </p>
-
+                        <div class="service-sites-wrap">
+                            <div class="container">
+                                <div class="service-sites-accordion">
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox">
+                                            <i></i>
+                                            <h2 class="title_block">Базовая функциональность</h2>
+                                            <div class="service-sites-content">
+                                                <ul class="list">
+                                                    <li>Домен на 1 год</li>
+                                                    <li>Хостинг на 1 год</li>
+                                                    <li>Форма обратной связи</li>
+                                                    <li>Обратный звонок</li>
+                                                    <li>Админка</li>
+                                                    <li>
+                                                        Дизайн
+                                                        <span>Адаптируется под заказчика в рамках стандартной сетки</span>
+                                                    </li>
+                                                    <li>Базовая SEO оптимизация</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <i></i>
+                                            <h2 class="title_block">Возможные настройки</h2>
+                                            <div class="service-sites-content">
+                                                <ul class="list">
+                                                    <li>Калькулятор</li>
+                                                    <li>Галерея</li>
+                                                    <li>Блок новостей</li>
+                                                    <li>Блок отзывов</li>
+                                                    <li>Блог</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="description-price">@await Component.InvokeAsync("PriceTimeDemo")</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="service-sites-wrap">
-                        <div class="container">
-                            <div class="service-sites-accordion">
-                                <ul>
-                                    <li>
-                                        <input type="checkbox">
-                                        <i></i>
-                                        <h2 class="title_block">Базовая функциональность</h2>
-                                        <div class="service-sites-content">
-                                            <ul class="list">
-                                                <li>Домен на 1 год</li>
-                                                <li>Хостинг на 1 год</li>
-                                                <li>Форма обратной связи</li>
-                                                <li>Обратный звонок</li>
-                                                <li>Админка</li>
-                                                <li>
-                                                    Дизайн
-                                                    <span>Адаптируется под заказчика в рамках стандартной сетки</span>
-                                                </li>
-                                                <li>Базовая SEO оптимизация</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox">
-                                        <i></i>
-                                        <h2 class="title_block">Возможные настройки</h2>
-                                        <div class="service-sites-content">
-                                            <ul class="list">
-                                                <li>Калькулятор</li>
-                                                <li>Галерея</li>
-                                                <li>Блок новостей</li>
-                                                <li>Блок отзывов</li>
-                                                <li>Блог</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-                <div class="steps-create-wrapper">
-                    @Html.Partial("_StepsCreatePartialView")
-                </div>
-            </div> @*tab__c2*@
-            <div id="tab__c3">
-                <div class="tab-inner-content">
-                    <div class="container">
-                        <div class="title-description">
-                            <div class="content-item">
-                                <p>
-                                    длинный текст,что б абасрацца прям был длинный линный линный линный линный
-                                    линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
-                                    линныйлинный линный линныйлинныйлинный
-                                </p>
-                            </div>
-                            
-                        </div>
                     </div>
-
                     <div class="steps-create-wrapper">
-                        @Html.Partial("_StepsDevelopPartialView")
+                        @Html.Partial("_StepsCreatePartialView")
                     </div>
-                </div> @*tab__c3*@
+                </div> @*tab__c2*@
+                <div id="tab__c3">
+                    <div class="tab-inner-content">
+                        <div class="container">
+                            <div class="title-description">
+                                <div class="content-item">
+                                    <p>
+                                        длинный текст,что б абасрацца прям был длинный линный линный линный линный
+                                        линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
+                                        линныйлинный линный линныйлинныйлинный
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="steps-create-wrapper">
+                            @Html.Partial("_StepsDevelopPartialView")
+                        </div>
+                    </div> @*tab__c3*@
+                </div>
             </div>
-        </div>
     </section>
 
 

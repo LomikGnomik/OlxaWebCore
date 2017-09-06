@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "_LayoutLibrary";
     ViewData["Title"] = "Сайты - создание, разработка, а также продажа готовых решений в OlxaWeb";
-    ViewData["Description"]= "Мы создаем саты под ключ, разрабатываем уникальные решения на фреймворке ASP.NET CORE и продаем готовые сайты";
+    ViewData["Description"] = "Мы создаем саты под ключ, разрабатываем уникальные решения на фреймворке ASP.NET CORE и продаем готовые сайты";
 }
 
 <link href="~/lib/fullpage.js/jquery.fullPage.css" type="text/css" rel="stylesheet" />
@@ -47,7 +47,7 @@
                             <span>продажа</span>
                             <span>создание</span>
                             @*  <span>продвижение</span>
-                        <span>аренда</span>*@
+                                <span>аренда</span>*@
                             @*<span></span>*@
                         </span>
                     </h1>
@@ -122,8 +122,8 @@
         </div>
 
     </section>
-    <section class="index-web-sites-wrap section">                 
-            @Html.Partial("_Index_WebSitesPartialView")        
+    <section class="index-web-sites-wrap section">
+        @Html.Partial("_Index_WebSitesPartialView")
     </section>
     <section class="portfolio-index section">
         <div class="portfolio-index-wrap">
@@ -132,8 +132,8 @@
                 @*<div class="small hidden">
                         @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
                     </div>*@
-                
-                    @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
+
+                @await Component.InvokeAsync("ExamplesSites", new { category = "Главная" })
             </div>
         </div>
 

@@ -85,27 +85,28 @@
 
         <div class="tabs_content">
             <div id="tab__c1">
-                <div class="tab-inner-content">
-                    <div class="title-description-wrap">
-                        <div class="container">
-                            <div class="title-description">
-                                <div class="content-item">
-                                    <p>
-                                        длинный текст,что б абасрацца прям был длинный линный линный линный линный
-                                        линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
-                                        линныйлинный линный линныйлинныйлинный
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                @Html.Partial("_PageInDevelopPartialView")
+                @*<div class="tab-inner-content">
+        <div class="title-description-wrap">
+            <div class="container">
+                <div class="title-description">
+                    <div class="content-item">
+                        <p>
+                            длинный текст,что б абасрацца прям был длинный линный линный линный линный
+                            линный линный линный линныйлинный линныйлинный линныйлинныйлинный линныйлинныйлинный
+                            линныйлинный линный линныйлинныйлинный
+                        </p>
                     </div>
-                    <div class="container">
-                        <div>@await Component.InvokeAsync("ProductCategory", new { category = "Корпоративный" })</div>
-                    </div>                    
                 </div>
-                <div class="steps-create-wrapper">
-                    @Html.Partial("_StepsTemplatePartialView")
-                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div>@await Component.InvokeAsync("ProductCategory", new { category = "Корпоративный" })</div>
+        </div>
+    </div>
+    <div class="steps-create-wrapper">
+        @Html.Partial("_StepsTemplatePartialView")
+    </div>*@
             </div> @*tab__c1*@
             <div id="tab__c2">
                 <div class="tab-inner-content">

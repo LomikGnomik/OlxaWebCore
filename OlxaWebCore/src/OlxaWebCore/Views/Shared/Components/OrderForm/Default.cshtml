@@ -4,9 +4,15 @@
 
     <div class="container-form">
         <div class="h2">Оставить заявку</div>
-        <div class="small">
-            Пишите нам на почту <a href="mailto:info@olxaweb.ru" class="mail">info@olxaweb.ru</a> или заполните форму ниже:
+        <div class="brief-wrap">
+            <div class="brief-btn-wrap">   
+                    <a href="~/Files/Document/Brief_Olxa.docx" class="btn btn-more">скачать бриф</a>                
+            </div>             
+            <div class="small">
+                Пишите нам на почту <a href="mailto:info@olxaweb.ru" class="mail">info@olxaweb.ru</a> или заполните форму ниже:
+            </div>
         </div>
+
         @* добавление в заказы в админке и письмо на почту *@
         @*@using (Html.BeginForm("NewOrder", "Order", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
 
